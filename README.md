@@ -38,3 +38,7 @@ npm run preview
 
 ## Vocabulary Data
 `vocabulary/` — CSV + PDF, Japanese + reading + romaji + English + Burmese (Unicode).
+
+## Books
+`books/` — reference textbooks (PDF).
+- `minna-no-nihongo-shokyu-1-main-textbook.pdf` — Minna no Nihongo Shokyu I (初級 I), 2nd edition, Main Textbook (本冊), 3A Network, 331 pages.
