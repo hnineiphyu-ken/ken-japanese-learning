@@ -1,4 +1,4 @@
-var WORDS=[
+export const WORDS =[
 {jp:"私",rd:"わたし",rom:"watashi",en:"I; me",my:"ကျွန်တော်/ကျွန်မ",cat:"People"},
 {jp:"僕",rd:"ぼく",rom:"boku",en:"I; me (masculine)",my:"ကျွန်တော် (ယောက်ျားသုံး)",cat:"People"},
 {jp:"あなた",rd:"あなた",rom:"anata",en:"you",my:"မင်း/သင်",cat:"People"},
@@ -2604,4 +2604,4 @@ var EXTRA_WORDS=[
 ];
 WORDS.push.apply(WORDS,EXTRA_WORDS);
 
-var CATS=["All", "People", "Family", "Places and Locations", "Things (Objects)", "Food and Drink", "Animals", "Transportation", "Nature and Weather", "Body Parts", "Numbers", "Counters", "Time Words", "School and Studies", "Hobbies and Activities", "Money & Shopping", "Health and Body", "Verbs Group 1", "Verbs Group 2", "Verbs Irregular", "い-Adjectives", "な-Adjectives", "Adverbs", "Particles and Conjunctions", "Question Words", "Demonstratives", "Greetings and Expressions", "Colors", "Size and Quantity", "Common Conjunctions", "Miscellaneous / Common Nouns"];
+export const CATS =["All", "People", "Family", "Places and Locations", "Things (Objects)", "Food and Drink", "Animals", "Transportation", "Nature and Weather", "Body Parts", "Numbers", "Counters", "Time Words", "School and Studies", "Hobbies and Activities", "Money & Shopping", "Health and Body", "Verbs Group 1", "Verbs Group 2", "Verbs Irregular", "い-Adjectives", "な-Adjectives", "Adverbs", "Particles and Conjunctions", "Question Words", "Demonstratives", "Greetings and Expressions", "Colors", "Size and Quantity", "Common Conjunctions", "Miscellaneous / Common Nouns"];

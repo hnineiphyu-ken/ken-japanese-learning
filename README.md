@@ -1,25 +1,39 @@
 # Ken Japanese Learning
 
-Japanese self-study materials (JLPT N5 level) and an interactive multi-page practice web platform.
+Japanese self-study materials (JLPT N5 level) and an interactive React Single Page Application (SPA).
 
-## Practice Website (Multi-Page Architecture)
+## Modern React SPA Architecture (Vite + React Router)
 
-Modern, mobile-responsive web application with Dark/Light mode support, Japanese Web Speech API (TTS pronunciation audio), and instant category/lesson filtering.
+Built with **React 18**, **Vite**, and **React Router DOM v6** for zero-reload, lightning-fast client-side routing, high-contrast light design system, and Web Speech API (`ja-JP`) text-to-speech audio pronunciation.
 
-### Multi-Page Structure:
-- **`index.html` (Hiragana)**: Full 46 basic characters, Dakuten/Handakuten, and Yoon with audio pronunciation.
-- **`katakana.html` (Katakana)**: 46 basic characters, Dakuten/Handakuten, Yoon, and foreign extended sounds (特殊音).
-- **`basics.html` (Basics)**: Numbers (1–10,000), Counters (助数詞), Time & Clock, Days of Week, Months & Dates, and Daily Greetings.
-- **`kotoba.html` (Kotoba Vocabulary)**: 1,445 vocabulary entries (JLPT N5 & Minna no Nihongo Lessons 1–25) with search, category filtering, and pagination.
-- **`quiz.html` (Interactive Quiz)**: Multiple-choice practice for Kana, Vocabulary, and Basics with progress bar, score calculation, and performance assessment.
-- **`lessons.html` (Minna no Nihongo Lessons 1–25)**: Chapter-by-chapter vocabulary breakdown with direct links to take lesson quizzes.
+### Routes:
+- **`/` (Hiragana)**: 46 basic characters (五十音), Dakuten/Handakuten, Yoon (拗音), and Long Vowels (長音) in collapsible cards with native Japanese audio pronunciation.
+- **`/katakana` (Katakana)**: 46 basic characters, Dakuten/Handakuten, Yoon, Special Foreign Katakana (特別なカタカナ), and Long Vowel Dash rules (ー).
+- **`/basics` (Basics)**: Numbers (0–100,000,000 with pagination), 11 Core Counters (助数詞), 20 Everyday Greetings with usage notes, Time & Clock, Calendar Dates, and an interactive Basics Quiz.
+- **`/kotoba` (Kotoba Vocabulary)**: 1,445 vocabulary entries (JLPT N5 & Minna no Nihongo Lessons 1–25) with live multi-field search, semantic category filtering (30 categories), lesson filtering, and pagination.
+- **`/quiz` (Interactive Quiz)**: Practice for Kana, Vocabulary, and Basics with selectable question volume (10/20/30/50), sound pronunciation, live progress track, and performance grading.
+- **`/lessons` (Lessons 1–25)**: Chapter-by-chapter vocabulary syllabus for Minna no Nihongo with direct links to study words or launch lesson-specific quizzes.
 
-### Shared Assets (`assets/`):
-- `assets/css/app.css`: Modern card design system, glassmorphism header, responsive grids, and Dark/Light theme CSS variables.
-- `assets/js/common.js`: Theme switcher (`data-theme="dark"`), local storage persistence, and Web Speech API (`ja-JP`) helper.
-- `assets/data/`: Modular datasets (`kana-data.js`, `words-data.js`, `topics-data.js`).
+### Navigation:
+- **Desktop**: Fast sticky horizontal scroller navigation bar with active state indicator.
+- **Mobile / Tablet (≤ 768px)**: Responsive hamburger dropdown navigation menu with outside-click dismissal.
 
-## Original Theme Backup:
+### Development & Production:
+```bash
+# Install dependencies
+npm install
+
+# Start local Vite development server (http://localhost:3000)
+npm run dev
+
+# Build for production (outputs to dist/)
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+## Original Monolithic Backup:
 - Stored under `backup-original/` directory.
 
 ## Vocabulary Data
