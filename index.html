@@ -27,7 +27,7 @@
 
   <div class="app-container">
 
-    <!-- Scroller Navigation Bar -->
+    <!-- Sticky Scroller Navigation Bar -->
     <div class="nav-scroller">
       <nav class="main-nav">
         <a href="index.html" class="nav-item active"><span class="nav-jp">あ</span> Hiragana</a>
@@ -46,7 +46,7 @@
       <p class="hero-desc">The primary Japanese phonetic syllabary used for native words and grammatical particles. Tap any character to hear native audio pronunciation.</p>
     </div>
 
-    <!-- Main Hiragana 46 Characters -->
+    <!-- 1. Main Hiragana 46 Characters (Always open) -->
     <div class="card">
       <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
         Basic 46 Characters (五十音)
@@ -54,30 +54,51 @@
       <div id="hiraGrid" class="kana-grid"></div>
     </div>
 
-    <!-- Dakuten & Handakuten -->
-    <div class="card">
-      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
-        Voiced &amp; Semi-Voiced Sounds (濁音・半濁音 ゛゜)
-      </h2>
-      <div id="hiraDakuten" class="kana-grid"></div>
-    </div>
+    <!-- 2. Dakuten & Handakuten (Collapse) -->
+    <section class="collapse">
+      <button class="collapse-head" aria-expanded="false">
+        <span class="ch-jp jp">濁音</span>
+        <span class="ch-t">
+          <span class="ct">Voiced &amp; Semi-Voiced Sounds (濁音・半濁音 ゛゜)</span>
+          <span class="cd">ga, za, da, ba, and pa series (25 sounds)</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" hidden>
+        <div id="hiraDakuten" class="kana-grid"></div>
+      </div>
+    </section>
 
-    <!-- Yoon (Combination Sounds) -->
-    <div class="card">
-      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
-        Contracted Sounds (拗音 - Yoon: ゃ · ゅ · ょ)
-      </h2>
-      <div id="hiraYoon" class="kana-grid" style="grid-template-columns: repeat(3, 1fr);"></div>
-    </div>
+    <!-- 3. Yoon (Collapse) -->
+    <section class="collapse">
+      <button class="collapse-head" aria-expanded="false">
+        <span class="ch-jp jp">拗音</span>
+        <span class="ch-t">
+          <span class="ct">Contracted Sounds (拗音 - Yoon: ゃ · ゅ · ょ)</span>
+          <span class="cd">kya, sha, cha, nya, hya, mya, rya, gya, ja, bya, pya (33 combinations)</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" hidden>
+        <div id="hiraYoon" class="kana-grid" style="grid-template-columns: repeat(3, 1fr);"></div>
+      </div>
+    </section>
 
-    <!-- Long Vowels (ちょうおん) -->
-    <div class="card">
-      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
-        Long Vowels (長音・ちょうおん)
-      </h2>
-      <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">A long vowel is held one extra beat. When vowels continue, the first vowel stretches — in romaji, watch the spelling, not the letter you see.</p>
-      <div id="hiraLong"></div>
-    </div>
+    <!-- 4. Long Vowels (Collapse) -->
+    <section class="collapse">
+      <button class="collapse-head" aria-expanded="false">
+        <span class="ch-jp jp">長音</span>
+        <span class="ch-t">
+          <span class="ct">Long Vowels (長音・ちょうおん)</span>
+          <span class="cd">Stretched vowel rules, example words and pronunciation</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" hidden>
+        <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">A long vowel is held one extra beat. When vowels continue, the first vowel stretches — in romaji, watch the spelling, not the letter you see.</p>
+        <div id="hiraLong"></div>
+      </div>
+    </section>
 
   </div>
 
@@ -154,6 +175,17 @@
           `;
         }).join('');
       }
+
+      // Wire Collapses
+      document.querySelectorAll('.collapse-head').forEach(h => {
+        h.addEventListener('click', () => {
+          const sec = h.parentElement;
+          const body = sec.querySelector('.collapse-body');
+          const open = sec.classList.toggle('open');
+          h.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (body) body.hidden = !open;
+        });
+      });
     }
 
     document.addEventListener('DOMContentLoaded', renderHiragana);
