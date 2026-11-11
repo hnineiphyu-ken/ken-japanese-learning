@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/css/app.css"/>
   <style>
     .form-group {
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .form-label {
       display: block;
@@ -20,7 +20,7 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--faint);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .score-badge {
       display: inline-flex;
@@ -28,9 +28,15 @@
       gap: 6px;
       padding: 6px 14px;
       background: var(--bg-card-subtle);
+      border: 1px solid var(--line);
       border-radius: var(--radius-full);
       font-weight: 800;
       font-size: 14px;
+    }
+    .quiz-card-head {
+      border-bottom: 2px solid var(--line-soft);
+      padding-bottom: 14px;
+      margin-bottom: 22px;
     }
   </style>
 </head>
@@ -51,7 +57,7 @@
 
   <div class="app-container">
 
-    <!-- Scroller Navigation Bar -->
+    <!-- Sticky Scroller Navigation Bar -->
     <div class="nav-scroller">
       <nav class="main-nav">
         <a href="index.html" class="nav-item"><span class="nav-jp">あ</span> Hiragana</a>
@@ -67,19 +73,22 @@
     <div class="hero-card">
       <div class="hero-tag">Practice & Testing</div>
       <h1 class="hero-title">Interactive Quiz (練習問題)</h1>
-      <p class="hero-desc">Test your Hiragana, Katakana, Numbers, or Lesson Vocabulary with instant feedback, speech audio and final score evaluation.</p>
+      <p class="hero-desc">Multiple-choice testing for Kana, Lesson Vocabulary, and Numbers/Counters. Randomly generated questions with instant feedback and scoring.</p>
     </div>
 
     <!-- 1. QUIZ SETUP SCREEN -->
-    <div id="quizSetupScreen" class="card" style="max-width: 580px; margin: 0 auto;">
-      <h2 style="font-size: 17px; font-weight: 800; margin-bottom: 18px; color: var(--ink);">Customize Your Quiz</h2>
+    <div id="quizSetupScreen" class="card" style="max-width: 620px; margin: 0 auto;">
+      <div class="quiz-card-head">
+        <h2 style="font-size: 19px; font-weight: 900; color: var(--ink);">Customize Your Quiz (クイズ設定)</h2>
+        <p style="font-size: 13px; color: var(--muted); margin-top: 3px;">Select a quiz category, script type, and question count to begin.</p>
+      </div>
 
       <div class="form-group">
         <label class="form-label">Quiz Type (問題の種類)</label>
         <select id="quizTypeSelect" class="custom-select" style="width: 100%;" onchange="onQuizTypeChange()">
-          <option value="kana">Kana (Hiragana & Katakana)</option>
-          <option value="kotoba">Vocabulary (単語)</option>
-          <option value="basics">Basics (Numbers, Time, Calendar)</option>
+          <option value="kana">Kana (かな — Hiragana &amp; Katakana)</option>
+          <option value="kotoba">Vocabulary (ことば — N5 &amp; Minna 1–25)</option>
+          <option value="basics">Basics (きそ — Numbers, Counters &amp; Greetings)</option>
         </select>
       </div>
 
@@ -90,15 +99,15 @@
           <select id="kanaScriptSelect" class="custom-select" style="width: 100%;">
             <option value="hiragana">Hiragana (ひらがな)</option>
             <option value="katakana">Katakana (カタカナ)</option>
-            <option value="mixed">Mixed (Hiragana + Katakana)</option>
+            <option value="mixed">Both (Mixed Hiragana &amp; Katakana)</option>
           </select>
         </div>
         <div class="form-group">
           <label class="form-label">Level / Length</label>
           <select id="kanaLevelSelect" class="custom-select" style="width: 100%;">
-            <option value="1">Level 1: Single Characters (e.g. あ)</option>
-            <option value="2">Level 2: 2-Character Words (e.g. あめ)</option>
-            <option value="3">Level 3: 3-Character Words (e.g. さくら)</option>
+            <option value="1">Level 1 — 1 Kana Character (e.g. あ &rarr; a)</option>
+            <option value="2">Level 2 — 2 Kana Word (e.g. あめ &rarr; ame)</option>
+            <option value="3">Level 3 — 3 Kana Word (e.g. さくら &rarr; sakura)</option>
           </select>
         </div>
       </div>
@@ -108,7 +117,7 @@
         <div class="form-group">
           <label class="form-label">Category / Lesson Scope</label>
           <select id="quizCategorySelect" class="custom-select" style="width: 100%;">
-            <option value="All">All Categories & Lessons</option>
+            <option value="All">All Categories &amp; Lessons</option>
           </select>
         </div>
       </div>
@@ -122,15 +131,15 @@
         </select>
       </div>
 
-      <button class="btn-primary" style="width:100%;" onclick="startQuizSession()">Start Quiz (開始) &rarr;</button>
+      <button class="btn-primary" style="width:100%; margin-top: 8px;" onclick="startQuizSession()">Start Quiz (開始) &rarr;</button>
     </div>
 
     <!-- 2. QUIZ PLAY SCREEN -->
-    <div id="quizPlayScreen" class="quiz-wrapper" style="display: none; max-width: 680px; margin: 0 auto;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-        <span id="quizCounter" style="font-weight:700; font-size:13.5px; color:var(--muted);">Question 1 of 10</span>
+    <div id="quizPlayScreen" class="quiz-wrapper" style="display: none; max-width: 620px; margin: 0 auto;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+        <span id="quizCounter" style="font-weight:800; font-size:14px; color:var(--muted);">Question 1 of 10</span>
         <div class="score-badge">
-          Score: <span id="currentScore" style="color:var(--primary); font-weight:800;">0</span>
+          Score: <span id="currentScore" style="color:var(--primary); font-weight:900;">0</span>
         </div>
       </div>
 
@@ -142,7 +151,7 @@
         <div style="font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--faint); margin-bottom:6px;">Prompt</div>
         <div id="quizPromptChar" class="quiz-prompt">あ</div>
         <div id="quizPromptSub" class="quiz-sub-prompt"></div>
-        <button id="quizSpeakBtn" class="audio-btn" style="margin-top:10px;" onclick="speakCurrentPrompt()" title="Listen Prompt">
+        <button id="quizSpeakBtn" class="audio-btn" style="margin-top:12px;" onclick="speakCurrentPrompt()" title="Listen Prompt">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
         </button>
       </div>
@@ -151,14 +160,14 @@
       <div id="quizOptionsGrid" class="quiz-options-grid"></div>
 
       <!-- Bottom Next / Stop Buttons -->
-      <div style="margin-top:20px; display:flex; gap:10px;">
+      <div style="margin-top:24px; display:flex; gap:12px;">
         <button class="btn-outline" style="flex:1;" onclick="stopQuizSession()">End Quiz</button>
         <button id="quizNextBtn" class="btn-primary" style="flex:2; display:none;" onclick="loadNextQuestion()">Next Question &rarr;</button>
       </div>
     </div>
 
     <!-- 3. QUIZ RESULT SCREEN -->
-    <div id="quizResultScreen" class="card" style="display: none; max-width: 580px; margin: 0 auto; text-align: center; padding: 36px 20px;">
+    <div id="quizResultScreen" class="card" style="display: none; max-width: 620px; margin: 0 auto; text-align: center; padding: 36px 20px;">
       <div id="resultFace" style="font-size: 52px; margin-bottom: 10px;">🎉</div>
       <h2 id="resultTitle" style="font-size: 22px; font-weight: 900; margin-bottom: 6px;">Quiz Completed!</h2>
       <div style="font-size: 44px; font-weight: 900; color: var(--primary); margin: 14px 0;">
