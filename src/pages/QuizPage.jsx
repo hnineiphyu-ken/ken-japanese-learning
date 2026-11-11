@@ -156,7 +156,7 @@ export default function QuizPage() {
 
       {/* SETUP CARD */}
       {quizState === 'setup' && (
-        <section className="card" style={{ maxWidth: '620px', margin: '0 auto' }}>
+        <section className="card">
           <div className="quiz-card-head" style={{ borderBottom: '2px solid var(--line-soft)', paddingBottom: '14px', marginBottom: '22px' }}>
             <h3 style={{ fontSize: '18px', fontWeight: 800, margin: 0 }}>
               Customize Your Quiz
@@ -166,7 +166,7 @@ export default function QuizPage() {
             </span>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '18px', marginBottom: '22px' }}>
             <div>
               <label className="form-label" style={{ display: 'block', fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--faint)', marginBottom: '8px' }}>
                 Quiz Type (問題の種類)
@@ -233,22 +233,22 @@ export default function QuizPage() {
                 <option value={50}>50 Questions</option>
               </select>
             </div>
-
-            <button
-              type="button"
-              className="btn-primary"
-              style={{ width: '100%', marginTop: '10px', padding: '12px', fontSize: '15px' }}
-              onClick={generateQuiz}
-            >
-              Start Quiz Now →
-            </button>
           </div>
+
+          <button
+            type="button"
+            className="btn-primary"
+            style={{ width: '100%', padding: '14px', fontSize: '15px' }}
+            onClick={generateQuiz}
+          >
+            Start Quiz Now →
+          </button>
         </section>
       )}
 
       {/* PLAYING CARD */}
       {quizState === 'playing' && currentQ && (
-        <section className="card" style={{ maxWidth: '640px', margin: '0 auto' }}>
+        <section className="card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
             <span style={{ fontWeight: 800, fontSize: '14px', color: 'var(--muted)' }}>
               Question {curIndex + 1} of {questions.length}
@@ -330,7 +330,7 @@ export default function QuizPage() {
 
       {/* RESULT CARD */}
       {quizState === 'result' && (
-        <section className="card" style={{ maxWidth: '520px', margin: '0 auto', textAlign: 'center', padding: '36px 20px' }}>
+        <section className="card" style={{ textAlign: 'center', padding: '36px 20px' }}>
           <div style={{ fontSize: '48px', fontWeight: 900, color: 'var(--primary)', marginBottom: '8px' }}>
             {score} / {questions.length}
           </div>
