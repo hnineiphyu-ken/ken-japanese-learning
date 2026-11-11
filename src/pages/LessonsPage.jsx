@@ -8,13 +8,14 @@ import Pagination from '../components/Pagination';
 export default function LessonsPage() {
   const navigate = useNavigate();
 
-  // Active expanded lesson for study
+  // Active expanded lesson for study: number | null
   const [expandedLesson, setExpandedLesson] = useState(null);
+  // Active study tab inside expanded lesson: 'vocab' | 'sentences' | 'grammar' | 'dialogue'
+  const [activeStudyTab, setActiveStudyTab] = useState('vocab');
   const [lessonWordPage, setLessonWordPage] = useState(1);
   const WORDS_PER_PAGE = 15;
 
-  // Active quiz state
-  // null | { lessonNum: number, questions: [], curIndex: 0, score: 0, answered: false, selectedOpt: null, finished: false }
+  // Active quiz state: null | { lessonNum, questions, curIndex, score, answered, selectedOpt, finished }
   const [activeQuiz, setActiveQuiz] = useState(null);
 
   // Group words by lesson
@@ -32,8 +33,9 @@ export default function LessonsPage() {
       setExpandedLesson(null);
     } else {
       setExpandedLesson(lessonNum);
+      setActiveStudyTab('vocab');
       setLessonWordPage(1);
-      // If quiz was open for this lesson, close it
+      // Close quiz if it was open for this lesson
       if (activeQuiz && activeQuiz.lessonNum === lessonNum) {
         setActiveQuiz(null);
       }
@@ -123,6 +125,27 @@ export default function LessonsPage() {
         <p className="hero-desc">
           Complete Shokyu 1 syllabus. Study all 1,068 chapter vocabulary words with native pronunciation, or take a dedicated practice quiz for each lesson.
         </p>
+
+        {/* Muse Gojo Expansion Roadmap Announcement */}
+        <div
+          style={{
+            marginTop: '16px',
+            padding: '12px 16px',
+            background: 'var(--bg-card-subtle)',
+            border: '1.5px solid var(--line-soft)',
+            borderRadius: 'var(--radius-md)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            flexWrap: 'wrap'
+          }}
+        >
+          <span style={{ fontSize: '18px' }}>✨</span>
+          <div style={{ flex: '1 1 300px', fontSize: '13px', lineHeight: '1.5', color: 'var(--ink)' }}>
+            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. Full sentence patterns (例文), grammar explanations (文法), and conversations (会話) are currently being compiled via <b>Muse Gojo</b> data pipeline (Coming Soon)!
+          </div>
+          <span className="badge-coming-soon">Pipeline Active ⏳</span>
+        </div>
       </div>
 
       {/* Lesson List */}
@@ -141,7 +164,7 @@ export default function LessonsPage() {
           );
 
           return (
-            <div key={meta.l} className="card" style={{ padding: '18px 22px' }}>
+            <div key={meta.l} className="card" style={{ padding: '20px 24px' }}>
               {/* Header row */}
               <div
                 style={{
@@ -195,84 +218,175 @@ export default function LessonsPage() {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                   <button
                     type="button"
                     className={`lesson-action-btn ${isStudying ? 'primary' : ''}`}
                     onClick={() => handleToggleStudy(meta.l)}
                   >
-                    {isStudying ? 'Hide Words ▴' : '📖 Study Words ▾'}
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                    <span>{isStudying ? 'Hide Lesson ▴' : 'Study Lesson ▾'}</span>
                   </button>
                   <button
                     type="button"
                     className="lesson-action-btn primary"
                     onClick={() => handleStartLessonQuiz(meta.l)}
                   >
-                    🎯 Practice Quiz →
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <polygon points="10 8 16 12 10 16 10 8" />
+                    </svg>
+                    <span>Practice Quiz →</span>
                   </button>
                 </div>
               </div>
 
-              {/* EXPANDED VOCABULARY STUDY PANEL */}
+              {/* EXPANDED LESSON STUDY PANEL */}
               {isStudying && (
                 <div
                   style={{
-                    marginTop: '18px',
-                    paddingTop: '16px',
+                    marginTop: '20px',
+                    paddingTop: '18px',
                     borderTop: '2px solid var(--line-soft)',
                     animation: 'fadeIn 0.2s ease-out'
                   }}
                 >
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-                    <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--muted)', textTransform: 'uppercase' }}>
-                      Lesson {meta.l} Vocabulary List ({count} words)
-                    </span>
-                    <span style={{ fontSize: '12.5px', color: 'var(--faint)' }}>
-                      Page {lessonWordPage} of {totalWordPages}
-                    </span>
+                  {/* Category Tabs: Vocabulary vs Sentences vs Grammar vs Dialogue */}
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
+                    <button
+                      type="button"
+                      className={`lesson-action-btn ${activeStudyTab === 'vocab' ? 'primary' : ''}`}
+                      onClick={() => setActiveStudyTab('vocab')}
+                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
+                    >
+                      Vocabulary ({count})
+                    </button>
+                    <button
+                      type="button"
+                      className={`lesson-action-btn ${activeStudyTab === 'sentences' ? 'primary' : ''}`}
+                      onClick={() => setActiveStudyTab('sentences')}
+                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
+                    >
+                      Sentences (例文) <span className="badge-coming-soon" style={{ marginLeft: '4px' }}>Soon</span>
+                    </button>
+                    <button
+                      type="button"
+                      className={`lesson-action-btn ${activeStudyTab === 'grammar' ? 'primary' : ''}`}
+                      onClick={() => setActiveStudyTab('grammar')}
+                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
+                    >
+                      Grammar Notes (文法) <span className="badge-coming-soon" style={{ marginLeft: '4px' }}>Soon</span>
+                    </button>
+                    <button
+                      type="button"
+                      className={`lesson-action-btn ${activeStudyTab === 'dialogue' ? 'primary' : ''}`}
+                      onClick={() => setActiveStudyTab('dialogue')}
+                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
+                    >
+                      Conversations (会話) <span className="badge-coming-soon" style={{ marginLeft: '4px' }}>Soon</span>
+                    </button>
                   </div>
 
-                  <div className="rt-table">
-                    {paginatedWords.map((w, wIdx) => {
-                      const num = (lessonWordPage - 1) * WORDS_PER_PAGE + wIdx + 1;
-                      return (
-                        <div key={wIdx} className="rt-row">
-                          <span className="rt-n">{num}.</span>
-                          <span className="rt-j jp">
-                            {w.jp}
-                            {w.rd && w.rd !== w.jp && (
-                              <span style={{ display: 'block', fontSize: '12px', color: 'var(--muted)' }}>
-                                {w.rd}
+                  {/* TAB 1: VOCABULARY LIST (ACTIVE) */}
+                  {activeStudyTab === 'vocab' && (
+                    <div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                        <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--muted)', textTransform: 'uppercase' }}>
+                          Lesson {meta.l} Vocabulary List ({count} words)
+                        </span>
+                        <span style={{ fontSize: '12.5px', color: 'var(--faint)' }}>
+                          Page {lessonWordPage} of {totalWordPages}
+                        </span>
+                      </div>
+
+                      <div className="rt-table">
+                        {paginatedWords.map((w, wIdx) => {
+                          const num = (lessonWordPage - 1) * WORDS_PER_PAGE + wIdx + 1;
+                          return (
+                            <div key={wIdx} className="rt-row">
+                              <span className="rt-n">{num}.</span>
+                              <span className="rt-j jp">
+                                {w.jp}
+                                {w.rd && w.rd !== w.jp && (
+                                  <span style={{ display: 'block', fontSize: '12px', color: 'var(--muted)' }}>
+                                    {w.rd}
+                                  </span>
+                                )}
                               </span>
-                            )}
-                          </span>
-                          <span className="rt-r">{w.rom}</span>
-                          <span className="rt-m">
-                            <span style={{ fontWeight: 700 }}>{w.en}</span>
-                            <br />
-                            <span style={{ color: 'var(--muted)', fontSize: '12.5px' }}>{w.my}</span>
-                          </span>
-                          <button
-                            type="button"
-                            className="audio-btn"
-                            onClick={() => speakJapanese(w.rd || w.jp)}
-                            title="Listen Audio"
-                          >
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                              <path d="M11 5L6 9H2v6h4l5 4V5z" />
-                              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                            </svg>
-                          </button>
-                        </div>
-                      );
-                    })}
-                  </div>
+                              <span className="rt-r">{w.rom}</span>
+                              <span className="rt-m">
+                                <span style={{ fontWeight: 700 }}>{w.en}</span>
+                                <br />
+                                <span style={{ color: 'var(--muted)', fontSize: '12.5px' }}>{w.my}</span>
+                              </span>
+                              <button
+                                type="button"
+                                className="audio-btn"
+                                onClick={() => speakJapanese(w.rd || w.jp)}
+                                title="Listen Audio"
+                              >
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                                </svg>
+                              </button>
+                            </div>
+                          );
+                        })}
+                      </div>
 
-                  <Pagination
-                    totalPages={totalWordPages}
-                    currentPage={lessonWordPage}
-                    onPageChange={p => setLessonWordPage(p)}
-                  />
+                      <Pagination
+                        totalPages={totalWordPages}
+                        currentPage={lessonWordPage}
+                        onPageChange={p => setLessonWordPage(p)}
+                      />
+                    </div>
+                  )}
+
+                  {/* TAB 2: SENTENCES (COMING SOON) */}
+                  {activeStudyTab === 'sentences' && (
+                    <div className="coming-soon-card">
+                      <div style={{ fontSize: '28px', marginBottom: '8px' }}>💬</div>
+                      <h4 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 6px', color: 'var(--ink)' }}>
+                        Lesson {meta.l} Example Sentences (例文・短文)
+                      </h4>
+                      <p style={{ color: 'var(--muted)', fontSize: '13.5px', maxWidth: '480px', margin: '0 auto 14px', lineHeight: '1.6' }}>
+                        Curated example sentences illustrating core particles and sentence patterns for Lesson {meta.l}. Data generation by <b>Muse Gojo</b> is in progress.
+                      </p>
+                      <span className="badge-coming-soon">Data Ingestion Pending ⏳</span>
+                    </div>
+                  )}
+
+                  {/* TAB 3: GRAMMAR NOTES (COMING SOON) */}
+                  {activeStudyTab === 'grammar' && (
+                    <div className="coming-soon-card">
+                      <div style={{ fontSize: '28px', marginBottom: '8px' }}>📝</div>
+                      <h4 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 6px', color: 'var(--ink)' }}>
+                        Lesson {meta.l} Grammar Patterns (文法解説)
+                      </h4>
+                      <p style={{ color: 'var(--muted)', fontSize: '13.5px', maxWidth: '480px', margin: '0 auto 14px', lineHeight: '1.6' }}>
+                        Step-by-step grammatical breakdowns with Burmese &amp; English explanations for Lesson {meta.l}. Data compilation by <b>Muse Gojo</b> is in progress.
+                      </p>
+                      <span className="badge-coming-soon">Content Drafting Active ⏳</span>
+                    </div>
+                  )}
+
+                  {/* TAB 4: CONVERSATIONS (COMING SOON) */}
+                  {activeStudyTab === 'dialogue' && (
+                    <div className="coming-soon-card">
+                      <div style={{ fontSize: '28px', marginBottom: '8px' }}>🗣️</div>
+                      <h4 style={{ fontSize: '16px', fontWeight: 800, margin: '0 0 6px', color: 'var(--ink)' }}>
+                        Lesson {meta.l} Dialogue &amp; Conversation (会話)
+                      </h4>
+                      <p style={{ color: 'var(--muted)', fontSize: '13.5px', maxWidth: '480px', margin: '0 auto 14px', lineHeight: '1.6' }}>
+                        Full real-world situational conversations with native audio pacing for Lesson {meta.l}. Data compilation by <b>Muse Gojo</b> is in progress.
+                      </p>
+                      <span className="badge-coming-soon">Audio &amp; Script Prep ⏳</span>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -280,18 +394,18 @@ export default function LessonsPage() {
               {isQuizzing && (
                 <div
                   style={{
-                    marginTop: '18px',
-                    padding: '18px',
+                    marginTop: '20px',
+                    padding: '22px',
                     background: 'var(--bg-card-subtle)',
                     border: '2px solid var(--line)',
-                    borderRadius: 'var(--radius-md)',
+                    borderRadius: 'var(--radius-lg)',
                     animation: 'fadeIn 0.2s ease-out'
                   }}
                 >
                   {!activeQuiz.finished ? (
                     <div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                        <span style={{ fontWeight: 800, fontSize: '13.5px', color: 'var(--muted)' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                        <span style={{ fontWeight: 800, fontSize: '14px', color: 'var(--muted)' }}>
                           Lesson {meta.l} Quiz — Question {activeQuiz.curIndex + 1} of {activeQuiz.questions.length}
                         </span>
                         <span style={{ fontWeight: 800, fontSize: '14px', color: 'var(--primary)' }}>
@@ -308,11 +422,11 @@ export default function LessonsPage() {
                         />
                       </div>
 
-                      <div style={{ textAlign: 'center', margin: '20px 0 16px' }}>
-                        <div className="jp" style={{ fontSize: '34px', fontWeight: 900 }}>
+                      <div style={{ textAlign: 'center', margin: '24px 0 20px' }}>
+                        <div className="jp" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--ink)' }}>
                           {activeQuiz.questions[activeQuiz.curIndex].jp}
                         </div>
-                        <div style={{ fontSize: '14px', color: 'var(--muted)', marginTop: '4px' }}>
+                        <div style={{ fontSize: '14px', color: 'var(--muted)', marginTop: '4px', fontWeight: 600 }}>
                           {activeQuiz.questions[activeQuiz.curIndex].rd && (
                             <span className="jp" style={{ marginRight: '6px' }}>
                               {activeQuiz.questions[activeQuiz.curIndex].rd}
@@ -320,17 +434,25 @@ export default function LessonsPage() {
                           )}
                           ({activeQuiz.questions[activeQuiz.curIndex].rom})
                         </div>
-                        <button
-                          type="button"
-                          className="audio-btn"
-                          style={{ margin: '8px auto 0' }}
-                          onClick={() => speakJapanese(activeQuiz.questions[activeQuiz.curIndex].speakText)}
-                        >
-                          🔊 Listen
-                        </button>
+
+                        {/* CLEAN LISTEN BUTTON WITH SVG ICON & TEXT — PROPER PILL SHAPE */}
+                        <div style={{ marginTop: '12px' }}>
+                          <button
+                            type="button"
+                            className="audio-pill-btn"
+                            onClick={() => speakJapanese(activeQuiz.questions[activeQuiz.curIndex].speakText)}
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                              <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                              <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                            </svg>
+                            <span>Listen Pronunciation</span>
+                          </button>
+                        </div>
                       </div>
 
-                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '8px' }}>
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '10px' }}>
                         {activeQuiz.questions[activeQuiz.curIndex].options.map((opt, oIdx) => {
                           let btnClass = 'quiz-opt-btn';
                           if (activeQuiz.answered) {
@@ -344,21 +466,21 @@ export default function LessonsPage() {
                               className={btnClass}
                               disabled={activeQuiz.answered}
                               onClick={() => handleQuizSelect(opt, oIdx)}
-                              style={{ textAlign: 'left', padding: '12px 14px' }}
+                              style={{ textAlign: 'left', padding: '14px 16px' }}
                             >
-                              <span style={{ fontWeight: 800, fontSize: '13.5px' }}>{opt.text}</span>
+                              <span style={{ fontWeight: 800, fontSize: '14px' }}>{opt.text}</span>
                             </button>
                           );
                         })}
                       </div>
 
-                      <div style={{ marginTop: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <button
                           type="button"
-                          style={{ background: 'none', border: 'none', color: 'var(--faint)', cursor: 'pointer', fontSize: '13px', fontWeight: 700 }}
+                          style={{ background: 'none', border: 'none', color: 'var(--faint)', cursor: 'pointer', fontSize: '13.5px', fontWeight: 700 }}
                           onClick={() => setActiveQuiz(null)}
                         >
-                          Close Quiz ✕
+                          ← Exit Quiz
                         </button>
 
                         {activeQuiz.answered && (
@@ -367,23 +489,23 @@ export default function LessonsPage() {
                             className="btn-primary"
                             onClick={handleQuizNext}
                           >
-                            {activeQuiz.curIndex + 1 < activeQuiz.questions.length ? 'Next Question →' : 'View Result →'}
+                            <span>{activeQuiz.curIndex + 1 < activeQuiz.questions.length ? 'Next Question →' : 'View Result →'}</span>
                           </button>
                         )}
                       </div>
                     </div>
                   ) : (
-                    <div style={{ textAlign: 'center', padding: '16px 0' }}>
-                      <div style={{ fontSize: '38px', fontWeight: 900, color: 'var(--primary)', marginBottom: '6px' }}>
+                    <div style={{ textAlign: 'center', padding: '24px 0' }}>
+                      <div style={{ fontSize: '42px', fontWeight: 900, color: 'var(--primary)', marginBottom: '8px' }}>
                         {activeQuiz.score} / {activeQuiz.questions.length}
                       </div>
-                      <div style={{ fontSize: '16px', fontWeight: 800, marginBottom: '6px' }}>
+                      <div style={{ fontSize: '17px', fontWeight: 800, marginBottom: '6px' }}>
                         Lesson {meta.l} Quiz Completed!
                       </div>
-                      <p style={{ color: 'var(--muted)', fontSize: '13px', marginBottom: '16px' }}>
-                        You answered {Math.round((activeQuiz.score / activeQuiz.questions.length) * 100)}% correctly.
+                      <p style={{ color: 'var(--muted)', fontSize: '13.5px', marginBottom: '20px' }}>
+                        You scored {Math.round((activeQuiz.score / activeQuiz.questions.length) * 100)}% accuracy.
                       </p>
-                      <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
+                      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
                         <button
                           type="button"
                           className="btn-primary"
