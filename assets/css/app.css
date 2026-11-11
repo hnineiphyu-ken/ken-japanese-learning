@@ -1,0 +1,854 @@
+/* ==========================================================================
+   KEN JAPANESE LEARNING — MODERN DESIGN SYSTEM (Option A)
+   Themes: Light & Dark, Smooth Micro-animations, Card System, Glassmorphism
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Light Mode */
+  --bg: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f1f5f9;
+  --bg-elevated: #ffffff;
+  --ink: #0f172a;
+  --ink-soft: #334155;
+  --muted: #64748b;
+  --faint: #94a3b8;
+  --line: #e2e8f0;
+  --line-soft: #edf2f7;
+  
+  /* Brand Accents */
+  --primary: #c73e2c;
+  --primary-hover: #b33524;
+  --primary-faint: rgba(199, 62, 44, 0.08);
+  --primary-glow: rgba(199, 62, 44, 0.25);
+  
+  --ok: #10b981;
+  --ok-bg: #ecfdf5;
+  --ok-line: #a7f3d0;
+  --bad: #ef4444;
+  --bad-bg: #fef2f2;
+  --bad-line: #fecaca;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  
+  --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  /* Color Palette - Dark Mode */
+  --bg: #0b0f19;
+  --bg-card: #131b2e;
+  --bg-card-subtle: #1a243b;
+  --bg-elevated: #1e293b;
+  --ink: #f8fafc;
+  --ink-soft: #cbd5e1;
+  --muted: #94a3b8;
+  --faint: #64748b;
+  --line: #1e293b;
+  --line-soft: #182234;
+  
+  --primary: #f87171;
+  --primary-hover: #ef4444;
+  --primary-faint: rgba(248, 113, 113, 0.12);
+  --primary-glow: rgba(248, 113, 113, 0.3);
+  
+  --ok: #34d399;
+  --ok-bg: #064e3b;
+  --ok-line: #047857;
+  --bad: #f87171;
+  --bad-bg: #7f1d1d;
+  --bad-line: #b91c1c;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", "Noto Sans Myanmar", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.jp {
+  font-family: "Zen Kaku Gothic New", "Noto Sans Myanmar", sans-serif;
+}
+
+button, input, select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   LAYOUT & CONTAINER
+   ========================================================================== */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR & HEADER
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(248, 250, 252, 0.85);
+  border-bottom: 1px solid var(--line);
+  transition: var(--transition);
+  margin-bottom: 24px;
+}
+
+[data-theme="dark"] .site-header {
+  background: rgba(11, 15, 25, 0.85);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 19px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  box-shadow: 0 4px 10px var(--primary-glow);
+}
+
+.brand-text .sub {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+  display: block;
+  margin-top: -3px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--ink);
+  transform: rotate(15deg) scale(1.05);
+}
+
+/* ==========================================================================
+   MULTI-PAGE NAVIGATION TABS
+   ========================================================================== */
+.nav-scroller {
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -20px 24px;
+  padding: 0 20px;
+}
+
+.nav-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  width: max-content;
+  min-width: 100%;
+}
+
+.nav-item {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--muted);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.nav-item .nav-jp {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+.nav-item:hover {
+  color: var(--ink);
+  background: var(--bg-card-subtle);
+}
+
+.nav-item.active {
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-item.active .nav-jp {
+  color: var(--primary);
+}
+
+[data-theme="dark"] .nav-item.active {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   PAGE HERO / BANNER
+   ========================================================================== */
+.hero-card {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-subtle) 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, var(--primary-faint) 0%, transparent 70%);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary-faint);
+  color: var(--primary);
+  border: 1px solid rgba(199, 62, 44, 0.15);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.hero-desc {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 650px;
+}
+
+/* ==========================================================================
+   CARDS & GRIDS
+   ========================================================================== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(199, 62, 44, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+/* Kana Grid */
+.kana-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.kana-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 14px 6px 10px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kana-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  background: var(--primary-faint);
+}
+
+.kana-card .char {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.kana-card .rom {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+  letter-spacing: 0.05em;
+}
+
+.audio-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
+  transition: var(--transition);
+}
+
+.kana-card:hover .audio-badge {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.row-label {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--faint);
+  margin: 16px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.row-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+/* ==========================================================================
+   AUDIO BUTTON / TTS
+   ========================================================================== */
+.audio-btn {
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-full);
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--muted);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.audio-btn:hover {
+  background: var(--primary-faint);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   SEARCH & FILTERS
+   ========================================================================== */
+.search-bar {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 12px 16px 12px 42px;
+  font-size: 15px;
+  color: var(--ink);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-faint);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--faint);
+  pointer-events: none;
+}
+
+.filter-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.custom-select {
+  flex: 1;
+  min-width: 160px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ==========================================================================
+   WORD CARD / LIST
+   ========================================================================== */
+.words-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.word-card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.word-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-soft);
+  box-shadow: var(--shadow-md);
+}
+
+.word-index {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--faint);
+  min-width: 28px;
+}
+
+.word-main {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.word-jp {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.word-rom {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.word-rd {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.word-meanings {
+  flex: 1;
+  min-width: 0;
+}
+
+.mean-en {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
+}
+
+.mean-my {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.word-tag {
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   PAGINATION
+   ========================================================================== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  min-width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: var(--ink);
+  background: var(--bg-card-subtle);
+}
+
+.page-btn.active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+[data-theme="dark"] .page-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ==========================================================================
+   COLLAPSIBLE ACCORDIONS (Basics & Lessons)
+   ========================================================================== */
+.accordion {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.accordion-header {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-header:hover {
+  background: var(--bg-card-subtle);
+}
+
+.accordion-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.accordion-icon {
+  font-size: 20px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.accordion-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.accordion-desc {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.accordion-chevron {
+  color: var(--faint);
+  transition: transform 0.25s ease;
+}
+
+.accordion.open .accordion-chevron {
+  transform: rotate(180deg);
+  color: var(--ink);
+}
+
+.accordion-content {
+  display: none;
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.accordion.open .accordion-content {
+  display: block;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   QUIZ COMPONENT
+   ========================================================================== */
+.quiz-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  box-shadow: var(--shadow-md);
+}
+
+.quiz-progress-track {
+  width: 100%;
+  height: 6px;
+  background: var(--line-soft);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, #ff7b72 100%);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.quiz-prompt-box {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.quiz-prompt {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.quiz-sub-prompt {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+.quiz-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.quiz-opt-btn {
+  background: var(--bg-card);
+  border: 2px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-opt-btn:hover:not(:disabled) {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.quiz-opt-btn.correct {
+  background: var(--ok-bg) !important;
+  border-color: var(--ok) !important;
+  color: var(--ok) !important;
+}
+
+.quiz-opt-btn.wrong {
+  background: var(--bad-bg) !important;
+  border-color: var(--bad) !important;
+  color: var(--bad) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (Mobile & Tablet)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .app-container {
+    padding: 0 14px 80px;
+  }
+  
+  .header-inner {
+    padding: 10px 14px;
+  }
+  
+  .hero-card {
+    padding: 18px 14px;
+  }
+  
+  .hero-title {
+    font-size: 20px;
+  }
+  
+  .word-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .word-main {
+    width: 100%;
+  }
+  
+  .quiz-options-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quiz-prompt {
+    font-size: 42px;
+  }
+}

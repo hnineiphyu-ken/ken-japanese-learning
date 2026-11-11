@@ -1,31 +1,26 @@
 # Ken Japanese Learning
 
-Japanese self-study materials (JLPT N5 level) and a practice website.
+Japanese self-study materials (JLPT N5 level) and an interactive multi-page practice web platform.
 
-## Practice website
+## Practice Website (Multi-Page Architecture)
 
-`website/index.html` — a single-file static site for practising Hiragana,
-Katakana, Basics, Kotoba, Quiz and Lessons. Open it directly in a browser,
-or serve the `website/` folder (e.g. GitHub Pages).
+Modern, mobile-responsive web application with Dark/Light mode support, Japanese Web Speech API (TTS pronunciation audio), and instant category/lesson filtering.
 
-- Tabs: Hiragana, Katakana, Basic, Kotoba, Quiz, Lessons
-- Kotoba: 1,445 words (N5 716 + Minna no Nihongo Lessons 1–25, deduplicated),
-  filterable by lesson and category, with pagination
-- Basics: Numbers, Counters (さい / にん / かい / つ / まい / ほん / ひき /
-  さつ / だい / こ / はい), Time & Clock, Days / Months / Dates, Greetings
-- Quiz: Kana multiple choice (Level 1–3), Kotoba multiple choice, lesson
-  practice quizzes, with a Stop button
-- No audio / listening — text practice only. Progress is session-only.
+### Multi-Page Structure:
+- **`index.html` (Hiragana)**: Full 46 basic characters, Dakuten/Handakuten, and Yoon with audio pronunciation.
+- **`katakana.html` (Katakana)**: 46 basic characters, Dakuten/Handakuten, Yoon, and foreign extended sounds (特殊音).
+- **`basics.html` (Basics)**: Numbers (1–10,000), Counters (助数詞), Time & Clock, Days of Week, Months & Dates, and Daily Greetings.
+- **`kotoba.html` (Kotoba Vocabulary)**: 1,445 vocabulary entries (JLPT N5 & Minna no Nihongo Lessons 1–25) with search, category filtering, and pagination.
+- **`quiz.html` (Interactive Quiz)**: Multiple-choice practice for Kana, Vocabulary, and Basics with progress bar, score calculation, and performance assessment.
+- **`lessons.html` (Minna no Nihongo Lessons 1–25)**: Chapter-by-chapter vocabulary breakdown with direct links to take lesson quizzes.
 
-## Vocabulary
+### Shared Assets (`assets/`):
+- `assets/css/app.css`: Modern card design system, glassmorphism header, responsive grids, and Dark/Light theme CSS variables.
+- `assets/js/common.js`: Theme switcher (`data-theme="dark"`), local storage persistence, and Web Speech API (`ja-JP`) helper.
+- `assets/data/`: Modular datasets (`kana-data.js`, `words-data.js`, `topics-data.js`).
 
-`vocabulary/` — CSV + PDF, Japanese + reading + romaji + English + Burmese
-(Unicode).
+## Original Theme Backup:
+- Stored under `backup-original/` directory.
 
-| File | Entries |
-| --- | --- |
-| `n5-vocab.csv` / `JLPT-N5-Vocabulary.pdf` | 716 (JLPT N5, 30 categories) |
-| `minna-1-lessons-01-25-unicode.csv` / `minna-1-lessons-01-25-unicode.pdf` | 1,068 (Minna no Nihongo Shokyu 1, Lessons 1–25) |
-
-CSV columns: `lesson,japanese,reading,romaji,english,myanmar_unicode,myanmar_zawgyi_source`
-(N5 file has no `lesson` column).
+## Vocabulary Data
+`vocabulary/` — CSV + PDF, Japanese + reading + romaji + English + Burmese (Unicode).

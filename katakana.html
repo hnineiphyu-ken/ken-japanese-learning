@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="color-scheme" content="light dark"/>
+  <link rel="icon" href="data:,"/>
+  <title>Katakana (カタカナ) — Ken Japanese Learning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css"/>
+</head>
+<body>
+
+  <!-- Top Sticky Navigation Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-icon">ア</div>
+        <div class="brand-text">
+          <span>Ken Japanese</span>
+          <span class="sub">JLPT N5 & Minna no Nihongo</span>
+        </div>
+      </a>
+      <div class="header-controls">
+        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container">
+
+    <!-- Scroller Navigation Bar -->
+    <div class="nav-scroller">
+      <nav class="main-nav">
+        <a href="index.html" class="nav-item"><span class="nav-jp">あ</span> Hiragana</a>
+        <a href="katakana.html" class="nav-item active"><span class="nav-jp">ア</span> Katakana</a>
+        <a href="basics.html" class="nav-item"><span class="nav-jp">基</span> Basics</a>
+        <a href="kotoba.html" class="nav-item"><span class="nav-jp">語</span> Kotoba (Vocab)</a>
+        <a href="quiz.html" class="nav-item"><span class="nav-jp">問</span> Quiz</a>
+        <a href="lessons.html" class="nav-item"><span class="nav-jp">課</span> Lessons (1-25)</a>
+      </nav>
+    </div>
+
+    <!-- Hero Card -->
+    <div class="hero-card">
+      <div class="hero-tag">Kana Foundation</div>
+      <h1 class="hero-title">Katakana (カタカナ)</h1>
+      <p class="hero-desc">Used primarily for loanwords from foreign languages, scientific names, onomatopoeia, and technical terminology. Tap any character to hear native audio pronunciation.</p>
+    </div>
+
+    <!-- Main Katakana 46 Characters -->
+    <div class="card" style="margin-bottom: 24px;">
+      <h2 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 16px;">
+        Basic 46 Characters (五十音)
+      </h2>
+      <div id="katakanaGrid" class="kana-grid"></div>
+    </div>
+
+    <!-- Dakuten & Handakuten -->
+    <div class="card" style="margin-bottom: 24px;">
+      <h2 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 16px;">
+        Voiced & Semi-Voiced Sounds (濁音・半濁音)
+      </h2>
+      <div id="katakanaDakuten" class="kana-grid"></div>
+    </div>
+
+    <!-- Yoon (Combination Sounds) -->
+    <div class="card" style="margin-bottom: 24px;">
+      <h2 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 16px;">
+        Contracted Sounds (拗音 - Yoon)
+      </h2>
+      <div id="katakanaYoon" class="kana-grid" style="grid-template-columns: repeat(3, 1fr);"></div>
+    </div>
+
+    <!-- Special Foreign Sounds -->
+    <div class="card" style="margin-bottom: 24px;">
+      <h2 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 16px;">
+        Foreign / Extended Sounds (特殊音)
+      </h2>
+      <div id="katakanaSpecial" class="kana-grid" style="grid-template-columns: repeat(4, 1fr);"></div>
+    </div>
+
+  </div>
+
+  <script src="assets/data/kana-data.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script>
+    function renderKatakana() {
+      // Main 46 (index 1 in item tuple)
+      const mainGrid = $('katakanaGrid');
+      let html = '';
+      
+      KANA_ROWS.forEach(row => {
+        html += `<div class="row-label">${row.label}</div>`;
+        row.items.forEach(item => {
+          if (!item[1]) {
+            html += `<div class="kana-card" style="visibility:hidden"></div>`;
+          } else {
+            html += `
+              <div class="kana-card" onclick="speakJapanese('${item[1]}')">
+                <span class="char">${item[1]}</span>
+                <span class="rom">${item[2]}</span>
+                <svg class="audio-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              </div>`;
+          }
+        });
+      });
+      mainGrid.innerHTML = html;
+
+      // Dakuten
+      const dakGrid = $('katakanaDakuten');
+      let dakHtml = '';
+      DAKUTEN.forEach(row => {
+        dakHtml += `<div class="row-label">${row.label}</div>`;
+        row.items.forEach(item => {
+          dakHtml += `
+            <div class="kana-card" onclick="speakJapanese('${item[1]}')">
+              <span class="char">${item[1]}</span>
+              <span class="rom">${item[2]}</span>
+              <svg class="audio-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </div>`;
+        });
+      });
+      dakGrid.innerHTML = dakHtml;
+
+      // Yoon
+      const yoonGrid = $('katakanaYoon');
+      let yoonHtml = '';
+      YOON.forEach(item => {
+        yoonHtml += `
+          <div class="kana-card" onclick="speakJapanese('${item[1]}')">
+            <span class="char">${item[1]}</span>
+            <span class="rom">${item[2]}</span>
+            <svg class="audio-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          </div>`;
+      });
+      yoonGrid.innerHTML = yoonHtml;
+
+      // Special Extended Sounds
+      const specGrid = $('katakanaSpecial');
+      let specHtml = '';
+      SPECIAL_KATA.forEach(item => {
+        specHtml += `
+          <div class="kana-card" onclick="speakJapanese('${item[0]}')">
+            <span class="char" style="font-size:26px;">${item[0]}</span>
+            <span class="rom">${item[1]}</span>
+            <svg class="audio-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          </div>`;
+      });
+      specGrid.innerHTML = specHtml;
+    }
+
+    document.addEventListener('DOMContentLoaded', renderKatakana);
+  </script>
+</body>
+</html>
