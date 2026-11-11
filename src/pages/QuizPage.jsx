@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { KANA_ROWS, DAKUTEN, YOON } from '../data/kanaData';
-import { WORDS } from '../data/wordsData';
+import { WORDS, MINNA } from '../data/wordsData';
 import { BASIC_COUNT, COUNTERS, GREETINGS } from '../data/topicsData';
 import { speakJapanese, shuffle } from '../utils/speech';
 
@@ -59,8 +59,8 @@ export default function QuizPage() {
       let wordSubset = WORDS;
       if (selectedLesson !== 'all') {
         const lNum = parseInt(selectedLesson, 10);
-        wordSubset = WORDS.filter(w => w.l === lNum);
-        if (wordSubset.length < 5) wordSubset = WORDS;
+        wordSubset = MINNA.filter(w => w.l === lNum);
+        if (wordSubset.length < 5) wordSubset = MINNA;
       }
 
       pool = wordSubset.map(w => ({

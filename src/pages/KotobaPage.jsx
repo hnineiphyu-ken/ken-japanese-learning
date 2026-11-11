@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Pagination from '../components/Pagination';
-import { WORDS, CATS } from '../data/wordsData';
+import { WORDS, MINNA, CATS } from '../data/wordsData';
 import { speakJapanese } from '../utils/speech';
 
 export default function KotobaPage() {
@@ -32,14 +32,16 @@ export default function KotobaPage() {
   // Filter words
   const filteredWords = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return WORDS.filter(w => {
+    const sourcePool = selectedLesson !== 'all' ? MINNA : WORDS;
+
+    return sourcePool.filter(w => {
       // Lesson filter
       if (selectedLesson !== 'all') {
         const lNum = parseInt(selectedLesson, 10);
         if (w.l !== lNum) return false;
       }
-      // Category filter
-      if (selectedCat !== 'All') {
+      // Category filter (only applies to WORDS)
+      if (selectedLesson === 'all' && selectedCat !== 'All') {
         if (w.cat !== selectedCat) return false;
       }
       // Search text

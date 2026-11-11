@@ -1,2607 +1,21510 @@
-export const WORDS =[
-{jp:"私",rd:"わたし",rom:"watashi",en:"I; me",my:"ကျွန်တော်/ကျွန်မ",cat:"People"},
-{jp:"僕",rd:"ぼく",rom:"boku",en:"I; me (masculine)",my:"ကျွန်တော် (ယောက်ျားသုံး)",cat:"People"},
-{jp:"あなた",rd:"あなた",rom:"anata",en:"you",my:"မင်း/သင်",cat:"People"},
-{jp:"彼",rd:"かれ",rom:"kare",en:"he; him; boyfriend",my:"သူ (ယောက်ျား)/ချစ်သူ",cat:"People"},
-{jp:"彼女",rd:"かのじょ",rom:"kanojo",en:"she; her; girlfriend",my:"သူ (မိန်းမ)/ချစ်သူ",cat:"People"},
-{jp:"皆さん",rd:"みなさん",rom:"mina-san",en:"everyone",my:"အားလုံး",cat:"People"},
-{jp:"人",rd:"ひと",rom:"hito",en:"person",my:"လူ",cat:"People"},
-{jp:"方",rd:"かた",rom:"kata",en:"person (polite)",my:"လူ (ယဉ်ကျေးသော)",cat:"People"},
-{jp:"子供",rd:"こども",rom:"kodomo",en:"child; children",my:"ကလေး",cat:"People"},
-{jp:"男の子",rd:"おとこのこ",rom:"otoko no ko",en:"boy",my:"ယောက်ျားလေး",cat:"People"},
-{jp:"女の子",rd:"おんなのこ",rom:"onna no ko",en:"girl",my:"မိန်းကလေး",cat:"People"},
-{jp:"男の人",rd:"おとこのひと",rom:"otoko no hito",en:"man",my:"ယောက်ျား",cat:"People"},
-{jp:"女の人",rd:"おんなのひと",rom:"onna no hito",en:"woman",my:"မိန်းမ",cat:"People"},
-{jp:"友達",rd:"ともだち",rom:"tomodachi",en:"friend",my:"သူငယ်ချင်း",cat:"People"},
-{jp:"先生",rd:"せんせい",rom:"sensei",en:"teacher",my:"ဆရာ/ဆရာမ",cat:"People"},
-{jp:"学生",rd:"がくせい",rom:"gakusei",en:"student",my:"ကျောင်းသား",cat:"People"},
-{jp:"生徒",rd:"せいと",rom:"seito",en:"pupil; student (school)",my:"ကျောင်းသား (ကျောင်း)",cat:"People"},
-{jp:"会社員",rd:"かいしゃいん",rom:"kaishain",en:"company employee",my:"ကုမ္ပဏီဝန်ထမ်း",cat:"People"},
-{jp:"医者",rd:"いしゃ",rom:"isha",en:"doctor",my:"ဆရာဝန်",cat:"People"},
-{jp:"警官",rd:"けいかん",rom:"keikan",en:"police officer",my:"ရဲအရာရှိ",cat:"People"},
-{jp:"お客さん",rd:"おきゃくさん",rom:"okyaku-san",en:"customer; guest",my:"ဧည့်သည်/ဝယ်သူ",cat:"People"},
-{jp:"家族",rd:"かぞく",rom:"kazoku",en:"family",my:"မိသားစု",cat:"Family"},
-{jp:"父",rd:"ちち",rom:"chichi",en:"(my) father",my:"အဖေ (ကိုယ့်)",cat:"Family"},
-{jp:"母",rd:"はは",rom:"haha",en:"(my) mother",my:"အမေ (ကိုယ့်)",cat:"Family"},
-{jp:"お父さん",rd:"おとうさん",rom:"otousan",en:"father (someone else's)",my:"အဖေ (သူများရဲ့)",cat:"Family"},
-{jp:"お母さん",rd:"おかあさん",rom:"okaasan",en:"mother (someone else's)",my:"အမေ (သူများရဲ့)",cat:"Family"},
-{jp:"兄",rd:"あに",rom:"ani",en:"(my) older brother",my:"အစ်ကို (ကိုယ့်)",cat:"Family"},
-{jp:"姉",rd:"あね",rom:"ane",en:"(my) older sister",my:"အစ်မ (ကိုယ့်)",cat:"Family"},
-{jp:"お兄さん",rd:"おにいさん",rom:"oniisan",en:"older brother (someone else's)",my:"အစ်ကို (သူများရဲ့)",cat:"Family"},
-{jp:"お姉さん",rd:"おねえさん",rom:"oneesan",en:"older sister (someone else's)",my:"အစ်မ (သူများရဲ့)",cat:"Family"},
-{jp:"弟",rd:"おとうと",rom:"otouto",en:"younger brother",my:"ညီ",cat:"Family"},
-{jp:"妹",rd:"いもうと",rom:"imouto",en:"younger sister",my:"ညီမ",cat:"Family"},
-{jp:"夫",rd:"おっと",rom:"otto",en:"husband",my:"ခင်ပွန်း",cat:"Family"},
-{jp:"妻",rd:"つま",rom:"tsuma",en:"wife",my:"ဇနီး",cat:"Family"},
-{jp:"祖父",rd:"そふ",rom:"sofu",en:"grandfather",my:"အဖိုး",cat:"Family"},
-{jp:"祖母",rd:"そぼ",rom:"sobo",en:"grandmother",my:"အဖွား",cat:"Family"},
-{jp:"おじいさん",rd:"おじいさん",rom:"ojiisan",en:"grandfather; old man",my:"အဖိုး/အဖိုးအို",cat:"Family"},
-{jp:"おばあさん",rd:"おばあさん",rom:"obaasan",en:"grandmother; old woman",my:"အဖွား/အဖွားအို",cat:"Family"},
-{jp:"学校",rd:"がっこう",rom:"gakkou",en:"school",my:"ကျောင်း",cat:"Places and Locations"},
-{jp:"大学",rd:"だいがく",rom:"daigaku",en:"university",my:"တက္ကသိုလ်",cat:"Places and Locations"},
-{jp:"図書館",rd:"としょかん",rom:"toshokan",en:"library",my:"စာကြည့်တိုက်",cat:"Places and Locations"},
-{jp:"病院",rd:"びょういん",rom:"byouin",en:"hospital",my:"ဆေးရုံ",cat:"Places and Locations"},
-{jp:"銀行",rd:"ぎんこう",rom:"ginkou",en:"bank",my:"ဘဏ်",cat:"Places and Locations"},
-{jp:"郵便局",rd:"ゆうびんきょく",rom:"yuubinkyoku",en:"post office",my:"စာတိုက်",cat:"Places and Locations"},
-{jp:"会社",rd:"かいしゃ",rom:"kaisha",en:"company; office",my:"ကုမ္ပဏီ/ရုံး",cat:"Places and Locations"},
-{jp:"駅",rd:"えき",rom:"eki",en:"station",my:"ဘူတာ",cat:"Places and Locations"},
-{jp:"空港",rd:"くうこう",rom:"kuukou",en:"airport",my:"လေဆိပ်",cat:"Places and Locations"},
-{jp:"駐車場",rd:"ちゅうしゃじょう",rom:"chuushajou",en:"parking lot",my:"ကားပါကင်",cat:"Places and Locations"},
-{jp:"レストラン",rd:"レストラン",rom:"resutoran",en:"restaurant",my:"စားသောက်ဆိုင်",cat:"Places and Locations"},
-{jp:"食堂",rd:"しょくどう",rom:"shokudou",en:"cafeteria; dining hall",my:"စားသောက်ခန်း",cat:"Places and Locations"},
-{jp:"デパート",rd:"デパート",rom:"depaato",en:"department store",my:"ကုန်တိုက်",cat:"Places and Locations"},
-{jp:"スーパー",rd:"スーパー",rom:"suupaa",en:"supermarket",my:"စူပါမားကတ်",cat:"Places and Locations"},
-{jp:"店",rd:"みせ",rom:"mise",en:"shop; store",my:"ဆိုင်",cat:"Places and Locations"},
-{jp:"家",rd:"いえ",rom:"ie",en:"house; home",my:"အိမ်",cat:"Places and Locations"},
-{jp:"うち",rd:"うち",rom:"uchi",en:"home; my place",my:"အိမ် (ကိုယ့်အိမ်)",cat:"Places and Locations"},
-{jp:"部屋",rd:"へや",rom:"heya",en:"room",my:"အခန်း",cat:"Places and Locations"},
-{jp:"台所",rd:"だいどころ",rom:"daidokoro",en:"kitchen",my:"မီးဖိုခန်း",cat:"Places and Locations"},
-{jp:"お手洗い",rd:"おてあらい",rom:"otearai",en:"restroom; toilet",my:"အိမ်သာ",cat:"Places and Locations"},
-{jp:"公園",rd:"こうえん",rom:"kouen",en:"park",my:"ပန်းခြံ",cat:"Places and Locations"},
-{jp:"海",rd:"うみ",rom:"umi",en:"sea; ocean",my:"ပင်လယ်",cat:"Places and Locations"},
-{jp:"山",rd:"やま",rom:"yama",en:"mountain",my:"တောင်",cat:"Places and Locations"},
-{jp:"川",rd:"かわ",rom:"kawa",en:"river",my:"မြစ်",cat:"Places and Locations"},
-{jp:"空",rd:"そら",rom:"sora",en:"sky",my:"ကောင်းကင်",cat:"Places and Locations"},
-{jp:"国",rd:"くに",rom:"kuni",en:"country; nation",my:"နိုင်ငံ",cat:"Places and Locations"},
-{jp:"町",rd:"まち",rom:"machi",en:"town",my:"မြို့",cat:"Places and Locations"},
-{jp:"道",rd:"みち",rom:"michi",en:"road; street; way",my:"လမ်း",cat:"Places and Locations"},
-{jp:"地図",rd:"ちず",rom:"chizu",en:"map",my:"မြေပုံ",cat:"Places and Locations"},
-{jp:"外",rd:"そと",rom:"soto",en:"outside",my:"အပြင်",cat:"Places and Locations"},
-{jp:"中",rd:"なか",rom:"naka",en:"inside; among",my:"အထဲ",cat:"Places and Locations"},
-{jp:"上",rd:"うえ",rom:"ue",en:"above; top",my:"အပေါ်",cat:"Places and Locations"},
-{jp:"下",rd:"した",rom:"shita",en:"below; under",my:"အောက်",cat:"Places and Locations"},
-{jp:"右",rd:"みぎ",rom:"migi",en:"right side",my:"ညာဘက်",cat:"Places and Locations"},
-{jp:"左",rd:"ひだり",rom:"hidari",en:"left side",my:"ဘယ်ဘက်",cat:"Places and Locations"},
-{jp:"前",rd:"まえ",rom:"mae",en:"in front; before",my:"ရှေ့",cat:"Places and Locations"},
-{jp:"後ろ",rd:"うしろ",rom:"ushiro",en:"behind; back",my:"နောက်",cat:"Places and Locations"},
-{jp:"隣",rd:"となり",rom:"tonari",en:"next to; neighbor",my:"ကပ်လျက်/အိမ်နီးချင်း",cat:"Places and Locations"},
-{jp:"そば",rd:"そば",rom:"soba",en:"nearby; beside",my:"အနီး",cat:"Places and Locations"},
-{jp:"近く",rd:"ちかく",rom:"chikaku",en:"nearby; vicinity",my:"အနီးအနား",cat:"Places and Locations"},
-{jp:"向こう",rd:"むこう",rom:"mukou",en:"over there; beyond",my:"ဟိုဘက်",cat:"Places and Locations"},
-{jp:"本",rd:"ほん",rom:"hon",en:"book",my:"စာအုပ်",cat:"Things (Objects)"},
-{jp:"雑誌",rd:"ざっし",rom:"zasshi",en:"magazine",my:"မဂ္ဂဇင်း",cat:"Things (Objects)"},
-{jp:"新聞",rd:"しんぶん",rom:"shinbun",en:"newspaper",my:"သတင်းစာ",cat:"Things (Objects)"},
-{jp:"ノート",rd:"ノート",rom:"nooto",en:"notebook",my:"မှတ်စုစာအုပ်",cat:"Things (Objects)"},
-{jp:"紙",rd:"かみ",rom:"kami",en:"paper",my:"စက္ကူ",cat:"Things (Objects)"},
-{jp:"鉛筆",rd:"えんぴつ",rom:"enpitsu",en:"pencil",my:"ခဲတံ",cat:"Things (Objects)"},
-{jp:"ペン",rd:"ペン",rom:"pen",en:"pen",my:"ဘောပင်",cat:"Things (Objects)"},
-{jp:"消しゴム",rd:"けしゴム",rom:"keshigomu",en:"eraser",my:"ခဲဖျက်",cat:"Things (Objects)"},
-{jp:"定規",rd:"じょうぎ",rom:"jougi",en:"ruler",my:"ပေတံ",cat:"Things (Objects)"},
-{jp:"かばん",rd:"かばん",rom:"kaban",en:"bag; briefcase",my:"အိတ်/လွယ်အိတ်",cat:"Things (Objects)"},
-{jp:"財布",rd:"さいふ",rom:"saifu",en:"wallet",my:"ပိုက်ဆံအိတ်",cat:"Things (Objects)"},
-{jp:"鍵",rd:"かぎ",rom:"kagi",en:"key; lock",my:"သော့",cat:"Things (Objects)"},
-{jp:"傘",rd:"かさ",rom:"kasa",en:"umbrella",my:"ထီး",cat:"Things (Objects)"},
-{jp:"めがね",rd:"めがね",rom:"megane",en:"glasses",my:"မျက်မှန်",cat:"Things (Objects)"},
-{jp:"時計",rd:"とけい",rom:"tokei",en:"watch; clock",my:"နာရီ",cat:"Things (Objects)"},
-{jp:"カメラ",rd:"カメラ",rom:"kamera",en:"camera",my:"ကင်မရာ",cat:"Things (Objects)"},
-{jp:"テレビ",rd:"テレビ",rom:"terebi",en:"television",my:"တီဗီ",cat:"Things (Objects)"},
-{jp:"ラジオ",rd:"ラジオ",rom:"rajio",en:"radio",my:"ရေဒီယို",cat:"Things (Objects)"},
-{jp:"電話",rd:"でんわ",rom:"denwa",en:"telephone",my:"တယ်လီဖုန်း",cat:"Things (Objects)"},
-{jp:"携帯電話",rd:"けいたいでんわ",rom:"keitai denwa",en:"mobile phone",my:"မိုဘိုင်းဖုန်း",cat:"Things (Objects)"},
-{jp:"パソコン",rd:"パソコン",rom:"pasokon",en:"personal computer",my:"ကွန်ပျူတာ",cat:"Things (Objects)"},
-{jp:"机",rd:"つくえ",rom:"tsukue",en:"desk",my:"စာရေးခုံ",cat:"Things (Objects)"},
-{jp:"椅子",rd:"いす",rom:"isu",en:"chair",my:"ထိုင်ခုံ",cat:"Things (Objects)"},
-{jp:"テーブル",rd:"テーブル",rom:"teebu­ru",en:"table",my:"စားပွဲ",cat:"Things (Objects)"},
-{jp:"ドア",rd:"ドア",rom:"doa",en:"door",my:"တံခါး",cat:"Things (Objects)"},
-{jp:"窓",rd:"まど",rom:"mado",en:"window",my:"ပြတင်းပေါက်",cat:"Things (Objects)"},
-{jp:"電気",rd:"でんき",rom:"denki",en:"electricity; light",my:"လျှပ်စစ်/မီး",cat:"Things (Objects)"},
-{jp:"エアコン",rd:"エアコン",rom:"eakon",en:"air conditioner",my:"အဲကွန်း",cat:"Things (Objects)"},
-{jp:"写真",rd:"しゃしん",rom:"shashin",en:"photograph",my:"ဓာတ်ပုံ",cat:"Things (Objects)"},
-{jp:"花",rd:"はな",rom:"hana",en:"flower",my:"ပန်း",cat:"Things (Objects)"},
-{jp:"木",rd:"き",rom:"ki",en:"tree; wood",my:"သစ်ပင်/သစ်သား",cat:"Things (Objects)"},
-{jp:"服",rd:"ふく",rom:"fuku",en:"clothes",my:"အဝတ်အစား",cat:"Things (Objects)"},
-{jp:"シャツ",rd:"シャツ",rom:"shatsu",en:"shirt",my:"ရှပ်အင်္ကျီ",cat:"Things (Objects)"},
-{jp:"ズボン",rd:"ズボン",rom:"zubon",en:"trousers; pants",my:"ဘောင်းဘီ",cat:"Things (Objects)"},
-{jp:"スカート",rd:"スカート",rom:"sukaato",en:"skirt",my:"စကတ်",cat:"Things (Objects)"},
-{jp:"くつ",rd:"くつ",rom:"kutsu",en:"shoes",my:"ဖိနပ်",cat:"Things (Objects)"},
-{jp:"くつした",rd:"くつした",rom:"kutsushita",en:"socks",my:"ခြေအိတ်",cat:"Things (Objects)"},
-{jp:"帽子",rd:"ぼうし",rom:"boushi",en:"hat; cap",my:"ဦးထုပ်",cat:"Things (Objects)"},
-{jp:"コート",rd:"コート",rom:"kooto",en:"coat",my:"ကုတ်အင်္ကျီ",cat:"Things (Objects)"},
-{jp:"セーター",rd:"セーター",rom:"seetaa",en:"sweater",my:"ဆွယ်တာ",cat:"Things (Objects)"},
-{jp:"食べ物",rd:"たべもの",rom:"tabemono",en:"food",my:"အစားအစာ",cat:"Food and Drink"},
-{jp:"飲み物",rd:"のみもの",rom:"nomimono",en:"drink; beverage",my:"အဖျော်ယမကာ",cat:"Food and Drink"},
-{jp:"ご飯",rd:"ごはん",rom:"gohan",en:"rice; meal",my:"ထမင်း",cat:"Food and Drink"},
-{jp:"パン",rd:"パン",rom:"pan",en:"bread",my:"ပေါင်မုန့်",cat:"Food and Drink"},
-{jp:"肉",rd:"にく",rom:"niku",en:"meat",my:"အသား",cat:"Food and Drink"},
-{jp:"魚",rd:"さかな",rom:"sakana",en:"fish",my:"ငါး",cat:"Food and Drink"},
-{jp:"野菜",rd:"やさい",rom:"yasai",en:"vegetables",my:"ဟင်းသီးဟင်းရွက်",cat:"Food and Drink"},
-{jp:"果物",rd:"くだもの",rom:"kudamono",en:"fruit",my:"သစ်သီး",cat:"Food and Drink"},
-{jp:"たまご",rd:"たまご",rom:"tamago",en:"egg",my:"ကြက်ဥ",cat:"Food and Drink"},
-{jp:"牛乳",rd:"ぎゅうにゅう",rom:"gyuunyuu",en:"milk",my:"နွားနို့",cat:"Food and Drink"},
-{jp:"お茶",rd:"おちゃ",rom:"ocha",en:"tea",my:"လက်ဖက်ရည်",cat:"Food and Drink"},
-{jp:"水",rd:"みず",rom:"mizu",en:"water",my:"ရေ",cat:"Food and Drink"},
-{jp:"ジュース",rd:"ジュース",rom:"juusu",en:"juice",my:"ဖျော်ရည်",cat:"Food and Drink"},
-{jp:"コーヒー",rd:"コーヒー",rom:"koohii",en:"coffee",my:"ကော်ဖီ",cat:"Food and Drink"},
-{jp:"ビール",rd:"ビール",rom:"biiru",en:"beer",my:"ဘီယာ",cat:"Food and Drink"},
-{jp:"お酒",rd:"おさけ",rom:"osake",en:"sake; alcohol",my:"အရက်",cat:"Food and Drink"},
-{jp:"りんご",rd:"りんご",rom:"ringo",en:"apple",my:"ပန်းသီး",cat:"Food and Drink"},
-{jp:"バナナ",rd:"バナナ",rom:"banana",en:"banana",my:"ငှက်ပျောသီး",cat:"Food and Drink"},
-{jp:"みかん",rd:"みかん",rom:"mikan",en:"mandarin orange",my:"လိမ္မော်သီး",cat:"Food and Drink"},
-{jp:"すし",rd:"すし",rom:"sushi",en:"sushi",my:"ဆူရှီ",cat:"Food and Drink"},
-{jp:"うどん",rd:"うどん",rom:"udon",en:"udon noodles",my:"အူဒုံ (ခေါက်ဆွဲ)",cat:"Food and Drink"},
-{jp:"ラーメン",rd:"ラーメン",rom:"raamen",en:"ramen noodles",my:"ရာမင် (ခေါက်ဆွဲ)",cat:"Food and Drink"},
-{jp:"カレー",rd:"カレー",rom:"karee",en:"curry",my:"ဟင်း",cat:"Food and Drink"},
-{jp:"サンドイッチ",rd:"サンドイッチ",rom:"sandoitchi",en:"sandwich",my:"အသားညှပ်ပေါင်မုန့်",cat:"Food and Drink"},
-{jp:"ケーキ",rd:"ケーキ",rom:"keeki",en:"cake",my:"ကိတ်",cat:"Food and Drink"},
-{jp:"アイスクリーム",rd:"アイスクリーム",rom:"aisukuriimu",en:"ice cream",my:"ရေခဲမုန့်",cat:"Food and Drink"},
-{jp:"砂糖",rd:"さとう",rom:"satou",en:"sugar",my:"သကြား",cat:"Food and Drink"},
-{jp:"塩",rd:"しお",rom:"shio",en:"salt",my:"ဆား",cat:"Food and Drink"},
-{jp:"醤油",rd:"しょうゆ",rom:"shouyu",en:"soy sauce",my:"ပဲငံပြာရည်",cat:"Food and Drink"},
-{jp:"動物",rd:"どうぶつ",rom:"doubutsu",en:"animal",my:"တိရစ္ဆာန်",cat:"Animals"},
-{jp:"犬",rd:"いぬ",rom:"inu",en:"dog",my:"ခွေး",cat:"Animals"},
-{jp:"猫",rd:"ねこ",rom:"neko",en:"cat",my:"ကြောင်",cat:"Animals"},
-{jp:"鳥",rd:"とり",rom:"tori",en:"bird",my:"ငှက်",cat:"Animals"},
-{jp:"牛",rd:"うし",rom:"ushi",en:"cow",my:"နွား",cat:"Animals"},
-{jp:"馬",rd:"うま",rom:"uma",en:"horse",my:"မြင်း",cat:"Animals"},
-{jp:"豚",rd:"ぶた",rom:"buta",en:"pig",my:"ဝက်",cat:"Animals"},
-{jp:"電車",rd:"でんしゃ",rom:"densha",en:"train",my:"ရထား",cat:"Transportation"},
-{jp:"地下鉄",rd:"ちかてつ",rom:"chikatetsu",en:"subway; metro",my:"မြေအောက်ရထား",cat:"Transportation"},
-{jp:"バス",rd:"バス",rom:"basu",en:"bus",my:"ဘတ်စ်ကား",cat:"Transportation"},
-{jp:"タクシー",rd:"タクシー",rom:"takushii",en:"taxi",my:"တက္ကစီ",cat:"Transportation"},
-{jp:"飛行機",rd:"ひこうき",rom:"hikouki",en:"airplane",my:"လေယာဉ်",cat:"Transportation"},
-{jp:"船",rd:"ふね",rom:"fune",en:"ship; boat",my:"သင်္ဘော/လှေ",cat:"Transportation"},
-{jp:"自転車",rd:"じてんしゃ",rom:"jitensha",en:"bicycle",my:"စက်ဘီး",cat:"Transportation"},
-{jp:"車",rd:"くるま",rom:"kuruma",en:"car; vehicle",my:"ကား",cat:"Transportation"},
-{jp:"バイク",rd:"バイク",rom:"baiku",en:"motorcycle",my:"ဆိုင်ကယ်",cat:"Transportation"},
-{jp:"天気",rd:"てんき",rom:"tenki",en:"weather",my:"ရာသီဥတု",cat:"Nature and Weather"},
-{jp:"雨",rd:"あめ",rom:"ame",en:"rain",my:"မိုး",cat:"Nature and Weather"},
-{jp:"雪",rd:"ゆき",rom:"yuki",en:"snow",my:"နှင်း",cat:"Nature and Weather"},
-{jp:"風",rd:"かぜ",rom:"kaze",en:"wind",my:"လေ",cat:"Nature and Weather"},
-{jp:"晴れ",rd:"はれ",rom:"hare",en:"clear weather; sunny",my:"နေသာသောရာသီ",cat:"Nature and Weather"},
-{jp:"雲",rd:"くも",rom:"kumo",en:"cloud",my:"တိမ်",cat:"Nature and Weather"},
-{jp:"太陽",rd:"たいよう",rom:"taiyou",en:"sun",my:"နေ",cat:"Nature and Weather"},
-{jp:"月",rd:"つき",rom:"tsuki",en:"moon",my:"လ",cat:"Nature and Weather"},
-{jp:"星",rd:"ほし",rom:"hoshi",en:"star",my:"ကြယ်",cat:"Nature and Weather"},
-{jp:"池",rd:"いけ",rom:"ike",en:"pond",my:"ရေကန်",cat:"Nature and Weather"},
-{jp:"森",rd:"もり",rom:"mori",en:"forest",my:"တောအုပ်",cat:"Nature and Weather"},
-{jp:"体",rd:"からだ",rom:"karada",en:"body",my:"ကိုယ်ခန္ဓာ",cat:"Body Parts"},
-{jp:"頭",rd:"あたま",rom:"atama",en:"head",my:"ခေါင်း",cat:"Body Parts"},
-{jp:"顔",rd:"かお",rom:"kao",en:"face",my:"မျက်နှာ",cat:"Body Parts"},
-{jp:"目",rd:"め",rom:"me",en:"eye",my:"မျက်လုံး",cat:"Body Parts"},
-{jp:"耳",rd:"みみ",rom:"mimi",en:"ear",my:"နား",cat:"Body Parts"},
-{jp:"鼻",rd:"はな",rom:"hana",en:"nose",my:"နှာခေါင်း",cat:"Body Parts"},
-{jp:"口",rd:"くち",rom:"kuchi",en:"mouth",my:"ပါးစပ်",cat:"Body Parts"},
-{jp:"歯",rd:"は",rom:"ha",en:"tooth; teeth",my:"သွား",cat:"Body Parts"},
-{jp:"手",rd:"て",rom:"te",en:"hand",my:"လက်",cat:"Body Parts"},
-{jp:"足",rd:"あし",rom:"ashi",en:"foot; leg",my:"ခြေထောက်",cat:"Body Parts"},
-{jp:"背",rd:"せ",rom:"se",en:"height; back",my:"ကျော/အရပ်",cat:"Body Parts"},
-{jp:"一",rd:"いち",rom:"ichi",en:"one",my:"တစ်",cat:"Numbers",t:["numbers"]},
-{jp:"二",rd:"に",rom:"ni",en:"two",my:"နှစ်",cat:"Numbers",t:["numbers"]},
-{jp:"三",rd:"さん",rom:"san",en:"three",my:"သုံး",cat:"Numbers",t:["numbers"]},
-{jp:"四",rd:"し／よん",rom:"shi / yon",en:"four",my:"လေး",cat:"Numbers",t:["numbers"]},
-{jp:"五",rd:"ご",rom:"go",en:"five",my:"ငါး",cat:"Numbers",t:["numbers"]},
-{jp:"六",rd:"ろく",rom:"roku",en:"six",my:"ခြောက်",cat:"Numbers",t:["numbers"]},
-{jp:"七",rd:"しち／なな",rom:"shichi / nana",en:"seven",my:"ခုနစ်",cat:"Numbers",t:["numbers"]},
-{jp:"八",rd:"はち",rom:"hachi",en:"eight",my:"ရှစ်",cat:"Numbers",t:["numbers"]},
-{jp:"九",rd:"く／きゅう",rom:"ku / kyuu",en:"nine",my:"ကိုး",cat:"Numbers",t:["numbers"]},
-{jp:"十",rd:"じゅう",rom:"juu",en:"ten",my:"ဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"十一",rd:"じゅういち",rom:"juuichi",en:"eleven",my:"ဆယ့်တစ်",cat:"Numbers",t:["numbers"]},
-{jp:"十二",rd:"じゅうに",rom:"juuni",en:"twelve",my:"ဆယ့်နှစ်",cat:"Numbers",t:["numbers"]},
-{jp:"二十",rd:"にじゅう",rom:"nijuu",en:"twenty",my:"နှစ်ဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"百",rd:"ひゃく",rom:"hyaku",en:"one hundred",my:"တစ်ရာ",cat:"Numbers",t:["numbers"]},
-{jp:"二百",rd:"にひゃく",rom:"nihyaku",en:"two hundred",my:"နှစ်ရာ",cat:"Numbers",t:["numbers"]},
-{jp:"三百",rd:"さんびゃく",rom:"sanbyaku",en:"three hundred",my:"သုံးရာ",cat:"Numbers",t:["numbers"]},
-{jp:"千",rd:"せん",rom:"sen",en:"one thousand",my:"တစ်ထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"万",rd:"まん",rom:"man",en:"ten thousand",my:"တစ်သောင်း",cat:"Numbers",t:["numbers"]},
-{jp:"零",rd:"れい／ゼロ",rom:"rei / zero",en:"zero",my:"သုည",cat:"Numbers",t:["numbers"]},
-{jp:"何",rd:"なん／なに",rom:"nan / nani",en:"what; how many",my:"ဘာ/ဘယ်လောက်",cat:"Numbers",t:["numbers"]},
-{jp:"〜つ",rd:"〜つ",rom:"~tsu",en:"generic counter (1–9 things)",my:"ခု (ပစ္စည်းရေတွက်ပုံ)",cat:"Counters",t:["numbers"]},
-{jp:"〜本",rd:"〜ほん/ぼん/ぽん",rom:"~hon/bon/pon",en:"long thin objects (pens, bottles)",my:"ချောင်း (ရှည်သောပစ္စည်း)",cat:"Counters",t:["numbers"]},
-{jp:"〜枚",rd:"〜まい",rom:"~mai",en:"flat thin objects (paper, plates)",my:"ရွက်/ချပ် (ပြားသောပစ္စည်း)",cat:"Counters",t:["numbers"]},
-{jp:"〜冊",rd:"〜さつ",rom:"~satsu",en:"bound objects (books, notebooks)",my:"အုပ် (စာအုပ်)",cat:"Counters",t:["numbers"]},
-{jp:"〜匹",rd:"〜ひき/びき/ぴき",rom:"~hiki/biki/piki",en:"small animals",my:"ကောင် (တိရစ္ဆာန်ငယ်)",cat:"Counters",t:["numbers"]},
-{jp:"〜頭",rd:"〜とう",rom:"~tou",en:"large animals",my:"ကောင် (တိရစ္ဆာန်ကြီး)",cat:"Counters",t:["numbers"]},
-{jp:"〜羽",rd:"〜わ/は/ば",rom:"~wa/ha/ba",en:"birds; rabbits",my:"ကောင် (ငှက်/ယုန်)",cat:"Counters",t:["numbers"]},
-{jp:"〜台",rd:"〜だい",rom:"~dai",en:"machines; vehicles",my:"စီး (စက်/ယာဉ်)",cat:"Counters",t:["numbers"]},
-{jp:"〜杯",rd:"〜はい/ばい/ぱい",rom:"~hai/bai/pai",en:"cups; glasses; bowls",my:"ခွက် (ခွက်/ပန်းကန်)",cat:"Counters",t:["numbers"]},
-{jp:"〜人",rd:"〜にん/り",rom:"~nin/ri",en:"people",my:"ယောက် (လူ)",cat:"Counters",t:["numbers"]},
-{jp:"〜個",rd:"〜こ",rom:"~ko",en:"small round objects",my:"လုံး (အဝိုင်းပစ္စည်း)",cat:"Counters",t:["numbers"]},
-{jp:"〜階",rd:"〜かい/がい",rom:"~kai/gai",en:"floors of a building",my:"ထပ် (အဆောက်အအုံ)",cat:"Counters",t:["numbers"]},
-{jp:"〜番",rd:"〜ばん",rom:"~ban",en:"number in a sequence",my:"နံပါတ်",cat:"Counters",t:["numbers"]},
-{jp:"〜番目",rd:"〜ばんめ",rom:"~banme",en:"ordinal number",my:"နံပါတ်မြောက်",cat:"Counters",t:["numbers"]},
-{jp:"ひとつ",rd:"ひとつ",rom:"hitotsu",en:"one (thing)",my:"တစ်ခု",cat:"Counters",t:["numbers"]},
-{jp:"ふたつ",rd:"ふたつ",rom:"futatsu",en:"two (things)",my:"နှစ်ခု",cat:"Counters",t:["numbers"]},
-{jp:"みっつ",rd:"みっつ",rom:"mittsu",en:"three (things)",my:"သုံးခု",cat:"Counters",t:["numbers"]},
-{jp:"よっつ",rd:"よっつ",rom:"yottsu",en:"four (things)",my:"လေးခု",cat:"Counters",t:["numbers"]},
-{jp:"いつつ",rd:"いつつ",rom:"itsutsu",en:"five (things)",my:"ငါးခု",cat:"Counters",t:["numbers"]},
-{jp:"むっつ",rd:"むっつ",rom:"muttsu",en:"six (things)",my:"ခြောက်ခု",cat:"Counters",t:["numbers"]},
-{jp:"ななつ",rd:"ななつ",rom:"nanatsu",en:"seven (things)",my:"ခုနစ်ခု",cat:"Counters",t:["numbers"]},
-{jp:"やっつ",rd:"やっつ",rom:"yattsu",en:"eight (things)",my:"ရှစ်ခု",cat:"Counters",t:["numbers"]},
-{jp:"ここのつ",rd:"ここのつ",rom:"kokonotsu",en:"nine (things)",my:"ကိုးခု",cat:"Counters",t:["numbers"]},
-{jp:"とお",rd:"とお",rom:"too",en:"ten (things)",my:"ဆယ်ခု",cat:"Counters",t:["numbers"]},
-{jp:"今",rd:"いま",rom:"ima",en:"now",my:"အခု",cat:"Time Words",t:["time"]},
-{jp:"今日",rd:"きょう",rom:"kyou",en:"today",my:"ဒီနေ့",cat:"Time Words",t:["time"]},
-{jp:"明日",rd:"あした",rom:"ashita",en:"tomorrow",my:"မနက်ဖြန်",cat:"Time Words",t:["time"]},
-{jp:"昨日",rd:"きのう",rom:"kinou",en:"yesterday",my:"မနေ့က",cat:"Time Words",t:["time"]},
-{jp:"明後日",rd:"あさって",rom:"asatte",en:"the day after tomorrow",my:"သန်ဘက်ခါ",cat:"Time Words",t:["time"]},
-{jp:"一昨日",rd:"おととい",rom:"ototoi",en:"the day before yesterday",my:"တဘက်ခါ",cat:"Time Words",t:["time"]},
-{jp:"今週",rd:"こんしゅう",rom:"konshuu",en:"this week",my:"ဒီအပတ်",cat:"Time Words",t:["time"]},
-{jp:"来週",rd:"らいしゅう",rom:"raishuu",en:"next week",my:"နောက်အပတ်",cat:"Time Words",t:["time"]},
-{jp:"先週",rd:"せんしゅう",rom:"senshuu",en:"last week",my:"ပြီးခဲ့တဲ့အပတ်",cat:"Time Words",t:["time"]},
-{jp:"今月",rd:"こんげつ",rom:"kongetsu",en:"this month",my:"ဒီလ",cat:"Time Words",t:["time"]},
-{jp:"来月",rd:"らいげつ",rom:"raigetsu",en:"next month",my:"နောက်လ",cat:"Time Words",t:["time"]},
-{jp:"先月",rd:"せんげつ",rom:"sengetsu",en:"last month",my:"ပြီးခဲ့တဲ့လ",cat:"Time Words",t:["time"]},
-{jp:"今年",rd:"ことし",rom:"kotoshi",en:"this year",my:"ဒီနှစ်",cat:"Time Words",t:["time"]},
-{jp:"来年",rd:"らいねん",rom:"rainen",en:"next year",my:"နောက်နှစ်",cat:"Time Words",t:["time"]},
-{jp:"去年",rd:"きょねん",rom:"kyonen",en:"last year",my:"မနှစ်က",cat:"Time Words",t:["time"]},
-{jp:"朝",rd:"あさ",rom:"asa",en:"morning",my:"မနက်",cat:"Time Words",t:["time"]},
-{jp:"昼",rd:"ひる",rom:"hiru",en:"daytime; noon",my:"နေ့လည်",cat:"Time Words",t:["time"]},
-{jp:"夜",rd:"よる",rom:"yoru",en:"evening; night",my:"ည",cat:"Time Words",t:["time"]},
-{jp:"午前",rd:"ごぜん",rom:"gozen",en:"AM; morning",my:"မနက်ပိုင်း",cat:"Time Words",t:["time"]},
-{jp:"午後",rd:"ごご",rom:"gogo",en:"PM; afternoon",my:"နေ့လယ်ပိုင်း",cat:"Time Words",t:["time"]},
-{jp:"朝ご飯",rd:"あさごはん",rom:"asagohan",en:"breakfast",my:"မနက်စာ",cat:"Time Words",t:["time"]},
-{jp:"昼ご飯",rd:"ひるごはん",rom:"hirugohan",en:"lunch",my:"နေ့လည်စာ",cat:"Time Words",t:["time"]},
-{jp:"夕ご飯",rd:"ゆうごはん",rom:"yuugohan",en:"dinner",my:"ညစာ",cat:"Time Words",t:["time"]},
-{jp:"〜時",rd:"〜じ",rom:"~ji",en:"o'clock",my:"နာရီ",cat:"Time Words",t:["time"]},
-{jp:"〜分",rd:"〜ふん/ぷん",rom:"~fun/pun",en:"minutes",my:"မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"〜秒",rd:"〜びょう",rom:"~byou",en:"seconds",my:"စက္ကန့်",cat:"Time Words",t:["time"]},
-{jp:"〜月",rd:"〜がつ",rom:"~gatsu",en:"month (name)",my:"လ (လအမည်)",cat:"Time Words",t:["time", "dates"]},
-{jp:"〜日",rd:"〜にち/か",rom:"~nichi/ka",en:"day of month",my:"ရက်",cat:"Time Words",t:["time", "dates"]},
-{jp:"〜年",rd:"〜ねん",rom:"~nen",en:"year",my:"နှစ်",cat:"Time Words",t:["time"]},
-{jp:"〜曜日",rd:"〜ようび",rom:"~youbi",en:"day of the week",my:"ရက် (အပတ်ရက်)",cat:"Time Words",t:["time", "dates"]},
-{jp:"月曜日",rd:"げつようび",rom:"getsu-youbi",en:"Monday",my:"တနင်္လာနေ့",cat:"Time Words",t:["time", "dates"]},
-{jp:"火曜日",rd:"かようび",rom:"ka-youbi",en:"Tuesday",my:"အင်္ဂါနေ့",cat:"Time Words",t:["time", "dates"]},
-{jp:"水曜日",rd:"すいようび",rom:"sui-youbi",en:"Wednesday",my:"ဗုဒ္ဓဟူးနေ့",cat:"Time Words",t:["time", "dates"]},
-{jp:"木曜日",rd:"もくようび",rom:"moku-youbi",en:"Thursday",my:"ကြာသပတေးနေ့",cat:"Time Words",t:["time", "dates"]},
-{jp:"金曜日",rd:"きんようび",rom:"kin-youbi",en:"Friday",my:"သောကြာနေ့",cat:"Time Words",t:["time", "dates"]},
-{jp:"土曜日",rd:"どようび",rom:"do-youbi",en:"Saturday",my:"စနေနေ့",cat:"Time Words",t:["time", "dates"]},
-{jp:"日曜日",rd:"にちようび",rom:"nichi-youbi",en:"Sunday",my:"တနင်္ဂနွေနေ့",cat:"Time Words",t:["time", "dates"]},
-{jp:"一月",rd:"いちがつ",rom:"ichi-gatsu",en:"January",my:"ဇန်နဝါရီ",cat:"Time Words",t:["time", "dates"]},
-{jp:"二月",rd:"にがつ",rom:"ni-gatsu",en:"February",my:"ဖေဖော်ဝါရီ",cat:"Time Words",t:["time", "dates"]},
-{jp:"三月",rd:"さんがつ",rom:"san-gatsu",en:"March",my:"မတ်",cat:"Time Words",t:["time", "dates"]},
-{jp:"四月",rd:"しがつ",rom:"shi-gatsu",en:"April",my:"ဧပြီ",cat:"Time Words",t:["time", "dates"]},
-{jp:"五月",rd:"ごがつ",rom:"go-gatsu",en:"May",my:"မေ",cat:"Time Words",t:["time", "dates"]},
-{jp:"六月",rd:"ろくがつ",rom:"roku-gatsu",en:"June",my:"ဇွန်",cat:"Time Words",t:["time", "dates"]},
-{jp:"七月",rd:"しちがつ",rom:"shichi-gatsu",en:"July",my:"ဇူလိုင်",cat:"Time Words",t:["time", "dates"]},
-{jp:"八月",rd:"はちがつ",rom:"hachi-gatsu",en:"August",my:"သြဂုတ်",cat:"Time Words",t:["time", "dates"]},
-{jp:"九月",rd:"くがつ",rom:"ku-gatsu",en:"September",my:"စက်တင်ဘာ",cat:"Time Words",t:["time", "dates"]},
-{jp:"十月",rd:"じゅうがつ",rom:"juu-gatsu",en:"October",my:"အောက်တိုဘာ",cat:"Time Words",t:["time", "dates"]},
-{jp:"十一月",rd:"じゅういちがつ",rom:"juuichi-gatsu",en:"November",my:"နိုဝင်ဘာ",cat:"Time Words",t:["time", "dates"]},
-{jp:"十二月",rd:"じゅうにがつ",rom:"juuni-gatsu",en:"December",my:"ဒီဇင်ဘာ",cat:"Time Words",t:["time", "dates"]},
-{jp:"週末",rd:"しゅうまつ",rom:"shuumatsu",en:"weekend",my:"ပိတ်ရက်",cat:"Time Words",t:["time", "dates"]},
-{jp:"毎日",rd:"まいにち",rom:"mainichi",en:"every day",my:"နေ့တိုင်း",cat:"Time Words",t:["time"]},
-{jp:"毎朝",rd:"まいあさ",rom:"maiasa",en:"every morning",my:"မနက်တိုင်း",cat:"Time Words",t:["time"]},
-{jp:"毎週",rd:"まいしゅう",rom:"maishuu",en:"every week",my:"အပတ်တိုင်း",cat:"Time Words",t:["time"]},
-{jp:"毎月",rd:"まいつき",rom:"maitsuki",en:"every month",my:"လတိုင်း",cat:"Time Words",t:["time"]},
-{jp:"毎年",rd:"まいとし",rom:"maitoshi",en:"every year",my:"နှစ်တိုင်း",cat:"Time Words",t:["time"]},
-{jp:"時間",rd:"じかん",rom:"jikan",en:"time; hour",my:"အချိန်",cat:"Time Words",t:["time"]},
-{jp:"〜時間",rd:"〜じかん",rom:"~jikan",en:"~ hours (duration)",my:"နာရီ (ကြာချိန်)",cat:"Time Words",t:["time"]},
-{jp:"〜週間",rd:"〜しゅうかん",rom:"~shuukan",en:"~ weeks (duration)",my:"အပတ် (ကြာချိန်)",cat:"Time Words",t:["time"]},
-{jp:"〜ヶ月",rd:"〜かげつ",rom:"~kagetsu",en:"~ months (duration)",my:"လ (ကြာချိန်)",cat:"Time Words",t:["time"]},
-{jp:"〜年間",rd:"〜ねんかん",rom:"~nenkan",en:"~ years (duration)",my:"နှစ် (ကြာချိန်)",cat:"Time Words",t:["time"]},
-{jp:"半",rd:"はん",rom:"han",en:"half",my:"တစ်ဝက်",cat:"Time Words",t:["time"]},
-{jp:"ごろ",rd:"ごろ",rom:"goro",en:"around (time); about",my:"ခန့်/ဝန်းကျင်",cat:"Time Words",t:["time"]},
-{jp:"まだ",rd:"まだ",rom:"mada",en:"still; not yet",my:"သေးတယ်/မသေးဘူး",cat:"Time Words",t:["time"]},
-{jp:"もう",rd:"もう",rom:"mou",en:"already; anymore",my:"ပြီးပြီ",cat:"Time Words",t:["time"]},
-{jp:"はじめ",rd:"はじめ",rom:"hajime",en:"beginning",my:"အစ",cat:"Time Words",t:["time"]},
-{jp:"おわり",rd:"おわり",rom:"owari",en:"end; finish",my:"အဆုံး",cat:"Time Words",t:["time"]},
-{jp:"勉強",rd:"べんきょう",rom:"benkyou",en:"study; studies",my:"စာကျက်ခြင်း",cat:"School and Studies"},
-{jp:"授業",rd:"じゅぎょう",rom:"jugyou",en:"class; lesson",my:"သင်ခန်းစာ",cat:"School and Studies"},
-{jp:"宿題",rd:"しゅくだい",rom:"shukudai",en:"homework",my:"အိမ်စာ",cat:"School and Studies"},
-{jp:"試験",rd:"しけん",rom:"shiken",en:"exam; test",my:"စာမေးပွဲ",cat:"School and Studies"},
-{jp:"教室",rd:"きょうしつ",rom:"kyoushitsu",en:"classroom",my:"စာသင်ခန်း",cat:"School and Studies"},
-{jp:"国語",rd:"こくご",rom:"kokugo",en:"Japanese language (subject)",my:"ဂျပန်စာ (ဘာသာရပ်)",cat:"School and Studies"},
-{jp:"英語",rd:"えいご",rom:"eigo",en:"English language",my:"အင်္ဂလိပ်စာ",cat:"School and Studies"},
-{jp:"日本語",rd:"にほんご",rom:"nihongo",en:"Japanese language",my:"ဂျပန်စာ",cat:"School and Studies"},
-{jp:"数学",rd:"すうがく",rom:"suugaku",en:"mathematics",my:"သင်္ချာ",cat:"School and Studies"},
-{jp:"科学",rd:"かがく",rom:"kagaku",en:"science",my:"သိပ္ပံ",cat:"School and Studies"},
-{jp:"音楽",rd:"おんがく",rom:"ongaku",en:"music",my:"ဂီတ",cat:"School and Studies"},
-{jp:"体育",rd:"たいいく",rom:"taiiku",en:"physical education",my:"ကာယပညာ",cat:"School and Studies"},
-{jp:"言葉",rd:"ことば",rom:"kotoba",en:"word; language; speech",my:"စကားလုံး/ဘာသာ",cat:"School and Studies"},
-{jp:"文字",rd:"もじ",rom:"moji",en:"character; letter",my:"စာလုံး",cat:"School and Studies"},
-{jp:"漢字",rd:"かんじ",rom:"kanji",en:"kanji (Chinese characters)",my:"ခန်းဂျီး",cat:"School and Studies"},
-{jp:"ひらがな",rd:"ひらがな",rom:"hiragana",en:"hiragana script",my:"ဟိရဂန",cat:"School and Studies"},
-{jp:"カタカナ",rd:"カタカナ",rom:"katakana",en:"katakana script",my:"ခတခန",cat:"School and Studies"},
-{jp:"趣味",rd:"しゅみ",rom:"shumi",en:"hobby; interest",my:"ဝါသနာ",cat:"Hobbies and Activities"},
-{jp:"映画",rd:"えいが",rom:"eiga",en:"movie; film",my:"ရုပ်ရှင်",cat:"Hobbies and Activities"},
-{jp:"歌",rd:"うた",rom:"uta",en:"song; singing",my:"သီချင်း",cat:"Hobbies and Activities"},
-{jp:"絵",rd:"え",rom:"e",en:"picture; painting",my:"ပန်းချီ/ပုံ",cat:"Hobbies and Activities"},
-{jp:"旅行",rd:"りょこう",rom:"ryokou",en:"travel; trip",my:"ခရီးသွားခြင်း",cat:"Hobbies and Activities"},
-{jp:"運動",rd:"うんどう",rom:"undou",en:"exercise; sports",my:"လေ့ကျင့်ခန်း/အားကစား",cat:"Hobbies and Activities"},
-{jp:"スポーツ",rd:"スポーツ",rom:"supootsu",en:"sport",my:"အားကစား",cat:"Hobbies and Activities"},
-{jp:"サッカー",rd:"サッカー",rom:"sakkaa",en:"soccer; football",my:"ဘောလုံး",cat:"Hobbies and Activities"},
-{jp:"野球",rd:"やきゅう",rom:"yakyuu",en:"baseball",my:"ဘေ့စ်ဘော",cat:"Hobbies and Activities"},
-{jp:"テニス",rd:"テニス",rom:"tenisu",en:"tennis",my:"တင်းနစ်",cat:"Hobbies and Activities"},
-{jp:"水泳",rd:"すいえい",rom:"suiei",en:"swimming",my:"ရေကူးခြင်း",cat:"Hobbies and Activities"},
-{jp:"買い物",rd:"かいもの",rom:"kaimono",en:"shopping",my:"ဈေးဝယ်ခြင်း",cat:"Hobbies and Activities"},
-{jp:"料理",rd:"りょうり",rom:"ryouri",en:"cooking; cuisine",my:"ဟင်းချက်ခြင်း",cat:"Hobbies and Activities"},
-{jp:"ゲーム",rd:"ゲーム",rom:"geemu",en:"game",my:"ဂိမ်း",cat:"Hobbies and Activities"},
-{jp:"読書",rd:"どくしょ",rom:"dokusho",en:"reading (books)",my:"စာဖတ်ခြင်း",cat:"Hobbies and Activities"},
-{jp:"散歩",rd:"さんぽ",rom:"sanpo",en:"walk; stroll",my:"လမ်းလျှောက်ခြင်း",cat:"Hobbies and Activities"},
-{jp:"パーティー",rd:"パーティー",rom:"paatii",en:"party",my:"ပါတီ",cat:"Hobbies and Activities"},
-{jp:"お金",rd:"おかね",rom:"okane",en:"money",my:"ပိုက်ဆံ",cat:"Money & Shopping"},
-{jp:"円",rd:"えん",rom:"en",en:"yen (currency)",my:"ယန်း",cat:"Money & Shopping"},
-{jp:"値段",rd:"ねだん",rom:"nedan",en:"price",my:"စျေးနှုန်း",cat:"Money & Shopping"},
-{jp:"〜円",rd:"〜えん",rom:"~en",en:"~ yen",my:"ယန်း",cat:"Money & Shopping"},
-{jp:"おつり",rd:"おつり",rom:"otsuri",en:"change (money returned)",my:"ပြန်အမ်းငွေ",cat:"Money & Shopping"},
-{jp:"レシート",rd:"レシート",rom:"reshiito",en:"receipt",my:"ငွေလက်ခံဖြတ်ပိုင်း",cat:"Money & Shopping"},
-{jp:"品物",rd:"しなもの",rom:"shinamono",en:"goods; article",my:"ပစ္စည်း",cat:"Money & Shopping"},
-{jp:"プレゼント",rd:"プレゼント",rom:"purezento",en:"present; gift",my:"လက်ဆောင်",cat:"Money & Shopping"},
-{jp:"病気",rd:"びょうき",rom:"byouki",en:"illness; sickness",my:"ရောဂါ/နေမကောင်း",cat:"Health and Body"},
-{jp:"薬",rd:"くすり",rom:"kusuri",en:"medicine",my:"ဆေး",cat:"Health and Body"},
-{jp:"熱",rd:"ねつ",rom:"netsu",en:"fever; temperature",my:"အဖျား/အပူချိန်",cat:"Health and Body"},
-{jp:"痛み",rd:"いたみ",rom:"itami",en:"pain",my:"နာကျင်မှု",cat:"Health and Body"},
-{jp:"元気",rd:"げんき",rom:"genki",en:"healthy; energetic; well",my:"ကျန်းမာ/လန်းဆန်း",cat:"Health and Body"},
-{jp:"会う",rd:"会って / 会った",rom:"au",en:"to meet",my:"တွေ့သည်",cat:"Verbs Group 1"},
-{jp:"歩く",rd:"歩いて / 歩いた",rom:"aruku",en:"to walk",my:"လမ်းလျှောက်သည်",cat:"Verbs Group 1"},
-{jp:"遊ぶ",rd:"遊んで / 遊んだ",rom:"asobu",en:"to play; to have fun",my:"ကစားသည်/ပျော်သည်",cat:"Verbs Group 1"},
-{jp:"洗う",rd:"洗って / 洗った",rom:"arau",en:"to wash",my:"ဆေးသည်",cat:"Verbs Group 1"},
-{jp:"言う",rd:"言って / 言った",rom:"iu",en:"to say",my:"ပြောသည်",cat:"Verbs Group 1"},
-{jp:"急ぐ",rd:"急いで / 急いだ",rom:"isogu",en:"to hurry",my:"အလျင်လိုသည်",cat:"Verbs Group 1"},
-{jp:"行く",rd:"行って / 行った",rom:"iku",en:"to go",my:"သွားသည်",cat:"Verbs Group 1"},
-{jp:"入る",rd:"入って / 入った",rom:"hairu",en:"to enter; to go in",my:"ဝင်သည်",cat:"Verbs Group 1"},
-{jp:"起こす",rd:"起こして / 起こした",rom:"okosu",en:"to wake (someone) up",my:"နှိုးသည်",cat:"Verbs Group 1"},
-{jp:"送る",rd:"送って / 送った",rom:"okuru",en:"to send; to see off",my:"ပို့သည်/လိုက်ပို့သည်",cat:"Verbs Group 1"},
-{jp:"教える",rd:"教えて / 教えた",rom:"oshieru",en:"to teach; to tell",my:"သင်ပေးသည်",cat:"Verbs Group 1"},
-{jp:"怒る",rd:"怒って / 怒った",rom:"okoru",en:"to get angry",my:"စိတ်ဆိုးသည်",cat:"Verbs Group 1"},
-{jp:"思う",rd:"思って / 思った",rom:"omou",en:"to think; to feel",my:"ထင်သည်/တွေးသည်",cat:"Verbs Group 1"},
-{jp:"泳ぐ",rd:"泳いで / 泳いだ",rom:"oyogu",en:"to swim",my:"ရေကူးသည်",cat:"Verbs Group 1"},
-{jp:"終わる",rd:"終わって / 終わった",rom:"owaru",en:"to end; to finish",my:"ပြီးဆုံးသည်",cat:"Verbs Group 1"},
-{jp:"買う",rd:"買って / 買った",rom:"kau",en:"to buy",my:"ဝယ်သည်",cat:"Verbs Group 1"},
-{jp:"帰る",rd:"帰って / 帰った",rom:"kaeru",en:"to return (home)",my:"ပြန်သည် (အိမ်)",cat:"Verbs Group 1"},
-{jp:"書く",rd:"書いて / 書いた",rom:"kaku",en:"to write",my:"ရေးသည်",cat:"Verbs Group 1"},
-{jp:"貸す",rd:"貸して / 貸した",rom:"kasu",en:"to lend",my:"ချေးငှားပေးသည်",cat:"Verbs Group 1"},
-{jp:"聞く",rd:"聞いて / 聞いた",rom:"kiku",en:"to listen; to hear; to ask",my:"နားထောင်သည်/မေးသည်",cat:"Verbs Group 1"},
-{jp:"切る",rd:"切って / 切った",rom:"kiru",en:"to cut",my:"ဖြတ်သည်",cat:"Verbs Group 1"},
-{jp:"消す",rd:"消して / 消した",rom:"kesu",en:"to turn off; to erase",my:"ပိတ်သည်/ဖျက်သည်",cat:"Verbs Group 1"},
-{jp:"降る",rd:"降って / 降った",rom:"furu",en:"to fall (rain/snow)",my:"ရွာသည် (မိုး/နှင်း)",cat:"Verbs Group 1"},
-{jp:"住む",rd:"住んで / 住んだ",rom:"sumu",en:"to live; to reside",my:"နေထိုင်သည်",cat:"Verbs Group 1"},
-{jp:"座る",rd:"座って / 座った",rom:"suwaru",en:"to sit (down)",my:"ထိုင်သည်",cat:"Verbs Group 1"},
-{jp:"死ぬ",rd:"死んで / 死んだ",rom:"shinu",en:"to die",my:"သေသည်",cat:"Verbs Group 1"},
-{jp:"知る",rd:"知って / 知った",rom:"shiru",en:"to come to know",my:"သိသည်",cat:"Verbs Group 1"},
-{jp:"吸う",rd:"吸って / 吸った",rom:"suu",en:"to smoke; to inhale",my:"ရှူသည်/ဆေးလိပ်သောက်သည်",cat:"Verbs Group 1"},
-{jp:"出す",rd:"出して / 出した",rom:"dasu",en:"to take out; to submit",my:"ထုတ်သည်/တင်ပြသည်",cat:"Verbs Group 1"},
-{jp:"立つ",rd:"立って / 立った",rom:"tatsu",en:"to stand",my:"မတ်တပ်ရပ်သည်",cat:"Verbs Group 1"},
-{jp:"使う",rd:"使って / 使った",rom:"tsukau",en:"to use",my:"သုံးသည်",cat:"Verbs Group 1"},
-{jp:"作る",rd:"作って / 作った",rom:"tsukuru",en:"to make; to create",my:"လုပ်သည်/ဖန်တီးသည်",cat:"Verbs Group 1"},
-{jp:"手伝う",rd:"手伝って / 手伝った",rom:"tetsudau",en:"to help; to assist",my:"ကူညီသည်",cat:"Verbs Group 1"},
-{jp:"飛ぶ",rd:"飛んで / 飛んだ",rom:"tobu",en:"to fly; to jump",my:"ပျံသည်/ခုန်သည်",cat:"Verbs Group 1"},
-{jp:"泊まる",rd:"泊まって / 泊まった",rom:"tomaru",en:"to stay (overnight)",my:"တည်းခိုသည် (ညအိပ်)",cat:"Verbs Group 1"},
-{jp:"取る",rd:"取って / 取った",rom:"toru",en:"to take; to get",my:"ယူသည်",cat:"Verbs Group 1"},
-{jp:"乗る",rd:"乗って / 乗った",rom:"noru",en:"to ride; to get on",my:"စီးသည်",cat:"Verbs Group 1"},
-{jp:"飲む",rd:"飲んで / 飲んだ",rom:"nomu",en:"to drink",my:"သောက်သည်",cat:"Verbs Group 1"},
-{jp:"話す",rd:"話して / 話した",rom:"hanasu",en:"to speak",my:"ပြောသည်",cat:"Verbs Group 1"},
-{jp:"払う",rd:"払って / 払った",rom:"harau",en:"to pay",my:"ပေးချေသည်",cat:"Verbs Group 1"},
-{jp:"引く",rd:"引いて / 引いた",rom:"hiku",en:"to pull; to look up",my:"ဆွဲသည်/ရှာသည်",cat:"Verbs Group 1"},
-{jp:"弾く",rd:"弾いて / 弾いた",rom:"hiku",en:"to play (instrument)",my:"တီးခတ်သည်",cat:"Verbs Group 1"},
-{jp:"吹く",rd:"吹いて / 吹いた",rom:"fuku",en:"to blow",my:"မှုတ်သည်",cat:"Verbs Group 1"},
-{jp:"待つ",rd:"待って / 待った",rom:"matsu",en:"to wait",my:"စောင့်သည်",cat:"Verbs Group 1"},
-{jp:"持つ",rd:"持って / 持った",rom:"motsu",en:"to hold; to carry",my:"ကိုင်သည်/သယ်သည်",cat:"Verbs Group 1"},
-{jp:"もらう",rd:"もらって / もらった",rom:"morau",en:"to receive",my:"ရရှိသည်",cat:"Verbs Group 1"},
-{jp:"やる",rd:"やって / やった",rom:"yaru",en:"to do (casual)",my:"လုပ်သည် (အရပ်သုံး)",cat:"Verbs Group 1"},
-{jp:"読む",rd:"読んで / 読んだ",rom:"yomu",en:"to read",my:"ဖတ်သည်",cat:"Verbs Group 1"},
-{jp:"呼ぶ",rd:"呼んで / 呼んだ",rom:"yobu",en:"to call; to invite",my:"ခေါ်သည်/ဖိတ်သည်",cat:"Verbs Group 1"},
-{jp:"分かる",rd:"分かって / 分かった",rom:"wakaru",en:"to understand",my:"နားလည်သည်",cat:"Verbs Group 1"},
-{jp:"渡す",rd:"渡して / 渡した",rom:"watasu",en:"to hand over; to pass",my:"ပေးသည်/လွှဲပေးသည်",cat:"Verbs Group 1"},
-{jp:"渡る",rd:"渡って / 渡った",rom:"wataru",en:"to cross (a road/bridge)",my:"ဖြတ်ကူးသည်",cat:"Verbs Group 1"},
-{jp:"起きる",rd:"起きて / 起きた",rom:"okiru",en:"to wake up; to get up",my:"ထသည်/နိုးထသည်",cat:"Verbs Group 2"},
-{jp:"落ちる",rd:"落ちて / 落ちた",rom:"ochiru",en:"to fall; to drop",my:"ကျသည်",cat:"Verbs Group 2"},
-{jp:"覚える",rd:"覚えて / 覚えた",rom:"oboeru",en:"to memorize; to remember",my:"မှတ်မိသည်",cat:"Verbs Group 2"},
-{jp:"降りる",rd:"降りて / 降りた",rom:"oriru",en:"to get off (vehicle)",my:"ဆင်းသည် (ယာဉ်ပေါ်မှ)",cat:"Verbs Group 2"},
-{jp:"開ける",rd:"開けて / 開けた",rom:"akeru",en:"to open",my:"ဖွင့်သည်",cat:"Verbs Group 2"},
-{jp:"上げる",rd:"上げて / 上げた",rom:"ageru",en:"to give; to raise",my:"ပေးသည်/မြှောက်သည်",cat:"Verbs Group 2"},
-{jp:"集める",rd:"集めて / 集めた",rom:"atsumeru",en:"to collect; to gather",my:"စုဆောင်းသည်",cat:"Verbs Group 2"},
-{jp:"いる",rd:"いて / いた",rom:"iru",en:"to exist (animate)",my:"ရှိသည် (သက်ရှိ)",cat:"Verbs Group 2"},
-{jp:"生まれる",rd:"生まれて / 生まれた",rom:"umareru",en:"to be born",my:"မွေးဖွားသည်",cat:"Verbs Group 2"},
-{jp:"考える",rd:"考えて / 考えた",rom:"kangaeru",en:"to think; to consider",my:"စဉ်းစားသည်",cat:"Verbs Group 2"},
-{jp:"食べる",rd:"食べて / 食べた",rom:"taberu",en:"to eat",my:"စားသည်",cat:"Verbs Group 2"},
-{jp:"出かける",rd:"出かけて / 出かけた",rom:"dekakeru",en:"to go out",my:"အပြင်ထွက်သည်",cat:"Verbs Group 2"},
-{jp:"出る",rd:"出て / 出た",rom:"deru",en:"to leave; to go out; to come out",my:"ထွက်သည်",cat:"Verbs Group 2"},
-{jp:"止める",rd:"止めて / 止めた",rom:"tomeru",en:"to stop (something)",my:"ရပ်သည်",cat:"Verbs Group 2"},
-{jp:"閉める",rd:"閉めて / 閉めた",rom:"shimeru",en:"to close (a door)",my:"ပိတ်သည်",cat:"Verbs Group 2"},
-{jp:"着る",rd:"着て / 着た",rom:"kiru",en:"to wear (upper body)",my:"ဝတ်သည်",cat:"Verbs Group 2"},
-{jp:"見る",rd:"見て / 見た",rom:"miru",en:"to see; to watch; to look",my:"ကြည့်သည်",cat:"Verbs Group 2"},
-{jp:"見せる",rd:"見せて / 見せた",rom:"miseru",en:"to show",my:"ပြသည်",cat:"Verbs Group 2"},
-{jp:"迎える",rd:"迎えて / 迎えた",rom:"mukaeru",en:"to welcome; to meet",my:"ကြိုဆိုသည်/သွားကြိုသည်",cat:"Verbs Group 2"},
-{jp:"もらえる",rd:"もらえて / もらえた",rom:"moraeru",en:"can receive",my:"ရနိုင်သည်",cat:"Verbs Group 2"},
-{jp:"やめる",rd:"やめて / やめた",rom:"yameru",en:"to quit; to stop (doing)",my:"ရပ်သည်/စွန့်သည်",cat:"Verbs Group 2"},
-{jp:"忘れる",rd:"忘れて / 忘れた",rom:"wasureru",en:"to forget",my:"မေ့သည်",cat:"Verbs Group 2"},
-{jp:"する",rd:"して / した",rom:"suru",en:"to do",my:"လုပ်သည်",cat:"Verbs Irregular"},
-{jp:"勉強する",rd:"勉強して / 勉強した",rom:"benkyou suru",en:"to study",my:"စာကျက်သည်",cat:"Verbs Irregular"},
-{jp:"仕事する",rd:"仕事して / 仕事した",rom:"shigoto suru",en:"to work",my:"အလုပ်လုပ်သည်",cat:"Verbs Irregular"},
-{jp:"電話する",rd:"電話して / 電話した",rom:"denwa suru",en:"to phone",my:"ဖုန်းဆက်သည်",cat:"Verbs Irregular"},
-{jp:"旅行する",rd:"旅行して / 旅行した",rom:"ryokou suru",en:"to travel",my:"ခရီးသွားသည်",cat:"Verbs Irregular"},
-{jp:"運動する",rd:"運動して / 運動した",rom:"undou suru",en:"to exercise",my:"လေ့ကျင့်ခန်းလုပ်သည်",cat:"Verbs Irregular"},
-{jp:"料理する",rd:"料理して / 料理した",rom:"ryouri suru",en:"to cook",my:"ဟင်းချက်သည်",cat:"Verbs Irregular"},
-{jp:"散歩する",rd:"散歩して / 散歩した",rom:"sanpo suru",en:"to take a walk",my:"လမ်းလျှောက်သည်",cat:"Verbs Irregular"},
-{jp:"買い物する",rd:"買い物して / 買い物した",rom:"kaimono suru",en:"to go shopping",my:"ဈေးဝယ်သည်",cat:"Verbs Irregular"},
-{jp:"来る",rd:"来て / 来た",rom:"kuru",en:"to come",my:"လာသည်",cat:"Verbs Irregular"},
-{jp:"大きい",rd:"おおきい",rom:"ookii",en:"big; large",my:"ကြီးသည်",cat:"い-Adjectives"},
-{jp:"小さい",rd:"ちいさい",rom:"chiisai",en:"small; little",my:"သေးသည်",cat:"い-Adjectives"},
-{jp:"長い",rd:"ながい",rom:"nagai",en:"long",my:"ရှည်သည်",cat:"い-Adjectives"},
-{jp:"短い",rd:"みじかい",rom:"mijikai",en:"short",my:"တိုသည်",cat:"い-Adjectives"},
-{jp:"高い",rd:"たかい",rom:"takai",en:"expensive; tall; high",my:"စျေးကြီးသည်/မြင့်သည်",cat:"い-Adjectives"},
-{jp:"安い",rd:"やすい",rom:"yasui",en:"cheap; inexpensive",my:"စျေးပေါသည်",cat:"い-Adjectives"},
-{jp:"低い",rd:"ひくい",rom:"hikui",en:"low; short (height)",my:"နိမ့်သည်",cat:"い-Adjectives"},
-{jp:"新しい",rd:"あたらしい",rom:"atarashii",en:"new",my:"အသစ်",cat:"い-Adjectives"},
-{jp:"古い",rd:"ふるい",rom:"furui",en:"old (objects)",my:"ဟောင်း",cat:"い-Adjectives"},
-{jp:"良い/いい",rd:"よい/いい",rom:"yoi / ii",en:"good",my:"ကောင်းသည်",cat:"い-Adjectives"},
-{jp:"悪い",rd:"わるい",rom:"warui",en:"bad",my:"ဆိုးသည်",cat:"い-Adjectives"},
-{jp:"多い",rd:"おおい",rom:"ooi",en:"many; a lot",my:"များသည်",cat:"い-Adjectives"},
-{jp:"少ない",rd:"すくない",rom:"sukunai",en:"few; little",my:"နည်းသည်",cat:"い-Adjectives"},
-{jp:"難しい",rd:"むずかしい",rom:"muzukashii",en:"difficult; hard",my:"ခက်သည်",cat:"い-Adjectives"},
-{jp:"易しい",rd:"やさしい",rom:"yasashii",en:"easy",my:"လွယ်သည်",cat:"い-Adjectives"},
-{jp:"面白い",rd:"おもしろい",rom:"omoshiroi",en:"interesting; funny",my:"စိတ်ဝင်စားစရာ/ရယ်စရာ",cat:"い-Adjectives"},
-{jp:"つまらない",rd:"つまらない",rom:"tsumaranai",en:"boring; uninteresting",my:"ပျင်းစရာ",cat:"い-Adjectives"},
-{jp:"忙しい",rd:"いそがしい",rom:"isogashii",en:"busy",my:"အလုပ်များသည်",cat:"い-Adjectives"},
-{jp:"寂しい",rd:"さびしい",rom:"sabishii",en:"lonely",my:"အထီးကျန်သည်",cat:"い-Adjectives"},
-{jp:"嬉しい",rd:"うれしい",rom:"ureshii",en:"happy; glad",my:"ဝမ်းသာသည်",cat:"い-Adjectives"},
-{jp:"悲しい",rd:"かなしい",rom:"kanashii",en:"sad",my:"ဝမ်းနည်းသည်",cat:"い-Adjectives"},
-{jp:"怖い",rd:"こわい",rom:"kowai",en:"scary; frightening",my:"ကြောက်စရာ",cat:"い-Adjectives"},
-{jp:"痛い",rd:"いたい",rom:"itai",en:"painful; hurts",my:"နာသည်",cat:"い-Adjectives"},
-{jp:"暑い",rd:"あつい",rom:"atsui",en:"hot (weather/temperature)",my:"ပူသည် (ရာသီ)",cat:"い-Adjectives"},
-{jp:"寒い",rd:"さむい",rom:"samui",en:"cold (weather)",my:"အေးသည် (ရာသီ)",cat:"い-Adjectives"},
-{jp:"温かい",rd:"あたたかい",rom:"atatakai",en:"warm",my:"နွေးသည်",cat:"い-Adjectives"},
-{jp:"涼しい",rd:"すずしい",rom:"suzushii",en:"cool; refreshing",my:"အေးမြသည်",cat:"い-Adjectives"},
-{jp:"熱い",rd:"あつい",rom:"atsui",en:"hot (to the touch)",my:"ပူသည် (ထိတွေ့)",cat:"い-Adjectives"},
-{jp:"冷たい",rd:"つめたい",rom:"tsumetai",en:"cold (to the touch)",my:"အေးသည် (ထိတွေ့)",cat:"い-Adjectives"},
-{jp:"明るい",rd:"あかるい",rom:"akarui",en:"bright; cheerful",my:"လင်းသည်/ရွှင်လန်းသည်",cat:"い-Adjectives"},
-{jp:"暗い",rd:"くらい",rom:"kurai",en:"dark; gloomy",my:"မှောင်သည်",cat:"い-Adjectives"},
-{jp:"遠い",rd:"とおい",rom:"tooi",en:"far; distant",my:"ဝေးသည်",cat:"い-Adjectives"},
-{jp:"近い",rd:"ちかい",rom:"chikai",en:"near; close",my:"နီးသည်",cat:"い-Adjectives"},
-{jp:"速い",rd:"はやい",rom:"hayai",en:"fast; quick",my:"မြန်သည်",cat:"い-Adjectives"},
-{jp:"遅い",rd:"おそい",rom:"osoi",en:"slow; late",my:"နှေးသည်/နောက်ကျသည်",cat:"い-Adjectives"},
-{jp:"早い",rd:"はやい",rom:"hayai",en:"early",my:"စောသည်",cat:"い-Adjectives"},
-{jp:"広い",rd:"ひろい",rom:"hiroi",en:"wide; spacious",my:"ကျယ်သည်",cat:"い-Adjectives"},
-{jp:"狭い",rd:"せまい",rom:"semai",en:"narrow; cramped",my:"ကျဉ်းသည်",cat:"い-Adjectives"},
-{jp:"重い",rd:"おもい",rom:"omoi",en:"heavy",my:"လေးသည်",cat:"い-Adjectives"},
-{jp:"軽い",rd:"かるい",rom:"karui",en:"light (weight)",my:"ပေါ့သည်",cat:"い-Adjectives"},
-{jp:"強い",rd:"つよい",rom:"tsuyoi",en:"strong",my:"သန်မာသည်",cat:"い-Adjectives"},
-{jp:"弱い",rd:"よわい",rom:"yowai",en:"weak",my:"အားနည်းသည်",cat:"い-Adjectives"},
-{jp:"丸い",rd:"まるい",rom:"marui",en:"round; circular",my:"လုံးသည်",cat:"い-Adjectives"},
-{jp:"四角い",rd:"しかくい",rom:"shikakui",en:"square; rectangular",my:"လေးထောင့်ကျသည်",cat:"い-Adjectives"},
-{jp:"白い",rd:"しろい",rom:"shiroi",en:"white",my:"ဖြူသည်",cat:"い-Adjectives"},
-{jp:"黒い",rd:"くろい",rom:"kuroi",en:"black",my:"မည်းသည်",cat:"い-Adjectives"},
-{jp:"赤い",rd:"あかい",rom:"akai",en:"red",my:"နီသည်",cat:"い-Adjectives"},
-{jp:"青い",rd:"あおい",rom:"aoi",en:"blue; green (nature)",my:"ပြာသည်/စိမ်းသည်",cat:"い-Adjectives"},
-{jp:"黄色い",rd:"きいろい",rom:"kiiroi",en:"yellow",my:"ဝါသည်",cat:"い-Adjectives"},
-{jp:"正しい",rd:"ただしい",rom:"tadashii",en:"correct; right",my:"မှန်သည်",cat:"い-Adjectives"},
-{jp:"欲しい",rd:"ほしい",rom:"hoshii",en:"want (something); desirable",my:"လိုချင်သည်",cat:"い-Adjectives"},
-{jp:"甘い",rd:"あまい",rom:"amai",en:"sweet",my:"ချိုသည်",cat:"い-Adjectives"},
-{jp:"辛い",rd:"からい",rom:"karai",en:"spicy; hot (taste)",my:"စပ်သည်",cat:"い-Adjectives"},
-{jp:"塩辛い",rd:"しおからい",rom:"shiokarai",en:"salty",my:"ငန်သည်",cat:"い-Adjectives"},
-{jp:"苦い",rd:"にがい",rom:"nigai",en:"bitter",my:"ခါးသည်",cat:"い-Adjectives"},
-{jp:"酸っぱい",rd:"すっぱい",rom:"suppai",en:"sour",my:"ချဉ်သည်",cat:"い-Adjectives"},
-{jp:"美味しい",rd:"おいしい",rom:"oishii",en:"delicious; tasty",my:"အရသာရှိသည်",cat:"い-Adjectives"},
-{jp:"まずい",rd:"まずい",rom:"mazui",en:"bad-tasting; unpleasant",my:"အရသာမကောင်းဘူး",cat:"い-Adjectives"},
-{jp:"若い",rd:"わかい",rom:"wakai",en:"young",my:"ငယ်သည်",cat:"い-Adjectives"},
-{jp:"好き",rd:"すき",rom:"suki",en:"liked; fond of",my:"ကြိုက်သည်",cat:"な-Adjectives"},
-{jp:"嫌い",rd:"きらい",rom:"kirai",en:"disliked; hated",my:"မကြိုက်ဘူး",cat:"な-Adjectives"},
-{jp:"得意",rd:"とくい",rom:"tokui",en:"good at; one's strong point",my:"တော်သည်/အားသာချက်",cat:"な-Adjectives"},
-{jp:"苦手",rd:"にがて",rom:"nigate",en:"not good at; weak point",my:"မတော်ဘူး/အားနည်းချက်",cat:"な-Adjectives"},
-{jp:"大切",rd:"たいせつ",rom:"taisetsu",en:"important; precious",my:"အရေးကြီးသည်/တန်ဖိုးရှိသည်",cat:"な-Adjectives"},
-{jp:"大事",rd:"だいじ",rom:"daiji",en:"important; serious",my:"အရေးကြီးသည်",cat:"な-Adjectives"},
-{jp:"大丈夫",rd:"だいじょうぶ",rom:"daijoubu",en:"all right; okay",my:"အဆင်ပြေသည်",cat:"な-Adjectives"},
-{jp:"有名",rd:"ゆうめい",rom:"yuumei",en:"famous",my:"ကျော်ကြားသည်",cat:"な-Adjectives"},
-{jp:"賑やか",rd:"にぎやか",rom:"nigiyaka",en:"lively; bustling",my:"စည်ကားသည်",cat:"な-Adjectives"},
-{jp:"静か",rd:"しずか",rom:"shizuka",en:"quiet; calm",my:"တိတ်ဆိတ်သည်",cat:"な-Adjectives"},
-{jp:"綺麗",rd:"きれい",rom:"kirei",en:"pretty; clean",my:"လှသည်/သန့်သည်",cat:"な-Adjectives"},
-{jp:"便利",rd:"べんり",rom:"benri",en:"convenient; handy",my:"အဆင်ပြေသည်",cat:"な-Adjectives"},
-{jp:"不便",rd:"ふべん",rom:"fuben",en:"inconvenient",my:"အဆင်မပြေဘူး",cat:"な-Adjectives"},
-{jp:"親切",rd:"しんせつ",rom:"shinsetsu",en:"kind; helpful",my:"ကြင်နာသည်",cat:"な-Adjectives"},
-{jp:"丁寧",rd:"ていねい",rom:"teinei",en:"polite; careful",my:"ယဉ်ကျေးသည်/ဂရုတစိုက်လုပ်သည်",cat:"な-Adjectives"},
-{jp:"真面目",rd:"まじめ",rom:"majime",en:"serious; diligent",my:"လေးနက်သည်/ကြိုးစားသည်",cat:"な-Adjectives"},
-{jp:"暇",rd:"ひま",rom:"hima",en:"free time; not busy",my:"အားလပ်သည်",cat:"な-Adjectives"},
-{jp:"上手",rd:"じょうず",rom:"jouzu",en:"skillful; good at",my:"တော်သည်",cat:"な-Adjectives"},
-{jp:"下手",rd:"へた",rom:"heta",en:"unskillful; bad at",my:"မတော်ဘူး",cat:"な-Adjectives"},
-{jp:"素直",rd:"すなお",rom:"sunao",en:"obedient; gentle",my:"လိမ္မာသည်/ရိုးသားသည်",cat:"な-Adjectives"},
-{jp:"色々",rd:"いろいろ",rom:"iroiro",en:"various; diverse",my:"အမျိုးမျိုး",cat:"な-Adjectives"},
-{jp:"特別",rd:"とくべつ",rom:"tokubetsu",en:"special",my:"အထူး",cat:"な-Adjectives"},
-{jp:"必要",rd:"ひつよう",rom:"hitsuyou",en:"necessary; needed",my:"လိုအပ်သည်",cat:"な-Adjectives"},
-{jp:"安全",rd:"あんぜん",rom:"anzen",en:"safe; secure",my:"လုံခြုံသည်",cat:"な-Adjectives"},
-{jp:"危険",rd:"きけん",rom:"kiken",en:"dangerous",my:"အန္တရာယ်ရှိသည်",cat:"な-Adjectives"},
-{jp:"複雑",rd:"ふくざつ",rom:"fukuzatsu",en:"complex; complicated",my:"ရှုပ်ထွေးသည်",cat:"な-Adjectives"},
-{jp:"簡単",rd:"かんたん",rom:"kantan",en:"easy; simple",my:"လွယ်သည်/ရိုးရှင်းသည်",cat:"な-Adjectives"},
-{jp:"正直",rd:"しょうじき",rom:"shoujiki",en:"honest",my:"ရိုးသားသည်",cat:"な-Adjectives"},
-{jp:"変",rd:"へん",rom:"hen",en:"strange; odd",my:"ထူးဆန်းသည်",cat:"な-Adjectives"},
-{jp:"とても",rd:"とても",rom:"totemo",en:"very; extremely",my:"အလွန်း",cat:"Adverbs"},
-{jp:"あまり",rd:"あまり",rom:"amari",en:"not very (+ negative)",my:"သိပ်မ...ဘူး",cat:"Adverbs"},
-{jp:"全然",rd:"ぜんぜん",rom:"zenzen",en:"not at all (+ negative)",my:"လုံးဝမ...ဘူး",cat:"Adverbs"},
-{jp:"よく",rd:"よく",rom:"yoku",en:"often; well",my:"မကြာခဏ/ကောင်းကောင်း",cat:"Adverbs"},
-{jp:"時々",rd:"ときどき",rom:"tokidoki",en:"sometimes",my:"တစ်ခါတစ်ရံ",cat:"Adverbs"},
-{jp:"たいてい",rd:"たいてい",rom:"taitei",en:"usually; generally",my:"အများအားဖြင့်",cat:"Adverbs"},
-{jp:"いつも",rd:"いつも",rom:"itsumo",en:"always",my:"အမြဲတမ်း",cat:"Adverbs"},
-{jp:"少し",rd:"すこし",rom:"sukoshi",en:"a little; a bit",my:"နည်းနည်း",cat:"Adverbs"},
-{jp:"もっと",rd:"もっと",rom:"motto",en:"more",my:"ပိုပြီး",cat:"Adverbs"},
-{jp:"ちょっと",rd:"ちょっと",rom:"chotto",en:"a little; just a moment",my:"နည်းနည်း/ခဏ",cat:"Adverbs"},
-{jp:"たくさん",rd:"たくさん",rom:"takusan",en:"a lot; many",my:"အများကြီး",cat:"Adverbs"},
-{jp:"また",rd:"また",rom:"mata",en:"again; also",my:"ထပ်ပြီး/လည်း",cat:"Adverbs"},
-{jp:"ぜひ",rd:"ぜひ",rom:"zehi",en:"by all means; certainly",my:"သေချာပေါက်",cat:"Adverbs"},
-{jp:"どうぞ",rd:"どうぞ",rom:"douzo",en:"please (offering)",my:"ကျေးဇူးပြု၍",cat:"Adverbs"},
-{jp:"どうも",rd:"どうも",rom:"doumo",en:"thank you; somehow",my:"ကျေးဇူးတင်ပါတယ်",cat:"Adverbs"},
-{jp:"だいたい",rd:"だいたい",rom:"daitai",en:"approximately; mostly",my:"ခန့်မှန်း/အများအားဖြင့်",cat:"Adverbs"},
-{jp:"はっきり",rd:"はっきり",rom:"hakkiri",en:"clearly",my:"ရှင်းရှင်းလင်းလင်း",cat:"Adverbs"},
-{jp:"ゆっくり",rd:"ゆっくり",rom:"yukkuri",en:"slowly; leisurely",my:"ဖြည်းဖြည်းချင်း",cat:"Adverbs"},
-{jp:"すぐ",rd:"すぐ",rom:"sugu",en:"immediately; soon",my:"ချက်ချင်း",cat:"Adverbs"},
-{jp:"もちろん",rd:"もちろん",rom:"mochiron",en:"of course",my:"သေချာပေါက်",cat:"Adverbs"},
-{jp:"たぶん",rd:"たぶん",rom:"tabun",en:"probably; perhaps",my:"ဖြစ်နိုင်တယ်",cat:"Adverbs"},
-{jp:"きっと",rd:"きっと",rom:"kitto",en:"surely; certainly",my:"သေချာတယ်",cat:"Adverbs"},
-{jp:"一緒に",rd:"いっしょに",rom:"issho ni",en:"together",my:"အတူတူ",cat:"Adverbs"},
-{jp:"一人で",rd:"ひとりで",rom:"hitori de",en:"alone; by oneself",my:"တစ်ယောက်တည်း",cat:"Adverbs"},
-{jp:"まず",rd:"まず",rom:"mazu",en:"first of all",my:"အရင်ဆုံး",cat:"Adverbs"},
-{jp:"次に",rd:"つぎに",rom:"tsugi ni",en:"next; then",my:"ပြီးတော့",cat:"Adverbs"},
-{jp:"それから",rd:"それから",rom:"sore kara",en:"and then; after that",my:"ပြီးတော့",cat:"Adverbs"},
-{jp:"でも",rd:"でも",rom:"demo",en:"but; however",my:"ဒါပေမဲ့",cat:"Adverbs"},
-{jp:"だから",rd:"だから",rom:"dakara",en:"therefore; so",my:"ဒါကြောင့်",cat:"Adverbs"},
-{jp:"本当に",rd:"ほんとうに",rom:"hontou ni",en:"really; truly",my:"တကယ်ပဲ",cat:"Adverbs"},
-{jp:"実は",rd:"じつは",rom:"jitsu wa",en:"actually; to tell the truth",my:"တကယ်တော့",cat:"Adverbs"},
-{jp:"特に",rd:"とくに",rom:"toku ni",en:"especially; particularly",my:"အထူးသဖြင့်",cat:"Adverbs"},
-{jp:"は",rd:"は",rom:"wa",en:"topic marker",my:"အကြောင်းအရာ (topic)",cat:"Particles and Conjunctions"},
-{jp:"が",rd:"が",rom:"ga",en:"subject marker",my:"ကြိယာပြုသူ",cat:"Particles and Conjunctions"},
-{jp:"を",rd:"を",rom:"o",en:"direct object marker",my:"ကြိယာခံသူ",cat:"Particles and Conjunctions"},
-{jp:"に",rd:"に",rom:"ni",en:"direction; time; location (existence)",my:"ဦးတည်ရာ/အချိန်/တည်နေရာ",cat:"Particles and Conjunctions"},
-{jp:"で",rd:"で",rom:"de",en:"location (action); means",my:"နေရာ (လုပ်ရပ်)/နည်းလမ်း",cat:"Particles and Conjunctions"},
-{jp:"へ",rd:"へ",rom:"e",en:"direction (movement)",my:"ဦးတည်ရာ (ရွေ့လျားမှု)",cat:"Particles and Conjunctions"},
-{jp:"と",rd:"と",rom:"to",en:"and; with",my:"နှင့်/အတူ",cat:"Particles and Conjunctions"},
-{jp:"も",rd:"も",rom:"mo",en:"also; too; even",my:"လည်း",cat:"Particles and Conjunctions"},
-{jp:"の",rd:"の",rom:"no",en:"possession; noun modifier",my:"၏/ပိုင်ဆိုင်မှု",cat:"Particles and Conjunctions"},
-{jp:"か",rd:"か",rom:"ka",en:"question marker",my:"မေးခွန်း",cat:"Particles and Conjunctions"},
-{jp:"ね",rd:"ね",rom:"ne",en:"right?; isn't it? (seeking agreement)",my:"ဟုတ်တယ်နော်",cat:"Particles and Conjunctions"},
-{jp:"よ",rd:"よ",rom:"yo",en:"assertive sentence-final particle",my:"အခိုင်အမာပြောခြင်း",cat:"Particles and Conjunctions"},
-{jp:"な",rd:"な",rom:"na",en:"sentence-final (softening; prohibition)",my:"အဆုံးသတ်စကားလုံး (ပျော့ပျောင်း)",cat:"Particles and Conjunctions"},
-{jp:"から",rd:"から",rom:"kara",en:"from; because",my:"မှ/ကြောင့်",cat:"Particles and Conjunctions"},
-{jp:"まで",rd:"まで",rom:"made",en:"until; as far as; to",my:"အထိ",cat:"Particles and Conjunctions"},
-{jp:"より",rd:"より",rom:"yori",en:"than; from (comparison)",my:"ထက်",cat:"Particles and Conjunctions"},
-{jp:"ので",rd:"ので",rom:"node",en:"because (reason; softer than から)",my:"ကြောင့် (ပျော့ပျောင်း)",cat:"Particles and Conjunctions"},
-{jp:"けど/けれど",rd:"けど",rom:"kedo",en:"but; however (casual)",my:"ဒါပေမဲ့ (အရပ်သုံး)",cat:"Particles and Conjunctions"},
-{jp:"そして",rd:"そして",rom:"soshite",en:"and then; and",my:"ပြီးတော့",cat:"Particles and Conjunctions"},
-{jp:"または",rd:"または",rom:"mata wa",en:"or (formal)",my:"သို့မဟုတ်",cat:"Particles and Conjunctions"},
-{jp:"し",rd:"し",rom:"shi",en:"and also; what's more (listing reasons)",my:"ပြီး/ထို့အပြင်",cat:"Particles and Conjunctions"},
-{jp:"ながら",rd:"ながら",rom:"nagara",en:"while doing; even though",my:"ရင်း/သော်လည်း",cat:"Particles and Conjunctions"},
-{jp:"たり〜たりする",rd:"たり〜たりする",rom:"tari~tari suru",en:"do things like ~ (listing actions)",my:"စသည် (လုပ်ရပ်စာရင်း)",cat:"Particles and Conjunctions"},
-{jp:"どこ",rd:"どこ",rom:"doko",en:"where",my:"ဘယ်မှာ",cat:"Question Words"},
-{jp:"誰",rd:"だれ",rom:"dare",en:"who",my:"ဘယ်သူ",cat:"Question Words"},
-{jp:"どなた",rd:"どなた",rom:"donata",en:"who (polite)",my:"ဘယ်သူ (ယဉ်ကျေးသော)",cat:"Question Words"},
-{jp:"いつ",rd:"いつ",rom:"itsu",en:"when",my:"ဘယ်တော့",cat:"Question Words",t:["dates"]},
-{jp:"どれ",rd:"どれ",rom:"dore",en:"which one (of 3+)",my:"ဘယ်ဟာ (၃ ခုအထက်)",cat:"Question Words"},
-{jp:"どの",rd:"どの",rom:"dono",en:"which (adj. + noun)",my:"ဘယ်ဟာ (နာမ်နဲ့တွဲ)",cat:"Question Words"},
-{jp:"どちら",rd:"どちら",rom:"dochira",en:"which (of 2); which way (polite)",my:"ဘယ်ဟာ (၂ ခုအနက်)",cat:"Question Words"},
-{jp:"どう",rd:"どう",rom:"dou",en:"how; in what way",my:"ဘယ်လို",cat:"Question Words"},
-{jp:"どうして",rd:"どうして",rom:"doushite",en:"why; how come",my:"ဘာကြောင့်",cat:"Question Words"},
-{jp:"なぜ",rd:"なぜ",rom:"naze",en:"why (formal)",my:"ဘာကြောင့် (တရားဝင်)",cat:"Question Words"},
-{jp:"いくら",rd:"いくら",rom:"ikura",en:"how much (price)",my:"ဘယ်လောက် (စျေး)",cat:"Question Words"},
-{jp:"いくつ",rd:"いくつ",rom:"ikutsu",en:"how many; how old",my:"ဘယ်နှစ်ခု/အသက်ဘယ်လောက်",cat:"Question Words"},
-{jp:"何人",rd:"なんにん",rom:"nan-nin",en:"how many people",my:"လူဘယ်နှစ်",cat:"Question Words"},
-{jp:"何時",rd:"なんじ",rom:"nan-ji",en:"what time",my:"ဘယ်အချိန်",cat:"Question Words"},
-{jp:"何分",rd:"なんぷん",rom:"nan-pun",en:"how many minutes; what minute",my:"ဘယ်နှစ်မိနစ်",cat:"Question Words"},
-{jp:"何日",rd:"なんにち",rom:"nan-nichi",en:"how many days; what day",my:"ဘယ်ရက်/ဘယ်နှစ်ရက်",cat:"Question Words"},
-{jp:"何月",rd:"なんがつ",rom:"nan-gatsu",en:"what month",my:"ဘယ်လ",cat:"Question Words"},
-{jp:"何曜日",rd:"なんようび",rom:"nan-youbi",en:"what day of the week",my:"ဘယ်နေ့",cat:"Question Words",t:["dates"]},
-{jp:"何年",rd:"なんねん",rom:"nan-nen",en:"what year",my:"ဘယ်နှစ်",cat:"Question Words"},
-{jp:"何番",rd:"なんばん",rom:"nan-ban",en:"what number",my:"နံပါတ်ဘယ်လောက်",cat:"Question Words"},
-{jp:"何語",rd:"なんご",rom:"nan-go",en:"what language",my:"ဘာဘာသာ",cat:"Question Words"},
-{jp:"何歳",rd:"なんさい",rom:"nan-sai",en:"how old",my:"အသက်ဘယ်လောက်",cat:"Question Words"},
-{jp:"これ",rd:"これ",rom:"kore",en:"this (thing near me)",my:"ဒီဟာ",cat:"Demonstratives"},
-{jp:"それ",rd:"それ",rom:"sore",en:"that (thing near you)",my:"ဟိုဟာ (မင်းဘက်)",cat:"Demonstratives"},
-{jp:"あれ",rd:"あれ",rom:"are",en:"that (thing over there)",my:"ဟိုဟာ (ဝေးဝေး)",cat:"Demonstratives"},
-{jp:"この",rd:"この",rom:"kono",en:"this ~ (adj.)",my:"ဒီ... (နာမ်နဲ့တွဲ)",cat:"Demonstratives"},
-{jp:"その",rd:"その",rom:"sono",en:"that ~ (adj.)",my:"ဟို... (နာမ်နဲ့တွဲ)",cat:"Demonstratives"},
-{jp:"あの",rd:"あの",rom:"ano",en:"that ~ over there (adj.)",my:"ဟိုး... (နာမ်နဲ့တွဲ)",cat:"Demonstratives"},
-{jp:"ここ",rd:"ここ",rom:"koko",en:"here",my:"ဒီနေရာ",cat:"Demonstratives"},
-{jp:"そこ",rd:"そこ",rom:"soko",en:"there",my:"ဟိုနေရာ",cat:"Demonstratives"},
-{jp:"あそこ",rd:"あそこ",rom:"asoko",en:"over there",my:"ဟိုဘက်နေရာ",cat:"Demonstratives"},
-{jp:"こちら",rd:"こちら",rom:"kochira",en:"this way; here (polite)",my:"ဒီဘက် (ယဉ်ကျေးသော)",cat:"Demonstratives"},
-{jp:"そちら",rd:"そちら",rom:"sochira",en:"that way; there (polite)",my:"ဟိုဘက် (ယဉ်ကျေးသော)",cat:"Demonstratives"},
-{jp:"あちら",rd:"あちら",rom:"achira",en:"that way; over there (polite)",my:"ဟိုဘက် (ယဉ်ကျေးသော)",cat:"Demonstratives"},
-{jp:"こう",rd:"こう",rom:"kou",en:"this way; like this",my:"ဒီလို",cat:"Demonstratives"},
-{jp:"そう",rd:"そう",rom:"sou",en:"that way; like that",my:"ဟိုလို",cat:"Demonstratives"},
-{jp:"ああ",rd:"ああ",rom:"aa",en:"that way; like that (over there)",my:"ဟိုးလို",cat:"Demonstratives"},
-{jp:"おはようございます",rd:"おはようございます",rom:"ohayou gozaimasu",en:"Good morning (polite)",my:"မင်္ဂလာနံနက်ခင်းပါ",cat:"Greetings and Expressions"},
-{jp:"おはよう",rd:"おはよう",rom:"ohayou",en:"Good morning (casual)",my:"မင်္ဂလာနံနက်ခင်းပါ (အရပ်သုံး)",cat:"Greetings and Expressions"},
-{jp:"こんにちは",rd:"こんにちは",rom:"konnichiwa",en:"Hello; Good afternoon",my:"မင်္ဂလာပါ",cat:"Greetings and Expressions"},
-{jp:"こんばんは",rd:"こんばんは",rom:"konbanwa",en:"Good evening",my:"မင်္ဂလာညနေခင်းပါ",cat:"Greetings and Expressions"},
-{jp:"おやすみなさい",rd:"おやすみなさい",rom:"oyasuminasai",en:"Good night (polite)",my:"ကောင်းသောညပါ",cat:"Greetings and Expressions"},
-{jp:"おやすみ",rd:"おやすみ",rom:"oyasumi",en:"Good night (casual)",my:"ကောင်းသောညပါ (အရပ်သုံး)",cat:"Greetings and Expressions"},
-{jp:"さようなら",rd:"さようなら",rom:"sayounara",en:"Goodbye (formal)",my:"နှုတ်ဆက်ပါတယ်",cat:"Greetings and Expressions"},
-{jp:"じゃあね",rd:"じゃあね",rom:"jaa ne",en:"See you; Bye (casual)",my:"နောက်မှတွေ့မယ်",cat:"Greetings and Expressions"},
-{jp:"また明日",rd:"またあした",rom:"mata ashita",en:"See you tomorrow",my:"မနက်ဖြန်တွေ့မယ်",cat:"Greetings and Expressions"},
-{jp:"ありがとうございます",rd:"ありがとうございます",rom:"arigatou gozaimasu",en:"Thank you (polite)",my:"ကျေးဇူးတင်ပါတယ်",cat:"Greetings and Expressions"},
-{jp:"ありがとう",rd:"ありがとう",rom:"arigatou",en:"Thank you (casual)",my:"ကျေးဇူးပါ",cat:"Greetings and Expressions"},
-{jp:"どういたしまして",rd:"どういたしまして",rom:"dou itashimashite",en:"You're welcome",my:"ရပါတယ်",cat:"Greetings and Expressions"},
-{jp:"すみません",rd:"すみません",rom:"sumimasen",en:"Excuse me; I'm sorry",my:"တောင်းပန်ပါတယ်",cat:"Greetings and Expressions"},
-{jp:"ごめんなさい",rd:"ごめんなさい",rom:"gomennasai",en:"I'm sorry",my:"တောင်းပန်ပါတယ်",cat:"Greetings and Expressions"},
-{jp:"ごめん",rd:"ごめん",rom:"gomen",en:"Sorry (casual)",my:"တောင်းပန်ပါတယ် (အရပ်သုံး)",cat:"Greetings and Expressions"},
-{jp:"はじめまして",rd:"はじめまして",rom:"hajimemashite",en:"How do you do; Nice to meet you",my:"တွေ့ရတာဝမ်းသာပါတယ်",cat:"Greetings and Expressions"},
-{jp:"よろしくお願いします",rd:"よろしくおねがいします",rom:"yoroshiku onegaishimasu",en:"Please treat me well; Nice to meet you",my:"တွေ့ရတာဝမ်းသာပါတယ်",cat:"Greetings and Expressions"},
-{jp:"よろしく",rd:"よろしく",rom:"yoroshiku",en:"Nice to meet you (casual)",my:"တွေ့ရတာဝမ်းသာပါတယ် (အရပ်သုံး)",cat:"Greetings and Expressions"},
-{jp:"お元気ですか",rd:"おげんきですか",rom:"ogenki desu ka",en:"How are you?",my:"နေကောင်းလား",cat:"Greetings and Expressions"},
-{jp:"元気です",rd:"げんきです",rom:"genki desu",en:"I'm fine; I'm well",my:"နေကောင်းပါတယ်",cat:"Greetings and Expressions"},
-{jp:"そうですか",rd:"そうですか",rom:"sou desu ka",en:"Is that so? I see.",my:"ဟုတ်လား",cat:"Greetings and Expressions"},
-{jp:"そうですね",rd:"そうですね",rom:"sou desu ne",en:"That's right, isn't it",my:"ဟုတ်တယ်နော်",cat:"Greetings and Expressions"},
-{jp:"わかりました",rd:"わかりました",rom:"wakarimashita",en:"I understand; Understood",my:"နားလည်ပါပြီ",cat:"Greetings and Expressions"},
-{jp:"わかりません",rd:"わかりません",rom:"wakarimasen",en:"I don't understand",my:"နားမလည်ဘူး",cat:"Greetings and Expressions"},
-{jp:"いただきます",rd:"いただきます",rom:"itadakimasu",en:"Let's eat (said before eating)",my:"စားပါတော့မယ် (မစားခင်)",cat:"Greetings and Expressions"},
-{jp:"ごちそうさまでした",rd:"ごちそうさまでした",rom:"gochisousama deshita",en:"Thanks for the meal (after eating)",my:"ကျေးဇူးတင်ပါတယ် (စားပြီးနောက်)",cat:"Greetings and Expressions"},
-{jp:"いってきます",rd:"いってきます",rom:"ittekimasu",en:"I'm leaving (said when leaving home)",my:"သွားတော့မယ်",cat:"Greetings and Expressions"},
-{jp:"いってらっしゃい",rd:"いってらっしゃい",rom:"itterasshai",en:"Take care (said to person leaving home)",my:"သွားလမ်းသာပါစေ",cat:"Greetings and Expressions"},
-{jp:"ただいま",rd:"ただいま",rom:"tadaima",en:"I'm home (said when returning home)",my:"ပြန်ရောက်ပါပြီ",cat:"Greetings and Expressions"},
-{jp:"おかえり / おかえりなさい",rd:"おかえり / おかえりなさい",rom:"okaeri / okaerinasai",en:"Welcome home",my:"ပြန်ရောက်တာကြိုဆိုပါတယ်",cat:"Greetings and Expressions"},
-{jp:"はい",rd:"はい",rom:"hai",en:"yes",my:"ဟုတ်ကဲ့",cat:"Greetings and Expressions"},
-{jp:"いいえ",rd:"いいえ",rom:"iie",en:"no",my:"မဟုတ်ဘူး",cat:"Greetings and Expressions"},
-{jp:"ちょっとまってください",rd:"ちょっとまってください",rom:"chotto matte kudasai",en:"Please wait a moment",my:"ခဏစောင့်ပေးပါ",cat:"Greetings and Expressions"},
-{jp:"大丈夫ですか",rd:"だいじょうぶですか",rom:"daijoubu desu ka",en:"Are you all right?",my:"အဆင်ပြေလား",cat:"Greetings and Expressions"},
-{jp:"おめでとうございます",rd:"おめでとうございます",rom:"omedetou gozaimasu",en:"Congratulations",my:"ဂုဏ်ယူပါတယ်",cat:"Greetings and Expressions"},
-{jp:"お願いします",rd:"おねがいします",rom:"onegaishimasu",en:"Please (requesting something)",my:"ကျေးဇူးပြု၍",cat:"Greetings and Expressions"},
-{jp:"失礼します",rd:"しつれいします",rom:"shitsurei shimasu",en:"Excuse me (entering/leaving a room)",my:"ခွင့်လွှတ်ပါ (ဝင်ထွက်ရာတွင်)",cat:"Greetings and Expressions"},
-{jp:"かんぱい",rd:"かんぱい",rom:"kanpai",en:"Cheers!",my:"ကျန်းမာပါစေ (ခွက်တိုက်)",cat:"Greetings and Expressions"},
-{jp:"色",rd:"いろ",rom:"iro",en:"color",my:"အရောင်",cat:"Colors"},
-{jp:"白",rd:"しろ",rom:"shiro",en:"white",my:"အဖြူ",cat:"Colors"},
-{jp:"黒",rd:"くろ",rom:"kuro",en:"black",my:"အမည်း",cat:"Colors"},
-{jp:"赤",rd:"あか",rom:"aka",en:"red",my:"အနီ",cat:"Colors"},
-{jp:"青",rd:"あお",rom:"ao",en:"blue",my:"အပြာ",cat:"Colors"},
-{jp:"黄色",rd:"きいろ",rom:"kiiro",en:"yellow",my:"အဝါ",cat:"Colors"},
-{jp:"緑",rd:"みどり",rom:"midori",en:"green",my:"အစိမ်း",cat:"Colors"},
-{jp:"茶色",rd:"ちゃいろ",rom:"chairo",en:"brown",my:"အညို",cat:"Colors"},
-{jp:"オレンジ",rd:"オレンジ",rom:"orenji",en:"orange",my:"လိမ္မော်ရောင်",cat:"Colors"},
-{jp:"ピンク",rd:"ピンク",rom:"pinku",en:"pink",my:"ပန်းရောင်",cat:"Colors"},
-{jp:"紫",rd:"むらさき",rom:"murasaki",en:"purple",my:"ခရမ်းရောင်",cat:"Colors"},
-{jp:"灰色",rd:"はいいろ",rom:"haiiro",en:"gray",my:"မီးခိုးရောင်",cat:"Colors"},
-{jp:"大きさ",rd:"おおきさ",rom:"ookisa",en:"size; bigness",my:"အရွယ်အစား",cat:"Size and Quantity"},
-{jp:"全部",rd:"ぜんぶ",rom:"zenbu",en:"all; everything",my:"အားလုံး",cat:"Size and Quantity"},
-{jp:"半分",rd:"はんぶん",rom:"hanbun",en:"half",my:"တစ်ဝက်",cat:"Size and Quantity"},
-{jp:"一番",rd:"いちばん",rom:"ichiban",en:"number one; most; best",my:"နံပါတ်တစ်/အကောင်းဆုံး",cat:"Size and Quantity"},
-{jp:"始め",rd:"はじめ",rom:"hajime",en:"beginning; start",my:"အစ",cat:"Size and Quantity"},
-{jp:"終わり",rd:"おわり",rom:"owari",en:"end; finish",my:"အဆုံး",cat:"Size and Quantity"},
-{jp:"両方",rd:"りょうほう",rom:"ryouhou",en:"both",my:"နှစ်ခုလုံး",cat:"Size and Quantity"},
-{jp:"しかし",rd:"しかし",rom:"shikashi",en:"however; but (formal)",my:"သို့သော်လည်း",cat:"Common Conjunctions"},
-{jp:"それに",rd:"それに",rom:"sore ni",en:"moreover; in addition",my:"ထို့အပြင်",cat:"Common Conjunctions"},
-{jp:"つまり",rd:"つまり",rom:"tsumari",en:"in other words; that is",my:"တစ်နည်းအားဖြင့်",cat:"Common Conjunctions"},
-{jp:"もし",rd:"もし",rom:"moshi",en:"if (hypothetical)",my:"အကယ်၍",cat:"Common Conjunctions"},
-{jp:"名前",rd:"なまえ",rom:"namae",en:"name",my:"နာမည်",cat:"Miscellaneous / Common Nouns"},
-{jp:"年齢",rd:"ねんれい",rom:"nenrei",en:"age",my:"အသက်",cat:"Miscellaneous / Common Nouns"},
-{jp:"〜歳",rd:"〜さい",rom:"~sai",en:"~ years old",my:"နှစ် (အသက်)",cat:"Miscellaneous / Common Nouns"},
-{jp:"国籍",rd:"こくせき",rom:"kokuseki",en:"nationality",my:"နိုင်ငံသား",cat:"Miscellaneous / Common Nouns"},
-{jp:"住所",rd:"じゅうしょ",rom:"juusho",en:"address",my:"လိပ်စာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"電話番号",rd:"でんわばんごう",rom:"denwa bangou",en:"phone number",my:"ဖုန်းနံပါတ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"言語",rd:"げんご",rom:"gengo",en:"language",my:"ဘာသာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"仕事",rd:"しごと",rom:"shigoto",en:"work; job",my:"အလုပ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"給料",rd:"きゅうりょう",rom:"kyuuryou",en:"salary",my:"လစာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"問題",rd:"もんだい",rom:"mondai",en:"problem; question",my:"ပြဿနာ/မေးခွန်း",cat:"Miscellaneous / Common Nouns"},
-{jp:"答え",rd:"こたえ",rom:"kotae",en:"answer",my:"အဖြေ",cat:"Miscellaneous / Common Nouns"},
-{jp:"意味",rd:"いみ",rom:"imi",en:"meaning",my:"အဓိပ္ပာယ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"例",rd:"れい",rom:"rei",en:"example",my:"ဥပမာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"理由",rd:"りゆう",rom:"riyuu",en:"reason",my:"အကြောင်းရင်း",cat:"Miscellaneous / Common Nouns"},
-{jp:"こと",rd:"こと",rom:"koto",en:"thing (abstract); fact",my:"ကိစ္စ/အချက်",cat:"Miscellaneous / Common Nouns"},
-{jp:"もの",rd:"もの",rom:"mono",en:"thing (physical object)",my:"ပစ္စည်း/အရာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"ところ",rd:"ところ",rom:"tokoro",en:"place; situation",my:"နေရာ/အခြေအနေ",cat:"Miscellaneous / Common Nouns"},
-{jp:"気",rd:"き",rom:"ki",en:"feeling; spirit; mind",my:"စိတ်/ခံစားချက်",cat:"Miscellaneous / Common Nouns"},
-{jp:"音",rd:"おと",rom:"oto",en:"sound; noise",my:"အသံ",cat:"Miscellaneous / Common Nouns"},
-{jp:"声",rd:"こえ",rom:"koe",en:"voice",my:"အသံ (လူ)",cat:"Miscellaneous / Common Nouns"},
-{jp:"形",rd:"かたち",rom:"katachi",en:"shape; form",my:"ပုံသဏ္ဌာန်",cat:"Miscellaneous / Common Nouns"},
-{jp:"味",rd:"あじ",rom:"aji",en:"taste; flavor",my:"အရသာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"匂い",rd:"におい",rom:"nioi",en:"smell; scent",my:"အနံ့",cat:"Miscellaneous / Common Nouns"},
-{jp:"感じ",rd:"かんじ",rom:"kanji",en:"feeling; sense",my:"ခံစားချက်",cat:"Miscellaneous / Common Nouns"},
-{jp:"夢",rd:"ゆめ",rom:"yume",en:"dream",my:"အိပ်မက်",cat:"Miscellaneous / Common Nouns"},
-{jp:"心",rd:"こころ",rom:"kokoro",en:"heart; mind; feeling",my:"နှလုံးသား/စိတ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"力",rd:"ちから",rom:"chikara",en:"strength; power; ability",my:"အား/အစွမ်း",cat:"Miscellaneous / Common Nouns"},
-{jp:"手紙",rd:"てがみ",rom:"tegami",en:"letter (correspondence)",my:"စာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"荷物",rd:"にもつ",rom:"nimotsu",en:"luggage; load",my:"ခရီးဆောင်ပစ္စည်း",cat:"Miscellaneous / Common Nouns"},
-{jp:"場所",rd:"ばしょ",rom:"basho",en:"place; location",my:"နေရာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"番号",rd:"ばんごう",rom:"bangou",en:"number (ID/phone)",my:"နံပါတ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"〜号",rd:"〜ごう",rom:"~gou",en:"number (trains/rooms)",my:"နံပါတ် (ရထား/အခန်း)",cat:"Miscellaneous / Common Nouns"},
-{jp:"〜番線",rd:"〜ばんせん",rom:"~bansen",en:"platform number ~",my:"ပလက်ဖောင်းနံပါတ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"窓口",rd:"まどぐち",rom:"madoguchi",en:"ticket window; counter",my:"လက်မှတ်ရောင်းဌာန",cat:"Miscellaneous / Common Nouns"},
-{jp:"切符",rd:"きっぷ",rom:"kippu",en:"ticket",my:"လက်မှတ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"改札",rd:"かいさつ",rom:"kaisatsu",en:"ticket gate",my:"လက်မှတ်ဂိတ်",cat:"Miscellaneous / Common Nouns"},
-{jp:"ホーム",rd:"ホーム",rom:"hoomu",en:"(train) platform",my:"ပလက်ဖောင်း",cat:"Miscellaneous / Common Nouns"},
-{jp:"出口",rd:"でぐち",rom:"deguchi",en:"exit",my:"ထွက်ပေါက်",cat:"Miscellaneous / Common Nouns"},
-{jp:"入口",rd:"いりぐち",rom:"iriguchi",en:"entrance",my:"ဝင်ပေါက်",cat:"Miscellaneous / Common Nouns"},
-{jp:"階段",rd:"かいだん",rom:"kaidan",en:"stairs",my:"လှေကား",cat:"Miscellaneous / Common Nouns"},
-{jp:"エレベーター",rd:"エレベーター",rom:"erebeetaa",en:"elevator",my:"ဓာတ်လှေကား",cat:"Miscellaneous / Common Nouns"},
-{jp:"トイレ",rd:"トイレ",rom:"toire",en:"toilet; restroom",my:"အိမ်သာ",cat:"Miscellaneous / Common Nouns"},
-{jp:"わたし",rd:"わたし",rom:"watashi",en:"I; me",my:"ကျွန်တော်၊ ကျွန်မ",cat:"Minna L1"},
-{jp:"あの人",rd:"あのひと",rom:"ano hito",en:"that person (over there)",my:"ဟိုလူ (ရိုးရိုးအသုံး)",cat:"Minna L1"},
-{jp:"あの方",rd:"あのかた",rom:"ano kata",en:"that person (polite)",my:"ဟိုလူ (ယဉ်ကျေးသောအသုံး)",cat:"Minna L1"},
-{jp:"～さん",rd:"～さん",rom:"~san",en:"Mr./Ms. (suffix after a name)",my:"ကို--/မ--(နာမည်နောက် တွင်ထားသုံးသည်။ မိမိနာမည်တွင်မသုံးပါ။)",cat:"Minna L1"},
-{jp:"～ちゃん",rd:"～ちゃん",rom:"~chan",en:"(suffix for children / close friends)",my:"မောင်--/မ--(၁၀နှစ် အောက် ကလေးငယ်များ ကိုခေါ်သောအခါတွင် သုံးသည်)",cat:"Minna L1"},
-{jp:"～じん",rd:"～じん",rom:"~jin",en:"person from ~ (nationality suffix)",my:"--လူမျိုး",cat:"Minna L1"},
-{jp:"アメリカ人",rd:"アメリカじん",rom:"amerika-jin",en:"American (person)",my:"အမေရိကန်လူမျိုး",cat:"Minna L1"},
-{jp:"教師",rd:"きょうし",rom:"kyoushi",en:"teacher (as a profession)",my:"ဆရာ/ဆရာမ (အလုပ်အကိုင်တွင်အသုံးများ)",cat:"Minna L1"},
-{jp:"社員",rd:"しゃいん",rom:"shain",en:"employee",my:"ဝန်ထမ်း",cat:"Minna L1"},
-{jp:"銀行員",rd:"ぎんこういん",rom:"ginkouin",en:"bank employee",my:"ဘဏ်ဝန်ထမ်း",cat:"Minna L1"},
-{jp:"研究者",rd:"けんきゅうしゃ",rom:"kenkyuusha",en:"researcher",my:"သုတေသနပြုသူ",cat:"Minna L1"},
-{jp:"だれ",rd:"だれ",rom:"dare",en:"who",my:"ဘယ်သူ(ရိုးရိုး)",cat:"Minna L1"},
-{jp:"～歳",rd:"～さい",rom:"~sai",en:"~ years old",my:"--နှစ်(အသက်)",cat:"Minna L1"},
-{jp:"おいくつ",rd:"おいくつ",rom:"oikutsu",en:"how old (polite)",my:"အသက်ဘယ်နှစ်နှစ်လဲ (ယဉ်ကျေး)",cat:"Minna L1"},
-{jp:"…はい",rd:"…はい",rom:"...hai",en:"yes",my:"ဟုတ်ကဲ့",cat:"Minna L1"},
-{jp:"…いいえ",rd:"…いいえ",rom:"...iie",en:"no",my:"ဟင်အင်း",cat:"Minna L1"},
-{jp:"初めまして",rd:"はじめまして",rom:"hajimemashite",en:"How do you do? (Nice to meet you)",my:"တွေ့ရတာဝမ်းသာပါတယ်",cat:"Minna L1"},
-{jp:"～から来ました",rd:"～からきました",rom:"~kara kimashita",en:"I came from ~",my:"--ကနေလာပါတယ်။",cat:"Minna L1"},
-{jp:"どうぞ、よろしくお願いします",rd:"どうぞ、よろしくおねがいします",rom:"douzo, yoroshiku onegaishimasu",en:"Please treat me well (Nice to meet you)",my:"မိတ်ဆွေအဖြစ် ခင်ခင်မင်မင်ဆက်ဆံပါ",cat:"Minna L1"},
-{jp:"失礼ですが",rd:"しつれいですが",rom:"shitsurei desu ga",en:"Excuse me, but...",my:"တစ်ဆိတ်လောက်။ စိတ်မရှိပါနဲ့။",cat:"Minna L1"},
-{jp:"お名前は？",rd:"おなまえは？",rom:"onamae wa?",en:"What is your name?",my:"နာမည်ဘယ်လိုခေါ်ပါသလဲ။",cat:"Minna L1"},
-{jp:"こちらは、～さんです",rd:"こちらは、～さんです",rom:"kochira wa, ~san desu",en:"This is Mr./Ms. ~",my:"သူက ကို--/မ--ဖြစ်ပါတယ်။",cat:"Minna L1"},
-{jp:"アメリカ",rd:"アメリカ",rom:"amerika",en:"America; the USA",my:"အမေရိကန်",cat:"Minna L1"},
-{jp:"イギリス",rd:"イギリス",rom:"igirisu",en:"England; the UK",my:"အင်္ဂလန်",cat:"Minna L1"},
-{jp:"インド",rd:"インド",rom:"indo",en:"India",my:"အိန္ဒိယ",cat:"Minna L1"},
-{jp:"インドネシア",rd:"インドネシア",rom:"indoneshia",en:"Indonesia",my:"အင်ဒိုနီးရှား",cat:"Minna L1"},
-{jp:"韓国",rd:"かんこく",rom:"kankoku",en:"South Korea",my:"တောင်ကိုရီးယား",cat:"Minna L1"},
-{jp:"タイ",rd:"タイ",rom:"tai",en:"Thailand",my:"ထိုင်း",cat:"Minna L1"},
-{jp:"中国",rd:"ちゅうごく",rom:"chuugoku",en:"China",my:"တရုတ်",cat:"Minna L1"},
-{jp:"ドイツ",rd:"ドイツ",rom:"doitsu",en:"Germany",my:"ဂျာမနီ",cat:"Minna L1"},
-{jp:"日本",rd:"にほん",rom:"nihon",en:"Japan",my:"ဂျပန်",cat:"Minna L1"},
-{jp:"ブラジル",rd:"ブラジル",rom:"burajiru",en:"Brazil",my:"ဘရာဇီး",cat:"Minna L1"},
-{jp:"IMC",rd:"IMC",rom:"IMC",en:"IMC (company)",my:"IMCကုမ္ပဏီ",cat:"Minna L1"},
-{jp:"パワー電気",rd:"パワーでんき",rom:"pawaa denki",en:"Power Electric (company)",my:"Power Electric ကုမ္ပဏီ",cat:"Minna L1"},
-{jp:"ブラジルエアー",rd:"ブラジルエアー",rom:"burajiru eaa",en:"Brazil Air (company)",my:"Brazil Air ကုမ္ပဏီ",cat:"Minna L1"},
-{jp:"AKC",rd:"AKC",rom:"AKC",en:"AKC (company)",my:"AKCကုမ္ပဏီ",cat:"Minna L1"},
-{jp:"神戸病院",rd:"こうべびょういん",rom:"koube byouin",en:"Kobe Hospital",my:"Kobeဆေးရုံ",cat:"Minna L1"},
-{jp:"さくら大学",rd:"さくらだいがく",rom:"sakura daigaku",en:"Sakura University",my:"Sakuraတက္ကသိုလ်",cat:"Minna L1"},
-{jp:"富士大学",rd:"ふじだいがく",rom:"fuji daigaku",en:"Fuji University",my:"Fujiတက္ကသိုလ်",cat:"Minna L1"},
-{jp:"この～",rd:"この～",rom:"kono ~",en:"this ~",my:"ဒီ--",cat:"Minna L2"},
-{jp:"その～",rd:"その～",rom:"sono ~",en:"that ~",my:"ဟို--",cat:"Minna L2"},
-{jp:"あの～",rd:"あの～",rom:"ano ~",en:"that ~ (over there)",my:"ဟို့--",cat:"Minna L2"},
-{jp:"辞書",rd:"じしょ",rom:"jisho",en:"dictionary",my:"အဘိဓာန်",cat:"Minna L2"},
-{jp:"手帳",rd:"てちょう",rom:"techou",en:"pocket notebook; diary",my:"နေ့စဉ်မှတ်တမ်း",cat:"Minna L2"},
-{jp:"名刺",rd:"めいし",rom:"meishi",en:"business card",my:"လိပ်စာကတ်",cat:"Minna L2"},
-{jp:"カード",rd:"カード",rom:"kaado",en:"card",my:"ကတ်",cat:"Minna L2"},
-{jp:"ボールペン",rd:"ボールペン",rom:"boorupen",en:"ballpoint pen",my:"ဘောပင်",cat:"Minna L2"},
-{jp:"シャープペンシル",rd:"シャープペンシル",rom:"shaapu penshiru",en:"mechanical pencil",my:"ဘောပင်ခဲတံ",cat:"Minna L2"},
-{jp:"かぎ",rd:"かぎ",rom:"kagi",en:"key",my:"သော့",cat:"Minna L2"},
-{jp:"CD",rd:"CD",rom:"shiidii",en:"CD",my:"စီဒီ",cat:"Minna L2"},
-{jp:"コンピュータ",rd:"コンピュータ",rom:"konpyuuta",en:"computer",my:"ကွန်ပျူတာ",cat:"Minna L2"},
-{jp:"チョコレート",rd:"チョコレート",rom:"chokoreeto",en:"chocolate",my:"ချောကလက်",cat:"Minna L2"},
-{jp:"[お]みやげ",rd:"[お]みやげ",rom:"[o]miyage",en:"souvenir",my:"ဒေသထွက် လက်ဆောင်",cat:"Minna L2"},
-{jp:"～語",rd:"～ご",rom:"~go",en:"~ language",my:"～စာ၊ ～စကား",cat:"Minna L2"},
-{jp:"あのう",rd:"あのう",rom:"anou",en:"um; well (hesitation)",my:"ဟိုလေ--",cat:"Minna L2"},
-{jp:"えっ",rd:"えっ",rom:"e'",en:"eh?; what?",my:"ဟယ်။ ဘာလဲ (မျှော်လင့်မထားသော အရာကို ကြားသောအခါ)",cat:"Minna L2"},
-{jp:"どうも ありがとう ございます。",rd:"どうも ありがとう ございます。",rom:"doumo arigatou gozaimasu.",en:"thank you very much",my:"ကျေးဇူးတင်ပါသည်",cat:"Minna L2"},
-{jp:"違います。",rd:"ちがいます。",rom:"chigaimasu.",en:"No, that's wrong.",my:"မဟုတ်ပါဘူး",cat:"Minna L2"},
-{jp:"あ",rd:"あ",rom:"a",en:"ah!; oh!",my:"ဟာ (တစ်စုံတစ်ခုကိုထူးဆန်းသောအခါ)",cat:"Minna L2"},
-{jp:"これから お世話に なります",rd:"これから おせわに なります",rom:"kore kara osewa ni narimasu",en:"I look forward to working with you; please take care of me",my:"အစစအရာအရာ ကူညီဖေးမပေးပါ။",cat:"Minna L2"},
-{jp:"こちらこそ [どうぞ]よろしく[お願い]します",rd:"こちらこそ [どうぞ]よろしく[おねがい]します",rom:"kochira koso [douzo] yoroshiku [onegai] shimasu",en:"Likewise, pleased to meet you",my:"ကျွန်တော်ကိုလည်း မိတ်ဆွေအဖြစ် အသိအမှတ်ပြုပါ။",cat:"Minna L2"},
-{jp:"事務所",rd:"じむしょ",rom:"jimusho",en:"office",my:"ရုံးခန်း",cat:"Minna L3"},
-{jp:"会議室",rd:"かいぎしつ",rom:"kaigishitsu",en:"meeting room",my:"အစည်းအဝေးခန်း",cat:"Minna L3"},
-{jp:"受付",rd:"うけつけ",rom:"uketsuke",en:"reception (desk)",my:"စုံစမ်းရန်ကောင်းတာ",cat:"Minna L3"},
-{jp:"ロビー",rd:"ロビー",rom:"robii",en:"lobby",my:"ဧည့်ခန်း၊ ဟိုတယ်ဧည့်ခန်း",cat:"Minna L3"},
-{jp:"エスカレーター",rd:"エスカレーター",rom:"esukareetaa",en:"escalator",my:"စက်လှေခါး",cat:"Minna L3"},
-{jp:"自動販売機",rd:"じどうはんばいき",rom:"jidouhanbaiki",en:"vending machine",my:"အလိုအလျောက် စျေးရောင်းသည့်စက်",cat:"Minna L3"},
-{jp:"お国",rd:"おくに",rom:"okuni",en:"(your) country",my:"နိုင်ငံ",cat:"Minna L3"},
-{jp:"靴",rd:"くつ",rom:"kutsu",en:"shoes",my:"ဖိနပ်",cat:"Minna L3"},
-{jp:"ネクタイ",rd:"ネクタイ",rom:"nekutai",en:"necktie",my:"လည်စည်း",cat:"Minna L3"},
-{jp:"ワイン",rd:"ワイン",rom:"wain",en:"wine",my:"ဝိုင်",cat:"Minna L3"},
-{jp:"売り場",rd:"うりば",rom:"uriba",en:"sales floor; counter",my:"အရောင်းကောင်တာ",cat:"Minna L3"},
-{jp:"地下",rd:"ちか",rom:"chika",en:"basement; underground",my:"မြေအောက်",cat:"Minna L3"},
-{jp:"～階",rd:"～かい",rom:"~kai",en:"~th floor",my:"အထပ်",cat:"Minna L3"},
-{jp:"何階",rd:"なんかい",rom:"nankai",en:"which floor",my:"ဘယ်နှစ်ထပ်",cat:"Minna L3"},
-{jp:"いらっしゃいませ",rd:"いらっしゃいませ",rom:"irasshaimase",en:"welcome (to a shop)",my:"ကြိုဆိုပါတယ်",cat:"Minna L3"},
-{jp:"[～を]見せてください",rd:"[～を]みせてください",rom:"[~o] misete kudasai",en:"please show me ~",my:"(ကို) ပြပါ",cat:"Minna L3"},
-{jp:"じゃ",rd:"じゃ",rom:"ja",en:"well then; then",my:"ကဲ-",cat:"Minna L3"},
-{jp:"[～を]ください",rd:"[～を]ください",rom:"[~o] kudasai",en:"please give me ~",my:"(ကို) ပေးပါ",cat:"Minna L3"},
-{jp:"イタリア",rd:"イタリア",rom:"itaria",en:"Italy",my:"အီတလီ",cat:"Minna L3"},
-{jp:"スイス",rd:"スイス",rom:"suisu",en:"Switzerland",my:"ဆွစ်ဇာလန်",cat:"Minna L3"},
-{jp:"フランス",rd:"フランス",rom:"furansu",en:"France",my:"ပြင်သစ်",cat:"Minna L3"},
-{jp:"ジャカルタ",rd:"ジャカルタ",rom:"jakaruta",en:"Jakarta",my:"ဂျကာတာ",cat:"Minna L3"},
-{jp:"バンコク",rd:"バンコク",rom:"bankoku",en:"Bangkok",my:"ဘန်ကောက်",cat:"Minna L3"},
-{jp:"ベルリン",rd:"ベルリン",rom:"berurin",en:"Berlin",my:"ဘာလင်",cat:"Minna L3"},
-{jp:"新大阪",rd:"しんおおさか",rom:"shin-oosaka",en:"Shin-Osaka",my:"ရှင်းအိုဆာကာ",cat:"Minna L3"},
-{jp:"起きます",rd:"おきます",rom:"okimasu",en:"to get up; to wake up",my:"ထသည်။ နိုးသည်။",cat:"Minna L4"},
-{jp:"寝ます",rd:"ねます",rom:"nemasu",en:"to sleep; to go to bed",my:"အိပ်သည်။",cat:"Minna L4"},
-{jp:"働きます",rd:"はたらきます",rom:"hatarakimasu",en:"to work",my:"အလုပ်လုပ်သည်။",cat:"Minna L4"},
-{jp:"休みます",rd:"やすみます",rom:"yasumimasu",en:"to rest; to take a day off",my:"အနားယူသည်။",cat:"Minna L4",t:["dates"]},
-{jp:"勉強します",rd:"べんきょうします",rom:"benkyou shimasu",en:"to study",my:"စာကျက်သည်။",cat:"Minna L4"},
-{jp:"終わります",rd:"おわります",rom:"owarimasu",en:"to finish; to end",my:"ပြီးဆုံးသည်။",cat:"Minna L4"},
-{jp:"美術館",rd:"びじゅつかん",rom:"bijutsukan",en:"art museum",my:"အနုပညာပြတိုက်",cat:"Minna L4"},
-{jp:"～時",rd:"～じ",rom:"~ji",en:"~ o'clock",my:"～နာရီ",cat:"Minna L4"},
-{jp:"～ふん",rd:"～ふん",rom:"~fun",en:"~ minutes",my:"မိနစ်",cat:"Minna L4"},
-{jp:"～ぷん",rd:"～ぷん",rom:"~pun",en:"~ minutes",my:"မိနစ်",cat:"Minna L4"},
-{jp:"晩/夜",rd:"ばん/よる",rom:"ban/yoru",en:"evening; night",my:"ည",cat:"Minna L4"},
-{jp:"おととい",rd:"おととい",rom:"ototoi",en:"day before yesterday",my:"တစ်နေ့က",cat:"Minna L4"},
-{jp:"きのう",rd:"きのう",rom:"kinou",en:"yesterday",my:"မနေ့က",cat:"Minna L4"},
-{jp:"あさって",rd:"あさって",rom:"asatte",en:"day after tomorrow",my:"သဘက်ခါ",cat:"Minna L4"},
-{jp:"今朝",rd:"けさ",rom:"kesa",en:"this morning",my:"ဒီမနက်",cat:"Minna L4"},
-{jp:"今晩",rd:"こんばん",rom:"konban",en:"tonight; this evening",my:"ဒီည",cat:"Minna L4"},
-{jp:"休み",rd:"やすみ",rom:"yasumi",en:"holiday; day off",my:"နားရက်၊ အားလပ်ရက်",cat:"Minna L4",t:["dates"]},
-{jp:"昼休み",rd:"ひるやすみ",rom:"hiruyasumi",en:"lunch break",my:"နေ့လည်နားချိန်",cat:"Minna L4"},
-{jp:"会議",rd:"かいぎ",rom:"kaigi",en:"meeting; conference",my:"အစည်းအဝေး",cat:"Minna L4"},
-{jp:"毎晩",rd:"まいばん",rom:"maiban",en:"every evening",my:"ညတိုင်း",cat:"Minna L4"},
-{jp:"～から",rd:"～から",rom:"~kara",en:"from ~",my:"～မှ",cat:"Minna L4"},
-{jp:"～まで",rd:"～まで",rom:"~made",en:"until ~; to ~",my:"～အထိ",cat:"Minna L4"},
-{jp:"～と～",rd:"～と～",rom:"~to~",en:"and; with",my:"～နှင့်",cat:"Minna L4"},
-{jp:"大変ですね",rd:"たいへんですね",rom:"taihen desu ne",en:"That's tough, isn't it?",my:"ဒုက္ခများမှာဘဲနော်",cat:"Minna L4"},
-{jp:"ニューヨーク",rd:"ニューヨーク",rom:"nyuuyooku",en:"New York",my:"နယူးယောက်မြို့",cat:"Minna L4"},
-{jp:"ペキン",rd:"ペキン",rom:"pekin",en:"Beijing",my:"ပီကင်းမြို့",cat:"Minna L4"},
-{jp:"ロサンゼルス",rd:"ロサンゼルス",rom:"rosanzerusu",en:"Los Angeles",my:"လော့စ်အိန်ဂျယ်လိစ်မြို့",cat:"Minna L4"},
-{jp:"ロンドン",rd:"ロンドン",rom:"rondon",en:"London",my:"လန်ဒန်မြို့",cat:"Minna L4"},
-{jp:"あすか",rd:"あすか",rom:"asuka",en:"Asuka (restaurant name)",my:"Asuka စားသောက်ဆိုင်",cat:"Minna L4"},
-{jp:"アップル銀行",rd:"アップルぎんこう",rom:"appuru ginkou",en:"Apple Bank",my:"Apple ဘဏ်",cat:"Minna L4"},
-{jp:"みどり図書館",rd:"みどりとしょかん",rom:"midori toshokan",en:"Midori Library",my:"Midori စာကြည့်တိုက်",cat:"Minna L4"},
-{jp:"やまと美術館",rd:"やまとびじゅつかん",rom:"yamato bijutsukan",en:"Yamato Art Museum",my:"Yamato အနုပညာပြတိုက်",cat:"Minna L4"},
-{jp:"行きます",rd:"いきます",rom:"ikimasu",en:"to go",my:"သွားသည်",cat:"Minna L5"},
-{jp:"来ます",rd:"きます",rom:"kimasu",en:"to come",my:"လာသည်",cat:"Minna L5"},
-{jp:"帰ります",rd:"かえります",rom:"kaerimasu",en:"to go home; to return",my:"ပြန်သည် (အိမ်ပြန်သည်)",cat:"Minna L5"},
-{jp:"新幹線",rd:"しんかんせん",rom:"shinkansen",en:"bullet train",my:"ကျည်ဆံရထား",cat:"Minna L5"},
-{jp:"歩いて",rd:"あるいて",rom:"aruite",en:"on foot; walking",my:"လမ်းလျှောက်ပြီး",cat:"Minna L5"},
-{jp:"一人",rd:"ひとり",rom:"hitori",en:"alone; one person",my:"တစ်ယောက်တည်း",cat:"Minna L5"},
-{jp:"～年",rd:"～ねん",rom:"~nen",en:"year ~",my:"～နှစ်",cat:"Minna L5"},
-{jp:"～月",rd:"～がつ",rom:"~gatsu",en:"month of ~; ~th month",my:"～လ (ဇန်နဝါရီလ၊ ဖေဖော်ဝါရီလ)",cat:"Minna L5"},
-{jp:"１日",rd:"ついたち",rom:"tsuitachi",en:"1st (of the month)",my:"၁ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"２日",rd:"ふつか",rom:"futsuka",en:"2nd",my:"၂ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"３日",rd:"みっか",rom:"mikka",en:"3rd",my:"၃ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"４日",rd:"よっか",rom:"yokka",en:"4th",my:"၄ ရက်၊",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"５日",rd:"いつか",rom:"itsuka",en:"5th",my:"၅ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"６日",rd:"むいか",rom:"muika",en:"6th",my:"၆ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"７日",rd:"なのか",rom:"nanoka",en:"7th",my:"၇ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"８日",rd:"ようか",rom:"youka",en:"8th",my:"၈ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"９日",rd:"ここのか",rom:"kokonoka",en:"9th",my:"၉ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"１０日",rd:"とおか",rom:"tooka",en:"10th",my:"၁၀ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"１４日",rd:"じゅうよっか",rom:"juuyokka",en:"14th",my:"၁၄ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"２０日",rd:"はつか",rom:"hatsuka",en:"20th",my:"၂၀ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"２４日",rd:"にじゅうよっか",rom:"nijuuyokka",en:"24th",my:"၂၄ ရက်",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"～日",rd:"～にち",rom:"~nichi",en:"~th day",my:"～ရက်",cat:"Minna L5",t:["dates"]},
-{jp:"誕生日",rd:"たんじょうび",rom:"tanjoubi",en:"birthday",my:"မွေးနေ့",cat:"Minna L5",t:["dates", "dates"]},
-{jp:"そうですね。",rd:"そうですね。",rom:"sou desu ne.",en:"That's right, isn't it?",my:"ဟုတ်တယ်နော်",cat:"Minna L5"},
-{jp:"[どうも]ありがとう ございました",rd:"[どうも]ありがとう ございました",rom:"[doumo] arigatou gozaimashita",en:"thank you very much (past)",my:"ကျေးဇူးအများကြီးတင်ပါတယ်",cat:"Minna L5"},
-{jp:"～番線",rd:"～ばんせん",rom:"~bansen",en:"platform ~",my:"ရထား စီးသော platform",cat:"Minna L5"},
-{jp:"次",rd:"つぎ",rom:"tsugi",en:"next",my:"နောက်ဟာ",cat:"Minna L5"},
-{jp:"普通",rd:"ふつう",rom:"futsuu",en:"ordinary (train); local train",my:"သာမာန်/ရိုးရိုးရထား",cat:"Minna L5"},
-{jp:"急行",rd:"きゅうこう",rom:"kyuukou",en:"express (train)",my:"အမြန်ရထား",cat:"Minna L5"},
-{jp:"特急",rd:"とっきゅう",rom:"tokkyuu",en:"limited express",my:"အထူးရထား",cat:"Minna L5"},
-{jp:"甲子園",rd:"こうしえん",rom:"koushien",en:"Koshien",my:"Koushien",cat:"Minna L5"},
-{jp:"大阪城",rd:"おおさかじょう",rom:"oosakajou",en:"Osaka Castle",my:"အိုဆာကာရဲတိုက်",cat:"Minna L5"},
-{jp:"食べます",rd:"たべます",rom:"tabemasu",en:"to eat",my:"စားသည်။",cat:"Minna L6"},
-{jp:"飲みます",rd:"のみます",rom:"nomimasu",en:"to drink",my:"သောက်သည်။",cat:"Minna L6"},
-{jp:"吸います",rd:"すいます",rom:"suimasu",en:"to smoke",my:"ဆေးလိပ်သောက်သည်။",cat:"Minna L6"},
-{jp:"見ます",rd:"みます",rom:"mimasu",en:"to see",my:"ကြည့်သည်။",cat:"Minna L6"},
-{jp:"聞きます",rd:"ききます",rom:"kikimasu",en:"to listen",my:"နားထောင်သည်။",cat:"Minna L6"},
-{jp:"読みます",rd:"よみます",rom:"yomimasu",en:"to read",my:"ဖတ်သည်။",cat:"Minna L6"},
-{jp:"書きます",rd:"かきます",rom:"kakimasu",en:"to write",my:"ရေးသည်။",cat:"Minna L6"},
-{jp:"買います",rd:"かいます",rom:"kaimasu",en:"to buy",my:"ဝယ်သည်။",cat:"Minna L6"},
-{jp:"撮ります",rd:"とります",rom:"torimasu",en:"to take (a photo)",my:"ရိုက်သည်",cat:"Minna L6"},
-{jp:"[写真を～]",rd:"[しゃしんを～]",rom:"[shashin o ~]",en:"to take a photo",my:"(ဓာတ်ပုံကို)။",cat:"Minna L6"},
-{jp:"します",rd:"します",rom:"shimasu",en:"to do",my:"လုပ်သည်။",cat:"Minna L6"},
-{jp:"会います",rd:"あいます",rom:"aimasu",en:"to meet",my:"တွေ့သည်",cat:"Minna L6"},
-{jp:"[友達に～]",rd:"[ともだちに～]",rom:"[tomodachi ni ~]",en:"[with a friend] ~",my:"(သူငယ်ချင်းနဲ့)။",cat:"Minna L6"},
-{jp:"ごはん",rd:"ごはん",rom:"gohan",en:"cooked rice; meal",my:"ထမင်း",cat:"Minna L6"},
-{jp:"晩ご飯",rd:"ばんごはん",rom:"bangohan",en:"dinner; supper",my:"ညစာ၊ ညထမင်း",cat:"Minna L6"},
-{jp:"卵",rd:"たまご",rom:"tamago",en:"egg",my:"ကြက်ဥ",cat:"Minna L6"},
-{jp:"紅茶",rd:"こうちゃ",rom:"koucha",en:"black tea",my:"လက်ဖက်ရည်",cat:"Minna L6"},
-{jp:"ミルク",rd:"ミルク",rom:"miruku",en:"milk",my:"နွားနို့၊ နို့ရည်",cat:"Minna L6"},
-{jp:"[お]酒",rd:"[お]さけ",rom:"[o]sake",en:"sake",my:"အရက်",cat:"Minna L6"},
-{jp:"たばこ",rd:"たばこ",rom:"tabako",en:"cigarette",my:"ဆေးလိပ်",cat:"Minna L6"},
-{jp:"レポート",rd:"レポート",rom:"repooto",en:"report",my:"report အစီရင်ခံစာ",cat:"Minna L6"},
-{jp:"ビデオ",rd:"ビデオ",rom:"bideo",en:"video",my:"ဗီဒီယို",cat:"Minna L6"},
-{jp:"庭",rd:"にわ",rom:"niwa",en:"garden",my:"ခြံ၊ ခြံဝင်း",cat:"Minna L6"},
-{jp:"お花見",rd:"おはなみ",rom:"ohanami",en:"cherry-blossom viewing",my:"ပန်းကြည့်ခြင်း",cat:"Minna L6"},
-{jp:"ときどき",rd:"ときどき",rom:"tokidoki",en:"sometimes",my:"တခါတလေ",cat:"Minna L6"},
-{jp:"ええ",rd:"ええ",rom:"ee",en:"yes",my:"အင်း",cat:"Minna L6"},
-{jp:"いいですね",rd:"いいですね",rom:"ii desu ne",en:"that's good, isn't it?",my:"ကောင်းတယ်နော်",cat:"Minna L6"},
-{jp:"何ですか",rd:"なんですか",rom:"nan desu ka",en:"what is it?",my:"ဘာလဲ",cat:"Minna L6"},
-{jp:"じゃ、また[あした]",rd:"じゃ、また[あした]",rom:"ja, mata [ashita]",en:"Well then, see you [tomorrow].",my:"ကဲဒါဆို--မနက်ဖြန်",cat:"Minna L6"},
-{jp:"メキシコ",rd:"メキシコ",rom:"mekishiko",en:"Mexico",my:"မက္ကဆီကို",cat:"Minna L6"},
-{jp:"大阪デパート",rd:"おおさかデパート",rom:"oosaka depaato",en:"Osaka Department Store",my:"အိုဆာကာကုန်တိုက်",cat:"Minna L6"},
-{jp:"つるや",rd:"つるや",rom:"tsuruya",en:"Tsuruya (restaurant name)",my:"Tsuruya စားသောက်ဆိုင်",cat:"Minna L6"},
-{jp:"フランス屋",rd:"フランスや",rom:"furansu ya",en:"Furansu-ya (supermarket)",my:"Furansu စူပါမားကတ်",cat:"Minna L6"},
-{jp:"毎日屋",rd:"まいにちや",rom:"mainichi ya",en:"Mainichi-ya (supermarket)",my:"Mainichi စူပါမားကတ်",cat:"Minna L6"},
-{jp:"切ります",rd:"きります",rom:"kirimasu",en:"to cut",my:"ဖြတ်သည်။ ကိုက်ဖြတ်သည်။",cat:"Minna L7"},
-{jp:"送ります",rd:"おくります",rom:"okurimasu",en:"to send",my:"ပို့သည်။(ပစ္စည်း၊ စာ)",cat:"Minna L7"},
-{jp:"あげます",rd:"あげます",rom:"agemasu",en:"to give",my:"ပေးသည်။",cat:"Minna L7"},
-{jp:"貰います",rd:"もらいます",rom:"moraimasu",en:"to receive",my:"ယူသည်။ လက်ခံရရှိသည်။",cat:"Minna L7"},
-{jp:"貸します",rd:"かします",rom:"kashimasu",en:"to lend",my:"ငှားသည်။ (သူများကို ငှား)",cat:"Minna L7"},
-{jp:"借ります",rd:"かります",rom:"karimasu",en:"to borrow",my:"ချေးငှားသည်။(သူများဆီမှ ချေး)",cat:"Minna L7"},
-{jp:"教えます",rd:"おしえます",rom:"oshiemasu",en:"to teach",my:"သင်ကြားသည်။",cat:"Minna L7"},
-{jp:"習います",rd:"ならいます",rom:"naraimasu",en:"to learn",my:"သင်ယူသည်။",cat:"Minna L7"},
-{jp:"かけます[電話を～]",rd:"かけます[でんわを～]",rom:"kakemasu [denwa o ~]",en:"to make a (phone) call",my:"ဖုန်းဆက်သည်။",cat:"Minna L7"},
-{jp:"はし",rd:"はし",rom:"hashi",en:"chopsticks",my:"တူ(ထမင်းစားတဲ့တူ)",cat:"Minna L7"},
-{jp:"スプーン",rd:"スプーン",rom:"supuun",en:"spoon",my:"ဇွန်း",cat:"Minna L7"},
-{jp:"ナイフ",rd:"ナイフ",rom:"naifu",en:"knife",my:"ဓား",cat:"Minna L7"},
-{jp:"フォーク",rd:"フォーク",rom:"fooku",en:"fork",my:"ခက်ရင်း",cat:"Minna L7"},
-{jp:"はさみ",rd:"はさみ",rom:"hasami",en:"scissors",my:"ကတ်ကြေး",cat:"Minna L7"},
-{jp:"ケータイ",rd:"ケータイ",rom:"keetai",en:"mobile phone",my:"လက်ကိုင်ဖုန်း",cat:"Minna L7"},
-{jp:"メール",rd:"メール",rom:"meeru",en:"e-mail",my:"အီးမေးလ်",cat:"Minna L7"},
-{jp:"年賀状",rd:"ねんがじょう",rom:"nengajou",en:"New Year's card",my:"new year card",cat:"Minna L7"},
-{jp:"パンチ",rd:"パンチ",rom:"panchi",en:"punch",my:"punch",cat:"Minna L7"},
-{jp:"ホッチキス",rd:"ホッチキス",rom:"hocchikisu",en:"stapler",my:"stapler",cat:"Minna L7"},
-{jp:"セロテープ",rd:"セロテープ",rom:"seroteepu",en:"cellophane tape",my:"တိပ်",cat:"Minna L7"},
-{jp:"クリスマス",rd:"クリスマス",rom:"kurisumasu",en:"Christmas",my:"ခရစ်စမတ်",cat:"Minna L7"},
-{jp:"もう～",rd:"もう～",rom:"mou ~",en:"already ~",my:"～ပြီးပြီ",cat:"Minna L7"},
-{jp:"これから",rd:"これから",rom:"kore kara",en:"from now on",my:"အခုကစပြီး---",cat:"Minna L7"},
-{jp:"[～、]すてきですね",rd:"[～、]すてきですね",rom:"[~,] suteki desu ne",en:"That's lovely, isn't it?",my:"လှလိုက်တာ",cat:"Minna L7"},
-{jp:"いらっしゃい",rd:"いらっしゃい",rom:"irasshai",en:"welcome",my:"ကြိုဆိုပါတယ်",cat:"Minna L7"},
-{jp:"どうぞ、おあがりください。",rd:"どうぞ、おあがりください。",rom:"douzo, oagari kudasai.",en:"Please come in.",my:"ကျေးဇူးပြုပြီး အိမ်ပေါ်တက်ပါ။",cat:"Minna L7"},
-{jp:"[～は]いかがですか",rd:"[～は]いかがですか",rom:"[~wa] ikaga desu ka",en:"How about ~?",my:"ဘယ်လိုလဲဟင်",cat:"Minna L7"},
-{jp:"ごちそうさま[でした]",rd:"ごちそうさま[でした]",rom:"gochisousama [deshita]",en:"Thank you for the meal (said after eating)",my:"စားပြီးပါပြီ (အစား အသောက်ကို စားပြီးသည့်အခါ ပြောသောစကား)",cat:"Minna L7"},
-{jp:"スペイン",rd:"スペイン",rom:"supein",en:"Spain",my:"စပိန်",cat:"Minna L7"},
-{jp:"ハンサム [な]",rd:"ハンサム [な]",rom:"hansamu [na]",en:"handsome",my:"ခန့်ချောသော(ကျား)",cat:"Minna L8"},
-{jp:"きれい[な]",rd:"きれい[な]",rom:"kirei[na]",en:"beautiful; clean",my:"လှသော၊ ချောမောသော(မ)",cat:"Minna L8"},
-{jp:"静か[な]",rd:"しずか[な]",rom:"shizuka[na]",en:"quiet",my:"တိတ်ဆိတ်သော",cat:"Minna L8"},
-{jp:"賑やか[な]",rd:"にぎやか[な]",rom:"nigiyaka[na]",en:"lively; bustling",my:"စည်ကားသော",cat:"Minna L8"},
-{jp:"有名 [な]",rd:"ゆうめい [な]",rom:"yuumei [na]",en:"famous",my:"နာမည်ကြီးသော",cat:"Minna L8"},
-{jp:"親切 [な]",rd:"しんせつ [な]",rom:"shinsetsu [na]",en:"kind",my:"ဖော်ရွေသော။ ကြင်နာတတ်သော",cat:"Minna L8"},
-{jp:"元気 [な]",rd:"げんき [な]",rom:"genki [na]",en:"fine; healthy; energetic",my:"ကျန်းမာသော၊ သန်မာသော",cat:"Minna L8"},
-{jp:"暇 [な]",rd:"ひま [な]",rom:"hima [na]",en:"free time; leisure",my:"အားသော၊ အားလပ်သော",cat:"Minna L8"},
-{jp:"便利 [な]",rd:"べんり [な]",rom:"benri [na]",en:"convenient",my:"အဆင်ပြေသော",cat:"Minna L8"},
-{jp:"素敵 [な]",rd:"すてき [な]",rom:"suteki [na]",en:"wonderful; lovely",my:"လှသော၊ စွမ်းဖွယ်ကောင်းသော",cat:"Minna L8"},
-{jp:"いい、良い",rd:"いい、よい",rom:"ii, yoi",en:"good",my:"ကောင်းသော",cat:"Minna L8"},
-{jp:"暑い、熱い",rd:"あつい、あつい",rom:"atsui, atsui",en:"hot",my:"ပူအိုက်သော",cat:"Minna L8"},
-{jp:"おもしろい",rd:"おもしろい",rom:"omoshiroi",en:"interesting",my:"စိတ်ဝင်စားစရာကောင်းသော",cat:"Minna L8"},
-{jp:"おいしい",rd:"おいしい",rom:"oishii",en:"delicious; tasty",my:"အရသာရှိသော",cat:"Minna L8"},
-{jp:"楽しい",rd:"たのしい",rom:"tanoshii",en:"fun; enjoyable",my:"ပျော်ရွှင်သော",cat:"Minna L8"},
-{jp:"桜",rd:"さくら",rom:"sakura",en:"cherry blossom",my:"ဆာကူရာပန်း၊ ချယ်ရီပန်း",cat:"Minna L8"},
-{jp:"所",rd:"ところ",rom:"tokoro",en:"place",my:"နေရာ",cat:"Minna L8"},
-{jp:"寮",rd:"りょう",rom:"ryou",en:"dormitory",my:"အဆောင်",cat:"Minna L8"},
-{jp:"生活",rd:"せいかつ",rom:"seikatsu",en:"life; living",my:"နေထိုင်မှု",cat:"Minna L8"},
-{jp:"[お]仕事",rd:"[お]しごと",rom:"[o]shigoto",en:"work; job",my:"အလုပ်အကိုင်",cat:"Minna L8"},
-{jp:"どんな～",rd:"どんな～",rom:"donna ~",en:"what kind of ~",my:"ဘယ်လိုမျိုး",cat:"Minna L8"},
-{jp:"～が、～",rd:"～が、～",rom:"~ga, ~",en:"~ but ~",my:"～ပေမဲ့လဲ～",cat:"Minna L8"},
-{jp:"もういっぱい",rd:"もういっぱい",rom:"mou ippai",en:"one more (cup/glass)",my:"နောက်တစ်ခွက်",cat:"Minna L8"},
-{jp:"いかがですか",rd:"いかがですか",rom:"ikaga desu ka",en:"How is it?; How about ~?",my:"ဘယ်လိုလဲဟင်",cat:"Minna L8"},
-{jp:"いいえ、けっこうです",rd:"いいえ、けっこうです",rom:"iie, kekkou desu",en:"No, thank you; No, that's enough",my:"ဟင့်အင်း တော်ပါပြီ",cat:"Minna L8"},
-{jp:"もう～です[ね]",rd:"もう～です[ね]",rom:"mou ~desu [ne]",en:"already ~",my:"～ပြီနော်",cat:"Minna L8"},
-{jp:"そろそろ 失礼します",rd:"そろそろ しつれいします",rom:"sorosoro shitsurei shimasu",en:"It's about time I left; I must be going",my:"ဒါဆိုရင် ပြန်တော့မယ် (ခွင့်ပြုပါအုံး)",cat:"Minna L8"},
-{jp:"また いらっしゃって ください",rd:"また いらっしゃって ください",rom:"mata irasshatte kudasai",en:"Please come again",my:"နောက်လဲ လာပါနော်",cat:"Minna L8"},
-{jp:"シャンハイ",rd:"シャンハイ",rom:"shanhai",en:"Shanghai",my:"ရှင်ဟိုင်း",cat:"Minna L8"},
-{jp:"金閣寺",rd:"きんかくじ",rom:"kinkakuji",en:"Kinkakuji (Golden Pavilion)",my:"Kinkakuji ကျောင်းတော်",cat:"Minna L8"},
-{jp:"奈良公園",rd:"ならこうえん",rom:"nara kouen",en:"Nara Park",my:"Nara ပန်းခြံ",cat:"Minna L8"},
-{jp:"富士山",rd:"ふじさん",rom:"fujisan",en:"Mt. Fuji",my:"ဖူဂျီတောင်",cat:"Minna L8"},
-{jp:"「七人の 侍」",rd:"「しちにんの さむらい」",rom:"shichinin no samurai",en:"\"Seven Samurai\"",my:"စာမူရိုင်း၇ယောက်ရွေ့ရုပ်ရှင်",cat:"Minna L8"},
-{jp:"わかります",rd:"わかります",rom:"wakarimasu",en:"to understand",my:"နားလည်သည်။",cat:"Minna L9"},
-{jp:"あります",rd:"あります",rom:"arimasu",en:"to be; to exist (inanimate)",my:"ရှိသည်။(သက်မဲ့)",cat:"Minna L9"},
-{jp:"好き[な]",rd:"すき[な]",rom:"suki[na]",en:"like; fond of",my:"ကြိုက်သော",cat:"Minna L9"},
-{jp:"嫌い[な]",rd:"きらい[な]",rom:"kirai[na]",en:"dislike; hate",my:"မုန်းသော",cat:"Minna L9"},
-{jp:"上手 [な]",rd:"じょうず [な]",rom:"jouzu [na]",en:"good at; skillful",my:"တော်သော",cat:"Minna L9"},
-{jp:"下手 [な]",rd:"へた [な]",rom:"heta [na]",en:"poor at; unskillful",my:"ညံ့သော",cat:"Minna L9"},
-{jp:"ダンス",rd:"ダンス",rom:"dansu",en:"dance",my:"အက",cat:"Minna L9"},
-{jp:"クラシック",rd:"クラシック",rom:"kurashikku",en:"classical (music)",my:"ရှေးဟောင်းသီချင်း",cat:"Minna L9"},
-{jp:"ジャズ",rd:"ジャズ",rom:"jazu",en:"jazz",my:"jassသီချင်း",cat:"Minna L9"},
-{jp:"コンサート",rd:"コンサート",rom:"konsaato",en:"concert",my:"ဂီတဖျော်ဖြေပွဲ",cat:"Minna L9"},
-{jp:"カラオケ",rd:"カラオケ",rom:"karaoke",en:"karaoke",my:"ကာရာအိုကေ",cat:"Minna L9"},
-{jp:"歌舞伎",rd:"かぶき",rom:"kabuki",en:"kabuki (traditional Japanese theatre)",my:"ဂျပန်ရိုးရာဇာတ်ပွဲ",cat:"Minna L9"},
-{jp:"字",rd:"じ",rom:"ji",en:"character; letter",my:"စာလုံး",cat:"Minna L9"},
-{jp:"かたかな",rd:"かたかな",rom:"katakana",en:"katakana",my:"ခတခနစာလုံး",cat:"Minna L9"},
-{jp:"ローマ字",rd:"ローマじ",rom:"rooma ji",en:"Roman letters; romaji",my:"ရိုးမာဂျိစာလုံး",cat:"Minna L9"},
-{jp:"細かいお金",rd:"こまかいおかね",rom:"komakai okane",en:"small change",my:"ပိုက်ဆံအကြွေ",cat:"Minna L9"},
-{jp:"チケット",rd:"チケット",rom:"chiketto",en:"ticket",my:"လက်မှတ်",cat:"Minna L9"},
-{jp:"用事",rd:"ようじ",rom:"youji",en:"errand; business",my:"ကိစ္စ",cat:"Minna L9"},
-{jp:"約束",rd:"やくそく",rom:"yakusoku",en:"promise; appointment",my:"ကတိ၊ ချိန်းဆိုထားခြင်း",cat:"Minna L9"},
-{jp:"アルバイト",rd:"アルバイト",rom:"arubaito",en:"part-time job",my:"အချိန်ပိုင်းအလုပ်",cat:"Minna L9"},
-{jp:"ご主人",rd:"ごしゅじん",rom:"goshujin",en:"(your) husband",my:"ခင်ပွန်း(သူတစ်ပါး၏ ယောက်ျား)",cat:"Minna L9"},
-{jp:"夫 /主人",rd:"おっと/しゅじん",rom:"otto/shujin",en:"(my) husband",my:"မိမိ၏ယောက်ျား",cat:"Minna L9"},
-{jp:"奥さん",rd:"おくさん",rom:"okusan",en:"(your) wife",my:"ဇနီး (သူတစ်ပါး၏ ဇနီး)",cat:"Minna L9"},
-{jp:"妻/家内",rd:"つま/かない",rom:"tsuma/kanai",en:"(my) wife",my:"မိမိ၏ဇနီး၊ မိန်းမ",cat:"Minna L9"},
-{jp:"子ども",rd:"こども",rom:"kodomo",en:"child; children",my:"ကလေး",cat:"Minna L9"},
-{jp:"早く",rd:"はやく",rom:"hayaku",en:"early; quickly",my:"စောစော၊ မြန်မြန်",cat:"Minna L9"},
-{jp:"貸してください。",rd:"かしてください。",rom:"kashite kudasai.",en:"please lend me ~",my:"ငှားပါ",cat:"Minna L9"},
-{jp:"いいですよ。",rd:"いいですよ。",rom:"ii desu yo.",en:"that's fine; OK",my:"ရပါတယ်",cat:"Minna L9"},
-{jp:"残念です[が]",rd:"ざんねんです[が]",rom:"zannen desu[ga]",en:"that's a pity; unfortunately",my:"စိတ်မကောင်းပါဘူး",cat:"Minna L9"},
-{jp:"ああ、",rd:"ああ、",rom:"aa,",en:"ah!; oh!",my:"အော်--",cat:"Minna L9"},
-{jp:"いっしょに いかがですか",rd:"いっしょに いかがですか",rom:"issho ni ikaga desu ka",en:"how about ~ together?",my:"အတူတူ ဘယ်လိုလဲဟင်း",cat:"Minna L9"},
-{jp:"[～は]ちょっと…",rd:"[～は]ちょっと…",rom:"[~wa] chotto...",en:"a little...; (hesitation / soft refusal)",my:"နည်းနည်း၊ ခဏ၊ သိပ်ပြီးတော့-- (အကြောင်းအရာတစ်ခုကို ငြင်းသည့်အခါသုံးသည်)",cat:"Minna L9"},
-{jp:"だめですか",rd:"だめですか",rom:"dame desu ka",en:"is that no good?; won't it do?",my:"မရဘူးလား",cat:"Minna L9"},
-{jp:"また 今度 お願いします",rd:"また こんど おねがいします",rom:"mata kondo onegai shimasu",en:"maybe next time; (I'll ask) again next time",my:"နောက်တခါ---တောင်းဆိုပါတယ် (ဒီတစ်ခေါက်အဆင်မပြေသောကြောင်း နောက်တခါကျမှ)",cat:"Minna L9"},
-{jp:"います",rd:"います",rom:"imasu",en:"there is (people/animals)",my:"ရှိသည်။ နေသည်။(သက်ရှိ)",cat:"Minna L10"},
-{jp:"いろいろ[な]",rd:"いろいろ[な]",rom:"iroiro[na]",en:"various",my:"အမျိုးမျိုး",cat:"Minna L10"},
-{jp:"パンダ",rd:"パンダ",rom:"panda",en:"panda",my:"ပန်ဒါ",cat:"Minna L10"},
-{jp:"象",rd:"ぞう",rom:"zou",en:"elephant",my:"ဆင်",cat:"Minna L10"},
-{jp:"物",rd:"もの",rom:"mono",en:"thing",my:"အရာဝတ္ထု",cat:"Minna L10"},
-{jp:"電池",rd:"でんち",rom:"denchi",en:"battery",my:"ဓာတ်ခဲ",cat:"Minna L10"},
-{jp:"箱",rd:"はこ",rom:"hako",en:"box",my:"ဗူး",cat:"Minna L10"},
-{jp:"スイッチ",rd:"スイッチ",rom:"suitchi",en:"switch",my:"မီးခလုတ်",cat:"Minna L10"},
-{jp:"冷蔵庫",rd:"れいぞうこ",rom:"reizouko",en:"refrigerator",my:"ရေခဲသေတ္တာ",cat:"Minna L10"},
-{jp:"ベッド",rd:"ベッド",rom:"beddo",en:"bed",my:"အိပ်ရာ၊ ကုတင်",cat:"Minna L10"},
-{jp:"棚",rd:"たな",rom:"tana",en:"shelf",my:"စင်(စာအုပ်စင်၊ ပန်းကန်စင်)",cat:"Minna L10"},
-{jp:"ポスト",rd:"ポスト",rom:"posuto",en:"mailbox; postbox",my:"စာတိုက်ပုံး",cat:"Minna L10"},
-{jp:"ビル",rd:"ビル",rom:"biru",en:"building",my:"အဆောက်အဦး",cat:"Minna L10"},
-{jp:"ATM",rd:"ATM",rom:"eetiiemu",en:"ATM",my:"အလိုအလျောက်ငွေထုတ်စက်",cat:"Minna L10"},
-{jp:"コンビニ",rd:"コンビニ",rom:"konbini",en:"convenience store",my:"convenience store",cat:"Minna L10"},
-{jp:"喫茶店",rd:"きっさてん",rom:"kissaten",en:"coffee shop; tea house",my:"လက်ဖက်ရည်/ကော်ဖီဆိုင်",cat:"Minna L10"},
-{jp:"本屋",rd:"ほんや",rom:"honya",en:"bookstore",my:"စာအုပ်ဆိုင်",cat:"Minna L10"},
-{jp:"～屋",rd:"～や",rom:"~ya",en:"~ shop",my:"～ဆိုင်",cat:"Minna L10"},
-{jp:"乗り場",rd:"のりば",rom:"noriba",en:"boarding place; stop",my:"～ယာဉ်စီးတဲ့နေရာ",cat:"Minna L10"},
-{jp:"県",rd:"けん",rom:"ken",en:"prefecture",my:"တိုင်းဒေသ (prefecture)",cat:"Minna L10"},
-{jp:"間",rd:"あいだ",rom:"aida",en:"between; interval",my:"နှစ်ခုကြား (မှာ)",cat:"Minna L10"},
-{jp:"～や～など",rd:"～や～など",rom:"~ya~nado",en:"~ and ~, etc.",my:"～နဲ့～တွေ",cat:"Minna L10"},
-{jp:"[どうも]すみません。",rd:"[どうも]すみません。",rom:"[doumo] sumimasen.",en:"Excuse me; I'm sorry to trouble you",my:"ကျေးဇူးပါ(အနှောင့်အယှက်ဖြစ်ရင်ခွင့်လွှတ်ပါ)",cat:"Minna L10"},
-{jp:"ナンプラー",rd:"ナンプラー",rom:"nanpuraa",en:"fish sauce",my:"ငံပြာရည်",cat:"Minna L10"},
-{jp:"コーナー",rd:"コーナー",rom:"koonaa",en:"corner",my:"ကော်နာ",cat:"Minna L10"},
-{jp:"いちばん下",rd:"いちばんした",rom:"ichiban shita",en:"the bottom; the lowest",my:"အောက်ဆုံး",cat:"Minna L10"},
-{jp:"東京ディズニーランド",rd:"とうきょうディズニーランド",rom:"toukyou dizuniirando",en:"Tokyo Disneyland",my:"တိုကျို ဒစ္စနေလန်း",cat:"Minna L10"},
-{jp:"アジアストア",rd:"アジアストア",rom:"ajia sutoa",en:"Asia Store",my:"အာရှအာ စတိုးဆိုင်",cat:"Minna L10"},
-{jp:"います[子どもが]",rd:"います[こどもが]",rom:"imasu [kodomo ga]",en:"to be, to exist (a child)",my:"ရှိသည်။(ကလေးရှိသည်)",cat:"Minna L11"},
-{jp:"います[日本に]",rd:"います[にほんに]",rom:"imasu [nihon ni]",en:"to be, to exist (in Japan)",my:"နေသည်။ (ဂျပန်တွင်)",cat:"Minna L11"},
-{jp:"かかります",rd:"かかります",rom:"kakarimasu",en:"to take (time)",my:"ကြာသည်။(အချိန်ကြာတယ်)",cat:"Minna L11"},
-{jp:"[会社を]",rd:"[かいしゃを]",rom:"[kaisha o]",en:"(the company)",my:"ကုမ္ပဏီကို",cat:"Minna L11"},
-{jp:"1つ",rd:"ひとつ",rom:"hitotsu",en:"one (thing)",my:"တစ်ခု",cat:"Minna L11"},
-{jp:"2つ",rd:"ふたつ",rom:"futatsu",en:"two (things)",my:"နှစ်ခု",cat:"Minna L11"},
-{jp:"3つ",rd:"みっつ",rom:"mittsu",en:"three (things)",my:"သုံးခု",cat:"Minna L11"},
-{jp:"4つ",rd:"よっつ",rom:"yottsu",en:"four (things)",my:"လေးခု",cat:"Minna L11"},
-{jp:"5つ",rd:"いつつ",rom:"itsutsu",en:"five (things)",my:"ငါးခု",cat:"Minna L11"},
-{jp:"6つ",rd:"むっつ",rom:"muttsu",en:"six (things)",my:"ခြောက်ခု",cat:"Minna L11"},
-{jp:"7つ",rd:"ななつ",rom:"nanatsu",en:"seven (things)",my:"ခုနစ်ခု",cat:"Minna L11"},
-{jp:"8つ",rd:"やっつ",rom:"yattsu",en:"eight (things)",my:"ရှစ်ခု",cat:"Minna L11"},
-{jp:"9つ",rd:"ここのつ",rom:"kokonotsu",en:"nine (things)",my:"ကိုးခု",cat:"Minna L11"},
-{jp:"1人",rd:"ひとり",rom:"hitori",en:"one person",my:"တစ်ယောက်",cat:"Minna L11"},
-{jp:"2人",rd:"ふたり",rom:"futari",en:"two people",my:"နှစ်ယောက်",cat:"Minna L11"},
-{jp:"～人",rd:"～にん",rom:"~nin",en:"~ people",my:"～ယောက်",cat:"Minna L11"},
-{jp:"～台",rd:"～だい",rom:"~dai",en:"counter for machines, vehicles, etc.",my:"～စီး၊～လုံး၊ (ကြီးမားသော အရာ(ကား၊ တီဗီ၊ ရေခဲ သေတ္တာ၊ ပန်ကာ စသည်များ))",cat:"Minna L11"},
-{jp:"～枚",rd:"～まい",rom:"~mai",en:"counter for flat things",my:"～ရွက်(ပါးလွှာသောအရာ(တံဆိပ်ခေါင်း၊ စာရွက်၊ စာအိတ်၊ ဓါတ်ပုံ၊ အင်္ကျီ စသည်များ))",cat:"Minna L11"},
-{jp:"～回",rd:"～かい",rom:"~kai",en:"counter for times; ~ times",my:"～ခေါက်(အကြိမ်အရေ)",cat:"Minna L11"},
-{jp:"カレー[ライス]",rd:"カレー[ライス]",rom:"karee [raisu]",en:"curry [and rice]",my:"ဂျပန်မဆလာဟင်း",cat:"Minna L11"},
-{jp:"切手",rd:"きって",rom:"kitte",en:"stamp",my:"တံဆိပ်ခေါင်း",cat:"Minna L11"},
-{jp:"はがき",rd:"はがき",rom:"hagaki",en:"postcard",my:"post card",cat:"Minna L11"},
-{jp:"封筒",rd:"ふうとう",rom:"fuutou",en:"envelope",my:"စာအိတ်",cat:"Minna L11"},
-{jp:"両親",rd:"りょうしん",rom:"ryoushin",en:"(both) parents",my:"မိဘနှစ်ပါး",cat:"Minna L11"},
-{jp:"兄弟",rd:"きょうだい",rom:"kyoudai",en:"brothers and sisters; siblings",my:"မောင်နှမ",cat:"Minna L11"},
-{jp:"弟さん",rd:"おとうとさん",rom:"otoutosan",en:"younger brother (someone else's)",my:"သူတစ်ပါး၏မောင်၊ ညီ",cat:"Minna L11"},
-{jp:"妹さん",rd:"いもうとさん",rom:"imoutosan",en:"younger sister (someone else's)",my:"သူတစ်ပါး၏ညီမ",cat:"Minna L11"},
-{jp:"外国",rd:"がいこく",rom:"gaikoku",en:"foreign country",my:"နိုင်ငံခြား",cat:"Minna L11"},
-{jp:"留学生",rd:"りゅうがくせい",rom:"ryuugakusei",en:"foreign student",my:"နိုင်ငံခြားပညာတော်သင် ကျောင်းသား",cat:"Minna L11"},
-{jp:"～時間",rd:"～じかん",rom:"~jikan",en:"~ hours",my:"～နာရီ(၁ နာရီ)",cat:"Minna L11"},
-{jp:"～週間",rd:"～しゅうかん",rom:"~shuukan",en:"~ weeks",my:"～ပတ်(ရက်သတ္တပတ်)",cat:"Minna L11"},
-{jp:"～ヶ月",rd:"～げつ",rom:"~getsu",en:"~ months",my:"～လကြာ",cat:"Minna L11"},
-{jp:"ぐらい",rd:"ぐらい",rom:"gurai",en:"about; approximately",my:"လောက်(၁ နာရီလောက်)",cat:"Minna L11"},
-{jp:"どのぐらい",rd:"どのぐらい",rom:"donogurai",en:"how long; how much",my:"ဘယ်လောက်",cat:"Minna L11"},
-{jp:"全部で",rd:"ぜんぶで",rom:"zenbude",en:"in all; altogether",my:"အားလုံး(အရာဝတ္ထု)",cat:"Minna L11"},
-{jp:"みんな",rd:"みんな",rom:"minna",en:"everyone; all (people)",my:"အားလုံး(လူ၊ သက်ရှိ)",cat:"Minna L11"},
-{jp:"～だけ",rd:"～だけ",rom:"~dake",en:"only ~; just ~",my:"～တည်းဘဲ",cat:"Minna L11"},
-{jp:"かしこまりました",rd:"かしこまりました",rom:"kashikomarimashita",en:"Certainly. (polite reply)",my:"ကောင်းပါပြီ",cat:"Minna L11"},
-{jp:"いいお天気ですね",rd:"いいおてんきですね",rom:"ii otenki desu ne",en:"Nice weather, isn't it?",my:"ရာသီဥတုကောင်းတယ်နော်",cat:"Minna L11"},
-{jp:"おでかけですか",rd:"おでかけですか",rom:"odekake desu ka",en:"Are you going out?",my:"အပြင်သွားမလို့လား",cat:"Minna L11"},
-{jp:"ちょっと～まで",rd:"ちょっと～まで",rom:"chotto ~ made",en:"to ~ for a while",my:"ခဏ～အထိ",cat:"Minna L11"},
-{jp:"行ってらっしゃい",rd:"いってらっしゃい",rom:"itterasshai",en:"Have a nice day. (seeing someone off)",my:"သွားပါနော်(နှုတ်ဆက်)",cat:"Minna L11"},
-{jp:"行ってきます",rd:"いってきます",rom:"ittekimasu",en:"I'm off. (leaving home)",my:"သွားပြီနော်(နှုတ်ဆက်)",cat:"Minna L11"},
-{jp:"船便",rd:"ふなびん",rom:"funabin",en:"surface mail (by ship)",my:"ရေကြောင်းဖြင့်ပေးပို့",cat:"Minna L11"},
-{jp:"航空便 [エアメール]",rd:"こうくうびん [エアメール]",rom:"koukuubin [eameeru]",en:"airmail",my:"လေကြောင်းဖြင့်ပေးပို့",cat:"Minna L11"},
-{jp:"お願いします。",rd:"おねがいします。",rom:"onegaishimasu.",en:"Please. (request)",my:"ကျေးဇူးပြု၍",cat:"Minna L11"},
-{jp:"オーストラリア",rd:"オーストラリア",rom:"oosutoraria",en:"Australia",my:"Australia",cat:"Minna L11"},
-{jp:"簡単[な]",rd:"かんたん[な]",rom:"kantan [na]",en:"easy; simple",my:"လွယ်သော",cat:"Minna L12"},
-{jp:"多い[人が～]",rd:"おおい[ひとが～]",rom:"ooi [hito ga ~]",en:"many; a lot (people)",my:"များသော(လူ)",cat:"Minna L12"},
-{jp:"少ない[人が～]",rd:"すくない[ひとが～]",rom:"sukunai [hito ga ~]",en:"few; a little (people)",my:"နည်းသော(လူ)",cat:"Minna L12"},
-{jp:"暖かい、温かい",rd:"あたたかい、あたたかい",rom:"atatakai, atatakai",en:"warm",my:"နွေးသော",cat:"Minna L12"},
-{jp:"いい[コーヒーが～]",rd:"いい[コーヒーが～]",rom:"ii [koohii ga ~]",en:"good; nice (coffee)",my:"ကောင်းသော(ကော်ဖီက)",cat:"Minna L12"},
-{jp:"季節",rd:"きせつ",rom:"kisetsu",en:"season",my:"ရာသီဥတု",cat:"Minna L12"},
-{jp:"春",rd:"はる",rom:"haru",en:"spring",my:"နွေဦးပေါက်",cat:"Minna L12"},
-{jp:"夏",rd:"なつ",rom:"natsu",en:"summer",my:"နွေရာသီ",cat:"Minna L12"},
-{jp:"秋",rd:"あき",rom:"aki",en:"autumn; fall",my:"ဆောင်းဦးပေါက်",cat:"Minna L12"},
-{jp:"冬",rd:"ふゆ",rom:"fuyu",en:"winter",my:"ဆောင်းရာသီ",cat:"Minna L12"},
-{jp:"曇",rd:"くもり",rom:"kumori",en:"cloudy",my:"တိမ်ထူသော",cat:"Minna L12"},
-{jp:"ホテル",rd:"ホテル",rom:"hoteru",en:"hotel",my:"ဟိုတယ်",cat:"Minna L12"},
-{jp:"世界",rd:"せかい",rom:"sekai",en:"world",my:"ကမ္ဘာလောက",cat:"Minna L12"},
-{jp:"[お]祭り",rd:"[お]まつり",rom:"[o]matsuri",en:"festival",my:"ပွဲတော်",cat:"Minna L12"},
-{jp:"すき焼き",rd:"すきやき",rom:"sukiyaki",en:"sukiyaki (Japanese beef hot pot)",my:"ဂျပန် အမဲသား hot pot",cat:"Minna L12"},
-{jp:"刺身",rd:"さしみ",rom:"sashimi",en:"sashimi (raw fish)",my:"ဆာရှိမိ",cat:"Minna L12"},
-{jp:"[お]すし",rd:"[お]すし",rom:"[o]sushi",en:"sushi",my:"ဆူရှီ",cat:"Minna L12"},
-{jp:"天ぷら",rd:"てんぷら",rom:"tenpura",en:"tempura",my:"ဂျပန်အကြော်",cat:"Minna L12"},
-{jp:"豚肉",rd:"ぶたにく",rom:"butaniku",en:"pork",my:"ဝက်သား",cat:"Minna L12"},
-{jp:"鶏肉",rd:"とりにく",rom:"toriniku",en:"chicken (meat)",my:"ကြက်သား",cat:"Minna L12"},
-{jp:"牛肉",rd:"ぎゅうにく",rom:"gyuuniku",en:"beef",my:"အမဲသား",cat:"Minna L12"},
-{jp:"レモン",rd:"レモン",rom:"remon",en:"lemon",my:"သံပုရိုသီး",cat:"Minna L12"},
-{jp:"生け花",rd:"いけばな",rom:"ikebana",en:"flower arrangement",my:"ဂျပန်ပန်းအလှထိုးခြင်း",cat:"Minna L12"},
-{jp:"紅葉",rd:"もみじ",rom:"momiji",en:"autumn leaves; fall colors",my:"သစ်ရွက်များအရောင် ပြောင်းခြင်း",cat:"Minna L12"},
-{jp:"どちらも",rd:"どちらも",rom:"dochiramo",en:"both; either",my:"နှစ်ခုစလုံး(ဘယ်ဟာမဆို)",cat:"Minna L12"},
-{jp:"いちばん",rd:"いちばん",rom:"ichiban",en:"the most; number one",my:"～ဆုံး (အကောင်းဆုံး၊ အများဆုံး)",cat:"Minna L12"},
-{jp:"ずっと",rd:"ずっと",rom:"zutto",en:"all the time; very",my:"တောက်လျှောက်၊ အမြဲတမ်း၊ အရမ်း",cat:"Minna L12"},
-{jp:"初めて",rd:"はじめて",rom:"hajimete",en:"for the first time",my:"ပထမဆုံး",cat:"Minna L12"},
-{jp:"お帰りなさい",rd:"おかえりなさい",rom:"okaerinasai",en:"Welcome home.",my:"ပြန်လာပါ(နှုတ်ဆက်)",cat:"Minna L12"},
-{jp:"わあ すごい 人ですね",rd:"わあ すごい ひとですね",rom:"waa sugoi hito desu ne",en:"Wow, so many people!",my:"ကြည့်ပါအုံး လူတွေအများကြီးဘဲ",cat:"Minna L12"},
-{jp:"疲れました",rd:"つかれました",rom:"tsukaremashita",en:"I got tired.",my:"ပင်ပန်းခဲ့တယ်။",cat:"Minna L12"},
-{jp:"祇園祭",rd:"ぎおんまつり",rom:"gionmatsuri",en:"Gion Festival",my:"Gion ပွဲတော်",cat:"Minna L12"},
-{jp:"ホンコン",rd:"ホンコン",rom:"honkon",en:"Hong Kong",my:"ဟောင်ကောင်",cat:"Minna L12"},
-{jp:"シンガポール",rd:"シンガポール",rom:"shingapooru",en:"Singapore",my:"စင်ကာပူ",cat:"Minna L12"},
-{jp:"ABC ストア",rd:"ABC ストア",rom:"ABC sutoa",en:"ABC Store",my:"ABCစတိုးဆိုင်",cat:"Minna L12"},
-{jp:"ジャパン",rd:"ジャパン",rom:"japan",en:"Japan (supermarket)",my:"Japanစူပါမားကတ်",cat:"Minna L12"},
-{jp:"遊びます",rd:"あそびます",rom:"asobimasu",en:"to play; to have fun",my:"ကစားသည်။",cat:"Minna L13"},
-{jp:"泳ぎます",rd:"およぎます",rom:"oyogimasu",en:"to swim",my:"ရေကူးသည်။",cat:"Minna L13"},
-{jp:"迎えます",rd:"むかえます",rom:"mukaemasu",en:"to meet; to welcome",my:"ကြိုသည်။ ကြိုဆိုသည်။",cat:"Minna L13"},
-{jp:"疲れます",rd:"つかれます",rom:"tsukaremasu",en:"to get tired",my:"ပင်ပန်းသည်။ မောပန်းသည်။",cat:"Minna L13"},
-{jp:"結婚します",rd:"けっこんします",rom:"kekkonshimasu",en:"to get married",my:"အိမ်ထောင်ပြုသည်။",cat:"Minna L13"},
-{jp:"買い物します",rd:"かいものします",rom:"kaimonoshimasu",en:"to shop; to go shopping",my:"စျေးဝယ်သည်။",cat:"Minna L13"},
-{jp:"食事します",rd:"しょくじします",rom:"shokujishimasu",en:"to have a meal; to eat",my:"ထမင်းစားသည်။",cat:"Minna L13"},
-{jp:"散歩します",rd:"さんぽします",rom:"sanposhimasu",en:"to take a walk; to stroll",my:"လမ်းလျှောက်သည်",cat:"Minna L13"},
-{jp:"[公園を]",rd:"[こうえんを]",rom:"[kouen o]",en:"(the park)",my:"(ပန်းခြံမှာ)။",cat:"Minna L13"},
-{jp:"大変[な]",rd:"たいへん[な]",rom:"taihen [na]",en:"hard; tough; awful",my:"ပင်ပန်းသော၊ ခက်ခဲသော",cat:"Minna L13"},
-{jp:"プール",rd:"プール",rom:"puuru",en:"swimming pool",my:"ရေကူးကန်",cat:"Minna L13"},
-{jp:"美術",rd:"びじゅつ",rom:"bijutsu",en:"art; fine arts",my:"အနုပညာ",cat:"Minna L13"},
-{jp:"釣り",rd:"つり",rom:"tsuri",en:"fishing",my:"ငါးမျှားခြင်း",cat:"Minna L13"},
-{jp:"スキー",rd:"スキー",rom:"sukii",en:"skiing",my:"နှင်းလျှောစီးခြင်း",cat:"Minna L13"},
-{jp:"～ごろ",rd:"～ごろ",rom:"~goro",en:"around (time); about",my:"～လောက်",cat:"Minna L13"},
-{jp:"何か",rd:"なにか",rom:"nanika",en:"something",my:"တစ်ခုခု",cat:"Minna L13"},
-{jp:"どこか",rd:"どこか",rom:"dokoka",en:"somewhere",my:"တစ်နေရာရာ",cat:"Minna L13"},
-{jp:"のどが かわきます",rd:"のどが かわきます",rom:"nodo ga kawakimasu",en:"to be thirsty",my:"အာခေါင်ခြောက်တယ်",cat:"Minna L13"},
-{jp:"おなかが すきます",rd:"おなかが すきます",rom:"onaka ga sukimasu",en:"to be hungry; to get hungry",my:"ဗိုက်ဆာတယ်",cat:"Minna L13"},
-{jp:"そうしましょう",rd:"そうしましょう",rom:"sou shimashou",en:"Let's do that.",my:"အဲဒီလိုလုပ်ရအောင်",cat:"Minna L13"},
-{jp:"ご注文は？",rd:"ごちゅうもんは？",rom:"gochuumon wa?",en:"What would you like to order?",my:"ဘာစားမှာလဲ(စားသောက်ဆိုင်တွင်)",cat:"Minna L13"},
-{jp:"定食",rd:"ていしょく",rom:"teishoku",en:"set meal; set menu",my:"သတ်မှတ်ထားသောအစား အစာ (Set menu)",cat:"Minna L13"},
-{jp:"牛どん",rd:"ぎゅうどん",rom:"gyuudon",en:"beef bowl (beef over rice)",my:"အမဲသားဟင်းနှင့်ထမင်း",cat:"Minna L13"},
-{jp:"[少々] お待ちください",rd:"[しょうしょう] おまちください",rom:"[shoushou] omachikudasai",en:"Please wait a moment.",my:"ခဏစောင့်ပါ",cat:"Minna L13"},
-{jp:"別々に",rd:"べつべつに",rom:"betsubetsuni",en:"separately",my:"သီးခြားစီ (ငွေရှင်းသည့်အချိန်တွင် အသုံးများ)",cat:"Minna L13"},
-{jp:"アキックス",rd:"アキックス",rom:"akikkusu",en:"Akikku (company name)",my:"あきっくす ကုမ္ပဏီ",cat:"Minna L13"},
-{jp:"おはようテレビ",rd:"おはようテレビ",rom:"ohayou terebi",en:"Ohayo TV (program name)",my:"ohayoတီဗီအစီအစဉ်",cat:"Minna L13"},
-{jp:"付けます",rd:"つけます",rom:"tsukemasu",en:"to turn on (light, air conditioner, TV)",my:"မီးဖွင့်၊ အဲယားကွန်း၊ TV ဖွင့်သည်။",cat:"Minna L14"},
-{jp:"消します",rd:"けします",rom:"keshimasu",en:"to turn off (light, air conditioner, TV)",my:"မီးပိတ်၊ အဲယားကွန်း၊ TV ပိတ်သည်။",cat:"Minna L14"},
-{jp:"開けます",rd:"あけます",rom:"akemasu",en:"to open (a door)",my:"တံခါးဖွင့်သည်။",cat:"Minna L14"},
-{jp:"閉めます",rd:"しめます",rom:"shimemasu",en:"to close (a door)",my:"တံခါးပိတ်သည်။",cat:"Minna L14"},
-{jp:"急ぎます",rd:"いそぎます",rom:"isogimasu",en:"to hurry",my:"အလျင်လိုသည်။",cat:"Minna L14"},
-{jp:"待ちます",rd:"まちます",rom:"machimasu",en:"to wait",my:"စောင့်သည်။",cat:"Minna L14"},
-{jp:"持ちます",rd:"もちます",rom:"mochimasu",en:"to hold; to carry",my:"ကိုင်သည်။ ယူထားသည်။",cat:"Minna L14"},
-{jp:"取ります",rd:"とります",rom:"torimasu",en:"to take; to pick up",my:"ယူသည်။ လွှမ်းယူသည်။",cat:"Minna L14"},
-{jp:"手伝います",rd:"てつだいます",rom:"tetsudaimasu",en:"to help",my:"ကူညီသည်။",cat:"Minna L14"},
-{jp:"呼びます",rd:"よびます",rom:"yobimasu",en:"to call (out to)",my:"ခေါ်သည်။ အော်ခေါ်သည်။",cat:"Minna L14"},
-{jp:"話します",rd:"はなします",rom:"hanashimasu",en:"to speak; to talk",my:"ပြောသည်။",cat:"Minna L14"},
-{jp:"使います",rd:"つかいます",rom:"tsukaimasu",en:"to use",my:"အသုံးပြုသည်။",cat:"Minna L14"},
-{jp:"止めます",rd:"とめます",rom:"tomemasu",en:"to stop",my:"ရပ်သည်။",cat:"Minna L14"},
-{jp:"見せます",rd:"みせます",rom:"misemasu",en:"to show",my:"ပြသည်။",cat:"Minna L14"},
-{jp:"教えます[住所を～]",rd:"おしえます[じゅうしょを～]",rom:"oshiemasu [juusho o ~]",en:"to tell; to teach (an address)",my:"ပြောပြသည်(လိပ်စာကို)",cat:"Minna L14"},
-{jp:"座ります",rd:"すわります",rom:"suwarimasu",en:"to sit down",my:"ထိုင်သည်",cat:"Minna L14"},
-{jp:"立ちます",rd:"たちます",rom:"tachimasu",en:"to stand up",my:"မတ်တပ်ရပ်သည်",cat:"Minna L14"},
-{jp:"入ります",rd:"はいります",rom:"hairimasu",en:"to enter; to go in",my:"ဝင်သည်",cat:"Minna L14"},
-{jp:"[喫茶店に～]",rd:"[きっさてんに～]",rom:"[kissaten ni ~]",en:"(to a coffee shop)",my:"(လက်ဖက်ရည်ဆိုင်သို့)",cat:"Minna L14"},
-{jp:"出ます",rd:"でます",rom:"demasu",en:"to go out; to leave",my:"ထွက်သည်",cat:"Minna L14"},
-{jp:"[喫茶店を]",rd:"[きっさてんを]",rom:"[kissaten o]",en:"(from a coffee shop)",my:"(လက်ဖက်ရည်ဆိုင်မှ)",cat:"Minna L14"},
-{jp:"降ります[雨が～]",rd:"ふります[あめが～]",rom:"furimasu [ame ga ~]",en:"to fall (rain)",my:"ရွာသည်(မိုး)",cat:"Minna L14"},
-{jp:"コピーします",rd:"コピーします",rom:"kopiishimasu",en:"to copy; to photocopy",my:"မိတ္တူကူးသည်။",cat:"Minna L14"},
-{jp:"パスポート",rd:"パスポート",rom:"pasupooto",en:"passport",my:"ပတ်စ်ပို့",cat:"Minna L14"},
-{jp:"読み方",rd:"よみかた",rom:"yomikata",en:"how to read",my:"ဖတ်နည်း",cat:"Minna L14"},
-{jp:"～方",rd:"～かた",rom:"~kata",en:"how to ~; way of ~",my:"～နည်း",cat:"Minna L14"},
-{jp:"まっすぐ",rd:"まっすぐ",rom:"massugu",en:"straight ahead",my:"တည့်တည့်",cat:"Minna L14"},
-{jp:"後で",rd:"あとで",rom:"atode",en:"later; afterwards",my:"ပြီးမှ",cat:"Minna L14"},
-{jp:"もう少し",rd:"もうすこし",rom:"mousukoshi",en:"a little more",my:"အနည်းငယ်ထပ်ပြီး",cat:"Minna L14"},
-{jp:"さあ",rd:"さあ",rom:"saa",en:"Come on!; Well!",my:"ကဲ---",cat:"Minna L14"},
-{jp:"あれ？",rd:"あれ？",rom:"are?",en:"Huh?; What?",my:"ဟောတော့",cat:"Minna L14"},
-{jp:"信号を右へ曲がってください",rd:"しんごうをみぎへまがってください",rom:"shingou o migi e magatte kudasai",en:"Please turn right at the traffic light.",my:"မီးပိုင့်ကို ညာဘက်ကွေ့ပါ။",cat:"Minna L14"},
-{jp:"これでお願いします",rd:"これでおねがいします",rom:"kore de onegaishimasu",en:"I'll take this. (when paying)",my:"ဒါနဲ့ယူပါ။(ပိုက်ဆံပေးချေသာအခါ)",cat:"Minna L14"},
-{jp:"お釣り",rd:"おつり",rom:"otsuri",en:"change (money back)",my:"ပိုက်ဆံအကြွေ၊ ပြန်အမ်းငွေ",cat:"Minna L14"},
-{jp:"みどり町",rd:"みどりちょう",rom:"midori chou",en:"Midori Town",my:"Midori မြို့",cat:"Minna L14"},
-{jp:"置きます",rd:"おきます",rom:"okimasu",en:"to put; to place",my:"ထားသည်။",cat:"Minna L15"},
-{jp:"作ります、造ります",rd:"つくります、つくります",rom:"tsukurimasu, tsukurimasu",en:"to make; to produce; to build",my:"ပြုလုပ်သည်။ ထုတ်လုပ်သည်။",cat:"Minna L15"},
-{jp:"売ります",rd:"うります",rom:"urimasu",en:"to sell",my:"ရောင်းသည်။",cat:"Minna L15"},
-{jp:"知ります",rd:"しります",rom:"shirimasu",en:"to know; to learn",my:"သိသည်။",cat:"Minna L15"},
-{jp:"住みます",rd:"すみます",rom:"sumimasu",en:"to live; to reside",my:"နေသည်။ နေထိုင်သည်။",cat:"Minna L15"},
-{jp:"研究します",rd:"けんきゅうします",rom:"kenkyuushimasu",en:"to research; to study",my:"သုတေသနပြုသည်။",cat:"Minna L15"},
-{jp:"資料",rd:"しりょう",rom:"shiryou",en:"materials; documents; data",my:"စာရွက်စာတမ်း",cat:"Minna L15"},
-{jp:"カタログ",rd:"カタログ",rom:"katarogu",en:"catalog",my:"ကတ်တလောက်",cat:"Minna L15"},
-{jp:"時刻表",rd:"じこくひょう",rom:"jikokuhyou",en:"timetable",my:"အချိန်ဇယား",cat:"Minna L15"},
-{jp:"製品",rd:"せいひん",rom:"seihin",en:"product; manufactured goods",my:"ပစ္စည်း",cat:"Minna L15"},
-{jp:"ソフト",rd:"ソフト",rom:"sofuto",en:"software",my:"softwear",cat:"Minna L15"},
-{jp:"電子辞書",rd:"でんしじしょ",rom:"denshijisho",en:"electronic dictionary",my:"လျှပ်စစ်အဘိဓာန်",cat:"Minna L15"},
-{jp:"経済",rd:"けいざい",rom:"keizai",en:"economy",my:"စီးပွားရေး",cat:"Minna L15"},
-{jp:"市役所",rd:"しやくしょ",rom:"shiyakusho",en:"city hall; municipal office",my:"မြို့တော်ခန်းမ/စည်ပင်သာယာရုံး",cat:"Minna L15"},
-{jp:"高校",rd:"こうこう",rom:"koukou",en:"high school",my:"အထက်တန်းကျောင်း",cat:"Minna L15"},
-{jp:"歯医者",rd:"はいしゃ",rom:"haisha",en:"dentist",my:"သွားဆရာဝန်",cat:"Minna L15"},
-{jp:"独身",rd:"どくしん",rom:"dokushin",en:"single; unmarried",my:"လူပျို၊ လူလွတ်၊ အပျို",cat:"Minna L15"},
-{jp:"思い出します",rd:"おもいだします",rom:"omoidashimasu",en:"to remember; to recall",my:"သတိရသည်/အမှတ်ရသည်။",cat:"Minna L15"},
-{jp:"いらっしゃいます",rd:"いらっしゃいます",rom:"irasshaimasu",en:"to be (polite); to come/go (polite)",my:"ရှိသည်(ယဉ်ကျေးသောအသုံး)",cat:"Minna L15"},
-{jp:"日本橋",rd:"にほんばし",rom:"nihonbashi",en:"Nihonbashi (Osaka shopping district)",my:"ဂျပန်တံတား (အိုဆာကာမှ လူစည်ကားသောနေရာ)",cat:"Minna L15"},
-{jp:"みんなの インタビュー",rd:"みんなの インタビュー",rom:"minna no intabyuu",en:"Minna no Interview (TV program)",my:"Minna no Interview တီဗီအစီအစဉ်",cat:"Minna L15"},
-{jp:"乗ります[電車に～]",rd:"のります[でんしゃに～]",rom:"norimasu [densha ni ~]",en:"to get on (a train)",my:"စီးသည်။ (ရထားကို)",cat:"Minna L16"},
-{jp:"降ります[電車を～]",rd:"おります[でんしゃを～]",rom:"orimasu [densha o ~]",en:"to get off (a train)",my:"ဆင်းသည်။ (ရထားမှ)",cat:"Minna L16"},
-{jp:"乗り換えます",rd:"のりかえます",rom:"norikaemasu",en:"to change (trains)",my:"ပြောင်းစီးသည်။ (ကား၊ ရထား၊ ယာဉ်)",cat:"Minna L16"},
-{jp:"あびます",rd:"あびます",rom:"abimasu",en:"to take a shower",my:"ရေချိုးသည်။",cat:"Minna L16"},
-{jp:"入れます",rd:"いれます",rom:"iremasu",en:"to put in",my:"ထည့်သည်။ သွင်းသည်။",cat:"Minna L16"},
-{jp:"出します",rd:"だします",rom:"dashimasu",en:"to take out; to send (a letter, a report)",my:"ထုတ်သည်။ တင်သည်(စာ၊ report)",cat:"Minna L16"},
-{jp:"下ろします[お金を]",rd:"おろします[おかねを]",rom:"oroshimasu [o-kane o]",en:"to withdraw (money)",my:"ထုတ်သည်(ပိုက်ဆံ)",cat:"Minna L16"},
-{jp:"入ります[大学に～]",rd:"はいります[だいがくに～]",rom:"hairimasu [daigaku ni ~]",en:"to enter (a university)",my:"ဝင်သည်(တက္ကသိုလ်သို့)။",cat:"Minna L16"},
-{jp:"出ます[大学を～]",rd:"でます[だいがくを～]",rom:"demasu [daigaku o ~]",en:"to leave (a university)",my:"ထွက်သည်(တက္ကသိုလ်မှဘဲရသည်)။",cat:"Minna L16"},
-{jp:"押します",rd:"おします",rom:"oshimasu",en:"to push; to press",my:"တွန်းသည်၊ ဖိသည်။",cat:"Minna L16"},
-{jp:"始めます",rd:"はじめます",rom:"hajimemasu",en:"to begin; to start",my:"စတင်သည်။",cat:"Minna L16"},
-{jp:"見学します",rd:"けんがくします",rom:"kengaku shimasu",en:"to visit (for study)",my:"လေ့လာသည်။",cat:"Minna L16"},
-{jp:"電話します",rd:"でんわします",rom:"denwa shimasu",en:"to telephone; to make a phone call",my:"ဖုန်းဆက်သည်။",cat:"Minna L16"},
-{jp:"髪",rd:"かみ",rom:"kami",en:"hair",my:"ဆံပင်",cat:"Minna L16"},
-{jp:"おなか",rd:"おなか",rom:"onaka",en:"stomach; belly",my:"ဗိုက်",cat:"Minna L16"},
-{jp:"サービス",rd:"サービス",rom:"saabisu",en:"service",my:"ဝန်ဆောင်မှု",cat:"Minna L16"},
-{jp:"ジョギング",rd:"ジョギング",rom:"jogingu",en:"jogging",my:"အပြေးလေ့ကျင့်ခန်း",cat:"Minna L16"},
-{jp:"シャワー",rd:"シャワー",rom:"shawaa",en:"shower",my:"ရေချိုးသောရေပန်း",cat:"Minna L16"},
-{jp:"[お]寺",rd:"[お]てら",rom:"[o] tera",en:"temple",my:"ဂျပန်ဘုရားကျောင်း",cat:"Minna L16"},
-{jp:"神社",rd:"じんじゃ",rom:"jinja",en:"Shinto shrine",my:"ဂျပန်နတ်ဘုရားကျောင်း",cat:"Minna L16"},
-{jp:"～番",rd:"～ばん",rom:"~ban",en:"number ~",my:"-နံပါတ်",cat:"Minna L16"},
-{jp:"どうやって",rd:"どうやって",rom:"dou yatte",en:"how; in what way",my:"ဘယ်လိုလုပ်ပြီး",cat:"Minna L16"},
-{jp:"どの～",rd:"どの～",rom:"dono ~",en:"which ~",my:"ဘယ်ဟာ",cat:"Minna L16"},
-{jp:"すごいですね",rd:"すごいですね",rom:"sugoi desu ne",en:"That's great.",my:"တော်လိုက်တာ",cat:"Minna L16"},
-{jp:"[いいえ、]まだまだです",rd:"[いいえ、]まだまだです",rom:"[iie,] mada mada desu",en:"No, not that good yet.",my:"ဟင့်အင်း အဲဒီလောက်မဟုတ်ပါဘူး",cat:"Minna L16"},
-{jp:"お引き出しですか",rd:"おひきだしですか",rom:"o-hikidashi desu ka",en:"Do you want to withdraw money?",my:"ငွေထုတ်မှာလား",cat:"Minna L16"},
-{jp:"キャッシュカード",rd:"キャッシュカード",rom:"kyasshu kaado",en:"cash card",my:"ငွေထုတ်ကဒ်",cat:"Minna L16"},
-{jp:"暗証番号",rd:"あんしょうばんごう",rom:"anshou bangou",en:"PIN number",my:"လျှို့ဝှက်နံပါတ်",cat:"Minna L16"},
-{jp:"金額",rd:"きんがく",rom:"kingaku",en:"amount of money",my:"ငွေပမာဏ",cat:"Minna L16"},
-{jp:"確認",rd:"かくにん",rom:"kakunin",en:"confirmation; checking",my:"အတည်ပြုခြင်း၊ စစ်ဆေးခြင်း",cat:"Minna L16"},
-{jp:"ボタン",rd:"ボタン",rom:"botan",en:"button",my:"ခလုတ် button",cat:"Minna L16"},
-{jp:"JR",rd:"JR",rom:"jei aaru",en:"Japan Railways",my:"ဂျပန်ရထားလိုင်း Japan Railways",cat:"Minna L16"},
-{jp:"雪まつり",rd:"ゆきまつり",rom:"yuki matsuri",en:"snow festival",my:"နှင်းပွဲတော်",cat:"Minna L16"},
-{jp:"バンドン",rd:"バンドン",rom:"bandon",en:"Bandung (in Indonesia)",my:"Bandung (in Indonesia)",cat:"Minna L16"},
-{jp:"フランケン",rd:"フランケン",rom:"furanken",en:"Franken (in Germany)",my:"Franken (in Germany)",cat:"Minna L16"},
-{jp:"ベラクルス",rd:"ベラクルス",rom:"berakurusu",en:"Veracruz (in Mexico)",my:"Veracruz (in Mexico)",cat:"Minna L16"},
-{jp:"梅田",rd:"うめだ",rom:"umeda",en:"Umeda",my:"Umedaမြို့",cat:"Minna L16"},
-{jp:"大学前",rd:"だいがくまえ",rom:"daigakumae",en:"in front of the university",my:"တက္ကသိုလ်ရှေ့(ကားမှတ်တိုင်)",cat:"Minna L16"},
-{jp:"覚えます",rd:"おぼえます",rom:"oboemasu",en:"to remember; to memorize",my:"မှတ်မိသည်။",cat:"Minna L17"},
-{jp:"忘れます",rd:"わすれます",rom:"wasuremasu",en:"to forget",my:"မေ့သည်။",cat:"Minna L17"},
-{jp:"なくします",rd:"なくします",rom:"nakushimasu",en:"to lose",my:"ပျောက်ပစ်သည်။",cat:"Minna L17"},
-{jp:"払います",rd:"はらいます",rom:"haraimasu",en:"to pay",my:"ပေးချေသည်။",cat:"Minna L17"},
-{jp:"返します",rd:"かえします",rom:"kaeshimasu",en:"to return; to give back",my:"ပြန်ပေးသည်။",cat:"Minna L17"},
-{jp:"出かけます",rd:"でかけます",rom:"dekakemasu",en:"to go out",my:"အပြင်ထွက်သည်။",cat:"Minna L17"},
-{jp:"脱ぎます",rd:"ぬぎます",rom:"nugimasu",en:"to take off (clothes)",my:"အင်္ကျီချွတ်သည်။",cat:"Minna L17"},
-{jp:"持っていきます",rd:"もっていきます",rom:"motte ikimasu",en:"to take (something) away",my:"ယူသွားသည်။",cat:"Minna L17"},
-{jp:"持ってきます",rd:"もってきます",rom:"motte kimasu",en:"to bring",my:"ယူလာသည်။",cat:"Minna L17"},
-{jp:"心配します",rd:"しんぱいします",rom:"shinpai shimasu",en:"to worry",my:"စိတ်ပူသည်။",cat:"Minna L17"},
-{jp:"残業します",rd:"ざんぎょうします",rom:"zangyou shimasu",en:"to work overtime",my:"အချိန်ပိုလုပ်သည်။",cat:"Minna L17"},
-{jp:"出張します",rd:"しゅっちょうします",rom:"shutchou shimasu",en:"to go on a business trip",my:"အလုပ်ခရီးသွားသည်",cat:"Minna L17"},
-{jp:"飲みます [薬を]",rd:"のみます [くすりを]",rom:"nomimasu [kusuri o]",en:"to take (medicine)",my:"သောက်သည်(ဆေးကို)။",cat:"Minna L17"},
-{jp:"入ります [おふろに～]",rd:"はいります [おふろに～]",rom:"hairimasu [ofuro ni ~]",en:"to take a bath",my:"ဝင်သည် (ရေချိုးကန်သို့)။",cat:"Minna L17"},
-{jp:"2, 3日",rd:"に、さんにち",rom:"ni, san nichi",en:"2, 3 days",my:"၂ ရက် ၃ ရက်",cat:"Minna L17"},
-{jp:"～までに",rd:"～までに",rom:"~ made ni",en:"by ~",my:"～အထိ",cat:"Minna L17"},
-{jp:"ですから",rd:"ですから",rom:"desu kara",en:"so; therefore",my:"ဖြစ်လို့",cat:"Minna L17"},
-{jp:"どうしましたか",rd:"どうしましたか",rom:"doushimashita ka",en:"What's the matter?",my:"ဘယ်လိုဖြစ်သလဲ",cat:"Minna L17"},
-{jp:"のど",rd:"のど",rom:"nodo",en:"throat",my:"လည်ချောင်း",cat:"Minna L17"},
-{jp:"[～が] いたいです",rd:"[～が] いたいです",rom:"[~ ga] itai desu",en:"[~] hurts; is painful",my:"နာတယ်။",cat:"Minna L17"},
-{jp:"かぜ",rd:"かぜ",rom:"kaze",en:"a cold",my:"အအေးမိခြင်း",cat:"Minna L17"},
-{jp:"お大事に",rd:"おだいじに",rom:"odaiji ni",en:"Take care (of yourself)",my:"ဂရုစိုက်ပါ (ကျန်းမာရေးကို)။",cat:"Minna L17"},
-{jp:"大切 [な]",rd:"たいせつ [な]",rom:"taisetsu [na]",en:"precious; important",my:"တန်ဖိုးထားသော",cat:"Minna L17"},
-{jp:"大丈夫 [な]",rd:"だいじょうぶ [な]",rom:"daijoubu [na]",en:"all right; OK",my:"ကိစ္စမရှိသော",cat:"Minna L17"},
-{jp:"危ない [な]",rd:"あぶない [な]",rom:"abunai [na]",en:"dangerous",my:"အန္တရာယ်များသော",cat:"Minna L17"},
-{jp:"禁煙",rd:"きんえん",rom:"kin'en",en:"No smoking",my:"ဆေးလိပ်မသောက်ရ",cat:"Minna L17"},
-{jp:"[健康] 保険書",rd:"[けんこう] ほけんしょ",rom:"[kenkou] hokensho",en:"(health) insurance card",my:"ကျန်းမာရေးအာမခံကဒ်ပြား",cat:"Minna L17"},
-{jp:"[お] ふろ",rd:"[お] ふろ",rom:"[o] furo",en:"bath",my:"ရေစိမ်/ချိုးကန်",cat:"Minna L17"},
-{jp:"上着",rd:"うえちゃく",rom:"uwagi",en:"coat; jacket",my:"အနွေးထည်/အပေါ်ထပ်အင်္ကျီ",cat:"Minna L17"},
-{jp:"下着",rd:"したぎ",rom:"shitagi",en:"underwear",my:"အတွင်းခံ",cat:"Minna L17"},
-{jp:"できます",rd:"できます",rom:"dekimasu",en:"can do; be able to do",my:"တတ်သည်။ လုပ်တတ်သည်။ နိုင်သည်။ လုပ်နိုင်သည်။",cat:"Minna L18"},
-{jp:"洗います",rd:"あらいます",rom:"araimasu",en:"wash",my:"လက်ဆေးသည်။ အဝတ်လျှော်သည်။",cat:"Minna L18"},
-{jp:"弾きます",rd:"ひきます",rom:"hikimasu",en:"play (a musical instrument)",my:"ပီယာနိုတီးသည်။",cat:"Minna L18"},
-{jp:"歌います",rd:"うたいます",rom:"utaimasu",en:"sing",my:"သီချင်းဆိုသည်။",cat:"Minna L18"},
-{jp:"集めます",rd:"あつめます",rom:"atsumemasu",en:"collect; gather",my:"စုဆောင်းသည်။",cat:"Minna L18"},
-{jp:"捨てます",rd:"すてます",rom:"sutemasu",en:"throw away",my:"စွန့်ပစ်သည်။",cat:"Minna L18"},
-{jp:"換えます",rd:"かえます",rom:"kaemasu",en:"change; exchange",my:"လဲလှယ်သည်။",cat:"Minna L18"},
-{jp:"運転します",rd:"うんてんします",rom:"untenshimasu",en:"drive",my:"ကားမောင်းသည်။",cat:"Minna L18"},
-{jp:"予約します",rd:"よやくします",rom:"yoyakushimasu",en:"reserve; book",my:"bookingလုပ်သည်။",cat:"Minna L18"},
-{jp:"ピアノ",rd:"ピアノ",rom:"piano",en:"piano",my:"ပီယာနို",cat:"Minna L18"},
-{jp:"メートル",rd:"メートル",rom:"meetoru",en:"metre; meter",my:"မီတာ(အကွာအဝေးကိုတိုင်းတာသောမီတာ)",cat:"Minna L18"},
-{jp:"現金",rd:"げんきん",rom:"genkin",en:"cash",my:"ငွေသား၊ လက်ငင်းငွေပေးချေခြင်း",cat:"Minna L18"},
-{jp:"日記",rd:"にっき",rom:"nikki",en:"diary",my:"နေ့စဉ်မှတ်တမ်း",cat:"Minna L18"},
-{jp:"お祈り",rd:"おいのり",rom:"oinori",en:"prayer",my:"ဆုတောင်းခြင်း",cat:"Minna L18"},
-{jp:"課長",rd:"かちょう",rom:"kachou",en:"section chief; section manager",my:"ဌာနခွဲမှူး",cat:"Minna L18"},
-{jp:"部長",rd:"ぶちょう",rom:"buchou",en:"department chief; department manager",my:"ဌာနမှူး",cat:"Minna L18"},
-{jp:"社長",rd:"しゃちょう",rom:"shachou",en:"company president; president (of a company)",my:"သူဌေး",cat:"Minna L18"},
-{jp:"インターネット",rd:"インターネット",rom:"intaanetto",en:"Internet",my:"အင်တာနက်",cat:"Minna L18"},
-{jp:"へえ、",rd:"へえ、",rom:"hee,",en:"Really?",my:"ဟယ်",cat:"Minna L18"},
-{jp:"それはおもしろいですね",rd:"それはおもしろいですね",rom:"sore wa omoshiroi desu ne",en:"That's interesting, isn't it?",my:"အဲဒါစိတ်ဝင်စားစရာပဲနော်",cat:"Minna L18"},
-{jp:"なかなか",rd:"なかなか",rom:"nakanaka",en:"quite; fairly",my:"တော်တော်နဲ့---",cat:"Minna L18"},
-{jp:"ほんとうですか",rd:"ほんとうですか",rom:"hontou desu ka",en:"Is that true?; Really?",my:"တကယ်လားဟင်",cat:"Minna L18"},
-{jp:"故郷",rd:"ふるさと",rom:"furusato",en:"hometown",my:"မွေးရပ်မြေ",cat:"Minna L18"},
-{jp:"ビートルズ",rd:"ビートルズ",rom:"biitoruzu",en:"The Beatles",my:"The Beatles",cat:"Minna L18"},
-{jp:"秋葉原",rd:"あきはばら",rom:"akihabara",en:"Akihabara",my:"Akihabara တိုကျိုမှာလူစည်ကားသောနေရာတစ်ခု",cat:"Minna L18"},
-{jp:"登ります",rd:"のぼります",rom:"noborimasu",en:"to climb",my:"အမြင့်သို့တက်သည်။",cat:"Minna L19"},
-{jp:"泊まります",rd:"とまります",rom:"tomarimasu",en:"to stay overnight",my:"ညအိပ်တည်းခိုသည်",cat:"Minna L19"},
-{jp:"[ホテルに]",rd:"[ホテルに]",rom:"[hoteru ni]",en:"(at a hotel)",my:"(ဟိုတယ်တွင်)။",cat:"Minna L19"},
-{jp:"掃除します",rd:"そうじします",rom:"souji shimasu",en:"to clean",my:"သန့်ရှင်းရေးလုပ်သည်။",cat:"Minna L19"},
-{jp:"洗濯します",rd:"せんたくします",rom:"sentaku shimasu",en:"to wash clothes",my:"အဝတ်လျှော်သည်။",cat:"Minna L19"},
-{jp:"なります",rd:"なります",rom:"narimasu",en:"to become",my:"ဖြစ်လာသည်။",cat:"Minna L19"},
-{jp:"眠い",rd:"ねむい",rom:"nemui",en:"sleepy",my:"အိပ်ချင်သော",cat:"Minna L19"},
-{jp:"練習",rd:"れんしゅう",rom:"renshuu",en:"practice",my:"လေ့ကျင့်ခြင်း",cat:"Minna L19"},
-{jp:"ゴルフ",rd:"ゴルフ",rom:"gorufu",en:"golf",my:"Golf",cat:"Minna L19"},
-{jp:"相撲",rd:"すもう",rom:"sumou",en:"sumo",my:"ဂျပန်နပန်းအားကစား",cat:"Minna L19"},
-{jp:"日",rd:"にち",rom:"nichi",en:"day",my:"နေ့ရက်",cat:"Minna L19"},
-{jp:"調子",rd:"ちょうし",rom:"choushi",en:"condition",my:"အခြေအနေ",cat:"Minna L19"},
-{jp:"一度",rd:"いちど",rom:"ichido",en:"once",my:"တစ်ကြိမ်၊ တစ်ခေါက်",cat:"Minna L19"},
-{jp:"一度も",rd:"いちども",rom:"ichido mo",en:"not even once",my:"တစ်ကြိမ်မျှ၊ တစ်ခေါက်မျှ",cat:"Minna L19"},
-{jp:"だんだん",rd:"だんだん",rom:"dandan",en:"gradually",my:"တဖြေးဖြေးနဲ့",cat:"Minna L19"},
-{jp:"もうすぐ",rd:"もうすぐ",rom:"mou sugu",en:"soon",my:"အခုချက်ခြင်း",cat:"Minna L19"},
-{jp:"おかげさまで",rd:"おかげさまで",rom:"okagesama de",en:"thanks to you",my:"ကျေးဇူးတော်ကြောင့်/ပို့သတဲ့မေတ္တာကြောင့်",cat:"Minna L19"},
-{jp:"乾杯",rd:"かんぱい",rom:"kanpai",en:"cheers",my:"Cheers",cat:"Minna L19"},
-{jp:"ダイエット",rd:"ダイエット",rom:"daietto",en:"diet",my:"ဝိတ်ချခြင်း",cat:"Minna L19"},
-{jp:"無理[な]",rd:"むり[な]",rom:"muri [na]",en:"impossible; unreasonable",my:"မဖြစ်နိုင်သော(အလွန်အကျွံဖြစ်သော)",cat:"Minna L19"},
-{jp:"体にいい",rd:"からだにいい",rom:"karada ni ii",en:"good for one's health",my:"ခန္ဓာကိုယ်အတွက်ကောင်းသော",cat:"Minna L19"},
-{jp:"東京スカイツリー",rd:"とうきょうスカイツリー",rom:"toukyou sukai tsurii",en:"Tokyo Skytree",my:"Tokyo Sky Tree",cat:"Minna L19"},
-{jp:"葛飾北斎",rd:"かつしかほくさい",rom:"katsushika hokusai",en:"Katsushika Hokusai",my:"(Edoခေတ်တွင် ကျော်ကြားခဲ့သော ပန်းချီဆရာ)",cat:"Minna L19"},
-{jp:"要ります[ビザが～]",rd:"いります[ビザが～]",rom:"irimasu [biza ga ~]",en:"to need",my:"လိုအပ်သည်(ဗီဇာ)",cat:"Minna L20"},
-{jp:"よかったら",rd:"よかったら",rom:"yokattara",en:"if you like; if it's convenient",my:"ကြိုက်မယ်ဆိုရင်၊ အဆင်ပြေမယ်ဆိုရင်",cat:"Minna L20"},
-{jp:"調べます",rd:"しらべます",rom:"shirabemasu",en:"to look up; to investigate",my:"စုံစမ်းသည်။",cat:"Minna L20"},
-{jp:"修理します",rd:"しゅうりします",rom:"shuuri shimasu",en:"to repair",my:"ပြုပြင်သည်။",cat:"Minna L20"},
-{jp:"いろいろ",rd:"いろいろ",rom:"iroiro",en:"various; all kinds",my:"အမျိုးမျိုး",cat:"Minna L20"},
-{jp:"君",rd:"きみ",rom:"kimi",en:"you",my:"မင်း",cat:"Minna L20"},
-{jp:"～くん",rd:"～くん",rom:"~kun",en:"suffix after a boy's name",my:"ကို/မောင်---",cat:"Minna L20"},
-{jp:"うん",rd:"うん",rom:"un",en:"yes; yeah",my:"အင်း",cat:"Minna L20"},
-{jp:"ううん",rd:"ううん",rom:"uun",en:"no; uh-uh",my:"ဟင့်အင်း",cat:"Minna L20"},
-{jp:"ことば",rd:"ことば",rom:"kotoba",en:"word; words",my:"စကား၊ ဝေါဟာရ",cat:"Minna L20"},
-{jp:"着物",rd:"きもの",rom:"kimono",en:"kimono",my:"ဂျပန်ကီမိုနို",cat:"Minna L20"},
-{jp:"ビザ",rd:"ビザ",rom:"biza",en:"visa",my:"Visa",cat:"Minna L20"},
-{jp:"初め",rd:"はじめ",rom:"hajime",en:"beginning",my:"ပထမတော့၊ အစပိုင်း",cat:"Minna L20"},
-{jp:"こっち",rd:"こっち",rom:"kocchi",en:"this way; here",my:"ဒီဘက်",cat:"Minna L20"},
-{jp:"そっち",rd:"そっち",rom:"socchi",en:"that way (near you); there",my:"ဟိုဘက်",cat:"Minna L20"},
-{jp:"あっち",rd:"あっち",rom:"acchi",en:"that way (over there); over there",my:"ဟို့ဘက်",cat:"Minna L20"},
-{jp:"どっち",rd:"どっち",rom:"docchi",en:"which way; where",my:"ဘယ်ဘက်",cat:"Minna L20"},
-{jp:"みんなで",rd:"みんなで",rom:"minna de",en:"together; with everyone",my:"အားလုံးနဲ့၊ အားလုံးအတူတူ",cat:"Minna L20"},
-{jp:"～けど",rd:"～けど",rom:"~kedo",en:"but; however",my:"ဒါပေမဲ့",cat:"Minna L20"},
-{jp:"おなかがいっぱいです",rd:"おなかがいっぱいです",rom:"onaka ga ippai desu",en:"I'm full; my stomach is full",my:"ဗိုက်ပြည့်တယ်",cat:"Minna L20"},
-{jp:"思います",rd:"おもいます",rom:"omoimasu",en:"think",my:"တွေးထင်သည်။",cat:"Minna L21"},
-{jp:"言います",rd:"いいます",rom:"iimasu",en:"say, speak",my:"ပြောသည်။",cat:"Minna L21"},
-{jp:"勝ちます",rd:"かちます",rom:"kachimasu",en:"win",my:"နိုင်သည်။",cat:"Minna L21"},
-{jp:"負けます",rd:"まけます",rom:"makemasu",en:"lose",my:"ရှုံးသည်",cat:"Minna L21"},
-{jp:"あります［お祭りが～］",rd:"あります［おまつりが～］",rom:"arimasu [omatsuri ga ~]",en:"(a festival) is held",my:"ရှိသည်(ပွဲတော်)",cat:"Minna L21"},
-{jp:"役にたちます",rd:"やくにたちます",rom:"yaku ni tachimasu",en:"be useful",my:"အသုံးဝင်သည်။",cat:"Minna L21"},
-{jp:"動きます",rd:"うごきます",rom:"ugokimasu",en:"move",my:"လှုပ်ရှားသည်။",cat:"Minna L21"},
-{jp:"やめます［会社を～］",rd:"やめます［かいしゃを～］",rom:"yamemasu [kaisha o ~]",en:"quit (a company)",my:"အလုပ်ထွက်သည်",cat:"Minna L21"},
-{jp:"気をつけます",rd:"きをつけます",rom:"ki o tsukemasu",en:"be careful",my:"သတိထားသည်။ ဂရုစိုက်သည်။",cat:"Minna L21"},
-{jp:"無駄［な］",rd:"むだ［な］",rom:"muda [na]",en:"wasteful",my:"အလဟဿဖြစ်သော",cat:"Minna L21"},
-{jp:"不便［な］",rd:"ふべん［な］",rom:"fuben [na]",en:"inconvenient",my:"အဆင်မပြေသော",cat:"Minna L21"},
-{jp:"すごい",rd:"すごい",rom:"sugoi",en:"amazing, terrible",my:"အံ့ဩစရာကောင်းသော",cat:"Minna L21"},
-{jp:"ほんとう",rd:"ほんとう",rom:"hontou",en:"truth, really",my:"တကယ်",cat:"Minna L21"},
-{jp:"うそ",rd:"うそ",rom:"uso",en:"lie",my:"အလိမ်၊ အညာ",cat:"Minna L21"},
-{jp:"自動車",rd:"じどうしゃ",rom:"jidousha",en:"automobile",my:"မော်တော်ကား",cat:"Minna L21"},
-{jp:"交通",rd:"こうつう",rom:"koutsuu",en:"traffic",my:"ယာဉ်သွားလာမှု",cat:"Minna L21"},
-{jp:"物価",rd:"ぶっか",rom:"bukka",en:"prices",my:"ကုန်ဈေးနှုန်း",cat:"Minna L21"},
-{jp:"放送",rd:"ほうそう",rom:"housou",en:"broadcast",my:"သတင်းလွှင့်ခြင်း",cat:"Minna L21"},
-{jp:"ニュース",rd:"ニュース",rom:"nyuusu",en:"news",my:"သတင်း",cat:"Minna L21"},
-{jp:"アニメ",rd:"アニメ",rom:"anime",en:"anime",my:"ဂျပန်ကာတွန်းကား",cat:"Minna L21"},
-{jp:"マンガ",rd:"マンガ",rom:"manga",en:"manga, comic",my:"ကာတွန်း(ရုပ်ပြ)စာအုပ်",cat:"Minna L21"},
-{jp:"デザイン",rd:"デザイン",rom:"dezain",en:"design",my:"ဒီဇိုင်း",cat:"Minna L21"},
-{jp:"天才",rd:"てんさい",rom:"tensai",en:"genius",my:"ပါရမီရှင်",cat:"Minna L21"},
-{jp:"試合",rd:"しあい",rom:"shiai",en:"match, game",my:"ပြိုင်ပွဲ",cat:"Minna L21"},
-{jp:"意見",rd:"いけん",rom:"iken",en:"opinion",my:"ထင်မြင်ချက်",cat:"Minna L21"},
-{jp:"話",rd:"はなし",rom:"hanashi",en:"story, talk",my:"စကား၊ ပုံပြင်",cat:"Minna L21"},
-{jp:"地球",rd:"ちきゅう",rom:"chikyuu",en:"the earth",my:"ကမ္ဘာမြေ",cat:"Minna L21"},
-{jp:"最近",rd:"さいきん",rom:"saikin",en:"recently",my:"အခုတလော",cat:"Minna L21"},
-{jp:"ほんとうに",rd:"ほんとうに",rom:"hontou ni",en:"really",my:"တကယ်",cat:"Minna L21"},
-{jp:"そんなに",rd:"そんなに",rom:"sonna ni",en:"so (much)",my:"အဲဒီလောက်(နောက်တွင် အငြင်းလိုက်လေရှိသည်)",cat:"Minna L21"},
-{jp:"～について",rd:"～について",rom:"~ni tsuite",en:"about ~",my:"～နဲ့ပက်သက်ပြီး",cat:"Minna L21"},
-{jp:"久しぶりですね",rd:"ひさしぶりですね",rom:"hisashiburi desu ne",en:"Long time no see.",my:"မတွေ့တာကြာပြီနော်",cat:"Minna L21"},
-{jp:"～でも飲みませんか。",rd:"～でものみませんか。",rom:"~demo nomimasen ka.",en:"Won't you have ~?",my:"မသောက်တော့ဘူးလား",cat:"Minna L21"},
-{jp:"もう帰らないと…",rd:"もうかえらないと…",rom:"mou kaeranai to…",en:"I have to go home...",my:"အိမ်ပြန်ရတော့မယ် (မပြန်လို့မရဘူး)",cat:"Minna L21"},
-{jp:"アインシュタイン",rd:"アインシュタイン",rom:"ainshutain",en:"Einstein",my:"Albert Einstein",cat:"Minna L21"},
-{jp:"ガガーリン",rd:"ガガーリン",rom:"gagaarin",en:"Gagarin",my:"Yuri Alekseyevich Gagarin",cat:"Minna L21"},
-{jp:"ガリレオ",rd:"ガリレオ",rom:"garireo",en:"Galileo",my:"Galileo Galilei",cat:"Minna L21"},
-{jp:"キング牧師",rd:"キングぼくし",rom:"kingu bokushi",en:"Rev. King",my:"Martin Luther King, Jr.",cat:"Minna L21"},
-{jp:"フランクリン",rd:"フランクリン",rom:"furankurin",en:"Franklin",my:"Benjamin Franklin",cat:"Minna L21"},
-{jp:"かぐや姫",rd:"かぐやひめ",rom:"kaguya hime",en:"Princess Kaguya",my:"Kaguya မင်းသမီး",cat:"Minna L21"},
-{jp:"天神祭り",rd:"てんじんまつり",rom:"tenjin matsuri",en:"Tenjin Festival",my:"Tenjin ပွဲတော်",cat:"Minna L21"},
-{jp:"吉野山",rd:"よしのやま",rom:"yoshino yama",en:"Mt. Yoshino",my:"Yoshino တောင်",cat:"Minna L21"},
-{jp:"カンガルー",rd:"カンガルー",rom:"kangaruu",en:"kangaroo",my:"သားပိုက်ကောင်",cat:"Minna L21"},
-{jp:"キャプテン・クック",rd:"キャプテン・クック",rom:"kyaputen kukku",en:"Captain Cook",my:"Captain James Cook",cat:"Minna L21"},
-{jp:"ヨーネン",rd:"ヨーネン",rom:"yoonen",en:"Yone (company)",my:"yone ကုမ္ပဏီ",cat:"Minna L21"},
-{jp:"着ます",rd:"きます",rom:"kimasu",en:"put on (clothes)",my:"ဝတ်သည်။",cat:"Minna L22"},
-{jp:"はきます",rd:"はきます",rom:"hakimasu",en:"put on (shoes)",my:"ဖိနပ်စီးသည်။",cat:"Minna L22"},
-{jp:"かぶります",rd:"かぶります",rom:"kaburimasu",en:"put on (a hat)",my:"ဦးထုပ်ဆောင်းသည်/ခြုံသည်။",cat:"Minna L22"},
-{jp:"かけます［めがねを～］",rd:"かけます［めがねを～］",rom:"kakemasu [megane o ~]",en:"put on (glasses)",my:"မျက်မှန်တပ်သည်။",cat:"Minna L22"},
-{jp:"します［ネクタイを～］",rd:"します［ネクタイを～］",rom:"shimasu [nekutai o ~]",en:"wear (a necktie)",my:"neck tie ကိုဝတ်ဆင်သည်",cat:"Minna L22"},
-{jp:"生まれます",rd:"うまれます",rom:"umaremasu",en:"be born",my:"မွေးဖွားသည်။",cat:"Minna L22"},
-{jp:"私たち",rd:"わたしたち",rom:"watashitachi",en:"we",my:"ကျွန်တော်တို့/ကျွန်မတို့",cat:"Minna L22"},
-{jp:"スーツ",rd:"スーツ",rom:"suutsu",en:"suit",my:"အနောက်တိုင်းကုတ်အင်္ကျီ",cat:"Minna L22"},
-{jp:"メガネ",rd:"メガネ",rom:"megane",en:"glasses",my:"မျက်မှန်",cat:"Minna L22"},
-{jp:"［お］弁当",rd:"［お］べんとう",rom:"[o]bentou",en:"boxed lunch",my:"ထမင်းဗူး",cat:"Minna L22"},
-{jp:"ロボット",rd:"ロボット",rom:"robotto",en:"robot",my:"စက်ရုပ်",cat:"Minna L22"},
-{jp:"ユーモア",rd:"ユーモア",rom:"yuumoa",en:"humor",my:"ဟာသ",cat:"Minna L22"},
-{jp:"都合",rd:"つごう",rom:"tsugou",en:"circumstances, convenience",my:"အခြေအနေ",cat:"Minna L22"},
-{jp:"えーと",rd:"えーと",rom:"eeto",en:"um, er",my:"အဲဒါဆိုရင်",cat:"Minna L22"},
-{jp:"おめでとう［ございます］",rd:"おめでとう［ございます］",rom:"omedetou [gozaimasu]",en:"congratulations",my:"ဂုဏ်ယူပါတယ်။",cat:"Minna L22"},
-{jp:"お探しですか",rd:"おさがしですか",rom:"osagashi desu ka",en:"Are you looking for something?",my:"တစ်ခုခုရှာနေပါသလား",cat:"Minna L22"},
-{jp:"では",rd:"では",rom:"dewa",en:"well then",my:"ဒါဆိုရင်-",cat:"Minna L22"},
-{jp:"家賃",rd:"やちん",rom:"yachin",en:"rent",my:"အိမ်ငှားခ",cat:"Minna L22"},
-{jp:"ダイニングキッチン",rd:"ダイニングキッチン",rom:"dainingu kitchin",en:"dining kitchen",my:"ထမင်းစားခန်းပါသော မီးဖိုဆောင်",cat:"Minna L22"},
-{jp:"和室",rd:"わしつ",rom:"washitsu",en:"Japanese-style room",my:"ဂျပန်ရိုးရာအခန်း",cat:"Minna L22"},
-{jp:"押入れ",rd:"おしいれ",rom:"oshiire",en:"closet",my:"ဂျပန်စတိုင်ဗီဒို(မွေ့ရာ၊ စောင်၊ ခေါင်းအုံးများ သိမ်းဆည်းသည့်အခန်း)",cat:"Minna L22"},
-{jp:"布団",rd:"ふとん",rom:"futon",en:"futon",my:"မွေ့ယာ",cat:"Minna L22"},
-{jp:"パリ",rd:"パリ",rom:"pari",en:"Paris",my:"ပါရီမြို့",cat:"Minna L22"},
-{jp:"万里の長城",rd:"まんりのちょうじょう",rom:"manri no choujou",en:"The Great Wall of China",my:"The Great Wall of China သင်ခန်းစာတွင်ပါဝင်သော",cat:"Minna L22"},
-{jp:"みんなのアンケート",rd:"みんなのアンケート",rom:"minna no ankeeto",en:"everyone's questionnaire",my:"မေးခွန်းမေးမြန်းခြင်း",cat:"Minna L22"},
-{jp:"聞きます［先生に］",rd:"ききます［せんせいに］",rom:"kikimasu [sensei ni]",en:"ask (a teacher)",my:"မေးမြန်းသည်(ဆရာကို)။",cat:"Minna L23"},
-{jp:"回します",rd:"まわします",rom:"mawashimasu",en:"turn, rotate",my:"လှည့်သည်။",cat:"Minna L23"},
-{jp:"引きます",rd:"ひきます",rom:"hikimasu",en:"pull",my:"ဆွဲသည်။",cat:"Minna L23"},
-{jp:"変えます",rd:"かえます",rom:"kaemasu",en:"change",my:"လဲလှယ်သည်။",cat:"Minna L23"},
-{jp:"触ります",rd:"さわります",rom:"sawarimasu",en:"touch",my:"ကိုင်သည်၊ ထိသည်၊ တိသည်။",cat:"Minna L23"},
-{jp:"出ます［お釣りが～］",rd:"でます［おつりが～］",rom:"demasu [otsuri ga ~]",en:"come out (change comes out)",my:"ထွက်လာသည်/ကျလာသည်။",cat:"Minna L23"},
-{jp:"歩きます",rd:"あるきます",rom:"arukimasu",en:"walk",my:"လမ်းလျှောက်သည်။",cat:"Minna L23"},
-{jp:"渡ります［橋を～］",rd:"わたります［はしを～］",rom:"watarimasu [hashi o ~]",en:"cross (a bridge)",my:"ဖြတ်ကျော်သည်(တံတားကို)။",cat:"Minna L23"},
-{jp:"曲がります［右へ～］",rd:"まがります［みぎへ～］",rom:"magarimasu [migi e ~]",en:"turn (to the right)",my:"ကွေ့သည်(ညာဘက်ကို)",cat:"Minna L23"},
-{jp:"［お］湯",rd:"［お］ゆ",rom:"[o]yu",en:"hot water",my:"ရေနွေး",cat:"Minna L23"},
-{jp:"サイズ",rd:"サイズ",rom:"saizu",en:"size",my:"အရွယ်အစား",cat:"Minna L23"},
-{jp:"故障",rd:"こしょう",rom:"koshou",en:"breakdown",my:"ပျက်စီးနေခြင်း",cat:"Minna L23"},
-{jp:"交差点",rd:"こうさてん",rom:"kousaten",en:"intersection",my:"လမ်းဆုံ",cat:"Minna L23"},
-{jp:"信号",rd:"しんごう",rom:"shingou",en:"traffic light",my:"မီးပွိုင့်",cat:"Minna L23"},
-{jp:"角",rd:"かど",rom:"kado",en:"corner",my:"လမ်းထောင့်",cat:"Minna L23"},
-{jp:"橋",rd:"はし",rom:"hashi",en:"bridge",my:"တံတား",cat:"Minna L23"},
-{jp:"建物",rd:"たてもの",rom:"tatemono",en:"building",my:"အဆောက်အဦး",cat:"Minna L23"},
-{jp:"何回も",rd:"なんかいも",rom:"nankai mo",en:"many times",my:"အကြိမ်များစွာ",cat:"Minna L23"},
-{jp:"～目",rd:"～め",rom:"~me",en:"-th (ordinal)",my:"～မြောက်",cat:"Minna L23"},
-{jp:"聖徳太子",rd:"しょうとくたいし",rom:"shoutoku taishi",en:"Prince Shotoku",my:"Shotokuမင်းသား",cat:"Minna L23"},
-{jp:"法隆寺",rd:"ほうりゅうじ",rom:"houryuuji",en:"Horyuji Temple",my:"Houryuji ဘုရားကျောင်း",cat:"Minna L23"},
-{jp:"元気茶",rd:"げんきちゃ",rom:"genkicha",en:"Genki tea",my:"ကျန်းမာရေးလက်ဖက်ခြောက်",cat:"Minna L23"},
-{jp:"本田駅",rd:"ほんだえき",rom:"honda eki",en:"Honda Station",my:"Hondaဘူတာ",cat:"Minna L23"},
-{jp:"図書館前",rd:"としょかんまえ",rom:"toshokan mae",en:"in front of the library",my:"စာကြည့်တိုက်ရှေ့ ဘတ်စ်ကားမှတ်တိုင်",cat:"Minna L23"},
-{jp:"くれます",rd:"くれます",rom:"kuremasu",en:"give (to me)",my:"ပေးသည်(တခြားသူက ကိုယ့်ကိုပေးခြင်း)",cat:"Minna L24"},
-{jp:"直します",rd:"なおします",rom:"naoshimasu",en:"fix, repair",my:"ပြုပြင်သည်/အမှားပြင်ဆင်သည်။",cat:"Minna L24"},
-{jp:"つれていきます",rd:"つれていきます",rom:"tsurete ikimasu",en:"take (someone) along",my:"ခေါ်သွားသည်။",cat:"Minna L24"},
-{jp:"つれてきます",rd:"つれてきます",rom:"tsurete kimasu",en:"bring (someone) along",my:"ခေါ်လာသည်။",cat:"Minna L24"},
-{jp:"紹介します",rd:"しょうかいします",rom:"shoukai shimasu",en:"introduce",my:"မိတ်ဆက်သည်။",cat:"Minna L24"},
-{jp:"案内します",rd:"あんないします",rom:"annai shimasu",en:"show around, guide",my:"လမ်းပြသည်။",cat:"Minna L24"},
-{jp:"説明します",rd:"せつめいします",rom:"setsumei shimasu",en:"explain",my:"ရှင်းပြသည်။",cat:"Minna L24"},
-{jp:"おじいさん/おじいちゃん",rd:"おじいさん/おじいちゃん",rom:"ojiisan/ojiichan",en:"grandfather",my:"အဖိုး",cat:"Minna L24"},
-{jp:"おばあさん/おばあちゃん",rd:"おばあさん/おばあちゃん",rom:"obaasan/obaachan",en:"grandmother",my:"အဖွား",cat:"Minna L24"},
-{jp:"準備",rd:"じゅんび",rom:"junbi",en:"preparation",my:"ကြိုတင်ပြင်ဆင်ခြင်း",cat:"Minna L24"},
-{jp:"引っ越し",rd:"ひっこし",rom:"hikkoshi",en:"moving house",my:"အိမ်ပြောင်းခြင်း",cat:"Minna L24"},
-{jp:"［お］菓子",rd:"［お］かし",rom:"[o]kashi",en:"sweets",my:"မုန့်",cat:"Minna L24"},
-{jp:"ホームステイ",rd:"ホームステイ",rom:"hoomusutei",en:"homestay",my:"Home stay",cat:"Minna L24"},
-{jp:"自分で",rd:"じぶんで",rom:"jibun de",en:"by oneself",my:"ကိုယ်တိုင်",cat:"Minna L24"},
-{jp:"他に",rd:"ほかに",rom:"hoka ni",en:"besides, other",my:"အခြား",cat:"Minna L24"},
-{jp:"母の日",rd:"ははのひ",rom:"haha no hi",en:"Mother's Day",my:"အမေနေ့",cat:"Minna L24"},
-{jp:"考えます",rd:"かんがえます",rom:"kangaemasu",en:"think",my:"စဉ်းစားသည်။",cat:"Minna L25"},
-{jp:"着きます",rd:"つきます",rom:"tsukimasu",en:"arrive",my:"ဆိုက်ရောက်သည်။",cat:"Minna L25"},
-{jp:"留学します",rd:"りゅうがくします",rom:"ryuugaku shimasu",en:"study abroad",my:"နိုင်ငံခြားပညာသင်သွားသည်။",cat:"Minna L25"},
-{jp:"取ります［年を～］",rd:"とります［としを～］",rom:"torimasu [toshi o ~]",en:"get older",my:"အသက်ကြီးသည်။",cat:"Minna L25"},
-{jp:"足ります",rd:"たります",rom:"tarimasu",en:"be enough",my:"လုံလောက်သည်။",cat:"Minna L25"},
-{jp:"田舎",rd:"いなか",rom:"inaka",en:"countryside",my:"တောရွာ",cat:"Minna L25"},
-{jp:"チャンス",rd:"チャンス",rom:"chansu",en:"chance",my:"အခွင့်အရေး",cat:"Minna L25"},
-{jp:"億",rd:"おく",rom:"oku",en:"100 million",my:"သန်း၁၀၀",cat:"Minna L25"},
-{jp:"もし［～たら］",rd:"もし［～たら］",rom:"moshi [~tara]",en:"if",my:"တကယ်လို့～ခဲ့ရင်",cat:"Minna L25"},
-{jp:"もしもし",rd:"もしもし",rom:"moshimoshi",en:"hello (on the phone)",my:"hello",cat:"Minna L25"},
-{jp:"転勤",rd:"てんきん",rom:"tenkin",en:"job transfer",my:"အလုပ်ပြောင်းခြင်း",cat:"Minna L25"},
-{jp:"［いろいろ］お世話になりました",rd:"［いろいろ］おせわになりました",rom:"[iroiro] osewa ni narimashita",en:"Thank you for everything.",my:"ကျေးဇူးအများကြီးရှိခဲ့ပါတယ်",cat:"Minna L25"},
-{jp:"頑張ります",rd:"がんばります",rom:"ganbarimasu",en:"do one's best",my:"ကြိုးစားပါမယ်",cat:"Minna L25"},
-{jp:"どうぞ、お元気で",rd:"どうぞ、おげんきで",rom:"douzo, ogenki de",en:"Please take care.",my:"ကျန်းမာစွာနဲ့",cat:"Minna L25"},
-{jp:"ベトナム",rd:"ベトナム",rom:"betonamu",en:"Vietnam",my:"ဗီယက်နမ်",cat:"Minna L25"}
+/**
+ * VOCABULARY & MINNA NO NIHONGO DATA
+ */
+export const WORDS = [
+  {
+    "jp": "私",
+    "rd": "わたし",
+    "rom": "watashi",
+    "en": "I; me",
+    "my": "ကျွန်တော်/ကျွန်မ",
+    "cat": "People"
+  },
+  {
+    "jp": "僕",
+    "rd": "ぼく",
+    "rom": "boku",
+    "en": "I; me (masculine)",
+    "my": "ကျွန်တော် (ယောက်ျားသုံး)",
+    "cat": "People"
+  },
+  {
+    "jp": "あなた",
+    "rd": "あなた",
+    "rom": "anata",
+    "en": "you",
+    "my": "မင်း/သင်",
+    "cat": "People"
+  },
+  {
+    "jp": "彼",
+    "rd": "かれ",
+    "rom": "kare",
+    "en": "he; him; boyfriend",
+    "my": "သူ (ယောက်ျား)/ချစ်သူ",
+    "cat": "People"
+  },
+  {
+    "jp": "彼女",
+    "rd": "かのじょ",
+    "rom": "kanojo",
+    "en": "she; her; girlfriend",
+    "my": "သူ (မိန်းမ)/ချစ်သူ",
+    "cat": "People"
+  },
+  {
+    "jp": "皆さん",
+    "rd": "みなさん",
+    "rom": "mina-san",
+    "en": "everyone",
+    "my": "အားလုံး",
+    "cat": "People"
+  },
+  {
+    "jp": "人",
+    "rd": "ひと",
+    "rom": "hito",
+    "en": "person",
+    "my": "လူ",
+    "cat": "People"
+  },
+  {
+    "jp": "方",
+    "rd": "かた",
+    "rom": "kata",
+    "en": "person (polite)",
+    "my": "လူ (ယဉ်ကျေးသော)",
+    "cat": "People"
+  },
+  {
+    "jp": "子供",
+    "rd": "こども",
+    "rom": "kodomo",
+    "en": "child; children",
+    "my": "ကလေး",
+    "cat": "People"
+  },
+  {
+    "jp": "男の子",
+    "rd": "おとこのこ",
+    "rom": "otoko no ko",
+    "en": "boy",
+    "my": "ယောက်ျားလေး",
+    "cat": "People"
+  },
+  {
+    "jp": "女の子",
+    "rd": "おんなのこ",
+    "rom": "onna no ko",
+    "en": "girl",
+    "my": "မိန်းကလေး",
+    "cat": "People"
+  },
+  {
+    "jp": "男の人",
+    "rd": "おとこのひと",
+    "rom": "otoko no hito",
+    "en": "man",
+    "my": "ယောက်ျား",
+    "cat": "People"
+  },
+  {
+    "jp": "女の人",
+    "rd": "おんなのひと",
+    "rom": "onna no hito",
+    "en": "woman",
+    "my": "မိန်းမ",
+    "cat": "People"
+  },
+  {
+    "jp": "友達",
+    "rd": "ともだち",
+    "rom": "tomodachi",
+    "en": "friend",
+    "my": "သူငယ်ချင်း",
+    "cat": "People"
+  },
+  {
+    "jp": "先生",
+    "rd": "せんせい",
+    "rom": "sensei",
+    "en": "teacher",
+    "my": "ဆရာ/ဆရာမ",
+    "cat": "People"
+  },
+  {
+    "jp": "学生",
+    "rd": "がくせい",
+    "rom": "gakusei",
+    "en": "student",
+    "my": "ကျောင်းသား",
+    "cat": "People"
+  },
+  {
+    "jp": "生徒",
+    "rd": "せいと",
+    "rom": "seito",
+    "en": "pupil; student (school)",
+    "my": "ကျောင်းသား (ကျောင်း)",
+    "cat": "People"
+  },
+  {
+    "jp": "会社員",
+    "rd": "かいしゃいん",
+    "rom": "kaishain",
+    "en": "company employee",
+    "my": "ကုမ္ပဏီဝန်ထမ်း",
+    "cat": "People"
+  },
+  {
+    "jp": "医者",
+    "rd": "いしゃ",
+    "rom": "isha",
+    "en": "doctor",
+    "my": "ဆရာဝန်",
+    "cat": "People"
+  },
+  {
+    "jp": "警官",
+    "rd": "けいかん",
+    "rom": "keikan",
+    "en": "police officer",
+    "my": "ရဲအရာရှိ",
+    "cat": "People"
+  },
+  {
+    "jp": "お客さん",
+    "rd": "おきゃくさん",
+    "rom": "okyaku-san",
+    "en": "customer; guest",
+    "my": "ဧည့်သည်/ဝယ်သူ",
+    "cat": "People"
+  },
+  {
+    "jp": "家族",
+    "rd": "かぞく",
+    "rom": "kazoku",
+    "en": "family",
+    "my": "မိသားစု",
+    "cat": "Family"
+  },
+  {
+    "jp": "父",
+    "rd": "ちち",
+    "rom": "chichi",
+    "en": "(my) father",
+    "my": "အဖေ (ကိုယ့်)",
+    "cat": "Family"
+  },
+  {
+    "jp": "母",
+    "rd": "はは",
+    "rom": "haha",
+    "en": "(my) mother",
+    "my": "အမေ (ကိုယ့်)",
+    "cat": "Family"
+  },
+  {
+    "jp": "お父さん",
+    "rd": "おとうさん",
+    "rom": "otousan",
+    "en": "father (someone else's)",
+    "my": "အဖေ (သူများရဲ့)",
+    "cat": "Family"
+  },
+  {
+    "jp": "お母さん",
+    "rd": "おかあさん",
+    "rom": "okaasan",
+    "en": "mother (someone else's)",
+    "my": "အမေ (သူများရဲ့)",
+    "cat": "Family"
+  },
+  {
+    "jp": "兄",
+    "rd": "あに",
+    "rom": "ani",
+    "en": "(my) older brother",
+    "my": "အစ်ကို (ကိုယ့်)",
+    "cat": "Family"
+  },
+  {
+    "jp": "姉",
+    "rd": "あね",
+    "rom": "ane",
+    "en": "(my) older sister",
+    "my": "အစ်မ (ကိုယ့်)",
+    "cat": "Family"
+  },
+  {
+    "jp": "お兄さん",
+    "rd": "おにいさん",
+    "rom": "oniisan",
+    "en": "older brother (someone else's)",
+    "my": "အစ်ကို (သူများရဲ့)",
+    "cat": "Family"
+  },
+  {
+    "jp": "お姉さん",
+    "rd": "おねえさん",
+    "rom": "oneesan",
+    "en": "older sister (someone else's)",
+    "my": "အစ်မ (သူများရဲ့)",
+    "cat": "Family"
+  },
+  {
+    "jp": "弟",
+    "rd": "おとうと",
+    "rom": "otouto",
+    "en": "younger brother",
+    "my": "ညီ",
+    "cat": "Family"
+  },
+  {
+    "jp": "妹",
+    "rd": "いもうと",
+    "rom": "imouto",
+    "en": "younger sister",
+    "my": "ညီမ",
+    "cat": "Family"
+  },
+  {
+    "jp": "夫",
+    "rd": "おっと",
+    "rom": "otto",
+    "en": "husband",
+    "my": "ခင်ပွန်း",
+    "cat": "Family"
+  },
+  {
+    "jp": "妻",
+    "rd": "つま",
+    "rom": "tsuma",
+    "en": "wife",
+    "my": "ဇနီး",
+    "cat": "Family"
+  },
+  {
+    "jp": "祖父",
+    "rd": "そふ",
+    "rom": "sofu",
+    "en": "grandfather",
+    "my": "အဖိုး",
+    "cat": "Family"
+  },
+  {
+    "jp": "祖母",
+    "rd": "そぼ",
+    "rom": "sobo",
+    "en": "grandmother",
+    "my": "အဖွား",
+    "cat": "Family"
+  },
+  {
+    "jp": "おじいさん",
+    "rd": "おじいさん",
+    "rom": "ojiisan",
+    "en": "grandfather; old man",
+    "my": "အဖိုး/အဖိုးအို",
+    "cat": "Family"
+  },
+  {
+    "jp": "おばあさん",
+    "rd": "おばあさん",
+    "rom": "obaasan",
+    "en": "grandmother; old woman",
+    "my": "အဖွား/အဖွားအို",
+    "cat": "Family"
+  },
+  {
+    "jp": "学校",
+    "rd": "がっこう",
+    "rom": "gakkou",
+    "en": "school",
+    "my": "ကျောင်း",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "大学",
+    "rd": "だいがく",
+    "rom": "daigaku",
+    "en": "university",
+    "my": "တက္ကသိုလ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "図書館",
+    "rd": "としょかん",
+    "rom": "toshokan",
+    "en": "library",
+    "my": "စာကြည့်တိုက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "病院",
+    "rd": "びょういん",
+    "rom": "byouin",
+    "en": "hospital",
+    "my": "ဆေးရုံ",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "銀行",
+    "rd": "ぎんこう",
+    "rom": "ginkou",
+    "en": "bank",
+    "my": "ဘဏ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "郵便局",
+    "rd": "ゆうびんきょく",
+    "rom": "yuubinkyoku",
+    "en": "post office",
+    "my": "စာတိုက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "会社",
+    "rd": "かいしゃ",
+    "rom": "kaisha",
+    "en": "company; office",
+    "my": "ကုမ္ပဏီ/ရုံး",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "駅",
+    "rd": "えき",
+    "rom": "eki",
+    "en": "station",
+    "my": "ဘူတာ",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "空港",
+    "rd": "くうこう",
+    "rom": "kuukou",
+    "en": "airport",
+    "my": "လေဆိပ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "駐車場",
+    "rd": "ちゅうしゃじょう",
+    "rom": "chuushajou",
+    "en": "parking lot",
+    "my": "ကားပါကင်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "レストラン",
+    "rd": "レストラン",
+    "rom": "resutoran",
+    "en": "restaurant",
+    "my": "စားသောက်ဆိုင်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "食堂",
+    "rd": "しょくどう",
+    "rom": "shokudou",
+    "en": "cafeteria; dining hall",
+    "my": "စားသောက်ခန်း",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "デパート",
+    "rd": "デパート",
+    "rom": "depaato",
+    "en": "department store",
+    "my": "ကုန်တိုက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "スーパー",
+    "rd": "スーパー",
+    "rom": "suupaa",
+    "en": "supermarket",
+    "my": "စူပါမားကတ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "店",
+    "rd": "みせ",
+    "rom": "mise",
+    "en": "shop; store",
+    "my": "ဆိုင်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "家",
+    "rd": "いえ",
+    "rom": "ie",
+    "en": "house; home",
+    "my": "အိမ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "うち",
+    "rd": "うち",
+    "rom": "uchi",
+    "en": "home; my place",
+    "my": "အိမ် (ကိုယ့်အိမ်)",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "部屋",
+    "rd": "へや",
+    "rom": "heya",
+    "en": "room",
+    "my": "အခန်း",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "台所",
+    "rd": "だいどころ",
+    "rom": "daidokoro",
+    "en": "kitchen",
+    "my": "မီးဖိုခန်း",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "お手洗い",
+    "rd": "おてあらい",
+    "rom": "otearai",
+    "en": "restroom; toilet",
+    "my": "အိမ်သာ",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "公園",
+    "rd": "こうえん",
+    "rom": "kouen",
+    "en": "park",
+    "my": "ပန်းခြံ",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "海",
+    "rd": "うみ",
+    "rom": "umi",
+    "en": "sea; ocean",
+    "my": "ပင်လယ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "山",
+    "rd": "やま",
+    "rom": "yama",
+    "en": "mountain",
+    "my": "တောင်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "川",
+    "rd": "かわ",
+    "rom": "kawa",
+    "en": "river",
+    "my": "မြစ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "空",
+    "rd": "そら",
+    "rom": "sora",
+    "en": "sky",
+    "my": "ကောင်းကင်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "国",
+    "rd": "くに",
+    "rom": "kuni",
+    "en": "country; nation",
+    "my": "နိုင်ငံ",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "町",
+    "rd": "まち",
+    "rom": "machi",
+    "en": "town",
+    "my": "မြို့",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "道",
+    "rd": "みち",
+    "rom": "michi",
+    "en": "road; street; way",
+    "my": "လမ်း",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "地図",
+    "rd": "ちず",
+    "rom": "chizu",
+    "en": "map",
+    "my": "မြေပုံ",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "外",
+    "rd": "そと",
+    "rom": "soto",
+    "en": "outside",
+    "my": "အပြင်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "中",
+    "rd": "なか",
+    "rom": "naka",
+    "en": "inside; among",
+    "my": "အထဲ",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "上",
+    "rd": "うえ",
+    "rom": "ue",
+    "en": "above; top",
+    "my": "အပေါ်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "下",
+    "rd": "した",
+    "rom": "shita",
+    "en": "below; under",
+    "my": "အောက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "右",
+    "rd": "みぎ",
+    "rom": "migi",
+    "en": "right side",
+    "my": "ညာဘက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "左",
+    "rd": "ひだり",
+    "rom": "hidari",
+    "en": "left side",
+    "my": "ဘယ်ဘက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "前",
+    "rd": "まえ",
+    "rom": "mae",
+    "en": "in front; before",
+    "my": "ရှေ့",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "後ろ",
+    "rd": "うしろ",
+    "rom": "ushiro",
+    "en": "behind; back",
+    "my": "နောက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "隣",
+    "rd": "となり",
+    "rom": "tonari",
+    "en": "next to; neighbor",
+    "my": "ကပ်လျက်/အိမ်နီးချင်း",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "そば",
+    "rd": "そば",
+    "rom": "soba",
+    "en": "nearby; beside",
+    "my": "အနီး",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "近く",
+    "rd": "ちかく",
+    "rom": "chikaku",
+    "en": "nearby; vicinity",
+    "my": "အနီးအနား",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "向こう",
+    "rd": "むこう",
+    "rom": "mukou",
+    "en": "over there; beyond",
+    "my": "ဟိုဘက်",
+    "cat": "Places and Locations"
+  },
+  {
+    "jp": "本",
+    "rd": "ほん",
+    "rom": "hon",
+    "en": "book",
+    "my": "စာအုပ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "雑誌",
+    "rd": "ざっし",
+    "rom": "zasshi",
+    "en": "magazine",
+    "my": "မဂ္ဂဇင်း",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "新聞",
+    "rd": "しんぶん",
+    "rom": "shinbun",
+    "en": "newspaper",
+    "my": "သတင်းစာ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "ノート",
+    "rd": "ノート",
+    "rom": "nooto",
+    "en": "notebook",
+    "my": "မှတ်စုစာအုပ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "紙",
+    "rd": "かみ",
+    "rom": "kami",
+    "en": "paper",
+    "my": "စက္ကူ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "鉛筆",
+    "rd": "えんぴつ",
+    "rom": "enpitsu",
+    "en": "pencil",
+    "my": "ခဲတံ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "ペン",
+    "rd": "ペン",
+    "rom": "pen",
+    "en": "pen",
+    "my": "ဘောပင်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "消しゴム",
+    "rd": "けしゴム",
+    "rom": "keshigomu",
+    "en": "eraser",
+    "my": "ခဲဖျက်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "定規",
+    "rd": "じょうぎ",
+    "rom": "jougi",
+    "en": "ruler",
+    "my": "ပေတံ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "かばん",
+    "rd": "かばん",
+    "rom": "kaban",
+    "en": "bag; briefcase",
+    "my": "အိတ်/လွယ်အိတ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "財布",
+    "rd": "さいふ",
+    "rom": "saifu",
+    "en": "wallet",
+    "my": "ပိုက်ဆံအိတ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "鍵",
+    "rd": "かぎ",
+    "rom": "kagi",
+    "en": "key; lock",
+    "my": "သော့",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "傘",
+    "rd": "かさ",
+    "rom": "kasa",
+    "en": "umbrella",
+    "my": "ထီး",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "めがね",
+    "rd": "めがね",
+    "rom": "megane",
+    "en": "glasses",
+    "my": "မျက်မှန်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "時計",
+    "rd": "とけい",
+    "rom": "tokei",
+    "en": "watch; clock",
+    "my": "နာရီ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "カメラ",
+    "rd": "カメラ",
+    "rom": "kamera",
+    "en": "camera",
+    "my": "ကင်မရာ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "テレビ",
+    "rd": "テレビ",
+    "rom": "terebi",
+    "en": "television",
+    "my": "တီဗီ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "ラジオ",
+    "rd": "ラジオ",
+    "rom": "rajio",
+    "en": "radio",
+    "my": "ရေဒီယို",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "電話",
+    "rd": "でんわ",
+    "rom": "denwa",
+    "en": "telephone",
+    "my": "တယ်လီဖုန်း",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "携帯電話",
+    "rd": "けいたいでんわ",
+    "rom": "keitai denwa",
+    "en": "mobile phone",
+    "my": "မိုဘိုင်းဖုန်း",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "パソコン",
+    "rd": "パソコン",
+    "rom": "pasokon",
+    "en": "personal computer",
+    "my": "ကွန်ပျူတာ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "机",
+    "rd": "つくえ",
+    "rom": "tsukue",
+    "en": "desk",
+    "my": "စာရေးခုံ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "椅子",
+    "rd": "いす",
+    "rom": "isu",
+    "en": "chair",
+    "my": "ထိုင်ခုံ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "テーブル",
+    "rd": "テーブル",
+    "rom": "teebu­ru",
+    "en": "table",
+    "my": "စားပွဲ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "ドア",
+    "rd": "ドア",
+    "rom": "doa",
+    "en": "door",
+    "my": "တံခါး",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "窓",
+    "rd": "まど",
+    "rom": "mado",
+    "en": "window",
+    "my": "ပြတင်းပေါက်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "電気",
+    "rd": "でんき",
+    "rom": "denki",
+    "en": "electricity; light",
+    "my": "လျှပ်စစ်/မီး",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "エアコン",
+    "rd": "エアコン",
+    "rom": "eakon",
+    "en": "air conditioner",
+    "my": "အဲကွန်း",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "写真",
+    "rd": "しゃしん",
+    "rom": "shashin",
+    "en": "photograph",
+    "my": "ဓာတ်ပုံ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "花",
+    "rd": "はな",
+    "rom": "hana",
+    "en": "flower",
+    "my": "ပန်း",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "木",
+    "rd": "き",
+    "rom": "ki",
+    "en": "tree; wood",
+    "my": "သစ်ပင်/သစ်သား",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "服",
+    "rd": "ふく",
+    "rom": "fuku",
+    "en": "clothes",
+    "my": "အဝတ်အစား",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "シャツ",
+    "rd": "シャツ",
+    "rom": "shatsu",
+    "en": "shirt",
+    "my": "ရှပ်အင်္ကျီ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "ズボン",
+    "rd": "ズボン",
+    "rom": "zubon",
+    "en": "trousers; pants",
+    "my": "ဘောင်းဘီ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "スカート",
+    "rd": "スカート",
+    "rom": "sukaato",
+    "en": "skirt",
+    "my": "စကတ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "くつ",
+    "rd": "くつ",
+    "rom": "kutsu",
+    "en": "shoes",
+    "my": "ဖိနပ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "くつした",
+    "rd": "くつした",
+    "rom": "kutsushita",
+    "en": "socks",
+    "my": "ခြေအိတ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "帽子",
+    "rd": "ぼうし",
+    "rom": "boushi",
+    "en": "hat; cap",
+    "my": "ဦးထုပ်",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "コート",
+    "rd": "コート",
+    "rom": "kooto",
+    "en": "coat",
+    "my": "ကုတ်အင်္ကျီ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "セーター",
+    "rd": "セーター",
+    "rom": "seetaa",
+    "en": "sweater",
+    "my": "ဆွယ်တာ",
+    "cat": "Things (Objects)"
+  },
+  {
+    "jp": "食べ物",
+    "rd": "たべもの",
+    "rom": "tabemono",
+    "en": "food",
+    "my": "အစားအစာ",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "飲み物",
+    "rd": "のみもの",
+    "rom": "nomimono",
+    "en": "drink; beverage",
+    "my": "အဖျော်ယမကာ",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "ご飯",
+    "rd": "ごはん",
+    "rom": "gohan",
+    "en": "rice; meal",
+    "my": "ထမင်း",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "パン",
+    "rd": "パン",
+    "rom": "pan",
+    "en": "bread",
+    "my": "ပေါင်မုန့်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "肉",
+    "rd": "にく",
+    "rom": "niku",
+    "en": "meat",
+    "my": "အသား",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "魚",
+    "rd": "さかな",
+    "rom": "sakana",
+    "en": "fish",
+    "my": "ငါး",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "野菜",
+    "rd": "やさい",
+    "rom": "yasai",
+    "en": "vegetables",
+    "my": "ဟင်းသီးဟင်းရွက်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "果物",
+    "rd": "くだもの",
+    "rom": "kudamono",
+    "en": "fruit",
+    "my": "သစ်သီး",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "たまご",
+    "rd": "たまご",
+    "rom": "tamago",
+    "en": "egg",
+    "my": "ကြက်ဥ",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "牛乳",
+    "rd": "ぎゅうにゅう",
+    "rom": "gyuunyuu",
+    "en": "milk",
+    "my": "နွားနို့",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "お茶",
+    "rd": "おちゃ",
+    "rom": "ocha",
+    "en": "tea",
+    "my": "လက်ဖက်ရည်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "水",
+    "rd": "みず",
+    "rom": "mizu",
+    "en": "water",
+    "my": "ရေ",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "ジュース",
+    "rd": "ジュース",
+    "rom": "juusu",
+    "en": "juice",
+    "my": "ဖျော်ရည်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "コーヒー",
+    "rd": "コーヒー",
+    "rom": "koohii",
+    "en": "coffee",
+    "my": "ကော်ဖီ",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "ビール",
+    "rd": "ビール",
+    "rom": "biiru",
+    "en": "beer",
+    "my": "ဘီယာ",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "お酒",
+    "rd": "おさけ",
+    "rom": "osake",
+    "en": "sake; alcohol",
+    "my": "အရက်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "りんご",
+    "rd": "りんご",
+    "rom": "ringo",
+    "en": "apple",
+    "my": "ပန်းသီး",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "バナナ",
+    "rd": "バナナ",
+    "rom": "banana",
+    "en": "banana",
+    "my": "ငှက်ပျောသီး",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "みかん",
+    "rd": "みかん",
+    "rom": "mikan",
+    "en": "mandarin orange",
+    "my": "လိမ္မော်သီး",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "すし",
+    "rd": "すし",
+    "rom": "sushi",
+    "en": "sushi",
+    "my": "ဆူရှီ",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "うどん",
+    "rd": "うどん",
+    "rom": "udon",
+    "en": "udon noodles",
+    "my": "အူဒုံ (ခေါက်ဆွဲ)",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "ラーメン",
+    "rd": "ラーメン",
+    "rom": "raamen",
+    "en": "ramen noodles",
+    "my": "ရာမင် (ခေါက်ဆွဲ)",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "カレー",
+    "rd": "カレー",
+    "rom": "karee",
+    "en": "curry",
+    "my": "ဟင်း",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "サンドイッチ",
+    "rd": "サンドイッチ",
+    "rom": "sandoitchi",
+    "en": "sandwich",
+    "my": "အသားညှပ်ပေါင်မုန့်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "ケーキ",
+    "rd": "ケーキ",
+    "rom": "keeki",
+    "en": "cake",
+    "my": "ကိတ်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "アイスクリーム",
+    "rd": "アイスクリーム",
+    "rom": "aisukuriimu",
+    "en": "ice cream",
+    "my": "ရေခဲမုန့်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "砂糖",
+    "rd": "さとう",
+    "rom": "satou",
+    "en": "sugar",
+    "my": "သကြား",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "塩",
+    "rd": "しお",
+    "rom": "shio",
+    "en": "salt",
+    "my": "ဆား",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "醤油",
+    "rd": "しょうゆ",
+    "rom": "shouyu",
+    "en": "soy sauce",
+    "my": "ပဲငံပြာရည်",
+    "cat": "Food and Drink"
+  },
+  {
+    "jp": "動物",
+    "rd": "どうぶつ",
+    "rom": "doubutsu",
+    "en": "animal",
+    "my": "တိရစ္ဆာန်",
+    "cat": "Animals"
+  },
+  {
+    "jp": "犬",
+    "rd": "いぬ",
+    "rom": "inu",
+    "en": "dog",
+    "my": "ခွေး",
+    "cat": "Animals"
+  },
+  {
+    "jp": "猫",
+    "rd": "ねこ",
+    "rom": "neko",
+    "en": "cat",
+    "my": "ကြောင်",
+    "cat": "Animals"
+  },
+  {
+    "jp": "鳥",
+    "rd": "とり",
+    "rom": "tori",
+    "en": "bird",
+    "my": "ငှက်",
+    "cat": "Animals"
+  },
+  {
+    "jp": "牛",
+    "rd": "うし",
+    "rom": "ushi",
+    "en": "cow",
+    "my": "နွား",
+    "cat": "Animals"
+  },
+  {
+    "jp": "馬",
+    "rd": "うま",
+    "rom": "uma",
+    "en": "horse",
+    "my": "မြင်း",
+    "cat": "Animals"
+  },
+  {
+    "jp": "豚",
+    "rd": "ぶた",
+    "rom": "buta",
+    "en": "pig",
+    "my": "ဝက်",
+    "cat": "Animals"
+  },
+  {
+    "jp": "電車",
+    "rd": "でんしゃ",
+    "rom": "densha",
+    "en": "train",
+    "my": "ရထား",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "地下鉄",
+    "rd": "ちかてつ",
+    "rom": "chikatetsu",
+    "en": "subway; metro",
+    "my": "မြေအောက်ရထား",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "バス",
+    "rd": "バス",
+    "rom": "basu",
+    "en": "bus",
+    "my": "ဘတ်စ်ကား",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "タクシー",
+    "rd": "タクシー",
+    "rom": "takushii",
+    "en": "taxi",
+    "my": "တက္ကစီ",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "飛行機",
+    "rd": "ひこうき",
+    "rom": "hikouki",
+    "en": "airplane",
+    "my": "လေယာဉ်",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "船",
+    "rd": "ふね",
+    "rom": "fune",
+    "en": "ship; boat",
+    "my": "သင်္ဘော/လှေ",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "自転車",
+    "rd": "じてんしゃ",
+    "rom": "jitensha",
+    "en": "bicycle",
+    "my": "စက်ဘီး",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "車",
+    "rd": "くるま",
+    "rom": "kuruma",
+    "en": "car; vehicle",
+    "my": "ကား",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "バイク",
+    "rd": "バイク",
+    "rom": "baiku",
+    "en": "motorcycle",
+    "my": "ဆိုင်ကယ်",
+    "cat": "Transportation"
+  },
+  {
+    "jp": "天気",
+    "rd": "てんき",
+    "rom": "tenki",
+    "en": "weather",
+    "my": "ရာသီဥတု",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "雨",
+    "rd": "あめ",
+    "rom": "ame",
+    "en": "rain",
+    "my": "မိုး",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "雪",
+    "rd": "ゆき",
+    "rom": "yuki",
+    "en": "snow",
+    "my": "နှင်း",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "風",
+    "rd": "かぜ",
+    "rom": "kaze",
+    "en": "wind",
+    "my": "လေ",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "晴れ",
+    "rd": "はれ",
+    "rom": "hare",
+    "en": "clear weather; sunny",
+    "my": "နေသာသောရာသီ",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "雲",
+    "rd": "くも",
+    "rom": "kumo",
+    "en": "cloud",
+    "my": "တိမ်",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "太陽",
+    "rd": "たいよう",
+    "rom": "taiyou",
+    "en": "sun",
+    "my": "နေ",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "月",
+    "rd": "つき",
+    "rom": "tsuki",
+    "en": "moon",
+    "my": "လ",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "星",
+    "rd": "ほし",
+    "rom": "hoshi",
+    "en": "star",
+    "my": "ကြယ်",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "池",
+    "rd": "いけ",
+    "rom": "ike",
+    "en": "pond",
+    "my": "ရေကန်",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "森",
+    "rd": "もり",
+    "rom": "mori",
+    "en": "forest",
+    "my": "တောအုပ်",
+    "cat": "Nature and Weather"
+  },
+  {
+    "jp": "体",
+    "rd": "からだ",
+    "rom": "karada",
+    "en": "body",
+    "my": "ကိုယ်ခန္ဓာ",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "頭",
+    "rd": "あたま",
+    "rom": "atama",
+    "en": "head",
+    "my": "ခေါင်း",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "顔",
+    "rd": "かお",
+    "rom": "kao",
+    "en": "face",
+    "my": "မျက်နှာ",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "目",
+    "rd": "め",
+    "rom": "me",
+    "en": "eye",
+    "my": "မျက်လုံး",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "耳",
+    "rd": "みみ",
+    "rom": "mimi",
+    "en": "ear",
+    "my": "နား",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "鼻",
+    "rd": "はな",
+    "rom": "hana",
+    "en": "nose",
+    "my": "နှာခေါင်း",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "口",
+    "rd": "くち",
+    "rom": "kuchi",
+    "en": "mouth",
+    "my": "ပါးစပ်",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "歯",
+    "rd": "は",
+    "rom": "ha",
+    "en": "tooth; teeth",
+    "my": "သွား",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "手",
+    "rd": "て",
+    "rom": "te",
+    "en": "hand",
+    "my": "လက်",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "足",
+    "rd": "あし",
+    "rom": "ashi",
+    "en": "foot; leg",
+    "my": "ခြေထောက်",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "背",
+    "rd": "せ",
+    "rom": "se",
+    "en": "height; back",
+    "my": "ကျော/အရပ်",
+    "cat": "Body Parts"
+  },
+  {
+    "jp": "一",
+    "rd": "いち",
+    "rom": "ichi",
+    "en": "one",
+    "my": "တစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "二",
+    "rd": "に",
+    "rom": "ni",
+    "en": "two",
+    "my": "နှစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "三",
+    "rd": "さん",
+    "rom": "san",
+    "en": "three",
+    "my": "သုံး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "四",
+    "rd": "し／よん",
+    "rom": "shi / yon",
+    "en": "four",
+    "my": "လေး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "五",
+    "rd": "ご",
+    "rom": "go",
+    "en": "five",
+    "my": "ငါး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "六",
+    "rd": "ろく",
+    "rom": "roku",
+    "en": "six",
+    "my": "ခြောက်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "七",
+    "rd": "しち／なな",
+    "rom": "shichi / nana",
+    "en": "seven",
+    "my": "ခုနစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "八",
+    "rd": "はち",
+    "rom": "hachi",
+    "en": "eight",
+    "my": "ရှစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "九",
+    "rd": "く／きゅう",
+    "rom": "ku / kyuu",
+    "en": "nine",
+    "my": "ကိုး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十",
+    "rd": "じゅう",
+    "rom": "juu",
+    "en": "ten",
+    "my": "ဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十一",
+    "rd": "じゅういち",
+    "rom": "juuichi",
+    "en": "eleven",
+    "my": "ဆယ့်တစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十二",
+    "rd": "じゅうに",
+    "rom": "juuni",
+    "en": "twelve",
+    "my": "ဆယ့်နှစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "二十",
+    "rd": "にじゅう",
+    "rom": "nijuu",
+    "en": "twenty",
+    "my": "နှစ်ဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "百",
+    "rd": "ひゃく",
+    "rom": "hyaku",
+    "en": "one hundred",
+    "my": "တစ်ရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "二百",
+    "rd": "にひゃく",
+    "rom": "nihyaku",
+    "en": "two hundred",
+    "my": "နှစ်ရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "三百",
+    "rd": "さんびゃく",
+    "rom": "sanbyaku",
+    "en": "three hundred",
+    "my": "သုံးရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "千",
+    "rd": "せん",
+    "rom": "sen",
+    "en": "one thousand",
+    "my": "တစ်ထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "万",
+    "rd": "まん",
+    "rom": "man",
+    "en": "ten thousand",
+    "my": "တစ်သောင်း",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "零",
+    "rd": "れい／ゼロ",
+    "rom": "rei / zero",
+    "en": "zero",
+    "my": "သုည",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "何",
+    "rd": "なん／なに",
+    "rom": "nan / nani",
+    "en": "what; how many",
+    "my": "ဘာ/ဘယ်လောက်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜つ",
+    "rd": "〜つ",
+    "rom": "~tsu",
+    "en": "generic counter (1–9 things)",
+    "my": "ခု (ပစ္စည်းရေတွက်ပုံ)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜本",
+    "rd": "〜ほん/ぼん/ぽん",
+    "rom": "~hon/bon/pon",
+    "en": "long thin objects (pens, bottles)",
+    "my": "ချောင်း (ရှည်သောပစ္စည်း)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜枚",
+    "rd": "〜まい",
+    "rom": "~mai",
+    "en": "flat thin objects (paper, plates)",
+    "my": "ရွက်/ချပ် (ပြားသောပစ္စည်း)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜冊",
+    "rd": "〜さつ",
+    "rom": "~satsu",
+    "en": "bound objects (books, notebooks)",
+    "my": "အုပ် (စာအုပ်)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜匹",
+    "rd": "〜ひき/びき/ぴき",
+    "rom": "~hiki/biki/piki",
+    "en": "small animals",
+    "my": "ကောင် (တိရစ္ဆာန်ငယ်)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜頭",
+    "rd": "〜とう",
+    "rom": "~tou",
+    "en": "large animals",
+    "my": "ကောင် (တိရစ္ဆာန်ကြီး)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜羽",
+    "rd": "〜わ/は/ば",
+    "rom": "~wa/ha/ba",
+    "en": "birds; rabbits",
+    "my": "ကောင် (ငှက်/ယုန်)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜台",
+    "rd": "〜だい",
+    "rom": "~dai",
+    "en": "machines; vehicles",
+    "my": "စီး (စက်/ယာဉ်)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜杯",
+    "rd": "〜はい/ばい/ぱい",
+    "rom": "~hai/bai/pai",
+    "en": "cups; glasses; bowls",
+    "my": "ခွက် (ခွက်/ပန်းကန်)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜人",
+    "rd": "〜にん/り",
+    "rom": "~nin/ri",
+    "en": "people",
+    "my": "ယောက် (လူ)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜個",
+    "rd": "〜こ",
+    "rom": "~ko",
+    "en": "small round objects",
+    "my": "လုံး (အဝိုင်းပစ္စည်း)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜階",
+    "rd": "〜かい/がい",
+    "rom": "~kai/gai",
+    "en": "floors of a building",
+    "my": "ထပ် (အဆောက်အအုံ)",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜番",
+    "rd": "〜ばん",
+    "rom": "~ban",
+    "en": "number in a sequence",
+    "my": "နံပါတ်",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "〜番目",
+    "rd": "〜ばんめ",
+    "rom": "~banme",
+    "en": "ordinal number",
+    "my": "နံပါတ်မြောက်",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "ひとつ",
+    "rd": "ひとつ",
+    "rom": "hitotsu",
+    "en": "one (thing)",
+    "my": "တစ်ခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "ふたつ",
+    "rd": "ふたつ",
+    "rom": "futatsu",
+    "en": "two (things)",
+    "my": "နှစ်ခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "みっつ",
+    "rd": "みっつ",
+    "rom": "mittsu",
+    "en": "three (things)",
+    "my": "သုံးခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "よっつ",
+    "rd": "よっつ",
+    "rom": "yottsu",
+    "en": "four (things)",
+    "my": "လေးခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "いつつ",
+    "rd": "いつつ",
+    "rom": "itsutsu",
+    "en": "five (things)",
+    "my": "ငါးခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "むっつ",
+    "rd": "むっつ",
+    "rom": "muttsu",
+    "en": "six (things)",
+    "my": "ခြောက်ခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "ななつ",
+    "rd": "ななつ",
+    "rom": "nanatsu",
+    "en": "seven (things)",
+    "my": "ခုနစ်ခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "やっつ",
+    "rd": "やっつ",
+    "rom": "yattsu",
+    "en": "eight (things)",
+    "my": "ရှစ်ခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "ここのつ",
+    "rd": "ここのつ",
+    "rom": "kokonotsu",
+    "en": "nine (things)",
+    "my": "ကိုးခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "とお",
+    "rd": "とお",
+    "rom": "too",
+    "en": "ten (things)",
+    "my": "ဆယ်ခု",
+    "cat": "Counters",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "今",
+    "rd": "いま",
+    "rom": "ima",
+    "en": "now",
+    "my": "အခု",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "今日",
+    "rd": "きょう",
+    "rom": "kyou",
+    "en": "today",
+    "my": "ဒီနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "明日",
+    "rd": "あした",
+    "rom": "ashita",
+    "en": "tomorrow",
+    "my": "မနက်ဖြန်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "昨日",
+    "rd": "きのう",
+    "rom": "kinou",
+    "en": "yesterday",
+    "my": "မနေ့က",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "明後日",
+    "rd": "あさって",
+    "rom": "asatte",
+    "en": "the day after tomorrow",
+    "my": "သန်ဘက်ခါ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "一昨日",
+    "rd": "おととい",
+    "rom": "ototoi",
+    "en": "the day before yesterday",
+    "my": "တဘက်ခါ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "今週",
+    "rd": "こんしゅう",
+    "rom": "konshuu",
+    "en": "this week",
+    "my": "ဒီအပတ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "来週",
+    "rd": "らいしゅう",
+    "rom": "raishuu",
+    "en": "next week",
+    "my": "နောက်အပတ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "先週",
+    "rd": "せんしゅう",
+    "rom": "senshuu",
+    "en": "last week",
+    "my": "ပြီးခဲ့တဲ့အပတ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "今月",
+    "rd": "こんげつ",
+    "rom": "kongetsu",
+    "en": "this month",
+    "my": "ဒီလ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "来月",
+    "rd": "らいげつ",
+    "rom": "raigetsu",
+    "en": "next month",
+    "my": "နောက်လ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "先月",
+    "rd": "せんげつ",
+    "rom": "sengetsu",
+    "en": "last month",
+    "my": "ပြီးခဲ့တဲ့လ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "今年",
+    "rd": "ことし",
+    "rom": "kotoshi",
+    "en": "this year",
+    "my": "ဒီနှစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "来年",
+    "rd": "らいねん",
+    "rom": "rainen",
+    "en": "next year",
+    "my": "နောက်နှစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "去年",
+    "rd": "きょねん",
+    "rom": "kyonen",
+    "en": "last year",
+    "my": "မနှစ်က",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "朝",
+    "rd": "あさ",
+    "rom": "asa",
+    "en": "morning",
+    "my": "မနက်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "昼",
+    "rd": "ひる",
+    "rom": "hiru",
+    "en": "daytime; noon",
+    "my": "နေ့လည်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "夜",
+    "rd": "よる",
+    "rom": "yoru",
+    "en": "evening; night",
+    "my": "ည",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "午前",
+    "rd": "ごぜん",
+    "rom": "gozen",
+    "en": "AM; morning",
+    "my": "မနက်ပိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "午後",
+    "rd": "ごご",
+    "rom": "gogo",
+    "en": "PM; afternoon",
+    "my": "နေ့လယ်ပိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "朝ご飯",
+    "rd": "あさごはん",
+    "rom": "asagohan",
+    "en": "breakfast",
+    "my": "မနက်စာ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "昼ご飯",
+    "rd": "ひるごはん",
+    "rom": "hirugohan",
+    "en": "lunch",
+    "my": "နေ့လည်စာ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "夕ご飯",
+    "rd": "ゆうごはん",
+    "rom": "yuugohan",
+    "en": "dinner",
+    "my": "ညစာ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜時",
+    "rd": "〜じ",
+    "rom": "~ji",
+    "en": "o'clock",
+    "my": "နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜分",
+    "rd": "〜ふん/ぷん",
+    "rom": "~fun/pun",
+    "en": "minutes",
+    "my": "မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜秒",
+    "rd": "〜びょう",
+    "rom": "~byou",
+    "en": "seconds",
+    "my": "စက္ကန့်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜月",
+    "rd": "〜がつ",
+    "rom": "~gatsu",
+    "en": "month (name)",
+    "my": "လ (လအမည်)",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "〜日",
+    "rd": "〜にち/か",
+    "rom": "~nichi/ka",
+    "en": "day of month",
+    "my": "ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "〜年",
+    "rd": "〜ねん",
+    "rom": "~nen",
+    "en": "year",
+    "my": "နှစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜曜日",
+    "rd": "〜ようび",
+    "rom": "~youbi",
+    "en": "day of the week",
+    "my": "ရက် (အပတ်ရက်)",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "月曜日",
+    "rd": "げつようび",
+    "rom": "getsu-youbi",
+    "en": "Monday",
+    "my": "တနင်္လာနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "火曜日",
+    "rd": "かようび",
+    "rom": "ka-youbi",
+    "en": "Tuesday",
+    "my": "အင်္ဂါနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "水曜日",
+    "rd": "すいようび",
+    "rom": "sui-youbi",
+    "en": "Wednesday",
+    "my": "ဗုဒ္ဓဟူးနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "木曜日",
+    "rd": "もくようび",
+    "rom": "moku-youbi",
+    "en": "Thursday",
+    "my": "ကြာသပတေးနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "金曜日",
+    "rd": "きんようび",
+    "rom": "kin-youbi",
+    "en": "Friday",
+    "my": "သောကြာနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "土曜日",
+    "rd": "どようび",
+    "rom": "do-youbi",
+    "en": "Saturday",
+    "my": "စနေနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "日曜日",
+    "rd": "にちようび",
+    "rom": "nichi-youbi",
+    "en": "Sunday",
+    "my": "တနင်္ဂနွေနေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "一月",
+    "rd": "いちがつ",
+    "rom": "ichi-gatsu",
+    "en": "January",
+    "my": "ဇန်နဝါရီ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "二月",
+    "rd": "にがつ",
+    "rom": "ni-gatsu",
+    "en": "February",
+    "my": "ဖေဖော်ဝါရီ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "三月",
+    "rd": "さんがつ",
+    "rom": "san-gatsu",
+    "en": "March",
+    "my": "မတ်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "四月",
+    "rd": "しがつ",
+    "rom": "shi-gatsu",
+    "en": "April",
+    "my": "ဧပြီ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "五月",
+    "rd": "ごがつ",
+    "rom": "go-gatsu",
+    "en": "May",
+    "my": "မေ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "六月",
+    "rd": "ろくがつ",
+    "rom": "roku-gatsu",
+    "en": "June",
+    "my": "ဇွန်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "七月",
+    "rd": "しちがつ",
+    "rom": "shichi-gatsu",
+    "en": "July",
+    "my": "ဇူလိုင်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "八月",
+    "rd": "はちがつ",
+    "rom": "hachi-gatsu",
+    "en": "August",
+    "my": "သြဂုတ်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "九月",
+    "rd": "くがつ",
+    "rom": "ku-gatsu",
+    "en": "September",
+    "my": "စက်တင်ဘာ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "十月",
+    "rd": "じゅうがつ",
+    "rom": "juu-gatsu",
+    "en": "October",
+    "my": "အောက်တိုဘာ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "十一月",
+    "rd": "じゅういちがつ",
+    "rom": "juuichi-gatsu",
+    "en": "November",
+    "my": "နိုဝင်ဘာ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "十二月",
+    "rd": "じゅうにがつ",
+    "rom": "juuni-gatsu",
+    "en": "December",
+    "my": "ဒီဇင်ဘာ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "週末",
+    "rd": "しゅうまつ",
+    "rom": "shuumatsu",
+    "en": "weekend",
+    "my": "ပိတ်ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "毎日",
+    "rd": "まいにち",
+    "rom": "mainichi",
+    "en": "every day",
+    "my": "နေ့တိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "毎朝",
+    "rd": "まいあさ",
+    "rom": "maiasa",
+    "en": "every morning",
+    "my": "မနက်တိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "毎週",
+    "rd": "まいしゅう",
+    "rom": "maishuu",
+    "en": "every week",
+    "my": "အပတ်တိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "毎月",
+    "rd": "まいつき",
+    "rom": "maitsuki",
+    "en": "every month",
+    "my": "လတိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "毎年",
+    "rd": "まいとし",
+    "rom": "maitoshi",
+    "en": "every year",
+    "my": "နှစ်တိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "時間",
+    "rd": "じかん",
+    "rom": "jikan",
+    "en": "time; hour",
+    "my": "အချိန်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜時間",
+    "rd": "〜じかん",
+    "rom": "~jikan",
+    "en": "~ hours (duration)",
+    "my": "နာရီ (ကြာချိန်)",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜週間",
+    "rd": "〜しゅうかん",
+    "rom": "~shuukan",
+    "en": "~ weeks (duration)",
+    "my": "အပတ် (ကြာချိန်)",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜ヶ月",
+    "rd": "〜かげつ",
+    "rom": "~kagetsu",
+    "en": "~ months (duration)",
+    "my": "လ (ကြာချိန်)",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "〜年間",
+    "rd": "〜ねんかん",
+    "rom": "~nenkan",
+    "en": "~ years (duration)",
+    "my": "နှစ် (ကြာချိန်)",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "半",
+    "rd": "はん",
+    "rom": "han",
+    "en": "half",
+    "my": "တစ်ဝက်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "ごろ",
+    "rd": "ごろ",
+    "rom": "goro",
+    "en": "around (time); about",
+    "my": "ခန့်/ဝန်းကျင်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "まだ",
+    "rd": "まだ",
+    "rom": "mada",
+    "en": "still; not yet",
+    "my": "သေးတယ်/မသေးဘူး",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "もう",
+    "rd": "もう",
+    "rom": "mou",
+    "en": "already; anymore",
+    "my": "ပြီးပြီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "はじめ",
+    "rd": "はじめ",
+    "rom": "hajime",
+    "en": "beginning",
+    "my": "အစ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "おわり",
+    "rd": "おわり",
+    "rom": "owari",
+    "en": "end; finish",
+    "my": "အဆုံး",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "勉強",
+    "rd": "べんきょう",
+    "rom": "benkyou",
+    "en": "study; studies",
+    "my": "စာကျက်ခြင်း",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "授業",
+    "rd": "じゅぎょう",
+    "rom": "jugyou",
+    "en": "class; lesson",
+    "my": "သင်ခန်းစာ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "宿題",
+    "rd": "しゅくだい",
+    "rom": "shukudai",
+    "en": "homework",
+    "my": "အိမ်စာ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "試験",
+    "rd": "しけん",
+    "rom": "shiken",
+    "en": "exam; test",
+    "my": "စာမေးပွဲ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "教室",
+    "rd": "きょうしつ",
+    "rom": "kyoushitsu",
+    "en": "classroom",
+    "my": "စာသင်ခန်း",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "国語",
+    "rd": "こくご",
+    "rom": "kokugo",
+    "en": "Japanese language (subject)",
+    "my": "ဂျပန်စာ (ဘာသာရပ်)",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "英語",
+    "rd": "えいご",
+    "rom": "eigo",
+    "en": "English language",
+    "my": "အင်္ဂလိပ်စာ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "日本語",
+    "rd": "にほんご",
+    "rom": "nihongo",
+    "en": "Japanese language",
+    "my": "ဂျပန်စာ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "数学",
+    "rd": "すうがく",
+    "rom": "suugaku",
+    "en": "mathematics",
+    "my": "သင်္ချာ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "科学",
+    "rd": "かがく",
+    "rom": "kagaku",
+    "en": "science",
+    "my": "သိပ္ပံ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "音楽",
+    "rd": "おんがく",
+    "rom": "ongaku",
+    "en": "music",
+    "my": "ဂီတ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "体育",
+    "rd": "たいいく",
+    "rom": "taiiku",
+    "en": "physical education",
+    "my": "ကာယပညာ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "言葉",
+    "rd": "ことば",
+    "rom": "kotoba",
+    "en": "word; language; speech",
+    "my": "စကားလုံး/ဘာသာ",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "文字",
+    "rd": "もじ",
+    "rom": "moji",
+    "en": "character; letter",
+    "my": "စာလုံး",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "漢字",
+    "rd": "かんじ",
+    "rom": "kanji",
+    "en": "kanji (Chinese characters)",
+    "my": "ခန်းဂျီး",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "ひらがな",
+    "rd": "ひらがな",
+    "rom": "hiragana",
+    "en": "hiragana script",
+    "my": "ဟိရဂန",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "カタカナ",
+    "rd": "カタカナ",
+    "rom": "katakana",
+    "en": "katakana script",
+    "my": "ခတခန",
+    "cat": "School and Studies"
+  },
+  {
+    "jp": "趣味",
+    "rd": "しゅみ",
+    "rom": "shumi",
+    "en": "hobby; interest",
+    "my": "ဝါသနာ",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "映画",
+    "rd": "えいが",
+    "rom": "eiga",
+    "en": "movie; film",
+    "my": "ရုပ်ရှင်",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "歌",
+    "rd": "うた",
+    "rom": "uta",
+    "en": "song; singing",
+    "my": "သီချင်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "絵",
+    "rd": "え",
+    "rom": "e",
+    "en": "picture; painting",
+    "my": "ပန်းချီ/ပုံ",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "旅行",
+    "rd": "りょこう",
+    "rom": "ryokou",
+    "en": "travel; trip",
+    "my": "ခရီးသွားခြင်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "運動",
+    "rd": "うんどう",
+    "rom": "undou",
+    "en": "exercise; sports",
+    "my": "လေ့ကျင့်ခန်း/အားကစား",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "スポーツ",
+    "rd": "スポーツ",
+    "rom": "supootsu",
+    "en": "sport",
+    "my": "အားကစား",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "サッカー",
+    "rd": "サッカー",
+    "rom": "sakkaa",
+    "en": "soccer; football",
+    "my": "ဘောလုံး",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "野球",
+    "rd": "やきゅう",
+    "rom": "yakyuu",
+    "en": "baseball",
+    "my": "ဘေ့စ်ဘော",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "テニス",
+    "rd": "テニス",
+    "rom": "tenisu",
+    "en": "tennis",
+    "my": "တင်းနစ်",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "水泳",
+    "rd": "すいえい",
+    "rom": "suiei",
+    "en": "swimming",
+    "my": "ရေကူးခြင်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "買い物",
+    "rd": "かいもの",
+    "rom": "kaimono",
+    "en": "shopping",
+    "my": "ဈေးဝယ်ခြင်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "料理",
+    "rd": "りょうり",
+    "rom": "ryouri",
+    "en": "cooking; cuisine",
+    "my": "ဟင်းချက်ခြင်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "ゲーム",
+    "rd": "ゲーム",
+    "rom": "geemu",
+    "en": "game",
+    "my": "ဂိမ်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "読書",
+    "rd": "どくしょ",
+    "rom": "dokusho",
+    "en": "reading (books)",
+    "my": "စာဖတ်ခြင်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "散歩",
+    "rd": "さんぽ",
+    "rom": "sanpo",
+    "en": "walk; stroll",
+    "my": "လမ်းလျှောက်ခြင်း",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "パーティー",
+    "rd": "パーティー",
+    "rom": "paatii",
+    "en": "party",
+    "my": "ပါတီ",
+    "cat": "Hobbies and Activities"
+  },
+  {
+    "jp": "お金",
+    "rd": "おかね",
+    "rom": "okane",
+    "en": "money",
+    "my": "ပိုက်ဆံ",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "円",
+    "rd": "えん",
+    "rom": "en",
+    "en": "yen (currency)",
+    "my": "ယန်း",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "値段",
+    "rd": "ねだん",
+    "rom": "nedan",
+    "en": "price",
+    "my": "စျေးနှုန်း",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "〜円",
+    "rd": "〜えん",
+    "rom": "~en",
+    "en": "~ yen",
+    "my": "ယန်း",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "おつり",
+    "rd": "おつり",
+    "rom": "otsuri",
+    "en": "change (money returned)",
+    "my": "ပြန်အမ်းငွေ",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "レシート",
+    "rd": "レシート",
+    "rom": "reshiito",
+    "en": "receipt",
+    "my": "ငွေလက်ခံဖြတ်ပိုင်း",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "品物",
+    "rd": "しなもの",
+    "rom": "shinamono",
+    "en": "goods; article",
+    "my": "ပစ္စည်း",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "プレゼント",
+    "rd": "プレゼント",
+    "rom": "purezento",
+    "en": "present; gift",
+    "my": "လက်ဆောင်",
+    "cat": "Money & Shopping"
+  },
+  {
+    "jp": "病気",
+    "rd": "びょうき",
+    "rom": "byouki",
+    "en": "illness; sickness",
+    "my": "ရောဂါ/နေမကောင်း",
+    "cat": "Health and Body"
+  },
+  {
+    "jp": "薬",
+    "rd": "くすり",
+    "rom": "kusuri",
+    "en": "medicine",
+    "my": "ဆေး",
+    "cat": "Health and Body"
+  },
+  {
+    "jp": "熱",
+    "rd": "ねつ",
+    "rom": "netsu",
+    "en": "fever; temperature",
+    "my": "အဖျား/အပူချိန်",
+    "cat": "Health and Body"
+  },
+  {
+    "jp": "痛み",
+    "rd": "いたみ",
+    "rom": "itami",
+    "en": "pain",
+    "my": "နာကျင်မှု",
+    "cat": "Health and Body"
+  },
+  {
+    "jp": "元気",
+    "rd": "げんき",
+    "rom": "genki",
+    "en": "healthy; energetic; well",
+    "my": "ကျန်းမာ/လန်းဆန်း",
+    "cat": "Health and Body"
+  },
+  {
+    "jp": "会う",
+    "rd": "会って / 会った",
+    "rom": "au",
+    "en": "to meet",
+    "my": "တွေ့သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "歩く",
+    "rd": "歩いて / 歩いた",
+    "rom": "aruku",
+    "en": "to walk",
+    "my": "လမ်းလျှောက်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "遊ぶ",
+    "rd": "遊んで / 遊んだ",
+    "rom": "asobu",
+    "en": "to play; to have fun",
+    "my": "ကစားသည်/ပျော်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "洗う",
+    "rd": "洗って / 洗った",
+    "rom": "arau",
+    "en": "to wash",
+    "my": "ဆေးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "言う",
+    "rd": "言って / 言った",
+    "rom": "iu",
+    "en": "to say",
+    "my": "ပြောသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "急ぐ",
+    "rd": "急いで / 急いだ",
+    "rom": "isogu",
+    "en": "to hurry",
+    "my": "အလျင်လိုသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "行く",
+    "rd": "行って / 行った",
+    "rom": "iku",
+    "en": "to go",
+    "my": "သွားသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "入る",
+    "rd": "入って / 入った",
+    "rom": "hairu",
+    "en": "to enter; to go in",
+    "my": "ဝင်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "起こす",
+    "rd": "起こして / 起こした",
+    "rom": "okosu",
+    "en": "to wake (someone) up",
+    "my": "နှိုးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "送る",
+    "rd": "送って / 送った",
+    "rom": "okuru",
+    "en": "to send; to see off",
+    "my": "ပို့သည်/လိုက်ပို့သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "教える",
+    "rd": "教えて / 教えた",
+    "rom": "oshieru",
+    "en": "to teach; to tell",
+    "my": "သင်ပေးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "怒る",
+    "rd": "怒って / 怒った",
+    "rom": "okoru",
+    "en": "to get angry",
+    "my": "စိတ်ဆိုးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "思う",
+    "rd": "思って / 思った",
+    "rom": "omou",
+    "en": "to think; to feel",
+    "my": "ထင်သည်/တွေးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "泳ぐ",
+    "rd": "泳いで / 泳いだ",
+    "rom": "oyogu",
+    "en": "to swim",
+    "my": "ရေကူးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "終わる",
+    "rd": "終わって / 終わった",
+    "rom": "owaru",
+    "en": "to end; to finish",
+    "my": "ပြီးဆုံးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "買う",
+    "rd": "買って / 買った",
+    "rom": "kau",
+    "en": "to buy",
+    "my": "ဝယ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "帰る",
+    "rd": "帰って / 帰った",
+    "rom": "kaeru",
+    "en": "to return (home)",
+    "my": "ပြန်သည် (အိမ်)",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "書く",
+    "rd": "書いて / 書いた",
+    "rom": "kaku",
+    "en": "to write",
+    "my": "ရေးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "貸す",
+    "rd": "貸して / 貸した",
+    "rom": "kasu",
+    "en": "to lend",
+    "my": "ချေးငှားပေးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "聞く",
+    "rd": "聞いて / 聞いた",
+    "rom": "kiku",
+    "en": "to listen; to hear; to ask",
+    "my": "နားထောင်သည်/မေးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "切る",
+    "rd": "切って / 切った",
+    "rom": "kiru",
+    "en": "to cut",
+    "my": "ဖြတ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "消す",
+    "rd": "消して / 消した",
+    "rom": "kesu",
+    "en": "to turn off; to erase",
+    "my": "ပိတ်သည်/ဖျက်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "降る",
+    "rd": "降って / 降った",
+    "rom": "furu",
+    "en": "to fall (rain/snow)",
+    "my": "ရွာသည် (မိုး/နှင်း)",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "住む",
+    "rd": "住んで / 住んだ",
+    "rom": "sumu",
+    "en": "to live; to reside",
+    "my": "နေထိုင်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "座る",
+    "rd": "座って / 座った",
+    "rom": "suwaru",
+    "en": "to sit (down)",
+    "my": "ထိုင်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "死ぬ",
+    "rd": "死んで / 死んだ",
+    "rom": "shinu",
+    "en": "to die",
+    "my": "သေသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "知る",
+    "rd": "知って / 知った",
+    "rom": "shiru",
+    "en": "to come to know",
+    "my": "သိသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "吸う",
+    "rd": "吸って / 吸った",
+    "rom": "suu",
+    "en": "to smoke; to inhale",
+    "my": "ရှူသည်/ဆေးလိပ်သောက်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "出す",
+    "rd": "出して / 出した",
+    "rom": "dasu",
+    "en": "to take out; to submit",
+    "my": "ထုတ်သည်/တင်ပြသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "立つ",
+    "rd": "立って / 立った",
+    "rom": "tatsu",
+    "en": "to stand",
+    "my": "မတ်တပ်ရပ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "使う",
+    "rd": "使って / 使った",
+    "rom": "tsukau",
+    "en": "to use",
+    "my": "သုံးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "作る",
+    "rd": "作って / 作った",
+    "rom": "tsukuru",
+    "en": "to make; to create",
+    "my": "လုပ်သည်/ဖန်တီးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "手伝う",
+    "rd": "手伝って / 手伝った",
+    "rom": "tetsudau",
+    "en": "to help; to assist",
+    "my": "ကူညီသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "飛ぶ",
+    "rd": "飛んで / 飛んだ",
+    "rom": "tobu",
+    "en": "to fly; to jump",
+    "my": "ပျံသည်/ခုန်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "泊まる",
+    "rd": "泊まって / 泊まった",
+    "rom": "tomaru",
+    "en": "to stay (overnight)",
+    "my": "တည်းခိုသည် (ညအိပ်)",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "取る",
+    "rd": "取って / 取った",
+    "rom": "toru",
+    "en": "to take; to get",
+    "my": "ယူသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "乗る",
+    "rd": "乗って / 乗った",
+    "rom": "noru",
+    "en": "to ride; to get on",
+    "my": "စီးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "飲む",
+    "rd": "飲んで / 飲んだ",
+    "rom": "nomu",
+    "en": "to drink",
+    "my": "သောက်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "話す",
+    "rd": "話して / 話した",
+    "rom": "hanasu",
+    "en": "to speak",
+    "my": "ပြောသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "払う",
+    "rd": "払って / 払った",
+    "rom": "harau",
+    "en": "to pay",
+    "my": "ပေးချေသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "引く",
+    "rd": "引いて / 引いた",
+    "rom": "hiku",
+    "en": "to pull; to look up",
+    "my": "ဆွဲသည်/ရှာသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "弾く",
+    "rd": "弾いて / 弾いた",
+    "rom": "hiku",
+    "en": "to play (instrument)",
+    "my": "တီးခတ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "吹く",
+    "rd": "吹いて / 吹いた",
+    "rom": "fuku",
+    "en": "to blow",
+    "my": "မှုတ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "待つ",
+    "rd": "待って / 待った",
+    "rom": "matsu",
+    "en": "to wait",
+    "my": "စောင့်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "持つ",
+    "rd": "持って / 持った",
+    "rom": "motsu",
+    "en": "to hold; to carry",
+    "my": "ကိုင်သည်/သယ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "もらう",
+    "rd": "もらって / もらった",
+    "rom": "morau",
+    "en": "to receive",
+    "my": "ရရှိသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "やる",
+    "rd": "やって / やった",
+    "rom": "yaru",
+    "en": "to do (casual)",
+    "my": "လုပ်သည် (အရပ်သုံး)",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "読む",
+    "rd": "読んで / 読んだ",
+    "rom": "yomu",
+    "en": "to read",
+    "my": "ဖတ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "呼ぶ",
+    "rd": "呼んで / 呼んだ",
+    "rom": "yobu",
+    "en": "to call; to invite",
+    "my": "ခေါ်သည်/ဖိတ်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "分かる",
+    "rd": "分かって / 分かった",
+    "rom": "wakaru",
+    "en": "to understand",
+    "my": "နားလည်သည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "渡す",
+    "rd": "渡して / 渡した",
+    "rom": "watasu",
+    "en": "to hand over; to pass",
+    "my": "ပေးသည်/လွှဲပေးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "渡る",
+    "rd": "渡って / 渡った",
+    "rom": "wataru",
+    "en": "to cross (a road/bridge)",
+    "my": "ဖြတ်ကူးသည်",
+    "cat": "Verbs Group 1"
+  },
+  {
+    "jp": "起きる",
+    "rd": "起きて / 起きた",
+    "rom": "okiru",
+    "en": "to wake up; to get up",
+    "my": "ထသည်/နိုးထသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "落ちる",
+    "rd": "落ちて / 落ちた",
+    "rom": "ochiru",
+    "en": "to fall; to drop",
+    "my": "ကျသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "覚える",
+    "rd": "覚えて / 覚えた",
+    "rom": "oboeru",
+    "en": "to memorize; to remember",
+    "my": "မှတ်မိသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "降りる",
+    "rd": "降りて / 降りた",
+    "rom": "oriru",
+    "en": "to get off (vehicle)",
+    "my": "ဆင်းသည် (ယာဉ်ပေါ်မှ)",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "開ける",
+    "rd": "開けて / 開けた",
+    "rom": "akeru",
+    "en": "to open",
+    "my": "ဖွင့်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "上げる",
+    "rd": "上げて / 上げた",
+    "rom": "ageru",
+    "en": "to give; to raise",
+    "my": "ပေးသည်/မြှောက်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "集める",
+    "rd": "集めて / 集めた",
+    "rom": "atsumeru",
+    "en": "to collect; to gather",
+    "my": "စုဆောင်းသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "いる",
+    "rd": "いて / いた",
+    "rom": "iru",
+    "en": "to exist (animate)",
+    "my": "ရှိသည် (သက်ရှိ)",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "生まれる",
+    "rd": "生まれて / 生まれた",
+    "rom": "umareru",
+    "en": "to be born",
+    "my": "မွေးဖွားသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "考える",
+    "rd": "考えて / 考えた",
+    "rom": "kangaeru",
+    "en": "to think; to consider",
+    "my": "စဉ်းစားသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "食べる",
+    "rd": "食べて / 食べた",
+    "rom": "taberu",
+    "en": "to eat",
+    "my": "စားသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "出かける",
+    "rd": "出かけて / 出かけた",
+    "rom": "dekakeru",
+    "en": "to go out",
+    "my": "အပြင်ထွက်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "出る",
+    "rd": "出て / 出た",
+    "rom": "deru",
+    "en": "to leave; to go out; to come out",
+    "my": "ထွက်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "止める",
+    "rd": "止めて / 止めた",
+    "rom": "tomeru",
+    "en": "to stop (something)",
+    "my": "ရပ်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "閉める",
+    "rd": "閉めて / 閉めた",
+    "rom": "shimeru",
+    "en": "to close (a door)",
+    "my": "ပိတ်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "着る",
+    "rd": "着て / 着た",
+    "rom": "kiru",
+    "en": "to wear (upper body)",
+    "my": "ဝတ်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "見る",
+    "rd": "見て / 見た",
+    "rom": "miru",
+    "en": "to see; to watch; to look",
+    "my": "ကြည့်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "見せる",
+    "rd": "見せて / 見せた",
+    "rom": "miseru",
+    "en": "to show",
+    "my": "ပြသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "迎える",
+    "rd": "迎えて / 迎えた",
+    "rom": "mukaeru",
+    "en": "to welcome; to meet",
+    "my": "ကြိုဆိုသည်/သွားကြိုသည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "もらえる",
+    "rd": "もらえて / もらえた",
+    "rom": "moraeru",
+    "en": "can receive",
+    "my": "ရနိုင်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "やめる",
+    "rd": "やめて / やめた",
+    "rom": "yameru",
+    "en": "to quit; to stop (doing)",
+    "my": "ရပ်သည်/စွန့်သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "忘れる",
+    "rd": "忘れて / 忘れた",
+    "rom": "wasureru",
+    "en": "to forget",
+    "my": "မေ့သည်",
+    "cat": "Verbs Group 2"
+  },
+  {
+    "jp": "する",
+    "rd": "して / した",
+    "rom": "suru",
+    "en": "to do",
+    "my": "လုပ်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "勉強する",
+    "rd": "勉強して / 勉強した",
+    "rom": "benkyou suru",
+    "en": "to study",
+    "my": "စာကျက်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "仕事する",
+    "rd": "仕事して / 仕事した",
+    "rom": "shigoto suru",
+    "en": "to work",
+    "my": "အလုပ်လုပ်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "電話する",
+    "rd": "電話して / 電話した",
+    "rom": "denwa suru",
+    "en": "to phone",
+    "my": "ဖုန်းဆက်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "旅行する",
+    "rd": "旅行して / 旅行した",
+    "rom": "ryokou suru",
+    "en": "to travel",
+    "my": "ခရီးသွားသည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "運動する",
+    "rd": "運動して / 運動した",
+    "rom": "undou suru",
+    "en": "to exercise",
+    "my": "လေ့ကျင့်ခန်းလုပ်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "料理する",
+    "rd": "料理して / 料理した",
+    "rom": "ryouri suru",
+    "en": "to cook",
+    "my": "ဟင်းချက်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "散歩する",
+    "rd": "散歩して / 散歩した",
+    "rom": "sanpo suru",
+    "en": "to take a walk",
+    "my": "လမ်းလျှောက်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "買い物する",
+    "rd": "買い物して / 買い物した",
+    "rom": "kaimono suru",
+    "en": "to go shopping",
+    "my": "ဈေးဝယ်သည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "来る",
+    "rd": "来て / 来た",
+    "rom": "kuru",
+    "en": "to come",
+    "my": "လာသည်",
+    "cat": "Verbs Irregular"
+  },
+  {
+    "jp": "大きい",
+    "rd": "おおきい",
+    "rom": "ookii",
+    "en": "big; large",
+    "my": "ကြီးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "小さい",
+    "rd": "ちいさい",
+    "rom": "chiisai",
+    "en": "small; little",
+    "my": "သေးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "長い",
+    "rd": "ながい",
+    "rom": "nagai",
+    "en": "long",
+    "my": "ရှည်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "短い",
+    "rd": "みじかい",
+    "rom": "mijikai",
+    "en": "short",
+    "my": "တိုသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "高い",
+    "rd": "たかい",
+    "rom": "takai",
+    "en": "expensive; tall; high",
+    "my": "စျေးကြီးသည်/မြင့်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "安い",
+    "rd": "やすい",
+    "rom": "yasui",
+    "en": "cheap; inexpensive",
+    "my": "စျေးပေါသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "低い",
+    "rd": "ひくい",
+    "rom": "hikui",
+    "en": "low; short (height)",
+    "my": "နိမ့်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "新しい",
+    "rd": "あたらしい",
+    "rom": "atarashii",
+    "en": "new",
+    "my": "အသစ်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "古い",
+    "rd": "ふるい",
+    "rom": "furui",
+    "en": "old (objects)",
+    "my": "ဟောင်း",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "良い/いい",
+    "rd": "よい/いい",
+    "rom": "yoi / ii",
+    "en": "good",
+    "my": "ကောင်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "悪い",
+    "rd": "わるい",
+    "rom": "warui",
+    "en": "bad",
+    "my": "ဆိုးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "多い",
+    "rd": "おおい",
+    "rom": "ooi",
+    "en": "many; a lot",
+    "my": "များသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "少ない",
+    "rd": "すくない",
+    "rom": "sukunai",
+    "en": "few; little",
+    "my": "နည်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "難しい",
+    "rd": "むずかしい",
+    "rom": "muzukashii",
+    "en": "difficult; hard",
+    "my": "ခက်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "易しい",
+    "rd": "やさしい",
+    "rom": "yasashii",
+    "en": "easy",
+    "my": "လွယ်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "面白い",
+    "rd": "おもしろい",
+    "rom": "omoshiroi",
+    "en": "interesting; funny",
+    "my": "စိတ်ဝင်စားစရာ/ရယ်စရာ",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "つまらない",
+    "rd": "つまらない",
+    "rom": "tsumaranai",
+    "en": "boring; uninteresting",
+    "my": "ပျင်းစရာ",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "忙しい",
+    "rd": "いそがしい",
+    "rom": "isogashii",
+    "en": "busy",
+    "my": "အလုပ်များသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "寂しい",
+    "rd": "さびしい",
+    "rom": "sabishii",
+    "en": "lonely",
+    "my": "အထီးကျန်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "嬉しい",
+    "rd": "うれしい",
+    "rom": "ureshii",
+    "en": "happy; glad",
+    "my": "ဝမ်းသာသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "悲しい",
+    "rd": "かなしい",
+    "rom": "kanashii",
+    "en": "sad",
+    "my": "ဝမ်းနည်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "怖い",
+    "rd": "こわい",
+    "rom": "kowai",
+    "en": "scary; frightening",
+    "my": "ကြောက်စရာ",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "痛い",
+    "rd": "いたい",
+    "rom": "itai",
+    "en": "painful; hurts",
+    "my": "နာသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "暑い",
+    "rd": "あつい",
+    "rom": "atsui",
+    "en": "hot (weather/temperature)",
+    "my": "ပူသည် (ရာသီ)",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "寒い",
+    "rd": "さむい",
+    "rom": "samui",
+    "en": "cold (weather)",
+    "my": "အေးသည် (ရာသီ)",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "温かい",
+    "rd": "あたたかい",
+    "rom": "atatakai",
+    "en": "warm",
+    "my": "နွေးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "涼しい",
+    "rd": "すずしい",
+    "rom": "suzushii",
+    "en": "cool; refreshing",
+    "my": "အေးမြသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "熱い",
+    "rd": "あつい",
+    "rom": "atsui",
+    "en": "hot (to the touch)",
+    "my": "ပူသည် (ထိတွေ့)",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "冷たい",
+    "rd": "つめたい",
+    "rom": "tsumetai",
+    "en": "cold (to the touch)",
+    "my": "အေးသည် (ထိတွေ့)",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "明るい",
+    "rd": "あかるい",
+    "rom": "akarui",
+    "en": "bright; cheerful",
+    "my": "လင်းသည်/ရွှင်လန်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "暗い",
+    "rd": "くらい",
+    "rom": "kurai",
+    "en": "dark; gloomy",
+    "my": "မှောင်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "遠い",
+    "rd": "とおい",
+    "rom": "tooi",
+    "en": "far; distant",
+    "my": "ဝေးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "近い",
+    "rd": "ちかい",
+    "rom": "chikai",
+    "en": "near; close",
+    "my": "နီးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "速い",
+    "rd": "はやい",
+    "rom": "hayai",
+    "en": "fast; quick",
+    "my": "မြန်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "遅い",
+    "rd": "おそい",
+    "rom": "osoi",
+    "en": "slow; late",
+    "my": "နှေးသည်/နောက်ကျသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "早い",
+    "rd": "はやい",
+    "rom": "hayai",
+    "en": "early",
+    "my": "စောသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "広い",
+    "rd": "ひろい",
+    "rom": "hiroi",
+    "en": "wide; spacious",
+    "my": "ကျယ်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "狭い",
+    "rd": "せまい",
+    "rom": "semai",
+    "en": "narrow; cramped",
+    "my": "ကျဉ်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "重い",
+    "rd": "おもい",
+    "rom": "omoi",
+    "en": "heavy",
+    "my": "လေးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "軽い",
+    "rd": "かるい",
+    "rom": "karui",
+    "en": "light (weight)",
+    "my": "ပေါ့သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "強い",
+    "rd": "つよい",
+    "rom": "tsuyoi",
+    "en": "strong",
+    "my": "သန်မာသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "弱い",
+    "rd": "よわい",
+    "rom": "yowai",
+    "en": "weak",
+    "my": "အားနည်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "丸い",
+    "rd": "まるい",
+    "rom": "marui",
+    "en": "round; circular",
+    "my": "လုံးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "四角い",
+    "rd": "しかくい",
+    "rom": "shikakui",
+    "en": "square; rectangular",
+    "my": "လေးထောင့်ကျသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "白い",
+    "rd": "しろい",
+    "rom": "shiroi",
+    "en": "white",
+    "my": "ဖြူသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "黒い",
+    "rd": "くろい",
+    "rom": "kuroi",
+    "en": "black",
+    "my": "မည်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "赤い",
+    "rd": "あかい",
+    "rom": "akai",
+    "en": "red",
+    "my": "နီသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "青い",
+    "rd": "あおい",
+    "rom": "aoi",
+    "en": "blue; green (nature)",
+    "my": "ပြာသည်/စိမ်းသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "黄色い",
+    "rd": "きいろい",
+    "rom": "kiiroi",
+    "en": "yellow",
+    "my": "ဝါသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "正しい",
+    "rd": "ただしい",
+    "rom": "tadashii",
+    "en": "correct; right",
+    "my": "မှန်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "欲しい",
+    "rd": "ほしい",
+    "rom": "hoshii",
+    "en": "want (something); desirable",
+    "my": "လိုချင်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "甘い",
+    "rd": "あまい",
+    "rom": "amai",
+    "en": "sweet",
+    "my": "ချိုသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "辛い",
+    "rd": "からい",
+    "rom": "karai",
+    "en": "spicy; hot (taste)",
+    "my": "စပ်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "塩辛い",
+    "rd": "しおからい",
+    "rom": "shiokarai",
+    "en": "salty",
+    "my": "ငန်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "苦い",
+    "rd": "にがい",
+    "rom": "nigai",
+    "en": "bitter",
+    "my": "ခါးသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "酸っぱい",
+    "rd": "すっぱい",
+    "rom": "suppai",
+    "en": "sour",
+    "my": "ချဉ်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "美味しい",
+    "rd": "おいしい",
+    "rom": "oishii",
+    "en": "delicious; tasty",
+    "my": "အရသာရှိသည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "まずい",
+    "rd": "まずい",
+    "rom": "mazui",
+    "en": "bad-tasting; unpleasant",
+    "my": "အရသာမကောင်းဘူး",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "若い",
+    "rd": "わかい",
+    "rom": "wakai",
+    "en": "young",
+    "my": "ငယ်သည်",
+    "cat": "い-Adjectives"
+  },
+  {
+    "jp": "好き",
+    "rd": "すき",
+    "rom": "suki",
+    "en": "liked; fond of",
+    "my": "ကြိုက်သည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "嫌い",
+    "rd": "きらい",
+    "rom": "kirai",
+    "en": "disliked; hated",
+    "my": "မကြိုက်ဘူး",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "得意",
+    "rd": "とくい",
+    "rom": "tokui",
+    "en": "good at; one's strong point",
+    "my": "တော်သည်/အားသာချက်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "苦手",
+    "rd": "にがて",
+    "rom": "nigate",
+    "en": "not good at; weak point",
+    "my": "မတော်ဘူး/အားနည်းချက်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "大切",
+    "rd": "たいせつ",
+    "rom": "taisetsu",
+    "en": "important; precious",
+    "my": "အရေးကြီးသည်/တန်ဖိုးရှိသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "大事",
+    "rd": "だいじ",
+    "rom": "daiji",
+    "en": "important; serious",
+    "my": "အရေးကြီးသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "大丈夫",
+    "rd": "だいじょうぶ",
+    "rom": "daijoubu",
+    "en": "all right; okay",
+    "my": "အဆင်ပြေသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "有名",
+    "rd": "ゆうめい",
+    "rom": "yuumei",
+    "en": "famous",
+    "my": "ကျော်ကြားသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "賑やか",
+    "rd": "にぎやか",
+    "rom": "nigiyaka",
+    "en": "lively; bustling",
+    "my": "စည်ကားသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "静か",
+    "rd": "しずか",
+    "rom": "shizuka",
+    "en": "quiet; calm",
+    "my": "တိတ်ဆိတ်သည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "綺麗",
+    "rd": "きれい",
+    "rom": "kirei",
+    "en": "pretty; clean",
+    "my": "လှသည်/သန့်သည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "便利",
+    "rd": "べんり",
+    "rom": "benri",
+    "en": "convenient; handy",
+    "my": "အဆင်ပြေသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "不便",
+    "rd": "ふべん",
+    "rom": "fuben",
+    "en": "inconvenient",
+    "my": "အဆင်မပြေဘူး",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "親切",
+    "rd": "しんせつ",
+    "rom": "shinsetsu",
+    "en": "kind; helpful",
+    "my": "ကြင်နာသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "丁寧",
+    "rd": "ていねい",
+    "rom": "teinei",
+    "en": "polite; careful",
+    "my": "ယဉ်ကျေးသည်/ဂရုတစိုက်လုပ်သည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "真面目",
+    "rd": "まじめ",
+    "rom": "majime",
+    "en": "serious; diligent",
+    "my": "လေးနက်သည်/ကြိုးစားသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "暇",
+    "rd": "ひま",
+    "rom": "hima",
+    "en": "free time; not busy",
+    "my": "အားလပ်သည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "上手",
+    "rd": "じょうず",
+    "rom": "jouzu",
+    "en": "skillful; good at",
+    "my": "တော်သည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "下手",
+    "rd": "へた",
+    "rom": "heta",
+    "en": "unskillful; bad at",
+    "my": "မတော်ဘူး",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "素直",
+    "rd": "すなお",
+    "rom": "sunao",
+    "en": "obedient; gentle",
+    "my": "လိမ္မာသည်/ရိုးသားသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "色々",
+    "rd": "いろいろ",
+    "rom": "iroiro",
+    "en": "various; diverse",
+    "my": "အမျိုးမျိုး",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "特別",
+    "rd": "とくべつ",
+    "rom": "tokubetsu",
+    "en": "special",
+    "my": "အထူး",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "必要",
+    "rd": "ひつよう",
+    "rom": "hitsuyou",
+    "en": "necessary; needed",
+    "my": "လိုအပ်သည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "安全",
+    "rd": "あんぜん",
+    "rom": "anzen",
+    "en": "safe; secure",
+    "my": "လုံခြုံသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "危険",
+    "rd": "きけん",
+    "rom": "kiken",
+    "en": "dangerous",
+    "my": "အန္တရာယ်ရှိသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "複雑",
+    "rd": "ふくざつ",
+    "rom": "fukuzatsu",
+    "en": "complex; complicated",
+    "my": "ရှုပ်ထွေးသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "簡単",
+    "rd": "かんたん",
+    "rom": "kantan",
+    "en": "easy; simple",
+    "my": "လွယ်သည်/ရိုးရှင်းသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "正直",
+    "rd": "しょうじき",
+    "rom": "shoujiki",
+    "en": "honest",
+    "my": "ရိုးသားသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "変",
+    "rd": "へん",
+    "rom": "hen",
+    "en": "strange; odd",
+    "my": "ထူးဆန်းသည်",
+    "cat": "な-Adjectives"
+  },
+  {
+    "jp": "とても",
+    "rd": "とても",
+    "rom": "totemo",
+    "en": "very; extremely",
+    "my": "အလွန်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "あまり",
+    "rd": "あまり",
+    "rom": "amari",
+    "en": "not very (+ negative)",
+    "my": "သိပ်မ...ဘူး",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "全然",
+    "rd": "ぜんぜん",
+    "rom": "zenzen",
+    "en": "not at all (+ negative)",
+    "my": "လုံးဝမ...ဘူး",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "よく",
+    "rd": "よく",
+    "rom": "yoku",
+    "en": "often; well",
+    "my": "မကြာခဏ/ကောင်းကောင်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "時々",
+    "rd": "ときどき",
+    "rom": "tokidoki",
+    "en": "sometimes",
+    "my": "တစ်ခါတစ်ရံ",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "たいてい",
+    "rd": "たいてい",
+    "rom": "taitei",
+    "en": "usually; generally",
+    "my": "အများအားဖြင့်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "いつも",
+    "rd": "いつも",
+    "rom": "itsumo",
+    "en": "always",
+    "my": "အမြဲတမ်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "少し",
+    "rd": "すこし",
+    "rom": "sukoshi",
+    "en": "a little; a bit",
+    "my": "နည်းနည်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "もっと",
+    "rd": "もっと",
+    "rom": "motto",
+    "en": "more",
+    "my": "ပိုပြီး",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "ちょっと",
+    "rd": "ちょっと",
+    "rom": "chotto",
+    "en": "a little; just a moment",
+    "my": "နည်းနည်း/ခဏ",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "たくさん",
+    "rd": "たくさん",
+    "rom": "takusan",
+    "en": "a lot; many",
+    "my": "အများကြီး",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "また",
+    "rd": "また",
+    "rom": "mata",
+    "en": "again; also",
+    "my": "ထပ်ပြီး/လည်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "ぜひ",
+    "rd": "ぜひ",
+    "rom": "zehi",
+    "en": "by all means; certainly",
+    "my": "သေချာပေါက်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "どうぞ",
+    "rd": "どうぞ",
+    "rom": "douzo",
+    "en": "please (offering)",
+    "my": "ကျေးဇူးပြု၍",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "どうも",
+    "rd": "どうも",
+    "rom": "doumo",
+    "en": "thank you; somehow",
+    "my": "ကျေးဇူးတင်ပါတယ်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "だいたい",
+    "rd": "だいたい",
+    "rom": "daitai",
+    "en": "approximately; mostly",
+    "my": "ခန့်မှန်း/အများအားဖြင့်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "はっきり",
+    "rd": "はっきり",
+    "rom": "hakkiri",
+    "en": "clearly",
+    "my": "ရှင်းရှင်းလင်းလင်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "ゆっくり",
+    "rd": "ゆっくり",
+    "rom": "yukkuri",
+    "en": "slowly; leisurely",
+    "my": "ဖြည်းဖြည်းချင်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "すぐ",
+    "rd": "すぐ",
+    "rom": "sugu",
+    "en": "immediately; soon",
+    "my": "ချက်ချင်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "もちろん",
+    "rd": "もちろん",
+    "rom": "mochiron",
+    "en": "of course",
+    "my": "သေချာပေါက်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "たぶん",
+    "rd": "たぶん",
+    "rom": "tabun",
+    "en": "probably; perhaps",
+    "my": "ဖြစ်နိုင်တယ်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "きっと",
+    "rd": "きっと",
+    "rom": "kitto",
+    "en": "surely; certainly",
+    "my": "သေချာတယ်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "一緒に",
+    "rd": "いっしょに",
+    "rom": "issho ni",
+    "en": "together",
+    "my": "အတူတူ",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "一人で",
+    "rd": "ひとりで",
+    "rom": "hitori de",
+    "en": "alone; by oneself",
+    "my": "တစ်ယောက်တည်း",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "まず",
+    "rd": "まず",
+    "rom": "mazu",
+    "en": "first of all",
+    "my": "အရင်ဆုံး",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "次に",
+    "rd": "つぎに",
+    "rom": "tsugi ni",
+    "en": "next; then",
+    "my": "ပြီးတော့",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "それから",
+    "rd": "それから",
+    "rom": "sore kara",
+    "en": "and then; after that",
+    "my": "ပြီးတော့",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "でも",
+    "rd": "でも",
+    "rom": "demo",
+    "en": "but; however",
+    "my": "ဒါပေမဲ့",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "だから",
+    "rd": "だから",
+    "rom": "dakara",
+    "en": "therefore; so",
+    "my": "ဒါကြောင့်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "本当に",
+    "rd": "ほんとうに",
+    "rom": "hontou ni",
+    "en": "really; truly",
+    "my": "တကယ်ပဲ",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "実は",
+    "rd": "じつは",
+    "rom": "jitsu wa",
+    "en": "actually; to tell the truth",
+    "my": "တကယ်တော့",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "特に",
+    "rd": "とくに",
+    "rom": "toku ni",
+    "en": "especially; particularly",
+    "my": "အထူးသဖြင့်",
+    "cat": "Adverbs"
+  },
+  {
+    "jp": "は",
+    "rd": "は",
+    "rom": "wa",
+    "en": "topic marker",
+    "my": "အကြောင်းအရာ (topic)",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "が",
+    "rd": "が",
+    "rom": "ga",
+    "en": "subject marker",
+    "my": "ကြိယာပြုသူ",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "を",
+    "rd": "を",
+    "rom": "o",
+    "en": "direct object marker",
+    "my": "ကြိယာခံသူ",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "に",
+    "rd": "に",
+    "rom": "ni",
+    "en": "direction; time; location (existence)",
+    "my": "ဦးတည်ရာ/အချိန်/တည်နေရာ",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "で",
+    "rd": "で",
+    "rom": "de",
+    "en": "location (action); means",
+    "my": "နေရာ (လုပ်ရပ်)/နည်းလမ်း",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "へ",
+    "rd": "へ",
+    "rom": "e",
+    "en": "direction (movement)",
+    "my": "ဦးတည်ရာ (ရွေ့လျားမှု)",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "と",
+    "rd": "と",
+    "rom": "to",
+    "en": "and; with",
+    "my": "နှင့်/အတူ",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "も",
+    "rd": "も",
+    "rom": "mo",
+    "en": "also; too; even",
+    "my": "လည်း",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "の",
+    "rd": "の",
+    "rom": "no",
+    "en": "possession; noun modifier",
+    "my": "၏/ပိုင်ဆိုင်မှု",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "か",
+    "rd": "か",
+    "rom": "ka",
+    "en": "question marker",
+    "my": "မေးခွန်း",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "ね",
+    "rd": "ね",
+    "rom": "ne",
+    "en": "right?; isn't it? (seeking agreement)",
+    "my": "ဟုတ်တယ်နော်",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "よ",
+    "rd": "よ",
+    "rom": "yo",
+    "en": "assertive sentence-final particle",
+    "my": "အခိုင်အမာပြောခြင်း",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "な",
+    "rd": "な",
+    "rom": "na",
+    "en": "sentence-final (softening; prohibition)",
+    "my": "အဆုံးသတ်စကားလုံး (ပျော့ပျောင်း)",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "から",
+    "rd": "から",
+    "rom": "kara",
+    "en": "from; because",
+    "my": "မှ/ကြောင့်",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "まで",
+    "rd": "まで",
+    "rom": "made",
+    "en": "until; as far as; to",
+    "my": "အထိ",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "より",
+    "rd": "より",
+    "rom": "yori",
+    "en": "than; from (comparison)",
+    "my": "ထက်",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "ので",
+    "rd": "ので",
+    "rom": "node",
+    "en": "because (reason; softer than から)",
+    "my": "ကြောင့် (ပျော့ပျောင်း)",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "けど/けれど",
+    "rd": "けど",
+    "rom": "kedo",
+    "en": "but; however (casual)",
+    "my": "ဒါပေမဲ့ (အရပ်သုံး)",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "そして",
+    "rd": "そして",
+    "rom": "soshite",
+    "en": "and then; and",
+    "my": "ပြီးတော့",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "または",
+    "rd": "または",
+    "rom": "mata wa",
+    "en": "or (formal)",
+    "my": "သို့မဟုတ်",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "し",
+    "rd": "し",
+    "rom": "shi",
+    "en": "and also; what's more (listing reasons)",
+    "my": "ပြီး/ထို့အပြင်",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "ながら",
+    "rd": "ながら",
+    "rom": "nagara",
+    "en": "while doing; even though",
+    "my": "ရင်း/သော်လည်း",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "たり〜たりする",
+    "rd": "たり〜たりする",
+    "rom": "tari~tari suru",
+    "en": "do things like ~ (listing actions)",
+    "my": "စသည် (လုပ်ရပ်စာရင်း)",
+    "cat": "Particles and Conjunctions"
+  },
+  {
+    "jp": "どこ",
+    "rd": "どこ",
+    "rom": "doko",
+    "en": "where",
+    "my": "ဘယ်မှာ",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "誰",
+    "rd": "だれ",
+    "rom": "dare",
+    "en": "who",
+    "my": "ဘယ်သူ",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "どなた",
+    "rd": "どなた",
+    "rom": "donata",
+    "en": "who (polite)",
+    "my": "ဘယ်သူ (ယဉ်ကျေးသော)",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "いつ",
+    "rd": "いつ",
+    "rom": "itsu",
+    "en": "when",
+    "my": "ဘယ်တော့",
+    "cat": "Question Words",
+    "t": [
+      "dates"
+    ]
+  },
+  {
+    "jp": "どれ",
+    "rd": "どれ",
+    "rom": "dore",
+    "en": "which one (of 3+)",
+    "my": "ဘယ်ဟာ (၃ ခုအထက်)",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "どの",
+    "rd": "どの",
+    "rom": "dono",
+    "en": "which (adj. + noun)",
+    "my": "ဘယ်ဟာ (နာမ်နဲ့တွဲ)",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "どちら",
+    "rd": "どちら",
+    "rom": "dochira",
+    "en": "which (of 2); which way (polite)",
+    "my": "ဘယ်ဟာ (၂ ခုအနက်)",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "どう",
+    "rd": "どう",
+    "rom": "dou",
+    "en": "how; in what way",
+    "my": "ဘယ်လို",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "どうして",
+    "rd": "どうして",
+    "rom": "doushite",
+    "en": "why; how come",
+    "my": "ဘာကြောင့်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "なぜ",
+    "rd": "なぜ",
+    "rom": "naze",
+    "en": "why (formal)",
+    "my": "ဘာကြောင့် (တရားဝင်)",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "いくら",
+    "rd": "いくら",
+    "rom": "ikura",
+    "en": "how much (price)",
+    "my": "ဘယ်လောက် (စျေး)",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "いくつ",
+    "rd": "いくつ",
+    "rom": "ikutsu",
+    "en": "how many; how old",
+    "my": "ဘယ်နှစ်ခု/အသက်ဘယ်လောက်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何人",
+    "rd": "なんにん",
+    "rom": "nan-nin",
+    "en": "how many people",
+    "my": "လူဘယ်နှစ်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何時",
+    "rd": "なんじ",
+    "rom": "nan-ji",
+    "en": "what time",
+    "my": "ဘယ်အချိန်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何分",
+    "rd": "なんぷん",
+    "rom": "nan-pun",
+    "en": "how many minutes; what minute",
+    "my": "ဘယ်နှစ်မိနစ်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何日",
+    "rd": "なんにち",
+    "rom": "nan-nichi",
+    "en": "how many days; what day",
+    "my": "ဘယ်ရက်/ဘယ်နှစ်ရက်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何月",
+    "rd": "なんがつ",
+    "rom": "nan-gatsu",
+    "en": "what month",
+    "my": "ဘယ်လ",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何曜日",
+    "rd": "なんようび",
+    "rom": "nan-youbi",
+    "en": "what day of the week",
+    "my": "ဘယ်နေ့",
+    "cat": "Question Words",
+    "t": [
+      "dates"
+    ]
+  },
+  {
+    "jp": "何年",
+    "rd": "なんねん",
+    "rom": "nan-nen",
+    "en": "what year",
+    "my": "ဘယ်နှစ်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何番",
+    "rd": "なんばん",
+    "rom": "nan-ban",
+    "en": "what number",
+    "my": "နံပါတ်ဘယ်လောက်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何語",
+    "rd": "なんご",
+    "rom": "nan-go",
+    "en": "what language",
+    "my": "ဘာဘာသာ",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "何歳",
+    "rd": "なんさい",
+    "rom": "nan-sai",
+    "en": "how old",
+    "my": "အသက်ဘယ်လောက်",
+    "cat": "Question Words"
+  },
+  {
+    "jp": "これ",
+    "rd": "これ",
+    "rom": "kore",
+    "en": "this (thing near me)",
+    "my": "ဒီဟာ",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "それ",
+    "rd": "それ",
+    "rom": "sore",
+    "en": "that (thing near you)",
+    "my": "ဟိုဟာ (မင်းဘက်)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "あれ",
+    "rd": "あれ",
+    "rom": "are",
+    "en": "that (thing over there)",
+    "my": "ဟိုဟာ (ဝေးဝေး)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "この",
+    "rd": "この",
+    "rom": "kono",
+    "en": "this ~ (adj.)",
+    "my": "ဒီ... (နာမ်နဲ့တွဲ)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "その",
+    "rd": "その",
+    "rom": "sono",
+    "en": "that ~ (adj.)",
+    "my": "ဟို... (နာမ်နဲ့တွဲ)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "あの",
+    "rd": "あの",
+    "rom": "ano",
+    "en": "that ~ over there (adj.)",
+    "my": "ဟိုး... (နာမ်နဲ့တွဲ)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "ここ",
+    "rd": "ここ",
+    "rom": "koko",
+    "en": "here",
+    "my": "ဒီနေရာ",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "そこ",
+    "rd": "そこ",
+    "rom": "soko",
+    "en": "there",
+    "my": "ဟိုနေရာ",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "あそこ",
+    "rd": "あそこ",
+    "rom": "asoko",
+    "en": "over there",
+    "my": "ဟိုဘက်နေရာ",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "こちら",
+    "rd": "こちら",
+    "rom": "kochira",
+    "en": "this way; here (polite)",
+    "my": "ဒီဘက် (ယဉ်ကျေးသော)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "そちら",
+    "rd": "そちら",
+    "rom": "sochira",
+    "en": "that way; there (polite)",
+    "my": "ဟိုဘက် (ယဉ်ကျေးသော)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "あちら",
+    "rd": "あちら",
+    "rom": "achira",
+    "en": "that way; over there (polite)",
+    "my": "ဟိုဘက် (ယဉ်ကျေးသော)",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "こう",
+    "rd": "こう",
+    "rom": "kou",
+    "en": "this way; like this",
+    "my": "ဒီလို",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "そう",
+    "rd": "そう",
+    "rom": "sou",
+    "en": "that way; like that",
+    "my": "ဟိုလို",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "ああ",
+    "rd": "ああ",
+    "rom": "aa",
+    "en": "that way; like that (over there)",
+    "my": "ဟိုးလို",
+    "cat": "Demonstratives"
+  },
+  {
+    "jp": "おはようございます",
+    "rd": "おはようございます",
+    "rom": "ohayou gozaimasu",
+    "en": "Good morning (polite)",
+    "my": "မင်္ဂလာနံနက်ခင်းပါ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "おはよう",
+    "rd": "おはよう",
+    "rom": "ohayou",
+    "en": "Good morning (casual)",
+    "my": "မင်္ဂလာနံနက်ခင်းပါ (အရပ်သုံး)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "こんにちは",
+    "rd": "こんにちは",
+    "rom": "konnichiwa",
+    "en": "Hello; Good afternoon",
+    "my": "မင်္ဂလာပါ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "こんばんは",
+    "rd": "こんばんは",
+    "rom": "konbanwa",
+    "en": "Good evening",
+    "my": "မင်္ဂလာညနေခင်းပါ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "おやすみなさい",
+    "rd": "おやすみなさい",
+    "rom": "oyasuminasai",
+    "en": "Good night (polite)",
+    "my": "ကောင်းသောညပါ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "おやすみ",
+    "rd": "おやすみ",
+    "rom": "oyasumi",
+    "en": "Good night (casual)",
+    "my": "ကောင်းသောညပါ (အရပ်သုံး)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "さようなら",
+    "rd": "さようなら",
+    "rom": "sayounara",
+    "en": "Goodbye (formal)",
+    "my": "နှုတ်ဆက်ပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "じゃあね",
+    "rd": "じゃあね",
+    "rom": "jaa ne",
+    "en": "See you; Bye (casual)",
+    "my": "နောက်မှတွေ့မယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "また明日",
+    "rd": "またあした",
+    "rom": "mata ashita",
+    "en": "See you tomorrow",
+    "my": "မနက်ဖြန်တွေ့မယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "ありがとうございます",
+    "rd": "ありがとうございます",
+    "rom": "arigatou gozaimasu",
+    "en": "Thank you (polite)",
+    "my": "ကျေးဇူးတင်ပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "ありがとう",
+    "rd": "ありがとう",
+    "rom": "arigatou",
+    "en": "Thank you (casual)",
+    "my": "ကျေးဇူးပါ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "どういたしまして",
+    "rd": "どういたしまして",
+    "rom": "dou itashimashite",
+    "en": "You're welcome",
+    "my": "ရပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "すみません",
+    "rd": "すみません",
+    "rom": "sumimasen",
+    "en": "Excuse me; I'm sorry",
+    "my": "တောင်းပန်ပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "ごめんなさい",
+    "rd": "ごめんなさい",
+    "rom": "gomennasai",
+    "en": "I'm sorry",
+    "my": "တောင်းပန်ပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "ごめん",
+    "rd": "ごめん",
+    "rom": "gomen",
+    "en": "Sorry (casual)",
+    "my": "တောင်းပန်ပါတယ် (အရပ်သုံး)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "はじめまして",
+    "rd": "はじめまして",
+    "rom": "hajimemashite",
+    "en": "How do you do; Nice to meet you",
+    "my": "တွေ့ရတာဝမ်းသာပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "よろしくお願いします",
+    "rd": "よろしくおねがいします",
+    "rom": "yoroshiku onegaishimasu",
+    "en": "Please treat me well; Nice to meet you",
+    "my": "တွေ့ရတာဝမ်းသာပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "よろしく",
+    "rd": "よろしく",
+    "rom": "yoroshiku",
+    "en": "Nice to meet you (casual)",
+    "my": "တွေ့ရတာဝမ်းသာပါတယ် (အရပ်သုံး)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "お元気ですか",
+    "rd": "おげんきですか",
+    "rom": "ogenki desu ka",
+    "en": "How are you?",
+    "my": "နေကောင်းလား",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "元気です",
+    "rd": "げんきです",
+    "rom": "genki desu",
+    "en": "I'm fine; I'm well",
+    "my": "နေကောင်းပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "そうですか",
+    "rd": "そうですか",
+    "rom": "sou desu ka",
+    "en": "Is that so? I see.",
+    "my": "ဟုတ်လား",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "そうですね",
+    "rd": "そうですね",
+    "rom": "sou desu ne",
+    "en": "That's right, isn't it",
+    "my": "ဟုတ်တယ်နော်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "わかりました",
+    "rd": "わかりました",
+    "rom": "wakarimashita",
+    "en": "I understand; Understood",
+    "my": "နားလည်ပါပြီ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "わかりません",
+    "rd": "わかりません",
+    "rom": "wakarimasen",
+    "en": "I don't understand",
+    "my": "နားမလည်ဘူး",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "いただきます",
+    "rd": "いただきます",
+    "rom": "itadakimasu",
+    "en": "Let's eat (said before eating)",
+    "my": "စားပါတော့မယ် (မစားခင်)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "ごちそうさまでした",
+    "rd": "ごちそうさまでした",
+    "rom": "gochisousama deshita",
+    "en": "Thanks for the meal (after eating)",
+    "my": "ကျေးဇူးတင်ပါတယ် (စားပြီးနောက်)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "いってきます",
+    "rd": "いってきます",
+    "rom": "ittekimasu",
+    "en": "I'm leaving (said when leaving home)",
+    "my": "သွားတော့မယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "いってらっしゃい",
+    "rd": "いってらっしゃい",
+    "rom": "itterasshai",
+    "en": "Take care (said to person leaving home)",
+    "my": "သွားလမ်းသာပါစေ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "ただいま",
+    "rd": "ただいま",
+    "rom": "tadaima",
+    "en": "I'm home (said when returning home)",
+    "my": "ပြန်ရောက်ပါပြီ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "おかえり / おかえりなさい",
+    "rd": "おかえり / おかえりなさい",
+    "rom": "okaeri / okaerinasai",
+    "en": "Welcome home",
+    "my": "ပြန်ရောက်တာကြိုဆိုပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "はい",
+    "rd": "はい",
+    "rom": "hai",
+    "en": "yes",
+    "my": "ဟုတ်ကဲ့",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "いいえ",
+    "rd": "いいえ",
+    "rom": "iie",
+    "en": "no",
+    "my": "မဟုတ်ဘူး",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "ちょっとまってください",
+    "rd": "ちょっとまってください",
+    "rom": "chotto matte kudasai",
+    "en": "Please wait a moment",
+    "my": "ခဏစောင့်ပေးပါ",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "大丈夫ですか",
+    "rd": "だいじょうぶですか",
+    "rom": "daijoubu desu ka",
+    "en": "Are you all right?",
+    "my": "အဆင်ပြေလား",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "おめでとうございます",
+    "rd": "おめでとうございます",
+    "rom": "omedetou gozaimasu",
+    "en": "Congratulations",
+    "my": "ဂုဏ်ယူပါတယ်",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "お願いします",
+    "rd": "おねがいします",
+    "rom": "onegaishimasu",
+    "en": "Please (requesting something)",
+    "my": "ကျေးဇူးပြု၍",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "失礼します",
+    "rd": "しつれいします",
+    "rom": "shitsurei shimasu",
+    "en": "Excuse me (entering/leaving a room)",
+    "my": "ခွင့်လွှတ်ပါ (ဝင်ထွက်ရာတွင်)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "かんぱい",
+    "rd": "かんぱい",
+    "rom": "kanpai",
+    "en": "Cheers!",
+    "my": "ကျန်းမာပါစေ (ခွက်တိုက်)",
+    "cat": "Greetings and Expressions"
+  },
+  {
+    "jp": "色",
+    "rd": "いろ",
+    "rom": "iro",
+    "en": "color",
+    "my": "အရောင်",
+    "cat": "Colors"
+  },
+  {
+    "jp": "白",
+    "rd": "しろ",
+    "rom": "shiro",
+    "en": "white",
+    "my": "အဖြူ",
+    "cat": "Colors"
+  },
+  {
+    "jp": "黒",
+    "rd": "くろ",
+    "rom": "kuro",
+    "en": "black",
+    "my": "အမည်း",
+    "cat": "Colors"
+  },
+  {
+    "jp": "赤",
+    "rd": "あか",
+    "rom": "aka",
+    "en": "red",
+    "my": "အနီ",
+    "cat": "Colors"
+  },
+  {
+    "jp": "青",
+    "rd": "あお",
+    "rom": "ao",
+    "en": "blue",
+    "my": "အပြာ",
+    "cat": "Colors"
+  },
+  {
+    "jp": "黄色",
+    "rd": "きいろ",
+    "rom": "kiiro",
+    "en": "yellow",
+    "my": "အဝါ",
+    "cat": "Colors"
+  },
+  {
+    "jp": "緑",
+    "rd": "みどり",
+    "rom": "midori",
+    "en": "green",
+    "my": "အစိမ်း",
+    "cat": "Colors"
+  },
+  {
+    "jp": "茶色",
+    "rd": "ちゃいろ",
+    "rom": "chairo",
+    "en": "brown",
+    "my": "အညို",
+    "cat": "Colors"
+  },
+  {
+    "jp": "オレンジ",
+    "rd": "オレンジ",
+    "rom": "orenji",
+    "en": "orange",
+    "my": "လိမ္မော်ရောင်",
+    "cat": "Colors"
+  },
+  {
+    "jp": "ピンク",
+    "rd": "ピンク",
+    "rom": "pinku",
+    "en": "pink",
+    "my": "ပန်းရောင်",
+    "cat": "Colors"
+  },
+  {
+    "jp": "紫",
+    "rd": "むらさき",
+    "rom": "murasaki",
+    "en": "purple",
+    "my": "ခရမ်းရောင်",
+    "cat": "Colors"
+  },
+  {
+    "jp": "灰色",
+    "rd": "はいいろ",
+    "rom": "haiiro",
+    "en": "gray",
+    "my": "မီးခိုးရောင်",
+    "cat": "Colors"
+  },
+  {
+    "jp": "大きさ",
+    "rd": "おおきさ",
+    "rom": "ookisa",
+    "en": "size; bigness",
+    "my": "အရွယ်အစား",
+    "cat": "Size and Quantity"
+  },
+  {
+    "jp": "全部",
+    "rd": "ぜんぶ",
+    "rom": "zenbu",
+    "en": "all; everything",
+    "my": "အားလုံး",
+    "cat": "Size and Quantity"
+  },
+  {
+    "jp": "半分",
+    "rd": "はんぶん",
+    "rom": "hanbun",
+    "en": "half",
+    "my": "တစ်ဝက်",
+    "cat": "Size and Quantity"
+  },
+  {
+    "jp": "一番",
+    "rd": "いちばん",
+    "rom": "ichiban",
+    "en": "number one; most; best",
+    "my": "နံပါတ်တစ်/အကောင်းဆုံး",
+    "cat": "Size and Quantity"
+  },
+  {
+    "jp": "始め",
+    "rd": "はじめ",
+    "rom": "hajime",
+    "en": "beginning; start",
+    "my": "အစ",
+    "cat": "Size and Quantity"
+  },
+  {
+    "jp": "終わり",
+    "rd": "おわり",
+    "rom": "owari",
+    "en": "end; finish",
+    "my": "အဆုံး",
+    "cat": "Size and Quantity"
+  },
+  {
+    "jp": "両方",
+    "rd": "りょうほう",
+    "rom": "ryouhou",
+    "en": "both",
+    "my": "နှစ်ခုလုံး",
+    "cat": "Size and Quantity"
+  },
+  {
+    "jp": "しかし",
+    "rd": "しかし",
+    "rom": "shikashi",
+    "en": "however; but (formal)",
+    "my": "သို့သော်လည်း",
+    "cat": "Common Conjunctions"
+  },
+  {
+    "jp": "それに",
+    "rd": "それに",
+    "rom": "sore ni",
+    "en": "moreover; in addition",
+    "my": "ထို့အပြင်",
+    "cat": "Common Conjunctions"
+  },
+  {
+    "jp": "つまり",
+    "rd": "つまり",
+    "rom": "tsumari",
+    "en": "in other words; that is",
+    "my": "တစ်နည်းအားဖြင့်",
+    "cat": "Common Conjunctions"
+  },
+  {
+    "jp": "もし",
+    "rd": "もし",
+    "rom": "moshi",
+    "en": "if (hypothetical)",
+    "my": "အကယ်၍",
+    "cat": "Common Conjunctions"
+  },
+  {
+    "jp": "名前",
+    "rd": "なまえ",
+    "rom": "namae",
+    "en": "name",
+    "my": "နာမည်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "年齢",
+    "rd": "ねんれい",
+    "rom": "nenrei",
+    "en": "age",
+    "my": "အသက်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "〜歳",
+    "rd": "〜さい",
+    "rom": "~sai",
+    "en": "~ years old",
+    "my": "နှစ် (အသက်)",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "国籍",
+    "rd": "こくせき",
+    "rom": "kokuseki",
+    "en": "nationality",
+    "my": "နိုင်ငံသား",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "住所",
+    "rd": "じゅうしょ",
+    "rom": "juusho",
+    "en": "address",
+    "my": "လိပ်စာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "電話番号",
+    "rd": "でんわばんごう",
+    "rom": "denwa bangou",
+    "en": "phone number",
+    "my": "ဖုန်းနံပါတ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "言語",
+    "rd": "げんご",
+    "rom": "gengo",
+    "en": "language",
+    "my": "ဘာသာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "仕事",
+    "rd": "しごと",
+    "rom": "shigoto",
+    "en": "work; job",
+    "my": "အလုပ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "給料",
+    "rd": "きゅうりょう",
+    "rom": "kyuuryou",
+    "en": "salary",
+    "my": "လစာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "問題",
+    "rd": "もんだい",
+    "rom": "mondai",
+    "en": "problem; question",
+    "my": "ပြဿနာ/မေးခွန်း",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "答え",
+    "rd": "こたえ",
+    "rom": "kotae",
+    "en": "answer",
+    "my": "အဖြေ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "意味",
+    "rd": "いみ",
+    "rom": "imi",
+    "en": "meaning",
+    "my": "အဓိပ္ပာယ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "例",
+    "rd": "れい",
+    "rom": "rei",
+    "en": "example",
+    "my": "ဥပမာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "理由",
+    "rd": "りゆう",
+    "rom": "riyuu",
+    "en": "reason",
+    "my": "အကြောင်းရင်း",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "こと",
+    "rd": "こと",
+    "rom": "koto",
+    "en": "thing (abstract); fact",
+    "my": "ကိစ္စ/အချက်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "もの",
+    "rd": "もの",
+    "rom": "mono",
+    "en": "thing (physical object)",
+    "my": "ပစ္စည်း/အရာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "ところ",
+    "rd": "ところ",
+    "rom": "tokoro",
+    "en": "place; situation",
+    "my": "နေရာ/အခြေအနေ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "気",
+    "rd": "き",
+    "rom": "ki",
+    "en": "feeling; spirit; mind",
+    "my": "စိတ်/ခံစားချက်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "音",
+    "rd": "おと",
+    "rom": "oto",
+    "en": "sound; noise",
+    "my": "အသံ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "声",
+    "rd": "こえ",
+    "rom": "koe",
+    "en": "voice",
+    "my": "အသံ (လူ)",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "形",
+    "rd": "かたち",
+    "rom": "katachi",
+    "en": "shape; form",
+    "my": "ပုံသဏ္ဌာန်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "味",
+    "rd": "あじ",
+    "rom": "aji",
+    "en": "taste; flavor",
+    "my": "အရသာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "匂い",
+    "rd": "におい",
+    "rom": "nioi",
+    "en": "smell; scent",
+    "my": "အနံ့",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "感じ",
+    "rd": "かんじ",
+    "rom": "kanji",
+    "en": "feeling; sense",
+    "my": "ခံစားချက်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "夢",
+    "rd": "ゆめ",
+    "rom": "yume",
+    "en": "dream",
+    "my": "အိပ်မက်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "心",
+    "rd": "こころ",
+    "rom": "kokoro",
+    "en": "heart; mind; feeling",
+    "my": "နှလုံးသား/စိတ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "力",
+    "rd": "ちから",
+    "rom": "chikara",
+    "en": "strength; power; ability",
+    "my": "အား/အစွမ်း",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "手紙",
+    "rd": "てがみ",
+    "rom": "tegami",
+    "en": "letter (correspondence)",
+    "my": "စာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "荷物",
+    "rd": "にもつ",
+    "rom": "nimotsu",
+    "en": "luggage; load",
+    "my": "ခရီးဆောင်ပစ္စည်း",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "場所",
+    "rd": "ばしょ",
+    "rom": "basho",
+    "en": "place; location",
+    "my": "နေရာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "番号",
+    "rd": "ばんごう",
+    "rom": "bangou",
+    "en": "number (ID/phone)",
+    "my": "နံပါတ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "〜号",
+    "rd": "〜ごう",
+    "rom": "~gou",
+    "en": "number (trains/rooms)",
+    "my": "နံပါတ် (ရထား/အခန်း)",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "〜番線",
+    "rd": "〜ばんせん",
+    "rom": "~bansen",
+    "en": "platform number ~",
+    "my": "ပလက်ဖောင်းနံပါတ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "窓口",
+    "rd": "まどぐち",
+    "rom": "madoguchi",
+    "en": "ticket window; counter",
+    "my": "လက်မှတ်ရောင်းဌာန",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "切符",
+    "rd": "きっぷ",
+    "rom": "kippu",
+    "en": "ticket",
+    "my": "လက်မှတ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "改札",
+    "rd": "かいさつ",
+    "rom": "kaisatsu",
+    "en": "ticket gate",
+    "my": "လက်မှတ်ဂိတ်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "ホーム",
+    "rd": "ホーム",
+    "rom": "hoomu",
+    "en": "(train) platform",
+    "my": "ပလက်ဖောင်း",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "出口",
+    "rd": "でぐち",
+    "rom": "deguchi",
+    "en": "exit",
+    "my": "ထွက်ပေါက်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "入口",
+    "rd": "いりぐち",
+    "rom": "iriguchi",
+    "en": "entrance",
+    "my": "ဝင်ပေါက်",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "階段",
+    "rd": "かいだん",
+    "rom": "kaidan",
+    "en": "stairs",
+    "my": "လှေကား",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "エレベーター",
+    "rd": "エレベーター",
+    "rom": "erebeetaa",
+    "en": "elevator",
+    "my": "ဓာတ်လှေကား",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "トイレ",
+    "rd": "トイレ",
+    "rom": "toire",
+    "en": "toilet; restroom",
+    "my": "အိမ်သာ",
+    "cat": "Miscellaneous / Common Nouns"
+  },
+  {
+    "jp": "わたし",
+    "rd": "わたし",
+    "rom": "watashi",
+    "en": "I; me",
+    "my": "ကျွန်တော်၊ ကျွန်မ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "あの人",
+    "rd": "あのひと",
+    "rom": "ano hito",
+    "en": "that person (over there)",
+    "my": "ဟိုလူ (ရိုးရိုးအသုံး)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "あの方",
+    "rd": "あのかた",
+    "rom": "ano kata",
+    "en": "that person (polite)",
+    "my": "ဟိုလူ (ယဉ်ကျေးသောအသုံး)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "～さん",
+    "rd": "～さん",
+    "rom": "~san",
+    "en": "Mr./Ms. (suffix after a name)",
+    "my": "ကို--/မ--(နာမည်နောက် တွင်ထားသုံးသည်။ မိမိနာမည်တွင်မသုံးပါ။)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "～ちゃん",
+    "rd": "～ちゃん",
+    "rom": "~chan",
+    "en": "(suffix for children / close friends)",
+    "my": "မောင်--/မ--(၁၀နှစ် အောက် ကလေးငယ်များ ကိုခေါ်သောအခါတွင် သုံးသည်)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "～じん",
+    "rd": "～じん",
+    "rom": "~jin",
+    "en": "person from ~ (nationality suffix)",
+    "my": "--လူမျိုး",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "アメリカ人",
+    "rd": "アメリカじん",
+    "rom": "amerika-jin",
+    "en": "American (person)",
+    "my": "အမေရိကန်လူမျိုး",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "教師",
+    "rd": "きょうし",
+    "rom": "kyoushi",
+    "en": "teacher (as a profession)",
+    "my": "ဆရာ/ဆရာမ (အလုပ်အကိုင်တွင်အသုံးများ)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "社員",
+    "rd": "しゃいん",
+    "rom": "shain",
+    "en": "employee",
+    "my": "ဝန်ထမ်း",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "銀行員",
+    "rd": "ぎんこういん",
+    "rom": "ginkouin",
+    "en": "bank employee",
+    "my": "ဘဏ်ဝန်ထမ်း",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "研究者",
+    "rd": "けんきゅうしゃ",
+    "rom": "kenkyuusha",
+    "en": "researcher",
+    "my": "သုတေသနပြုသူ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "だれ",
+    "rd": "だれ",
+    "rom": "dare",
+    "en": "who",
+    "my": "ဘယ်သူ(ရိုးရိုး)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "～歳",
+    "rd": "～さい",
+    "rom": "~sai",
+    "en": "~ years old",
+    "my": "--နှစ်(အသက်)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "おいくつ",
+    "rd": "おいくつ",
+    "rom": "oikutsu",
+    "en": "how old (polite)",
+    "my": "အသက်ဘယ်နှစ်နှစ်လဲ (ယဉ်ကျေး)",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "…はい",
+    "rd": "…はい",
+    "rom": "...hai",
+    "en": "yes",
+    "my": "ဟုတ်ကဲ့",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "…いいえ",
+    "rd": "…いいえ",
+    "rom": "...iie",
+    "en": "no",
+    "my": "ဟင်အင်း",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "初めまして",
+    "rd": "はじめまして",
+    "rom": "hajimemashite",
+    "en": "How do you do? (Nice to meet you)",
+    "my": "တွေ့ရတာဝမ်းသာပါတယ်",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "～から来ました",
+    "rd": "～からきました",
+    "rom": "~kara kimashita",
+    "en": "I came from ~",
+    "my": "--ကနေလာပါတယ်။",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "どうぞ、よろしくお願いします",
+    "rd": "どうぞ、よろしくおねがいします",
+    "rom": "douzo, yoroshiku onegaishimasu",
+    "en": "Please treat me well (Nice to meet you)",
+    "my": "မိတ်ဆွေအဖြစ် ခင်ခင်မင်မင်ဆက်ဆံပါ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "失礼ですが",
+    "rd": "しつれいですが",
+    "rom": "shitsurei desu ga",
+    "en": "Excuse me, but...",
+    "my": "တစ်ဆိတ်လောက်။ စိတ်မရှိပါနဲ့။",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "お名前は？",
+    "rd": "おなまえは？",
+    "rom": "onamae wa?",
+    "en": "What is your name?",
+    "my": "နာမည်ဘယ်လိုခေါ်ပါသလဲ။",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "こちらは、～さんです",
+    "rd": "こちらは、～さんです",
+    "rom": "kochira wa, ~san desu",
+    "en": "This is Mr./Ms. ~",
+    "my": "သူက ကို--/မ--ဖြစ်ပါတယ်။",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "アメリカ",
+    "rd": "アメリカ",
+    "rom": "amerika",
+    "en": "America; the USA",
+    "my": "အမေရိကန်",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "イギリス",
+    "rd": "イギリス",
+    "rom": "igirisu",
+    "en": "England; the UK",
+    "my": "အင်္ဂလန်",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "インド",
+    "rd": "インド",
+    "rom": "indo",
+    "en": "India",
+    "my": "အိန္ဒိယ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "インドネシア",
+    "rd": "インドネシア",
+    "rom": "indoneshia",
+    "en": "Indonesia",
+    "my": "အင်ဒိုနီးရှား",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "韓国",
+    "rd": "かんこく",
+    "rom": "kankoku",
+    "en": "South Korea",
+    "my": "တောင်ကိုရီးယား",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "タイ",
+    "rd": "タイ",
+    "rom": "tai",
+    "en": "Thailand",
+    "my": "ထိုင်း",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "中国",
+    "rd": "ちゅうごく",
+    "rom": "chuugoku",
+    "en": "China",
+    "my": "တရုတ်",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "ドイツ",
+    "rd": "ドイツ",
+    "rom": "doitsu",
+    "en": "Germany",
+    "my": "ဂျာမနီ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "日本",
+    "rd": "にほん",
+    "rom": "nihon",
+    "en": "Japan",
+    "my": "ဂျပန်",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "ブラジル",
+    "rd": "ブラジル",
+    "rom": "burajiru",
+    "en": "Brazil",
+    "my": "ဘရာဇီး",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "IMC",
+    "rd": "IMC",
+    "rom": "IMC",
+    "en": "IMC (company)",
+    "my": "IMCကုမ္ပဏီ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "パワー電気",
+    "rd": "パワーでんき",
+    "rom": "pawaa denki",
+    "en": "Power Electric (company)",
+    "my": "Power Electric ကုမ္ပဏီ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "ブラジルエアー",
+    "rd": "ブラジルエアー",
+    "rom": "burajiru eaa",
+    "en": "Brazil Air (company)",
+    "my": "Brazil Air ကုမ္ပဏီ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "AKC",
+    "rd": "AKC",
+    "rom": "AKC",
+    "en": "AKC (company)",
+    "my": "AKCကုမ္ပဏီ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "神戸病院",
+    "rd": "こうべびょういん",
+    "rom": "koube byouin",
+    "en": "Kobe Hospital",
+    "my": "Kobeဆေးရုံ",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "さくら大学",
+    "rd": "さくらだいがく",
+    "rom": "sakura daigaku",
+    "en": "Sakura University",
+    "my": "Sakuraတက္ကသိုလ်",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "富士大学",
+    "rd": "ふじだいがく",
+    "rom": "fuji daigaku",
+    "en": "Fuji University",
+    "my": "Fujiတက္ကသိုလ်",
+    "cat": "Minna L1"
+  },
+  {
+    "jp": "この～",
+    "rd": "この～",
+    "rom": "kono ~",
+    "en": "this ~",
+    "my": "ဒီ--",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "その～",
+    "rd": "その～",
+    "rom": "sono ~",
+    "en": "that ~",
+    "my": "ဟို--",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "あの～",
+    "rd": "あの～",
+    "rom": "ano ~",
+    "en": "that ~ (over there)",
+    "my": "ဟို့--",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "辞書",
+    "rd": "じしょ",
+    "rom": "jisho",
+    "en": "dictionary",
+    "my": "အဘိဓာန်",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "手帳",
+    "rd": "てちょう",
+    "rom": "techou",
+    "en": "pocket notebook; diary",
+    "my": "နေ့စဉ်မှတ်တမ်း",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "名刺",
+    "rd": "めいし",
+    "rom": "meishi",
+    "en": "business card",
+    "my": "လိပ်စာကတ်",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "カード",
+    "rd": "カード",
+    "rom": "kaado",
+    "en": "card",
+    "my": "ကတ်",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "ボールペン",
+    "rd": "ボールペン",
+    "rom": "boorupen",
+    "en": "ballpoint pen",
+    "my": "ဘောပင်",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "シャープペンシル",
+    "rd": "シャープペンシル",
+    "rom": "shaapu penshiru",
+    "en": "mechanical pencil",
+    "my": "ဘောပင်ခဲတံ",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "かぎ",
+    "rd": "かぎ",
+    "rom": "kagi",
+    "en": "key",
+    "my": "သော့",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "CD",
+    "rd": "CD",
+    "rom": "shiidii",
+    "en": "CD",
+    "my": "စီဒီ",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "コンピュータ",
+    "rd": "コンピュータ",
+    "rom": "konpyuuta",
+    "en": "computer",
+    "my": "ကွန်ပျူတာ",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "チョコレート",
+    "rd": "チョコレート",
+    "rom": "chokoreeto",
+    "en": "chocolate",
+    "my": "ချောကလက်",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "[お]みやげ",
+    "rd": "[お]みやげ",
+    "rom": "[o]miyage",
+    "en": "souvenir",
+    "my": "ဒေသထွက် လက်ဆောင်",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "～語",
+    "rd": "～ご",
+    "rom": "~go",
+    "en": "~ language",
+    "my": "～စာ၊ ～စကား",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "あのう",
+    "rd": "あのう",
+    "rom": "anou",
+    "en": "um; well (hesitation)",
+    "my": "ဟိုလေ--",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "えっ",
+    "rd": "えっ",
+    "rom": "e'",
+    "en": "eh?; what?",
+    "my": "ဟယ်။ ဘာလဲ (မျှော်လင့်မထားသော အရာကို ကြားသောအခါ)",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "どうも ありがとう ございます。",
+    "rd": "どうも ありがとう ございます。",
+    "rom": "doumo arigatou gozaimasu.",
+    "en": "thank you very much",
+    "my": "ကျေးဇူးတင်ပါသည်",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "違います。",
+    "rd": "ちがいます。",
+    "rom": "chigaimasu.",
+    "en": "No, that's wrong.",
+    "my": "မဟုတ်ပါဘူး",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "あ",
+    "rd": "あ",
+    "rom": "a",
+    "en": "ah!; oh!",
+    "my": "ဟာ (တစ်စုံတစ်ခုကိုထူးဆန်းသောအခါ)",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "これから お世話に なります",
+    "rd": "これから おせわに なります",
+    "rom": "kore kara osewa ni narimasu",
+    "en": "I look forward to working with you; please take care of me",
+    "my": "အစစအရာအရာ ကူညီဖေးမပေးပါ။",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "こちらこそ [どうぞ]よろしく[お願い]します",
+    "rd": "こちらこそ [どうぞ]よろしく[おねがい]します",
+    "rom": "kochira koso [douzo] yoroshiku [onegai] shimasu",
+    "en": "Likewise, pleased to meet you",
+    "my": "ကျွန်တော်ကိုလည်း မိတ်ဆွေအဖြစ် အသိအမှတ်ပြုပါ။",
+    "cat": "Minna L2"
+  },
+  {
+    "jp": "事務所",
+    "rd": "じむしょ",
+    "rom": "jimusho",
+    "en": "office",
+    "my": "ရုံးခန်း",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "会議室",
+    "rd": "かいぎしつ",
+    "rom": "kaigishitsu",
+    "en": "meeting room",
+    "my": "အစည်းအဝေးခန်း",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "受付",
+    "rd": "うけつけ",
+    "rom": "uketsuke",
+    "en": "reception (desk)",
+    "my": "စုံစမ်းရန်ကောင်းတာ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "ロビー",
+    "rd": "ロビー",
+    "rom": "robii",
+    "en": "lobby",
+    "my": "ဧည့်ခန်း၊ ဟိုတယ်ဧည့်ခန်း",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "エスカレーター",
+    "rd": "エスカレーター",
+    "rom": "esukareetaa",
+    "en": "escalator",
+    "my": "စက်လှေခါး",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "自動販売機",
+    "rd": "じどうはんばいき",
+    "rom": "jidouhanbaiki",
+    "en": "vending machine",
+    "my": "အလိုအလျောက် စျေးရောင်းသည့်စက်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "お国",
+    "rd": "おくに",
+    "rom": "okuni",
+    "en": "(your) country",
+    "my": "နိုင်ငံ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "靴",
+    "rd": "くつ",
+    "rom": "kutsu",
+    "en": "shoes",
+    "my": "ဖိနပ်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "ネクタイ",
+    "rd": "ネクタイ",
+    "rom": "nekutai",
+    "en": "necktie",
+    "my": "လည်စည်း",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "ワイン",
+    "rd": "ワイン",
+    "rom": "wain",
+    "en": "wine",
+    "my": "ဝိုင်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "売り場",
+    "rd": "うりば",
+    "rom": "uriba",
+    "en": "sales floor; counter",
+    "my": "အရောင်းကောင်တာ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "地下",
+    "rd": "ちか",
+    "rom": "chika",
+    "en": "basement; underground",
+    "my": "မြေအောက်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "～階",
+    "rd": "～かい",
+    "rom": "~kai",
+    "en": "~th floor",
+    "my": "အထပ်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "何階",
+    "rd": "なんかい",
+    "rom": "nankai",
+    "en": "which floor",
+    "my": "ဘယ်နှစ်ထပ်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "いらっしゃいませ",
+    "rd": "いらっしゃいませ",
+    "rom": "irasshaimase",
+    "en": "welcome (to a shop)",
+    "my": "ကြိုဆိုပါတယ်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "[～を]見せてください",
+    "rd": "[～を]みせてください",
+    "rom": "[~o] misete kudasai",
+    "en": "please show me ~",
+    "my": "(ကို) ပြပါ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "じゃ",
+    "rd": "じゃ",
+    "rom": "ja",
+    "en": "well then; then",
+    "my": "ကဲ-",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "[～を]ください",
+    "rd": "[～を]ください",
+    "rom": "[~o] kudasai",
+    "en": "please give me ~",
+    "my": "(ကို) ပေးပါ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "イタリア",
+    "rd": "イタリア",
+    "rom": "itaria",
+    "en": "Italy",
+    "my": "အီတလီ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "スイス",
+    "rd": "スイス",
+    "rom": "suisu",
+    "en": "Switzerland",
+    "my": "ဆွစ်ဇာလန်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "フランス",
+    "rd": "フランス",
+    "rom": "furansu",
+    "en": "France",
+    "my": "ပြင်သစ်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "ジャカルタ",
+    "rd": "ジャカルタ",
+    "rom": "jakaruta",
+    "en": "Jakarta",
+    "my": "ဂျကာတာ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "バンコク",
+    "rd": "バンコク",
+    "rom": "bankoku",
+    "en": "Bangkok",
+    "my": "ဘန်ကောက်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "ベルリン",
+    "rd": "ベルリン",
+    "rom": "berurin",
+    "en": "Berlin",
+    "my": "ဘာလင်",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "新大阪",
+    "rd": "しんおおさか",
+    "rom": "shin-oosaka",
+    "en": "Shin-Osaka",
+    "my": "ရှင်းအိုဆာကာ",
+    "cat": "Minna L3"
+  },
+  {
+    "jp": "起きます",
+    "rd": "おきます",
+    "rom": "okimasu",
+    "en": "to get up; to wake up",
+    "my": "ထသည်။ နိုးသည်။",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "寝ます",
+    "rd": "ねます",
+    "rom": "nemasu",
+    "en": "to sleep; to go to bed",
+    "my": "အိပ်သည်။",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "働きます",
+    "rd": "はたらきます",
+    "rom": "hatarakimasu",
+    "en": "to work",
+    "my": "အလုပ်လုပ်သည်။",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "休みます",
+    "rd": "やすみます",
+    "rom": "yasumimasu",
+    "en": "to rest; to take a day off",
+    "my": "အနားယူသည်။",
+    "cat": "Minna L4",
+    "t": [
+      "dates"
+    ]
+  },
+  {
+    "jp": "勉強します",
+    "rd": "べんきょうします",
+    "rom": "benkyou shimasu",
+    "en": "to study",
+    "my": "စာကျက်သည်။",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "終わります",
+    "rd": "おわります",
+    "rom": "owarimasu",
+    "en": "to finish; to end",
+    "my": "ပြီးဆုံးသည်။",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "美術館",
+    "rd": "びじゅつかん",
+    "rom": "bijutsukan",
+    "en": "art museum",
+    "my": "အနုပညာပြတိုက်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "～時",
+    "rd": "～じ",
+    "rom": "~ji",
+    "en": "~ o'clock",
+    "my": "～နာရီ",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "～ふん",
+    "rd": "～ふん",
+    "rom": "~fun",
+    "en": "~ minutes",
+    "my": "မိနစ်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "～ぷん",
+    "rd": "～ぷん",
+    "rom": "~pun",
+    "en": "~ minutes",
+    "my": "မိနစ်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "晩/夜",
+    "rd": "ばん/よる",
+    "rom": "ban/yoru",
+    "en": "evening; night",
+    "my": "ည",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "おととい",
+    "rd": "おととい",
+    "rom": "ototoi",
+    "en": "day before yesterday",
+    "my": "တစ်နေ့က",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "きのう",
+    "rd": "きのう",
+    "rom": "kinou",
+    "en": "yesterday",
+    "my": "မနေ့က",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "あさって",
+    "rd": "あさって",
+    "rom": "asatte",
+    "en": "day after tomorrow",
+    "my": "သဘက်ခါ",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "今朝",
+    "rd": "けさ",
+    "rom": "kesa",
+    "en": "this morning",
+    "my": "ဒီမနက်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "今晩",
+    "rd": "こんばん",
+    "rom": "konban",
+    "en": "tonight; this evening",
+    "my": "ဒီည",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "休み",
+    "rd": "やすみ",
+    "rom": "yasumi",
+    "en": "holiday; day off",
+    "my": "နားရက်၊ အားလပ်ရက်",
+    "cat": "Minna L4",
+    "t": [
+      "dates"
+    ]
+  },
+  {
+    "jp": "昼休み",
+    "rd": "ひるやすみ",
+    "rom": "hiruyasumi",
+    "en": "lunch break",
+    "my": "နေ့လည်နားချိန်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "会議",
+    "rd": "かいぎ",
+    "rom": "kaigi",
+    "en": "meeting; conference",
+    "my": "အစည်းအဝေး",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "毎晩",
+    "rd": "まいばん",
+    "rom": "maiban",
+    "en": "every evening",
+    "my": "ညတိုင်း",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "～から",
+    "rd": "～から",
+    "rom": "~kara",
+    "en": "from ~",
+    "my": "～မှ",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "～まで",
+    "rd": "～まで",
+    "rom": "~made",
+    "en": "until ~; to ~",
+    "my": "～အထိ",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "～と～",
+    "rd": "～と～",
+    "rom": "~to~",
+    "en": "and; with",
+    "my": "～နှင့်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "大変ですね",
+    "rd": "たいへんですね",
+    "rom": "taihen desu ne",
+    "en": "That's tough, isn't it?",
+    "my": "ဒုက္ခများမှာဘဲနော်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "ニューヨーク",
+    "rd": "ニューヨーク",
+    "rom": "nyuuyooku",
+    "en": "New York",
+    "my": "နယူးယောက်မြို့",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "ペキン",
+    "rd": "ペキン",
+    "rom": "pekin",
+    "en": "Beijing",
+    "my": "ပီကင်းမြို့",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "ロサンゼルス",
+    "rd": "ロサンゼルス",
+    "rom": "rosanzerusu",
+    "en": "Los Angeles",
+    "my": "လော့စ်အိန်ဂျယ်လိစ်မြို့",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "ロンドン",
+    "rd": "ロンドン",
+    "rom": "rondon",
+    "en": "London",
+    "my": "လန်ဒန်မြို့",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "あすか",
+    "rd": "あすか",
+    "rom": "asuka",
+    "en": "Asuka (restaurant name)",
+    "my": "Asuka စားသောက်ဆိုင်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "アップル銀行",
+    "rd": "アップルぎんこう",
+    "rom": "appuru ginkou",
+    "en": "Apple Bank",
+    "my": "Apple ဘဏ်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "みどり図書館",
+    "rd": "みどりとしょかん",
+    "rom": "midori toshokan",
+    "en": "Midori Library",
+    "my": "Midori စာကြည့်တိုက်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "やまと美術館",
+    "rd": "やまとびじゅつかん",
+    "rom": "yamato bijutsukan",
+    "en": "Yamato Art Museum",
+    "my": "Yamato အနုပညာပြတိုက်",
+    "cat": "Minna L4"
+  },
+  {
+    "jp": "行きます",
+    "rd": "いきます",
+    "rom": "ikimasu",
+    "en": "to go",
+    "my": "သွားသည်",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "来ます",
+    "rd": "きます",
+    "rom": "kimasu",
+    "en": "to come",
+    "my": "လာသည်",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "帰ります",
+    "rd": "かえります",
+    "rom": "kaerimasu",
+    "en": "to go home; to return",
+    "my": "ပြန်သည် (အိမ်ပြန်သည်)",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "新幹線",
+    "rd": "しんかんせん",
+    "rom": "shinkansen",
+    "en": "bullet train",
+    "my": "ကျည်ဆံရထား",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "歩いて",
+    "rd": "あるいて",
+    "rom": "aruite",
+    "en": "on foot; walking",
+    "my": "လမ်းလျှောက်ပြီး",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "一人",
+    "rd": "ひとり",
+    "rom": "hitori",
+    "en": "alone; one person",
+    "my": "တစ်ယောက်တည်း",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "～年",
+    "rd": "～ねん",
+    "rom": "~nen",
+    "en": "year ~",
+    "my": "～နှစ်",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "～月",
+    "rd": "～がつ",
+    "rom": "~gatsu",
+    "en": "month of ~; ~th month",
+    "my": "～လ (ဇန်နဝါရီလ၊ ဖေဖော်ဝါရီလ)",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "１日",
+    "rd": "ついたち",
+    "rom": "tsuitachi",
+    "en": "1st (of the month)",
+    "my": "၁ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２日",
+    "rd": "ふつか",
+    "rom": "futsuka",
+    "en": "2nd",
+    "my": "၂ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "３日",
+    "rd": "みっか",
+    "rom": "mikka",
+    "en": "3rd",
+    "my": "၃ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "４日",
+    "rd": "よっか",
+    "rom": "yokka",
+    "en": "4th",
+    "my": "၄ ရက်၊",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "５日",
+    "rd": "いつか",
+    "rom": "itsuka",
+    "en": "5th",
+    "my": "၅ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "６日",
+    "rd": "むいか",
+    "rom": "muika",
+    "en": "6th",
+    "my": "၆ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "７日",
+    "rd": "なのか",
+    "rom": "nanoka",
+    "en": "7th",
+    "my": "၇ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "８日",
+    "rd": "ようか",
+    "rom": "youka",
+    "en": "8th",
+    "my": "၈ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "９日",
+    "rd": "ここのか",
+    "rom": "kokonoka",
+    "en": "9th",
+    "my": "၉ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１０日",
+    "rd": "とおか",
+    "rom": "tooka",
+    "en": "10th",
+    "my": "၁၀ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１４日",
+    "rd": "じゅうよっか",
+    "rom": "juuyokka",
+    "en": "14th",
+    "my": "၁၄ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２０日",
+    "rd": "はつか",
+    "rom": "hatsuka",
+    "en": "20th",
+    "my": "၂၀ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２４日",
+    "rd": "にじゅうよっか",
+    "rom": "nijuuyokka",
+    "en": "24th",
+    "my": "၂၄ ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "～日",
+    "rd": "～にち",
+    "rom": "~nichi",
+    "en": "~th day",
+    "my": "～ရက်",
+    "cat": "Minna L5",
+    "t": [
+      "dates"
+    ]
+  },
+  {
+    "jp": "誕生日",
+    "rd": "たんじょうび",
+    "rom": "tanjoubi",
+    "en": "birthday",
+    "my": "မွေးနေ့",
+    "cat": "Minna L5",
+    "t": [
+      "dates",
+      "dates"
+    ]
+  },
+  {
+    "jp": "そうですね。",
+    "rd": "そうですね。",
+    "rom": "sou desu ne.",
+    "en": "That's right, isn't it?",
+    "my": "ဟုတ်တယ်နော်",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "[どうも]ありがとう ございました",
+    "rd": "[どうも]ありがとう ございました",
+    "rom": "[doumo] arigatou gozaimashita",
+    "en": "thank you very much (past)",
+    "my": "ကျေးဇူးအများကြီးတင်ပါတယ်",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "～番線",
+    "rd": "～ばんせん",
+    "rom": "~bansen",
+    "en": "platform ~",
+    "my": "ရထား စီးသော platform",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "次",
+    "rd": "つぎ",
+    "rom": "tsugi",
+    "en": "next",
+    "my": "နောက်ဟာ",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "普通",
+    "rd": "ふつう",
+    "rom": "futsuu",
+    "en": "ordinary (train); local train",
+    "my": "သာမာန်/ရိုးရိုးရထား",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "急行",
+    "rd": "きゅうこう",
+    "rom": "kyuukou",
+    "en": "express (train)",
+    "my": "အမြန်ရထား",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "特急",
+    "rd": "とっきゅう",
+    "rom": "tokkyuu",
+    "en": "limited express",
+    "my": "အထူးရထား",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "甲子園",
+    "rd": "こうしえん",
+    "rom": "koushien",
+    "en": "Koshien",
+    "my": "Koushien",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "大阪城",
+    "rd": "おおさかじょう",
+    "rom": "oosakajou",
+    "en": "Osaka Castle",
+    "my": "အိုဆာကာရဲတိုက်",
+    "cat": "Minna L5"
+  },
+  {
+    "jp": "食べます",
+    "rd": "たべます",
+    "rom": "tabemasu",
+    "en": "to eat",
+    "my": "စားသည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "飲みます",
+    "rd": "のみます",
+    "rom": "nomimasu",
+    "en": "to drink",
+    "my": "သောက်သည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "吸います",
+    "rd": "すいます",
+    "rom": "suimasu",
+    "en": "to smoke",
+    "my": "ဆေးလိပ်သောက်သည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "見ます",
+    "rd": "みます",
+    "rom": "mimasu",
+    "en": "to see",
+    "my": "ကြည့်သည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "聞きます",
+    "rd": "ききます",
+    "rom": "kikimasu",
+    "en": "to listen",
+    "my": "နားထောင်သည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "読みます",
+    "rd": "よみます",
+    "rom": "yomimasu",
+    "en": "to read",
+    "my": "ဖတ်သည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "書きます",
+    "rd": "かきます",
+    "rom": "kakimasu",
+    "en": "to write",
+    "my": "ရေးသည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "買います",
+    "rd": "かいます",
+    "rom": "kaimasu",
+    "en": "to buy",
+    "my": "ဝယ်သည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "撮ります",
+    "rd": "とります",
+    "rom": "torimasu",
+    "en": "to take (a photo)",
+    "my": "ရိုက်သည်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "[写真を～]",
+    "rd": "[しゃしんを～]",
+    "rom": "[shashin o ~]",
+    "en": "to take a photo",
+    "my": "(ဓာတ်ပုံကို)။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "します",
+    "rd": "します",
+    "rom": "shimasu",
+    "en": "to do",
+    "my": "လုပ်သည်။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "会います",
+    "rd": "あいます",
+    "rom": "aimasu",
+    "en": "to meet",
+    "my": "တွေ့သည်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "[友達に～]",
+    "rd": "[ともだちに～]",
+    "rom": "[tomodachi ni ~]",
+    "en": "[with a friend] ~",
+    "my": "(သူငယ်ချင်းနဲ့)။",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "ごはん",
+    "rd": "ごはん",
+    "rom": "gohan",
+    "en": "cooked rice; meal",
+    "my": "ထမင်း",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "晩ご飯",
+    "rd": "ばんごはん",
+    "rom": "bangohan",
+    "en": "dinner; supper",
+    "my": "ညစာ၊ ညထမင်း",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "卵",
+    "rd": "たまご",
+    "rom": "tamago",
+    "en": "egg",
+    "my": "ကြက်ဥ",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "紅茶",
+    "rd": "こうちゃ",
+    "rom": "koucha",
+    "en": "black tea",
+    "my": "လက်ဖက်ရည်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "ミルク",
+    "rd": "ミルク",
+    "rom": "miruku",
+    "en": "milk",
+    "my": "နွားနို့၊ နို့ရည်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "[お]酒",
+    "rd": "[お]さけ",
+    "rom": "[o]sake",
+    "en": "sake",
+    "my": "အရက်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "たばこ",
+    "rd": "たばこ",
+    "rom": "tabako",
+    "en": "cigarette",
+    "my": "ဆေးလိပ်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "レポート",
+    "rd": "レポート",
+    "rom": "repooto",
+    "en": "report",
+    "my": "report အစီရင်ခံစာ",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "ビデオ",
+    "rd": "ビデオ",
+    "rom": "bideo",
+    "en": "video",
+    "my": "ဗီဒီယို",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "庭",
+    "rd": "にわ",
+    "rom": "niwa",
+    "en": "garden",
+    "my": "ခြံ၊ ခြံဝင်း",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "お花見",
+    "rd": "おはなみ",
+    "rom": "ohanami",
+    "en": "cherry-blossom viewing",
+    "my": "ပန်းကြည့်ခြင်း",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "ときどき",
+    "rd": "ときどき",
+    "rom": "tokidoki",
+    "en": "sometimes",
+    "my": "တခါတလေ",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "ええ",
+    "rd": "ええ",
+    "rom": "ee",
+    "en": "yes",
+    "my": "အင်း",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "いいですね",
+    "rd": "いいですね",
+    "rom": "ii desu ne",
+    "en": "that's good, isn't it?",
+    "my": "ကောင်းတယ်နော်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "何ですか",
+    "rd": "なんですか",
+    "rom": "nan desu ka",
+    "en": "what is it?",
+    "my": "ဘာလဲ",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "じゃ、また[あした]",
+    "rd": "じゃ、また[あした]",
+    "rom": "ja, mata [ashita]",
+    "en": "Well then, see you [tomorrow].",
+    "my": "ကဲဒါဆို--မနက်ဖြန်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "メキシコ",
+    "rd": "メキシコ",
+    "rom": "mekishiko",
+    "en": "Mexico",
+    "my": "မက္ကဆီကို",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "大阪デパート",
+    "rd": "おおさかデパート",
+    "rom": "oosaka depaato",
+    "en": "Osaka Department Store",
+    "my": "အိုဆာကာကုန်တိုက်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "つるや",
+    "rd": "つるや",
+    "rom": "tsuruya",
+    "en": "Tsuruya (restaurant name)",
+    "my": "Tsuruya စားသောက်ဆိုင်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "フランス屋",
+    "rd": "フランスや",
+    "rom": "furansu ya",
+    "en": "Furansu-ya (supermarket)",
+    "my": "Furansu စူပါမားကတ်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "毎日屋",
+    "rd": "まいにちや",
+    "rom": "mainichi ya",
+    "en": "Mainichi-ya (supermarket)",
+    "my": "Mainichi စူပါမားကတ်",
+    "cat": "Minna L6"
+  },
+  {
+    "jp": "切ります",
+    "rd": "きります",
+    "rom": "kirimasu",
+    "en": "to cut",
+    "my": "ဖြတ်သည်။ ကိုက်ဖြတ်သည်။",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "送ります",
+    "rd": "おくります",
+    "rom": "okurimasu",
+    "en": "to send",
+    "my": "ပို့သည်။(ပစ္စည်း၊ စာ)",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "あげます",
+    "rd": "あげます",
+    "rom": "agemasu",
+    "en": "to give",
+    "my": "ပေးသည်။",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "貰います",
+    "rd": "もらいます",
+    "rom": "moraimasu",
+    "en": "to receive",
+    "my": "ယူသည်။ လက်ခံရရှိသည်။",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "貸します",
+    "rd": "かします",
+    "rom": "kashimasu",
+    "en": "to lend",
+    "my": "ငှားသည်။ (သူများကို ငှား)",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "借ります",
+    "rd": "かります",
+    "rom": "karimasu",
+    "en": "to borrow",
+    "my": "ချေးငှားသည်။(သူများဆီမှ ချေး)",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "教えます",
+    "rd": "おしえます",
+    "rom": "oshiemasu",
+    "en": "to teach",
+    "my": "သင်ကြားသည်။",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "習います",
+    "rd": "ならいます",
+    "rom": "naraimasu",
+    "en": "to learn",
+    "my": "သင်ယူသည်။",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "かけます[電話を～]",
+    "rd": "かけます[でんわを～]",
+    "rom": "kakemasu [denwa o ~]",
+    "en": "to make a (phone) call",
+    "my": "ဖုန်းဆက်သည်။",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "はし",
+    "rd": "はし",
+    "rom": "hashi",
+    "en": "chopsticks",
+    "my": "တူ(ထမင်းစားတဲ့တူ)",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "スプーン",
+    "rd": "スプーン",
+    "rom": "supuun",
+    "en": "spoon",
+    "my": "ဇွန်း",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "ナイフ",
+    "rd": "ナイフ",
+    "rom": "naifu",
+    "en": "knife",
+    "my": "ဓား",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "フォーク",
+    "rd": "フォーク",
+    "rom": "fooku",
+    "en": "fork",
+    "my": "ခက်ရင်း",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "はさみ",
+    "rd": "はさみ",
+    "rom": "hasami",
+    "en": "scissors",
+    "my": "ကတ်ကြေး",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "ケータイ",
+    "rd": "ケータイ",
+    "rom": "keetai",
+    "en": "mobile phone",
+    "my": "လက်ကိုင်ဖုန်း",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "メール",
+    "rd": "メール",
+    "rom": "meeru",
+    "en": "e-mail",
+    "my": "အီးမေးလ်",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "年賀状",
+    "rd": "ねんがじょう",
+    "rom": "nengajou",
+    "en": "New Year's card",
+    "my": "new year card",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "パンチ",
+    "rd": "パンチ",
+    "rom": "panchi",
+    "en": "punch",
+    "my": "punch",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "ホッチキス",
+    "rd": "ホッチキス",
+    "rom": "hocchikisu",
+    "en": "stapler",
+    "my": "stapler",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "セロテープ",
+    "rd": "セロテープ",
+    "rom": "seroteepu",
+    "en": "cellophane tape",
+    "my": "တိပ်",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "クリスマス",
+    "rd": "クリスマス",
+    "rom": "kurisumasu",
+    "en": "Christmas",
+    "my": "ခရစ်စမတ်",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "もう～",
+    "rd": "もう～",
+    "rom": "mou ~",
+    "en": "already ~",
+    "my": "～ပြီးပြီ",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "これから",
+    "rd": "これから",
+    "rom": "kore kara",
+    "en": "from now on",
+    "my": "အခုကစပြီး---",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "[～、]すてきですね",
+    "rd": "[～、]すてきですね",
+    "rom": "[~,] suteki desu ne",
+    "en": "That's lovely, isn't it?",
+    "my": "လှလိုက်တာ",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "いらっしゃい",
+    "rd": "いらっしゃい",
+    "rom": "irasshai",
+    "en": "welcome",
+    "my": "ကြိုဆိုပါတယ်",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "どうぞ、おあがりください。",
+    "rd": "どうぞ、おあがりください。",
+    "rom": "douzo, oagari kudasai.",
+    "en": "Please come in.",
+    "my": "ကျေးဇူးပြုပြီး အိမ်ပေါ်တက်ပါ။",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "[～は]いかがですか",
+    "rd": "[～は]いかがですか",
+    "rom": "[~wa] ikaga desu ka",
+    "en": "How about ~?",
+    "my": "ဘယ်လိုလဲဟင်",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "ごちそうさま[でした]",
+    "rd": "ごちそうさま[でした]",
+    "rom": "gochisousama [deshita]",
+    "en": "Thank you for the meal (said after eating)",
+    "my": "စားပြီးပါပြီ (အစား အသောက်ကို စားပြီးသည့်အခါ ပြောသောစကား)",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "スペイン",
+    "rd": "スペイン",
+    "rom": "supein",
+    "en": "Spain",
+    "my": "စပိန်",
+    "cat": "Minna L7"
+  },
+  {
+    "jp": "ハンサム [な]",
+    "rd": "ハンサム [な]",
+    "rom": "hansamu [na]",
+    "en": "handsome",
+    "my": "ခန့်ချောသော(ကျား)",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "きれい[な]",
+    "rd": "きれい[な]",
+    "rom": "kirei[na]",
+    "en": "beautiful; clean",
+    "my": "လှသော၊ ချောမောသော(မ)",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "静か[な]",
+    "rd": "しずか[な]",
+    "rom": "shizuka[na]",
+    "en": "quiet",
+    "my": "တိတ်ဆိတ်သော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "賑やか[な]",
+    "rd": "にぎやか[な]",
+    "rom": "nigiyaka[na]",
+    "en": "lively; bustling",
+    "my": "စည်ကားသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "有名 [な]",
+    "rd": "ゆうめい [な]",
+    "rom": "yuumei [na]",
+    "en": "famous",
+    "my": "နာမည်ကြီးသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "親切 [な]",
+    "rd": "しんせつ [な]",
+    "rom": "shinsetsu [na]",
+    "en": "kind",
+    "my": "ဖော်ရွေသော။ ကြင်နာတတ်သော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "元気 [な]",
+    "rd": "げんき [な]",
+    "rom": "genki [na]",
+    "en": "fine; healthy; energetic",
+    "my": "ကျန်းမာသော၊ သန်မာသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "暇 [な]",
+    "rd": "ひま [な]",
+    "rom": "hima [na]",
+    "en": "free time; leisure",
+    "my": "အားသော၊ အားလပ်သော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "便利 [な]",
+    "rd": "べんり [な]",
+    "rom": "benri [na]",
+    "en": "convenient",
+    "my": "အဆင်ပြေသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "素敵 [な]",
+    "rd": "すてき [な]",
+    "rom": "suteki [na]",
+    "en": "wonderful; lovely",
+    "my": "လှသော၊ စွမ်းဖွယ်ကောင်းသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "いい、良い",
+    "rd": "いい、よい",
+    "rom": "ii, yoi",
+    "en": "good",
+    "my": "ကောင်းသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "暑い、熱い",
+    "rd": "あつい、あつい",
+    "rom": "atsui, atsui",
+    "en": "hot",
+    "my": "ပူအိုက်သော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "おもしろい",
+    "rd": "おもしろい",
+    "rom": "omoshiroi",
+    "en": "interesting",
+    "my": "စိတ်ဝင်စားစရာကောင်းသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "おいしい",
+    "rd": "おいしい",
+    "rom": "oishii",
+    "en": "delicious; tasty",
+    "my": "အရသာရှိသော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "楽しい",
+    "rd": "たのしい",
+    "rom": "tanoshii",
+    "en": "fun; enjoyable",
+    "my": "ပျော်ရွှင်သော",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "桜",
+    "rd": "さくら",
+    "rom": "sakura",
+    "en": "cherry blossom",
+    "my": "ဆာကူရာပန်း၊ ချယ်ရီပန်း",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "所",
+    "rd": "ところ",
+    "rom": "tokoro",
+    "en": "place",
+    "my": "နေရာ",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "寮",
+    "rd": "りょう",
+    "rom": "ryou",
+    "en": "dormitory",
+    "my": "အဆောင်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "生活",
+    "rd": "せいかつ",
+    "rom": "seikatsu",
+    "en": "life; living",
+    "my": "နေထိုင်မှု",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "[お]仕事",
+    "rd": "[お]しごと",
+    "rom": "[o]shigoto",
+    "en": "work; job",
+    "my": "အလုပ်အကိုင်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "どんな～",
+    "rd": "どんな～",
+    "rom": "donna ~",
+    "en": "what kind of ~",
+    "my": "ဘယ်လိုမျိုး",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "～が、～",
+    "rd": "～が、～",
+    "rom": "~ga, ~",
+    "en": "~ but ~",
+    "my": "～ပေမဲ့လဲ～",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "もういっぱい",
+    "rd": "もういっぱい",
+    "rom": "mou ippai",
+    "en": "one more (cup/glass)",
+    "my": "နောက်တစ်ခွက်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "いかがですか",
+    "rd": "いかがですか",
+    "rom": "ikaga desu ka",
+    "en": "How is it?; How about ~?",
+    "my": "ဘယ်လိုလဲဟင်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "いいえ、けっこうです",
+    "rd": "いいえ、けっこうです",
+    "rom": "iie, kekkou desu",
+    "en": "No, thank you; No, that's enough",
+    "my": "ဟင့်အင်း တော်ပါပြီ",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "もう～です[ね]",
+    "rd": "もう～です[ね]",
+    "rom": "mou ~desu [ne]",
+    "en": "already ~",
+    "my": "～ပြီနော်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "そろそろ 失礼します",
+    "rd": "そろそろ しつれいします",
+    "rom": "sorosoro shitsurei shimasu",
+    "en": "It's about time I left; I must be going",
+    "my": "ဒါဆိုရင် ပြန်တော့မယ် (ခွင့်ပြုပါအုံး)",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "また いらっしゃって ください",
+    "rd": "また いらっしゃって ください",
+    "rom": "mata irasshatte kudasai",
+    "en": "Please come again",
+    "my": "နောက်လဲ လာပါနော်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "シャンハイ",
+    "rd": "シャンハイ",
+    "rom": "shanhai",
+    "en": "Shanghai",
+    "my": "ရှင်ဟိုင်း",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "金閣寺",
+    "rd": "きんかくじ",
+    "rom": "kinkakuji",
+    "en": "Kinkakuji (Golden Pavilion)",
+    "my": "Kinkakuji ကျောင်းတော်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "奈良公園",
+    "rd": "ならこうえん",
+    "rom": "nara kouen",
+    "en": "Nara Park",
+    "my": "Nara ပန်းခြံ",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "富士山",
+    "rd": "ふじさん",
+    "rom": "fujisan",
+    "en": "Mt. Fuji",
+    "my": "ဖူဂျီတောင်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "「七人の 侍」",
+    "rd": "「しちにんの さむらい」",
+    "rom": "shichinin no samurai",
+    "en": "\"Seven Samurai\"",
+    "my": "စာမူရိုင်း၇ယောက်ရွေ့ရုပ်ရှင်",
+    "cat": "Minna L8"
+  },
+  {
+    "jp": "わかります",
+    "rd": "わかります",
+    "rom": "wakarimasu",
+    "en": "to understand",
+    "my": "နားလည်သည်။",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "あります",
+    "rd": "あります",
+    "rom": "arimasu",
+    "en": "to be; to exist (inanimate)",
+    "my": "ရှိသည်။(သက်မဲ့)",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "好き[な]",
+    "rd": "すき[な]",
+    "rom": "suki[na]",
+    "en": "like; fond of",
+    "my": "ကြိုက်သော",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "嫌い[な]",
+    "rd": "きらい[な]",
+    "rom": "kirai[na]",
+    "en": "dislike; hate",
+    "my": "မုန်းသော",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "上手 [な]",
+    "rd": "じょうず [な]",
+    "rom": "jouzu [na]",
+    "en": "good at; skillful",
+    "my": "တော်သော",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "下手 [な]",
+    "rd": "へた [な]",
+    "rom": "heta [na]",
+    "en": "poor at; unskillful",
+    "my": "ညံ့သော",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "ダンス",
+    "rd": "ダンス",
+    "rom": "dansu",
+    "en": "dance",
+    "my": "အက",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "クラシック",
+    "rd": "クラシック",
+    "rom": "kurashikku",
+    "en": "classical (music)",
+    "my": "ရှေးဟောင်းသီချင်း",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "ジャズ",
+    "rd": "ジャズ",
+    "rom": "jazu",
+    "en": "jazz",
+    "my": "jassသီချင်း",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "コンサート",
+    "rd": "コンサート",
+    "rom": "konsaato",
+    "en": "concert",
+    "my": "ဂီတဖျော်ဖြေပွဲ",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "カラオケ",
+    "rd": "カラオケ",
+    "rom": "karaoke",
+    "en": "karaoke",
+    "my": "ကာရာအိုကေ",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "歌舞伎",
+    "rd": "かぶき",
+    "rom": "kabuki",
+    "en": "kabuki (traditional Japanese theatre)",
+    "my": "ဂျပန်ရိုးရာဇာတ်ပွဲ",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "字",
+    "rd": "じ",
+    "rom": "ji",
+    "en": "character; letter",
+    "my": "စာလုံး",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "かたかな",
+    "rd": "かたかな",
+    "rom": "katakana",
+    "en": "katakana",
+    "my": "ခတခနစာလုံး",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "ローマ字",
+    "rd": "ローマじ",
+    "rom": "rooma ji",
+    "en": "Roman letters; romaji",
+    "my": "ရိုးမာဂျိစာလုံး",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "細かいお金",
+    "rd": "こまかいおかね",
+    "rom": "komakai okane",
+    "en": "small change",
+    "my": "ပိုက်ဆံအကြွေ",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "チケット",
+    "rd": "チケット",
+    "rom": "chiketto",
+    "en": "ticket",
+    "my": "လက်မှတ်",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "用事",
+    "rd": "ようじ",
+    "rom": "youji",
+    "en": "errand; business",
+    "my": "ကိစ္စ",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "約束",
+    "rd": "やくそく",
+    "rom": "yakusoku",
+    "en": "promise; appointment",
+    "my": "ကတိ၊ ချိန်းဆိုထားခြင်း",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "アルバイト",
+    "rd": "アルバイト",
+    "rom": "arubaito",
+    "en": "part-time job",
+    "my": "အချိန်ပိုင်းအလုပ်",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "ご主人",
+    "rd": "ごしゅじん",
+    "rom": "goshujin",
+    "en": "(your) husband",
+    "my": "ခင်ပွန်း(သူတစ်ပါး၏ ယောက်ျား)",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "夫 /主人",
+    "rd": "おっと/しゅじん",
+    "rom": "otto/shujin",
+    "en": "(my) husband",
+    "my": "မိမိ၏ယောက်ျား",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "奥さん",
+    "rd": "おくさん",
+    "rom": "okusan",
+    "en": "(your) wife",
+    "my": "ဇနီး (သူတစ်ပါး၏ ဇနီး)",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "妻/家内",
+    "rd": "つま/かない",
+    "rom": "tsuma/kanai",
+    "en": "(my) wife",
+    "my": "မိမိ၏ဇနီး၊ မိန်းမ",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "子ども",
+    "rd": "こども",
+    "rom": "kodomo",
+    "en": "child; children",
+    "my": "ကလေး",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "早く",
+    "rd": "はやく",
+    "rom": "hayaku",
+    "en": "early; quickly",
+    "my": "စောစော၊ မြန်မြန်",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "貸してください。",
+    "rd": "かしてください。",
+    "rom": "kashite kudasai.",
+    "en": "please lend me ~",
+    "my": "ငှားပါ",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "いいですよ。",
+    "rd": "いいですよ。",
+    "rom": "ii desu yo.",
+    "en": "that's fine; OK",
+    "my": "ရပါတယ်",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "残念です[が]",
+    "rd": "ざんねんです[が]",
+    "rom": "zannen desu[ga]",
+    "en": "that's a pity; unfortunately",
+    "my": "စိတ်မကောင်းပါဘူး",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "ああ、",
+    "rd": "ああ、",
+    "rom": "aa,",
+    "en": "ah!; oh!",
+    "my": "အော်--",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "いっしょに いかがですか",
+    "rd": "いっしょに いかがですか",
+    "rom": "issho ni ikaga desu ka",
+    "en": "how about ~ together?",
+    "my": "အတူတူ ဘယ်လိုလဲဟင်း",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "[～は]ちょっと…",
+    "rd": "[～は]ちょっと…",
+    "rom": "[~wa] chotto...",
+    "en": "a little...; (hesitation / soft refusal)",
+    "my": "နည်းနည်း၊ ခဏ၊ သိပ်ပြီးတော့-- (အကြောင်းအရာတစ်ခုကို ငြင်းသည့်အခါသုံးသည်)",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "だめですか",
+    "rd": "だめですか",
+    "rom": "dame desu ka",
+    "en": "is that no good?; won't it do?",
+    "my": "မရဘူးလား",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "また 今度 お願いします",
+    "rd": "また こんど おねがいします",
+    "rom": "mata kondo onegai shimasu",
+    "en": "maybe next time; (I'll ask) again next time",
+    "my": "နောက်တခါ---တောင်းဆိုပါတယ် (ဒီတစ်ခေါက်အဆင်မပြေသောကြောင်း နောက်တခါကျမှ)",
+    "cat": "Minna L9"
+  },
+  {
+    "jp": "います",
+    "rd": "います",
+    "rom": "imasu",
+    "en": "there is (people/animals)",
+    "my": "ရှိသည်။ နေသည်။(သက်ရှိ)",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "いろいろ[な]",
+    "rd": "いろいろ[な]",
+    "rom": "iroiro[na]",
+    "en": "various",
+    "my": "အမျိုးမျိုး",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "パンダ",
+    "rd": "パンダ",
+    "rom": "panda",
+    "en": "panda",
+    "my": "ပန်ဒါ",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "象",
+    "rd": "ぞう",
+    "rom": "zou",
+    "en": "elephant",
+    "my": "ဆင်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "物",
+    "rd": "もの",
+    "rom": "mono",
+    "en": "thing",
+    "my": "အရာဝတ္ထု",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "電池",
+    "rd": "でんち",
+    "rom": "denchi",
+    "en": "battery",
+    "my": "ဓာတ်ခဲ",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "箱",
+    "rd": "はこ",
+    "rom": "hako",
+    "en": "box",
+    "my": "ဗူး",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "スイッチ",
+    "rd": "スイッチ",
+    "rom": "suitchi",
+    "en": "switch",
+    "my": "မီးခလုတ်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "冷蔵庫",
+    "rd": "れいぞうこ",
+    "rom": "reizouko",
+    "en": "refrigerator",
+    "my": "ရေခဲသေတ္တာ",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "ベッド",
+    "rd": "ベッド",
+    "rom": "beddo",
+    "en": "bed",
+    "my": "အိပ်ရာ၊ ကုတင်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "棚",
+    "rd": "たな",
+    "rom": "tana",
+    "en": "shelf",
+    "my": "စင်(စာအုပ်စင်၊ ပန်းကန်စင်)",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "ポスト",
+    "rd": "ポスト",
+    "rom": "posuto",
+    "en": "mailbox; postbox",
+    "my": "စာတိုက်ပုံး",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "ビル",
+    "rd": "ビル",
+    "rom": "biru",
+    "en": "building",
+    "my": "အဆောက်အဦး",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "ATM",
+    "rd": "ATM",
+    "rom": "eetiiemu",
+    "en": "ATM",
+    "my": "အလိုအလျောက်ငွေထုတ်စက်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "コンビニ",
+    "rd": "コンビニ",
+    "rom": "konbini",
+    "en": "convenience store",
+    "my": "convenience store",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "喫茶店",
+    "rd": "きっさてん",
+    "rom": "kissaten",
+    "en": "coffee shop; tea house",
+    "my": "လက်ဖက်ရည်/ကော်ဖီဆိုင်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "本屋",
+    "rd": "ほんや",
+    "rom": "honya",
+    "en": "bookstore",
+    "my": "စာအုပ်ဆိုင်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "～屋",
+    "rd": "～や",
+    "rom": "~ya",
+    "en": "~ shop",
+    "my": "～ဆိုင်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "乗り場",
+    "rd": "のりば",
+    "rom": "noriba",
+    "en": "boarding place; stop",
+    "my": "～ယာဉ်စီးတဲ့နေရာ",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "県",
+    "rd": "けん",
+    "rom": "ken",
+    "en": "prefecture",
+    "my": "တိုင်းဒေသ (prefecture)",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "間",
+    "rd": "あいだ",
+    "rom": "aida",
+    "en": "between; interval",
+    "my": "နှစ်ခုကြား (မှာ)",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "～や～など",
+    "rd": "～や～など",
+    "rom": "~ya~nado",
+    "en": "~ and ~, etc.",
+    "my": "～နဲ့～တွေ",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "[どうも]すみません。",
+    "rd": "[どうも]すみません。",
+    "rom": "[doumo] sumimasen.",
+    "en": "Excuse me; I'm sorry to trouble you",
+    "my": "ကျေးဇူးပါ(အနှောင့်အယှက်ဖြစ်ရင်ခွင့်လွှတ်ပါ)",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "ナンプラー",
+    "rd": "ナンプラー",
+    "rom": "nanpuraa",
+    "en": "fish sauce",
+    "my": "ငံပြာရည်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "コーナー",
+    "rd": "コーナー",
+    "rom": "koonaa",
+    "en": "corner",
+    "my": "ကော်နာ",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "いちばん下",
+    "rd": "いちばんした",
+    "rom": "ichiban shita",
+    "en": "the bottom; the lowest",
+    "my": "အောက်ဆုံး",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "東京ディズニーランド",
+    "rd": "とうきょうディズニーランド",
+    "rom": "toukyou dizuniirando",
+    "en": "Tokyo Disneyland",
+    "my": "တိုကျို ဒစ္စနေလန်း",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "アジアストア",
+    "rd": "アジアストア",
+    "rom": "ajia sutoa",
+    "en": "Asia Store",
+    "my": "အာရှအာ စတိုးဆိုင်",
+    "cat": "Minna L10"
+  },
+  {
+    "jp": "います[子どもが]",
+    "rd": "います[こどもが]",
+    "rom": "imasu [kodomo ga]",
+    "en": "to be, to exist (a child)",
+    "my": "ရှိသည်။(ကလေးရှိသည်)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "います[日本に]",
+    "rd": "います[にほんに]",
+    "rom": "imasu [nihon ni]",
+    "en": "to be, to exist (in Japan)",
+    "my": "နေသည်။ (ဂျပန်တွင်)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "かかります",
+    "rd": "かかります",
+    "rom": "kakarimasu",
+    "en": "to take (time)",
+    "my": "ကြာသည်။(အချိန်ကြာတယ်)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "[会社を]",
+    "rd": "[かいしゃを]",
+    "rom": "[kaisha o]",
+    "en": "(the company)",
+    "my": "ကုမ္ပဏီကို",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "1つ",
+    "rd": "ひとつ",
+    "rom": "hitotsu",
+    "en": "one (thing)",
+    "my": "တစ်ခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "2つ",
+    "rd": "ふたつ",
+    "rom": "futatsu",
+    "en": "two (things)",
+    "my": "နှစ်ခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "3つ",
+    "rd": "みっつ",
+    "rom": "mittsu",
+    "en": "three (things)",
+    "my": "သုံးခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "4つ",
+    "rd": "よっつ",
+    "rom": "yottsu",
+    "en": "four (things)",
+    "my": "လေးခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "5つ",
+    "rd": "いつつ",
+    "rom": "itsutsu",
+    "en": "five (things)",
+    "my": "ငါးခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "6つ",
+    "rd": "むっつ",
+    "rom": "muttsu",
+    "en": "six (things)",
+    "my": "ခြောက်ခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "7つ",
+    "rd": "ななつ",
+    "rom": "nanatsu",
+    "en": "seven (things)",
+    "my": "ခုနစ်ခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "8つ",
+    "rd": "やっつ",
+    "rom": "yattsu",
+    "en": "eight (things)",
+    "my": "ရှစ်ခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "9つ",
+    "rd": "ここのつ",
+    "rom": "kokonotsu",
+    "en": "nine (things)",
+    "my": "ကိုးခု",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "1人",
+    "rd": "ひとり",
+    "rom": "hitori",
+    "en": "one person",
+    "my": "တစ်ယောက်",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "2人",
+    "rd": "ふたり",
+    "rom": "futari",
+    "en": "two people",
+    "my": "နှစ်ယောက်",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～人",
+    "rd": "～にん",
+    "rom": "~nin",
+    "en": "~ people",
+    "my": "～ယောက်",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～台",
+    "rd": "～だい",
+    "rom": "~dai",
+    "en": "counter for machines, vehicles, etc.",
+    "my": "～စီး၊～လုံး၊ (ကြီးမားသော အရာ(ကား၊ တီဗီ၊ ရေခဲ သေတ္တာ၊ ပန်ကာ စသည်များ))",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～枚",
+    "rd": "～まい",
+    "rom": "~mai",
+    "en": "counter for flat things",
+    "my": "～ရွက်(ပါးလွှာသောအရာ(တံဆိပ်ခေါင်း၊ စာရွက်၊ စာအိတ်၊ ဓါတ်ပုံ၊ အင်္ကျီ စသည်များ))",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～回",
+    "rd": "～かい",
+    "rom": "~kai",
+    "en": "counter for times; ~ times",
+    "my": "～ခေါက်(အကြိမ်အရေ)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "カレー[ライス]",
+    "rd": "カレー[ライス]",
+    "rom": "karee [raisu]",
+    "en": "curry [and rice]",
+    "my": "ဂျပန်မဆလာဟင်း",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "切手",
+    "rd": "きって",
+    "rom": "kitte",
+    "en": "stamp",
+    "my": "တံဆိပ်ခေါင်း",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "はがき",
+    "rd": "はがき",
+    "rom": "hagaki",
+    "en": "postcard",
+    "my": "post card",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "封筒",
+    "rd": "ふうとう",
+    "rom": "fuutou",
+    "en": "envelope",
+    "my": "စာအိတ်",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "両親",
+    "rd": "りょうしん",
+    "rom": "ryoushin",
+    "en": "(both) parents",
+    "my": "မိဘနှစ်ပါး",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "兄弟",
+    "rd": "きょうだい",
+    "rom": "kyoudai",
+    "en": "brothers and sisters; siblings",
+    "my": "မောင်နှမ",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "弟さん",
+    "rd": "おとうとさん",
+    "rom": "otoutosan",
+    "en": "younger brother (someone else's)",
+    "my": "သူတစ်ပါး၏မောင်၊ ညီ",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "妹さん",
+    "rd": "いもうとさん",
+    "rom": "imoutosan",
+    "en": "younger sister (someone else's)",
+    "my": "သူတစ်ပါး၏ညီမ",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "外国",
+    "rd": "がいこく",
+    "rom": "gaikoku",
+    "en": "foreign country",
+    "my": "နိုင်ငံခြား",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "留学生",
+    "rd": "りゅうがくせい",
+    "rom": "ryuugakusei",
+    "en": "foreign student",
+    "my": "နိုင်ငံခြားပညာတော်သင် ကျောင်းသား",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～時間",
+    "rd": "～じかん",
+    "rom": "~jikan",
+    "en": "~ hours",
+    "my": "～နာရီ(၁ နာရီ)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～週間",
+    "rd": "～しゅうかん",
+    "rom": "~shuukan",
+    "en": "~ weeks",
+    "my": "～ပတ်(ရက်သတ္တပတ်)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～ヶ月",
+    "rd": "～げつ",
+    "rom": "~getsu",
+    "en": "~ months",
+    "my": "～လကြာ",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "ぐらい",
+    "rd": "ぐらい",
+    "rom": "gurai",
+    "en": "about; approximately",
+    "my": "လောက်(၁ နာရီလောက်)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "どのぐらい",
+    "rd": "どのぐらい",
+    "rom": "donogurai",
+    "en": "how long; how much",
+    "my": "ဘယ်လောက်",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "全部で",
+    "rd": "ぜんぶで",
+    "rom": "zenbude",
+    "en": "in all; altogether",
+    "my": "အားလုံး(အရာဝတ္ထု)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "みんな",
+    "rd": "みんな",
+    "rom": "minna",
+    "en": "everyone; all (people)",
+    "my": "အားလုံး(လူ၊ သက်ရှိ)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "～だけ",
+    "rd": "～だけ",
+    "rom": "~dake",
+    "en": "only ~; just ~",
+    "my": "～တည်းဘဲ",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "かしこまりました",
+    "rd": "かしこまりました",
+    "rom": "kashikomarimashita",
+    "en": "Certainly. (polite reply)",
+    "my": "ကောင်းပါပြီ",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "いいお天気ですね",
+    "rd": "いいおてんきですね",
+    "rom": "ii otenki desu ne",
+    "en": "Nice weather, isn't it?",
+    "my": "ရာသီဥတုကောင်းတယ်နော်",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "おでかけですか",
+    "rd": "おでかけですか",
+    "rom": "odekake desu ka",
+    "en": "Are you going out?",
+    "my": "အပြင်သွားမလို့လား",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "ちょっと～まで",
+    "rd": "ちょっと～まで",
+    "rom": "chotto ~ made",
+    "en": "to ~ for a while",
+    "my": "ခဏ～အထိ",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "行ってらっしゃい",
+    "rd": "いってらっしゃい",
+    "rom": "itterasshai",
+    "en": "Have a nice day. (seeing someone off)",
+    "my": "သွားပါနော်(နှုတ်ဆက်)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "行ってきます",
+    "rd": "いってきます",
+    "rom": "ittekimasu",
+    "en": "I'm off. (leaving home)",
+    "my": "သွားပြီနော်(နှုတ်ဆက်)",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "船便",
+    "rd": "ふなびん",
+    "rom": "funabin",
+    "en": "surface mail (by ship)",
+    "my": "ရေကြောင်းဖြင့်ပေးပို့",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "航空便 [エアメール]",
+    "rd": "こうくうびん [エアメール]",
+    "rom": "koukuubin [eameeru]",
+    "en": "airmail",
+    "my": "လေကြောင်းဖြင့်ပေးပို့",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "お願いします。",
+    "rd": "おねがいします。",
+    "rom": "onegaishimasu.",
+    "en": "Please. (request)",
+    "my": "ကျေးဇူးပြု၍",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "オーストラリア",
+    "rd": "オーストラリア",
+    "rom": "oosutoraria",
+    "en": "Australia",
+    "my": "Australia",
+    "cat": "Minna L11"
+  },
+  {
+    "jp": "簡単[な]",
+    "rd": "かんたん[な]",
+    "rom": "kantan [na]",
+    "en": "easy; simple",
+    "my": "လွယ်သော",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "多い[人が～]",
+    "rd": "おおい[ひとが～]",
+    "rom": "ooi [hito ga ~]",
+    "en": "many; a lot (people)",
+    "my": "များသော(လူ)",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "少ない[人が～]",
+    "rd": "すくない[ひとが～]",
+    "rom": "sukunai [hito ga ~]",
+    "en": "few; a little (people)",
+    "my": "နည်းသော(လူ)",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "暖かい、温かい",
+    "rd": "あたたかい、あたたかい",
+    "rom": "atatakai, atatakai",
+    "en": "warm",
+    "my": "နွေးသော",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "いい[コーヒーが～]",
+    "rd": "いい[コーヒーが～]",
+    "rom": "ii [koohii ga ~]",
+    "en": "good; nice (coffee)",
+    "my": "ကောင်းသော(ကော်ဖီက)",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "季節",
+    "rd": "きせつ",
+    "rom": "kisetsu",
+    "en": "season",
+    "my": "ရာသီဥတု",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "春",
+    "rd": "はる",
+    "rom": "haru",
+    "en": "spring",
+    "my": "နွေဦးပေါက်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "夏",
+    "rd": "なつ",
+    "rom": "natsu",
+    "en": "summer",
+    "my": "နွေရာသီ",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "秋",
+    "rd": "あき",
+    "rom": "aki",
+    "en": "autumn; fall",
+    "my": "ဆောင်းဦးပေါက်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "冬",
+    "rd": "ふゆ",
+    "rom": "fuyu",
+    "en": "winter",
+    "my": "ဆောင်းရာသီ",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "曇",
+    "rd": "くもり",
+    "rom": "kumori",
+    "en": "cloudy",
+    "my": "တိမ်ထူသော",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "ホテル",
+    "rd": "ホテル",
+    "rom": "hoteru",
+    "en": "hotel",
+    "my": "ဟိုတယ်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "世界",
+    "rd": "せかい",
+    "rom": "sekai",
+    "en": "world",
+    "my": "ကမ္ဘာလောက",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "[お]祭り",
+    "rd": "[お]まつり",
+    "rom": "[o]matsuri",
+    "en": "festival",
+    "my": "ပွဲတော်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "すき焼き",
+    "rd": "すきやき",
+    "rom": "sukiyaki",
+    "en": "sukiyaki (Japanese beef hot pot)",
+    "my": "ဂျပန် အမဲသား hot pot",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "刺身",
+    "rd": "さしみ",
+    "rom": "sashimi",
+    "en": "sashimi (raw fish)",
+    "my": "ဆာရှိမိ",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "[お]すし",
+    "rd": "[お]すし",
+    "rom": "[o]sushi",
+    "en": "sushi",
+    "my": "ဆူရှီ",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "天ぷら",
+    "rd": "てんぷら",
+    "rom": "tenpura",
+    "en": "tempura",
+    "my": "ဂျပန်အကြော်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "豚肉",
+    "rd": "ぶたにく",
+    "rom": "butaniku",
+    "en": "pork",
+    "my": "ဝက်သား",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "鶏肉",
+    "rd": "とりにく",
+    "rom": "toriniku",
+    "en": "chicken (meat)",
+    "my": "ကြက်သား",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "牛肉",
+    "rd": "ぎゅうにく",
+    "rom": "gyuuniku",
+    "en": "beef",
+    "my": "အမဲသား",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "レモン",
+    "rd": "レモン",
+    "rom": "remon",
+    "en": "lemon",
+    "my": "သံပုရိုသီး",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "生け花",
+    "rd": "いけばな",
+    "rom": "ikebana",
+    "en": "flower arrangement",
+    "my": "ဂျပန်ပန်းအလှထိုးခြင်း",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "紅葉",
+    "rd": "もみじ",
+    "rom": "momiji",
+    "en": "autumn leaves; fall colors",
+    "my": "သစ်ရွက်များအရောင် ပြောင်းခြင်း",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "どちらも",
+    "rd": "どちらも",
+    "rom": "dochiramo",
+    "en": "both; either",
+    "my": "နှစ်ခုစလုံး(ဘယ်ဟာမဆို)",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "いちばん",
+    "rd": "いちばん",
+    "rom": "ichiban",
+    "en": "the most; number one",
+    "my": "～ဆုံး (အကောင်းဆုံး၊ အများဆုံး)",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "ずっと",
+    "rd": "ずっと",
+    "rom": "zutto",
+    "en": "all the time; very",
+    "my": "တောက်လျှောက်၊ အမြဲတမ်း၊ အရမ်း",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "初めて",
+    "rd": "はじめて",
+    "rom": "hajimete",
+    "en": "for the first time",
+    "my": "ပထမဆုံး",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "お帰りなさい",
+    "rd": "おかえりなさい",
+    "rom": "okaerinasai",
+    "en": "Welcome home.",
+    "my": "ပြန်လာပါ(နှုတ်ဆက်)",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "わあ すごい 人ですね",
+    "rd": "わあ すごい ひとですね",
+    "rom": "waa sugoi hito desu ne",
+    "en": "Wow, so many people!",
+    "my": "ကြည့်ပါအုံး လူတွေအများကြီးဘဲ",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "疲れました",
+    "rd": "つかれました",
+    "rom": "tsukaremashita",
+    "en": "I got tired.",
+    "my": "ပင်ပန်းခဲ့တယ်။",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "祇園祭",
+    "rd": "ぎおんまつり",
+    "rom": "gionmatsuri",
+    "en": "Gion Festival",
+    "my": "Gion ပွဲတော်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "ホンコン",
+    "rd": "ホンコン",
+    "rom": "honkon",
+    "en": "Hong Kong",
+    "my": "ဟောင်ကောင်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "シンガポール",
+    "rd": "シンガポール",
+    "rom": "shingapooru",
+    "en": "Singapore",
+    "my": "စင်ကာပူ",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "ABC ストア",
+    "rd": "ABC ストア",
+    "rom": "ABC sutoa",
+    "en": "ABC Store",
+    "my": "ABCစတိုးဆိုင်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "ジャパン",
+    "rd": "ジャパン",
+    "rom": "japan",
+    "en": "Japan (supermarket)",
+    "my": "Japanစူပါမားကတ်",
+    "cat": "Minna L12"
+  },
+  {
+    "jp": "遊びます",
+    "rd": "あそびます",
+    "rom": "asobimasu",
+    "en": "to play; to have fun",
+    "my": "ကစားသည်။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "泳ぎます",
+    "rd": "およぎます",
+    "rom": "oyogimasu",
+    "en": "to swim",
+    "my": "ရေကူးသည်။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "迎えます",
+    "rd": "むかえます",
+    "rom": "mukaemasu",
+    "en": "to meet; to welcome",
+    "my": "ကြိုသည်။ ကြိုဆိုသည်။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "疲れます",
+    "rd": "つかれます",
+    "rom": "tsukaremasu",
+    "en": "to get tired",
+    "my": "ပင်ပန်းသည်။ မောပန်းသည်။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "結婚します",
+    "rd": "けっこんします",
+    "rom": "kekkonshimasu",
+    "en": "to get married",
+    "my": "အိမ်ထောင်ပြုသည်။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "買い物します",
+    "rd": "かいものします",
+    "rom": "kaimonoshimasu",
+    "en": "to shop; to go shopping",
+    "my": "စျေးဝယ်သည်။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "食事します",
+    "rd": "しょくじします",
+    "rom": "shokujishimasu",
+    "en": "to have a meal; to eat",
+    "my": "ထမင်းစားသည်။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "散歩します",
+    "rd": "さんぽします",
+    "rom": "sanposhimasu",
+    "en": "to take a walk; to stroll",
+    "my": "လမ်းလျှောက်သည်",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "[公園を]",
+    "rd": "[こうえんを]",
+    "rom": "[kouen o]",
+    "en": "(the park)",
+    "my": "(ပန်းခြံမှာ)။",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "大変[な]",
+    "rd": "たいへん[な]",
+    "rom": "taihen [na]",
+    "en": "hard; tough; awful",
+    "my": "ပင်ပန်းသော၊ ခက်ခဲသော",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "プール",
+    "rd": "プール",
+    "rom": "puuru",
+    "en": "swimming pool",
+    "my": "ရေကူးကန်",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "美術",
+    "rd": "びじゅつ",
+    "rom": "bijutsu",
+    "en": "art; fine arts",
+    "my": "အနုပညာ",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "釣り",
+    "rd": "つり",
+    "rom": "tsuri",
+    "en": "fishing",
+    "my": "ငါးမျှားခြင်း",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "スキー",
+    "rd": "スキー",
+    "rom": "sukii",
+    "en": "skiing",
+    "my": "နှင်းလျှောစီးခြင်း",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "～ごろ",
+    "rd": "～ごろ",
+    "rom": "~goro",
+    "en": "around (time); about",
+    "my": "～လောက်",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "何か",
+    "rd": "なにか",
+    "rom": "nanika",
+    "en": "something",
+    "my": "တစ်ခုခု",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "どこか",
+    "rd": "どこか",
+    "rom": "dokoka",
+    "en": "somewhere",
+    "my": "တစ်နေရာရာ",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "のどが かわきます",
+    "rd": "のどが かわきます",
+    "rom": "nodo ga kawakimasu",
+    "en": "to be thirsty",
+    "my": "အာခေါင်ခြောက်တယ်",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "おなかが すきます",
+    "rd": "おなかが すきます",
+    "rom": "onaka ga sukimasu",
+    "en": "to be hungry; to get hungry",
+    "my": "ဗိုက်ဆာတယ်",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "そうしましょう",
+    "rd": "そうしましょう",
+    "rom": "sou shimashou",
+    "en": "Let's do that.",
+    "my": "အဲဒီလိုလုပ်ရအောင်",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "ご注文は？",
+    "rd": "ごちゅうもんは？",
+    "rom": "gochuumon wa?",
+    "en": "What would you like to order?",
+    "my": "ဘာစားမှာလဲ(စားသောက်ဆိုင်တွင်)",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "定食",
+    "rd": "ていしょく",
+    "rom": "teishoku",
+    "en": "set meal; set menu",
+    "my": "သတ်မှတ်ထားသောအစား အစာ (Set menu)",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "牛どん",
+    "rd": "ぎゅうどん",
+    "rom": "gyuudon",
+    "en": "beef bowl (beef over rice)",
+    "my": "အမဲသားဟင်းနှင့်ထမင်း",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "[少々] お待ちください",
+    "rd": "[しょうしょう] おまちください",
+    "rom": "[shoushou] omachikudasai",
+    "en": "Please wait a moment.",
+    "my": "ခဏစောင့်ပါ",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "別々に",
+    "rd": "べつべつに",
+    "rom": "betsubetsuni",
+    "en": "separately",
+    "my": "သီးခြားစီ (ငွေရှင်းသည့်အချိန်တွင် အသုံးများ)",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "アキックス",
+    "rd": "アキックス",
+    "rom": "akikkusu",
+    "en": "Akikku (company name)",
+    "my": "あきっくす ကုမ္ပဏီ",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "おはようテレビ",
+    "rd": "おはようテレビ",
+    "rom": "ohayou terebi",
+    "en": "Ohayo TV (program name)",
+    "my": "ohayoတီဗီအစီအစဉ်",
+    "cat": "Minna L13"
+  },
+  {
+    "jp": "付けます",
+    "rd": "つけます",
+    "rom": "tsukemasu",
+    "en": "to turn on (light, air conditioner, TV)",
+    "my": "မီးဖွင့်၊ အဲယားကွန်း၊ TV ဖွင့်သည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "消します",
+    "rd": "けします",
+    "rom": "keshimasu",
+    "en": "to turn off (light, air conditioner, TV)",
+    "my": "မီးပိတ်၊ အဲယားကွန်း၊ TV ပိတ်သည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "開けます",
+    "rd": "あけます",
+    "rom": "akemasu",
+    "en": "to open (a door)",
+    "my": "တံခါးဖွင့်သည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "閉めます",
+    "rd": "しめます",
+    "rom": "shimemasu",
+    "en": "to close (a door)",
+    "my": "တံခါးပိတ်သည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "急ぎます",
+    "rd": "いそぎます",
+    "rom": "isogimasu",
+    "en": "to hurry",
+    "my": "အလျင်လိုသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "待ちます",
+    "rd": "まちます",
+    "rom": "machimasu",
+    "en": "to wait",
+    "my": "စောင့်သည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "持ちます",
+    "rd": "もちます",
+    "rom": "mochimasu",
+    "en": "to hold; to carry",
+    "my": "ကိုင်သည်။ ယူထားသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "取ります",
+    "rd": "とります",
+    "rom": "torimasu",
+    "en": "to take; to pick up",
+    "my": "ယူသည်။ လွှမ်းယူသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "手伝います",
+    "rd": "てつだいます",
+    "rom": "tetsudaimasu",
+    "en": "to help",
+    "my": "ကူညီသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "呼びます",
+    "rd": "よびます",
+    "rom": "yobimasu",
+    "en": "to call (out to)",
+    "my": "ခေါ်သည်။ အော်ခေါ်သည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "話します",
+    "rd": "はなします",
+    "rom": "hanashimasu",
+    "en": "to speak; to talk",
+    "my": "ပြောသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "使います",
+    "rd": "つかいます",
+    "rom": "tsukaimasu",
+    "en": "to use",
+    "my": "အသုံးပြုသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "止めます",
+    "rd": "とめます",
+    "rom": "tomemasu",
+    "en": "to stop",
+    "my": "ရပ်သည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "見せます",
+    "rd": "みせます",
+    "rom": "misemasu",
+    "en": "to show",
+    "my": "ပြသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "教えます[住所を～]",
+    "rd": "おしえます[じゅうしょを～]",
+    "rom": "oshiemasu [juusho o ~]",
+    "en": "to tell; to teach (an address)",
+    "my": "ပြောပြသည်(လိပ်စာကို)",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "座ります",
+    "rd": "すわります",
+    "rom": "suwarimasu",
+    "en": "to sit down",
+    "my": "ထိုင်သည်",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "立ちます",
+    "rd": "たちます",
+    "rom": "tachimasu",
+    "en": "to stand up",
+    "my": "မတ်တပ်ရပ်သည်",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "入ります",
+    "rd": "はいります",
+    "rom": "hairimasu",
+    "en": "to enter; to go in",
+    "my": "ဝင်သည်",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "[喫茶店に～]",
+    "rd": "[きっさてんに～]",
+    "rom": "[kissaten ni ~]",
+    "en": "(to a coffee shop)",
+    "my": "(လက်ဖက်ရည်ဆိုင်သို့)",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "出ます",
+    "rd": "でます",
+    "rom": "demasu",
+    "en": "to go out; to leave",
+    "my": "ထွက်သည်",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "[喫茶店を]",
+    "rd": "[きっさてんを]",
+    "rom": "[kissaten o]",
+    "en": "(from a coffee shop)",
+    "my": "(လက်ဖက်ရည်ဆိုင်မှ)",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "降ります[雨が～]",
+    "rd": "ふります[あめが～]",
+    "rom": "furimasu [ame ga ~]",
+    "en": "to fall (rain)",
+    "my": "ရွာသည်(မိုး)",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "コピーします",
+    "rd": "コピーします",
+    "rom": "kopiishimasu",
+    "en": "to copy; to photocopy",
+    "my": "မိတ္တူကူးသည်။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "パスポート",
+    "rd": "パスポート",
+    "rom": "pasupooto",
+    "en": "passport",
+    "my": "ပတ်စ်ပို့",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "読み方",
+    "rd": "よみかた",
+    "rom": "yomikata",
+    "en": "how to read",
+    "my": "ဖတ်နည်း",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "～方",
+    "rd": "～かた",
+    "rom": "~kata",
+    "en": "how to ~; way of ~",
+    "my": "～နည်း",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "まっすぐ",
+    "rd": "まっすぐ",
+    "rom": "massugu",
+    "en": "straight ahead",
+    "my": "တည့်တည့်",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "後で",
+    "rd": "あとで",
+    "rom": "atode",
+    "en": "later; afterwards",
+    "my": "ပြီးမှ",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "もう少し",
+    "rd": "もうすこし",
+    "rom": "mousukoshi",
+    "en": "a little more",
+    "my": "အနည်းငယ်ထပ်ပြီး",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "さあ",
+    "rd": "さあ",
+    "rom": "saa",
+    "en": "Come on!; Well!",
+    "my": "ကဲ---",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "あれ？",
+    "rd": "あれ？",
+    "rom": "are?",
+    "en": "Huh?; What?",
+    "my": "ဟောတော့",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "信号を右へ曲がってください",
+    "rd": "しんごうをみぎへまがってください",
+    "rom": "shingou o migi e magatte kudasai",
+    "en": "Please turn right at the traffic light.",
+    "my": "မီးပိုင့်ကို ညာဘက်ကွေ့ပါ။",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "これでお願いします",
+    "rd": "これでおねがいします",
+    "rom": "kore de onegaishimasu",
+    "en": "I'll take this. (when paying)",
+    "my": "ဒါနဲ့ယူပါ။(ပိုက်ဆံပေးချေသာအခါ)",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "お釣り",
+    "rd": "おつり",
+    "rom": "otsuri",
+    "en": "change (money back)",
+    "my": "ပိုက်ဆံအကြွေ၊ ပြန်အမ်းငွေ",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "みどり町",
+    "rd": "みどりちょう",
+    "rom": "midori chou",
+    "en": "Midori Town",
+    "my": "Midori မြို့",
+    "cat": "Minna L14"
+  },
+  {
+    "jp": "置きます",
+    "rd": "おきます",
+    "rom": "okimasu",
+    "en": "to put; to place",
+    "my": "ထားသည်။",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "作ります、造ります",
+    "rd": "つくります、つくります",
+    "rom": "tsukurimasu, tsukurimasu",
+    "en": "to make; to produce; to build",
+    "my": "ပြုလုပ်သည်။ ထုတ်လုပ်သည်။",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "売ります",
+    "rd": "うります",
+    "rom": "urimasu",
+    "en": "to sell",
+    "my": "ရောင်းသည်။",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "知ります",
+    "rd": "しります",
+    "rom": "shirimasu",
+    "en": "to know; to learn",
+    "my": "သိသည်။",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "住みます",
+    "rd": "すみます",
+    "rom": "sumimasu",
+    "en": "to live; to reside",
+    "my": "နေသည်။ နေထိုင်သည်။",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "研究します",
+    "rd": "けんきゅうします",
+    "rom": "kenkyuushimasu",
+    "en": "to research; to study",
+    "my": "သုတေသနပြုသည်။",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "資料",
+    "rd": "しりょう",
+    "rom": "shiryou",
+    "en": "materials; documents; data",
+    "my": "စာရွက်စာတမ်း",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "カタログ",
+    "rd": "カタログ",
+    "rom": "katarogu",
+    "en": "catalog",
+    "my": "ကတ်တလောက်",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "時刻表",
+    "rd": "じこくひょう",
+    "rom": "jikokuhyou",
+    "en": "timetable",
+    "my": "အချိန်ဇယား",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "製品",
+    "rd": "せいひん",
+    "rom": "seihin",
+    "en": "product; manufactured goods",
+    "my": "ပစ္စည်း",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "ソフト",
+    "rd": "ソフト",
+    "rom": "sofuto",
+    "en": "software",
+    "my": "softwear",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "電子辞書",
+    "rd": "でんしじしょ",
+    "rom": "denshijisho",
+    "en": "electronic dictionary",
+    "my": "လျှပ်စစ်အဘိဓာန်",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "経済",
+    "rd": "けいざい",
+    "rom": "keizai",
+    "en": "economy",
+    "my": "စီးပွားရေး",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "市役所",
+    "rd": "しやくしょ",
+    "rom": "shiyakusho",
+    "en": "city hall; municipal office",
+    "my": "မြို့တော်ခန်းမ/စည်ပင်သာယာရုံး",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "高校",
+    "rd": "こうこう",
+    "rom": "koukou",
+    "en": "high school",
+    "my": "အထက်တန်းကျောင်း",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "歯医者",
+    "rd": "はいしゃ",
+    "rom": "haisha",
+    "en": "dentist",
+    "my": "သွားဆရာဝန်",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "独身",
+    "rd": "どくしん",
+    "rom": "dokushin",
+    "en": "single; unmarried",
+    "my": "လူပျို၊ လူလွတ်၊ အပျို",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "思い出します",
+    "rd": "おもいだします",
+    "rom": "omoidashimasu",
+    "en": "to remember; to recall",
+    "my": "သတိရသည်/အမှတ်ရသည်။",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "いらっしゃいます",
+    "rd": "いらっしゃいます",
+    "rom": "irasshaimasu",
+    "en": "to be (polite); to come/go (polite)",
+    "my": "ရှိသည်(ယဉ်ကျေးသောအသုံး)",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "日本橋",
+    "rd": "にほんばし",
+    "rom": "nihonbashi",
+    "en": "Nihonbashi (Osaka shopping district)",
+    "my": "ဂျပန်တံတား (အိုဆာကာမှ လူစည်ကားသောနေရာ)",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "みんなの インタビュー",
+    "rd": "みんなの インタビュー",
+    "rom": "minna no intabyuu",
+    "en": "Minna no Interview (TV program)",
+    "my": "Minna no Interview တီဗီအစီအစဉ်",
+    "cat": "Minna L15"
+  },
+  {
+    "jp": "乗ります[電車に～]",
+    "rd": "のります[でんしゃに～]",
+    "rom": "norimasu [densha ni ~]",
+    "en": "to get on (a train)",
+    "my": "စီးသည်။ (ရထားကို)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "降ります[電車を～]",
+    "rd": "おります[でんしゃを～]",
+    "rom": "orimasu [densha o ~]",
+    "en": "to get off (a train)",
+    "my": "ဆင်းသည်။ (ရထားမှ)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "乗り換えます",
+    "rd": "のりかえます",
+    "rom": "norikaemasu",
+    "en": "to change (trains)",
+    "my": "ပြောင်းစီးသည်။ (ကား၊ ရထား၊ ယာဉ်)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "あびます",
+    "rd": "あびます",
+    "rom": "abimasu",
+    "en": "to take a shower",
+    "my": "ရေချိုးသည်။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "入れます",
+    "rd": "いれます",
+    "rom": "iremasu",
+    "en": "to put in",
+    "my": "ထည့်သည်။ သွင်းသည်။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "出します",
+    "rd": "だします",
+    "rom": "dashimasu",
+    "en": "to take out; to send (a letter, a report)",
+    "my": "ထုတ်သည်။ တင်သည်(စာ၊ report)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "下ろします[お金を]",
+    "rd": "おろします[おかねを]",
+    "rom": "oroshimasu [o-kane o]",
+    "en": "to withdraw (money)",
+    "my": "ထုတ်သည်(ပိုက်ဆံ)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "入ります[大学に～]",
+    "rd": "はいります[だいがくに～]",
+    "rom": "hairimasu [daigaku ni ~]",
+    "en": "to enter (a university)",
+    "my": "ဝင်သည်(တက္ကသိုလ်သို့)။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "出ます[大学を～]",
+    "rd": "でます[だいがくを～]",
+    "rom": "demasu [daigaku o ~]",
+    "en": "to leave (a university)",
+    "my": "ထွက်သည်(တက္ကသိုလ်မှဘဲရသည်)။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "押します",
+    "rd": "おします",
+    "rom": "oshimasu",
+    "en": "to push; to press",
+    "my": "တွန်းသည်၊ ဖိသည်။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "始めます",
+    "rd": "はじめます",
+    "rom": "hajimemasu",
+    "en": "to begin; to start",
+    "my": "စတင်သည်။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "見学します",
+    "rd": "けんがくします",
+    "rom": "kengaku shimasu",
+    "en": "to visit (for study)",
+    "my": "လေ့လာသည်။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "電話します",
+    "rd": "でんわします",
+    "rom": "denwa shimasu",
+    "en": "to telephone; to make a phone call",
+    "my": "ဖုန်းဆက်သည်။",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "髪",
+    "rd": "かみ",
+    "rom": "kami",
+    "en": "hair",
+    "my": "ဆံပင်",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "おなか",
+    "rd": "おなか",
+    "rom": "onaka",
+    "en": "stomach; belly",
+    "my": "ဗိုက်",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "サービス",
+    "rd": "サービス",
+    "rom": "saabisu",
+    "en": "service",
+    "my": "ဝန်ဆောင်မှု",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "ジョギング",
+    "rd": "ジョギング",
+    "rom": "jogingu",
+    "en": "jogging",
+    "my": "အပြေးလေ့ကျင့်ခန်း",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "シャワー",
+    "rd": "シャワー",
+    "rom": "shawaa",
+    "en": "shower",
+    "my": "ရေချိုးသောရေပန်း",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "[お]寺",
+    "rd": "[お]てら",
+    "rom": "[o] tera",
+    "en": "temple",
+    "my": "ဂျပန်ဘုရားကျောင်း",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "神社",
+    "rd": "じんじゃ",
+    "rom": "jinja",
+    "en": "Shinto shrine",
+    "my": "ဂျပန်နတ်ဘုရားကျောင်း",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "～番",
+    "rd": "～ばん",
+    "rom": "~ban",
+    "en": "number ~",
+    "my": "-နံပါတ်",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "どうやって",
+    "rd": "どうやって",
+    "rom": "dou yatte",
+    "en": "how; in what way",
+    "my": "ဘယ်လိုလုပ်ပြီး",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "どの～",
+    "rd": "どの～",
+    "rom": "dono ~",
+    "en": "which ~",
+    "my": "ဘယ်ဟာ",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "すごいですね",
+    "rd": "すごいですね",
+    "rom": "sugoi desu ne",
+    "en": "That's great.",
+    "my": "တော်လိုက်တာ",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "[いいえ、]まだまだです",
+    "rd": "[いいえ、]まだまだです",
+    "rom": "[iie,] mada mada desu",
+    "en": "No, not that good yet.",
+    "my": "ဟင့်အင်း အဲဒီလောက်မဟုတ်ပါဘူး",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "お引き出しですか",
+    "rd": "おひきだしですか",
+    "rom": "o-hikidashi desu ka",
+    "en": "Do you want to withdraw money?",
+    "my": "ငွေထုတ်မှာလား",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "キャッシュカード",
+    "rd": "キャッシュカード",
+    "rom": "kyasshu kaado",
+    "en": "cash card",
+    "my": "ငွေထုတ်ကဒ်",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "暗証番号",
+    "rd": "あんしょうばんごう",
+    "rom": "anshou bangou",
+    "en": "PIN number",
+    "my": "လျှို့ဝှက်နံပါတ်",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "金額",
+    "rd": "きんがく",
+    "rom": "kingaku",
+    "en": "amount of money",
+    "my": "ငွေပမာဏ",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "確認",
+    "rd": "かくにん",
+    "rom": "kakunin",
+    "en": "confirmation; checking",
+    "my": "အတည်ပြုခြင်း၊ စစ်ဆေးခြင်း",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "ボタン",
+    "rd": "ボタン",
+    "rom": "botan",
+    "en": "button",
+    "my": "ခလုတ် button",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "JR",
+    "rd": "JR",
+    "rom": "jei aaru",
+    "en": "Japan Railways",
+    "my": "ဂျပန်ရထားလိုင်း Japan Railways",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "雪まつり",
+    "rd": "ゆきまつり",
+    "rom": "yuki matsuri",
+    "en": "snow festival",
+    "my": "နှင်းပွဲတော်",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "バンドン",
+    "rd": "バンドン",
+    "rom": "bandon",
+    "en": "Bandung (in Indonesia)",
+    "my": "Bandung (in Indonesia)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "フランケン",
+    "rd": "フランケン",
+    "rom": "furanken",
+    "en": "Franken (in Germany)",
+    "my": "Franken (in Germany)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "ベラクルス",
+    "rd": "ベラクルス",
+    "rom": "berakurusu",
+    "en": "Veracruz (in Mexico)",
+    "my": "Veracruz (in Mexico)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "梅田",
+    "rd": "うめだ",
+    "rom": "umeda",
+    "en": "Umeda",
+    "my": "Umedaမြို့",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "大学前",
+    "rd": "だいがくまえ",
+    "rom": "daigakumae",
+    "en": "in front of the university",
+    "my": "တက္ကသိုလ်ရှေ့(ကားမှတ်တိုင်)",
+    "cat": "Minna L16"
+  },
+  {
+    "jp": "覚えます",
+    "rd": "おぼえます",
+    "rom": "oboemasu",
+    "en": "to remember; to memorize",
+    "my": "မှတ်မိသည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "忘れます",
+    "rd": "わすれます",
+    "rom": "wasuremasu",
+    "en": "to forget",
+    "my": "မေ့သည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "なくします",
+    "rd": "なくします",
+    "rom": "nakushimasu",
+    "en": "to lose",
+    "my": "ပျောက်ပစ်သည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "払います",
+    "rd": "はらいます",
+    "rom": "haraimasu",
+    "en": "to pay",
+    "my": "ပေးချေသည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "返します",
+    "rd": "かえします",
+    "rom": "kaeshimasu",
+    "en": "to return; to give back",
+    "my": "ပြန်ပေးသည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "出かけます",
+    "rd": "でかけます",
+    "rom": "dekakemasu",
+    "en": "to go out",
+    "my": "အပြင်ထွက်သည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "脱ぎます",
+    "rd": "ぬぎます",
+    "rom": "nugimasu",
+    "en": "to take off (clothes)",
+    "my": "အင်္ကျီချွတ်သည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "持っていきます",
+    "rd": "もっていきます",
+    "rom": "motte ikimasu",
+    "en": "to take (something) away",
+    "my": "ယူသွားသည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "持ってきます",
+    "rd": "もってきます",
+    "rom": "motte kimasu",
+    "en": "to bring",
+    "my": "ယူလာသည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "心配します",
+    "rd": "しんぱいします",
+    "rom": "shinpai shimasu",
+    "en": "to worry",
+    "my": "စိတ်ပူသည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "残業します",
+    "rd": "ざんぎょうします",
+    "rom": "zangyou shimasu",
+    "en": "to work overtime",
+    "my": "အချိန်ပိုလုပ်သည်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "出張します",
+    "rd": "しゅっちょうします",
+    "rom": "shutchou shimasu",
+    "en": "to go on a business trip",
+    "my": "အလုပ်ခရီးသွားသည်",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "飲みます [薬を]",
+    "rd": "のみます [くすりを]",
+    "rom": "nomimasu [kusuri o]",
+    "en": "to take (medicine)",
+    "my": "သောက်သည်(ဆေးကို)။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "入ります [おふろに～]",
+    "rd": "はいります [おふろに～]",
+    "rom": "hairimasu [ofuro ni ~]",
+    "en": "to take a bath",
+    "my": "ဝင်သည် (ရေချိုးကန်သို့)။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "2, 3日",
+    "rd": "に、さんにち",
+    "rom": "ni, san nichi",
+    "en": "2, 3 days",
+    "my": "၂ ရက် ၃ ရက်",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "～までに",
+    "rd": "～までに",
+    "rom": "~ made ni",
+    "en": "by ~",
+    "my": "～အထိ",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "ですから",
+    "rd": "ですから",
+    "rom": "desu kara",
+    "en": "so; therefore",
+    "my": "ဖြစ်လို့",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "どうしましたか",
+    "rd": "どうしましたか",
+    "rom": "doushimashita ka",
+    "en": "What's the matter?",
+    "my": "ဘယ်လိုဖြစ်သလဲ",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "のど",
+    "rd": "のど",
+    "rom": "nodo",
+    "en": "throat",
+    "my": "လည်ချောင်း",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "[～が] いたいです",
+    "rd": "[～が] いたいです",
+    "rom": "[~ ga] itai desu",
+    "en": "[~] hurts; is painful",
+    "my": "နာတယ်။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "かぜ",
+    "rd": "かぜ",
+    "rom": "kaze",
+    "en": "a cold",
+    "my": "အအေးမိခြင်း",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "お大事に",
+    "rd": "おだいじに",
+    "rom": "odaiji ni",
+    "en": "Take care (of yourself)",
+    "my": "ဂရုစိုက်ပါ (ကျန်းမာရေးကို)။",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "大切 [な]",
+    "rd": "たいせつ [な]",
+    "rom": "taisetsu [na]",
+    "en": "precious; important",
+    "my": "တန်ဖိုးထားသော",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "大丈夫 [な]",
+    "rd": "だいじょうぶ [な]",
+    "rom": "daijoubu [na]",
+    "en": "all right; OK",
+    "my": "ကိစ္စမရှိသော",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "危ない [な]",
+    "rd": "あぶない [な]",
+    "rom": "abunai [na]",
+    "en": "dangerous",
+    "my": "အန္တရာယ်များသော",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "禁煙",
+    "rd": "きんえん",
+    "rom": "kin'en",
+    "en": "No smoking",
+    "my": "ဆေးလိပ်မသောက်ရ",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "[健康] 保険書",
+    "rd": "[けんこう] ほけんしょ",
+    "rom": "[kenkou] hokensho",
+    "en": "(health) insurance card",
+    "my": "ကျန်းမာရေးအာမခံကဒ်ပြား",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "[お] ふろ",
+    "rd": "[お] ふろ",
+    "rom": "[o] furo",
+    "en": "bath",
+    "my": "ရေစိမ်/ချိုးကန်",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "上着",
+    "rd": "うえちゃく",
+    "rom": "uwagi",
+    "en": "coat; jacket",
+    "my": "အနွေးထည်/အပေါ်ထပ်အင်္ကျီ",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "下着",
+    "rd": "したぎ",
+    "rom": "shitagi",
+    "en": "underwear",
+    "my": "အတွင်းခံ",
+    "cat": "Minna L17"
+  },
+  {
+    "jp": "できます",
+    "rd": "できます",
+    "rom": "dekimasu",
+    "en": "can do; be able to do",
+    "my": "တတ်သည်။ လုပ်တတ်သည်။ နိုင်သည်။ လုပ်နိုင်သည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "洗います",
+    "rd": "あらいます",
+    "rom": "araimasu",
+    "en": "wash",
+    "my": "လက်ဆေးသည်။ အဝတ်လျှော်သည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "弾きます",
+    "rd": "ひきます",
+    "rom": "hikimasu",
+    "en": "play (a musical instrument)",
+    "my": "ပီယာနိုတီးသည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "歌います",
+    "rd": "うたいます",
+    "rom": "utaimasu",
+    "en": "sing",
+    "my": "သီချင်းဆိုသည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "集めます",
+    "rd": "あつめます",
+    "rom": "atsumemasu",
+    "en": "collect; gather",
+    "my": "စုဆောင်းသည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "捨てます",
+    "rd": "すてます",
+    "rom": "sutemasu",
+    "en": "throw away",
+    "my": "စွန့်ပစ်သည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "換えます",
+    "rd": "かえます",
+    "rom": "kaemasu",
+    "en": "change; exchange",
+    "my": "လဲလှယ်သည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "運転します",
+    "rd": "うんてんします",
+    "rom": "untenshimasu",
+    "en": "drive",
+    "my": "ကားမောင်းသည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "予約します",
+    "rd": "よやくします",
+    "rom": "yoyakushimasu",
+    "en": "reserve; book",
+    "my": "bookingလုပ်သည်။",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "ピアノ",
+    "rd": "ピアノ",
+    "rom": "piano",
+    "en": "piano",
+    "my": "ပီယာနို",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "メートル",
+    "rd": "メートル",
+    "rom": "meetoru",
+    "en": "metre; meter",
+    "my": "မီတာ(အကွာအဝေးကိုတိုင်းတာသောမီတာ)",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "現金",
+    "rd": "げんきん",
+    "rom": "genkin",
+    "en": "cash",
+    "my": "ငွေသား၊ လက်ငင်းငွေပေးချေခြင်း",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "日記",
+    "rd": "にっき",
+    "rom": "nikki",
+    "en": "diary",
+    "my": "နေ့စဉ်မှတ်တမ်း",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "お祈り",
+    "rd": "おいのり",
+    "rom": "oinori",
+    "en": "prayer",
+    "my": "ဆုတောင်းခြင်း",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "課長",
+    "rd": "かちょう",
+    "rom": "kachou",
+    "en": "section chief; section manager",
+    "my": "ဌာနခွဲမှူး",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "部長",
+    "rd": "ぶちょう",
+    "rom": "buchou",
+    "en": "department chief; department manager",
+    "my": "ဌာနမှူး",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "社長",
+    "rd": "しゃちょう",
+    "rom": "shachou",
+    "en": "company president; president (of a company)",
+    "my": "သူဌေး",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "インターネット",
+    "rd": "インターネット",
+    "rom": "intaanetto",
+    "en": "Internet",
+    "my": "အင်တာနက်",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "へえ、",
+    "rd": "へえ、",
+    "rom": "hee,",
+    "en": "Really?",
+    "my": "ဟယ်",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "それはおもしろいですね",
+    "rd": "それはおもしろいですね",
+    "rom": "sore wa omoshiroi desu ne",
+    "en": "That's interesting, isn't it?",
+    "my": "အဲဒါစိတ်ဝင်စားစရာပဲနော်",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "なかなか",
+    "rd": "なかなか",
+    "rom": "nakanaka",
+    "en": "quite; fairly",
+    "my": "တော်တော်နဲ့---",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "ほんとうですか",
+    "rd": "ほんとうですか",
+    "rom": "hontou desu ka",
+    "en": "Is that true?; Really?",
+    "my": "တကယ်လားဟင်",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "故郷",
+    "rd": "ふるさと",
+    "rom": "furusato",
+    "en": "hometown",
+    "my": "မွေးရပ်မြေ",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "ビートルズ",
+    "rd": "ビートルズ",
+    "rom": "biitoruzu",
+    "en": "The Beatles",
+    "my": "The Beatles",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "秋葉原",
+    "rd": "あきはばら",
+    "rom": "akihabara",
+    "en": "Akihabara",
+    "my": "Akihabara တိုကျိုမှာလူစည်ကားသောနေရာတစ်ခု",
+    "cat": "Minna L18"
+  },
+  {
+    "jp": "登ります",
+    "rd": "のぼります",
+    "rom": "noborimasu",
+    "en": "to climb",
+    "my": "အမြင့်သို့တက်သည်။",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "泊まります",
+    "rd": "とまります",
+    "rom": "tomarimasu",
+    "en": "to stay overnight",
+    "my": "ညအိပ်တည်းခိုသည်",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "[ホテルに]",
+    "rd": "[ホテルに]",
+    "rom": "[hoteru ni]",
+    "en": "(at a hotel)",
+    "my": "(ဟိုတယ်တွင်)။",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "掃除します",
+    "rd": "そうじします",
+    "rom": "souji shimasu",
+    "en": "to clean",
+    "my": "သန့်ရှင်းရေးလုပ်သည်။",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "洗濯します",
+    "rd": "せんたくします",
+    "rom": "sentaku shimasu",
+    "en": "to wash clothes",
+    "my": "အဝတ်လျှော်သည်။",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "なります",
+    "rd": "なります",
+    "rom": "narimasu",
+    "en": "to become",
+    "my": "ဖြစ်လာသည်။",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "眠い",
+    "rd": "ねむい",
+    "rom": "nemui",
+    "en": "sleepy",
+    "my": "အိပ်ချင်သော",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "練習",
+    "rd": "れんしゅう",
+    "rom": "renshuu",
+    "en": "practice",
+    "my": "လေ့ကျင့်ခြင်း",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "ゴルフ",
+    "rd": "ゴルフ",
+    "rom": "gorufu",
+    "en": "golf",
+    "my": "Golf",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "相撲",
+    "rd": "すもう",
+    "rom": "sumou",
+    "en": "sumo",
+    "my": "ဂျပန်နပန်းအားကစား",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "日",
+    "rd": "にち",
+    "rom": "nichi",
+    "en": "day",
+    "my": "နေ့ရက်",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "調子",
+    "rd": "ちょうし",
+    "rom": "choushi",
+    "en": "condition",
+    "my": "အခြေအနေ",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "一度",
+    "rd": "いちど",
+    "rom": "ichido",
+    "en": "once",
+    "my": "တစ်ကြိမ်၊ တစ်ခေါက်",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "一度も",
+    "rd": "いちども",
+    "rom": "ichido mo",
+    "en": "not even once",
+    "my": "တစ်ကြိမ်မျှ၊ တစ်ခေါက်မျှ",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "だんだん",
+    "rd": "だんだん",
+    "rom": "dandan",
+    "en": "gradually",
+    "my": "တဖြေးဖြေးနဲ့",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "もうすぐ",
+    "rd": "もうすぐ",
+    "rom": "mou sugu",
+    "en": "soon",
+    "my": "အခုချက်ခြင်း",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "おかげさまで",
+    "rd": "おかげさまで",
+    "rom": "okagesama de",
+    "en": "thanks to you",
+    "my": "ကျေးဇူးတော်ကြောင့်/ပို့သတဲ့မေတ္တာကြောင့်",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "乾杯",
+    "rd": "かんぱい",
+    "rom": "kanpai",
+    "en": "cheers",
+    "my": "Cheers",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "ダイエット",
+    "rd": "ダイエット",
+    "rom": "daietto",
+    "en": "diet",
+    "my": "ဝိတ်ချခြင်း",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "無理[な]",
+    "rd": "むり[な]",
+    "rom": "muri [na]",
+    "en": "impossible; unreasonable",
+    "my": "မဖြစ်နိုင်သော(အလွန်အကျွံဖြစ်သော)",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "体にいい",
+    "rd": "からだにいい",
+    "rom": "karada ni ii",
+    "en": "good for one's health",
+    "my": "ခန္ဓာကိုယ်အတွက်ကောင်းသော",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "東京スカイツリー",
+    "rd": "とうきょうスカイツリー",
+    "rom": "toukyou sukai tsurii",
+    "en": "Tokyo Skytree",
+    "my": "Tokyo Sky Tree",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "葛飾北斎",
+    "rd": "かつしかほくさい",
+    "rom": "katsushika hokusai",
+    "en": "Katsushika Hokusai",
+    "my": "(Edoခေတ်တွင် ကျော်ကြားခဲ့သော ပန်းချီဆရာ)",
+    "cat": "Minna L19"
+  },
+  {
+    "jp": "要ります[ビザが～]",
+    "rd": "いります[ビザが～]",
+    "rom": "irimasu [biza ga ~]",
+    "en": "to need",
+    "my": "လိုအပ်သည်(ဗီဇာ)",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "よかったら",
+    "rd": "よかったら",
+    "rom": "yokattara",
+    "en": "if you like; if it's convenient",
+    "my": "ကြိုက်မယ်ဆိုရင်၊ အဆင်ပြေမယ်ဆိုရင်",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "調べます",
+    "rd": "しらべます",
+    "rom": "shirabemasu",
+    "en": "to look up; to investigate",
+    "my": "စုံစမ်းသည်။",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "修理します",
+    "rd": "しゅうりします",
+    "rom": "shuuri shimasu",
+    "en": "to repair",
+    "my": "ပြုပြင်သည်။",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "いろいろ",
+    "rd": "いろいろ",
+    "rom": "iroiro",
+    "en": "various; all kinds",
+    "my": "အမျိုးမျိုး",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "君",
+    "rd": "きみ",
+    "rom": "kimi",
+    "en": "you",
+    "my": "မင်း",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "～くん",
+    "rd": "～くん",
+    "rom": "~kun",
+    "en": "suffix after a boy's name",
+    "my": "ကို/မောင်---",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "うん",
+    "rd": "うん",
+    "rom": "un",
+    "en": "yes; yeah",
+    "my": "အင်း",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "ううん",
+    "rd": "ううん",
+    "rom": "uun",
+    "en": "no; uh-uh",
+    "my": "ဟင့်အင်း",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "ことば",
+    "rd": "ことば",
+    "rom": "kotoba",
+    "en": "word; words",
+    "my": "စကား၊ ဝေါဟာရ",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "着物",
+    "rd": "きもの",
+    "rom": "kimono",
+    "en": "kimono",
+    "my": "ဂျပန်ကီမိုနို",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "ビザ",
+    "rd": "ビザ",
+    "rom": "biza",
+    "en": "visa",
+    "my": "Visa",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "初め",
+    "rd": "はじめ",
+    "rom": "hajime",
+    "en": "beginning",
+    "my": "ပထမတော့၊ အစပိုင်း",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "こっち",
+    "rd": "こっち",
+    "rom": "kocchi",
+    "en": "this way; here",
+    "my": "ဒီဘက်",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "そっち",
+    "rd": "そっち",
+    "rom": "socchi",
+    "en": "that way (near you); there",
+    "my": "ဟိုဘက်",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "あっち",
+    "rd": "あっち",
+    "rom": "acchi",
+    "en": "that way (over there); over there",
+    "my": "ဟို့ဘက်",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "どっち",
+    "rd": "どっち",
+    "rom": "docchi",
+    "en": "which way; where",
+    "my": "ဘယ်ဘက်",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "みんなで",
+    "rd": "みんなで",
+    "rom": "minna de",
+    "en": "together; with everyone",
+    "my": "အားလုံးနဲ့၊ အားလုံးအတူတူ",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "～けど",
+    "rd": "～けど",
+    "rom": "~kedo",
+    "en": "but; however",
+    "my": "ဒါပေမဲ့",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "おなかがいっぱいです",
+    "rd": "おなかがいっぱいです",
+    "rom": "onaka ga ippai desu",
+    "en": "I'm full; my stomach is full",
+    "my": "ဗိုက်ပြည့်တယ်",
+    "cat": "Minna L20"
+  },
+  {
+    "jp": "思います",
+    "rd": "おもいます",
+    "rom": "omoimasu",
+    "en": "think",
+    "my": "တွေးထင်သည်။",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "言います",
+    "rd": "いいます",
+    "rom": "iimasu",
+    "en": "say, speak",
+    "my": "ပြောသည်။",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "勝ちます",
+    "rd": "かちます",
+    "rom": "kachimasu",
+    "en": "win",
+    "my": "နိုင်သည်။",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "負けます",
+    "rd": "まけます",
+    "rom": "makemasu",
+    "en": "lose",
+    "my": "ရှုံးသည်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "あります［お祭りが～］",
+    "rd": "あります［おまつりが～］",
+    "rom": "arimasu [omatsuri ga ~]",
+    "en": "(a festival) is held",
+    "my": "ရှိသည်(ပွဲတော်)",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "役にたちます",
+    "rd": "やくにたちます",
+    "rom": "yaku ni tachimasu",
+    "en": "be useful",
+    "my": "အသုံးဝင်သည်။",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "動きます",
+    "rd": "うごきます",
+    "rom": "ugokimasu",
+    "en": "move",
+    "my": "လှုပ်ရှားသည်။",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "やめます［会社を～］",
+    "rd": "やめます［かいしゃを～］",
+    "rom": "yamemasu [kaisha o ~]",
+    "en": "quit (a company)",
+    "my": "အလုပ်ထွက်သည်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "気をつけます",
+    "rd": "きをつけます",
+    "rom": "ki o tsukemasu",
+    "en": "be careful",
+    "my": "သတိထားသည်။ ဂရုစိုက်သည်။",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "無駄［な］",
+    "rd": "むだ［な］",
+    "rom": "muda [na]",
+    "en": "wasteful",
+    "my": "အလဟဿဖြစ်သော",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "不便［な］",
+    "rd": "ふべん［な］",
+    "rom": "fuben [na]",
+    "en": "inconvenient",
+    "my": "အဆင်မပြေသော",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "すごい",
+    "rd": "すごい",
+    "rom": "sugoi",
+    "en": "amazing, terrible",
+    "my": "အံ့ဩစရာကောင်းသော",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "ほんとう",
+    "rd": "ほんとう",
+    "rom": "hontou",
+    "en": "truth, really",
+    "my": "တကယ်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "うそ",
+    "rd": "うそ",
+    "rom": "uso",
+    "en": "lie",
+    "my": "အလိမ်၊ အညာ",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "自動車",
+    "rd": "じどうしゃ",
+    "rom": "jidousha",
+    "en": "automobile",
+    "my": "မော်တော်ကား",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "交通",
+    "rd": "こうつう",
+    "rom": "koutsuu",
+    "en": "traffic",
+    "my": "ယာဉ်သွားလာမှု",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "物価",
+    "rd": "ぶっか",
+    "rom": "bukka",
+    "en": "prices",
+    "my": "ကုန်ဈေးနှုန်း",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "放送",
+    "rd": "ほうそう",
+    "rom": "housou",
+    "en": "broadcast",
+    "my": "သတင်းလွှင့်ခြင်း",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "ニュース",
+    "rd": "ニュース",
+    "rom": "nyuusu",
+    "en": "news",
+    "my": "သတင်း",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "アニメ",
+    "rd": "アニメ",
+    "rom": "anime",
+    "en": "anime",
+    "my": "ဂျပန်ကာတွန်းကား",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "マンガ",
+    "rd": "マンガ",
+    "rom": "manga",
+    "en": "manga, comic",
+    "my": "ကာတွန်း(ရုပ်ပြ)စာအုပ်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "デザイン",
+    "rd": "デザイン",
+    "rom": "dezain",
+    "en": "design",
+    "my": "ဒီဇိုင်း",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "天才",
+    "rd": "てんさい",
+    "rom": "tensai",
+    "en": "genius",
+    "my": "ပါရမီရှင်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "試合",
+    "rd": "しあい",
+    "rom": "shiai",
+    "en": "match, game",
+    "my": "ပြိုင်ပွဲ",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "意見",
+    "rd": "いけん",
+    "rom": "iken",
+    "en": "opinion",
+    "my": "ထင်မြင်ချက်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "話",
+    "rd": "はなし",
+    "rom": "hanashi",
+    "en": "story, talk",
+    "my": "စကား၊ ပုံပြင်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "地球",
+    "rd": "ちきゅう",
+    "rom": "chikyuu",
+    "en": "the earth",
+    "my": "ကမ္ဘာမြေ",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "最近",
+    "rd": "さいきん",
+    "rom": "saikin",
+    "en": "recently",
+    "my": "အခုတလော",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "ほんとうに",
+    "rd": "ほんとうに",
+    "rom": "hontou ni",
+    "en": "really",
+    "my": "တကယ်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "そんなに",
+    "rd": "そんなに",
+    "rom": "sonna ni",
+    "en": "so (much)",
+    "my": "အဲဒီလောက်(နောက်တွင် အငြင်းလိုက်လေရှိသည်)",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "～について",
+    "rd": "～について",
+    "rom": "~ni tsuite",
+    "en": "about ~",
+    "my": "～နဲ့ပက်သက်ပြီး",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "久しぶりですね",
+    "rd": "ひさしぶりですね",
+    "rom": "hisashiburi desu ne",
+    "en": "Long time no see.",
+    "my": "မတွေ့တာကြာပြီနော်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "～でも飲みませんか。",
+    "rd": "～でものみませんか。",
+    "rom": "~demo nomimasen ka.",
+    "en": "Won't you have ~?",
+    "my": "မသောက်တော့ဘူးလား",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "もう帰らないと…",
+    "rd": "もうかえらないと…",
+    "rom": "mou kaeranai to…",
+    "en": "I have to go home...",
+    "my": "အိမ်ပြန်ရတော့မယ် (မပြန်လို့မရဘူး)",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "アインシュタイン",
+    "rd": "アインシュタイン",
+    "rom": "ainshutain",
+    "en": "Einstein",
+    "my": "Albert Einstein",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "ガガーリン",
+    "rd": "ガガーリン",
+    "rom": "gagaarin",
+    "en": "Gagarin",
+    "my": "Yuri Alekseyevich Gagarin",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "ガリレオ",
+    "rd": "ガリレオ",
+    "rom": "garireo",
+    "en": "Galileo",
+    "my": "Galileo Galilei",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "キング牧師",
+    "rd": "キングぼくし",
+    "rom": "kingu bokushi",
+    "en": "Rev. King",
+    "my": "Martin Luther King, Jr.",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "フランクリン",
+    "rd": "フランクリン",
+    "rom": "furankurin",
+    "en": "Franklin",
+    "my": "Benjamin Franklin",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "かぐや姫",
+    "rd": "かぐやひめ",
+    "rom": "kaguya hime",
+    "en": "Princess Kaguya",
+    "my": "Kaguya မင်းသမီး",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "天神祭り",
+    "rd": "てんじんまつり",
+    "rom": "tenjin matsuri",
+    "en": "Tenjin Festival",
+    "my": "Tenjin ပွဲတော်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "吉野山",
+    "rd": "よしのやま",
+    "rom": "yoshino yama",
+    "en": "Mt. Yoshino",
+    "my": "Yoshino တောင်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "カンガルー",
+    "rd": "カンガルー",
+    "rom": "kangaruu",
+    "en": "kangaroo",
+    "my": "သားပိုက်ကောင်",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "キャプテン・クック",
+    "rd": "キャプテン・クック",
+    "rom": "kyaputen kukku",
+    "en": "Captain Cook",
+    "my": "Captain James Cook",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "ヨーネン",
+    "rd": "ヨーネン",
+    "rom": "yoonen",
+    "en": "Yone (company)",
+    "my": "yone ကုမ္ပဏီ",
+    "cat": "Minna L21"
+  },
+  {
+    "jp": "着ます",
+    "rd": "きます",
+    "rom": "kimasu",
+    "en": "put on (clothes)",
+    "my": "ဝတ်သည်။",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "はきます",
+    "rd": "はきます",
+    "rom": "hakimasu",
+    "en": "put on (shoes)",
+    "my": "ဖိနပ်စီးသည်။",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "かぶります",
+    "rd": "かぶります",
+    "rom": "kaburimasu",
+    "en": "put on (a hat)",
+    "my": "ဦးထုပ်ဆောင်းသည်/ခြုံသည်။",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "かけます［めがねを～］",
+    "rd": "かけます［めがねを～］",
+    "rom": "kakemasu [megane o ~]",
+    "en": "put on (glasses)",
+    "my": "မျက်မှန်တပ်သည်။",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "します［ネクタイを～］",
+    "rd": "します［ネクタイを～］",
+    "rom": "shimasu [nekutai o ~]",
+    "en": "wear (a necktie)",
+    "my": "neck tie ကိုဝတ်ဆင်သည်",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "生まれます",
+    "rd": "うまれます",
+    "rom": "umaremasu",
+    "en": "be born",
+    "my": "မွေးဖွားသည်။",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "私たち",
+    "rd": "わたしたち",
+    "rom": "watashitachi",
+    "en": "we",
+    "my": "ကျွန်တော်တို့/ကျွန်မတို့",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "スーツ",
+    "rd": "スーツ",
+    "rom": "suutsu",
+    "en": "suit",
+    "my": "အနောက်တိုင်းကုတ်အင်္ကျီ",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "メガネ",
+    "rd": "メガネ",
+    "rom": "megane",
+    "en": "glasses",
+    "my": "မျက်မှန်",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "［お］弁当",
+    "rd": "［お］べんとう",
+    "rom": "[o]bentou",
+    "en": "boxed lunch",
+    "my": "ထမင်းဗူး",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "ロボット",
+    "rd": "ロボット",
+    "rom": "robotto",
+    "en": "robot",
+    "my": "စက်ရုပ်",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "ユーモア",
+    "rd": "ユーモア",
+    "rom": "yuumoa",
+    "en": "humor",
+    "my": "ဟာသ",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "都合",
+    "rd": "つごう",
+    "rom": "tsugou",
+    "en": "circumstances, convenience",
+    "my": "အခြေအနေ",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "えーと",
+    "rd": "えーと",
+    "rom": "eeto",
+    "en": "um, er",
+    "my": "အဲဒါဆိုရင်",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "おめでとう［ございます］",
+    "rd": "おめでとう［ございます］",
+    "rom": "omedetou [gozaimasu]",
+    "en": "congratulations",
+    "my": "ဂုဏ်ယူပါတယ်။",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "お探しですか",
+    "rd": "おさがしですか",
+    "rom": "osagashi desu ka",
+    "en": "Are you looking for something?",
+    "my": "တစ်ခုခုရှာနေပါသလား",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "では",
+    "rd": "では",
+    "rom": "dewa",
+    "en": "well then",
+    "my": "ဒါဆိုရင်-",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "家賃",
+    "rd": "やちん",
+    "rom": "yachin",
+    "en": "rent",
+    "my": "အိမ်ငှားခ",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "ダイニングキッチン",
+    "rd": "ダイニングキッチン",
+    "rom": "dainingu kitchin",
+    "en": "dining kitchen",
+    "my": "ထမင်းစားခန်းပါသော မီးဖိုဆောင်",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "和室",
+    "rd": "わしつ",
+    "rom": "washitsu",
+    "en": "Japanese-style room",
+    "my": "ဂျပန်ရိုးရာအခန်း",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "押入れ",
+    "rd": "おしいれ",
+    "rom": "oshiire",
+    "en": "closet",
+    "my": "ဂျပန်စတိုင်ဗီဒို(မွေ့ရာ၊ စောင်၊ ခေါင်းအုံးများ သိမ်းဆည်းသည့်အခန်း)",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "布団",
+    "rd": "ふとん",
+    "rom": "futon",
+    "en": "futon",
+    "my": "မွေ့ယာ",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "パリ",
+    "rd": "パリ",
+    "rom": "pari",
+    "en": "Paris",
+    "my": "ပါရီမြို့",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "万里の長城",
+    "rd": "まんりのちょうじょう",
+    "rom": "manri no choujou",
+    "en": "The Great Wall of China",
+    "my": "The Great Wall of China သင်ခန်းစာတွင်ပါဝင်သော",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "みんなのアンケート",
+    "rd": "みんなのアンケート",
+    "rom": "minna no ankeeto",
+    "en": "everyone's questionnaire",
+    "my": "မေးခွန်းမေးမြန်းခြင်း",
+    "cat": "Minna L22"
+  },
+  {
+    "jp": "聞きます［先生に］",
+    "rd": "ききます［せんせいに］",
+    "rom": "kikimasu [sensei ni]",
+    "en": "ask (a teacher)",
+    "my": "မေးမြန်းသည်(ဆရာကို)။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "回します",
+    "rd": "まわします",
+    "rom": "mawashimasu",
+    "en": "turn, rotate",
+    "my": "လှည့်သည်။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "引きます",
+    "rd": "ひきます",
+    "rom": "hikimasu",
+    "en": "pull",
+    "my": "ဆွဲသည်။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "変えます",
+    "rd": "かえます",
+    "rom": "kaemasu",
+    "en": "change",
+    "my": "လဲလှယ်သည်။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "触ります",
+    "rd": "さわります",
+    "rom": "sawarimasu",
+    "en": "touch",
+    "my": "ကိုင်သည်၊ ထိသည်၊ တိသည်။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "出ます［お釣りが～］",
+    "rd": "でます［おつりが～］",
+    "rom": "demasu [otsuri ga ~]",
+    "en": "come out (change comes out)",
+    "my": "ထွက်လာသည်/ကျလာသည်။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "歩きます",
+    "rd": "あるきます",
+    "rom": "arukimasu",
+    "en": "walk",
+    "my": "လမ်းလျှောက်သည်။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "渡ります［橋を～］",
+    "rd": "わたります［はしを～］",
+    "rom": "watarimasu [hashi o ~]",
+    "en": "cross (a bridge)",
+    "my": "ဖြတ်ကျော်သည်(တံတားကို)။",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "曲がります［右へ～］",
+    "rd": "まがります［みぎへ～］",
+    "rom": "magarimasu [migi e ~]",
+    "en": "turn (to the right)",
+    "my": "ကွေ့သည်(ညာဘက်ကို)",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "［お］湯",
+    "rd": "［お］ゆ",
+    "rom": "[o]yu",
+    "en": "hot water",
+    "my": "ရေနွေး",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "サイズ",
+    "rd": "サイズ",
+    "rom": "saizu",
+    "en": "size",
+    "my": "အရွယ်အစား",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "故障",
+    "rd": "こしょう",
+    "rom": "koshou",
+    "en": "breakdown",
+    "my": "ပျက်စီးနေခြင်း",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "交差点",
+    "rd": "こうさてん",
+    "rom": "kousaten",
+    "en": "intersection",
+    "my": "လမ်းဆုံ",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "信号",
+    "rd": "しんごう",
+    "rom": "shingou",
+    "en": "traffic light",
+    "my": "မီးပွိုင့်",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "角",
+    "rd": "かど",
+    "rom": "kado",
+    "en": "corner",
+    "my": "လမ်းထောင့်",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "橋",
+    "rd": "はし",
+    "rom": "hashi",
+    "en": "bridge",
+    "my": "တံတား",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "建物",
+    "rd": "たてもの",
+    "rom": "tatemono",
+    "en": "building",
+    "my": "အဆောက်အဦး",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "何回も",
+    "rd": "なんかいも",
+    "rom": "nankai mo",
+    "en": "many times",
+    "my": "အကြိမ်များစွာ",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "～目",
+    "rd": "～め",
+    "rom": "~me",
+    "en": "-th (ordinal)",
+    "my": "～မြောက်",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "聖徳太子",
+    "rd": "しょうとくたいし",
+    "rom": "shoutoku taishi",
+    "en": "Prince Shotoku",
+    "my": "Shotokuမင်းသား",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "法隆寺",
+    "rd": "ほうりゅうじ",
+    "rom": "houryuuji",
+    "en": "Horyuji Temple",
+    "my": "Houryuji ဘုရားကျောင်း",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "元気茶",
+    "rd": "げんきちゃ",
+    "rom": "genkicha",
+    "en": "Genki tea",
+    "my": "ကျန်းမာရေးလက်ဖက်ခြောက်",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "本田駅",
+    "rd": "ほんだえき",
+    "rom": "honda eki",
+    "en": "Honda Station",
+    "my": "Hondaဘူတာ",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "図書館前",
+    "rd": "としょかんまえ",
+    "rom": "toshokan mae",
+    "en": "in front of the library",
+    "my": "စာကြည့်တိုက်ရှေ့ ဘတ်စ်ကားမှတ်တိုင်",
+    "cat": "Minna L23"
+  },
+  {
+    "jp": "くれます",
+    "rd": "くれます",
+    "rom": "kuremasu",
+    "en": "give (to me)",
+    "my": "ပေးသည်(တခြားသူက ကိုယ့်ကိုပေးခြင်း)",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "直します",
+    "rd": "なおします",
+    "rom": "naoshimasu",
+    "en": "fix, repair",
+    "my": "ပြုပြင်သည်/အမှားပြင်ဆင်သည်။",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "つれていきます",
+    "rd": "つれていきます",
+    "rom": "tsurete ikimasu",
+    "en": "take (someone) along",
+    "my": "ခေါ်သွားသည်။",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "つれてきます",
+    "rd": "つれてきます",
+    "rom": "tsurete kimasu",
+    "en": "bring (someone) along",
+    "my": "ခေါ်လာသည်။",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "紹介します",
+    "rd": "しょうかいします",
+    "rom": "shoukai shimasu",
+    "en": "introduce",
+    "my": "မိတ်ဆက်သည်။",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "案内します",
+    "rd": "あんないします",
+    "rom": "annai shimasu",
+    "en": "show around, guide",
+    "my": "လမ်းပြသည်။",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "説明します",
+    "rd": "せつめいします",
+    "rom": "setsumei shimasu",
+    "en": "explain",
+    "my": "ရှင်းပြသည်။",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "おじいさん/おじいちゃん",
+    "rd": "おじいさん/おじいちゃん",
+    "rom": "ojiisan/ojiichan",
+    "en": "grandfather",
+    "my": "အဖိုး",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "おばあさん/おばあちゃん",
+    "rd": "おばあさん/おばあちゃん",
+    "rom": "obaasan/obaachan",
+    "en": "grandmother",
+    "my": "အဖွား",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "準備",
+    "rd": "じゅんび",
+    "rom": "junbi",
+    "en": "preparation",
+    "my": "ကြိုတင်ပြင်ဆင်ခြင်း",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "引っ越し",
+    "rd": "ひっこし",
+    "rom": "hikkoshi",
+    "en": "moving house",
+    "my": "အိမ်ပြောင်းခြင်း",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "［お］菓子",
+    "rd": "［お］かし",
+    "rom": "[o]kashi",
+    "en": "sweets",
+    "my": "မုန့်",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "ホームステイ",
+    "rd": "ホームステイ",
+    "rom": "hoomusutei",
+    "en": "homestay",
+    "my": "Home stay",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "自分で",
+    "rd": "じぶんで",
+    "rom": "jibun de",
+    "en": "by oneself",
+    "my": "ကိုယ်တိုင်",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "他に",
+    "rd": "ほかに",
+    "rom": "hoka ni",
+    "en": "besides, other",
+    "my": "အခြား",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "母の日",
+    "rd": "ははのひ",
+    "rom": "haha no hi",
+    "en": "Mother's Day",
+    "my": "အမေနေ့",
+    "cat": "Minna L24"
+  },
+  {
+    "jp": "考えます",
+    "rd": "かんがえます",
+    "rom": "kangaemasu",
+    "en": "think",
+    "my": "စဉ်းစားသည်။",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "着きます",
+    "rd": "つきます",
+    "rom": "tsukimasu",
+    "en": "arrive",
+    "my": "ဆိုက်ရောက်သည်။",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "留学します",
+    "rd": "りゅうがくします",
+    "rom": "ryuugaku shimasu",
+    "en": "study abroad",
+    "my": "နိုင်ငံခြားပညာသင်သွားသည်။",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "取ります［年を～］",
+    "rd": "とります［としを～］",
+    "rom": "torimasu [toshi o ~]",
+    "en": "get older",
+    "my": "အသက်ကြီးသည်။",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "足ります",
+    "rd": "たります",
+    "rom": "tarimasu",
+    "en": "be enough",
+    "my": "လုံလောက်သည်။",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "田舎",
+    "rd": "いなか",
+    "rom": "inaka",
+    "en": "countryside",
+    "my": "တောရွာ",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "チャンス",
+    "rd": "チャンス",
+    "rom": "chansu",
+    "en": "chance",
+    "my": "အခွင့်အရေး",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "億",
+    "rd": "おく",
+    "rom": "oku",
+    "en": "100 million",
+    "my": "သန်း၁၀၀",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "もし［～たら］",
+    "rd": "もし［～たら］",
+    "rom": "moshi [~tara]",
+    "en": "if",
+    "my": "တကယ်လို့～ခဲ့ရင်",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "もしもし",
+    "rd": "もしもし",
+    "rom": "moshimoshi",
+    "en": "hello (on the phone)",
+    "my": "hello",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "転勤",
+    "rd": "てんきん",
+    "rom": "tenkin",
+    "en": "job transfer",
+    "my": "အလုပ်ပြောင်းခြင်း",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "［いろいろ］お世話になりました",
+    "rd": "［いろいろ］おせわになりました",
+    "rom": "[iroiro] osewa ni narimashita",
+    "en": "Thank you for everything.",
+    "my": "ကျေးဇူးအများကြီးရှိခဲ့ပါတယ်",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "頑張ります",
+    "rd": "がんばります",
+    "rom": "ganbarimasu",
+    "en": "do one's best",
+    "my": "ကြိုးစားပါမယ်",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "どうぞ、お元気で",
+    "rd": "どうぞ、おげんきで",
+    "rom": "douzo, ogenki de",
+    "en": "Please take care.",
+    "my": "ကျန်းမာစွာနဲ့",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "ベトナム",
+    "rd": "ベトナム",
+    "rom": "betonamu",
+    "en": "Vietnam",
+    "my": "ဗီယက်နမ်",
+    "cat": "Minna L25"
+  },
+  {
+    "jp": "十三",
+    "rd": "じゅうさん",
+    "rom": "juu-san",
+    "en": "thirteen",
+    "my": "ဆယ့်သုံး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十四",
+    "rd": "じゅうよん／じゅうし",
+    "rom": "juu-yon / juu-shi",
+    "en": "fourteen",
+    "my": "ဆယ့်လေး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十五",
+    "rd": "じゅうご",
+    "rom": "juu-go",
+    "en": "fifteen",
+    "my": "ဆယ့်ငါး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十六",
+    "rd": "じゅうろく",
+    "rom": "juu-roku",
+    "en": "sixteen",
+    "my": "ဆယ့်ခြောက်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十七",
+    "rd": "じゅうなな／じゅうしち",
+    "rom": "juu-nana / juu-shichi",
+    "en": "seventeen",
+    "my": "ဆယ့်ခုနှစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十八",
+    "rd": "じゅうはち",
+    "rom": "juu-hachi",
+    "en": "eighteen",
+    "my": "ဆယ့်ရှစ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十九",
+    "rd": "じゅうきゅう／じゅうく",
+    "rom": "juu-kyuu / juu-ku",
+    "en": "nineteen",
+    "my": "ဆယ့်ကိုး",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "三十",
+    "rd": "さんじゅう",
+    "rom": "san-juu",
+    "en": "thirty",
+    "my": "သုံးဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "四十",
+    "rd": "よんじゅう",
+    "rom": "yon-juu",
+    "en": "forty",
+    "my": "လေးဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "五十",
+    "rd": "ごじゅう",
+    "rom": "go-juu",
+    "en": "fifty",
+    "my": "ငါးဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "六十",
+    "rd": "ろくじゅう",
+    "rom": "roku-juu",
+    "en": "sixty",
+    "my": "ခြောက်ဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "七十",
+    "rd": "ななじゅう",
+    "rom": "nana-juu",
+    "en": "seventy",
+    "my": "ခုနှစ်ဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "八十",
+    "rd": "はちじゅう",
+    "rom": "hachi-juu",
+    "en": "eighty",
+    "my": "ရှစ်ဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "九十",
+    "rd": "きゅうじゅう",
+    "rom": "kyuu-juu",
+    "en": "ninety",
+    "my": "ကိုးဆယ်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "四百",
+    "rd": "よんひゃく",
+    "rom": "yon-hyaku",
+    "en": "four hundred",
+    "my": "လေးရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "五百",
+    "rd": "ごひゃく",
+    "rom": "go-hyaku",
+    "en": "five hundred",
+    "my": "ငါးရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "六百",
+    "rd": "ろっぴゃく",
+    "rom": "rop-pyaku",
+    "en": "six hundred",
+    "my": "ခြောက်ရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "七百",
+    "rd": "ななひゃく",
+    "rom": "nana-hyaku",
+    "en": "seven hundred",
+    "my": "ခုနှစ်ရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "八百",
+    "rd": "はっぴゃく",
+    "rom": "hap-pyaku",
+    "en": "eight hundred",
+    "my": "ရှစ်ရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "九百",
+    "rd": "きゅうひゃく",
+    "rom": "kyuu-hyaku",
+    "en": "nine hundred",
+    "my": "ကိုးရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "二千",
+    "rd": "にせん",
+    "rom": "ni-sen",
+    "en": "two thousand",
+    "my": "နှစ်ထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "三千",
+    "rd": "さんぜん",
+    "rom": "san-zen",
+    "en": "three thousand",
+    "my": "သုံးထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "四千",
+    "rd": "よんせん",
+    "rom": "yon-sen",
+    "en": "four thousand",
+    "my": "လေးထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "五千",
+    "rd": "ごせん",
+    "rom": "go-sen",
+    "en": "five thousand",
+    "my": "ငါးထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "六千",
+    "rd": "ろくせん",
+    "rom": "roku-sen",
+    "en": "six thousand",
+    "my": "ခြောက်ထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "七千",
+    "rd": "ななせん",
+    "rom": "nana-sen",
+    "en": "seven thousand",
+    "my": "ခုနှစ်ထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "八千",
+    "rd": "はっせん",
+    "rom": "has-sen",
+    "en": "eight thousand",
+    "my": "ရှစ်ထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "九千",
+    "rd": "きゅうせん",
+    "rom": "kyuu-sen",
+    "en": "nine thousand",
+    "my": "ကိုးထောင်",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "十万",
+    "rd": "じゅうまん",
+    "rom": "juu-man",
+    "en": "one hundred thousand",
+    "my": "တစ်သိန်း",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "百万",
+    "rd": "ひゃくまん",
+    "rom": "hyaku-man",
+    "en": "one million",
+    "my": "ဆယ်သိန်း",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "一千万",
+    "rd": "いっせんまん",
+    "rom": "issen-man",
+    "en": "ten million",
+    "my": "သိန်းတစ်ရာ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "一億",
+    "rd": "いちおく",
+    "rom": "ichi-oku",
+    "en": "one hundred million",
+    "my": "တစ်ကုဋေ",
+    "cat": "Numbers",
+    "t": [
+      "numbers"
+    ]
+  },
+  {
+    "jp": "１時",
+    "rd": "いちじ",
+    "rom": "ichi-ji",
+    "en": "1 o'clock",
+    "my": "၁ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "２時",
+    "rd": "にじ",
+    "rom": "ni-ji",
+    "en": "2 o'clock",
+    "my": "၂ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "３時",
+    "rd": "さんじ",
+    "rom": "san-ji",
+    "en": "3 o'clock",
+    "my": "၃ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "４時",
+    "rd": "よじ",
+    "rom": "yo-ji",
+    "en": "4 o'clock",
+    "my": "၄ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "５時",
+    "rd": "ごじ",
+    "rom": "go-ji",
+    "en": "5 o'clock",
+    "my": "၅ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "６時",
+    "rd": "ろくじ",
+    "rom": "roku-ji",
+    "en": "6 o'clock",
+    "my": "၆ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "７時",
+    "rd": "しちじ",
+    "rom": "shichi-ji",
+    "en": "7 o'clock",
+    "my": "၇ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "８時",
+    "rd": "はちじ",
+    "rom": "hachi-ji",
+    "en": "8 o'clock",
+    "my": "၈ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "９時",
+    "rd": "くじ",
+    "rom": "ku-ji",
+    "en": "9 o'clock",
+    "my": "၉ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "１０時",
+    "rd": "じゅうじ",
+    "rom": "juu-ji",
+    "en": "10 o'clock",
+    "my": "၁၀ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "１１時",
+    "rd": "じゅういちじ",
+    "rom": "juu-ichi-ji",
+    "en": "11 o'clock",
+    "my": "၁၁ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "１２時",
+    "rd": "じゅうにじ",
+    "rom": "juu-ni-ji",
+    "en": "12 o'clock",
+    "my": "၁၂ နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "何時",
+    "rd": "なんじ",
+    "rom": "nan-ji",
+    "en": "what time",
+    "my": "ဘယ်နာရီ",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "１分",
+    "rd": "いっぷん",
+    "rom": "ip-pun",
+    "en": "1 minute",
+    "my": "၁ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "２分",
+    "rd": "にふん",
+    "rom": "ni-fun",
+    "en": "2 minutes",
+    "my": "၂ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "３分",
+    "rd": "さんぷん",
+    "rom": "san-pun",
+    "en": "3 minutes",
+    "my": "၃ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "４分",
+    "rd": "よんぷん",
+    "rom": "yon-pun",
+    "en": "4 minutes",
+    "my": "၄ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "５分",
+    "rd": "ごふん",
+    "rom": "go-fun",
+    "en": "5 minutes",
+    "my": "၅ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "６分",
+    "rd": "ろっぷん",
+    "rom": "rop-pun",
+    "en": "6 minutes",
+    "my": "၆ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "７分",
+    "rd": "ななふん",
+    "rom": "nana-fun",
+    "en": "7 minutes",
+    "my": "၇ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "８分",
+    "rd": "はっぷん",
+    "rom": "hap-pun",
+    "en": "8 minutes",
+    "my": "၈ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "９分",
+    "rd": "きゅうふん",
+    "rom": "kyuu-fun",
+    "en": "9 minutes",
+    "my": "၉ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "１０分",
+    "rd": "じゅっぷん",
+    "rom": "jup-pun",
+    "en": "10 minutes",
+    "my": "၁၀ မိနစ်",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  },
+  {
+    "jp": "１１日",
+    "rd": "じゅういちにち",
+    "rom": "juu-ichi-nichi",
+    "en": "11th (date)",
+    "my": "၁၁ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１２日",
+    "rd": "じゅうににち",
+    "rom": "juu-ni-nichi",
+    "en": "12th (date)",
+    "my": "၁၂ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１３日",
+    "rd": "じゅうさんにち",
+    "rom": "juu-san-nichi",
+    "en": "13th (date)",
+    "my": "၁၃ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１５日",
+    "rd": "じゅうごにち",
+    "rom": "juu-go-nichi",
+    "en": "15th (date)",
+    "my": "၁၅ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１６日",
+    "rd": "じゅうろくにち",
+    "rom": "juu-roku-nichi",
+    "en": "16th (date)",
+    "my": "၁၆ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１７日",
+    "rd": "じゅうしちにち",
+    "rom": "juu-shichi-nichi",
+    "en": "17th (date)",
+    "my": "၁၇ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１８日",
+    "rd": "じゅうはちにち",
+    "rom": "juu-hachi-nichi",
+    "en": "18th (date)",
+    "my": "၁၈ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "１９日",
+    "rd": "じゅうくにち",
+    "rom": "juu-ku-nichi",
+    "en": "19th (date)",
+    "my": "၁၉ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２１日",
+    "rd": "にじゅういちにち",
+    "rom": "ni-juu-ichi-nichi",
+    "en": "21st (date)",
+    "my": "၂၁ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２２日",
+    "rd": "にじゅうににち",
+    "rom": "ni-juu-ni-nichi",
+    "en": "22nd (date)",
+    "my": "၂၂ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２３日",
+    "rd": "にじゅうさんにち",
+    "rom": "ni-juu-san-nichi",
+    "en": "23rd (date)",
+    "my": "၂၃ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２５日",
+    "rd": "にじゅうごにち",
+    "rom": "ni-juu-go-nichi",
+    "en": "25th (date)",
+    "my": "၂၅ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２６日",
+    "rd": "にじゅうろくにち",
+    "rom": "ni-juu-roku-nichi",
+    "en": "26th (date)",
+    "my": "၂၆ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２７日",
+    "rd": "にじゅうしちにち",
+    "rom": "ni-juu-shichi-nichi",
+    "en": "27th (date)",
+    "my": "၂၇ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２８日",
+    "rd": "にじゅうはちにち",
+    "rom": "ni-juu-hachi-nichi",
+    "en": "28th (date)",
+    "my": "၂၈ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "２９日",
+    "rd": "にじゅうくにち",
+    "rom": "ni-juu-ku-nichi",
+    "en": "29th (date)",
+    "my": "၂၉ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "３０日",
+    "rd": "さんじゅうにち",
+    "rom": "san-juu-nichi",
+    "en": "30th (date)",
+    "my": "၃၀ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "３１日",
+    "rd": "さんじゅういちにち",
+    "rom": "san-juu-ichi-nichi",
+    "en": "31st (date)",
+    "my": "၃၁ ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "何日",
+    "rd": "なんにち",
+    "rom": "nan-nichi",
+    "en": "what date; how many days",
+    "my": "ဘယ်ရက်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "何月",
+    "rd": "なんがつ",
+    "rom": "nan-gatsu",
+    "en": "what month",
+    "my": "ဘယ်လ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "何曜日",
+    "rd": "なんようび",
+    "rom": "nan-youbi",
+    "en": "what day of the week",
+    "my": "ဘယ်နေ့",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "再来週",
+    "rd": "さらいしゅう",
+    "rom": "saraishuu",
+    "en": "the week after next",
+    "my": "နောက်အပတ်ရဲ့ နောက်အပတ်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "再来月",
+    "rd": "さらいげつ",
+    "rom": "saraigetsu",
+    "en": "the month after next",
+    "my": "နောက်လရဲ့ နောက်လ",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "再来年",
+    "rd": "さらいねん",
+    "rom": "sarainen",
+    "en": "the year after next",
+    "my": "နောက်နှစ်ရဲ့ နောက်နှစ်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "一昨年",
+    "rd": "おととし",
+    "rom": "ototoshi",
+    "en": "the year before last",
+    "my": "တမြန်နှစ်",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "先々週",
+    "rd": "せんせんしゅう",
+    "rom": "sensenshuu",
+    "en": "the week before last",
+    "my": "လွန်ခဲ့သော နှစ်ပတ်က",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "先々月",
+    "rd": "せんせんげつ",
+    "rom": "sensengetsu",
+    "en": "the month before last",
+    "my": "လွန်ခဲ့သော နှစ်လက",
+    "cat": "Time Words",
+    "t": [
+      "time",
+      "dates"
+    ]
+  },
+  {
+    "jp": "毎晩",
+    "rd": "まいばん",
+    "rom": "maiban",
+    "en": "every night",
+    "my": "ညတိုင်း",
+    "cat": "Time Words",
+    "t": [
+      "time"
+    ]
+  }
 ];
-var MINNA=[
-{jp:"わたし",rd:"わたし",rom:"watashi",en:"I; me",my:"ကျွန်တော်၊ ကျွန်မ",l:1},
-{jp:"あなた",rd:"あなた",rom:"anata",en:"you",my:"ခင်ဗျား၊ မင်း၊ နင်",l:1},
-{jp:"あの人",rd:"あのひと",rom:"ano hito",en:"that person (over there)",my:"ဟိုလူ (ရိုးရိုးအသုံး)",l:1},
-{jp:"あの方",rd:"あのかた",rom:"ano kata",en:"that person (polite)",my:"ဟိုလူ (ယဉ်ကျေးသောအသုံး)",l:1},
-{jp:"～さん",rd:"～さん",rom:"~san",en:"Mr./Ms. (suffix after a name)",my:"ကို--/မ--(နာမည်နောက် တွင်ထားသုံးသည်။ မိမိနာမည်တွင်မသုံးပါ။)",l:1},
-{jp:"～ちゃん",rd:"～ちゃん",rom:"~chan",en:"(suffix for children / close friends)",my:"မောင်--/မ--(၁၀နှစ် အောက် ကလေးငယ်များ ကိုခေါ်သောအခါတွင် သုံးသည်)",l:1},
-{jp:"～じん",rd:"～じん",rom:"~jin",en:"person from ~ (nationality suffix)",my:"--လူမျိုး",l:1},
-{jp:"アメリカ人",rd:"アメリカじん",rom:"amerika-jin",en:"American (person)",my:"အမေရိကန်လူမျိုး",l:1},
-{jp:"先生",rd:"せんせい",rom:"sensei",en:"teacher (as a form of address)",my:"ဆရာ/ဆရာမ",l:1},
-{jp:"教師",rd:"きょうし",rom:"kyoushi",en:"teacher (as a profession)",my:"ဆရာ/ဆရာမ (အလုပ်အကိုင်တွင်အသုံးများ)",l:1},
-{jp:"学生",rd:"がくせい",rom:"gakusei",en:"student",my:"ကျောင်းသား/ ကျောင်းသူ",l:1},
-{jp:"会社員",rd:"かいしゃいん",rom:"kaishain",en:"company employee",my:"ကုမ္ပဏီဝန်ထမ်း",l:1},
-{jp:"社員",rd:"しゃいん",rom:"shain",en:"employee",my:"ဝန်ထမ်း",l:1},
-{jp:"銀行員",rd:"ぎんこういん",rom:"ginkouin",en:"bank employee",my:"ဘဏ်ဝန်ထမ်း",l:1},
-{jp:"医者",rd:"いしゃ",rom:"isha",en:"doctor",my:"ဆရာဝန်",l:1},
-{jp:"研究者",rd:"けんきゅうしゃ",rom:"kenkyuusha",en:"researcher",my:"သုတေသနပြုသူ",l:1},
-{jp:"大学",rd:"だいがく",rom:"daigaku",en:"university",my:"တက္ကသိုလ်",l:1},
-{jp:"病院",rd:"びょういん",rom:"byouin",en:"hospital",my:"ဆေးရုံ",l:1},
-{jp:"だれ",rd:"だれ",rom:"dare",en:"who",my:"ဘယ်သူ(ရိုးရိုး)",l:1},
-{jp:"どなた",rd:"どなた",rom:"donata",en:"who (polite)",my:"ဘယ်သူ(ယဉ်ကျေး)",l:1},
-{jp:"～歳",rd:"～さい",rom:"~sai",en:"~ years old",my:"--နှစ်(အသက်)",l:1},
-{jp:"何歳",rd:"なんさい",rom:"nansai",en:"how old",my:"အသက်ဘယ်နှစ်နှစ်လဲ",l:1},
-{jp:"おいくつ",rd:"おいくつ",rom:"oikutsu",en:"how old (polite)",my:"အသက်ဘယ်နှစ်နှစ်လဲ (ယဉ်ကျေး)",l:1},
-{jp:"…はい",rd:"…はい",rom:"...hai",en:"yes",my:"ဟုတ်ကဲ့",l:1},
-{jp:"…いいえ",rd:"…いいえ",rom:"...iie",en:"no",my:"ဟင်အင်း",l:1},
-{jp:"初めまして",rd:"はじめまして",rom:"hajimemashite",en:"How do you do? (Nice to meet you)",my:"တွေ့ရတာဝမ်းသာပါတယ်",l:1},
-{jp:"～から来ました",rd:"～からきました",rom:"~kara kimashita",en:"I came from ~",my:"--ကနေလာပါတယ်။",l:1},
-{jp:"どうぞ、よろしくお願いします",rd:"どうぞ、よろしくおねがいします",rom:"douzo, yoroshiku onegaishimasu",en:"Please treat me well (Nice to meet you)",my:"မိတ်ဆွေအဖြစ် ခင်ခင်မင်မင်ဆက်ဆံပါ",l:1},
-{jp:"失礼ですが",rd:"しつれいですが",rom:"shitsurei desu ga",en:"Excuse me, but...",my:"တစ်ဆိတ်လောက်။ စိတ်မရှိပါနဲ့။",l:1},
-{jp:"お名前は？",rd:"おなまえは？",rom:"onamae wa?",en:"What is your name?",my:"နာမည်ဘယ်လိုခေါ်ပါသလဲ။",l:1},
-{jp:"こちらは、～さんです",rd:"こちらは、～さんです",rom:"kochira wa, ~san desu",en:"This is Mr./Ms. ~",my:"သူက ကို--/မ--ဖြစ်ပါတယ်။",l:1},
-{jp:"アメリカ",rd:"アメリカ",rom:"amerika",en:"America; the USA",my:"အမေရိကန်",l:1},
-{jp:"イギリス",rd:"イギリス",rom:"igirisu",en:"England; the UK",my:"အင်္ဂလန်",l:1},
-{jp:"インド",rd:"インド",rom:"indo",en:"India",my:"အိန္ဒိယ",l:1},
-{jp:"インドネシア",rd:"インドネシア",rom:"indoneshia",en:"Indonesia",my:"အင်ဒိုနီးရှား",l:1},
-{jp:"韓国",rd:"かんこく",rom:"kankoku",en:"South Korea",my:"တောင်ကိုရီးယား",l:1},
-{jp:"タイ",rd:"タイ",rom:"tai",en:"Thailand",my:"ထိုင်း",l:1},
-{jp:"中国",rd:"ちゅうごく",rom:"chuugoku",en:"China",my:"တရုတ်",l:1},
-{jp:"ドイツ",rd:"ドイツ",rom:"doitsu",en:"Germany",my:"ဂျာမနီ",l:1},
-{jp:"日本",rd:"にほん",rom:"nihon",en:"Japan",my:"ဂျပန်",l:1},
-{jp:"ブラジル",rd:"ブラジル",rom:"burajiru",en:"Brazil",my:"ဘရာဇီး",l:1},
-{jp:"IMC",rd:"IMC",rom:"IMC",en:"IMC (company)",my:"IMCကုမ္ပဏီ",l:1},
-{jp:"パワー電気",rd:"パワーでんき",rom:"pawaa denki",en:"Power Electric (company)",my:"Power Electric ကုမ္ပဏီ",l:1},
-{jp:"ブラジルエアー",rd:"ブラジルエアー",rom:"burajiru eaa",en:"Brazil Air (company)",my:"Brazil Air ကုမ္ပဏီ",l:1},
-{jp:"AKC",rd:"AKC",rom:"AKC",en:"AKC (company)",my:"AKCကုမ္ပဏီ",l:1},
-{jp:"神戸病院",rd:"こうべびょういん",rom:"koube byouin",en:"Kobe Hospital",my:"Kobeဆေးရုံ",l:1},
-{jp:"さくら大学",rd:"さくらだいがく",rom:"sakura daigaku",en:"Sakura University",my:"Sakuraတက္ကသိုလ်",l:1},
-{jp:"富士大学",rd:"ふじだいがく",rom:"fuji daigaku",en:"Fuji University",my:"Fujiတက္ကသိုလ်",l:1},
-{jp:"これ",rd:"これ",rom:"kore",en:"this one",my:"ဒီဟာ",l:2},
-{jp:"それ",rd:"それ",rom:"sore",en:"that one (near you)",my:"ဟိုဟာ",l:2},
-{jp:"あれ",rd:"あれ",rom:"are",en:"that one (over there)",my:"ဟို့ကဟာ",l:2},
-{jp:"この～",rd:"この～",rom:"kono ~",en:"this ~",my:"ဒီ--",l:2},
-{jp:"その～",rd:"その～",rom:"sono ~",en:"that ~",my:"ဟို--",l:2},
-{jp:"あの～",rd:"あの～",rom:"ano ~",en:"that ~ (over there)",my:"ဟို့--",l:2},
-{jp:"本",rd:"ほん",rom:"hon",en:"book",my:"စာအုပ်",l:2},
-{jp:"辞書",rd:"じしょ",rom:"jisho",en:"dictionary",my:"အဘိဓာန်",l:2},
-{jp:"雑誌",rd:"ざっし",rom:"zasshi",en:"magazine",my:"မဂ္ဂဇင်း",l:2},
-{jp:"新聞",rd:"しんぶん",rom:"shinbun",en:"newspaper",my:"သတင်းစာ",l:2},
-{jp:"ノート",rd:"ノート",rom:"nooto",en:"notebook",my:"မှတ်စုစာအုပ်",l:2},
-{jp:"手帳",rd:"てちょう",rom:"techou",en:"pocket notebook; diary",my:"နေ့စဉ်မှတ်တမ်း",l:2},
-{jp:"名刺",rd:"めいし",rom:"meishi",en:"business card",my:"လိပ်စာကတ်",l:2},
-{jp:"カード",rd:"カード",rom:"kaado",en:"card",my:"ကတ်",l:2},
-{jp:"鉛筆",rd:"えんぴつ",rom:"enpitsu",en:"pencil",my:"ခဲတံ",l:2},
-{jp:"ボールペン",rd:"ボールペン",rom:"boorupen",en:"ballpoint pen",my:"ဘောပင်",l:2},
-{jp:"シャープペンシル",rd:"シャープペンシル",rom:"shaapu penshiru",en:"mechanical pencil",my:"ဘောပင်ခဲတံ",l:2},
-{jp:"かぎ",rd:"かぎ",rom:"kagi",en:"key",my:"သော့",l:2},
-{jp:"時計",rd:"とけい",rom:"tokei",en:"clock; watch",my:"နာရီ",l:2},
-{jp:"傘",rd:"かさ",rom:"kasa",en:"umbrella",my:"ထီး",l:2},
-{jp:"かばん",rd:"かばん",rom:"kaban",en:"bag",my:"အိတ်၊ လက်ဆွဲအိတ်",l:2},
-{jp:"CD",rd:"CD",rom:"shiidii",en:"CD",my:"စီဒီ",l:2},
-{jp:"テレビ",rd:"テレビ",rom:"terebi",en:"television; TV",my:"တီဗီ",l:2},
-{jp:"ラジオ",rd:"ラジオ",rom:"rajio",en:"radio",my:"ရေဒီယို",l:2},
-{jp:"カメラ",rd:"カメラ",rom:"kamera",en:"camera",my:"ကင်မရာ",l:2},
-{jp:"コンピュータ",rd:"コンピュータ",rom:"konpyuuta",en:"computer",my:"ကွန်ပျူတာ",l:2},
-{jp:"車",rd:"くるま",rom:"kuruma",en:"car",my:"ကား၊ ယာဉ်",l:2},
-{jp:"机",rd:"つくえ",rom:"tsukue",en:"desk",my:"စားပွဲခုံ",l:2},
-{jp:"椅子",rd:"いす",rom:"isu",en:"chair",my:"ထိုင်ခုံ",l:2},
-{jp:"チョコレート",rd:"チョコレート",rom:"chokoreeto",en:"chocolate",my:"ချောကလက်",l:2},
-{jp:"コーヒー",rd:"コーヒー",rom:"koohii",en:"coffee",my:"ကော်ဖီ",l:2},
-{jp:"[お]みやげ",rd:"[お]みやげ",rom:"[o]miyage",en:"souvenir",my:"ဒေသထွက် လက်ဆောင်",l:2},
-{jp:"英語",rd:"えいご",rom:"eigo",en:"English (language)",my:"အင်္ဂလိပ်စာ၊ စကား",l:2},
-{jp:"日本語",rd:"にほんご",rom:"nihongo",en:"Japanese (language)",my:"ဂျပန်စာ၊ စကား",l:2},
-{jp:"～語",rd:"～ご",rom:"~go",en:"~ language",my:"～စာ၊ ～စကား",l:2},
-{jp:"何",rd:"なに",rom:"nani",en:"what",my:"ဘာ (မေးခွန်းမေးရာတွင်သုံး)",l:2},
-{jp:"そう",rd:"そう",rom:"sou",en:"so; like that",my:"ဟုတ်လား၊ ဒီလိုလား",l:2},
-{jp:"あのう",rd:"あのう",rom:"anou",en:"um; well (hesitation)",my:"ဟိုလေ--",l:2},
-{jp:"えっ",rd:"えっ",rom:"e'",en:"eh?; what?",my:"ဟယ်။ ဘာလဲ (မျှော်လင့်မထားသော အရာကို ကြားသောအခါ)",l:2},
-{jp:"どうぞ",rd:"どうぞ",rom:"douzo",en:"please; here you are",my:"ယူပါ။ လုပ်ပါ (please)",l:2},
-{jp:"どうも",rd:"どうも",rom:"doumo",en:"thanks; somehow",my:"ကျေးဇူးပါ",l:2},
-{jp:"どうも ありがとう ございます。",rd:"どうも ありがとう ございます。",rom:"doumo arigatou gozaimasu.",en:"thank you very much",my:"ကျေးဇူးတင်ပါသည်",l:2},
-{jp:"そうですか",rd:"そうですか",rom:"sou desu ka",en:"I see; is that so?",my:"ဟုတ်လား။ နားလည်ပါပြီ",l:2},
-{jp:"違います。",rd:"ちがいます。",rom:"chigaimasu.",en:"No, that's wrong.",my:"မဟုတ်ပါဘူး",l:2},
-{jp:"あ",rd:"あ",rom:"a",en:"ah!; oh!",my:"ဟာ (တစ်စုံတစ်ခုကိုထူးဆန်းသောအခါ)",l:2},
-{jp:"これから お世話に なります",rd:"これから おせわに なります",rom:"kore kara osewa ni narimasu",en:"I look forward to working with you; please take care of me",my:"အစစအရာအရာ ကူညီဖေးမပေးပါ။",l:2},
-{jp:"こちらこそ [どうぞ]よろしく[お願い]します",rd:"こちらこそ [どうぞ]よろしく[おねがい]します",rom:"kochira koso [douzo] yoroshiku [onegai] shimasu",en:"Likewise, pleased to meet you",my:"ကျွန်တော်ကိုလည်း မိတ်ဆွေအဖြစ် အသိအမှတ်ပြုပါ။",l:2},
-{jp:"ここ",rd:"ここ",rom:"koko",en:"here; this place",my:"ဒီမှာ၊ ဒီနေရာ",l:3},
-{jp:"そこ",rd:"そこ",rom:"soko",en:"there (near you)",my:"ဟိုမှာ၊ ဟိုနေရာ",l:3},
-{jp:"あそこ",rd:"あそこ",rom:"asoko",en:"over there",my:"ဟို့မှာ၊ ဟို့နေရာ",l:3},
-{jp:"どこ",rd:"どこ",rom:"doko",en:"where",my:"ဘယ်မှာလဲ",l:3},
-{jp:"こちら",rd:"こちら",rom:"kochira",en:"this way; here",my:"ဒီမှာ၊ ဒီဘက်မှာ",l:3},
-{jp:"そちら",rd:"そちら",rom:"sochira",en:"that way; there (near you)",my:"ဟိုမှာ၊ ဟိုဘက်မှာ",l:3},
-{jp:"あちら",rd:"あちら",rom:"achira",en:"that way; over there",my:"ဟို့မှာ၊ ဟို့ဘက်မှာ",l:3},
-{jp:"どちら",rd:"どちら",rom:"dochira",en:"which (of two); where (polite)",my:"ဘယ်မှာလဲ၊ ဘယ်ဘက်မှာလဲ",l:3},
-{jp:"教室",rd:"きょうしつ",rom:"kyoushitsu",en:"classroom",my:"စာသင်ခန်း",l:3},
-{jp:"食堂",rd:"しょくどう",rom:"shokudou",en:"cafeteria; dining hall",my:"ထမင်းဆိုင်၊ ထမင်းစားတဲ့နေရာ",l:3},
-{jp:"事務所",rd:"じむしょ",rom:"jimusho",en:"office",my:"ရုံးခန်း",l:3},
-{jp:"会議室",rd:"かいぎしつ",rom:"kaigishitsu",en:"meeting room",my:"အစည်းအဝေးခန်း",l:3},
-{jp:"受付",rd:"うけつけ",rom:"uketsuke",en:"reception (desk)",my:"စုံစမ်းရန်ကောင်းတာ",l:3},
-{jp:"ロビー",rd:"ロビー",rom:"robii",en:"lobby",my:"ဧည့်ခန်း၊ ဟိုတယ်ဧည့်ခန်း",l:3},
-{jp:"部屋",rd:"へや",rom:"heya",en:"room",my:"အခန်း",l:3},
-{jp:"トイレ",rd:"トイレ",rom:"toire",en:"toilet; restroom",my:"အိမ်သာ",l:3},
-{jp:"お手洗い",rd:"おてあらい",rom:"otearai",en:"toilet; restroom (polite)",my:"အိမ်သာ",l:3},
-{jp:"階段",rd:"かいだん",rom:"kaidan",en:"stairs; staircase",my:"လှေခါး",l:3},
-{jp:"エレベーター",rd:"エレベーター",rom:"erebeetaa",en:"elevator; lift",my:"ဓာတ်လှေခါး",l:3},
-{jp:"エスカレーター",rd:"エスカレーター",rom:"esukareetaa",en:"escalator",my:"စက်လှေခါး",l:3},
-{jp:"自動販売機",rd:"じどうはんばいき",rom:"jidouhanbaiki",en:"vending machine",my:"အလိုအလျောက် စျေးရောင်းသည့်စက်",l:3},
-{jp:"電話",rd:"でんわ",rom:"denwa",en:"telephone",my:"တယ်လီဖုန်း",l:3},
-{jp:"お国",rd:"おくに",rom:"okuni",en:"(your) country",my:"နိုင်ငံ",l:3},
-{jp:"会社",rd:"かいしゃ",rom:"kaisha",en:"company",my:"ကုမ္ပဏီ",l:3},
-{jp:"うち",rd:"うち",rom:"uchi",en:"home; house",my:"အိမ်",l:3},
-{jp:"靴",rd:"くつ",rom:"kutsu",en:"shoes",my:"ဖိနပ်",l:3},
-{jp:"ネクタイ",rd:"ネクタイ",rom:"nekutai",en:"necktie",my:"လည်စည်း",l:3},
-{jp:"ワイン",rd:"ワイン",rom:"wain",en:"wine",my:"ဝိုင်",l:3},
-{jp:"売り場",rd:"うりば",rom:"uriba",en:"sales floor; counter",my:"အရောင်းကောင်တာ",l:3},
-{jp:"地下",rd:"ちか",rom:"chika",en:"basement; underground",my:"မြေအောက်",l:3},
-{jp:"～階",rd:"～かい",rom:"~kai",en:"~th floor",my:"အထပ်",l:3},
-{jp:"何階",rd:"なんかい",rom:"nankai",en:"which floor",my:"ဘယ်နှစ်ထပ်",l:3},
-{jp:"円",rd:"えん",rom:"en",en:"yen",my:"ဂျပန်ပိုက်ဆံ ယန်း",l:3},
-{jp:"いくら",rd:"いくら",rom:"ikura",en:"how much",my:"ဘယ်လောက်လဲ",l:3},
-{jp:"百",rd:"ひゃく",rom:"hyaku",en:"hundred",my:"တစ်ရာ",l:3},
-{jp:"千",rd:"せん",rom:"sen",en:"thousand",my:"တစ်ထောင်",l:3},
-{jp:"万",rd:"まん",rom:"man",en:"ten thousand",my:"တစ်သောင်း",l:3},
-{jp:"すみません",rd:"すみません",rom:"sumimasen",en:"excuse me; sorry",my:"တောင်းပန်ပါတယ်၊ စိတ်မရှိပါနဲ့။ တစ်ဆိတ်လောက်",l:3},
-{jp:"どうも",rd:"どうも",rom:"doumo",en:"thanks",my:"ကျေးဇူးပါ။",l:3},
-{jp:"いらっしゃいませ",rd:"いらっしゃいませ",rom:"irasshaimase",en:"welcome (to a shop)",my:"ကြိုဆိုပါတယ်",l:3},
-{jp:"[～を]見せてください",rd:"[～を]みせてください",rom:"[~o] misete kudasai",en:"please show me ~",my:"(ကို) ပြပါ",l:3},
-{jp:"じゃ",rd:"じゃ",rom:"ja",en:"well then; then",my:"ကဲ-",l:3},
-{jp:"[～を]ください",rd:"[～を]ください",rom:"[~o] kudasai",en:"please give me ~",my:"(ကို) ပေးပါ",l:3},
-{jp:"イタリア",rd:"イタリア",rom:"itaria",en:"Italy",my:"အီတလီ",l:3},
-{jp:"スイス",rd:"スイス",rom:"suisu",en:"Switzerland",my:"ဆွစ်ဇာလန်",l:3},
-{jp:"フランス",rd:"フランス",rom:"furansu",en:"France",my:"ပြင်သစ်",l:3},
-{jp:"ジャカルタ",rd:"ジャカルタ",rom:"jakaruta",en:"Jakarta",my:"ဂျကာတာ",l:3},
-{jp:"バンコク",rd:"バンコク",rom:"bankoku",en:"Bangkok",my:"ဘန်ကောက်",l:3},
-{jp:"ベルリン",rd:"ベルリン",rom:"berurin",en:"Berlin",my:"ဘာလင်",l:3},
-{jp:"新大阪",rd:"しんおおさか",rom:"shin-oosaka",en:"Shin-Osaka",my:"ရှင်းအိုဆာကာ",l:3},
-{jp:"起きます",rd:"おきます",rom:"okimasu",en:"to get up; to wake up",my:"ထသည်။ နိုးသည်။",l:4},
-{jp:"寝ます",rd:"ねます",rom:"nemasu",en:"to sleep; to go to bed",my:"အိပ်သည်။",l:4},
-{jp:"働きます",rd:"はたらきます",rom:"hatarakimasu",en:"to work",my:"အလုပ်လုပ်သည်။",l:4},
-{jp:"休みます",rd:"やすみます",rom:"yasumimasu",en:"to rest; to take a day off",my:"အနားယူသည်။",l:4},
-{jp:"勉強します",rd:"べんきょうします",rom:"benkyou shimasu",en:"to study",my:"စာကျက်သည်။",l:4},
-{jp:"終わります",rd:"おわります",rom:"owarimasu",en:"to finish; to end",my:"ပြီးဆုံးသည်။",l:4},
-{jp:"デパート",rd:"デパート",rom:"depaato",en:"department store",my:"ကုန်တိုက်",l:4},
-{jp:"銀行",rd:"ぎんこう",rom:"ginkou",en:"bank",my:"ဘဏ်",l:4},
-{jp:"郵便局",rd:"ゆうびんきょく",rom:"yuubin kyoku",en:"post office",my:"စာတိုက်",l:4},
-{jp:"図書館",rd:"としょかん",rom:"toshokan",en:"library",my:"စာကြည့်တိုက်",l:4},
-{jp:"美術館",rd:"びじゅつかん",rom:"bijutsukan",en:"art museum",my:"အနုပညာပြတိုက်",l:4},
-{jp:"今",rd:"いま",rom:"ima",en:"now",my:"အခု",l:4},
-{jp:"～時",rd:"～じ",rom:"~ji",en:"~ o'clock",my:"～နာရီ",l:4},
-{jp:"～ふん",rd:"～ふん",rom:"~fun",en:"~ minutes",my:"မိနစ်",l:4},
-{jp:"～ぷん",rd:"～ぷん",rom:"~pun",en:"~ minutes",my:"မိနစ်",l:4},
-{jp:"半",rd:"はん",rom:"han",en:"half (past the hour)",my:"တစ်ဝက်",l:4},
-{jp:"何時",rd:"なんじ",rom:"nanji",en:"what time",my:"ဘယ်နှစ်နာရီ၊ ဘယ်အချိန်",l:4},
-{jp:"何分",rd:"なんぷん",rom:"nanpun",en:"how many minutes",my:"ဘယ်နှစ်မိနစ်",l:4},
-{jp:"午前",rd:"ごぜん",rom:"gozen",en:"morning; a.m.",my:"မနက်ပိုင်း am",l:4},
-{jp:"午後",rd:"ごご",rom:"gogo",en:"afternoon; p.m.",my:"နေ့ခင်းပိုင်း၊ ညနေပိုင်း pm",l:4},
-{jp:"朝",rd:"あさ",rom:"asa",en:"morning",my:"မနက်",l:4},
-{jp:"昼",rd:"ひる",rom:"hiru",en:"daytime; noon",my:"နေ့လည်",l:4},
-{jp:"晩/夜",rd:"ばん/よる",rom:"ban/yoru",en:"evening; night",my:"ည",l:4},
-{jp:"おととい",rd:"おととい",rom:"ototoi",en:"day before yesterday",my:"တစ်နေ့က",l:4},
-{jp:"きのう",rd:"きのう",rom:"kinou",en:"yesterday",my:"မနေ့က",l:4},
-{jp:"今日",rd:"きょう",rom:"kyou",en:"today",my:"ဒီနေ့",l:4},
-{jp:"明日",rd:"あした",rom:"ashita",en:"tomorrow",my:"မနက်ဖန်",l:4},
-{jp:"あさって",rd:"あさって",rom:"asatte",en:"day after tomorrow",my:"သဘက်ခါ",l:4},
-{jp:"今朝",rd:"けさ",rom:"kesa",en:"this morning",my:"ဒီမနက်",l:4},
-{jp:"今晩",rd:"こんばん",rom:"konban",en:"tonight; this evening",my:"ဒီည",l:4},
-{jp:"休み",rd:"やすみ",rom:"yasumi",en:"holiday; day off",my:"နားရက်၊ အားလပ်ရက်",l:4},
-{jp:"昼休み",rd:"ひるやすみ",rom:"hiruyasumi",en:"lunch break",my:"နေ့လည်နားချိန်",l:4},
-{jp:"試験",rd:"しけん",rom:"shiken",en:"exam; test",my:"စာမေးပွဲ",l:4},
-{jp:"会議",rd:"かいぎ",rom:"kaigi",en:"meeting; conference",my:"အစည်းအဝေး",l:4},
-{jp:"映画",rd:"えいが",rom:"eiga",en:"movie; film",my:"ရုပ်ရှင်",l:4},
-{jp:"毎朝",rd:"まいあさ",rom:"maiasa",en:"every morning",my:"မနက်တိုင်း",l:4},
-{jp:"毎晩",rd:"まいばん",rom:"maiban",en:"every evening",my:"ညတိုင်း",l:4},
-{jp:"毎日",rd:"まいにち",rom:"mainichi",en:"every day",my:"နေ့တိုင်း",l:4},
-{jp:"月曜日",rd:"げつようび",rom:"getsuyoubi",en:"Monday",my:"တနင်္လာနေ့",l:4},
-{jp:"火曜日",rd:"かようび",rom:"kayoubi",en:"Tuesday",my:"အင်္ဂါနေ့",l:4},
-{jp:"水曜日",rd:"すいようび",rom:"suiyoubi",en:"Wednesday",my:"ဗုဒ္ဓဟူးနေ့",l:4},
-{jp:"木曜日",rd:"もくようび",rom:"mokuyoubi",en:"Thursday",my:"ကြာသပတေးနေ့",l:4},
-{jp:"金曜日",rd:"きんようび",rom:"kinyoubi",en:"Friday",my:"သောကြာနေ့",l:4},
-{jp:"土曜日",rd:"どようび",rom:"doyoubi",en:"Saturday",my:"စနေနေ့",l:4},
-{jp:"日曜日",rd:"にちようび",rom:"nichiyoubi",en:"Sunday",my:"တနင်္ဂနွေနေ့",l:4},
-{jp:"何曜日",rd:"なんようび",rom:"nanyoubi",en:"what day of the week",my:"ဘာနေ့",l:4},
-{jp:"～から",rd:"～から",rom:"~kara",en:"from ~",my:"～မှ",l:4},
-{jp:"～まで",rd:"～まで",rom:"~made",en:"until ~; to ~",my:"～အထိ",l:4},
-{jp:"～と～",rd:"～と～",rom:"~to~",en:"and; with",my:"～နှင့်",l:4},
-{jp:"大変ですね",rd:"たいへんですね",rom:"taihen desu ne",en:"That's tough, isn't it?",my:"ဒုက္ခများမှာဘဲနော်",l:4},
-{jp:"番号",rd:"ばんごう",rom:"bangou",en:"number",my:"နံပါတ်",l:4},
-{jp:"何番",rd:"なんばん",rom:"nanban",en:"what number",my:"ဘာနံပါတ်",l:4},
-{jp:"そちら",rd:"そちら",rom:"sochira",en:"there (near you); that way",my:"အဲဒီမှာ၊ အဲဒီဘက်မှာ",l:4},
-{jp:"ニューヨーク",rd:"ニューヨーク",rom:"nyuuyooku",en:"New York",my:"နယူးယောက်မြို့",l:4},
-{jp:"ペキン",rd:"ペキン",rom:"pekin",en:"Beijing",my:"ပီကင်းမြို့",l:4},
-{jp:"ロサンゼルス",rd:"ロサンゼルス",rom:"rosanzerusu",en:"Los Angeles",my:"လော့စ်အိန်ဂျယ်လိစ်မြို့",l:4},
-{jp:"ロンドン",rd:"ロンドン",rom:"rondon",en:"London",my:"လန်ဒန်မြို့",l:4},
-{jp:"あすか",rd:"あすか",rom:"asuka",en:"Asuka (restaurant name)",my:"Asuka စားသောက်ဆိုင်",l:4},
-{jp:"アップル銀行",rd:"アップルぎんこう",rom:"appuru ginkou",en:"Apple Bank",my:"Apple ဘဏ်",l:4},
-{jp:"みどり図書館",rd:"みどりとしょかん",rom:"midori toshokan",en:"Midori Library",my:"Midori စာကြည့်တိုက်",l:4},
-{jp:"やまと美術館",rd:"やまとびじゅつかん",rom:"yamato bijutsukan",en:"Yamato Art Museum",my:"Yamato အနုပညာပြတိုက်",l:4},
-{jp:"行きます",rd:"いきます",rom:"ikimasu",en:"to go",my:"သွားသည်",l:5},
-{jp:"来ます",rd:"きます",rom:"kimasu",en:"to come",my:"လာသည်",l:5},
-{jp:"帰ります",rd:"かえります",rom:"kaerimasu",en:"to go home; to return",my:"ပြန်သည် (အိမ်ပြန်သည်)",l:5},
-{jp:"学校",rd:"がっこう",rom:"gakkou",en:"school",my:"စာသင်ကျောင်း",l:5},
-{jp:"スーパー",rd:"スーパー",rom:"suupaa",en:"supermarket",my:"super market",l:5},
-{jp:"駅",rd:"えき",rom:"eki",en:"station",my:"ဘူတာ",l:5},
-{jp:"飛行機",rd:"ひこうき",rom:"hikouki",en:"airplane",my:"လေယာဉ်ပျံ",l:5},
-{jp:"船",rd:"ふね",rom:"fune",en:"boat; ship",my:"သင်္ဘော",l:5},
-{jp:"電車",rd:"でんしゃ",rom:"densha",en:"(electric) train",my:"လျှပ်စစ်ရထား",l:5},
-{jp:"地下鉄",rd:"ちかてつ",rom:"chikatetsu",en:"subway",my:"မြေအောက်ရထား",l:5},
-{jp:"新幹線",rd:"しんかんせん",rom:"shinkansen",en:"bullet train",my:"ကျည်ဆံရထား",l:5},
-{jp:"バス",rd:"バス",rom:"basu",en:"bus",my:"ဘတ်စ်ကား",l:5},
-{jp:"タクシー",rd:"タクシー",rom:"takushii",en:"taxi",my:"တက္ကစီ",l:5},
-{jp:"自転車",rd:"じてんしゃ",rom:"jitensha",en:"bicycle",my:"စက်ဘီး",l:5},
-{jp:"歩いて",rd:"あるいて",rom:"aruite",en:"on foot; walking",my:"လမ်းလျှောက်ပြီး",l:5},
-{jp:"人",rd:"ひと",rom:"hito",en:"person; people",my:"လူ",l:5},
-{jp:"友達",rd:"ともだち",rom:"tomodachi",en:"friend",my:"သူငယ်ချင်း",l:5},
-{jp:"彼",rd:"かれ",rom:"kare",en:"he; boyfriend",my:"သူချစ်သူ",l:5},
-{jp:"彼女",rd:"かのじょ",rom:"kanojo",en:"she; girlfriend",my:"သူမ/ချစ်သူ",l:5},
-{jp:"家族",rd:"かぞく",rom:"kazoku",en:"family",my:"မိသားစု",l:5},
-{jp:"一人",rd:"ひとり",rom:"hitori",en:"alone; one person",my:"တစ်ယောက်တည်း",l:5},
-{jp:"先週",rd:"せんしゅう",rom:"senshuu",en:"last week",my:"ပြီးခဲ့တဲ့ အပတ်",l:5},
-{jp:"今週",rd:"こんしゅう",rom:"konshuu",en:"this week",my:"အခု အပတ်",l:5},
-{jp:"来週",rd:"らいしゅう",rom:"raishuu",en:"next week",my:"လာမဲ့ အပတ်",l:5},
-{jp:"先月",rd:"せんげつ",rom:"sengetsu",en:"last month",my:"ပြီးခဲ့တဲ့ လ",l:5},
-{jp:"今月",rd:"こんげつ",rom:"kongetsu",en:"this month",my:"ဒီလ",l:5},
-{jp:"来月",rd:"らいげつ",rom:"raigetsu",en:"next month",my:"လာမဲ့ လ (နောက်လ)",l:5},
-{jp:"去年",rd:"きょねん",rom:"kyonen",en:"last year",my:"မနှစ်က (ပြီးခဲ့တဲ့ နှစ်)",l:5},
-{jp:"今年",rd:"ことし",rom:"kotoshi",en:"this year",my:"ဒီနှစ်",l:5},
-{jp:"来年",rd:"らいねん",rom:"rainen",en:"next year",my:"နောက်နှစ်၊ နောင်နှစ်",l:5},
-{jp:"～年",rd:"～ねん",rom:"~nen",en:"year ~",my:"～နှစ်",l:5},
-{jp:"何年",rd:"なんねん",rom:"nannen",en:"what year",my:"ဘာနှစ်လဲ",l:5},
-{jp:"～月",rd:"～がつ",rom:"~gatsu",en:"month of ~; ~th month",my:"～လ (ဇန်နဝါရီလ၊ ဖေဖော်ဝါရီလ)",l:5},
-{jp:"何月",rd:"なんがつ",rom:"nangatsu",en:"what month",my:"ဘယ်လ",l:5},
-{jp:"１日",rd:"ついたち",rom:"tsuitachi",en:"1st (of the month)",my:"၁ ရက်",l:5},
-{jp:"２日",rd:"ふつか",rom:"futsuka",en:"2nd",my:"၂ ရက်",l:5},
-{jp:"３日",rd:"みっか",rom:"mikka",en:"3rd",my:"၃ ရက်",l:5},
-{jp:"４日",rd:"よっか",rom:"yokka",en:"4th",my:"၄ ရက်၊",l:5},
-{jp:"５日",rd:"いつか",rom:"itsuka",en:"5th",my:"၅ ရက်",l:5},
-{jp:"６日",rd:"むいか",rom:"muika",en:"6th",my:"၆ ရက်",l:5},
-{jp:"７日",rd:"なのか",rom:"nanoka",en:"7th",my:"၇ ရက်",l:5},
-{jp:"８日",rd:"ようか",rom:"youka",en:"8th",my:"၈ ရက်",l:5},
-{jp:"９日",rd:"ここのか",rom:"kokonoka",en:"9th",my:"၉ ရက်",l:5},
-{jp:"１０日",rd:"とおか",rom:"tooka",en:"10th",my:"၁၀ ရက်",l:5},
-{jp:"１４日",rd:"じゅうよっか",rom:"juuyokka",en:"14th",my:"၁၄ ရက်",l:5},
-{jp:"２０日",rd:"はつか",rom:"hatsuka",en:"20th",my:"၂၀ ရက်",l:5},
-{jp:"２４日",rd:"にじゅうよっか",rom:"nijuuyokka",en:"24th",my:"၂၄ ရက်",l:5},
-{jp:"～日",rd:"～にち",rom:"~nichi",en:"~th day",my:"～ရက်",l:5},
-{jp:"何日",rd:"なんにち",rom:"nannichi",en:"what day (of the month)",my:"ဘယ်ရက်",l:5},
-{jp:"いつ",rd:"いつ",rom:"itsu",en:"when",my:"ဘယ်တုန်းက၊ ဘယ်တော့",l:5},
-{jp:"誕生日",rd:"たんじょうび",rom:"tanjoubi",en:"birthday",my:"မွေးနေ့",l:5},
-{jp:"そうですね。",rd:"そうですね。",rom:"sou desu ne.",en:"That's right, isn't it?",my:"ဟုတ်တယ်နော်",l:5},
-{jp:"[どうも]ありがとう ございました",rd:"[どうも]ありがとう ございました",rom:"[doumo] arigatou gozaimashita",en:"thank you very much (past)",my:"ကျေးဇူးအများကြီးတင်ပါတယ်",l:5},
-{jp:"どういたしまして",rd:"どういたしまして",rom:"dou itashimashite",en:"You're welcome.",my:"ရပါတယ်၊ ကြိုဆိုပါတယ်",l:5},
-{jp:"～番線",rd:"～ばんせん",rom:"~bansen",en:"platform ~",my:"ရထား စီးသော platform",l:5},
-{jp:"次",rd:"つぎ",rom:"tsugi",en:"next",my:"နောက်ဟာ",l:5},
-{jp:"普通",rd:"ふつう",rom:"futsuu",en:"ordinary (train); local train",my:"သာမာန်/ရိုးရိုးရထား",l:5},
-{jp:"急行",rd:"きゅうこう",rom:"kyuukou",en:"express (train)",my:"အမြန်ရထား",l:5},
-{jp:"特急",rd:"とっきゅう",rom:"tokkyuu",en:"limited express",my:"အထူးရထား",l:5},
-{jp:"甲子園",rd:"こうしえん",rom:"koushien",en:"Koshien",my:"Koushien",l:5},
-{jp:"大阪城",rd:"おおさかじょう",rom:"oosakajou",en:"Osaka Castle",my:"အိုဆာကာရဲတိုက်",l:5},
-{jp:"食べます",rd:"たべます",rom:"tabemasu",en:"to eat",my:"စားသည်။",l:6},
-{jp:"飲みます",rd:"のみます",rom:"nomimasu",en:"to drink",my:"သောက်သည်။",l:6},
-{jp:"吸います",rd:"すいます",rom:"suimasu",en:"to smoke",my:"ဆေးလိပ်သောက်သည်။",l:6},
-{jp:"見ます",rd:"みます",rom:"mimasu",en:"to see",my:"ကြည့်သည်။",l:6},
-{jp:"聞きます",rd:"ききます",rom:"kikimasu",en:"to listen",my:"နားထောင်သည်။",l:6},
-{jp:"読みます",rd:"よみます",rom:"yomimasu",en:"to read",my:"ဖတ်သည်။",l:6},
-{jp:"書きます",rd:"かきます",rom:"kakimasu",en:"to write",my:"ရေးသည်။",l:6},
-{jp:"買います",rd:"かいます",rom:"kaimasu",en:"to buy",my:"ဝယ်သည်။",l:6},
-{jp:"撮ります",rd:"とります",rom:"torimasu",en:"to take (a photo)",my:"ရိုက်သည်",l:6},
-{jp:"[写真を～]",rd:"[しゃしんを～]",rom:"[shashin o ~]",en:"to take a photo",my:"(ဓာတ်ပုံကို)။",l:6},
-{jp:"します",rd:"します",rom:"shimasu",en:"to do",my:"လုပ်သည်။",l:6},
-{jp:"会います",rd:"あいます",rom:"aimasu",en:"to meet",my:"တွေ့သည်",l:6},
-{jp:"[友達に～]",rd:"[ともだちに～]",rom:"[tomodachi ni ~]",en:"[with a friend] ~",my:"(သူငယ်ချင်းနဲ့)။",l:6},
-{jp:"ごはん",rd:"ごはん",rom:"gohan",en:"cooked rice; meal",my:"ထမင်း",l:6},
-{jp:"朝ご飯",rd:"あさごはん",rom:"asagohan",en:"breakfast",my:"မနက်စာ၊ မနက်ထမင်း",l:6},
-{jp:"昼ご飯",rd:"ひるごはん",rom:"hirugohan",en:"lunch",my:"နေ့လည်စာ၊ နေ့လည်ထမင်း",l:6},
-{jp:"晩ご飯",rd:"ばんごはん",rom:"bangohan",en:"dinner; supper",my:"ညစာ၊ ညထမင်း",l:6},
-{jp:"パン",rd:"パン",rom:"pan",en:"bread",my:"ပေါင်မုန့်",l:6},
-{jp:"卵",rd:"たまご",rom:"tamago",en:"egg",my:"ကြက်ဥ",l:6},
-{jp:"肉",rd:"にく",rom:"niku",en:"meat",my:"အသား",l:6},
-{jp:"魚",rd:"さかな",rom:"sakana",en:"fish",my:"ငါး",l:6},
-{jp:"野菜",rd:"やさい",rom:"yasai",en:"vegetables",my:"ဟင်းသီးဟင်းရွက်",l:6},
-{jp:"果物",rd:"くだもの",rom:"kudamono",en:"fruit",my:"သစ်သီးဝလံ",l:6},
-{jp:"水",rd:"みず",rom:"mizu",en:"water",my:"ရေ",l:6},
-{jp:"お茶",rd:"おちゃ",rom:"ocha",en:"tea (green tea)",my:"ဂျပန်ရေနွေးကြမ်း",l:6},
-{jp:"紅茶",rd:"こうちゃ",rom:"koucha",en:"black tea",my:"လက်ဖက်ရည်",l:6},
-{jp:"牛乳",rd:"ぎゅうにゅう",rom:"gyuunyuu",en:"cow's milk",my:"နွားနို့",l:6},
-{jp:"ミルク",rd:"ミルク",rom:"miruku",en:"milk",my:"နွားနို့၊ နို့ရည်",l:6},
-{jp:"ジュース",rd:"ジュース",rom:"juusu",en:"juice",my:"ဖျော်ရည်",l:6},
-{jp:"ビール",rd:"ビール",rom:"biiru",en:"beer",my:"ဘီယာ",l:6},
-{jp:"[お]酒",rd:"[お]さけ",rom:"[o]sake",en:"sake",my:"အရက်",l:6},
-{jp:"たばこ",rd:"たばこ",rom:"tabako",en:"cigarette",my:"ဆေးလိပ်",l:6},
-{jp:"手紙",rd:"てがみ",rom:"tegami",en:"letter",my:"စာ letter",l:6},
-{jp:"レポート",rd:"レポート",rom:"repooto",en:"report",my:"report အစီရင်ခံစာ",l:6},
-{jp:"写真",rd:"しゃしん",rom:"shashin",en:"photograph",my:"ဓာတ်ပုံ",l:6},
-{jp:"ビデオ",rd:"ビデオ",rom:"bideo",en:"video",my:"ဗီဒီယို",l:6},
-{jp:"店",rd:"みせ",rom:"mise",en:"shop; store",my:"ဆိုင်",l:6},
-{jp:"庭",rd:"にわ",rom:"niwa",en:"garden",my:"ခြံ၊ ခြံဝင်း",l:6},
-{jp:"宿題",rd:"しゅくだい",rom:"shukudai",en:"homework",my:"အိမ်စာ",l:6},
-{jp:"テニス",rd:"テニス",rom:"tenisu",en:"tennis",my:"တင်းနစ်အားကစား",l:6},
-{jp:"サッカー",rd:"サッカー",rom:"sakkaa",en:"soccer; football",my:"ဘောလုံးအားကစား",l:6},
-{jp:"お花見",rd:"おはなみ",rom:"ohanami",en:"cherry-blossom viewing",my:"ပန်းကြည့်ခြင်း",l:6},
-{jp:"何",rd:"なに",rom:"nani",en:"what",my:"ဘာ",l:6},
-{jp:"一緒に",rd:"いっしょに",rom:"issho ni",en:"together",my:"အတူတူ",l:6},
-{jp:"ちょっと",rd:"ちょっと",rom:"chotto",en:"a little; just a moment",my:"ခဏ၊ နည်းနည်း",l:6},
-{jp:"いつも",rd:"いつも",rom:"itsumo",en:"always; usually",my:"အမြဲတမ်း",l:6},
-{jp:"ときどき",rd:"ときどき",rom:"tokidoki",en:"sometimes",my:"တခါတလေ",l:6},
-{jp:"それから",rd:"それから",rom:"sore kara",en:"and then; after that",my:"အဲဒီနောက်",l:6},
-{jp:"ええ",rd:"ええ",rom:"ee",en:"yes",my:"အင်း",l:6},
-{jp:"いいですね",rd:"いいですね",rom:"ii desu ne",en:"that's good, isn't it?",my:"ကောင်းတယ်နော်",l:6},
-{jp:"わかりました",rd:"わかりました",rom:"wakarimashita",en:"I understand; I see",my:"နားလည်ပါပြီ",l:6},
-{jp:"何ですか",rd:"なんですか",rom:"nan desu ka",en:"what is it?",my:"ဘာလဲ",l:6},
-{jp:"じゃ、また[あした]",rd:"じゃ、また[あした]",rom:"ja, mata [ashita]",en:"Well then, see you [tomorrow].",my:"ကဲဒါဆို--မနက်ဖြန်",l:6},
-{jp:"メキシコ",rd:"メキシコ",rom:"mekishiko",en:"Mexico",my:"မက္ကဆီကို",l:6},
-{jp:"大阪デパート",rd:"おおさかデパート",rom:"oosaka depaato",en:"Osaka Department Store",my:"အိုဆာကာကုန်တိုက်",l:6},
-{jp:"つるや",rd:"つるや",rom:"tsuruya",en:"Tsuruya (restaurant name)",my:"Tsuruya စားသောက်ဆိုင်",l:6},
-{jp:"フランス屋",rd:"フランスや",rom:"furansu ya",en:"Furansu-ya (supermarket)",my:"Furansu စူပါမားကတ်",l:6},
-{jp:"毎日屋",rd:"まいにちや",rom:"mainichi ya",en:"Mainichi-ya (supermarket)",my:"Mainichi စူပါမားကတ်",l:6},
-{jp:"切ります",rd:"きります",rom:"kirimasu",en:"to cut",my:"ဖြတ်သည်။ ကိုက်ဖြတ်သည်။",l:7},
-{jp:"送ります",rd:"おくります",rom:"okurimasu",en:"to send",my:"ပို့သည်။(ပစ္စည်း၊ စာ)",l:7},
-{jp:"あげます",rd:"あげます",rom:"agemasu",en:"to give",my:"ပေးသည်။",l:7},
-{jp:"貰います",rd:"もらいます",rom:"moraimasu",en:"to receive",my:"ယူသည်။ လက်ခံရရှိသည်။",l:7},
-{jp:"貸します",rd:"かします",rom:"kashimasu",en:"to lend",my:"ငှားသည်။ (သူများကို ငှား)",l:7},
-{jp:"借ります",rd:"かります",rom:"karimasu",en:"to borrow",my:"ချေးငှားသည်။(သူများဆီမှ ချေး)",l:7},
-{jp:"教えます",rd:"おしえます",rom:"oshiemasu",en:"to teach",my:"သင်ကြားသည်။",l:7},
-{jp:"習います",rd:"ならいます",rom:"naraimasu",en:"to learn",my:"သင်ယူသည်။",l:7},
-{jp:"かけます[電話を～]",rd:"かけます[でんわを～]",rom:"kakemasu [denwa o ~]",en:"to make a (phone) call",my:"ဖုန်းဆက်သည်။",l:7},
-{jp:"手",rd:"て",rom:"te",en:"hand",my:"လက်",l:7},
-{jp:"はし",rd:"はし",rom:"hashi",en:"chopsticks",my:"တူ(ထမင်းစားတဲ့တူ)",l:7},
-{jp:"スプーン",rd:"スプーン",rom:"supuun",en:"spoon",my:"ဇွန်း",l:7},
-{jp:"ナイフ",rd:"ナイフ",rom:"naifu",en:"knife",my:"ဓား",l:7},
-{jp:"フォーク",rd:"フォーク",rom:"fooku",en:"fork",my:"ခက်ရင်း",l:7},
-{jp:"はさみ",rd:"はさみ",rom:"hasami",en:"scissors",my:"ကတ်ကြေး",l:7},
-{jp:"パソコン",rd:"パソコン",rom:"pasokon",en:"personal computer",my:"ကွန်ပျူတာ",l:7},
-{jp:"ケータイ",rd:"ケータイ",rom:"keetai",en:"mobile phone",my:"လက်ကိုင်ဖုန်း",l:7},
-{jp:"メール",rd:"メール",rom:"meeru",en:"e-mail",my:"အီးမေးလ်",l:7},
-{jp:"年賀状",rd:"ねんがじょう",rom:"nengajou",en:"New Year's card",my:"new year card",l:7},
-{jp:"パンチ",rd:"パンチ",rom:"panchi",en:"punch",my:"punch",l:7},
-{jp:"ホッチキス",rd:"ホッチキス",rom:"hocchikisu",en:"stapler",my:"stapler",l:7},
-{jp:"セロテープ",rd:"セロテープ",rom:"seroteepu",en:"cellophane tape",my:"တိပ်",l:7},
-{jp:"消しゴム",rd:"けしゴム",rom:"keshigomu",en:"eraser",my:"ခဲဖျက်",l:7},
-{jp:"紙",rd:"かみ",rom:"kami",en:"paper",my:"စာရွက်",l:7},
-{jp:"花",rd:"はな",rom:"hana",en:"flower",my:"ပန်း",l:7},
-{jp:"シャツ",rd:"シャツ",rom:"shatsu",en:"shirt",my:"ရှပ်အင်္ကျီ",l:7},
-{jp:"プレゼント",rd:"プレゼント",rom:"purezento",en:"present; gift",my:"လက်ဆောင်",l:7},
-{jp:"荷物",rd:"にもつ",rom:"nimotsu",en:"luggage; parcel",my:"အထုပ်၊ ပါဆယ်အထုပ်",l:7},
-{jp:"お金",rd:"おかね",rom:"okane",en:"money",my:"ပိုက်ဆံ",l:7},
-{jp:"切符",rd:"きっぷ",rom:"kippu",en:"ticket",my:"လက်မှတ်",l:7},
-{jp:"クリスマス",rd:"クリスマス",rom:"kurisumasu",en:"Christmas",my:"ခရစ်စမတ်",l:7},
-{jp:"父",rd:"ちち",rom:"chichi",en:"(one's own) father",my:"အဖေ(မိမိ၏ဖခင်ကိုခေါ်သောအခေါ်အဝေါ်)",l:7},
-{jp:"母",rd:"はは",rom:"haha",en:"(one's own) mother",my:"အမေ(မိမိ၏မိခင်ကိုခေါ်သောအခေါ်အဝေါ်)",l:7},
-{jp:"お父さん",rd:"おとうさん",rom:"otousan",en:"(someone else's) father",my:"အဖေ(သူတစ်ပါး၏အဖေကိုခေါ်သောအခေါ်အဝေါ်)",l:7},
-{jp:"お母さん",rd:"おかあさん",rom:"okaasan",en:"(someone else's) mother",my:"အမေ(သူတစ်ပါး၏အမေကိုခေါ်သောအခေါ်အဝေါ်)",l:7},
-{jp:"もう～",rd:"もう～",rom:"mou ~",en:"already ~",my:"～ပြီးပြီ",l:7},
-{jp:"まだ",rd:"まだ",rom:"mada",en:"not yet",my:"မ---သေးဘူး",l:7},
-{jp:"これから",rd:"これから",rom:"kore kara",en:"from now on",my:"အခုကစပြီး---",l:7},
-{jp:"[～、]すてきですね",rd:"[～、]すてきですね",rom:"[~,] suteki desu ne",en:"That's lovely, isn't it?",my:"လှလိုက်တာ",l:7},
-{jp:"いらっしゃい",rd:"いらっしゃい",rom:"irasshai",en:"welcome",my:"ကြိုဆိုပါတယ်",l:7},
-{jp:"どうぞ、おあがりください。",rd:"どうぞ、おあがりください。",rom:"douzo, oagari kudasai.",en:"Please come in.",my:"ကျေးဇူးပြုပြီး အိမ်ပေါ်တက်ပါ။",l:7},
-{jp:"失礼します",rd:"しつれいします",rom:"shitsurei shimasu",en:"Excuse me (on entering/leaving)",my:"ခွင့်ပြုပါ (သူတစ်ပါး၏ အခန်းသို့ဝင်ရန် ခွင့်တောင်းခြင်း)",l:7},
-{jp:"[～は]いかがですか",rd:"[～は]いかがですか",rom:"[~wa] ikaga desu ka",en:"How about ~?",my:"ဘယ်လိုလဲဟင်",l:7},
-{jp:"いただきます",rd:"いただきます",rom:"itadakimasu",en:"Thank you for the food (said before eating)",my:"စားပါမယ် (အစား အသောက်ကို မစားခင်တွင် ပြောသောစကား)",l:7},
-{jp:"ごちそうさま[でした]",rd:"ごちそうさま[でした]",rom:"gochisousama [deshita]",en:"Thank you for the meal (said after eating)",my:"စားပြီးပါပြီ (အစား အသောက်ကို စားပြီးသည့်အခါ ပြောသောစကား)",l:7},
-{jp:"スペイン",rd:"スペイン",rom:"supein",en:"Spain",my:"စပိန်",l:7},
-{jp:"ハンサム [な]",rd:"ハンサム [な]",rom:"hansamu [na]",en:"handsome",my:"ခန့်ချောသော(ကျား)",l:8},
-{jp:"きれい[な]",rd:"きれい[な]",rom:"kirei[na]",en:"beautiful; clean",my:"လှသော၊ ချောမောသော(မ)",l:8},
-{jp:"静か[な]",rd:"しずか[な]",rom:"shizuka[na]",en:"quiet",my:"တိတ်ဆိတ်သော",l:8},
-{jp:"賑やか[な]",rd:"にぎやか[な]",rom:"nigiyaka[na]",en:"lively; bustling",my:"စည်ကားသော",l:8},
-{jp:"有名 [な]",rd:"ゆうめい [な]",rom:"yuumei [na]",en:"famous",my:"နာမည်ကြီးသော",l:8},
-{jp:"親切 [な]",rd:"しんせつ [な]",rom:"shinsetsu [na]",en:"kind",my:"ဖော်ရွေသော။ ကြင်နာတတ်သော",l:8},
-{jp:"元気 [な]",rd:"げんき [な]",rom:"genki [na]",en:"fine; healthy; energetic",my:"ကျန်းမာသော၊ သန်မာသော",l:8},
-{jp:"暇 [な]",rd:"ひま [な]",rom:"hima [na]",en:"free time; leisure",my:"အားသော၊ အားလပ်သော",l:8},
-{jp:"便利 [な]",rd:"べんり [な]",rom:"benri [na]",en:"convenient",my:"အဆင်ပြေသော",l:8},
-{jp:"素敵 [な]",rd:"すてき [な]",rom:"suteki [na]",en:"wonderful; lovely",my:"လှသော၊ စွမ်းဖွယ်ကောင်းသော",l:8},
-{jp:"大きい",rd:"おおきい",rom:"ookii",en:"big; large",my:"ကြီးသော",l:8},
-{jp:"小さい",rd:"ちいさい",rom:"chiisai",en:"small; little",my:"သေးသော",l:8},
-{jp:"新しい",rd:"あたらしい",rom:"atarashii",en:"new",my:"သစ်သော၊ အသစ်ဖြစ်သော",l:8},
-{jp:"古い",rd:"ふるい",rom:"furui",en:"old",my:"ဟောင်းသော၊",l:8},
-{jp:"いい、良い",rd:"いい、よい",rom:"ii, yoi",en:"good",my:"ကောင်းသော",l:8},
-{jp:"悪い",rd:"わるい",rom:"warui",en:"bad",my:"ဆိုးသော",l:8},
-{jp:"暑い、熱い",rd:"あつい、あつい",rom:"atsui, atsui",en:"hot",my:"ပူအိုက်သော",l:8},
-{jp:"寒い",rd:"さむい",rom:"samui",en:"cold (weather)",my:"ချမ်းသော(ရာသီဥတု)",l:8},
-{jp:"冷たい",rd:"つめたい",rom:"tsumetai",en:"cold (to the touch); cool",my:"အေးမြသော",l:8},
-{jp:"難しい",rd:"むずかしい",rom:"muzukashii",en:"difficult",my:"ခက်သော",l:8},
-{jp:"易しい",rd:"やさしい",rom:"yasashii",en:"easy",my:"လွယ်သော",l:8},
-{jp:"高い",rd:"たかい",rom:"takai",en:"high; expensive",my:"မြင့်သော၊ စျေးကြီးသော",l:8},
-{jp:"安い",rd:"やすい",rom:"yasui",en:"cheap; inexpensive",my:"သက်သာသော၊ စျေးပေါသော",l:8},
-{jp:"低い",rd:"ひくい",rom:"hikui",en:"low",my:"နိမ့်သော",l:8},
-{jp:"おもしろい",rd:"おもしろい",rom:"omoshiroi",en:"interesting",my:"စိတ်ဝင်စားစရာကောင်းသော",l:8},
-{jp:"おいしい",rd:"おいしい",rom:"oishii",en:"delicious; tasty",my:"အရသာရှိသော",l:8},
-{jp:"忙しい",rd:"いそがしい",rom:"isogashii",en:"busy",my:"အလုပ်များသော",l:8},
-{jp:"楽しい",rd:"たのしい",rom:"tanoshii",en:"fun; enjoyable",my:"ပျော်ရွှင်သော",l:8},
-{jp:"白い",rd:"しろい",rom:"shiroi",en:"white",my:"ဖြူ့သော",l:8},
-{jp:"黒い",rd:"くろい",rom:"kuroi",en:"black",my:"မဲသော",l:8},
-{jp:"赤い",rd:"あかい",rom:"akai",en:"red",my:"နီသော",l:8},
-{jp:"青い",rd:"あおい",rom:"aoi",en:"blue",my:"ပြာသော",l:8},
-{jp:"桜",rd:"さくら",rom:"sakura",en:"cherry blossom",my:"ဆာကူရာပန်း၊ ချယ်ရီပန်း",l:8},
-{jp:"山",rd:"やま",rom:"yama",en:"mountain",my:"တောတောင်",l:8},
-{jp:"町",rd:"まち",rom:"machi",en:"town; city",my:"မြို့",l:8},
-{jp:"食べ物",rd:"たべもの",rom:"tabemono",en:"food",my:"စားစရာ",l:8},
-{jp:"所",rd:"ところ",rom:"tokoro",en:"place",my:"နေရာ",l:8},
-{jp:"寮",rd:"りょう",rom:"ryou",en:"dormitory",my:"အဆောင်",l:8},
-{jp:"レストラン",rd:"レストラン",rom:"resutoran",en:"restaurant",my:"စားသောက်ဆိုင်",l:8},
-{jp:"生活",rd:"せいかつ",rom:"seikatsu",en:"life; living",my:"နေထိုင်မှု",l:8},
-{jp:"[お]仕事",rd:"[お]しごと",rom:"[o]shigoto",en:"work; job",my:"အလုပ်အကိုင်",l:8},
-{jp:"どう",rd:"どう",rom:"dou",en:"how",my:"ဘယ်လိုလဲ",l:8},
-{jp:"どんな～",rd:"どんな～",rom:"donna ~",en:"what kind of ~",my:"ဘယ်လိုမျိုး",l:8},
-{jp:"とても",rd:"とても",rom:"totemo",en:"very",my:"အလွန်",l:8},
-{jp:"あまり",rd:"あまり",rom:"amari",en:"not very; not much",my:"သိပ်--",l:8},
-{jp:"そして",rd:"そして",rom:"soshite",en:"and then; and",my:"အဲဒီနောက်၊ ပြီးနောက်",l:8},
-{jp:"～が、～",rd:"～が、～",rom:"~ga, ~",en:"~ but ~",my:"～ပေမဲ့လဲ～",l:8},
-{jp:"お元気ですか",rd:"おげんきですか",rom:"ogenki desu ka",en:"How are you?",my:"နေကောင်းလား (နှုတ်ဆက်သည့်အခါတွင်လည်းသုံးပါသည်)",l:8},
-{jp:"そうですね",rd:"そうですね",rom:"sou desu ne",en:"That's right, isn't it?",my:"ဟုတ်တယ်နော်",l:8},
-{jp:"もういっぱい",rd:"もういっぱい",rom:"mou ippai",en:"one more (cup/glass)",my:"နောက်တစ်ခွက်",l:8},
-{jp:"いかがですか",rd:"いかがですか",rom:"ikaga desu ka",en:"How is it?; How about ~?",my:"ဘယ်လိုလဲဟင်",l:8},
-{jp:"いいえ、けっこうです",rd:"いいえ、けっこうです",rom:"iie, kekkou desu",en:"No, thank you; No, that's enough",my:"ဟင့်အင်း တော်ပါပြီ",l:8},
-{jp:"もう～です[ね]",rd:"もう～です[ね]",rom:"mou ~desu [ne]",en:"already ~",my:"～ပြီနော်",l:8},
-{jp:"そろそろ 失礼します",rd:"そろそろ しつれいします",rom:"sorosoro shitsurei shimasu",en:"It's about time I left; I must be going",my:"ဒါဆိုရင် ပြန်တော့မယ် (ခွင့်ပြုပါအုံး)",l:8},
-{jp:"いいえ",rd:"いいえ",rom:"iie",en:"Not at all; Don't mention it",my:"ရပါတယ်။ ကိစ္စမရှိပါဘူး",l:8},
-{jp:"また いらっしゃって ください",rd:"また いらっしゃって ください",rom:"mata irasshatte kudasai",en:"Please come again",my:"နောက်လဲ လာပါနော်",l:8},
-{jp:"シャンハイ",rd:"シャンハイ",rom:"shanhai",en:"Shanghai",my:"ရှင်ဟိုင်း",l:8},
-{jp:"金閣寺",rd:"きんかくじ",rom:"kinkakuji",en:"Kinkakuji (Golden Pavilion)",my:"Kinkakuji ကျောင်းတော်",l:8},
-{jp:"奈良公園",rd:"ならこうえん",rom:"nara kouen",en:"Nara Park",my:"Nara ပန်းခြံ",l:8},
-{jp:"富士山",rd:"ふじさん",rom:"fujisan",en:"Mt. Fuji",my:"ဖူဂျီတောင်",l:8},
-{jp:"「七人の 侍」",rd:"「しちにんの さむらい」",rom:"shichinin no samurai",en:"\"Seven Samurai\"",my:"စာမူရိုင်း၇ယောက်ရွေ့ရုပ်ရှင်",l:8},
-{jp:"わかります",rd:"わかります",rom:"wakarimasu",en:"to understand",my:"နားလည်သည်။",l:9},
-{jp:"あります",rd:"あります",rom:"arimasu",en:"to be; to exist (inanimate)",my:"ရှိသည်။(သက်မဲ့)",l:9},
-{jp:"好き[な]",rd:"すき[な]",rom:"suki[na]",en:"like; fond of",my:"ကြိုက်သော",l:9},
-{jp:"嫌い[な]",rd:"きらい[な]",rom:"kirai[na]",en:"dislike; hate",my:"မုန်းသော",l:9},
-{jp:"上手 [な]",rd:"じょうず [な]",rom:"jouzu [na]",en:"good at; skillful",my:"တော်သော",l:9},
-{jp:"下手 [な]",rd:"へた [な]",rom:"heta [na]",en:"poor at; unskillful",my:"ညံ့သော",l:9},
-{jp:"飲み物",rd:"のみもの",rom:"nomimono",en:"drink; beverage",my:"သောက်စရာ",l:9},
-{jp:"料理",rd:"りょうり",rom:"ryouri",en:"cooking; dish",my:"ဟင်း၊ အစားအစာ",l:9},
-{jp:"スポーツ",rd:"スポーツ",rom:"supootsu",en:"sports",my:"အားကစား",l:9},
-{jp:"野球",rd:"やきゅう",rom:"yakyuu",en:"baseball",my:"base ball",l:9},
-{jp:"ダンス",rd:"ダンス",rom:"dansu",en:"dance",my:"အက",l:9},
-{jp:"旅行",rd:"りょこう",rom:"ryokou",en:"travel; trip",my:"ခရီးသွားခြင်း",l:9},
-{jp:"音楽",rd:"おんがく",rom:"ongaku",en:"music",my:"ဂီတ",l:9},
-{jp:"歌",rd:"うた",rom:"uta",en:"song",my:"သီချင်း",l:9},
-{jp:"クラシック",rd:"クラシック",rom:"kurashikku",en:"classical (music)",my:"ရှေးဟောင်းသီချင်း",l:9},
-{jp:"ジャズ",rd:"ジャズ",rom:"jazu",en:"jazz",my:"jassသီချင်း",l:9},
-{jp:"コンサート",rd:"コンサート",rom:"konsaato",en:"concert",my:"ဂီတဖျော်ဖြေပွဲ",l:9},
-{jp:"カラオケ",rd:"カラオケ",rom:"karaoke",en:"karaoke",my:"ကာရာအိုကေ",l:9},
-{jp:"歌舞伎",rd:"かぶき",rom:"kabuki",en:"kabuki (traditional Japanese theatre)",my:"ဂျပန်ရိုးရာဇာတ်ပွဲ",l:9},
-{jp:"絵",rd:"え",rom:"e",en:"picture; painting",my:"ပန်းချီ",l:9},
-{jp:"字",rd:"じ",rom:"ji",en:"character; letter",my:"စာလုံး",l:9},
-{jp:"漢字",rd:"かんじ",rom:"kanji",en:"kanji; Chinese character",my:"ဂျပန်စာလုံး",l:9},
-{jp:"ひらがな",rd:"ひらがな",rom:"hiragana",en:"hiragana",my:"ဟိရဂနစာလုံး",l:9},
-{jp:"かたかな",rd:"かたかな",rom:"katakana",en:"katakana",my:"ခတခနစာလုံး",l:9},
-{jp:"ローマ字",rd:"ローマじ",rom:"rooma ji",en:"Roman letters; romaji",my:"ရိုးမာဂျိစာလုံး",l:9},
-{jp:"細かいお金",rd:"こまかいおかね",rom:"komakai okane",en:"small change",my:"ပိုက်ဆံအကြွေ",l:9},
-{jp:"チケット",rd:"チケット",rom:"chiketto",en:"ticket",my:"လက်မှတ်",l:9},
-{jp:"時間",rd:"じかん",rom:"jikan",en:"time",my:"အချိန်",l:9},
-{jp:"用事",rd:"ようじ",rom:"youji",en:"errand; business",my:"ကိစ္စ",l:9},
-{jp:"約束",rd:"やくそく",rom:"yakusoku",en:"promise; appointment",my:"ကတိ၊ ချိန်းဆိုထားခြင်း",l:9},
-{jp:"アルバイト",rd:"アルバイト",rom:"arubaito",en:"part-time job",my:"အချိန်ပိုင်းအလုပ်",l:9},
-{jp:"ご主人",rd:"ごしゅじん",rom:"goshujin",en:"(your) husband",my:"ခင်ပွန်း(သူတစ်ပါး၏ ယောက်ျား)",l:9},
-{jp:"夫 /主人",rd:"おっと/しゅじん",rom:"otto/shujin",en:"(my) husband",my:"မိမိ၏ယောက်ျား",l:9},
-{jp:"奥さん",rd:"おくさん",rom:"okusan",en:"(your) wife",my:"ဇနီး (သူတစ်ပါး၏ ဇနီး)",l:9},
-{jp:"妻/家内",rd:"つま/かない",rom:"tsuma/kanai",en:"(my) wife",my:"မိမိ၏ဇနီး၊ မိန်းမ",l:9},
-{jp:"子ども",rd:"こども",rom:"kodomo",en:"child; children",my:"ကလေး",l:9},
-{jp:"よく",rd:"よく",rom:"yoku",en:"often; well",my:"ကောင်းကောင်း၊ ခဏခဏ",l:9},
-{jp:"だいたい",rd:"だいたい",rom:"daitai",en:"roughly; mostly",my:"အကြမ်းအားဖြင့်",l:9},
-{jp:"たくさん",rd:"たくさん",rom:"takusan",en:"a lot; many",my:"အများကြီး၊ များများ",l:9},
-{jp:"少し",rd:"すこし",rom:"sukoshi",en:"a little; a bit",my:"နည်းနည်း",l:9},
-{jp:"全然",rd:"ぜんぜん",rom:"zenzen",en:"(not) at all",my:"လုံးဝ",l:9},
-{jp:"早く",rd:"はやく",rom:"hayaku",en:"early; quickly",my:"စောစော၊ မြန်မြန်",l:9},
-{jp:"～から",rd:"～から",rom:"~kara",en:"because ~",my:"～ဖြစ်လို့",l:9},
-{jp:"どうして",rd:"どうして",rom:"doushite",en:"why",my:"ဘာဖြစ်လို့",l:9},
-{jp:"貸してください。",rd:"かしてください。",rom:"kashite kudasai.",en:"please lend me ~",my:"ငှားပါ",l:9},
-{jp:"いいですよ。",rd:"いいですよ。",rom:"ii desu yo.",en:"that's fine; OK",my:"ရပါတယ်",l:9},
-{jp:"残念です[が]",rd:"ざんねんです[が]",rom:"zannen desu[ga]",en:"that's a pity; unfortunately",my:"စိတ်မကောင်းပါဘူး",l:9},
-{jp:"ああ、",rd:"ああ、",rom:"aa,",en:"ah!; oh!",my:"အော်--",l:9},
-{jp:"いっしょに いかがですか",rd:"いっしょに いかがですか",rom:"issho ni ikaga desu ka",en:"how about ~ together?",my:"အတူတူ ဘယ်လိုလဲဟင်း",l:9},
-{jp:"[～は]ちょっと…",rd:"[～は]ちょっと…",rom:"[~wa] chotto...",en:"a little...; (hesitation / soft refusal)",my:"နည်းနည်း၊ ခဏ၊ သိပ်ပြီးတော့-- (အကြောင်းအရာတစ်ခုကို ငြင်းသည့်အခါသုံးသည်)",l:9},
-{jp:"だめですか",rd:"だめですか",rom:"dame desu ka",en:"is that no good?; won't it do?",my:"မရဘူးလား",l:9},
-{jp:"また 今度 お願いします",rd:"また こんど おねがいします",rom:"mata kondo onegai shimasu",en:"maybe next time; (I'll ask) again next time",my:"နောက်တခါ---တောင်းဆိုပါတယ် (ဒီတစ်ခေါက်အဆင်မပြေသောကြောင်း နောက်တခါကျမှ)",l:9},
-{jp:"あります",rd:"あります",rom:"arimasu",en:"there is (inanimate)",my:"ရှိသည်။(သက်မဲ့)",l:10},
-{jp:"います",rd:"います",rom:"imasu",en:"there is (people/animals)",my:"ရှိသည်။ နေသည်။(သက်ရှိ)",l:10},
-{jp:"いろいろ[な]",rd:"いろいろ[な]",rom:"iroiro[na]",en:"various",my:"အမျိုးမျိုး",l:10},
-{jp:"男の人",rd:"おとこのひと",rom:"otoko no hito",en:"man",my:"အမျိုးသား၊ ယောက်ျားလေး",l:10},
-{jp:"女の人",rd:"おんなのひと",rom:"onna no hito",en:"woman",my:"အမျိုးသမီး၊ မိန်းကလေး",l:10},
-{jp:"男の子",rd:"おとこのこ",rom:"otoko no ko",en:"boy",my:"ကောင်လေး",l:10},
-{jp:"女の子",rd:"おんなのこ",rom:"onna no ko",en:"girl",my:"ကောင်မလေး",l:10},
-{jp:"犬",rd:"いぬ",rom:"inu",en:"dog",my:"ခွေး",l:10},
-{jp:"猫",rd:"ねこ",rom:"neko",en:"cat",my:"ကြောင်",l:10},
-{jp:"パンダ",rd:"パンダ",rom:"panda",en:"panda",my:"ပန်ဒါ",l:10},
-{jp:"象",rd:"ぞう",rom:"zou",en:"elephant",my:"ဆင်",l:10},
-{jp:"木",rd:"き",rom:"ki",en:"tree",my:"သစ်ပင်",l:10},
-{jp:"物",rd:"もの",rom:"mono",en:"thing",my:"အရာဝတ္ထု",l:10},
-{jp:"電池",rd:"でんち",rom:"denchi",en:"battery",my:"ဓာတ်ခဲ",l:10},
-{jp:"箱",rd:"はこ",rom:"hako",en:"box",my:"ဗူး",l:10},
-{jp:"スイッチ",rd:"スイッチ",rom:"suitchi",en:"switch",my:"မီးခလုတ်",l:10},
-{jp:"冷蔵庫",rd:"れいぞうこ",rom:"reizouko",en:"refrigerator",my:"ရေခဲသေတ္တာ",l:10},
-{jp:"テーブル",rd:"テーブル",rom:"teeburu",en:"table",my:"စားပွဲခုံ",l:10},
-{jp:"ベッド",rd:"ベッド",rom:"beddo",en:"bed",my:"အိပ်ရာ၊ ကုတင်",l:10},
-{jp:"棚",rd:"たな",rom:"tana",en:"shelf",my:"စင်(စာအုပ်စင်၊ ပန်းကန်စင်)",l:10},
-{jp:"ドア",rd:"ドア",rom:"doa",en:"door",my:"တံခါး",l:10},
-{jp:"窓",rd:"まど",rom:"mado",en:"window",my:"ပြတင်းပေါက်",l:10},
-{jp:"ポスト",rd:"ポスト",rom:"posuto",en:"mailbox; postbox",my:"စာတိုက်ပုံး",l:10},
-{jp:"ビル",rd:"ビル",rom:"biru",en:"building",my:"အဆောက်အဦး",l:10},
-{jp:"ATM",rd:"ATM",rom:"eetiiemu",en:"ATM",my:"အလိုအလျောက်ငွေထုတ်စက်",l:10},
-{jp:"コンビニ",rd:"コンビニ",rom:"konbini",en:"convenience store",my:"convenience store",l:10},
-{jp:"公園",rd:"こうえん",rom:"kouen",en:"park",my:"ပန်းခြံ",l:10},
-{jp:"喫茶店",rd:"きっさてん",rom:"kissaten",en:"coffee shop; tea house",my:"လက်ဖက်ရည်/ကော်ဖီဆိုင်",l:10},
-{jp:"本屋",rd:"ほんや",rom:"honya",en:"bookstore",my:"စာအုပ်ဆိုင်",l:10},
-{jp:"～屋",rd:"～や",rom:"~ya",en:"~ shop",my:"～ဆိုင်",l:10},
-{jp:"乗り場",rd:"のりば",rom:"noriba",en:"boarding place; stop",my:"～ယာဉ်စီးတဲ့နေရာ",l:10},
-{jp:"県",rd:"けん",rom:"ken",en:"prefecture",my:"တိုင်းဒေသ (prefecture)",l:10},
-{jp:"上",rd:"うえ",rom:"ue",en:"up; above; on",my:"အပေါ်",l:10},
-{jp:"下",rd:"した",rom:"shita",en:"down; below; under",my:"အောက်",l:10},
-{jp:"前",rd:"まえ",rom:"mae",en:"front; before",my:"ရှေ့၊ အရှေ့",l:10},
-{jp:"後ろ",rd:"うしろ",rom:"ushiro",en:"back; behind",my:"နောက်၊ အနောက်",l:10},
-{jp:"右",rd:"みぎ",rom:"migi",en:"right",my:"ညာဘက်",l:10},
-{jp:"左",rd:"ひだり",rom:"hidari",en:"left",my:"ဘယ်ဘက်",l:10},
-{jp:"中",rd:"ちゅう",rom:"chuu",en:"inside; middle",my:"အထဲ(မှာ)",l:10},
-{jp:"外",rd:"がい",rom:"gai",en:"outside",my:"အပြင်(မှာ)",l:10},
-{jp:"隣",rd:"となり",rom:"tonari",en:"next to; neighbouring",my:"အနား(မှာ)",l:10},
-{jp:"近く",rd:"ちかく",rom:"chikaku",en:"near; neighbourhood",my:"အနီးနား(မှာ)",l:10},
-{jp:"間",rd:"あいだ",rom:"aida",en:"between; interval",my:"နှစ်ခုကြား (မှာ)",l:10},
-{jp:"～や～など",rd:"～や～など",rom:"~ya~nado",en:"~ and ~, etc.",my:"～နဲ့～တွေ",l:10},
-{jp:"[どうも]すみません。",rd:"[どうも]すみません。",rom:"[doumo] sumimasen.",en:"Excuse me; I'm sorry to trouble you",my:"ကျေးဇူးပါ(အနှောင့်အယှက်ဖြစ်ရင်ခွင့်လွှတ်ပါ)",l:10},
-{jp:"ナンプラー",rd:"ナンプラー",rom:"nanpuraa",en:"fish sauce",my:"ငံပြာရည်",l:10},
-{jp:"コーナー",rd:"コーナー",rom:"koonaa",en:"corner",my:"ကော်နာ",l:10},
-{jp:"いちばん下",rd:"いちばんした",rom:"ichiban shita",en:"the bottom; the lowest",my:"အောက်ဆုံး",l:10},
-{jp:"東京ディズニーランド",rd:"とうきょうディズニーランド",rom:"toukyou dizuniirando",en:"Tokyo Disneyland",my:"တိုကျို ဒစ္စနေလန်း",l:10},
-{jp:"アジアストア",rd:"アジアストア",rom:"ajia sutoa",en:"Asia Store",my:"အာရှအာ စတိုးဆိုင်",l:10},
-{jp:"います[子どもが]",rd:"います[こどもが]",rom:"imasu [kodomo ga]",en:"to be, to exist (a child)",my:"ရှိသည်။(ကလေးရှိသည်)",l:11},
-{jp:"います[日本に]",rd:"います[にほんに]",rom:"imasu [nihon ni]",en:"to be, to exist (in Japan)",my:"နေသည်။ (ဂျပန်တွင်)",l:11},
-{jp:"かかります",rd:"かかります",rom:"kakarimasu",en:"to take (time)",my:"ကြာသည်။(အချိန်ကြာတယ်)",l:11},
-{jp:"休みます",rd:"やすみます",rom:"yasumimasu",en:"to rest; to take a day off",my:"အနားယူသည်။",l:11},
-{jp:"[会社を]",rd:"[かいしゃを]",rom:"[kaisha o]",en:"(the company)",my:"ကုမ္ပဏီကို",l:11},
-{jp:"1つ",rd:"ひとつ",rom:"hitotsu",en:"one (thing)",my:"တစ်ခု",l:11},
-{jp:"2つ",rd:"ふたつ",rom:"futatsu",en:"two (things)",my:"နှစ်ခု",l:11},
-{jp:"3つ",rd:"みっつ",rom:"mittsu",en:"three (things)",my:"သုံးခု",l:11},
-{jp:"4つ",rd:"よっつ",rom:"yottsu",en:"four (things)",my:"လေးခု",l:11},
-{jp:"5つ",rd:"いつつ",rom:"itsutsu",en:"five (things)",my:"ငါးခု",l:11},
-{jp:"6つ",rd:"むっつ",rom:"muttsu",en:"six (things)",my:"ခြောက်ခု",l:11},
-{jp:"7つ",rd:"ななつ",rom:"nanatsu",en:"seven (things)",my:"ခုနစ်ခု",l:11},
-{jp:"8つ",rd:"やっつ",rom:"yattsu",en:"eight (things)",my:"ရှစ်ခု",l:11},
-{jp:"9つ",rd:"ここのつ",rom:"kokonotsu",en:"nine (things)",my:"ကိုးခု",l:11},
-{jp:"とお",rd:"とお",rom:"too",en:"ten (things)",my:"ဆယ်ခု",l:11},
-{jp:"いくつ",rd:"いくつ",rom:"ikutsu",en:"how many (things)",my:"ဘယ်နှစ်ခု",l:11},
-{jp:"1人",rd:"ひとり",rom:"hitori",en:"one person",my:"တစ်ယောက်",l:11},
-{jp:"2人",rd:"ふたり",rom:"futari",en:"two people",my:"နှစ်ယောက်",l:11},
-{jp:"～人",rd:"～にん",rom:"~nin",en:"~ people",my:"～ယောက်",l:11},
-{jp:"～台",rd:"～だい",rom:"~dai",en:"counter for machines, vehicles, etc.",my:"～စီး၊～လုံး၊ (ကြီးမားသော အရာ(ကား၊ တီဗီ၊ ရေခဲ သေတ္တာ၊ ပန်ကာ စသည်များ))",l:11},
-{jp:"～枚",rd:"～まい",rom:"~mai",en:"counter for flat things",my:"～ရွက်(ပါးလွှာသောအရာ(တံဆိပ်ခေါင်း၊ စာရွက်၊ စာအိတ်၊ ဓါတ်ပုံ၊ အင်္ကျီ စသည်များ))",l:11},
-{jp:"～回",rd:"～かい",rom:"~kai",en:"counter for times; ~ times",my:"～ခေါက်(အကြိမ်အရေ)",l:11},
-{jp:"りんご",rd:"りんご",rom:"ringo",en:"apple",my:"ပန်းသီး",l:11},
-{jp:"みかん",rd:"みかん",rom:"mikan",en:"mandarin orange",my:"လိမ္မော်သီး",l:11},
-{jp:"サンドイッチ",rd:"サンドイッチ",rom:"sandoitchi",en:"sandwich",my:"Sandwich",l:11},
-{jp:"カレー[ライス]",rd:"カレー[ライス]",rom:"karee [raisu]",en:"curry [and rice]",my:"ဂျပန်မဆလာဟင်း",l:11},
-{jp:"アイスクリーム",rd:"アイスクリーム",rom:"aisukuriimu",en:"ice cream",my:"ရေခဲမုန့်",l:11},
-{jp:"切手",rd:"きって",rom:"kitte",en:"stamp",my:"တံဆိပ်ခေါင်း",l:11},
-{jp:"はがき",rd:"はがき",rom:"hagaki",en:"postcard",my:"post card",l:11},
-{jp:"封筒",rd:"ふうとう",rom:"fuutou",en:"envelope",my:"စာအိတ်",l:11},
-{jp:"両親",rd:"りょうしん",rom:"ryoushin",en:"(both) parents",my:"မိဘနှစ်ပါး",l:11},
-{jp:"兄弟",rd:"きょうだい",rom:"kyoudai",en:"brothers and sisters; siblings",my:"မောင်နှမ",l:11},
-{jp:"兄",rd:"あに",rom:"ani",en:"older brother (one's own)",my:"အကို(မိမိ၏အကို)",l:11},
-{jp:"お兄さん",rd:"おにいさん",rom:"oniisan",en:"older brother (someone else's)",my:"အကို(သူတစ်ပါး၏အကို)",l:11},
-{jp:"姉",rd:"あね",rom:"ane",en:"older sister (one's own)",my:"အမ(မိမိ၏အမ)",l:11},
-{jp:"お姉さん",rd:"おねえさん",rom:"oneesan",en:"older sister (someone else's)",my:"အမ(သူတစ်ပါး၏အမ)",l:11},
-{jp:"弟",rd:"おとうと",rom:"otouto",en:"younger brother (one's own)",my:"မောင်၊ ညီ(မိမိ၏မောင်၊ ညီ)",l:11},
-{jp:"弟さん",rd:"おとうとさん",rom:"otoutosan",en:"younger brother (someone else's)",my:"သူတစ်ပါး၏မောင်၊ ညီ",l:11},
-{jp:"妹",rd:"いもうと",rom:"imouto",en:"younger sister (one's own)",my:"ညီမ(မိမိ၏ညီမ)",l:11},
-{jp:"妹さん",rd:"いもうとさん",rom:"imoutosan",en:"younger sister (someone else's)",my:"သူတစ်ပါး၏ညီမ",l:11},
-{jp:"外国",rd:"がいこく",rom:"gaikoku",en:"foreign country",my:"နိုင်ငံခြား",l:11},
-{jp:"留学生",rd:"りゅうがくせい",rom:"ryuugakusei",en:"foreign student",my:"နိုင်ငံခြားပညာတော်သင် ကျောင်းသား",l:11},
-{jp:"～時間",rd:"～じかん",rom:"~jikan",en:"~ hours",my:"～နာရီ(၁ နာရီ)",l:11},
-{jp:"～週間",rd:"～しゅうかん",rom:"~shuukan",en:"~ weeks",my:"～ပတ်(ရက်သတ္တပတ်)",l:11},
-{jp:"～ヶ月",rd:"～げつ",rom:"~getsu",en:"~ months",my:"～လကြာ",l:11},
-{jp:"～年",rd:"～ねん",rom:"~nen",en:"~ years",my:"～နှစ်",l:11},
-{jp:"ぐらい",rd:"ぐらい",rom:"gurai",en:"about; approximately",my:"လောက်(၁ နာရီလောက်)",l:11},
-{jp:"どのぐらい",rd:"どのぐらい",rom:"donogurai",en:"how long; how much",my:"ဘယ်လောက်",l:11},
-{jp:"全部で",rd:"ぜんぶで",rom:"zenbude",en:"in all; altogether",my:"အားလုံး(အရာဝတ္ထု)",l:11},
-{jp:"みんな",rd:"みんな",rom:"minna",en:"everyone; all (people)",my:"အားလုံး(လူ၊ သက်ရှိ)",l:11},
-{jp:"～だけ",rd:"～だけ",rom:"~dake",en:"only ~; just ~",my:"～တည်းဘဲ",l:11},
-{jp:"かしこまりました",rd:"かしこまりました",rom:"kashikomarimashita",en:"Certainly. (polite reply)",my:"ကောင်းပါပြီ",l:11},
-{jp:"いいお天気ですね",rd:"いいおてんきですね",rom:"ii otenki desu ne",en:"Nice weather, isn't it?",my:"ရာသီဥတုကောင်းတယ်နော်",l:11},
-{jp:"おでかけですか",rd:"おでかけですか",rom:"odekake desu ka",en:"Are you going out?",my:"အပြင်သွားမလို့လား",l:11},
-{jp:"ちょっと～まで",rd:"ちょっと～まで",rom:"chotto ~ made",en:"to ~ for a while",my:"ခဏ～အထိ",l:11},
-{jp:"行ってらっしゃい",rd:"いってらっしゃい",rom:"itterasshai",en:"Have a nice day. (seeing someone off)",my:"သွားပါနော်(နှုတ်ဆက်)",l:11},
-{jp:"行ってきます",rd:"いってきます",rom:"ittekimasu",en:"I'm off. (leaving home)",my:"သွားပြီနော်(နှုတ်ဆက်)",l:11},
-{jp:"船便",rd:"ふなびん",rom:"funabin",en:"surface mail (by ship)",my:"ရေကြောင်းဖြင့်ပေးပို့",l:11},
-{jp:"航空便 [エアメール]",rd:"こうくうびん [エアメール]",rom:"koukuubin [eameeru]",en:"airmail",my:"လေကြောင်းဖြင့်ပေးပို့",l:11},
-{jp:"お願いします。",rd:"おねがいします。",rom:"onegaishimasu.",en:"Please. (request)",my:"ကျေးဇူးပြု၍",l:11},
-{jp:"オーストラリア",rd:"オーストラリア",rom:"oosutoraria",en:"Australia",my:"Australia",l:11},
-{jp:"簡単[な]",rd:"かんたん[な]",rom:"kantan [na]",en:"easy; simple",my:"လွယ်သော",l:12},
-{jp:"近い",rd:"ちかい",rom:"chikai",en:"near; close",my:"နီးသော",l:12},
-{jp:"遠い",rd:"とおい",rom:"tooi",en:"far",my:"ဝေးသော",l:12},
-{jp:"速い",rd:"はやい",rom:"hayai",en:"fast; quick",my:"မြန်သော(အရှိန်မြန်သော)",l:12},
-{jp:"遅い",rd:"おそい",rom:"osoi",en:"slow; late",my:"နှေးသော",l:12},
-{jp:"多い[人が～]",rd:"おおい[ひとが～]",rom:"ooi [hito ga ~]",en:"many; a lot (people)",my:"များသော(လူ)",l:12},
-{jp:"少ない[人が～]",rd:"すくない[ひとが～]",rom:"sukunai [hito ga ~]",en:"few; a little (people)",my:"နည်းသော(လူ)",l:12},
-{jp:"暖かい、温かい",rd:"あたたかい、あたたかい",rom:"atatakai, atatakai",en:"warm",my:"နွေးသော",l:12},
-{jp:"涼しい",rd:"すずしい",rom:"suzushii",en:"cool (weather)",my:"အေးမြသော",l:12},
-{jp:"甘い",rd:"あまい",rom:"amai",en:"sweet",my:"ချိုသော",l:12},
-{jp:"辛い",rd:"からい",rom:"karai",en:"spicy; hot",my:"စပ်သော",l:12},
-{jp:"重い",rd:"おもい",rom:"omoi",en:"heavy",my:"လေးသော",l:12},
-{jp:"軽い",rd:"かるい",rom:"karui",en:"light (weight)",my:"ပေါ့သော",l:12},
-{jp:"いい[コーヒーが～]",rd:"いい[コーヒーが～]",rom:"ii [koohii ga ~]",en:"good; nice (coffee)",my:"ကောင်းသော(ကော်ဖီက)",l:12},
-{jp:"季節",rd:"きせつ",rom:"kisetsu",en:"season",my:"ရာသီဥတု",l:12},
-{jp:"春",rd:"はる",rom:"haru",en:"spring",my:"နွေဦးပေါက်",l:12},
-{jp:"夏",rd:"なつ",rom:"natsu",en:"summer",my:"နွေရာသီ",l:12},
-{jp:"秋",rd:"あき",rom:"aki",en:"autumn; fall",my:"ဆောင်းဦးပေါက်",l:12},
-{jp:"冬",rd:"ふゆ",rom:"fuyu",en:"winter",my:"ဆောင်းရာသီ",l:12},
-{jp:"天気",rd:"てんき",rom:"tenki",en:"weather",my:"မိုးလေဝသ၊ ရာသီဥတု",l:12},
-{jp:"雨",rd:"あめ",rom:"ame",en:"rain",my:"မိုး",l:12},
-{jp:"雪",rd:"ゆき",rom:"yuki",en:"snow",my:"နှင်း",l:12},
-{jp:"曇",rd:"くもり",rom:"kumori",en:"cloudy",my:"တိမ်ထူသော",l:12},
-{jp:"ホテル",rd:"ホテル",rom:"hoteru",en:"hotel",my:"ဟိုတယ်",l:12},
-{jp:"空港",rd:"くうこう",rom:"kuukou",en:"airport",my:"လေဆိပ်",l:12},
-{jp:"海",rd:"うみ",rom:"umi",en:"sea; ocean",my:"ပင်လယ်",l:12},
-{jp:"世界",rd:"せかい",rom:"sekai",en:"world",my:"ကမ္ဘာလောက",l:12},
-{jp:"パーティー",rd:"パーティー",rom:"paatii",en:"party",my:"ပါတီပွဲ",l:12},
-{jp:"[お]祭り",rd:"[お]まつり",rom:"[o]matsuri",en:"festival",my:"ပွဲတော်",l:12},
-{jp:"すき焼き",rd:"すきやき",rom:"sukiyaki",en:"sukiyaki (Japanese beef hot pot)",my:"ဂျပန် အမဲသား hot pot",l:12},
-{jp:"刺身",rd:"さしみ",rom:"sashimi",en:"sashimi (raw fish)",my:"ဆာရှိမိ",l:12},
-{jp:"[お]すし",rd:"[お]すし",rom:"[o]sushi",en:"sushi",my:"ဆူရှီ",l:12},
-{jp:"天ぷら",rd:"てんぷら",rom:"tenpura",en:"tempura",my:"ဂျပန်အကြော်",l:12},
-{jp:"豚肉",rd:"ぶたにく",rom:"butaniku",en:"pork",my:"ဝက်သား",l:12},
-{jp:"鶏肉",rd:"とりにく",rom:"toriniku",en:"chicken (meat)",my:"ကြက်သား",l:12},
-{jp:"牛肉",rd:"ぎゅうにく",rom:"gyuuniku",en:"beef",my:"အမဲသား",l:12},
-{jp:"レモン",rd:"レモン",rom:"remon",en:"lemon",my:"သံပုရိုသီး",l:12},
-{jp:"生け花",rd:"いけばな",rom:"ikebana",en:"flower arrangement",my:"ဂျပန်ပန်းအလှထိုးခြင်း",l:12},
-{jp:"紅葉",rd:"もみじ",rom:"momiji",en:"autumn leaves; fall colors",my:"သစ်ရွက်များအရောင် ပြောင်းခြင်း",l:12},
-{jp:"どちら",rd:"どちら",rom:"dochira",en:"which one",my:"ဘယ်ဟာ",l:12},
-{jp:"どちらも",rd:"どちらも",rom:"dochiramo",en:"both; either",my:"နှစ်ခုစလုံး(ဘယ်ဟာမဆို)",l:12},
-{jp:"いちばん",rd:"いちばん",rom:"ichiban",en:"the most; number one",my:"～ဆုံး (အကောင်းဆုံး၊ အများဆုံး)",l:12},
-{jp:"ずっと",rd:"ずっと",rom:"zutto",en:"all the time; very",my:"တောက်လျှောက်၊ အမြဲတမ်း၊ အရမ်း",l:12},
-{jp:"初めて",rd:"はじめて",rom:"hajimete",en:"for the first time",my:"ပထမဆုံး",l:12},
-{jp:"ただいま",rd:"ただいま",rom:"tadaima",en:"I'm home.",my:"ပြန်ရောက်ပါပြီ(နှုတ်ဆက်)",l:12},
-{jp:"お帰りなさい",rd:"おかえりなさい",rom:"okaerinasai",en:"Welcome home.",my:"ပြန်လာပါ(နှုတ်ဆက်)",l:12},
-{jp:"わあ すごい 人ですね",rd:"わあ すごい ひとですね",rom:"waa sugoi hito desu ne",en:"Wow, so many people!",my:"ကြည့်ပါအုံး လူတွေအများကြီးဘဲ",l:12},
-{jp:"疲れました",rd:"つかれました",rom:"tsukaremashita",en:"I got tired.",my:"ပင်ပန်းခဲ့တယ်။",l:12},
-{jp:"祇園祭",rd:"ぎおんまつり",rom:"gionmatsuri",en:"Gion Festival",my:"Gion ပွဲတော်",l:12},
-{jp:"ホンコン",rd:"ホンコン",rom:"honkon",en:"Hong Kong",my:"ဟောင်ကောင်",l:12},
-{jp:"シンガポール",rd:"シンガポール",rom:"shingapooru",en:"Singapore",my:"စင်ကာပူ",l:12},
-{jp:"ABC ストア",rd:"ABC ストア",rom:"ABC sutoa",en:"ABC Store",my:"ABCစတိုးဆိုင်",l:12},
-{jp:"ジャパン",rd:"ジャパン",rom:"japan",en:"Japan (supermarket)",my:"Japanစူပါမားကတ်",l:12},
-{jp:"遊びます",rd:"あそびます",rom:"asobimasu",en:"to play; to have fun",my:"ကစားသည်။",l:13},
-{jp:"泳ぎます",rd:"およぎます",rom:"oyogimasu",en:"to swim",my:"ရေကူးသည်။",l:13},
-{jp:"迎えます",rd:"むかえます",rom:"mukaemasu",en:"to meet; to welcome",my:"ကြိုသည်။ ကြိုဆိုသည်။",l:13},
-{jp:"疲れます",rd:"つかれます",rom:"tsukaremasu",en:"to get tired",my:"ပင်ပန်းသည်။ မောပန်းသည်။",l:13},
-{jp:"結婚します",rd:"けっこんします",rom:"kekkonshimasu",en:"to get married",my:"အိမ်ထောင်ပြုသည်။",l:13},
-{jp:"買い物します",rd:"かいものします",rom:"kaimonoshimasu",en:"to shop; to go shopping",my:"စျေးဝယ်သည်။",l:13},
-{jp:"食事します",rd:"しょくじします",rom:"shokujishimasu",en:"to have a meal; to eat",my:"ထမင်းစားသည်။",l:13},
-{jp:"散歩します",rd:"さんぽします",rom:"sanposhimasu",en:"to take a walk; to stroll",my:"လမ်းလျှောက်သည်",l:13},
-{jp:"[公園を]",rd:"[こうえんを]",rom:"[kouen o]",en:"(the park)",my:"(ပန်းခြံမှာ)။",l:13},
-{jp:"大変[な]",rd:"たいへん[な]",rom:"taihen [na]",en:"hard; tough; awful",my:"ပင်ပန်းသော၊ ခက်ခဲသော",l:13},
-{jp:"欲しい",rd:"ほしい",rom:"hoshii",en:"to want; to desire",my:"လိုချင်သော",l:13},
-{jp:"広い",rd:"ひろい",rom:"hiroi",en:"wide; spacious",my:"ကျယ်သော",l:13},
-{jp:"狭い",rd:"せまい",rom:"semai",en:"narrow",my:"ကျဉ်းသော",l:13},
-{jp:"プール",rd:"プール",rom:"puuru",en:"swimming pool",my:"ရေကူးကန်",l:13},
-{jp:"川",rd:"かわ",rom:"kawa",en:"river",my:"မြစ်ချောင်း",l:13},
-{jp:"美術",rd:"びじゅつ",rom:"bijutsu",en:"art; fine arts",my:"အနုပညာ",l:13},
-{jp:"釣り",rd:"つり",rom:"tsuri",en:"fishing",my:"ငါးမျှားခြင်း",l:13},
-{jp:"スキー",rd:"スキー",rom:"sukii",en:"skiing",my:"နှင်းလျှောစီးခြင်း",l:13},
-{jp:"週末",rd:"しゅうまつ",rom:"shuumatsu",en:"weekend",my:"စနေနှင့်တနင်္ဂနွေ(week end)",l:13},
-{jp:"～ごろ",rd:"～ごろ",rom:"~goro",en:"around (time); about",my:"～လောက်",l:13},
-{jp:"何か",rd:"なにか",rom:"nanika",en:"something",my:"တစ်ခုခု",l:13},
-{jp:"どこか",rd:"どこか",rom:"dokoka",en:"somewhere",my:"တစ်နေရာရာ",l:13},
-{jp:"のどが かわきます",rd:"のどが かわきます",rom:"nodo ga kawakimasu",en:"to be thirsty",my:"အာခေါင်ခြောက်တယ်",l:13},
-{jp:"おなかが すきます",rd:"おなかが すきます",rom:"onaka ga sukimasu",en:"to be hungry; to get hungry",my:"ဗိုက်ဆာတယ်",l:13},
-{jp:"そうしましょう",rd:"そうしましょう",rom:"sou shimashou",en:"Let's do that.",my:"အဲဒီလိုလုပ်ရအောင်",l:13},
-{jp:"ご注文は？",rd:"ごちゅうもんは？",rom:"gochuumon wa?",en:"What would you like to order?",my:"ဘာစားမှာလဲ(စားသောက်ဆိုင်တွင်)",l:13},
-{jp:"定食",rd:"ていしょく",rom:"teishoku",en:"set meal; set menu",my:"သတ်မှတ်ထားသောအစား အစာ (Set menu)",l:13},
-{jp:"牛どん",rd:"ぎゅうどん",rom:"gyuudon",en:"beef bowl (beef over rice)",my:"အမဲသားဟင်းနှင့်ထမင်း",l:13},
-{jp:"[少々] お待ちください",rd:"[しょうしょう] おまちください",rom:"[shoushou] omachikudasai",en:"Please wait a moment.",my:"ခဏစောင့်ပါ",l:13},
-{jp:"別々に",rd:"べつべつに",rom:"betsubetsuni",en:"separately",my:"သီးခြားစီ (ငွေရှင်းသည့်အချိန်တွင် အသုံးများ)",l:13},
-{jp:"アキックス",rd:"アキックス",rom:"akikkusu",en:"Akikku (company name)",my:"あきっくす ကုမ္ပဏီ",l:13},
-{jp:"おはようテレビ",rd:"おはようテレビ",rom:"ohayou terebi",en:"Ohayo TV (program name)",my:"ohayoတီဗီအစီအစဉ်",l:13},
-{jp:"付けます",rd:"つけます",rom:"tsukemasu",en:"to turn on (light, air conditioner, TV)",my:"မီးဖွင့်၊ အဲယားကွန်း၊ TV ဖွင့်သည်။",l:14},
-{jp:"消します",rd:"けします",rom:"keshimasu",en:"to turn off (light, air conditioner, TV)",my:"မီးပိတ်၊ အဲယားကွန်း၊ TV ပိတ်သည်။",l:14},
-{jp:"開けます",rd:"あけます",rom:"akemasu",en:"to open (a door)",my:"တံခါးဖွင့်သည်။",l:14},
-{jp:"閉めます",rd:"しめます",rom:"shimemasu",en:"to close (a door)",my:"တံခါးပိတ်သည်။",l:14},
-{jp:"急ぎます",rd:"いそぎます",rom:"isogimasu",en:"to hurry",my:"အလျင်လိုသည်။",l:14},
-{jp:"待ちます",rd:"まちます",rom:"machimasu",en:"to wait",my:"စောင့်သည်။",l:14},
-{jp:"持ちます",rd:"もちます",rom:"mochimasu",en:"to hold; to carry",my:"ကိုင်သည်။ ယူထားသည်။",l:14},
-{jp:"取ります",rd:"とります",rom:"torimasu",en:"to take; to pick up",my:"ယူသည်။ လွှမ်းယူသည်။",l:14},
-{jp:"手伝います",rd:"てつだいます",rom:"tetsudaimasu",en:"to help",my:"ကူညီသည်။",l:14},
-{jp:"呼びます",rd:"よびます",rom:"yobimasu",en:"to call (out to)",my:"ခေါ်သည်။ အော်ခေါ်သည်။",l:14},
-{jp:"話します",rd:"はなします",rom:"hanashimasu",en:"to speak; to talk",my:"ပြောသည်။",l:14},
-{jp:"使います",rd:"つかいます",rom:"tsukaimasu",en:"to use",my:"အသုံးပြုသည်။",l:14},
-{jp:"止めます",rd:"とめます",rom:"tomemasu",en:"to stop",my:"ရပ်သည်။",l:14},
-{jp:"見せます",rd:"みせます",rom:"misemasu",en:"to show",my:"ပြသည်။",l:14},
-{jp:"教えます[住所を～]",rd:"おしえます[じゅうしょを～]",rom:"oshiemasu [juusho o ~]",en:"to tell; to teach (an address)",my:"ပြောပြသည်(လိပ်စာကို)",l:14},
-{jp:"座ります",rd:"すわります",rom:"suwarimasu",en:"to sit down",my:"ထိုင်သည်",l:14},
-{jp:"立ちます",rd:"たちます",rom:"tachimasu",en:"to stand up",my:"မတ်တပ်ရပ်သည်",l:14},
-{jp:"入ります",rd:"はいります",rom:"hairimasu",en:"to enter; to go in",my:"ဝင်သည်",l:14},
-{jp:"[喫茶店に～]",rd:"[きっさてんに～]",rom:"[kissaten ni ~]",en:"(to a coffee shop)",my:"(လက်ဖက်ရည်ဆိုင်သို့)",l:14},
-{jp:"出ます",rd:"でます",rom:"demasu",en:"to go out; to leave",my:"ထွက်သည်",l:14},
-{jp:"[喫茶店を]",rd:"[きっさてんを]",rom:"[kissaten o]",en:"(from a coffee shop)",my:"(လက်ဖက်ရည်ဆိုင်မှ)",l:14},
-{jp:"降ります[雨が～]",rd:"ふります[あめが～]",rom:"furimasu [ame ga ~]",en:"to fall (rain)",my:"ရွာသည်(မိုး)",l:14},
-{jp:"コピーします",rd:"コピーします",rom:"kopiishimasu",en:"to copy; to photocopy",my:"မိတ္တူကူးသည်။",l:14},
-{jp:"電気",rd:"でんき",rom:"denki",en:"electricity",my:"လျှပ်စစ်",l:14},
-{jp:"エアコン",rd:"エアコン",rom:"eakon",en:"air conditioner",my:"အဲယားကွန်း",l:14},
-{jp:"パスポート",rd:"パスポート",rom:"pasupooto",en:"passport",my:"ပတ်စ်ပို့",l:14},
-{jp:"名前",rd:"なまえ",rom:"namae",en:"name",my:"နာမည်",l:14},
-{jp:"住所",rd:"じゅうしょ",rom:"juusho",en:"address",my:"လိပ်စာ",l:14},
-{jp:"地図",rd:"ちず",rom:"chizu",en:"map",my:"မြေပုံ",l:14},
-{jp:"塩",rd:"しお",rom:"shio",en:"salt",my:"ဆား",l:14},
-{jp:"砂糖",rd:"さとう",rom:"satou",en:"sugar",my:"သကြား",l:14},
-{jp:"問題",rd:"もんだい",rom:"mondai",en:"question; problem",my:"မေးခွန်း",l:14},
-{jp:"答え",rd:"こたえ",rom:"kotae",en:"answer",my:"အဖြေ",l:14},
-{jp:"読み方",rd:"よみかた",rom:"yomikata",en:"how to read",my:"ဖတ်နည်း",l:14},
-{jp:"～方",rd:"～かた",rom:"~kata",en:"how to ~; way of ~",my:"～နည်း",l:14},
-{jp:"まっすぐ",rd:"まっすぐ",rom:"massugu",en:"straight ahead",my:"တည့်တည့်",l:14},
-{jp:"ゆっくり",rd:"ゆっくり",rom:"yukkuri",en:"slowly",my:"ဖြေးဖြေး",l:14},
-{jp:"すぐ",rd:"すぐ",rom:"sugu",en:"immediately; right away",my:"ချက်ချင်း",l:14},
-{jp:"また",rd:"また",rom:"mata",en:"again; also",my:"နောက်မှ",l:14},
-{jp:"後で",rd:"あとで",rom:"atode",en:"later; afterwards",my:"ပြီးမှ",l:14},
-{jp:"もう少し",rd:"もうすこし",rom:"mousukoshi",en:"a little more",my:"အနည်းငယ်ထပ်ပြီး",l:14},
-{jp:"もう～",rd:"もう～",rom:"mou ~",en:"~ more; another ~",my:"～ထပ်ပြီး",l:14},
-{jp:"さあ",rd:"さあ",rom:"saa",en:"Come on!; Well!",my:"ကဲ---",l:14},
-{jp:"あれ？",rd:"あれ？",rom:"are?",en:"Huh?; What?",my:"ဟောတော့",l:14},
-{jp:"信号を右へ曲がってください",rd:"しんごうをみぎへまがってください",rom:"shingou o migi e magatte kudasai",en:"Please turn right at the traffic light.",my:"မီးပိုင့်ကို ညာဘက်ကွေ့ပါ။",l:14},
-{jp:"これでお願いします",rd:"これでおねがいします",rom:"kore de onegaishimasu",en:"I'll take this. (when paying)",my:"ဒါနဲ့ယူပါ။(ပိုက်ဆံပေးချေသာအခါ)",l:14},
-{jp:"お釣り",rd:"おつり",rom:"otsuri",en:"change (money back)",my:"ပိုက်ဆံအကြွေ၊ ပြန်အမ်းငွေ",l:14},
-{jp:"みどり町",rd:"みどりちょう",rom:"midori chou",en:"Midori Town",my:"Midori မြို့",l:14},
-{jp:"置きます",rd:"おきます",rom:"okimasu",en:"to put; to place",my:"ထားသည်။",l:15},
-{jp:"作ります、造ります",rd:"つくります、つくります",rom:"tsukurimasu, tsukurimasu",en:"to make; to produce; to build",my:"ပြုလုပ်သည်။ ထုတ်လုပ်သည်။",l:15},
-{jp:"売ります",rd:"うります",rom:"urimasu",en:"to sell",my:"ရောင်းသည်။",l:15},
-{jp:"知ります",rd:"しります",rom:"shirimasu",en:"to know; to learn",my:"သိသည်။",l:15},
-{jp:"住みます",rd:"すみます",rom:"sumimasu",en:"to live; to reside",my:"နေသည်။ နေထိုင်သည်။",l:15},
-{jp:"研究します",rd:"けんきゅうします",rom:"kenkyuushimasu",en:"to research; to study",my:"သုတေသနပြုသည်။",l:15},
-{jp:"資料",rd:"しりょう",rom:"shiryou",en:"materials; documents; data",my:"စာရွက်စာတမ်း",l:15},
-{jp:"カタログ",rd:"カタログ",rom:"katarogu",en:"catalog",my:"ကတ်တလောက်",l:15},
-{jp:"時刻表",rd:"じこくひょう",rom:"jikokuhyou",en:"timetable",my:"အချိန်ဇယား",l:15},
-{jp:"服",rd:"ふく",rom:"fuku",en:"clothes; clothing",my:"အင်္ကျီ",l:15},
-{jp:"製品",rd:"せいひん",rom:"seihin",en:"product; manufactured goods",my:"ပစ္စည်း",l:15},
-{jp:"ソフト",rd:"ソフト",rom:"sofuto",en:"software",my:"softwear",l:15},
-{jp:"電子辞書",rd:"でんしじしょ",rom:"denshijisho",en:"electronic dictionary",my:"လျှပ်စစ်အဘိဓာန်",l:15},
-{jp:"経済",rd:"けいざい",rom:"keizai",en:"economy",my:"စီးပွားရေး",l:15},
-{jp:"市役所",rd:"しやくしょ",rom:"shiyakusho",en:"city hall; municipal office",my:"မြို့တော်ခန်းမ/စည်ပင်သာယာရုံး",l:15},
-{jp:"高校",rd:"こうこう",rom:"koukou",en:"high school",my:"အထက်တန်းကျောင်း",l:15},
-{jp:"歯医者",rd:"はいしゃ",rom:"haisha",en:"dentist",my:"သွားဆရာဝန်",l:15},
-{jp:"独身",rd:"どくしん",rom:"dokushin",en:"single; unmarried",my:"လူပျို၊ လူလွတ်၊ အပျို",l:15},
-{jp:"すみません",rd:"すみません",rom:"sumimasen",en:"Excuse me.; I'm sorry.",my:"စိတ်မကောင်းပါဘူး",l:15},
-{jp:"皆さん",rd:"みなさん",rom:"minasan",en:"everyone; ladies and gentlemen",my:"အားလုံး",l:15},
-{jp:"思い出します",rd:"おもいだします",rom:"omoidashimasu",en:"to remember; to recall",my:"သတိရသည်/အမှတ်ရသည်။",l:15},
-{jp:"いらっしゃいます",rd:"いらっしゃいます",rom:"irasshaimasu",en:"to be (polite); to come/go (polite)",my:"ရှိသည်(ယဉ်ကျေးသောအသုံး)",l:15},
-{jp:"日本橋",rd:"にほんばし",rom:"nihonbashi",en:"Nihonbashi (Osaka shopping district)",my:"ဂျပန်တံတား (အိုဆာကာမှ လူစည်ကားသောနေရာ)",l:15},
-{jp:"みんなの インタビュー",rd:"みんなの インタビュー",rom:"minna no intabyuu",en:"Minna no Interview (TV program)",my:"Minna no Interview တီဗီအစီအစဉ်",l:15},
-{jp:"乗ります[電車に～]",rd:"のります[でんしゃに～]",rom:"norimasu [densha ni ~]",en:"to get on (a train)",my:"စီးသည်။ (ရထားကို)",l:16},
-{jp:"降ります[電車を～]",rd:"おります[でんしゃを～]",rom:"orimasu [densha o ~]",en:"to get off (a train)",my:"ဆင်းသည်။ (ရထားမှ)",l:16},
-{jp:"乗り換えます",rd:"のりかえます",rom:"norikaemasu",en:"to change (trains)",my:"ပြောင်းစီးသည်။ (ကား၊ ရထား၊ ယာဉ်)",l:16},
-{jp:"あびます",rd:"あびます",rom:"abimasu",en:"to take a shower",my:"ရေချိုးသည်။",l:16},
-{jp:"入れます",rd:"いれます",rom:"iremasu",en:"to put in",my:"ထည့်သည်။ သွင်းသည်။",l:16},
-{jp:"出します",rd:"だします",rom:"dashimasu",en:"to take out; to send (a letter, a report)",my:"ထုတ်သည်။ တင်သည်(စာ၊ report)",l:16},
-{jp:"下ろします[お金を]",rd:"おろします[おかねを]",rom:"oroshimasu [o-kane o]",en:"to withdraw (money)",my:"ထုတ်သည်(ပိုက်ဆံ)",l:16},
-{jp:"入ります[大学に～]",rd:"はいります[だいがくに～]",rom:"hairimasu [daigaku ni ~]",en:"to enter (a university)",my:"ဝင်သည်(တက္ကသိုလ်သို့)။",l:16},
-{jp:"出ます[大学を～]",rd:"でます[だいがくを～]",rom:"demasu [daigaku o ~]",en:"to leave (a university)",my:"ထွက်သည်(တက္ကသိုလ်မှဘဲရသည်)။",l:16},
-{jp:"押します",rd:"おします",rom:"oshimasu",en:"to push; to press",my:"တွန်းသည်၊ ဖိသည်။",l:16},
-{jp:"飲みます",rd:"のみます",rom:"nomimasu",en:"to drink",my:"သောက်သည်။",l:16},
-{jp:"始めます",rd:"はじめます",rom:"hajimemasu",en:"to begin; to start",my:"စတင်သည်။",l:16},
-{jp:"見学します",rd:"けんがくします",rom:"kengaku shimasu",en:"to visit (for study)",my:"လေ့လာသည်။",l:16},
-{jp:"電話します",rd:"でんわします",rom:"denwa shimasu",en:"to telephone; to make a phone call",my:"ဖုန်းဆက်သည်။",l:16},
-{jp:"若い",rd:"わかい",rom:"wakai",en:"young",my:"ငယ်သော",l:16},
-{jp:"長い",rd:"ながい",rom:"nagai",en:"long",my:"ရှည်သော",l:16},
-{jp:"短い",rd:"みじかい",rom:"mijikai",en:"short",my:"တိုသော",l:16},
-{jp:"明るい",rd:"あかるい",rom:"akarui",en:"bright; light",my:"လင်းသော",l:16},
-{jp:"暗い",rd:"くらい",rom:"kurai",en:"dark",my:"မှောင်သော",l:16},
-{jp:"体",rd:"からだ",rom:"karada",en:"body",my:"ခန္ဓာကိုယ်",l:16},
-{jp:"頭",rd:"あたま",rom:"atama",en:"head",my:"ခေါင်း၊ ဦးခေါင်း",l:16},
-{jp:"髪",rd:"かみ",rom:"kami",en:"hair",my:"ဆံပင်",l:16},
-{jp:"顔",rd:"かお",rom:"kao",en:"face",my:"မျက်နှာ",l:16},
-{jp:"目",rd:"め",rom:"me",en:"eye",my:"မျက်လုံး",l:16},
-{jp:"耳",rd:"みみ",rom:"mimi",en:"ear",my:"နားရွက်",l:16},
-{jp:"鼻",rd:"はな",rom:"hana",en:"nose",my:"နှာခေါင်း",l:16},
-{jp:"口",rd:"くち",rom:"kuchi",en:"mouth",my:"ပါးစပ်",l:16},
-{jp:"歯",rd:"は",rom:"ha",en:"tooth",my:"သွား",l:16},
-{jp:"おなか",rd:"おなか",rom:"onaka",en:"stomach; belly",my:"ဗိုက်",l:16},
-{jp:"足",rd:"あし",rom:"ashi",en:"leg; foot",my:"ခြေထောက်",l:16},
-{jp:"背",rd:"せ",rom:"se",en:"back; height",my:"အရပ် (ခန္ဓာကိုယ်)",l:16},
-{jp:"サービス",rd:"サービス",rom:"saabisu",en:"service",my:"ဝန်ဆောင်မှု",l:16},
-{jp:"ジョギング",rd:"ジョギング",rom:"jogingu",en:"jogging",my:"အပြေးလေ့ကျင့်ခန်း",l:16},
-{jp:"シャワー",rd:"シャワー",rom:"shawaa",en:"shower",my:"ရေချိုးသောရေပန်း",l:16},
-{jp:"緑",rd:"みどり",rom:"midori",en:"green",my:"အစိမ်းရောင်",l:16},
-{jp:"[お]寺",rd:"[お]てら",rom:"[o] tera",en:"temple",my:"ဂျပန်ဘုရားကျောင်း",l:16},
-{jp:"神社",rd:"じんじゃ",rom:"jinja",en:"Shinto shrine",my:"ဂျပန်နတ်ဘုရားကျောင်း",l:16},
-{jp:"～番",rd:"～ばん",rom:"~ban",en:"number ~",my:"-နံပါတ်",l:16},
-{jp:"どうやって",rd:"どうやって",rom:"dou yatte",en:"how; in what way",my:"ဘယ်လိုလုပ်ပြီး",l:16},
-{jp:"どの～",rd:"どの～",rom:"dono ~",en:"which ~",my:"ဘယ်ဟာ",l:16},
-{jp:"どれ",rd:"どれ",rom:"dore",en:"which one",my:"ဘယ်တစ်ခု",l:16},
-{jp:"すごいですね",rd:"すごいですね",rom:"sugoi desu ne",en:"That's great.",my:"တော်လိုက်တာ",l:16},
-{jp:"[いいえ、]まだまだです",rd:"[いいえ、]まだまだです",rom:"[iie,] mada mada desu",en:"No, not that good yet.",my:"ဟင့်အင်း အဲဒီလောက်မဟုတ်ပါဘူး",l:16},
-{jp:"お引き出しですか",rd:"おひきだしですか",rom:"o-hikidashi desu ka",en:"Do you want to withdraw money?",my:"ငွေထုတ်မှာလား",l:16},
-{jp:"まず",rd:"まず",rom:"mazu",en:"first of all; first",my:"အရင်ဆုံး",l:16},
-{jp:"次に",rd:"つぎに",rom:"tsugi ni",en:"next; then",my:"နောက်ပြီး",l:16},
-{jp:"キャッシュカード",rd:"キャッシュカード",rom:"kyasshu kaado",en:"cash card",my:"ငွေထုတ်ကဒ်",l:16},
-{jp:"暗証番号",rd:"あんしょうばんごう",rom:"anshou bangou",en:"PIN number",my:"လျှို့ဝှက်နံပါတ်",l:16},
-{jp:"金額",rd:"きんがく",rom:"kingaku",en:"amount of money",my:"ငွေပမာဏ",l:16},
-{jp:"確認",rd:"かくにん",rom:"kakunin",en:"confirmation; checking",my:"အတည်ပြုခြင်း၊ စစ်ဆေးခြင်း",l:16},
-{jp:"ボタン",rd:"ボタン",rom:"botan",en:"button",my:"ခလုတ် button",l:16},
-{jp:"JR",rd:"JR",rom:"jei aaru",en:"Japan Railways",my:"ဂျပန်ရထားလိုင်း Japan Railways",l:16},
-{jp:"雪まつり",rd:"ゆきまつり",rom:"yuki matsuri",en:"snow festival",my:"နှင်းပွဲတော်",l:16},
-{jp:"バンドン",rd:"バンドン",rom:"bandon",en:"Bandung (in Indonesia)",my:"Bandung (in Indonesia)",l:16},
-{jp:"フランケン",rd:"フランケン",rom:"furanken",en:"Franken (in Germany)",my:"Franken (in Germany)",l:16},
-{jp:"ベラクルス",rd:"ベラクルス",rom:"berakurusu",en:"Veracruz (in Mexico)",my:"Veracruz (in Mexico)",l:16},
-{jp:"梅田",rd:"うめだ",rom:"umeda",en:"Umeda",my:"Umedaမြို့",l:16},
-{jp:"大学前",rd:"だいがくまえ",rom:"daigakumae",en:"in front of the university",my:"တက္ကသိုလ်ရှေ့(ကားမှတ်တိုင်)",l:16},
-{jp:"覚えます",rd:"おぼえます",rom:"oboemasu",en:"to remember; to memorize",my:"မှတ်မိသည်။",l:17},
-{jp:"忘れます",rd:"わすれます",rom:"wasuremasu",en:"to forget",my:"မေ့သည်။",l:17},
-{jp:"なくします",rd:"なくします",rom:"nakushimasu",en:"to lose",my:"ပျောက်ပစ်သည်။",l:17},
-{jp:"払います",rd:"はらいます",rom:"haraimasu",en:"to pay",my:"ပေးချေသည်။",l:17},
-{jp:"返します",rd:"かえします",rom:"kaeshimasu",en:"to return; to give back",my:"ပြန်ပေးသည်။",l:17},
-{jp:"出かけます",rd:"でかけます",rom:"dekakemasu",en:"to go out",my:"အပြင်ထွက်သည်။",l:17},
-{jp:"脱ぎます",rd:"ぬぎます",rom:"nugimasu",en:"to take off (clothes)",my:"အင်္ကျီချွတ်သည်။",l:17},
-{jp:"持っていきます",rd:"もっていきます",rom:"motte ikimasu",en:"to take (something) away",my:"ယူသွားသည်။",l:17},
-{jp:"持ってきます",rd:"もってきます",rom:"motte kimasu",en:"to bring",my:"ယူလာသည်။",l:17},
-{jp:"心配します",rd:"しんぱいします",rom:"shinpai shimasu",en:"to worry",my:"စိတ်ပူသည်။",l:17},
-{jp:"残業します",rd:"ざんぎょうします",rom:"zangyou shimasu",en:"to work overtime",my:"အချိန်ပိုလုပ်သည်။",l:17},
-{jp:"出張します",rd:"しゅっちょうします",rom:"shutchou shimasu",en:"to go on a business trip",my:"အလုပ်ခရီးသွားသည်",l:17},
-{jp:"飲みます [薬を]",rd:"のみます [くすりを]",rom:"nomimasu [kusuri o]",en:"to take (medicine)",my:"သောက်သည်(ဆေးကို)။",l:17},
-{jp:"入ります [おふろに～]",rd:"はいります [おふろに～]",rom:"hairimasu [ofuro ni ~]",en:"to take a bath",my:"ဝင်သည် (ရေချိုးကန်သို့)။",l:17},
-{jp:"2, 3日",rd:"に、さんにち",rom:"ni, san nichi",en:"2, 3 days",my:"၂ ရက် ၃ ရက်",l:17},
-{jp:"～までに",rd:"～までに",rom:"~ made ni",en:"by ~",my:"～အထိ",l:17},
-{jp:"ですから",rd:"ですから",rom:"desu kara",en:"so; therefore",my:"ဖြစ်လို့",l:17},
-{jp:"どうしましたか",rd:"どうしましたか",rom:"doushimashita ka",en:"What's the matter?",my:"ဘယ်လိုဖြစ်သလဲ",l:17},
-{jp:"のど",rd:"のど",rom:"nodo",en:"throat",my:"လည်ချောင်း",l:17},
-{jp:"[～が] いたいです",rd:"[～が] いたいです",rom:"[~ ga] itai desu",en:"[~] hurts; is painful",my:"နာတယ်။",l:17},
-{jp:"かぜ",rd:"かぜ",rom:"kaze",en:"a cold",my:"အအေးမိခြင်း",l:17},
-{jp:"それから",rd:"それから",rom:"sore kara",en:"and then; after that",my:"နောက်ပြီး",l:17},
-{jp:"お大事に",rd:"おだいじに",rom:"odaiji ni",en:"Take care (of yourself)",my:"ဂရုစိုက်ပါ (ကျန်းမာရေးကို)။",l:17},
-{jp:"大切 [な]",rd:"たいせつ [な]",rom:"taisetsu [na]",en:"precious; important",my:"တန်ဖိုးထားသော",l:17},
-{jp:"大丈夫 [な]",rd:"だいじょうぶ [な]",rom:"daijoubu [na]",en:"all right; OK",my:"ကိစ္စမရှိသော",l:17},
-{jp:"危ない [な]",rd:"あぶない [な]",rom:"abunai [na]",en:"dangerous",my:"အန္တရာယ်များသော",l:17},
-{jp:"禁煙",rd:"きんえん",rom:"kin'en",en:"No smoking",my:"ဆေးလိပ်မသောက်ရ",l:17},
-{jp:"[健康] 保険書",rd:"[けんこう] ほけんしょ",rom:"[kenkou] hokensho",en:"(health) insurance card",my:"ကျန်းမာရေးအာမခံကဒ်ပြား",l:17},
-{jp:"熱",rd:"ねつ",rom:"netsu",en:"fever",my:"ကိုယ်ပူခြင်း၊ အဖျားရှိခြင်း",l:17},
-{jp:"病気",rd:"びょうき",rom:"byouki",en:"illness; sickness",my:"ရောဂါ",l:17},
-{jp:"薬",rd:"くすり",rom:"kusuri",en:"medicine",my:"ဆေး",l:17},
-{jp:"[お] ふろ",rd:"[お] ふろ",rom:"[o] furo",en:"bath",my:"ရေစိမ်/ချိုးကန်",l:17},
-{jp:"上着",rd:"うえちゃく",rom:"uwagi",en:"coat; jacket",my:"အနွေးထည်/အပေါ်ထပ်အင်္ကျီ",l:17},
-{jp:"下着",rd:"したぎ",rom:"shitagi",en:"underwear",my:"အတွင်းခံ",l:17},
-{jp:"できます",rd:"できます",rom:"dekimasu",en:"can do; be able to do",my:"တတ်သည်။ လုပ်တတ်သည်။ နိုင်သည်။ လုပ်နိုင်သည်။",l:18},
-{jp:"洗います",rd:"あらいます",rom:"araimasu",en:"wash",my:"လက်ဆေးသည်။ အဝတ်လျှော်သည်။",l:18},
-{jp:"弾きます",rd:"ひきます",rom:"hikimasu",en:"play (a musical instrument)",my:"ပီယာနိုတီးသည်။",l:18},
-{jp:"歌います",rd:"うたいます",rom:"utaimasu",en:"sing",my:"သီချင်းဆိုသည်။",l:18},
-{jp:"集めます",rd:"あつめます",rom:"atsumemasu",en:"collect; gather",my:"စုဆောင်းသည်။",l:18},
-{jp:"捨てます",rd:"すてます",rom:"sutemasu",en:"throw away",my:"စွန့်ပစ်သည်။",l:18},
-{jp:"換えます",rd:"かえます",rom:"kaemasu",en:"change; exchange",my:"လဲလှယ်သည်။",l:18},
-{jp:"運転します",rd:"うんてんします",rom:"untenshimasu",en:"drive",my:"ကားမောင်းသည်။",l:18},
-{jp:"予約します",rd:"よやくします",rom:"yoyakushimasu",en:"reserve; book",my:"bookingလုပ်သည်။",l:18},
-{jp:"ピアノ",rd:"ピアノ",rom:"piano",en:"piano",my:"ပီယာနို",l:18},
-{jp:"メートル",rd:"メートル",rom:"meetoru",en:"metre; meter",my:"မီတာ(အကွာအဝေးကိုတိုင်းတာသောမီတာ)",l:18},
-{jp:"現金",rd:"げんきん",rom:"genkin",en:"cash",my:"ငွေသား၊ လက်ငင်းငွေပေးချေခြင်း",l:18},
-{jp:"趣味",rd:"しゅみ",rom:"shumi",en:"hobby",my:"ဝါသနာ",l:18},
-{jp:"日記",rd:"にっき",rom:"nikki",en:"diary",my:"နေ့စဉ်မှတ်တမ်း",l:18},
-{jp:"お祈り",rd:"おいのり",rom:"oinori",en:"prayer",my:"ဆုတောင်းခြင်း",l:18},
-{jp:"課長",rd:"かちょう",rom:"kachou",en:"section chief; section manager",my:"ဌာနခွဲမှူး",l:18},
-{jp:"部長",rd:"ぶちょう",rom:"buchou",en:"department chief; department manager",my:"ဌာနမှူး",l:18},
-{jp:"社長",rd:"しゃちょう",rom:"shachou",en:"company president; president (of a company)",my:"သူဌေး",l:18},
-{jp:"動物",rd:"どうぶつ",rom:"doubutsu",en:"animal",my:"တိရစ္ဆာန်",l:18},
-{jp:"馬",rd:"うま",rom:"uma",en:"horse",my:"မြင်း",l:18},
-{jp:"インターネット",rd:"インターネット",rom:"intaanetto",en:"Internet",my:"အင်တာနက်",l:18},
-{jp:"特に",rd:"とくに",rom:"tokuni",en:"especially; particularly",my:"အထူးသဖြင့်",l:18},
-{jp:"へえ、",rd:"へえ、",rom:"hee,",en:"Really?",my:"ဟယ်",l:18},
-{jp:"それはおもしろいですね",rd:"それはおもしろいですね",rom:"sore wa omoshiroi desu ne",en:"That's interesting, isn't it?",my:"အဲဒါစိတ်ဝင်စားစရာပဲနော်",l:18},
-{jp:"なかなか",rd:"なかなか",rom:"nakanaka",en:"quite; fairly",my:"တော်တော်နဲ့---",l:18},
-{jp:"ほんとうですか",rd:"ほんとうですか",rom:"hontou desu ka",en:"Is that true?; Really?",my:"တကယ်လားဟင်",l:18},
-{jp:"ぜひ",rd:"ぜひ",rom:"zehi",en:"by all means; certainly",my:"ဆက်ဆက်။ ကိန်းသေ",l:18},
-{jp:"故郷",rd:"ふるさと",rom:"furusato",en:"hometown",my:"မွေးရပ်မြေ",l:18},
-{jp:"ビートルズ",rd:"ビートルズ",rom:"biitoruzu",en:"The Beatles",my:"The Beatles",l:18},
-{jp:"秋葉原",rd:"あきはばら",rom:"akihabara",en:"Akihabara",my:"Akihabara တိုကျိုမှာလူစည်ကားသောနေရာတစ်ခု",l:18},
-{jp:"登ります",rd:"のぼります",rom:"noborimasu",en:"to climb",my:"အမြင့်သို့တက်သည်။",l:19},
-{jp:"泊まります",rd:"とまります",rom:"tomarimasu",en:"to stay overnight",my:"ညအိပ်တည်းခိုသည်",l:19},
-{jp:"[ホテルに]",rd:"[ホテルに]",rom:"[hoteru ni]",en:"(at a hotel)",my:"(ဟိုတယ်တွင်)။",l:19},
-{jp:"掃除します",rd:"そうじします",rom:"souji shimasu",en:"to clean",my:"သန့်ရှင်းရေးလုပ်သည်။",l:19},
-{jp:"洗濯します",rd:"せんたくします",rom:"sentaku shimasu",en:"to wash clothes",my:"အဝတ်လျှော်သည်။",l:19},
-{jp:"なります",rd:"なります",rom:"narimasu",en:"to become",my:"ဖြစ်လာသည်။",l:19},
-{jp:"眠い",rd:"ねむい",rom:"nemui",en:"sleepy",my:"အိပ်ချင်သော",l:19},
-{jp:"強い",rd:"つよい",rom:"tsuyoi",en:"strong",my:"အားသန်သော",l:19},
-{jp:"弱い",rd:"よわい",rom:"yowai",en:"weak",my:"အားလျှော့သော/အားနည်းသော",l:19},
-{jp:"練習",rd:"れんしゅう",rom:"renshuu",en:"practice",my:"လေ့ကျင့်ခြင်း",l:19},
-{jp:"ゴルフ",rd:"ゴルフ",rom:"gorufu",en:"golf",my:"Golf",l:19},
-{jp:"相撲",rd:"すもう",rom:"sumou",en:"sumo",my:"ဂျပန်နပန်းအားကစား",l:19},
-{jp:"お茶",rd:"おちゃ",rom:"ocha",en:"tea",my:"ဂျပန်ရေနွေးကြမ်း green tea",l:19},
-{jp:"日",rd:"にち",rom:"nichi",en:"day",my:"နေ့ရက်",l:19},
-{jp:"調子",rd:"ちょうし",rom:"choushi",en:"condition",my:"အခြေအနေ",l:19},
-{jp:"一度",rd:"いちど",rom:"ichido",en:"once",my:"တစ်ကြိမ်၊ တစ်ခေါက်",l:19},
-{jp:"一度も",rd:"いちども",rom:"ichido mo",en:"not even once",my:"တစ်ကြိမ်မျှ၊ တစ်ခေါက်မျှ",l:19},
-{jp:"だんだん",rd:"だんだん",rom:"dandan",en:"gradually",my:"တဖြေးဖြေးနဲ့",l:19},
-{jp:"もうすぐ",rd:"もうすぐ",rom:"mou sugu",en:"soon",my:"အခုချက်ခြင်း",l:19},
-{jp:"おかげさまで",rd:"おかげさまで",rom:"okagesama de",en:"thanks to you",my:"ကျေးဇူးတော်ကြောင့်/ပို့သတဲ့မေတ္တာကြောင့်",l:19},
-{jp:"でも",rd:"でも",rom:"demo",en:"but",my:"ဒါပေမဲ့",l:19},
-{jp:"乾杯",rd:"かんぱい",rom:"kanpai",en:"cheers",my:"Cheers",l:19},
-{jp:"ダイエット",rd:"ダイエット",rom:"daietto",en:"diet",my:"ဝိတ်ချခြင်း",l:19},
-{jp:"無理[な]",rd:"むり[な]",rom:"muri [na]",en:"impossible; unreasonable",my:"မဖြစ်နိုင်သော(အလွန်အကျွံဖြစ်သော)",l:19},
-{jp:"体にいい",rd:"からだにいい",rom:"karada ni ii",en:"good for one's health",my:"ခန္ဓာကိုယ်အတွက်ကောင်းသော",l:19},
-{jp:"東京スカイツリー",rd:"とうきょうスカイツリー",rom:"toukyou sukai tsurii",en:"Tokyo Skytree",my:"Tokyo Sky Tree",l:19},
-{jp:"葛飾北斎",rd:"かつしかほくさい",rom:"katsushika hokusai",en:"Katsushika Hokusai",my:"(Edoခေတ်တွင် ကျော်ကြားခဲ့သော ပန်းချီဆရာ)",l:19},
-{jp:"要ります[ビザが～]",rd:"いります[ビザが～]",rom:"irimasu [biza ga ~]",en:"to need",my:"လိုအပ်သည်(ဗီဇာ)",l:20},
-{jp:"よかったら",rd:"よかったら",rom:"yokattara",en:"if you like; if it's convenient",my:"ကြိုက်မယ်ဆိုရင်၊ အဆင်ပြေမယ်ဆိုရင်",l:20},
-{jp:"調べます",rd:"しらべます",rom:"shirabemasu",en:"to look up; to investigate",my:"စုံစမ်းသည်။",l:20},
-{jp:"修理します",rd:"しゅうりします",rom:"shuuri shimasu",en:"to repair",my:"ပြုပြင်သည်။",l:20},
-{jp:"いろいろ",rd:"いろいろ",rom:"iroiro",en:"various; all kinds",my:"အမျိုးမျိုး",l:20},
-{jp:"僕",rd:"ぼく",rom:"boku",en:"I; me (used by men)",my:"ကျွန်တော်",l:20},
-{jp:"君",rd:"きみ",rom:"kimi",en:"you",my:"မင်း",l:20},
-{jp:"～くん",rd:"～くん",rom:"~kun",en:"suffix after a boy's name",my:"ကို/မောင်---",l:20},
-{jp:"うん",rd:"うん",rom:"un",en:"yes; yeah",my:"အင်း",l:20},
-{jp:"ううん",rd:"ううん",rom:"uun",en:"no; uh-uh",my:"ဟင့်အင်း",l:20},
-{jp:"ことば",rd:"ことば",rom:"kotoba",en:"word; words",my:"စကား၊ ဝေါဟာရ",l:20},
-{jp:"着物",rd:"きもの",rom:"kimono",en:"kimono",my:"ဂျပန်ကီမိုနို",l:20},
-{jp:"ビザ",rd:"ビザ",rom:"biza",en:"visa",my:"Visa",l:20},
-{jp:"初め",rd:"はじめ",rom:"hajime",en:"beginning",my:"ပထမတော့၊ အစပိုင်း",l:20},
-{jp:"終わり",rd:"おわり",rom:"owari",en:"end; ending",my:"အဆုံးတော့",l:20},
-{jp:"こっち",rd:"こっち",rom:"kocchi",en:"this way; here",my:"ဒီဘက်",l:20},
-{jp:"そっち",rd:"そっち",rom:"socchi",en:"that way (near you); there",my:"ဟိုဘက်",l:20},
-{jp:"あっち",rd:"あっち",rom:"acchi",en:"that way (over there); over there",my:"ဟို့ဘက်",l:20},
-{jp:"どっち",rd:"どっち",rom:"docchi",en:"which way; where",my:"ဘယ်ဘက်",l:20},
-{jp:"みんなで",rd:"みんなで",rom:"minna de",en:"together; with everyone",my:"အားလုံးနဲ့၊ အားလုံးအတူတူ",l:20},
-{jp:"～けど",rd:"～けど",rom:"~kedo",en:"but; however",my:"ဒါပေမဲ့",l:20},
-{jp:"おなかがいっぱいです",rd:"おなかがいっぱいです",rom:"onaka ga ippai desu",en:"I'm full; my stomach is full",my:"ဗိုက်ပြည့်တယ်",l:20},
-{jp:"思います",rd:"おもいます",rom:"omoimasu",en:"think",my:"တွေးထင်သည်။",l:21},
-{jp:"言います",rd:"いいます",rom:"iimasu",en:"say, speak",my:"ပြောသည်။",l:21},
-{jp:"勝ちます",rd:"かちます",rom:"kachimasu",en:"win",my:"နိုင်သည်။",l:21},
-{jp:"負けます",rd:"まけます",rom:"makemasu",en:"lose",my:"ရှုံးသည်",l:21},
-{jp:"あります［お祭りが～］",rd:"あります［おまつりが～］",rom:"arimasu [omatsuri ga ~]",en:"(a festival) is held",my:"ရှိသည်(ပွဲတော်)",l:21},
-{jp:"役にたちます",rd:"やくにたちます",rom:"yaku ni tachimasu",en:"be useful",my:"အသုံးဝင်သည်။",l:21},
-{jp:"動きます",rd:"うごきます",rom:"ugokimasu",en:"move",my:"လှုပ်ရှားသည်။",l:21},
-{jp:"やめます［会社を～］",rd:"やめます［かいしゃを～］",rom:"yamemasu [kaisha o ~]",en:"quit (a company)",my:"အလုပ်ထွက်သည်",l:21},
-{jp:"気をつけます",rd:"きをつけます",rom:"ki o tsukemasu",en:"be careful",my:"သတိထားသည်။ ဂရုစိုက်သည်။",l:21},
-{jp:"無駄［な］",rd:"むだ［な］",rom:"muda [na]",en:"wasteful",my:"အလဟဿဖြစ်သော",l:21},
-{jp:"不便［な］",rd:"ふべん［な］",rom:"fuben [na]",en:"inconvenient",my:"အဆင်မပြေသော",l:21},
-{jp:"すごい",rd:"すごい",rom:"sugoi",en:"amazing, terrible",my:"အံ့ဩစရာကောင်းသော",l:21},
-{jp:"ほんとう",rd:"ほんとう",rom:"hontou",en:"truth, really",my:"တကယ်",l:21},
-{jp:"うそ",rd:"うそ",rom:"uso",en:"lie",my:"အလိမ်၊ အညာ",l:21},
-{jp:"自動車",rd:"じどうしゃ",rom:"jidousha",en:"automobile",my:"မော်တော်ကား",l:21},
-{jp:"交通",rd:"こうつう",rom:"koutsuu",en:"traffic",my:"ယာဉ်သွားလာမှု",l:21},
-{jp:"物価",rd:"ぶっか",rom:"bukka",en:"prices",my:"ကုန်ဈေးနှုန်း",l:21},
-{jp:"放送",rd:"ほうそう",rom:"housou",en:"broadcast",my:"သတင်းလွှင့်ခြင်း",l:21},
-{jp:"ニュース",rd:"ニュース",rom:"nyuusu",en:"news",my:"သတင်း",l:21},
-{jp:"アニメ",rd:"アニメ",rom:"anime",en:"anime",my:"ဂျပန်ကာတွန်းကား",l:21},
-{jp:"マンガ",rd:"マンガ",rom:"manga",en:"manga, comic",my:"ကာတွန်း(ရုပ်ပြ)စာအုပ်",l:21},
-{jp:"デザイン",rd:"デザイン",rom:"dezain",en:"design",my:"ဒီဇိုင်း",l:21},
-{jp:"夢",rd:"ゆめ",rom:"yume",en:"dream",my:"အိပ်မက်",l:21},
-{jp:"天才",rd:"てんさい",rom:"tensai",en:"genius",my:"ပါရမီရှင်",l:21},
-{jp:"試合",rd:"しあい",rom:"shiai",en:"match, game",my:"ပြိုင်ပွဲ",l:21},
-{jp:"意見",rd:"いけん",rom:"iken",en:"opinion",my:"ထင်မြင်ချက်",l:21},
-{jp:"話",rd:"はなし",rom:"hanashi",en:"story, talk",my:"စကား၊ ပုံပြင်",l:21},
-{jp:"地球",rd:"ちきゅう",rom:"chikyuu",en:"the earth",my:"ကမ္ဘာမြေ",l:21},
-{jp:"月",rd:"つき",rom:"tsuki",en:"the moon",my:"လ",l:21},
-{jp:"最近",rd:"さいきん",rom:"saikin",en:"recently",my:"အခုတလော",l:21},
-{jp:"たぶん",rd:"たぶん",rom:"tabun",en:"probably",my:"may be/ ～လောက်",l:21},
-{jp:"きっと",rd:"きっと",rom:"kitto",en:"surely",my:"ကျိန်းသေ",l:21},
-{jp:"ほんとうに",rd:"ほんとうに",rom:"hontou ni",en:"really",my:"တကယ်",l:21},
-{jp:"そんなに",rd:"そんなに",rom:"sonna ni",en:"so (much)",my:"အဲဒီလောက်(နောက်တွင် အငြင်းလိုက်လေရှိသည်)",l:21},
-{jp:"～について",rd:"～について",rom:"~ni tsuite",en:"about ~",my:"～နဲ့ပက်သက်ပြီး",l:21},
-{jp:"久しぶりですね",rd:"ひさしぶりですね",rom:"hisashiburi desu ne",en:"Long time no see.",my:"မတွေ့တာကြာပြီနော်",l:21},
-{jp:"～でも飲みませんか。",rd:"～でものみませんか。",rom:"~demo nomimasen ka.",en:"Won't you have ~?",my:"မသောက်တော့ဘူးလား",l:21},
-{jp:"もちろん",rd:"もちろん",rom:"mochiron",en:"of course",my:"ဒါပေါ့၊ ဒါဘဲပေါ့။",l:21},
-{jp:"もう帰らないと…",rd:"もうかえらないと…",rom:"mou kaeranai to…",en:"I have to go home...",my:"အိမ်ပြန်ရတော့မယ် (မပြန်လို့မရဘူး)",l:21},
-{jp:"アインシュタイン",rd:"アインシュタイン",rom:"ainshutain",en:"Einstein",my:"Albert Einstein",l:21},
-{jp:"ガガーリン",rd:"ガガーリン",rom:"gagaarin",en:"Gagarin",my:"Yuri Alekseyevich Gagarin",l:21},
-{jp:"ガリレオ",rd:"ガリレオ",rom:"garireo",en:"Galileo",my:"Galileo Galilei",l:21},
-{jp:"キング牧師",rd:"キングぼくし",rom:"kingu bokushi",en:"Rev. King",my:"Martin Luther King, Jr.",l:21},
-{jp:"フランクリン",rd:"フランクリン",rom:"furankurin",en:"Franklin",my:"Benjamin Franklin",l:21},
-{jp:"かぐや姫",rd:"かぐやひめ",rom:"kaguya hime",en:"Princess Kaguya",my:"Kaguya မင်းသမီး",l:21},
-{jp:"天神祭り",rd:"てんじんまつり",rom:"tenjin matsuri",en:"Tenjin Festival",my:"Tenjin ပွဲတော်",l:21},
-{jp:"吉野山",rd:"よしのやま",rom:"yoshino yama",en:"Mt. Yoshino",my:"Yoshino တောင်",l:21},
-{jp:"カンガルー",rd:"カンガルー",rom:"kangaruu",en:"kangaroo",my:"သားပိုက်ကောင်",l:21},
-{jp:"キャプテン・クック",rd:"キャプテン・クック",rom:"kyaputen kukku",en:"Captain Cook",my:"Captain James Cook",l:21},
-{jp:"ヨーネン",rd:"ヨーネン",rom:"yoonen",en:"Yone (company)",my:"yone ကုမ္ပဏီ",l:21},
-{jp:"着ます",rd:"きます",rom:"kimasu",en:"put on (clothes)",my:"ဝတ်သည်။",l:22},
-{jp:"はきます",rd:"はきます",rom:"hakimasu",en:"put on (shoes)",my:"ဖိနပ်စီးသည်။",l:22},
-{jp:"かぶります",rd:"かぶります",rom:"kaburimasu",en:"put on (a hat)",my:"ဦးထုပ်ဆောင်းသည်/ခြုံသည်။",l:22},
-{jp:"かけます［めがねを～］",rd:"かけます［めがねを～］",rom:"kakemasu [megane o ~]",en:"put on (glasses)",my:"မျက်မှန်တပ်သည်။",l:22},
-{jp:"します［ネクタイを～］",rd:"します［ネクタイを～］",rom:"shimasu [nekutai o ~]",en:"wear (a necktie)",my:"neck tie ကိုဝတ်ဆင်သည်",l:22},
-{jp:"生まれます",rd:"うまれます",rom:"umaremasu",en:"be born",my:"မွေးဖွားသည်။",l:22},
-{jp:"私たち",rd:"わたしたち",rom:"watashitachi",en:"we",my:"ကျွန်တော်တို့/ကျွန်မတို့",l:22},
-{jp:"コート",rd:"コート",rom:"kooto",en:"coat",my:"အပေါ်ဝတ်အင်္ကျီ",l:22},
-{jp:"セーター",rd:"セーター",rom:"seetaa",en:"sweater",my:"သိုးမွေးအနွေးထည်",l:22},
-{jp:"スーツ",rd:"スーツ",rom:"suutsu",en:"suit",my:"အနောက်တိုင်းကုတ်အင်္ကျီ",l:22},
-{jp:"帽子",rd:"ぼうし",rom:"boushi",en:"hat",my:"ဦးထုပ်",l:22},
-{jp:"メガネ",rd:"メガネ",rom:"megane",en:"glasses",my:"မျက်မှန်",l:22},
-{jp:"ケーキ",rd:"ケーキ",rom:"keeki",en:"cake",my:"ကိတ်မုန့်",l:22},
-{jp:"［お］弁当",rd:"［お］べんとう",rom:"[o]bentou",en:"boxed lunch",my:"ထမင်းဗူး",l:22},
-{jp:"ロボット",rd:"ロボット",rom:"robotto",en:"robot",my:"စက်ရုပ်",l:22},
-{jp:"ユーモア",rd:"ユーモア",rom:"yuumoa",en:"humor",my:"ဟာသ",l:22},
-{jp:"都合",rd:"つごう",rom:"tsugou",en:"circumstances, convenience",my:"အခြေအနေ",l:22},
-{jp:"よく",rd:"よく",rom:"yoku",en:"often; well",my:"ခဏခဏ/မကြာမကြာ/ကောင်းကောင်း",l:22},
-{jp:"えーと",rd:"えーと",rom:"eeto",en:"um, er",my:"အဲဒါဆိုရင်",l:22},
-{jp:"おめでとう［ございます］",rd:"おめでとう［ございます］",rom:"omedetou [gozaimasu]",en:"congratulations",my:"ဂုဏ်ယူပါတယ်။",l:22},
-{jp:"お探しですか",rd:"おさがしですか",rom:"osagashi desu ka",en:"Are you looking for something?",my:"တစ်ခုခုရှာနေပါသလား",l:22},
-{jp:"では",rd:"では",rom:"dewa",en:"well then",my:"ဒါဆိုရင်-",l:22},
-{jp:"こちら",rd:"こちら",rom:"kochira",en:"this way; this one",my:"ဒီဘက်၊ ဒီဟာ",l:22},
-{jp:"家賃",rd:"やちん",rom:"yachin",en:"rent",my:"အိမ်ငှားခ",l:22},
-{jp:"ダイニングキッチン",rd:"ダイニングキッチン",rom:"dainingu kitchin",en:"dining kitchen",my:"ထမင်းစားခန်းပါသော မီးဖိုဆောင်",l:22},
-{jp:"和室",rd:"わしつ",rom:"washitsu",en:"Japanese-style room",my:"ဂျပန်ရိုးရာအခန်း",l:22},
-{jp:"押入れ",rd:"おしいれ",rom:"oshiire",en:"closet",my:"ဂျပန်စတိုင်ဗီဒို(မွေ့ရာ၊ စောင်၊ ခေါင်းအုံးများ သိမ်းဆည်းသည့်အခန်း)",l:22},
-{jp:"布団",rd:"ふとん",rom:"futon",en:"futon",my:"မွေ့ယာ",l:22},
-{jp:"パリ",rd:"パリ",rom:"pari",en:"Paris",my:"ပါရီမြို့",l:22},
-{jp:"万里の長城",rd:"まんりのちょうじょう",rom:"manri no choujou",en:"The Great Wall of China",my:"The Great Wall of China သင်ခန်းစာတွင်ပါဝင်သော",l:22},
-{jp:"みんなのアンケート",rd:"みんなのアンケート",rom:"minna no ankeeto",en:"everyone's questionnaire",my:"မေးခွန်းမေးမြန်းခြင်း",l:22},
-{jp:"聞きます［先生に］",rd:"ききます［せんせいに］",rom:"kikimasu [sensei ni]",en:"ask (a teacher)",my:"မေးမြန်းသည်(ဆရာကို)။",l:23},
-{jp:"回します",rd:"まわします",rom:"mawashimasu",en:"turn, rotate",my:"လှည့်သည်။",l:23},
-{jp:"引きます",rd:"ひきます",rom:"hikimasu",en:"pull",my:"ဆွဲသည်။",l:23},
-{jp:"変えます",rd:"かえます",rom:"kaemasu",en:"change",my:"လဲလှယ်သည်။",l:23},
-{jp:"触ります",rd:"さわります",rom:"sawarimasu",en:"touch",my:"ကိုင်သည်၊ ထိသည်၊ တိသည်။",l:23},
-{jp:"出ます［お釣りが～］",rd:"でます［おつりが～］",rom:"demasu [otsuri ga ~]",en:"come out (change comes out)",my:"ထွက်လာသည်/ကျလာသည်။",l:23},
-{jp:"歩きます",rd:"あるきます",rom:"arukimasu",en:"walk",my:"လမ်းလျှောက်သည်။",l:23},
-{jp:"渡ります［橋を～］",rd:"わたります［はしを～］",rom:"watarimasu [hashi o ~]",en:"cross (a bridge)",my:"ဖြတ်ကျော်သည်(တံတားကို)။",l:23},
-{jp:"曲がります［右へ～］",rd:"まがります［みぎへ～］",rom:"magarimasu [migi e ~]",en:"turn (to the right)",my:"ကွေ့သည်(ညာဘက်ကို)",l:23},
-{jp:"寂しい",rd:"さびしい",rom:"sabishii",en:"lonely",my:"အထီးကျန်သော",l:23},
-{jp:"［お］湯",rd:"［お］ゆ",rom:"[o]yu",en:"hot water",my:"ရေနွေး",l:23},
-{jp:"音",rd:"おと",rom:"oto",en:"sound",my:"အသံ",l:23},
-{jp:"サイズ",rd:"サイズ",rom:"saizu",en:"size",my:"အရွယ်အစား",l:23},
-{jp:"故障",rd:"こしょう",rom:"koshou",en:"breakdown",my:"ပျက်စီးနေခြင်း",l:23},
-{jp:"道",rd:"みち",rom:"michi",en:"road",my:"လမ်း",l:23},
-{jp:"交差点",rd:"こうさてん",rom:"kousaten",en:"intersection",my:"လမ်းဆုံ",l:23},
-{jp:"信号",rd:"しんごう",rom:"shingou",en:"traffic light",my:"မီးပွိုင့်",l:23},
-{jp:"角",rd:"かど",rom:"kado",en:"corner",my:"လမ်းထောင့်",l:23},
-{jp:"橋",rd:"はし",rom:"hashi",en:"bridge",my:"တံတား",l:23},
-{jp:"駐車場",rd:"ちゅうしゃじょう",rom:"chuushajou",en:"parking lot",my:"ကားရပ်ရန်နေရာ၊ parking",l:23},
-{jp:"建物",rd:"たてもの",rom:"tatemono",en:"building",my:"အဆောက်အဦး",l:23},
-{jp:"何回も",rd:"なんかいも",rom:"nankai mo",en:"many times",my:"အကြိမ်များစွာ",l:23},
-{jp:"～目",rd:"～め",rom:"~me",en:"-th (ordinal)",my:"～မြောက်",l:23},
-{jp:"聖徳太子",rd:"しょうとくたいし",rom:"shoutoku taishi",en:"Prince Shotoku",my:"Shotokuမင်းသား",l:23},
-{jp:"法隆寺",rd:"ほうりゅうじ",rom:"houryuuji",en:"Horyuji Temple",my:"Houryuji ဘုရားကျောင်း",l:23},
-{jp:"元気茶",rd:"げんきちゃ",rom:"genkicha",en:"Genki tea",my:"ကျန်းမာရေးလက်ဖက်ခြောက်",l:23},
-{jp:"本田駅",rd:"ほんだえき",rom:"honda eki",en:"Honda Station",my:"Hondaဘူတာ",l:23},
-{jp:"図書館前",rd:"としょかんまえ",rom:"toshokan mae",en:"in front of the library",my:"စာကြည့်တိုက်ရှေ့ ဘတ်စ်ကားမှတ်တိုင်",l:23},
-{jp:"くれます",rd:"くれます",rom:"kuremasu",en:"give (to me)",my:"ပေးသည်(တခြားသူက ကိုယ့်ကိုပေးခြင်း)",l:24},
-{jp:"直します",rd:"なおします",rom:"naoshimasu",en:"fix, repair",my:"ပြုပြင်သည်/အမှားပြင်ဆင်သည်။",l:24},
-{jp:"つれていきます",rd:"つれていきます",rom:"tsurete ikimasu",en:"take (someone) along",my:"ခေါ်သွားသည်။",l:24},
-{jp:"つれてきます",rd:"つれてきます",rom:"tsurete kimasu",en:"bring (someone) along",my:"ခေါ်လာသည်။",l:24},
-{jp:"送ります",rd:"おくります",rom:"okurimasu",en:"send",my:"ပို့ဆောင်သည်။",l:24},
-{jp:"紹介します",rd:"しょうかいします",rom:"shoukai shimasu",en:"introduce",my:"မိတ်ဆက်သည်။",l:24},
-{jp:"案内します",rd:"あんないします",rom:"annai shimasu",en:"show around, guide",my:"လမ်းပြသည်။",l:24},
-{jp:"説明します",rd:"せつめいします",rom:"setsumei shimasu",en:"explain",my:"ရှင်းပြသည်။",l:24},
-{jp:"おじいさん/おじいちゃん",rd:"おじいさん/おじいちゃん",rom:"ojiisan/ojiichan",en:"grandfather",my:"အဖိုး",l:24},
-{jp:"おばあさん/おばあちゃん",rd:"おばあさん/おばあちゃん",rom:"obaasan/obaachan",en:"grandmother",my:"အဖွား",l:24},
-{jp:"準備",rd:"じゅんび",rom:"junbi",en:"preparation",my:"ကြိုတင်ပြင်ဆင်ခြင်း",l:24},
-{jp:"引っ越し",rd:"ひっこし",rom:"hikkoshi",en:"moving house",my:"အိမ်ပြောင်းခြင်း",l:24},
-{jp:"［お］菓子",rd:"［お］かし",rom:"[o]kashi",en:"sweets",my:"မုန့်",l:24},
-{jp:"ホームステイ",rd:"ホームステイ",rom:"hoomusutei",en:"homestay",my:"Home stay",l:24},
-{jp:"全部",rd:"ぜんぶ",rom:"zenbu",en:"all",my:"အားလုံး",l:24},
-{jp:"自分で",rd:"じぶんで",rom:"jibun de",en:"by oneself",my:"ကိုယ်တိုင်",l:24},
-{jp:"他に",rd:"ほかに",rom:"hoka ni",en:"besides, other",my:"အခြား",l:24},
-{jp:"母の日",rd:"ははのひ",rom:"haha no hi",en:"Mother's Day",my:"အမေနေ့",l:24},
-{jp:"考えます",rd:"かんがえます",rom:"kangaemasu",en:"think",my:"စဉ်းစားသည်။",l:25},
-{jp:"着きます",rd:"つきます",rom:"tsukimasu",en:"arrive",my:"ဆိုက်ရောက်သည်။",l:25},
-{jp:"留学します",rd:"りゅうがくします",rom:"ryuugaku shimasu",en:"study abroad",my:"နိုင်ငံခြားပညာသင်သွားသည်။",l:25},
-{jp:"取ります［年を～］",rd:"とります［としを～］",rom:"torimasu [toshi o ~]",en:"get older",my:"အသက်ကြီးသည်။",l:25},
-{jp:"足ります",rd:"たります",rom:"tarimasu",en:"be enough",my:"လုံလောက်သည်။",l:25},
-{jp:"田舎",rd:"いなか",rom:"inaka",en:"countryside",my:"တောရွာ",l:25},
-{jp:"チャンス",rd:"チャンス",rom:"chansu",en:"chance",my:"အခွင့်အရေး",l:25},
-{jp:"億",rd:"おく",rom:"oku",en:"100 million",my:"သန်း၁၀၀",l:25},
-{jp:"もし［～たら］",rd:"もし［～たら］",rom:"moshi [~tara]",en:"if",my:"တကယ်လို့～ခဲ့ရင်",l:25},
-{jp:"意味",rd:"いみ",rom:"imi",en:"meaning",my:"အဓိပ္ပါယ်",l:25},
-{jp:"もしもし",rd:"もしもし",rom:"moshimoshi",en:"hello (on the phone)",my:"hello",l:25},
-{jp:"転勤",rd:"てんきん",rom:"tenkin",en:"job transfer",my:"အလုပ်ပြောင်းခြင်း",l:25},
-{jp:"こと",rd:"こと",rom:"koto",en:"thing, matter",my:"အကြောင်း",l:25},
-{jp:"暇",rd:"ひま",rom:"hima",en:"free time",my:"အားလပ်သော",l:25},
-{jp:"［いろいろ］お世話になりました",rd:"［いろいろ］おせわになりました",rom:"[iroiro] osewa ni narimashita",en:"Thank you for everything.",my:"ကျေးဇူးအများကြီးရှိခဲ့ပါတယ်",l:25},
-{jp:"頑張ります",rd:"がんばります",rom:"ganbarimasu",en:"do one's best",my:"ကြိုးစားပါမယ်",l:25},
-{jp:"どうぞ、お元気で",rd:"どうぞ、おげんきで",rom:"douzo, ogenki de",en:"Please take care.",my:"ကျန်းမာစွာနဲ့",l:25},
-{jp:"ベトナム",rd:"ベトナム",rom:"betonamu",en:"Vietnam",my:"ဗီယက်နမ်",l:25}
-];
-/* Class-note tables as words — full numbers, clock hours/minutes, all dates,
-   so they appear in the Kotoba list and the Kotoba quiz pools. */
-var EXTRA_WORDS=[
-{jp:"十三",rd:"じゅうさん",rom:"juu-san",en:"thirteen",my:"ဆယ့်သုံး",cat:"Numbers",t:["numbers"]},
-{jp:"十四",rd:"じゅうよん／じゅうし",rom:"juu-yon / juu-shi",en:"fourteen",my:"ဆယ့်လေး",cat:"Numbers",t:["numbers"]},
-{jp:"十五",rd:"じゅうご",rom:"juu-go",en:"fifteen",my:"ဆယ့်ငါး",cat:"Numbers",t:["numbers"]},
-{jp:"十六",rd:"じゅうろく",rom:"juu-roku",en:"sixteen",my:"ဆယ့်ခြောက်",cat:"Numbers",t:["numbers"]},
-{jp:"十七",rd:"じゅうなな／じゅうしち",rom:"juu-nana / juu-shichi",en:"seventeen",my:"ဆယ့်ခုနှစ်",cat:"Numbers",t:["numbers"]},
-{jp:"十八",rd:"じゅうはち",rom:"juu-hachi",en:"eighteen",my:"ဆယ့်ရှစ်",cat:"Numbers",t:["numbers"]},
-{jp:"十九",rd:"じゅうきゅう／じゅうく",rom:"juu-kyuu / juu-ku",en:"nineteen",my:"ဆယ့်ကိုး",cat:"Numbers",t:["numbers"]},
-{jp:"三十",rd:"さんじゅう",rom:"san-juu",en:"thirty",my:"သုံးဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"四十",rd:"よんじゅう",rom:"yon-juu",en:"forty",my:"လေးဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"五十",rd:"ごじゅう",rom:"go-juu",en:"fifty",my:"ငါးဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"六十",rd:"ろくじゅう",rom:"roku-juu",en:"sixty",my:"ခြောက်ဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"七十",rd:"ななじゅう",rom:"nana-juu",en:"seventy",my:"ခုနှစ်ဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"八十",rd:"はちじゅう",rom:"hachi-juu",en:"eighty",my:"ရှစ်ဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"九十",rd:"きゅうじゅう",rom:"kyuu-juu",en:"ninety",my:"ကိုးဆယ်",cat:"Numbers",t:["numbers"]},
-{jp:"四百",rd:"よんひゃく",rom:"yon-hyaku",en:"four hundred",my:"လေးရာ",cat:"Numbers",t:["numbers"]},
-{jp:"五百",rd:"ごひゃく",rom:"go-hyaku",en:"five hundred",my:"ငါးရာ",cat:"Numbers",t:["numbers"]},
-{jp:"六百",rd:"ろっぴゃく",rom:"rop-pyaku",en:"six hundred",my:"ခြောက်ရာ",cat:"Numbers",t:["numbers"]},
-{jp:"七百",rd:"ななひゃく",rom:"nana-hyaku",en:"seven hundred",my:"ခုနှစ်ရာ",cat:"Numbers",t:["numbers"]},
-{jp:"八百",rd:"はっぴゃく",rom:"hap-pyaku",en:"eight hundred",my:"ရှစ်ရာ",cat:"Numbers",t:["numbers"]},
-{jp:"九百",rd:"きゅうひゃく",rom:"kyuu-hyaku",en:"nine hundred",my:"ကိုးရာ",cat:"Numbers",t:["numbers"]},
-{jp:"二千",rd:"にせん",rom:"ni-sen",en:"two thousand",my:"နှစ်ထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"三千",rd:"さんぜん",rom:"san-zen",en:"three thousand",my:"သုံးထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"四千",rd:"よんせん",rom:"yon-sen",en:"four thousand",my:"လေးထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"五千",rd:"ごせん",rom:"go-sen",en:"five thousand",my:"ငါးထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"六千",rd:"ろくせん",rom:"roku-sen",en:"six thousand",my:"ခြောက်ထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"七千",rd:"ななせん",rom:"nana-sen",en:"seven thousand",my:"ခုနှစ်ထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"八千",rd:"はっせん",rom:"has-sen",en:"eight thousand",my:"ရှစ်ထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"九千",rd:"きゅうせん",rom:"kyuu-sen",en:"nine thousand",my:"ကိုးထောင်",cat:"Numbers",t:["numbers"]},
-{jp:"十万",rd:"じゅうまん",rom:"juu-man",en:"one hundred thousand",my:"တစ်သိန်း",cat:"Numbers",t:["numbers"]},
-{jp:"百万",rd:"ひゃくまん",rom:"hyaku-man",en:"one million",my:"ဆယ်သိန်း",cat:"Numbers",t:["numbers"]},
-{jp:"一千万",rd:"いっせんまん",rom:"issen-man",en:"ten million",my:"သိန်းတစ်ရာ",cat:"Numbers",t:["numbers"]},
-{jp:"一億",rd:"いちおく",rom:"ichi-oku",en:"one hundred million",my:"တစ်ကုဋေ",cat:"Numbers",t:["numbers"]},
-{jp:"１時",rd:"いちじ",rom:"ichi-ji",en:"1 o'clock",my:"၁ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"２時",rd:"にじ",rom:"ni-ji",en:"2 o'clock",my:"၂ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"３時",rd:"さんじ",rom:"san-ji",en:"3 o'clock",my:"၃ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"４時",rd:"よじ",rom:"yo-ji",en:"4 o'clock",my:"၄ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"５時",rd:"ごじ",rom:"go-ji",en:"5 o'clock",my:"၅ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"６時",rd:"ろくじ",rom:"roku-ji",en:"6 o'clock",my:"၆ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"７時",rd:"しちじ",rom:"shichi-ji",en:"7 o'clock",my:"၇ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"８時",rd:"はちじ",rom:"hachi-ji",en:"8 o'clock",my:"၈ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"９時",rd:"くじ",rom:"ku-ji",en:"9 o'clock",my:"၉ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"１０時",rd:"じゅうじ",rom:"juu-ji",en:"10 o'clock",my:"၁၀ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"１１時",rd:"じゅういちじ",rom:"juu-ichi-ji",en:"11 o'clock",my:"၁၁ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"１２時",rd:"じゅうにじ",rom:"juu-ni-ji",en:"12 o'clock",my:"၁၂ နာရီ",cat:"Time Words",t:["time"]},
-{jp:"何時",rd:"なんじ",rom:"nan-ji",en:"what time",my:"ဘယ်နာရီ",cat:"Time Words",t:["time"]},
-{jp:"１分",rd:"いっぷん",rom:"ip-pun",en:"1 minute",my:"၁ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"２分",rd:"にふん",rom:"ni-fun",en:"2 minutes",my:"၂ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"３分",rd:"さんぷん",rom:"san-pun",en:"3 minutes",my:"၃ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"４分",rd:"よんぷん",rom:"yon-pun",en:"4 minutes",my:"၄ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"５分",rd:"ごふん",rom:"go-fun",en:"5 minutes",my:"၅ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"６分",rd:"ろっぷん",rom:"rop-pun",en:"6 minutes",my:"၆ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"７分",rd:"ななふん",rom:"nana-fun",en:"7 minutes",my:"၇ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"８分",rd:"はっぷん",rom:"hap-pun",en:"8 minutes",my:"၈ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"９分",rd:"きゅうふん",rom:"kyuu-fun",en:"9 minutes",my:"၉ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"１０分",rd:"じゅっぷん",rom:"jup-pun",en:"10 minutes",my:"၁၀ မိနစ်",cat:"Time Words",t:["time"]},
-{jp:"１１日",rd:"じゅういちにち",rom:"juu-ichi-nichi",en:"11th (date)",my:"၁၁ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"１２日",rd:"じゅうににち",rom:"juu-ni-nichi",en:"12th (date)",my:"၁၂ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"１３日",rd:"じゅうさんにち",rom:"juu-san-nichi",en:"13th (date)",my:"၁၃ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"１５日",rd:"じゅうごにち",rom:"juu-go-nichi",en:"15th (date)",my:"၁၅ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"１６日",rd:"じゅうろくにち",rom:"juu-roku-nichi",en:"16th (date)",my:"၁၆ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"１７日",rd:"じゅうしちにち",rom:"juu-shichi-nichi",en:"17th (date)",my:"၁၇ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"１８日",rd:"じゅうはちにち",rom:"juu-hachi-nichi",en:"18th (date)",my:"၁၈ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"１９日",rd:"じゅうくにち",rom:"juu-ku-nichi",en:"19th (date)",my:"၁၉ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２１日",rd:"にじゅういちにち",rom:"ni-juu-ichi-nichi",en:"21st (date)",my:"၂၁ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２２日",rd:"にじゅうににち",rom:"ni-juu-ni-nichi",en:"22nd (date)",my:"၂၂ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２３日",rd:"にじゅうさんにち",rom:"ni-juu-san-nichi",en:"23rd (date)",my:"၂၃ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２５日",rd:"にじゅうごにち",rom:"ni-juu-go-nichi",en:"25th (date)",my:"၂၅ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２６日",rd:"にじゅうろくにち",rom:"ni-juu-roku-nichi",en:"26th (date)",my:"၂၆ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２７日",rd:"にじゅうしちにち",rom:"ni-juu-shichi-nichi",en:"27th (date)",my:"၂၇ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２８日",rd:"にじゅうはちにち",rom:"ni-juu-hachi-nichi",en:"28th (date)",my:"၂၈ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"２９日",rd:"にじゅうくにち",rom:"ni-juu-ku-nichi",en:"29th (date)",my:"၂၉ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"３０日",rd:"さんじゅうにち",rom:"san-juu-nichi",en:"30th (date)",my:"၃၀ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"３１日",rd:"さんじゅういちにち",rom:"san-juu-ichi-nichi",en:"31st (date)",my:"၃၁ ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"何日",rd:"なんにち",rom:"nan-nichi",en:"what date; how many days",my:"ဘယ်ရက်",cat:"Time Words",t:["time","dates"]},
-{jp:"何月",rd:"なんがつ",rom:"nan-gatsu",en:"what month",my:"ဘယ်လ",cat:"Time Words",t:["time","dates"]},
-{jp:"何曜日",rd:"なんようび",rom:"nan-youbi",en:"what day of the week",my:"ဘယ်နေ့",cat:"Time Words",t:["time","dates"]},
-{jp:"再来週",rd:"さらいしゅう",rom:"saraishuu",en:"the week after next",my:"နောက်အပတ်ရဲ့ နောက်အပတ်",cat:"Time Words",t:["time","dates"]},
-{jp:"再来月",rd:"さらいげつ",rom:"saraigetsu",en:"the month after next",my:"နောက်လရဲ့ နောက်လ",cat:"Time Words",t:["time","dates"]},
-{jp:"再来年",rd:"さらいねん",rom:"sarainen",en:"the year after next",my:"နောက်နှစ်ရဲ့ နောက်နှစ်",cat:"Time Words",t:["time","dates"]},
-{jp:"一昨年",rd:"おととし",rom:"ototoshi",en:"the year before last",my:"တမြန်နှစ်",cat:"Time Words",t:["time","dates"]},
-{jp:"先々週",rd:"せんせんしゅう",rom:"sensenshuu",en:"the week before last",my:"လွန်ခဲ့သော နှစ်ပတ်က",cat:"Time Words",t:["time","dates"]},
-{jp:"先々月",rd:"せんせんげつ",rom:"sensengetsu",en:"the month before last",my:"လွန်ခဲ့သော နှစ်လက",cat:"Time Words",t:["time","dates"]},
-{jp:"毎晩",rd:"まいばん",rom:"maiban",en:"every night",my:"ညတိုင်း",cat:"Time Words",t:["time"]}
-];
-WORDS.push.apply(WORDS,EXTRA_WORDS);
 
-export const CATS =["All", "People", "Family", "Places and Locations", "Things (Objects)", "Food and Drink", "Animals", "Transportation", "Nature and Weather", "Body Parts", "Numbers", "Counters", "Time Words", "School and Studies", "Hobbies and Activities", "Money & Shopping", "Health and Body", "Verbs Group 1", "Verbs Group 2", "Verbs Irregular", "い-Adjectives", "な-Adjectives", "Adverbs", "Particles and Conjunctions", "Question Words", "Demonstratives", "Greetings and Expressions", "Colors", "Size and Quantity", "Common Conjunctions", "Miscellaneous / Common Nouns"];
+export const MINNA = [
+  {
+    "jp": "わたし",
+    "rd": "わたし",
+    "rom": "watashi",
+    "en": "I; me",
+    "my": "ကျွန်တော်၊ ကျွန်မ",
+    "l": 1
+  },
+  {
+    "jp": "あなた",
+    "rd": "あなた",
+    "rom": "anata",
+    "en": "you",
+    "my": "ခင်ဗျား၊ မင်း၊ နင်",
+    "l": 1
+  },
+  {
+    "jp": "あの人",
+    "rd": "あのひと",
+    "rom": "ano hito",
+    "en": "that person (over there)",
+    "my": "ဟိုလူ (ရိုးရိုးအသုံး)",
+    "l": 1
+  },
+  {
+    "jp": "あの方",
+    "rd": "あのかた",
+    "rom": "ano kata",
+    "en": "that person (polite)",
+    "my": "ဟိုလူ (ယဉ်ကျေးသောအသုံး)",
+    "l": 1
+  },
+  {
+    "jp": "～さん",
+    "rd": "～さん",
+    "rom": "~san",
+    "en": "Mr./Ms. (suffix after a name)",
+    "my": "ကို--/မ--(နာမည်နောက် တွင်ထားသုံးသည်။ မိမိနာမည်တွင်မသုံးပါ။)",
+    "l": 1
+  },
+  {
+    "jp": "～ちゃん",
+    "rd": "～ちゃん",
+    "rom": "~chan",
+    "en": "(suffix for children / close friends)",
+    "my": "မောင်--/မ--(၁၀နှစ် အောက် ကလေးငယ်များ ကိုခေါ်သောအခါတွင် သုံးသည်)",
+    "l": 1
+  },
+  {
+    "jp": "～じん",
+    "rd": "～じん",
+    "rom": "~jin",
+    "en": "person from ~ (nationality suffix)",
+    "my": "--လူမျိုး",
+    "l": 1
+  },
+  {
+    "jp": "アメリカ人",
+    "rd": "アメリカじん",
+    "rom": "amerika-jin",
+    "en": "American (person)",
+    "my": "အမေရိကန်လူမျိုး",
+    "l": 1
+  },
+  {
+    "jp": "先生",
+    "rd": "せんせい",
+    "rom": "sensei",
+    "en": "teacher (as a form of address)",
+    "my": "ဆရာ/ဆရာမ",
+    "l": 1
+  },
+  {
+    "jp": "教師",
+    "rd": "きょうし",
+    "rom": "kyoushi",
+    "en": "teacher (as a profession)",
+    "my": "ဆရာ/ဆရာမ (အလုပ်အကိုင်တွင်အသုံးများ)",
+    "l": 1
+  },
+  {
+    "jp": "学生",
+    "rd": "がくせい",
+    "rom": "gakusei",
+    "en": "student",
+    "my": "ကျောင်းသား/ ကျောင်းသူ",
+    "l": 1
+  },
+  {
+    "jp": "会社員",
+    "rd": "かいしゃいん",
+    "rom": "kaishain",
+    "en": "company employee",
+    "my": "ကုမ္ပဏီဝန်ထမ်း",
+    "l": 1
+  },
+  {
+    "jp": "社員",
+    "rd": "しゃいん",
+    "rom": "shain",
+    "en": "employee",
+    "my": "ဝန်ထမ်း",
+    "l": 1
+  },
+  {
+    "jp": "銀行員",
+    "rd": "ぎんこういん",
+    "rom": "ginkouin",
+    "en": "bank employee",
+    "my": "ဘဏ်ဝန်ထမ်း",
+    "l": 1
+  },
+  {
+    "jp": "医者",
+    "rd": "いしゃ",
+    "rom": "isha",
+    "en": "doctor",
+    "my": "ဆရာဝန်",
+    "l": 1
+  },
+  {
+    "jp": "研究者",
+    "rd": "けんきゅうしゃ",
+    "rom": "kenkyuusha",
+    "en": "researcher",
+    "my": "သုတေသနပြုသူ",
+    "l": 1
+  },
+  {
+    "jp": "大学",
+    "rd": "だいがく",
+    "rom": "daigaku",
+    "en": "university",
+    "my": "တက္ကသိုလ်",
+    "l": 1
+  },
+  {
+    "jp": "病院",
+    "rd": "びょういん",
+    "rom": "byouin",
+    "en": "hospital",
+    "my": "ဆေးရုံ",
+    "l": 1
+  },
+  {
+    "jp": "だれ",
+    "rd": "だれ",
+    "rom": "dare",
+    "en": "who",
+    "my": "ဘယ်သူ(ရိုးရိုး)",
+    "l": 1
+  },
+  {
+    "jp": "どなた",
+    "rd": "どなた",
+    "rom": "donata",
+    "en": "who (polite)",
+    "my": "ဘယ်သူ(ယဉ်ကျေး)",
+    "l": 1
+  },
+  {
+    "jp": "～歳",
+    "rd": "～さい",
+    "rom": "~sai",
+    "en": "~ years old",
+    "my": "--နှစ်(အသက်)",
+    "l": 1
+  },
+  {
+    "jp": "何歳",
+    "rd": "なんさい",
+    "rom": "nansai",
+    "en": "how old",
+    "my": "အသက်ဘယ်နှစ်နှစ်လဲ",
+    "l": 1
+  },
+  {
+    "jp": "おいくつ",
+    "rd": "おいくつ",
+    "rom": "oikutsu",
+    "en": "how old (polite)",
+    "my": "အသက်ဘယ်နှစ်နှစ်လဲ (ယဉ်ကျေး)",
+    "l": 1
+  },
+  {
+    "jp": "…はい",
+    "rd": "…はい",
+    "rom": "...hai",
+    "en": "yes",
+    "my": "ဟုတ်ကဲ့",
+    "l": 1
+  },
+  {
+    "jp": "…いいえ",
+    "rd": "…いいえ",
+    "rom": "...iie",
+    "en": "no",
+    "my": "ဟင်အင်း",
+    "l": 1
+  },
+  {
+    "jp": "初めまして",
+    "rd": "はじめまして",
+    "rom": "hajimemashite",
+    "en": "How do you do? (Nice to meet you)",
+    "my": "တွေ့ရတာဝမ်းသာပါတယ်",
+    "l": 1
+  },
+  {
+    "jp": "～から来ました",
+    "rd": "～からきました",
+    "rom": "~kara kimashita",
+    "en": "I came from ~",
+    "my": "--ကနေလာပါတယ်။",
+    "l": 1
+  },
+  {
+    "jp": "どうぞ、よろしくお願いします",
+    "rd": "どうぞ、よろしくおねがいします",
+    "rom": "douzo, yoroshiku onegaishimasu",
+    "en": "Please treat me well (Nice to meet you)",
+    "my": "မိတ်ဆွေအဖြစ် ခင်ခင်မင်မင်ဆက်ဆံပါ",
+    "l": 1
+  },
+  {
+    "jp": "失礼ですが",
+    "rd": "しつれいですが",
+    "rom": "shitsurei desu ga",
+    "en": "Excuse me, but...",
+    "my": "တစ်ဆိတ်လောက်။ စိတ်မရှိပါနဲ့။",
+    "l": 1
+  },
+  {
+    "jp": "お名前は？",
+    "rd": "おなまえは？",
+    "rom": "onamae wa?",
+    "en": "What is your name?",
+    "my": "နာမည်ဘယ်လိုခေါ်ပါသလဲ။",
+    "l": 1
+  },
+  {
+    "jp": "こちらは、～さんです",
+    "rd": "こちらは、～さんです",
+    "rom": "kochira wa, ~san desu",
+    "en": "This is Mr./Ms. ~",
+    "my": "သူက ကို--/မ--ဖြစ်ပါတယ်။",
+    "l": 1
+  },
+  {
+    "jp": "アメリカ",
+    "rd": "アメリカ",
+    "rom": "amerika",
+    "en": "America; the USA",
+    "my": "အမေရိကန်",
+    "l": 1
+  },
+  {
+    "jp": "イギリス",
+    "rd": "イギリス",
+    "rom": "igirisu",
+    "en": "England; the UK",
+    "my": "အင်္ဂလန်",
+    "l": 1
+  },
+  {
+    "jp": "インド",
+    "rd": "インド",
+    "rom": "indo",
+    "en": "India",
+    "my": "အိန္ဒိယ",
+    "l": 1
+  },
+  {
+    "jp": "インドネシア",
+    "rd": "インドネシア",
+    "rom": "indoneshia",
+    "en": "Indonesia",
+    "my": "အင်ဒိုနီးရှား",
+    "l": 1
+  },
+  {
+    "jp": "韓国",
+    "rd": "かんこく",
+    "rom": "kankoku",
+    "en": "South Korea",
+    "my": "တောင်ကိုရီးယား",
+    "l": 1
+  },
+  {
+    "jp": "タイ",
+    "rd": "タイ",
+    "rom": "tai",
+    "en": "Thailand",
+    "my": "ထိုင်း",
+    "l": 1
+  },
+  {
+    "jp": "中国",
+    "rd": "ちゅうごく",
+    "rom": "chuugoku",
+    "en": "China",
+    "my": "တရုတ်",
+    "l": 1
+  },
+  {
+    "jp": "ドイツ",
+    "rd": "ドイツ",
+    "rom": "doitsu",
+    "en": "Germany",
+    "my": "ဂျာမနီ",
+    "l": 1
+  },
+  {
+    "jp": "日本",
+    "rd": "にほん",
+    "rom": "nihon",
+    "en": "Japan",
+    "my": "ဂျပန်",
+    "l": 1
+  },
+  {
+    "jp": "ブラジル",
+    "rd": "ブラジル",
+    "rom": "burajiru",
+    "en": "Brazil",
+    "my": "ဘရာဇီး",
+    "l": 1
+  },
+  {
+    "jp": "IMC",
+    "rd": "IMC",
+    "rom": "IMC",
+    "en": "IMC (company)",
+    "my": "IMCကုမ္ပဏီ",
+    "l": 1
+  },
+  {
+    "jp": "パワー電気",
+    "rd": "パワーでんき",
+    "rom": "pawaa denki",
+    "en": "Power Electric (company)",
+    "my": "Power Electric ကုမ္ပဏီ",
+    "l": 1
+  },
+  {
+    "jp": "ブラジルエアー",
+    "rd": "ブラジルエアー",
+    "rom": "burajiru eaa",
+    "en": "Brazil Air (company)",
+    "my": "Brazil Air ကုမ္ပဏီ",
+    "l": 1
+  },
+  {
+    "jp": "AKC",
+    "rd": "AKC",
+    "rom": "AKC",
+    "en": "AKC (company)",
+    "my": "AKCကုမ္ပဏီ",
+    "l": 1
+  },
+  {
+    "jp": "神戸病院",
+    "rd": "こうべびょういん",
+    "rom": "koube byouin",
+    "en": "Kobe Hospital",
+    "my": "Kobeဆေးရုံ",
+    "l": 1
+  },
+  {
+    "jp": "さくら大学",
+    "rd": "さくらだいがく",
+    "rom": "sakura daigaku",
+    "en": "Sakura University",
+    "my": "Sakuraတက္ကသိုလ်",
+    "l": 1
+  },
+  {
+    "jp": "富士大学",
+    "rd": "ふじだいがく",
+    "rom": "fuji daigaku",
+    "en": "Fuji University",
+    "my": "Fujiတက္ကသိုလ်",
+    "l": 1
+  },
+  {
+    "jp": "これ",
+    "rd": "これ",
+    "rom": "kore",
+    "en": "this one",
+    "my": "ဒီဟာ",
+    "l": 2
+  },
+  {
+    "jp": "それ",
+    "rd": "それ",
+    "rom": "sore",
+    "en": "that one (near you)",
+    "my": "ဟိုဟာ",
+    "l": 2
+  },
+  {
+    "jp": "あれ",
+    "rd": "あれ",
+    "rom": "are",
+    "en": "that one (over there)",
+    "my": "ဟို့ကဟာ",
+    "l": 2
+  },
+  {
+    "jp": "この～",
+    "rd": "この～",
+    "rom": "kono ~",
+    "en": "this ~",
+    "my": "ဒီ--",
+    "l": 2
+  },
+  {
+    "jp": "その～",
+    "rd": "その～",
+    "rom": "sono ~",
+    "en": "that ~",
+    "my": "ဟို--",
+    "l": 2
+  },
+  {
+    "jp": "あの～",
+    "rd": "あの～",
+    "rom": "ano ~",
+    "en": "that ~ (over there)",
+    "my": "ဟို့--",
+    "l": 2
+  },
+  {
+    "jp": "本",
+    "rd": "ほん",
+    "rom": "hon",
+    "en": "book",
+    "my": "စာအုပ်",
+    "l": 2
+  },
+  {
+    "jp": "辞書",
+    "rd": "じしょ",
+    "rom": "jisho",
+    "en": "dictionary",
+    "my": "အဘိဓာန်",
+    "l": 2
+  },
+  {
+    "jp": "雑誌",
+    "rd": "ざっし",
+    "rom": "zasshi",
+    "en": "magazine",
+    "my": "မဂ္ဂဇင်း",
+    "l": 2
+  },
+  {
+    "jp": "新聞",
+    "rd": "しんぶん",
+    "rom": "shinbun",
+    "en": "newspaper",
+    "my": "သတင်းစာ",
+    "l": 2
+  },
+  {
+    "jp": "ノート",
+    "rd": "ノート",
+    "rom": "nooto",
+    "en": "notebook",
+    "my": "မှတ်စုစာအုပ်",
+    "l": 2
+  },
+  {
+    "jp": "手帳",
+    "rd": "てちょう",
+    "rom": "techou",
+    "en": "pocket notebook; diary",
+    "my": "နေ့စဉ်မှတ်တမ်း",
+    "l": 2
+  },
+  {
+    "jp": "名刺",
+    "rd": "めいし",
+    "rom": "meishi",
+    "en": "business card",
+    "my": "လိပ်စာကတ်",
+    "l": 2
+  },
+  {
+    "jp": "カード",
+    "rd": "カード",
+    "rom": "kaado",
+    "en": "card",
+    "my": "ကတ်",
+    "l": 2
+  },
+  {
+    "jp": "鉛筆",
+    "rd": "えんぴつ",
+    "rom": "enpitsu",
+    "en": "pencil",
+    "my": "ခဲတံ",
+    "l": 2
+  },
+  {
+    "jp": "ボールペン",
+    "rd": "ボールペン",
+    "rom": "boorupen",
+    "en": "ballpoint pen",
+    "my": "ဘောပင်",
+    "l": 2
+  },
+  {
+    "jp": "シャープペンシル",
+    "rd": "シャープペンシル",
+    "rom": "shaapu penshiru",
+    "en": "mechanical pencil",
+    "my": "ဘောပင်ခဲတံ",
+    "l": 2
+  },
+  {
+    "jp": "かぎ",
+    "rd": "かぎ",
+    "rom": "kagi",
+    "en": "key",
+    "my": "သော့",
+    "l": 2
+  },
+  {
+    "jp": "時計",
+    "rd": "とけい",
+    "rom": "tokei",
+    "en": "clock; watch",
+    "my": "နာရီ",
+    "l": 2
+  },
+  {
+    "jp": "傘",
+    "rd": "かさ",
+    "rom": "kasa",
+    "en": "umbrella",
+    "my": "ထီး",
+    "l": 2
+  },
+  {
+    "jp": "かばん",
+    "rd": "かばん",
+    "rom": "kaban",
+    "en": "bag",
+    "my": "အိတ်၊ လက်ဆွဲအိတ်",
+    "l": 2
+  },
+  {
+    "jp": "CD",
+    "rd": "CD",
+    "rom": "shiidii",
+    "en": "CD",
+    "my": "စီဒီ",
+    "l": 2
+  },
+  {
+    "jp": "テレビ",
+    "rd": "テレビ",
+    "rom": "terebi",
+    "en": "television; TV",
+    "my": "တီဗီ",
+    "l": 2
+  },
+  {
+    "jp": "ラジオ",
+    "rd": "ラジオ",
+    "rom": "rajio",
+    "en": "radio",
+    "my": "ရေဒီယို",
+    "l": 2
+  },
+  {
+    "jp": "カメラ",
+    "rd": "カメラ",
+    "rom": "kamera",
+    "en": "camera",
+    "my": "ကင်မရာ",
+    "l": 2
+  },
+  {
+    "jp": "コンピュータ",
+    "rd": "コンピュータ",
+    "rom": "konpyuuta",
+    "en": "computer",
+    "my": "ကွန်ပျူတာ",
+    "l": 2
+  },
+  {
+    "jp": "車",
+    "rd": "くるま",
+    "rom": "kuruma",
+    "en": "car",
+    "my": "ကား၊ ယာဉ်",
+    "l": 2
+  },
+  {
+    "jp": "机",
+    "rd": "つくえ",
+    "rom": "tsukue",
+    "en": "desk",
+    "my": "စားပွဲခုံ",
+    "l": 2
+  },
+  {
+    "jp": "椅子",
+    "rd": "いす",
+    "rom": "isu",
+    "en": "chair",
+    "my": "ထိုင်ခုံ",
+    "l": 2
+  },
+  {
+    "jp": "チョコレート",
+    "rd": "チョコレート",
+    "rom": "chokoreeto",
+    "en": "chocolate",
+    "my": "ချောကလက်",
+    "l": 2
+  },
+  {
+    "jp": "コーヒー",
+    "rd": "コーヒー",
+    "rom": "koohii",
+    "en": "coffee",
+    "my": "ကော်ဖီ",
+    "l": 2
+  },
+  {
+    "jp": "[お]みやげ",
+    "rd": "[お]みやげ",
+    "rom": "[o]miyage",
+    "en": "souvenir",
+    "my": "ဒေသထွက် လက်ဆောင်",
+    "l": 2
+  },
+  {
+    "jp": "英語",
+    "rd": "えいご",
+    "rom": "eigo",
+    "en": "English (language)",
+    "my": "အင်္ဂလိပ်စာ၊ စကား",
+    "l": 2
+  },
+  {
+    "jp": "日本語",
+    "rd": "にほんご",
+    "rom": "nihongo",
+    "en": "Japanese (language)",
+    "my": "ဂျပန်စာ၊ စကား",
+    "l": 2
+  },
+  {
+    "jp": "～語",
+    "rd": "～ご",
+    "rom": "~go",
+    "en": "~ language",
+    "my": "～စာ၊ ～စကား",
+    "l": 2
+  },
+  {
+    "jp": "何",
+    "rd": "なに",
+    "rom": "nani",
+    "en": "what",
+    "my": "ဘာ (မေးခွန်းမေးရာတွင်သုံး)",
+    "l": 2
+  },
+  {
+    "jp": "そう",
+    "rd": "そう",
+    "rom": "sou",
+    "en": "so; like that",
+    "my": "ဟုတ်လား၊ ဒီလိုလား",
+    "l": 2
+  },
+  {
+    "jp": "あのう",
+    "rd": "あのう",
+    "rom": "anou",
+    "en": "um; well (hesitation)",
+    "my": "ဟိုလေ--",
+    "l": 2
+  },
+  {
+    "jp": "えっ",
+    "rd": "えっ",
+    "rom": "e'",
+    "en": "eh?; what?",
+    "my": "ဟယ်။ ဘာလဲ (မျှော်လင့်မထားသော အရာကို ကြားသောအခါ)",
+    "l": 2
+  },
+  {
+    "jp": "どうぞ",
+    "rd": "どうぞ",
+    "rom": "douzo",
+    "en": "please; here you are",
+    "my": "ယူပါ။ လုပ်ပါ (please)",
+    "l": 2
+  },
+  {
+    "jp": "どうも",
+    "rd": "どうも",
+    "rom": "doumo",
+    "en": "thanks; somehow",
+    "my": "ကျေးဇူးပါ",
+    "l": 2
+  },
+  {
+    "jp": "どうも ありがとう ございます。",
+    "rd": "どうも ありがとう ございます。",
+    "rom": "doumo arigatou gozaimasu.",
+    "en": "thank you very much",
+    "my": "ကျေးဇူးတင်ပါသည်",
+    "l": 2
+  },
+  {
+    "jp": "そうですか",
+    "rd": "そうですか",
+    "rom": "sou desu ka",
+    "en": "I see; is that so?",
+    "my": "ဟုတ်လား။ နားလည်ပါပြီ",
+    "l": 2
+  },
+  {
+    "jp": "違います。",
+    "rd": "ちがいます。",
+    "rom": "chigaimasu.",
+    "en": "No, that's wrong.",
+    "my": "မဟုတ်ပါဘူး",
+    "l": 2
+  },
+  {
+    "jp": "あ",
+    "rd": "あ",
+    "rom": "a",
+    "en": "ah!; oh!",
+    "my": "ဟာ (တစ်စုံတစ်ခုကိုထူးဆန်းသောအခါ)",
+    "l": 2
+  },
+  {
+    "jp": "これから お世話に なります",
+    "rd": "これから おせわに なります",
+    "rom": "kore kara osewa ni narimasu",
+    "en": "I look forward to working with you; please take care of me",
+    "my": "အစစအရာအရာ ကူညီဖေးမပေးပါ။",
+    "l": 2
+  },
+  {
+    "jp": "こちらこそ [どうぞ]よろしく[お願い]します",
+    "rd": "こちらこそ [どうぞ]よろしく[おねがい]します",
+    "rom": "kochira koso [douzo] yoroshiku [onegai] shimasu",
+    "en": "Likewise, pleased to meet you",
+    "my": "ကျွန်တော်ကိုလည်း မိတ်ဆွေအဖြစ် အသိအမှတ်ပြုပါ။",
+    "l": 2
+  },
+  {
+    "jp": "ここ",
+    "rd": "ここ",
+    "rom": "koko",
+    "en": "here; this place",
+    "my": "ဒီမှာ၊ ဒီနေရာ",
+    "l": 3
+  },
+  {
+    "jp": "そこ",
+    "rd": "そこ",
+    "rom": "soko",
+    "en": "there (near you)",
+    "my": "ဟိုမှာ၊ ဟိုနေရာ",
+    "l": 3
+  },
+  {
+    "jp": "あそこ",
+    "rd": "あそこ",
+    "rom": "asoko",
+    "en": "over there",
+    "my": "ဟို့မှာ၊ ဟို့နေရာ",
+    "l": 3
+  },
+  {
+    "jp": "どこ",
+    "rd": "どこ",
+    "rom": "doko",
+    "en": "where",
+    "my": "ဘယ်မှာလဲ",
+    "l": 3
+  },
+  {
+    "jp": "こちら",
+    "rd": "こちら",
+    "rom": "kochira",
+    "en": "this way; here",
+    "my": "ဒီမှာ၊ ဒီဘက်မှာ",
+    "l": 3
+  },
+  {
+    "jp": "そちら",
+    "rd": "そちら",
+    "rom": "sochira",
+    "en": "that way; there (near you)",
+    "my": "ဟိုမှာ၊ ဟိုဘက်မှာ",
+    "l": 3
+  },
+  {
+    "jp": "あちら",
+    "rd": "あちら",
+    "rom": "achira",
+    "en": "that way; over there",
+    "my": "ဟို့မှာ၊ ဟို့ဘက်မှာ",
+    "l": 3
+  },
+  {
+    "jp": "どちら",
+    "rd": "どちら",
+    "rom": "dochira",
+    "en": "which (of two); where (polite)",
+    "my": "ဘယ်မှာလဲ၊ ဘယ်ဘက်မှာလဲ",
+    "l": 3
+  },
+  {
+    "jp": "教室",
+    "rd": "きょうしつ",
+    "rom": "kyoushitsu",
+    "en": "classroom",
+    "my": "စာသင်ခန်း",
+    "l": 3
+  },
+  {
+    "jp": "食堂",
+    "rd": "しょくどう",
+    "rom": "shokudou",
+    "en": "cafeteria; dining hall",
+    "my": "ထမင်းဆိုင်၊ ထမင်းစားတဲ့နေရာ",
+    "l": 3
+  },
+  {
+    "jp": "事務所",
+    "rd": "じむしょ",
+    "rom": "jimusho",
+    "en": "office",
+    "my": "ရုံးခန်း",
+    "l": 3
+  },
+  {
+    "jp": "会議室",
+    "rd": "かいぎしつ",
+    "rom": "kaigishitsu",
+    "en": "meeting room",
+    "my": "အစည်းအဝေးခန်း",
+    "l": 3
+  },
+  {
+    "jp": "受付",
+    "rd": "うけつけ",
+    "rom": "uketsuke",
+    "en": "reception (desk)",
+    "my": "စုံစမ်းရန်ကောင်းတာ",
+    "l": 3
+  },
+  {
+    "jp": "ロビー",
+    "rd": "ロビー",
+    "rom": "robii",
+    "en": "lobby",
+    "my": "ဧည့်ခန်း၊ ဟိုတယ်ဧည့်ခန်း",
+    "l": 3
+  },
+  {
+    "jp": "部屋",
+    "rd": "へや",
+    "rom": "heya",
+    "en": "room",
+    "my": "အခန်း",
+    "l": 3
+  },
+  {
+    "jp": "トイレ",
+    "rd": "トイレ",
+    "rom": "toire",
+    "en": "toilet; restroom",
+    "my": "အိမ်သာ",
+    "l": 3
+  },
+  {
+    "jp": "お手洗い",
+    "rd": "おてあらい",
+    "rom": "otearai",
+    "en": "toilet; restroom (polite)",
+    "my": "အိမ်သာ",
+    "l": 3
+  },
+  {
+    "jp": "階段",
+    "rd": "かいだん",
+    "rom": "kaidan",
+    "en": "stairs; staircase",
+    "my": "လှေခါး",
+    "l": 3
+  },
+  {
+    "jp": "エレベーター",
+    "rd": "エレベーター",
+    "rom": "erebeetaa",
+    "en": "elevator; lift",
+    "my": "ဓာတ်လှေခါး",
+    "l": 3
+  },
+  {
+    "jp": "エスカレーター",
+    "rd": "エスカレーター",
+    "rom": "esukareetaa",
+    "en": "escalator",
+    "my": "စက်လှေခါး",
+    "l": 3
+  },
+  {
+    "jp": "自動販売機",
+    "rd": "じどうはんばいき",
+    "rom": "jidouhanbaiki",
+    "en": "vending machine",
+    "my": "အလိုအလျောက် စျေးရောင်းသည့်စက်",
+    "l": 3
+  },
+  {
+    "jp": "電話",
+    "rd": "でんわ",
+    "rom": "denwa",
+    "en": "telephone",
+    "my": "တယ်လီဖုန်း",
+    "l": 3
+  },
+  {
+    "jp": "お国",
+    "rd": "おくに",
+    "rom": "okuni",
+    "en": "(your) country",
+    "my": "နိုင်ငံ",
+    "l": 3
+  },
+  {
+    "jp": "会社",
+    "rd": "かいしゃ",
+    "rom": "kaisha",
+    "en": "company",
+    "my": "ကုမ္ပဏီ",
+    "l": 3
+  },
+  {
+    "jp": "うち",
+    "rd": "うち",
+    "rom": "uchi",
+    "en": "home; house",
+    "my": "အိမ်",
+    "l": 3
+  },
+  {
+    "jp": "靴",
+    "rd": "くつ",
+    "rom": "kutsu",
+    "en": "shoes",
+    "my": "ဖိနပ်",
+    "l": 3
+  },
+  {
+    "jp": "ネクタイ",
+    "rd": "ネクタイ",
+    "rom": "nekutai",
+    "en": "necktie",
+    "my": "လည်စည်း",
+    "l": 3
+  },
+  {
+    "jp": "ワイン",
+    "rd": "ワイン",
+    "rom": "wain",
+    "en": "wine",
+    "my": "ဝိုင်",
+    "l": 3
+  },
+  {
+    "jp": "売り場",
+    "rd": "うりば",
+    "rom": "uriba",
+    "en": "sales floor; counter",
+    "my": "အရောင်းကောင်တာ",
+    "l": 3
+  },
+  {
+    "jp": "地下",
+    "rd": "ちか",
+    "rom": "chika",
+    "en": "basement; underground",
+    "my": "မြေအောက်",
+    "l": 3
+  },
+  {
+    "jp": "～階",
+    "rd": "～かい",
+    "rom": "~kai",
+    "en": "~th floor",
+    "my": "အထပ်",
+    "l": 3
+  },
+  {
+    "jp": "何階",
+    "rd": "なんかい",
+    "rom": "nankai",
+    "en": "which floor",
+    "my": "ဘယ်နှစ်ထပ်",
+    "l": 3
+  },
+  {
+    "jp": "円",
+    "rd": "えん",
+    "rom": "en",
+    "en": "yen",
+    "my": "ဂျပန်ပိုက်ဆံ ယန်း",
+    "l": 3
+  },
+  {
+    "jp": "いくら",
+    "rd": "いくら",
+    "rom": "ikura",
+    "en": "how much",
+    "my": "ဘယ်လောက်လဲ",
+    "l": 3
+  },
+  {
+    "jp": "百",
+    "rd": "ひゃく",
+    "rom": "hyaku",
+    "en": "hundred",
+    "my": "တစ်ရာ",
+    "l": 3
+  },
+  {
+    "jp": "千",
+    "rd": "せん",
+    "rom": "sen",
+    "en": "thousand",
+    "my": "တစ်ထောင်",
+    "l": 3
+  },
+  {
+    "jp": "万",
+    "rd": "まん",
+    "rom": "man",
+    "en": "ten thousand",
+    "my": "တစ်သောင်း",
+    "l": 3
+  },
+  {
+    "jp": "すみません",
+    "rd": "すみません",
+    "rom": "sumimasen",
+    "en": "excuse me; sorry",
+    "my": "တောင်းပန်ပါတယ်၊ စိတ်မရှိပါနဲ့။ တစ်ဆိတ်လောက်",
+    "l": 3
+  },
+  {
+    "jp": "どうも",
+    "rd": "どうも",
+    "rom": "doumo",
+    "en": "thanks",
+    "my": "ကျေးဇူးပါ။",
+    "l": 3
+  },
+  {
+    "jp": "いらっしゃいませ",
+    "rd": "いらっしゃいませ",
+    "rom": "irasshaimase",
+    "en": "welcome (to a shop)",
+    "my": "ကြိုဆိုပါတယ်",
+    "l": 3
+  },
+  {
+    "jp": "[～を]見せてください",
+    "rd": "[～を]みせてください",
+    "rom": "[~o] misete kudasai",
+    "en": "please show me ~",
+    "my": "(ကို) ပြပါ",
+    "l": 3
+  },
+  {
+    "jp": "じゃ",
+    "rd": "じゃ",
+    "rom": "ja",
+    "en": "well then; then",
+    "my": "ကဲ-",
+    "l": 3
+  },
+  {
+    "jp": "[～を]ください",
+    "rd": "[～を]ください",
+    "rom": "[~o] kudasai",
+    "en": "please give me ~",
+    "my": "(ကို) ပေးပါ",
+    "l": 3
+  },
+  {
+    "jp": "イタリア",
+    "rd": "イタリア",
+    "rom": "itaria",
+    "en": "Italy",
+    "my": "အီတလီ",
+    "l": 3
+  },
+  {
+    "jp": "スイス",
+    "rd": "スイス",
+    "rom": "suisu",
+    "en": "Switzerland",
+    "my": "ဆွစ်ဇာလန်",
+    "l": 3
+  },
+  {
+    "jp": "フランス",
+    "rd": "フランス",
+    "rom": "furansu",
+    "en": "France",
+    "my": "ပြင်သစ်",
+    "l": 3
+  },
+  {
+    "jp": "ジャカルタ",
+    "rd": "ジャカルタ",
+    "rom": "jakaruta",
+    "en": "Jakarta",
+    "my": "ဂျကာတာ",
+    "l": 3
+  },
+  {
+    "jp": "バンコク",
+    "rd": "バンコク",
+    "rom": "bankoku",
+    "en": "Bangkok",
+    "my": "ဘန်ကောက်",
+    "l": 3
+  },
+  {
+    "jp": "ベルリン",
+    "rd": "ベルリン",
+    "rom": "berurin",
+    "en": "Berlin",
+    "my": "ဘာလင်",
+    "l": 3
+  },
+  {
+    "jp": "新大阪",
+    "rd": "しんおおさか",
+    "rom": "shin-oosaka",
+    "en": "Shin-Osaka",
+    "my": "ရှင်းအိုဆာကာ",
+    "l": 3
+  },
+  {
+    "jp": "起きます",
+    "rd": "おきます",
+    "rom": "okimasu",
+    "en": "to get up; to wake up",
+    "my": "ထသည်။ နိုးသည်။",
+    "l": 4
+  },
+  {
+    "jp": "寝ます",
+    "rd": "ねます",
+    "rom": "nemasu",
+    "en": "to sleep; to go to bed",
+    "my": "အိပ်သည်။",
+    "l": 4
+  },
+  {
+    "jp": "働きます",
+    "rd": "はたらきます",
+    "rom": "hatarakimasu",
+    "en": "to work",
+    "my": "အလုပ်လုပ်သည်။",
+    "l": 4
+  },
+  {
+    "jp": "休みます",
+    "rd": "やすみます",
+    "rom": "yasumimasu",
+    "en": "to rest; to take a day off",
+    "my": "အနားယူသည်။",
+    "l": 4
+  },
+  {
+    "jp": "勉強します",
+    "rd": "べんきょうします",
+    "rom": "benkyou shimasu",
+    "en": "to study",
+    "my": "စာကျက်သည်။",
+    "l": 4
+  },
+  {
+    "jp": "終わります",
+    "rd": "おわります",
+    "rom": "owarimasu",
+    "en": "to finish; to end",
+    "my": "ပြီးဆုံးသည်။",
+    "l": 4
+  },
+  {
+    "jp": "デパート",
+    "rd": "デパート",
+    "rom": "depaato",
+    "en": "department store",
+    "my": "ကုန်တိုက်",
+    "l": 4
+  },
+  {
+    "jp": "銀行",
+    "rd": "ぎんこう",
+    "rom": "ginkou",
+    "en": "bank",
+    "my": "ဘဏ်",
+    "l": 4
+  },
+  {
+    "jp": "郵便局",
+    "rd": "ゆうびんきょく",
+    "rom": "yuubin kyoku",
+    "en": "post office",
+    "my": "စာတိုက်",
+    "l": 4
+  },
+  {
+    "jp": "図書館",
+    "rd": "としょかん",
+    "rom": "toshokan",
+    "en": "library",
+    "my": "စာကြည့်တိုက်",
+    "l": 4
+  },
+  {
+    "jp": "美術館",
+    "rd": "びじゅつかん",
+    "rom": "bijutsukan",
+    "en": "art museum",
+    "my": "အနုပညာပြတိုက်",
+    "l": 4
+  },
+  {
+    "jp": "今",
+    "rd": "いま",
+    "rom": "ima",
+    "en": "now",
+    "my": "အခု",
+    "l": 4
+  },
+  {
+    "jp": "～時",
+    "rd": "～じ",
+    "rom": "~ji",
+    "en": "~ o'clock",
+    "my": "～နာရီ",
+    "l": 4
+  },
+  {
+    "jp": "～ふん",
+    "rd": "～ふん",
+    "rom": "~fun",
+    "en": "~ minutes",
+    "my": "မိနစ်",
+    "l": 4
+  },
+  {
+    "jp": "～ぷん",
+    "rd": "～ぷん",
+    "rom": "~pun",
+    "en": "~ minutes",
+    "my": "မိနစ်",
+    "l": 4
+  },
+  {
+    "jp": "半",
+    "rd": "はん",
+    "rom": "han",
+    "en": "half (past the hour)",
+    "my": "တစ်ဝက်",
+    "l": 4
+  },
+  {
+    "jp": "何時",
+    "rd": "なんじ",
+    "rom": "nanji",
+    "en": "what time",
+    "my": "ဘယ်နှစ်နာရီ၊ ဘယ်အချိန်",
+    "l": 4
+  },
+  {
+    "jp": "何分",
+    "rd": "なんぷん",
+    "rom": "nanpun",
+    "en": "how many minutes",
+    "my": "ဘယ်နှစ်မိနစ်",
+    "l": 4
+  },
+  {
+    "jp": "午前",
+    "rd": "ごぜん",
+    "rom": "gozen",
+    "en": "morning; a.m.",
+    "my": "မနက်ပိုင်း am",
+    "l": 4
+  },
+  {
+    "jp": "午後",
+    "rd": "ごご",
+    "rom": "gogo",
+    "en": "afternoon; p.m.",
+    "my": "နေ့ခင်းပိုင်း၊ ညနေပိုင်း pm",
+    "l": 4
+  },
+  {
+    "jp": "朝",
+    "rd": "あさ",
+    "rom": "asa",
+    "en": "morning",
+    "my": "မနက်",
+    "l": 4
+  },
+  {
+    "jp": "昼",
+    "rd": "ひる",
+    "rom": "hiru",
+    "en": "daytime; noon",
+    "my": "နေ့လည်",
+    "l": 4
+  },
+  {
+    "jp": "晩/夜",
+    "rd": "ばん/よる",
+    "rom": "ban/yoru",
+    "en": "evening; night",
+    "my": "ည",
+    "l": 4
+  },
+  {
+    "jp": "おととい",
+    "rd": "おととい",
+    "rom": "ototoi",
+    "en": "day before yesterday",
+    "my": "တစ်နေ့က",
+    "l": 4
+  },
+  {
+    "jp": "きのう",
+    "rd": "きのう",
+    "rom": "kinou",
+    "en": "yesterday",
+    "my": "မနေ့က",
+    "l": 4
+  },
+  {
+    "jp": "今日",
+    "rd": "きょう",
+    "rom": "kyou",
+    "en": "today",
+    "my": "ဒီနေ့",
+    "l": 4
+  },
+  {
+    "jp": "明日",
+    "rd": "あした",
+    "rom": "ashita",
+    "en": "tomorrow",
+    "my": "မနက်ဖန်",
+    "l": 4
+  },
+  {
+    "jp": "あさって",
+    "rd": "あさって",
+    "rom": "asatte",
+    "en": "day after tomorrow",
+    "my": "သဘက်ခါ",
+    "l": 4
+  },
+  {
+    "jp": "今朝",
+    "rd": "けさ",
+    "rom": "kesa",
+    "en": "this morning",
+    "my": "ဒီမနက်",
+    "l": 4
+  },
+  {
+    "jp": "今晩",
+    "rd": "こんばん",
+    "rom": "konban",
+    "en": "tonight; this evening",
+    "my": "ဒီည",
+    "l": 4
+  },
+  {
+    "jp": "休み",
+    "rd": "やすみ",
+    "rom": "yasumi",
+    "en": "holiday; day off",
+    "my": "နားရက်၊ အားလပ်ရက်",
+    "l": 4
+  },
+  {
+    "jp": "昼休み",
+    "rd": "ひるやすみ",
+    "rom": "hiruyasumi",
+    "en": "lunch break",
+    "my": "နေ့လည်နားချိန်",
+    "l": 4
+  },
+  {
+    "jp": "試験",
+    "rd": "しけん",
+    "rom": "shiken",
+    "en": "exam; test",
+    "my": "စာမေးပွဲ",
+    "l": 4
+  },
+  {
+    "jp": "会議",
+    "rd": "かいぎ",
+    "rom": "kaigi",
+    "en": "meeting; conference",
+    "my": "အစည်းအဝေး",
+    "l": 4
+  },
+  {
+    "jp": "映画",
+    "rd": "えいが",
+    "rom": "eiga",
+    "en": "movie; film",
+    "my": "ရုပ်ရှင်",
+    "l": 4
+  },
+  {
+    "jp": "毎朝",
+    "rd": "まいあさ",
+    "rom": "maiasa",
+    "en": "every morning",
+    "my": "မနက်တိုင်း",
+    "l": 4
+  },
+  {
+    "jp": "毎晩",
+    "rd": "まいばん",
+    "rom": "maiban",
+    "en": "every evening",
+    "my": "ညတိုင်း",
+    "l": 4
+  },
+  {
+    "jp": "毎日",
+    "rd": "まいにち",
+    "rom": "mainichi",
+    "en": "every day",
+    "my": "နေ့တိုင်း",
+    "l": 4
+  },
+  {
+    "jp": "月曜日",
+    "rd": "げつようび",
+    "rom": "getsuyoubi",
+    "en": "Monday",
+    "my": "တနင်္လာနေ့",
+    "l": 4
+  },
+  {
+    "jp": "火曜日",
+    "rd": "かようび",
+    "rom": "kayoubi",
+    "en": "Tuesday",
+    "my": "အင်္ဂါနေ့",
+    "l": 4
+  },
+  {
+    "jp": "水曜日",
+    "rd": "すいようび",
+    "rom": "suiyoubi",
+    "en": "Wednesday",
+    "my": "ဗုဒ္ဓဟူးနေ့",
+    "l": 4
+  },
+  {
+    "jp": "木曜日",
+    "rd": "もくようび",
+    "rom": "mokuyoubi",
+    "en": "Thursday",
+    "my": "ကြာသပတေးနေ့",
+    "l": 4
+  },
+  {
+    "jp": "金曜日",
+    "rd": "きんようび",
+    "rom": "kinyoubi",
+    "en": "Friday",
+    "my": "သောကြာနေ့",
+    "l": 4
+  },
+  {
+    "jp": "土曜日",
+    "rd": "どようび",
+    "rom": "doyoubi",
+    "en": "Saturday",
+    "my": "စနေနေ့",
+    "l": 4
+  },
+  {
+    "jp": "日曜日",
+    "rd": "にちようび",
+    "rom": "nichiyoubi",
+    "en": "Sunday",
+    "my": "တနင်္ဂနွေနေ့",
+    "l": 4
+  },
+  {
+    "jp": "何曜日",
+    "rd": "なんようび",
+    "rom": "nanyoubi",
+    "en": "what day of the week",
+    "my": "ဘာနေ့",
+    "l": 4
+  },
+  {
+    "jp": "～から",
+    "rd": "～から",
+    "rom": "~kara",
+    "en": "from ~",
+    "my": "～မှ",
+    "l": 4
+  },
+  {
+    "jp": "～まで",
+    "rd": "～まで",
+    "rom": "~made",
+    "en": "until ~; to ~",
+    "my": "～အထိ",
+    "l": 4
+  },
+  {
+    "jp": "～と～",
+    "rd": "～と～",
+    "rom": "~to~",
+    "en": "and; with",
+    "my": "～နှင့်",
+    "l": 4
+  },
+  {
+    "jp": "大変ですね",
+    "rd": "たいへんですね",
+    "rom": "taihen desu ne",
+    "en": "That's tough, isn't it?",
+    "my": "ဒုက္ခများမှာဘဲနော်",
+    "l": 4
+  },
+  {
+    "jp": "番号",
+    "rd": "ばんごう",
+    "rom": "bangou",
+    "en": "number",
+    "my": "နံပါတ်",
+    "l": 4
+  },
+  {
+    "jp": "何番",
+    "rd": "なんばん",
+    "rom": "nanban",
+    "en": "what number",
+    "my": "ဘာနံပါတ်",
+    "l": 4
+  },
+  {
+    "jp": "そちら",
+    "rd": "そちら",
+    "rom": "sochira",
+    "en": "there (near you); that way",
+    "my": "အဲဒီမှာ၊ အဲဒီဘက်မှာ",
+    "l": 4
+  },
+  {
+    "jp": "ニューヨーク",
+    "rd": "ニューヨーク",
+    "rom": "nyuuyooku",
+    "en": "New York",
+    "my": "နယူးယောက်မြို့",
+    "l": 4
+  },
+  {
+    "jp": "ペキン",
+    "rd": "ペキン",
+    "rom": "pekin",
+    "en": "Beijing",
+    "my": "ပီကင်းမြို့",
+    "l": 4
+  },
+  {
+    "jp": "ロサンゼルス",
+    "rd": "ロサンゼルス",
+    "rom": "rosanzerusu",
+    "en": "Los Angeles",
+    "my": "လော့စ်အိန်ဂျယ်လိစ်မြို့",
+    "l": 4
+  },
+  {
+    "jp": "ロンドン",
+    "rd": "ロンドン",
+    "rom": "rondon",
+    "en": "London",
+    "my": "လန်ဒန်မြို့",
+    "l": 4
+  },
+  {
+    "jp": "あすか",
+    "rd": "あすか",
+    "rom": "asuka",
+    "en": "Asuka (restaurant name)",
+    "my": "Asuka စားသောက်ဆိုင်",
+    "l": 4
+  },
+  {
+    "jp": "アップル銀行",
+    "rd": "アップルぎんこう",
+    "rom": "appuru ginkou",
+    "en": "Apple Bank",
+    "my": "Apple ဘဏ်",
+    "l": 4
+  },
+  {
+    "jp": "みどり図書館",
+    "rd": "みどりとしょかん",
+    "rom": "midori toshokan",
+    "en": "Midori Library",
+    "my": "Midori စာကြည့်တိုက်",
+    "l": 4
+  },
+  {
+    "jp": "やまと美術館",
+    "rd": "やまとびじゅつかん",
+    "rom": "yamato bijutsukan",
+    "en": "Yamato Art Museum",
+    "my": "Yamato အနုပညာပြတိုက်",
+    "l": 4
+  },
+  {
+    "jp": "行きます",
+    "rd": "いきます",
+    "rom": "ikimasu",
+    "en": "to go",
+    "my": "သွားသည်",
+    "l": 5
+  },
+  {
+    "jp": "来ます",
+    "rd": "きます",
+    "rom": "kimasu",
+    "en": "to come",
+    "my": "လာသည်",
+    "l": 5
+  },
+  {
+    "jp": "帰ります",
+    "rd": "かえります",
+    "rom": "kaerimasu",
+    "en": "to go home; to return",
+    "my": "ပြန်သည် (အိမ်ပြန်သည်)",
+    "l": 5
+  },
+  {
+    "jp": "学校",
+    "rd": "がっこう",
+    "rom": "gakkou",
+    "en": "school",
+    "my": "စာသင်ကျောင်း",
+    "l": 5
+  },
+  {
+    "jp": "スーパー",
+    "rd": "スーパー",
+    "rom": "suupaa",
+    "en": "supermarket",
+    "my": "super market",
+    "l": 5
+  },
+  {
+    "jp": "駅",
+    "rd": "えき",
+    "rom": "eki",
+    "en": "station",
+    "my": "ဘူတာ",
+    "l": 5
+  },
+  {
+    "jp": "飛行機",
+    "rd": "ひこうき",
+    "rom": "hikouki",
+    "en": "airplane",
+    "my": "လေယာဉ်ပျံ",
+    "l": 5
+  },
+  {
+    "jp": "船",
+    "rd": "ふね",
+    "rom": "fune",
+    "en": "boat; ship",
+    "my": "သင်္ဘော",
+    "l": 5
+  },
+  {
+    "jp": "電車",
+    "rd": "でんしゃ",
+    "rom": "densha",
+    "en": "(electric) train",
+    "my": "လျှပ်စစ်ရထား",
+    "l": 5
+  },
+  {
+    "jp": "地下鉄",
+    "rd": "ちかてつ",
+    "rom": "chikatetsu",
+    "en": "subway",
+    "my": "မြေအောက်ရထား",
+    "l": 5
+  },
+  {
+    "jp": "新幹線",
+    "rd": "しんかんせん",
+    "rom": "shinkansen",
+    "en": "bullet train",
+    "my": "ကျည်ဆံရထား",
+    "l": 5
+  },
+  {
+    "jp": "バス",
+    "rd": "バス",
+    "rom": "basu",
+    "en": "bus",
+    "my": "ဘတ်စ်ကား",
+    "l": 5
+  },
+  {
+    "jp": "タクシー",
+    "rd": "タクシー",
+    "rom": "takushii",
+    "en": "taxi",
+    "my": "တက္ကစီ",
+    "l": 5
+  },
+  {
+    "jp": "自転車",
+    "rd": "じてんしゃ",
+    "rom": "jitensha",
+    "en": "bicycle",
+    "my": "စက်ဘီး",
+    "l": 5
+  },
+  {
+    "jp": "歩いて",
+    "rd": "あるいて",
+    "rom": "aruite",
+    "en": "on foot; walking",
+    "my": "လမ်းလျှောက်ပြီး",
+    "l": 5
+  },
+  {
+    "jp": "人",
+    "rd": "ひと",
+    "rom": "hito",
+    "en": "person; people",
+    "my": "လူ",
+    "l": 5
+  },
+  {
+    "jp": "友達",
+    "rd": "ともだち",
+    "rom": "tomodachi",
+    "en": "friend",
+    "my": "သူငယ်ချင်း",
+    "l": 5
+  },
+  {
+    "jp": "彼",
+    "rd": "かれ",
+    "rom": "kare",
+    "en": "he; boyfriend",
+    "my": "သူချစ်သူ",
+    "l": 5
+  },
+  {
+    "jp": "彼女",
+    "rd": "かのじょ",
+    "rom": "kanojo",
+    "en": "she; girlfriend",
+    "my": "သူမ/ချစ်သူ",
+    "l": 5
+  },
+  {
+    "jp": "家族",
+    "rd": "かぞく",
+    "rom": "kazoku",
+    "en": "family",
+    "my": "မိသားစု",
+    "l": 5
+  },
+  {
+    "jp": "一人",
+    "rd": "ひとり",
+    "rom": "hitori",
+    "en": "alone; one person",
+    "my": "တစ်ယောက်တည်း",
+    "l": 5
+  },
+  {
+    "jp": "先週",
+    "rd": "せんしゅう",
+    "rom": "senshuu",
+    "en": "last week",
+    "my": "ပြီးခဲ့တဲ့ အပတ်",
+    "l": 5
+  },
+  {
+    "jp": "今週",
+    "rd": "こんしゅう",
+    "rom": "konshuu",
+    "en": "this week",
+    "my": "အခု အပတ်",
+    "l": 5
+  },
+  {
+    "jp": "来週",
+    "rd": "らいしゅう",
+    "rom": "raishuu",
+    "en": "next week",
+    "my": "လာမဲ့ အပတ်",
+    "l": 5
+  },
+  {
+    "jp": "先月",
+    "rd": "せんげつ",
+    "rom": "sengetsu",
+    "en": "last month",
+    "my": "ပြီးခဲ့တဲ့ လ",
+    "l": 5
+  },
+  {
+    "jp": "今月",
+    "rd": "こんげつ",
+    "rom": "kongetsu",
+    "en": "this month",
+    "my": "ဒီလ",
+    "l": 5
+  },
+  {
+    "jp": "来月",
+    "rd": "らいげつ",
+    "rom": "raigetsu",
+    "en": "next month",
+    "my": "လာမဲ့ လ (နောက်လ)",
+    "l": 5
+  },
+  {
+    "jp": "去年",
+    "rd": "きょねん",
+    "rom": "kyonen",
+    "en": "last year",
+    "my": "မနှစ်က (ပြီးခဲ့တဲ့ နှစ်)",
+    "l": 5
+  },
+  {
+    "jp": "今年",
+    "rd": "ことし",
+    "rom": "kotoshi",
+    "en": "this year",
+    "my": "ဒီနှစ်",
+    "l": 5
+  },
+  {
+    "jp": "来年",
+    "rd": "らいねん",
+    "rom": "rainen",
+    "en": "next year",
+    "my": "နောက်နှစ်၊ နောင်နှစ်",
+    "l": 5
+  },
+  {
+    "jp": "～年",
+    "rd": "～ねん",
+    "rom": "~nen",
+    "en": "year ~",
+    "my": "～နှစ်",
+    "l": 5
+  },
+  {
+    "jp": "何年",
+    "rd": "なんねん",
+    "rom": "nannen",
+    "en": "what year",
+    "my": "ဘာနှစ်လဲ",
+    "l": 5
+  },
+  {
+    "jp": "～月",
+    "rd": "～がつ",
+    "rom": "~gatsu",
+    "en": "month of ~; ~th month",
+    "my": "～လ (ဇန်နဝါရီလ၊ ဖေဖော်ဝါရီလ)",
+    "l": 5
+  },
+  {
+    "jp": "何月",
+    "rd": "なんがつ",
+    "rom": "nangatsu",
+    "en": "what month",
+    "my": "ဘယ်လ",
+    "l": 5
+  },
+  {
+    "jp": "１日",
+    "rd": "ついたち",
+    "rom": "tsuitachi",
+    "en": "1st (of the month)",
+    "my": "၁ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "２日",
+    "rd": "ふつか",
+    "rom": "futsuka",
+    "en": "2nd",
+    "my": "၂ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "３日",
+    "rd": "みっか",
+    "rom": "mikka",
+    "en": "3rd",
+    "my": "၃ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "４日",
+    "rd": "よっか",
+    "rom": "yokka",
+    "en": "4th",
+    "my": "၄ ရက်၊",
+    "l": 5
+  },
+  {
+    "jp": "５日",
+    "rd": "いつか",
+    "rom": "itsuka",
+    "en": "5th",
+    "my": "၅ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "６日",
+    "rd": "むいか",
+    "rom": "muika",
+    "en": "6th",
+    "my": "၆ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "７日",
+    "rd": "なのか",
+    "rom": "nanoka",
+    "en": "7th",
+    "my": "၇ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "８日",
+    "rd": "ようか",
+    "rom": "youka",
+    "en": "8th",
+    "my": "၈ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "９日",
+    "rd": "ここのか",
+    "rom": "kokonoka",
+    "en": "9th",
+    "my": "၉ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "１０日",
+    "rd": "とおか",
+    "rom": "tooka",
+    "en": "10th",
+    "my": "၁၀ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "１４日",
+    "rd": "じゅうよっか",
+    "rom": "juuyokka",
+    "en": "14th",
+    "my": "၁၄ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "２０日",
+    "rd": "はつか",
+    "rom": "hatsuka",
+    "en": "20th",
+    "my": "၂၀ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "２４日",
+    "rd": "にじゅうよっか",
+    "rom": "nijuuyokka",
+    "en": "24th",
+    "my": "၂၄ ရက်",
+    "l": 5
+  },
+  {
+    "jp": "～日",
+    "rd": "～にち",
+    "rom": "~nichi",
+    "en": "~th day",
+    "my": "～ရက်",
+    "l": 5
+  },
+  {
+    "jp": "何日",
+    "rd": "なんにち",
+    "rom": "nannichi",
+    "en": "what day (of the month)",
+    "my": "ဘယ်ရက်",
+    "l": 5
+  },
+  {
+    "jp": "いつ",
+    "rd": "いつ",
+    "rom": "itsu",
+    "en": "when",
+    "my": "ဘယ်တုန်းက၊ ဘယ်တော့",
+    "l": 5
+  },
+  {
+    "jp": "誕生日",
+    "rd": "たんじょうび",
+    "rom": "tanjoubi",
+    "en": "birthday",
+    "my": "မွေးနေ့",
+    "l": 5
+  },
+  {
+    "jp": "そうですね。",
+    "rd": "そうですね。",
+    "rom": "sou desu ne.",
+    "en": "That's right, isn't it?",
+    "my": "ဟုတ်တယ်နော်",
+    "l": 5
+  },
+  {
+    "jp": "[どうも]ありがとう ございました",
+    "rd": "[どうも]ありがとう ございました",
+    "rom": "[doumo] arigatou gozaimashita",
+    "en": "thank you very much (past)",
+    "my": "ကျေးဇူးအများကြီးတင်ပါတယ်",
+    "l": 5
+  },
+  {
+    "jp": "どういたしまして",
+    "rd": "どういたしまして",
+    "rom": "dou itashimashite",
+    "en": "You're welcome.",
+    "my": "ရပါတယ်၊ ကြိုဆိုပါတယ်",
+    "l": 5
+  },
+  {
+    "jp": "～番線",
+    "rd": "～ばんせん",
+    "rom": "~bansen",
+    "en": "platform ~",
+    "my": "ရထား စီးသော platform",
+    "l": 5
+  },
+  {
+    "jp": "次",
+    "rd": "つぎ",
+    "rom": "tsugi",
+    "en": "next",
+    "my": "နောက်ဟာ",
+    "l": 5
+  },
+  {
+    "jp": "普通",
+    "rd": "ふつう",
+    "rom": "futsuu",
+    "en": "ordinary (train); local train",
+    "my": "သာမာန်/ရိုးရိုးရထား",
+    "l": 5
+  },
+  {
+    "jp": "急行",
+    "rd": "きゅうこう",
+    "rom": "kyuukou",
+    "en": "express (train)",
+    "my": "အမြန်ရထား",
+    "l": 5
+  },
+  {
+    "jp": "特急",
+    "rd": "とっきゅう",
+    "rom": "tokkyuu",
+    "en": "limited express",
+    "my": "အထူးရထား",
+    "l": 5
+  },
+  {
+    "jp": "甲子園",
+    "rd": "こうしえん",
+    "rom": "koushien",
+    "en": "Koshien",
+    "my": "Koushien",
+    "l": 5
+  },
+  {
+    "jp": "大阪城",
+    "rd": "おおさかじょう",
+    "rom": "oosakajou",
+    "en": "Osaka Castle",
+    "my": "အိုဆာကာရဲတိုက်",
+    "l": 5
+  },
+  {
+    "jp": "食べます",
+    "rd": "たべます",
+    "rom": "tabemasu",
+    "en": "to eat",
+    "my": "စားသည်။",
+    "l": 6
+  },
+  {
+    "jp": "飲みます",
+    "rd": "のみます",
+    "rom": "nomimasu",
+    "en": "to drink",
+    "my": "သောက်သည်။",
+    "l": 6
+  },
+  {
+    "jp": "吸います",
+    "rd": "すいます",
+    "rom": "suimasu",
+    "en": "to smoke",
+    "my": "ဆေးလိပ်သောက်သည်။",
+    "l": 6
+  },
+  {
+    "jp": "見ます",
+    "rd": "みます",
+    "rom": "mimasu",
+    "en": "to see",
+    "my": "ကြည့်သည်။",
+    "l": 6
+  },
+  {
+    "jp": "聞きます",
+    "rd": "ききます",
+    "rom": "kikimasu",
+    "en": "to listen",
+    "my": "နားထောင်သည်။",
+    "l": 6
+  },
+  {
+    "jp": "読みます",
+    "rd": "よみます",
+    "rom": "yomimasu",
+    "en": "to read",
+    "my": "ဖတ်သည်။",
+    "l": 6
+  },
+  {
+    "jp": "書きます",
+    "rd": "かきます",
+    "rom": "kakimasu",
+    "en": "to write",
+    "my": "ရေးသည်။",
+    "l": 6
+  },
+  {
+    "jp": "買います",
+    "rd": "かいます",
+    "rom": "kaimasu",
+    "en": "to buy",
+    "my": "ဝယ်သည်။",
+    "l": 6
+  },
+  {
+    "jp": "撮ります",
+    "rd": "とります",
+    "rom": "torimasu",
+    "en": "to take (a photo)",
+    "my": "ရိုက်သည်",
+    "l": 6
+  },
+  {
+    "jp": "[写真を～]",
+    "rd": "[しゃしんを～]",
+    "rom": "[shashin o ~]",
+    "en": "to take a photo",
+    "my": "(ဓာတ်ပုံကို)။",
+    "l": 6
+  },
+  {
+    "jp": "します",
+    "rd": "します",
+    "rom": "shimasu",
+    "en": "to do",
+    "my": "လုပ်သည်။",
+    "l": 6
+  },
+  {
+    "jp": "会います",
+    "rd": "あいます",
+    "rom": "aimasu",
+    "en": "to meet",
+    "my": "တွေ့သည်",
+    "l": 6
+  },
+  {
+    "jp": "[友達に～]",
+    "rd": "[ともだちに～]",
+    "rom": "[tomodachi ni ~]",
+    "en": "[with a friend] ~",
+    "my": "(သူငယ်ချင်းနဲ့)။",
+    "l": 6
+  },
+  {
+    "jp": "ごはん",
+    "rd": "ごはん",
+    "rom": "gohan",
+    "en": "cooked rice; meal",
+    "my": "ထမင်း",
+    "l": 6
+  },
+  {
+    "jp": "朝ご飯",
+    "rd": "あさごはん",
+    "rom": "asagohan",
+    "en": "breakfast",
+    "my": "မနက်စာ၊ မနက်ထမင်း",
+    "l": 6
+  },
+  {
+    "jp": "昼ご飯",
+    "rd": "ひるごはん",
+    "rom": "hirugohan",
+    "en": "lunch",
+    "my": "နေ့လည်စာ၊ နေ့လည်ထမင်း",
+    "l": 6
+  },
+  {
+    "jp": "晩ご飯",
+    "rd": "ばんごはん",
+    "rom": "bangohan",
+    "en": "dinner; supper",
+    "my": "ညစာ၊ ညထမင်း",
+    "l": 6
+  },
+  {
+    "jp": "パン",
+    "rd": "パン",
+    "rom": "pan",
+    "en": "bread",
+    "my": "ပေါင်မုန့်",
+    "l": 6
+  },
+  {
+    "jp": "卵",
+    "rd": "たまご",
+    "rom": "tamago",
+    "en": "egg",
+    "my": "ကြက်ဥ",
+    "l": 6
+  },
+  {
+    "jp": "肉",
+    "rd": "にく",
+    "rom": "niku",
+    "en": "meat",
+    "my": "အသား",
+    "l": 6
+  },
+  {
+    "jp": "魚",
+    "rd": "さかな",
+    "rom": "sakana",
+    "en": "fish",
+    "my": "ငါး",
+    "l": 6
+  },
+  {
+    "jp": "野菜",
+    "rd": "やさい",
+    "rom": "yasai",
+    "en": "vegetables",
+    "my": "ဟင်းသီးဟင်းရွက်",
+    "l": 6
+  },
+  {
+    "jp": "果物",
+    "rd": "くだもの",
+    "rom": "kudamono",
+    "en": "fruit",
+    "my": "သစ်သီးဝလံ",
+    "l": 6
+  },
+  {
+    "jp": "水",
+    "rd": "みず",
+    "rom": "mizu",
+    "en": "water",
+    "my": "ရေ",
+    "l": 6
+  },
+  {
+    "jp": "お茶",
+    "rd": "おちゃ",
+    "rom": "ocha",
+    "en": "tea (green tea)",
+    "my": "ဂျပန်ရေနွေးကြမ်း",
+    "l": 6
+  },
+  {
+    "jp": "紅茶",
+    "rd": "こうちゃ",
+    "rom": "koucha",
+    "en": "black tea",
+    "my": "လက်ဖက်ရည်",
+    "l": 6
+  },
+  {
+    "jp": "牛乳",
+    "rd": "ぎゅうにゅう",
+    "rom": "gyuunyuu",
+    "en": "cow's milk",
+    "my": "နွားနို့",
+    "l": 6
+  },
+  {
+    "jp": "ミルク",
+    "rd": "ミルク",
+    "rom": "miruku",
+    "en": "milk",
+    "my": "နွားနို့၊ နို့ရည်",
+    "l": 6
+  },
+  {
+    "jp": "ジュース",
+    "rd": "ジュース",
+    "rom": "juusu",
+    "en": "juice",
+    "my": "ဖျော်ရည်",
+    "l": 6
+  },
+  {
+    "jp": "ビール",
+    "rd": "ビール",
+    "rom": "biiru",
+    "en": "beer",
+    "my": "ဘီယာ",
+    "l": 6
+  },
+  {
+    "jp": "[お]酒",
+    "rd": "[お]さけ",
+    "rom": "[o]sake",
+    "en": "sake",
+    "my": "အရက်",
+    "l": 6
+  },
+  {
+    "jp": "たばこ",
+    "rd": "たばこ",
+    "rom": "tabako",
+    "en": "cigarette",
+    "my": "ဆေးလိပ်",
+    "l": 6
+  },
+  {
+    "jp": "手紙",
+    "rd": "てがみ",
+    "rom": "tegami",
+    "en": "letter",
+    "my": "စာ letter",
+    "l": 6
+  },
+  {
+    "jp": "レポート",
+    "rd": "レポート",
+    "rom": "repooto",
+    "en": "report",
+    "my": "report အစီရင်ခံစာ",
+    "l": 6
+  },
+  {
+    "jp": "写真",
+    "rd": "しゃしん",
+    "rom": "shashin",
+    "en": "photograph",
+    "my": "ဓာတ်ပုံ",
+    "l": 6
+  },
+  {
+    "jp": "ビデオ",
+    "rd": "ビデオ",
+    "rom": "bideo",
+    "en": "video",
+    "my": "ဗီဒီယို",
+    "l": 6
+  },
+  {
+    "jp": "店",
+    "rd": "みせ",
+    "rom": "mise",
+    "en": "shop; store",
+    "my": "ဆိုင်",
+    "l": 6
+  },
+  {
+    "jp": "庭",
+    "rd": "にわ",
+    "rom": "niwa",
+    "en": "garden",
+    "my": "ခြံ၊ ခြံဝင်း",
+    "l": 6
+  },
+  {
+    "jp": "宿題",
+    "rd": "しゅくだい",
+    "rom": "shukudai",
+    "en": "homework",
+    "my": "အိမ်စာ",
+    "l": 6
+  },
+  {
+    "jp": "テニス",
+    "rd": "テニス",
+    "rom": "tenisu",
+    "en": "tennis",
+    "my": "တင်းနစ်အားကစား",
+    "l": 6
+  },
+  {
+    "jp": "サッカー",
+    "rd": "サッカー",
+    "rom": "sakkaa",
+    "en": "soccer; football",
+    "my": "ဘောလုံးအားကစား",
+    "l": 6
+  },
+  {
+    "jp": "お花見",
+    "rd": "おはなみ",
+    "rom": "ohanami",
+    "en": "cherry-blossom viewing",
+    "my": "ပန်းကြည့်ခြင်း",
+    "l": 6
+  },
+  {
+    "jp": "何",
+    "rd": "なに",
+    "rom": "nani",
+    "en": "what",
+    "my": "ဘာ",
+    "l": 6
+  },
+  {
+    "jp": "一緒に",
+    "rd": "いっしょに",
+    "rom": "issho ni",
+    "en": "together",
+    "my": "အတူတူ",
+    "l": 6
+  },
+  {
+    "jp": "ちょっと",
+    "rd": "ちょっと",
+    "rom": "chotto",
+    "en": "a little; just a moment",
+    "my": "ခဏ၊ နည်းနည်း",
+    "l": 6
+  },
+  {
+    "jp": "いつも",
+    "rd": "いつも",
+    "rom": "itsumo",
+    "en": "always; usually",
+    "my": "အမြဲတမ်း",
+    "l": 6
+  },
+  {
+    "jp": "ときどき",
+    "rd": "ときどき",
+    "rom": "tokidoki",
+    "en": "sometimes",
+    "my": "တခါတလေ",
+    "l": 6
+  },
+  {
+    "jp": "それから",
+    "rd": "それから",
+    "rom": "sore kara",
+    "en": "and then; after that",
+    "my": "အဲဒီနောက်",
+    "l": 6
+  },
+  {
+    "jp": "ええ",
+    "rd": "ええ",
+    "rom": "ee",
+    "en": "yes",
+    "my": "အင်း",
+    "l": 6
+  },
+  {
+    "jp": "いいですね",
+    "rd": "いいですね",
+    "rom": "ii desu ne",
+    "en": "that's good, isn't it?",
+    "my": "ကောင်းတယ်နော်",
+    "l": 6
+  },
+  {
+    "jp": "わかりました",
+    "rd": "わかりました",
+    "rom": "wakarimashita",
+    "en": "I understand; I see",
+    "my": "နားလည်ပါပြီ",
+    "l": 6
+  },
+  {
+    "jp": "何ですか",
+    "rd": "なんですか",
+    "rom": "nan desu ka",
+    "en": "what is it?",
+    "my": "ဘာလဲ",
+    "l": 6
+  },
+  {
+    "jp": "じゃ、また[あした]",
+    "rd": "じゃ、また[あした]",
+    "rom": "ja, mata [ashita]",
+    "en": "Well then, see you [tomorrow].",
+    "my": "ကဲဒါဆို--မနက်ဖြန်",
+    "l": 6
+  },
+  {
+    "jp": "メキシコ",
+    "rd": "メキシコ",
+    "rom": "mekishiko",
+    "en": "Mexico",
+    "my": "မက္ကဆီကို",
+    "l": 6
+  },
+  {
+    "jp": "大阪デパート",
+    "rd": "おおさかデパート",
+    "rom": "oosaka depaato",
+    "en": "Osaka Department Store",
+    "my": "အိုဆာကာကုန်တိုက်",
+    "l": 6
+  },
+  {
+    "jp": "つるや",
+    "rd": "つるや",
+    "rom": "tsuruya",
+    "en": "Tsuruya (restaurant name)",
+    "my": "Tsuruya စားသောက်ဆိုင်",
+    "l": 6
+  },
+  {
+    "jp": "フランス屋",
+    "rd": "フランスや",
+    "rom": "furansu ya",
+    "en": "Furansu-ya (supermarket)",
+    "my": "Furansu စူပါမားကတ်",
+    "l": 6
+  },
+  {
+    "jp": "毎日屋",
+    "rd": "まいにちや",
+    "rom": "mainichi ya",
+    "en": "Mainichi-ya (supermarket)",
+    "my": "Mainichi စူပါမားကတ်",
+    "l": 6
+  },
+  {
+    "jp": "切ります",
+    "rd": "きります",
+    "rom": "kirimasu",
+    "en": "to cut",
+    "my": "ဖြတ်သည်။ ကိုက်ဖြတ်သည်။",
+    "l": 7
+  },
+  {
+    "jp": "送ります",
+    "rd": "おくります",
+    "rom": "okurimasu",
+    "en": "to send",
+    "my": "ပို့သည်။(ပစ္စည်း၊ စာ)",
+    "l": 7
+  },
+  {
+    "jp": "あげます",
+    "rd": "あげます",
+    "rom": "agemasu",
+    "en": "to give",
+    "my": "ပေးသည်။",
+    "l": 7
+  },
+  {
+    "jp": "貰います",
+    "rd": "もらいます",
+    "rom": "moraimasu",
+    "en": "to receive",
+    "my": "ယူသည်။ လက်ခံရရှိသည်။",
+    "l": 7
+  },
+  {
+    "jp": "貸します",
+    "rd": "かします",
+    "rom": "kashimasu",
+    "en": "to lend",
+    "my": "ငှားသည်။ (သူများကို ငှား)",
+    "l": 7
+  },
+  {
+    "jp": "借ります",
+    "rd": "かります",
+    "rom": "karimasu",
+    "en": "to borrow",
+    "my": "ချေးငှားသည်။(သူများဆီမှ ချေး)",
+    "l": 7
+  },
+  {
+    "jp": "教えます",
+    "rd": "おしえます",
+    "rom": "oshiemasu",
+    "en": "to teach",
+    "my": "သင်ကြားသည်။",
+    "l": 7
+  },
+  {
+    "jp": "習います",
+    "rd": "ならいます",
+    "rom": "naraimasu",
+    "en": "to learn",
+    "my": "သင်ယူသည်။",
+    "l": 7
+  },
+  {
+    "jp": "かけます[電話を～]",
+    "rd": "かけます[でんわを～]",
+    "rom": "kakemasu [denwa o ~]",
+    "en": "to make a (phone) call",
+    "my": "ဖုန်းဆက်သည်။",
+    "l": 7
+  },
+  {
+    "jp": "手",
+    "rd": "て",
+    "rom": "te",
+    "en": "hand",
+    "my": "လက်",
+    "l": 7
+  },
+  {
+    "jp": "はし",
+    "rd": "はし",
+    "rom": "hashi",
+    "en": "chopsticks",
+    "my": "တူ(ထမင်းစားတဲ့တူ)",
+    "l": 7
+  },
+  {
+    "jp": "スプーン",
+    "rd": "スプーン",
+    "rom": "supuun",
+    "en": "spoon",
+    "my": "ဇွန်း",
+    "l": 7
+  },
+  {
+    "jp": "ナイフ",
+    "rd": "ナイフ",
+    "rom": "naifu",
+    "en": "knife",
+    "my": "ဓား",
+    "l": 7
+  },
+  {
+    "jp": "フォーク",
+    "rd": "フォーク",
+    "rom": "fooku",
+    "en": "fork",
+    "my": "ခက်ရင်း",
+    "l": 7
+  },
+  {
+    "jp": "はさみ",
+    "rd": "はさみ",
+    "rom": "hasami",
+    "en": "scissors",
+    "my": "ကတ်ကြေး",
+    "l": 7
+  },
+  {
+    "jp": "パソコン",
+    "rd": "パソコン",
+    "rom": "pasokon",
+    "en": "personal computer",
+    "my": "ကွန်ပျူတာ",
+    "l": 7
+  },
+  {
+    "jp": "ケータイ",
+    "rd": "ケータイ",
+    "rom": "keetai",
+    "en": "mobile phone",
+    "my": "လက်ကိုင်ဖုန်း",
+    "l": 7
+  },
+  {
+    "jp": "メール",
+    "rd": "メール",
+    "rom": "meeru",
+    "en": "e-mail",
+    "my": "အီးမေးလ်",
+    "l": 7
+  },
+  {
+    "jp": "年賀状",
+    "rd": "ねんがじょう",
+    "rom": "nengajou",
+    "en": "New Year's card",
+    "my": "new year card",
+    "l": 7
+  },
+  {
+    "jp": "パンチ",
+    "rd": "パンチ",
+    "rom": "panchi",
+    "en": "punch",
+    "my": "punch",
+    "l": 7
+  },
+  {
+    "jp": "ホッチキス",
+    "rd": "ホッチキス",
+    "rom": "hocchikisu",
+    "en": "stapler",
+    "my": "stapler",
+    "l": 7
+  },
+  {
+    "jp": "セロテープ",
+    "rd": "セロテープ",
+    "rom": "seroteepu",
+    "en": "cellophane tape",
+    "my": "တိပ်",
+    "l": 7
+  },
+  {
+    "jp": "消しゴム",
+    "rd": "けしゴム",
+    "rom": "keshigomu",
+    "en": "eraser",
+    "my": "ခဲဖျက်",
+    "l": 7
+  },
+  {
+    "jp": "紙",
+    "rd": "かみ",
+    "rom": "kami",
+    "en": "paper",
+    "my": "စာရွက်",
+    "l": 7
+  },
+  {
+    "jp": "花",
+    "rd": "はな",
+    "rom": "hana",
+    "en": "flower",
+    "my": "ပန်း",
+    "l": 7
+  },
+  {
+    "jp": "シャツ",
+    "rd": "シャツ",
+    "rom": "shatsu",
+    "en": "shirt",
+    "my": "ရှပ်အင်္ကျီ",
+    "l": 7
+  },
+  {
+    "jp": "プレゼント",
+    "rd": "プレゼント",
+    "rom": "purezento",
+    "en": "present; gift",
+    "my": "လက်ဆောင်",
+    "l": 7
+  },
+  {
+    "jp": "荷物",
+    "rd": "にもつ",
+    "rom": "nimotsu",
+    "en": "luggage; parcel",
+    "my": "အထုပ်၊ ပါဆယ်အထုပ်",
+    "l": 7
+  },
+  {
+    "jp": "お金",
+    "rd": "おかね",
+    "rom": "okane",
+    "en": "money",
+    "my": "ပိုက်ဆံ",
+    "l": 7
+  },
+  {
+    "jp": "切符",
+    "rd": "きっぷ",
+    "rom": "kippu",
+    "en": "ticket",
+    "my": "လက်မှတ်",
+    "l": 7
+  },
+  {
+    "jp": "クリスマス",
+    "rd": "クリスマス",
+    "rom": "kurisumasu",
+    "en": "Christmas",
+    "my": "ခရစ်စမတ်",
+    "l": 7
+  },
+  {
+    "jp": "父",
+    "rd": "ちち",
+    "rom": "chichi",
+    "en": "(one's own) father",
+    "my": "အဖေ(မိမိ၏ဖခင်ကိုခေါ်သောအခေါ်အဝေါ်)",
+    "l": 7
+  },
+  {
+    "jp": "母",
+    "rd": "はは",
+    "rom": "haha",
+    "en": "(one's own) mother",
+    "my": "အမေ(မိမိ၏မိခင်ကိုခေါ်သောအခေါ်အဝေါ်)",
+    "l": 7
+  },
+  {
+    "jp": "お父さん",
+    "rd": "おとうさん",
+    "rom": "otousan",
+    "en": "(someone else's) father",
+    "my": "အဖေ(သူတစ်ပါး၏အဖေကိုခေါ်သောအခေါ်အဝေါ်)",
+    "l": 7
+  },
+  {
+    "jp": "お母さん",
+    "rd": "おかあさん",
+    "rom": "okaasan",
+    "en": "(someone else's) mother",
+    "my": "အမေ(သူတစ်ပါး၏အမေကိုခေါ်သောအခေါ်အဝေါ်)",
+    "l": 7
+  },
+  {
+    "jp": "もう～",
+    "rd": "もう～",
+    "rom": "mou ~",
+    "en": "already ~",
+    "my": "～ပြီးပြီ",
+    "l": 7
+  },
+  {
+    "jp": "まだ",
+    "rd": "まだ",
+    "rom": "mada",
+    "en": "not yet",
+    "my": "မ---သေးဘူး",
+    "l": 7
+  },
+  {
+    "jp": "これから",
+    "rd": "これから",
+    "rom": "kore kara",
+    "en": "from now on",
+    "my": "အခုကစပြီး---",
+    "l": 7
+  },
+  {
+    "jp": "[～、]すてきですね",
+    "rd": "[～、]すてきですね",
+    "rom": "[~,] suteki desu ne",
+    "en": "That's lovely, isn't it?",
+    "my": "လှလိုက်တာ",
+    "l": 7
+  },
+  {
+    "jp": "いらっしゃい",
+    "rd": "いらっしゃい",
+    "rom": "irasshai",
+    "en": "welcome",
+    "my": "ကြိုဆိုပါတယ်",
+    "l": 7
+  },
+  {
+    "jp": "どうぞ、おあがりください。",
+    "rd": "どうぞ、おあがりください。",
+    "rom": "douzo, oagari kudasai.",
+    "en": "Please come in.",
+    "my": "ကျေးဇူးပြုပြီး အိမ်ပေါ်တက်ပါ။",
+    "l": 7
+  },
+  {
+    "jp": "失礼します",
+    "rd": "しつれいします",
+    "rom": "shitsurei shimasu",
+    "en": "Excuse me (on entering/leaving)",
+    "my": "ခွင့်ပြုပါ (သူတစ်ပါး၏ အခန်းသို့ဝင်ရန် ခွင့်တောင်းခြင်း)",
+    "l": 7
+  },
+  {
+    "jp": "[～は]いかがですか",
+    "rd": "[～は]いかがですか",
+    "rom": "[~wa] ikaga desu ka",
+    "en": "How about ~?",
+    "my": "ဘယ်လိုလဲဟင်",
+    "l": 7
+  },
+  {
+    "jp": "いただきます",
+    "rd": "いただきます",
+    "rom": "itadakimasu",
+    "en": "Thank you for the food (said before eating)",
+    "my": "စားပါမယ် (အစား အသောက်ကို မစားခင်တွင် ပြောသောစကား)",
+    "l": 7
+  },
+  {
+    "jp": "ごちそうさま[でした]",
+    "rd": "ごちそうさま[でした]",
+    "rom": "gochisousama [deshita]",
+    "en": "Thank you for the meal (said after eating)",
+    "my": "စားပြီးပါပြီ (အစား အသောက်ကို စားပြီးသည့်အခါ ပြောသောစကား)",
+    "l": 7
+  },
+  {
+    "jp": "スペイン",
+    "rd": "スペイン",
+    "rom": "supein",
+    "en": "Spain",
+    "my": "စပိန်",
+    "l": 7
+  },
+  {
+    "jp": "ハンサム [な]",
+    "rd": "ハンサム [な]",
+    "rom": "hansamu [na]",
+    "en": "handsome",
+    "my": "ခန့်ချောသော(ကျား)",
+    "l": 8
+  },
+  {
+    "jp": "きれい[な]",
+    "rd": "きれい[な]",
+    "rom": "kirei[na]",
+    "en": "beautiful; clean",
+    "my": "လှသော၊ ချောမောသော(မ)",
+    "l": 8
+  },
+  {
+    "jp": "静か[な]",
+    "rd": "しずか[な]",
+    "rom": "shizuka[na]",
+    "en": "quiet",
+    "my": "တိတ်ဆိတ်သော",
+    "l": 8
+  },
+  {
+    "jp": "賑やか[な]",
+    "rd": "にぎやか[な]",
+    "rom": "nigiyaka[na]",
+    "en": "lively; bustling",
+    "my": "စည်ကားသော",
+    "l": 8
+  },
+  {
+    "jp": "有名 [な]",
+    "rd": "ゆうめい [な]",
+    "rom": "yuumei [na]",
+    "en": "famous",
+    "my": "နာမည်ကြီးသော",
+    "l": 8
+  },
+  {
+    "jp": "親切 [な]",
+    "rd": "しんせつ [な]",
+    "rom": "shinsetsu [na]",
+    "en": "kind",
+    "my": "ဖော်ရွေသော။ ကြင်နာတတ်သော",
+    "l": 8
+  },
+  {
+    "jp": "元気 [な]",
+    "rd": "げんき [な]",
+    "rom": "genki [na]",
+    "en": "fine; healthy; energetic",
+    "my": "ကျန်းမာသော၊ သန်မာသော",
+    "l": 8
+  },
+  {
+    "jp": "暇 [な]",
+    "rd": "ひま [な]",
+    "rom": "hima [na]",
+    "en": "free time; leisure",
+    "my": "အားသော၊ အားလပ်သော",
+    "l": 8
+  },
+  {
+    "jp": "便利 [な]",
+    "rd": "べんり [な]",
+    "rom": "benri [na]",
+    "en": "convenient",
+    "my": "အဆင်ပြေသော",
+    "l": 8
+  },
+  {
+    "jp": "素敵 [な]",
+    "rd": "すてき [な]",
+    "rom": "suteki [na]",
+    "en": "wonderful; lovely",
+    "my": "လှသော၊ စွမ်းဖွယ်ကောင်းသော",
+    "l": 8
+  },
+  {
+    "jp": "大きい",
+    "rd": "おおきい",
+    "rom": "ookii",
+    "en": "big; large",
+    "my": "ကြီးသော",
+    "l": 8
+  },
+  {
+    "jp": "小さい",
+    "rd": "ちいさい",
+    "rom": "chiisai",
+    "en": "small; little",
+    "my": "သေးသော",
+    "l": 8
+  },
+  {
+    "jp": "新しい",
+    "rd": "あたらしい",
+    "rom": "atarashii",
+    "en": "new",
+    "my": "သစ်သော၊ အသစ်ဖြစ်သော",
+    "l": 8
+  },
+  {
+    "jp": "古い",
+    "rd": "ふるい",
+    "rom": "furui",
+    "en": "old",
+    "my": "ဟောင်းသော၊",
+    "l": 8
+  },
+  {
+    "jp": "いい、良い",
+    "rd": "いい、よい",
+    "rom": "ii, yoi",
+    "en": "good",
+    "my": "ကောင်းသော",
+    "l": 8
+  },
+  {
+    "jp": "悪い",
+    "rd": "わるい",
+    "rom": "warui",
+    "en": "bad",
+    "my": "ဆိုးသော",
+    "l": 8
+  },
+  {
+    "jp": "暑い、熱い",
+    "rd": "あつい、あつい",
+    "rom": "atsui, atsui",
+    "en": "hot",
+    "my": "ပူအိုက်သော",
+    "l": 8
+  },
+  {
+    "jp": "寒い",
+    "rd": "さむい",
+    "rom": "samui",
+    "en": "cold (weather)",
+    "my": "ချမ်းသော(ရာသီဥတု)",
+    "l": 8
+  },
+  {
+    "jp": "冷たい",
+    "rd": "つめたい",
+    "rom": "tsumetai",
+    "en": "cold (to the touch); cool",
+    "my": "အေးမြသော",
+    "l": 8
+  },
+  {
+    "jp": "難しい",
+    "rd": "むずかしい",
+    "rom": "muzukashii",
+    "en": "difficult",
+    "my": "ခက်သော",
+    "l": 8
+  },
+  {
+    "jp": "易しい",
+    "rd": "やさしい",
+    "rom": "yasashii",
+    "en": "easy",
+    "my": "လွယ်သော",
+    "l": 8
+  },
+  {
+    "jp": "高い",
+    "rd": "たかい",
+    "rom": "takai",
+    "en": "high; expensive",
+    "my": "မြင့်သော၊ စျေးကြီးသော",
+    "l": 8
+  },
+  {
+    "jp": "安い",
+    "rd": "やすい",
+    "rom": "yasui",
+    "en": "cheap; inexpensive",
+    "my": "သက်သာသော၊ စျေးပေါသော",
+    "l": 8
+  },
+  {
+    "jp": "低い",
+    "rd": "ひくい",
+    "rom": "hikui",
+    "en": "low",
+    "my": "နိမ့်သော",
+    "l": 8
+  },
+  {
+    "jp": "おもしろい",
+    "rd": "おもしろい",
+    "rom": "omoshiroi",
+    "en": "interesting",
+    "my": "စိတ်ဝင်စားစရာကောင်းသော",
+    "l": 8
+  },
+  {
+    "jp": "おいしい",
+    "rd": "おいしい",
+    "rom": "oishii",
+    "en": "delicious; tasty",
+    "my": "အရသာရှိသော",
+    "l": 8
+  },
+  {
+    "jp": "忙しい",
+    "rd": "いそがしい",
+    "rom": "isogashii",
+    "en": "busy",
+    "my": "အလုပ်များသော",
+    "l": 8
+  },
+  {
+    "jp": "楽しい",
+    "rd": "たのしい",
+    "rom": "tanoshii",
+    "en": "fun; enjoyable",
+    "my": "ပျော်ရွှင်သော",
+    "l": 8
+  },
+  {
+    "jp": "白い",
+    "rd": "しろい",
+    "rom": "shiroi",
+    "en": "white",
+    "my": "ဖြူ့သော",
+    "l": 8
+  },
+  {
+    "jp": "黒い",
+    "rd": "くろい",
+    "rom": "kuroi",
+    "en": "black",
+    "my": "မဲသော",
+    "l": 8
+  },
+  {
+    "jp": "赤い",
+    "rd": "あかい",
+    "rom": "akai",
+    "en": "red",
+    "my": "နီသော",
+    "l": 8
+  },
+  {
+    "jp": "青い",
+    "rd": "あおい",
+    "rom": "aoi",
+    "en": "blue",
+    "my": "ပြာသော",
+    "l": 8
+  },
+  {
+    "jp": "桜",
+    "rd": "さくら",
+    "rom": "sakura",
+    "en": "cherry blossom",
+    "my": "ဆာကူရာပန်း၊ ချယ်ရီပန်း",
+    "l": 8
+  },
+  {
+    "jp": "山",
+    "rd": "やま",
+    "rom": "yama",
+    "en": "mountain",
+    "my": "တောတောင်",
+    "l": 8
+  },
+  {
+    "jp": "町",
+    "rd": "まち",
+    "rom": "machi",
+    "en": "town; city",
+    "my": "မြို့",
+    "l": 8
+  },
+  {
+    "jp": "食べ物",
+    "rd": "たべもの",
+    "rom": "tabemono",
+    "en": "food",
+    "my": "စားစရာ",
+    "l": 8
+  },
+  {
+    "jp": "所",
+    "rd": "ところ",
+    "rom": "tokoro",
+    "en": "place",
+    "my": "နေရာ",
+    "l": 8
+  },
+  {
+    "jp": "寮",
+    "rd": "りょう",
+    "rom": "ryou",
+    "en": "dormitory",
+    "my": "အဆောင်",
+    "l": 8
+  },
+  {
+    "jp": "レストラン",
+    "rd": "レストラン",
+    "rom": "resutoran",
+    "en": "restaurant",
+    "my": "စားသောက်ဆိုင်",
+    "l": 8
+  },
+  {
+    "jp": "生活",
+    "rd": "せいかつ",
+    "rom": "seikatsu",
+    "en": "life; living",
+    "my": "နေထိုင်မှု",
+    "l": 8
+  },
+  {
+    "jp": "[お]仕事",
+    "rd": "[お]しごと",
+    "rom": "[o]shigoto",
+    "en": "work; job",
+    "my": "အလုပ်အကိုင်",
+    "l": 8
+  },
+  {
+    "jp": "どう",
+    "rd": "どう",
+    "rom": "dou",
+    "en": "how",
+    "my": "ဘယ်လိုလဲ",
+    "l": 8
+  },
+  {
+    "jp": "どんな～",
+    "rd": "どんな～",
+    "rom": "donna ~",
+    "en": "what kind of ~",
+    "my": "ဘယ်လိုမျိုး",
+    "l": 8
+  },
+  {
+    "jp": "とても",
+    "rd": "とても",
+    "rom": "totemo",
+    "en": "very",
+    "my": "အလွန်",
+    "l": 8
+  },
+  {
+    "jp": "あまり",
+    "rd": "あまり",
+    "rom": "amari",
+    "en": "not very; not much",
+    "my": "သိပ်--",
+    "l": 8
+  },
+  {
+    "jp": "そして",
+    "rd": "そして",
+    "rom": "soshite",
+    "en": "and then; and",
+    "my": "အဲဒီနောက်၊ ပြီးနောက်",
+    "l": 8
+  },
+  {
+    "jp": "～が、～",
+    "rd": "～が、～",
+    "rom": "~ga, ~",
+    "en": "~ but ~",
+    "my": "～ပေမဲ့လဲ～",
+    "l": 8
+  },
+  {
+    "jp": "お元気ですか",
+    "rd": "おげんきですか",
+    "rom": "ogenki desu ka",
+    "en": "How are you?",
+    "my": "နေကောင်းလား (နှုတ်ဆက်သည့်အခါတွင်လည်းသုံးပါသည်)",
+    "l": 8
+  },
+  {
+    "jp": "そうですね",
+    "rd": "そうですね",
+    "rom": "sou desu ne",
+    "en": "That's right, isn't it?",
+    "my": "ဟုတ်တယ်နော်",
+    "l": 8
+  },
+  {
+    "jp": "もういっぱい",
+    "rd": "もういっぱい",
+    "rom": "mou ippai",
+    "en": "one more (cup/glass)",
+    "my": "နောက်တစ်ခွက်",
+    "l": 8
+  },
+  {
+    "jp": "いかがですか",
+    "rd": "いかがですか",
+    "rom": "ikaga desu ka",
+    "en": "How is it?; How about ~?",
+    "my": "ဘယ်လိုလဲဟင်",
+    "l": 8
+  },
+  {
+    "jp": "いいえ、けっこうです",
+    "rd": "いいえ、けっこうです",
+    "rom": "iie, kekkou desu",
+    "en": "No, thank you; No, that's enough",
+    "my": "ဟင့်အင်း တော်ပါပြီ",
+    "l": 8
+  },
+  {
+    "jp": "もう～です[ね]",
+    "rd": "もう～です[ね]",
+    "rom": "mou ~desu [ne]",
+    "en": "already ~",
+    "my": "～ပြီနော်",
+    "l": 8
+  },
+  {
+    "jp": "そろそろ 失礼します",
+    "rd": "そろそろ しつれいします",
+    "rom": "sorosoro shitsurei shimasu",
+    "en": "It's about time I left; I must be going",
+    "my": "ဒါဆိုရင် ပြန်တော့မယ် (ခွင့်ပြုပါအုံး)",
+    "l": 8
+  },
+  {
+    "jp": "いいえ",
+    "rd": "いいえ",
+    "rom": "iie",
+    "en": "Not at all; Don't mention it",
+    "my": "ရပါတယ်။ ကိစ္စမရှိပါဘူး",
+    "l": 8
+  },
+  {
+    "jp": "また いらっしゃって ください",
+    "rd": "また いらっしゃって ください",
+    "rom": "mata irasshatte kudasai",
+    "en": "Please come again",
+    "my": "နောက်လဲ လာပါနော်",
+    "l": 8
+  },
+  {
+    "jp": "シャンハイ",
+    "rd": "シャンハイ",
+    "rom": "shanhai",
+    "en": "Shanghai",
+    "my": "ရှင်ဟိုင်း",
+    "l": 8
+  },
+  {
+    "jp": "金閣寺",
+    "rd": "きんかくじ",
+    "rom": "kinkakuji",
+    "en": "Kinkakuji (Golden Pavilion)",
+    "my": "Kinkakuji ကျောင်းတော်",
+    "l": 8
+  },
+  {
+    "jp": "奈良公園",
+    "rd": "ならこうえん",
+    "rom": "nara kouen",
+    "en": "Nara Park",
+    "my": "Nara ပန်းခြံ",
+    "l": 8
+  },
+  {
+    "jp": "富士山",
+    "rd": "ふじさん",
+    "rom": "fujisan",
+    "en": "Mt. Fuji",
+    "my": "ဖူဂျီတောင်",
+    "l": 8
+  },
+  {
+    "jp": "「七人の 侍」",
+    "rd": "「しちにんの さむらい」",
+    "rom": "shichinin no samurai",
+    "en": "\"Seven Samurai\"",
+    "my": "စာမူရိုင်း၇ယောက်ရွေ့ရုပ်ရှင်",
+    "l": 8
+  },
+  {
+    "jp": "わかります",
+    "rd": "わかります",
+    "rom": "wakarimasu",
+    "en": "to understand",
+    "my": "နားလည်သည်။",
+    "l": 9
+  },
+  {
+    "jp": "あります",
+    "rd": "あります",
+    "rom": "arimasu",
+    "en": "to be; to exist (inanimate)",
+    "my": "ရှိသည်။(သက်မဲ့)",
+    "l": 9
+  },
+  {
+    "jp": "好き[な]",
+    "rd": "すき[な]",
+    "rom": "suki[na]",
+    "en": "like; fond of",
+    "my": "ကြိုက်သော",
+    "l": 9
+  },
+  {
+    "jp": "嫌い[な]",
+    "rd": "きらい[な]",
+    "rom": "kirai[na]",
+    "en": "dislike; hate",
+    "my": "မုန်းသော",
+    "l": 9
+  },
+  {
+    "jp": "上手 [な]",
+    "rd": "じょうず [な]",
+    "rom": "jouzu [na]",
+    "en": "good at; skillful",
+    "my": "တော်သော",
+    "l": 9
+  },
+  {
+    "jp": "下手 [な]",
+    "rd": "へた [な]",
+    "rom": "heta [na]",
+    "en": "poor at; unskillful",
+    "my": "ညံ့သော",
+    "l": 9
+  },
+  {
+    "jp": "飲み物",
+    "rd": "のみもの",
+    "rom": "nomimono",
+    "en": "drink; beverage",
+    "my": "သောက်စရာ",
+    "l": 9
+  },
+  {
+    "jp": "料理",
+    "rd": "りょうり",
+    "rom": "ryouri",
+    "en": "cooking; dish",
+    "my": "ဟင်း၊ အစားအစာ",
+    "l": 9
+  },
+  {
+    "jp": "スポーツ",
+    "rd": "スポーツ",
+    "rom": "supootsu",
+    "en": "sports",
+    "my": "အားကစား",
+    "l": 9
+  },
+  {
+    "jp": "野球",
+    "rd": "やきゅう",
+    "rom": "yakyuu",
+    "en": "baseball",
+    "my": "base ball",
+    "l": 9
+  },
+  {
+    "jp": "ダンス",
+    "rd": "ダンス",
+    "rom": "dansu",
+    "en": "dance",
+    "my": "အက",
+    "l": 9
+  },
+  {
+    "jp": "旅行",
+    "rd": "りょこう",
+    "rom": "ryokou",
+    "en": "travel; trip",
+    "my": "ခရီးသွားခြင်း",
+    "l": 9
+  },
+  {
+    "jp": "音楽",
+    "rd": "おんがく",
+    "rom": "ongaku",
+    "en": "music",
+    "my": "ဂီတ",
+    "l": 9
+  },
+  {
+    "jp": "歌",
+    "rd": "うた",
+    "rom": "uta",
+    "en": "song",
+    "my": "သီချင်း",
+    "l": 9
+  },
+  {
+    "jp": "クラシック",
+    "rd": "クラシック",
+    "rom": "kurashikku",
+    "en": "classical (music)",
+    "my": "ရှေးဟောင်းသီချင်း",
+    "l": 9
+  },
+  {
+    "jp": "ジャズ",
+    "rd": "ジャズ",
+    "rom": "jazu",
+    "en": "jazz",
+    "my": "jassသီချင်း",
+    "l": 9
+  },
+  {
+    "jp": "コンサート",
+    "rd": "コンサート",
+    "rom": "konsaato",
+    "en": "concert",
+    "my": "ဂီတဖျော်ဖြေပွဲ",
+    "l": 9
+  },
+  {
+    "jp": "カラオケ",
+    "rd": "カラオケ",
+    "rom": "karaoke",
+    "en": "karaoke",
+    "my": "ကာရာအိုကေ",
+    "l": 9
+  },
+  {
+    "jp": "歌舞伎",
+    "rd": "かぶき",
+    "rom": "kabuki",
+    "en": "kabuki (traditional Japanese theatre)",
+    "my": "ဂျပန်ရိုးရာဇာတ်ပွဲ",
+    "l": 9
+  },
+  {
+    "jp": "絵",
+    "rd": "え",
+    "rom": "e",
+    "en": "picture; painting",
+    "my": "ပန်းချီ",
+    "l": 9
+  },
+  {
+    "jp": "字",
+    "rd": "じ",
+    "rom": "ji",
+    "en": "character; letter",
+    "my": "စာလုံး",
+    "l": 9
+  },
+  {
+    "jp": "漢字",
+    "rd": "かんじ",
+    "rom": "kanji",
+    "en": "kanji; Chinese character",
+    "my": "ဂျပန်စာလုံး",
+    "l": 9
+  },
+  {
+    "jp": "ひらがな",
+    "rd": "ひらがな",
+    "rom": "hiragana",
+    "en": "hiragana",
+    "my": "ဟိရဂနစာလုံး",
+    "l": 9
+  },
+  {
+    "jp": "かたかな",
+    "rd": "かたかな",
+    "rom": "katakana",
+    "en": "katakana",
+    "my": "ခတခနစာလုံး",
+    "l": 9
+  },
+  {
+    "jp": "ローマ字",
+    "rd": "ローマじ",
+    "rom": "rooma ji",
+    "en": "Roman letters; romaji",
+    "my": "ရိုးမာဂျိစာလုံး",
+    "l": 9
+  },
+  {
+    "jp": "細かいお金",
+    "rd": "こまかいおかね",
+    "rom": "komakai okane",
+    "en": "small change",
+    "my": "ပိုက်ဆံအကြွေ",
+    "l": 9
+  },
+  {
+    "jp": "チケット",
+    "rd": "チケット",
+    "rom": "chiketto",
+    "en": "ticket",
+    "my": "လက်မှတ်",
+    "l": 9
+  },
+  {
+    "jp": "時間",
+    "rd": "じかん",
+    "rom": "jikan",
+    "en": "time",
+    "my": "အချိန်",
+    "l": 9
+  },
+  {
+    "jp": "用事",
+    "rd": "ようじ",
+    "rom": "youji",
+    "en": "errand; business",
+    "my": "ကိစ္စ",
+    "l": 9
+  },
+  {
+    "jp": "約束",
+    "rd": "やくそく",
+    "rom": "yakusoku",
+    "en": "promise; appointment",
+    "my": "ကတိ၊ ချိန်းဆိုထားခြင်း",
+    "l": 9
+  },
+  {
+    "jp": "アルバイト",
+    "rd": "アルバイト",
+    "rom": "arubaito",
+    "en": "part-time job",
+    "my": "အချိန်ပိုင်းအလုပ်",
+    "l": 9
+  },
+  {
+    "jp": "ご主人",
+    "rd": "ごしゅじん",
+    "rom": "goshujin",
+    "en": "(your) husband",
+    "my": "ခင်ပွန်း(သူတစ်ပါး၏ ယောက်ျား)",
+    "l": 9
+  },
+  {
+    "jp": "夫 /主人",
+    "rd": "おっと/しゅじん",
+    "rom": "otto/shujin",
+    "en": "(my) husband",
+    "my": "မိမိ၏ယောက်ျား",
+    "l": 9
+  },
+  {
+    "jp": "奥さん",
+    "rd": "おくさん",
+    "rom": "okusan",
+    "en": "(your) wife",
+    "my": "ဇနီး (သူတစ်ပါး၏ ဇနီး)",
+    "l": 9
+  },
+  {
+    "jp": "妻/家内",
+    "rd": "つま/かない",
+    "rom": "tsuma/kanai",
+    "en": "(my) wife",
+    "my": "မိမိ၏ဇနီး၊ မိန်းမ",
+    "l": 9
+  },
+  {
+    "jp": "子ども",
+    "rd": "こども",
+    "rom": "kodomo",
+    "en": "child; children",
+    "my": "ကလေး",
+    "l": 9
+  },
+  {
+    "jp": "よく",
+    "rd": "よく",
+    "rom": "yoku",
+    "en": "often; well",
+    "my": "ကောင်းကောင်း၊ ခဏခဏ",
+    "l": 9
+  },
+  {
+    "jp": "だいたい",
+    "rd": "だいたい",
+    "rom": "daitai",
+    "en": "roughly; mostly",
+    "my": "အကြမ်းအားဖြင့်",
+    "l": 9
+  },
+  {
+    "jp": "たくさん",
+    "rd": "たくさん",
+    "rom": "takusan",
+    "en": "a lot; many",
+    "my": "အများကြီး၊ များများ",
+    "l": 9
+  },
+  {
+    "jp": "少し",
+    "rd": "すこし",
+    "rom": "sukoshi",
+    "en": "a little; a bit",
+    "my": "နည်းနည်း",
+    "l": 9
+  },
+  {
+    "jp": "全然",
+    "rd": "ぜんぜん",
+    "rom": "zenzen",
+    "en": "(not) at all",
+    "my": "လုံးဝ",
+    "l": 9
+  },
+  {
+    "jp": "早く",
+    "rd": "はやく",
+    "rom": "hayaku",
+    "en": "early; quickly",
+    "my": "စောစော၊ မြန်မြန်",
+    "l": 9
+  },
+  {
+    "jp": "～から",
+    "rd": "～から",
+    "rom": "~kara",
+    "en": "because ~",
+    "my": "～ဖြစ်လို့",
+    "l": 9
+  },
+  {
+    "jp": "どうして",
+    "rd": "どうして",
+    "rom": "doushite",
+    "en": "why",
+    "my": "ဘာဖြစ်လို့",
+    "l": 9
+  },
+  {
+    "jp": "貸してください。",
+    "rd": "かしてください。",
+    "rom": "kashite kudasai.",
+    "en": "please lend me ~",
+    "my": "ငှားပါ",
+    "l": 9
+  },
+  {
+    "jp": "いいですよ。",
+    "rd": "いいですよ。",
+    "rom": "ii desu yo.",
+    "en": "that's fine; OK",
+    "my": "ရပါတယ်",
+    "l": 9
+  },
+  {
+    "jp": "残念です[が]",
+    "rd": "ざんねんです[が]",
+    "rom": "zannen desu[ga]",
+    "en": "that's a pity; unfortunately",
+    "my": "စိတ်မကောင်းပါဘူး",
+    "l": 9
+  },
+  {
+    "jp": "ああ、",
+    "rd": "ああ、",
+    "rom": "aa,",
+    "en": "ah!; oh!",
+    "my": "အော်--",
+    "l": 9
+  },
+  {
+    "jp": "いっしょに いかがですか",
+    "rd": "いっしょに いかがですか",
+    "rom": "issho ni ikaga desu ka",
+    "en": "how about ~ together?",
+    "my": "အတူတူ ဘယ်လိုလဲဟင်း",
+    "l": 9
+  },
+  {
+    "jp": "[～は]ちょっと…",
+    "rd": "[～は]ちょっと…",
+    "rom": "[~wa] chotto...",
+    "en": "a little...; (hesitation / soft refusal)",
+    "my": "နည်းနည်း၊ ခဏ၊ သိပ်ပြီးတော့-- (အကြောင်းအရာတစ်ခုကို ငြင်းသည့်အခါသုံးသည်)",
+    "l": 9
+  },
+  {
+    "jp": "だめですか",
+    "rd": "だめですか",
+    "rom": "dame desu ka",
+    "en": "is that no good?; won't it do?",
+    "my": "မရဘူးလား",
+    "l": 9
+  },
+  {
+    "jp": "また 今度 お願いします",
+    "rd": "また こんど おねがいします",
+    "rom": "mata kondo onegai shimasu",
+    "en": "maybe next time; (I'll ask) again next time",
+    "my": "နောက်တခါ---တောင်းဆိုပါတယ် (ဒီတစ်ခေါက်အဆင်မပြေသောကြောင်း နောက်တခါကျမှ)",
+    "l": 9
+  },
+  {
+    "jp": "あります",
+    "rd": "あります",
+    "rom": "arimasu",
+    "en": "there is (inanimate)",
+    "my": "ရှိသည်။(သက်မဲ့)",
+    "l": 10
+  },
+  {
+    "jp": "います",
+    "rd": "います",
+    "rom": "imasu",
+    "en": "there is (people/animals)",
+    "my": "ရှိသည်။ နေသည်။(သက်ရှိ)",
+    "l": 10
+  },
+  {
+    "jp": "いろいろ[な]",
+    "rd": "いろいろ[な]",
+    "rom": "iroiro[na]",
+    "en": "various",
+    "my": "အမျိုးမျိုး",
+    "l": 10
+  },
+  {
+    "jp": "男の人",
+    "rd": "おとこのひと",
+    "rom": "otoko no hito",
+    "en": "man",
+    "my": "အမျိုးသား၊ ယောက်ျားလေး",
+    "l": 10
+  },
+  {
+    "jp": "女の人",
+    "rd": "おんなのひと",
+    "rom": "onna no hito",
+    "en": "woman",
+    "my": "အမျိုးသမီး၊ မိန်းကလေး",
+    "l": 10
+  },
+  {
+    "jp": "男の子",
+    "rd": "おとこのこ",
+    "rom": "otoko no ko",
+    "en": "boy",
+    "my": "ကောင်လေး",
+    "l": 10
+  },
+  {
+    "jp": "女の子",
+    "rd": "おんなのこ",
+    "rom": "onna no ko",
+    "en": "girl",
+    "my": "ကောင်မလေး",
+    "l": 10
+  },
+  {
+    "jp": "犬",
+    "rd": "いぬ",
+    "rom": "inu",
+    "en": "dog",
+    "my": "ခွေး",
+    "l": 10
+  },
+  {
+    "jp": "猫",
+    "rd": "ねこ",
+    "rom": "neko",
+    "en": "cat",
+    "my": "ကြောင်",
+    "l": 10
+  },
+  {
+    "jp": "パンダ",
+    "rd": "パンダ",
+    "rom": "panda",
+    "en": "panda",
+    "my": "ပန်ဒါ",
+    "l": 10
+  },
+  {
+    "jp": "象",
+    "rd": "ぞう",
+    "rom": "zou",
+    "en": "elephant",
+    "my": "ဆင်",
+    "l": 10
+  },
+  {
+    "jp": "木",
+    "rd": "き",
+    "rom": "ki",
+    "en": "tree",
+    "my": "သစ်ပင်",
+    "l": 10
+  },
+  {
+    "jp": "物",
+    "rd": "もの",
+    "rom": "mono",
+    "en": "thing",
+    "my": "အရာဝတ္ထု",
+    "l": 10
+  },
+  {
+    "jp": "電池",
+    "rd": "でんち",
+    "rom": "denchi",
+    "en": "battery",
+    "my": "ဓာတ်ခဲ",
+    "l": 10
+  },
+  {
+    "jp": "箱",
+    "rd": "はこ",
+    "rom": "hako",
+    "en": "box",
+    "my": "ဗူး",
+    "l": 10
+  },
+  {
+    "jp": "スイッチ",
+    "rd": "スイッチ",
+    "rom": "suitchi",
+    "en": "switch",
+    "my": "မီးခလုတ်",
+    "l": 10
+  },
+  {
+    "jp": "冷蔵庫",
+    "rd": "れいぞうこ",
+    "rom": "reizouko",
+    "en": "refrigerator",
+    "my": "ရေခဲသေတ္တာ",
+    "l": 10
+  },
+  {
+    "jp": "テーブル",
+    "rd": "テーブル",
+    "rom": "teeburu",
+    "en": "table",
+    "my": "စားပွဲခုံ",
+    "l": 10
+  },
+  {
+    "jp": "ベッド",
+    "rd": "ベッド",
+    "rom": "beddo",
+    "en": "bed",
+    "my": "အိပ်ရာ၊ ကုတင်",
+    "l": 10
+  },
+  {
+    "jp": "棚",
+    "rd": "たな",
+    "rom": "tana",
+    "en": "shelf",
+    "my": "စင်(စာအုပ်စင်၊ ပန်းကန်စင်)",
+    "l": 10
+  },
+  {
+    "jp": "ドア",
+    "rd": "ドア",
+    "rom": "doa",
+    "en": "door",
+    "my": "တံခါး",
+    "l": 10
+  },
+  {
+    "jp": "窓",
+    "rd": "まど",
+    "rom": "mado",
+    "en": "window",
+    "my": "ပြတင်းပေါက်",
+    "l": 10
+  },
+  {
+    "jp": "ポスト",
+    "rd": "ポスト",
+    "rom": "posuto",
+    "en": "mailbox; postbox",
+    "my": "စာတိုက်ပုံး",
+    "l": 10
+  },
+  {
+    "jp": "ビル",
+    "rd": "ビル",
+    "rom": "biru",
+    "en": "building",
+    "my": "အဆောက်အဦး",
+    "l": 10
+  },
+  {
+    "jp": "ATM",
+    "rd": "ATM",
+    "rom": "eetiiemu",
+    "en": "ATM",
+    "my": "အလိုအလျောက်ငွေထုတ်စက်",
+    "l": 10
+  },
+  {
+    "jp": "コンビニ",
+    "rd": "コンビニ",
+    "rom": "konbini",
+    "en": "convenience store",
+    "my": "convenience store",
+    "l": 10
+  },
+  {
+    "jp": "公園",
+    "rd": "こうえん",
+    "rom": "kouen",
+    "en": "park",
+    "my": "ပန်းခြံ",
+    "l": 10
+  },
+  {
+    "jp": "喫茶店",
+    "rd": "きっさてん",
+    "rom": "kissaten",
+    "en": "coffee shop; tea house",
+    "my": "လက်ဖက်ရည်/ကော်ဖီဆိုင်",
+    "l": 10
+  },
+  {
+    "jp": "本屋",
+    "rd": "ほんや",
+    "rom": "honya",
+    "en": "bookstore",
+    "my": "စာအုပ်ဆိုင်",
+    "l": 10
+  },
+  {
+    "jp": "～屋",
+    "rd": "～や",
+    "rom": "~ya",
+    "en": "~ shop",
+    "my": "～ဆိုင်",
+    "l": 10
+  },
+  {
+    "jp": "乗り場",
+    "rd": "のりば",
+    "rom": "noriba",
+    "en": "boarding place; stop",
+    "my": "～ယာဉ်စီးတဲ့နေရာ",
+    "l": 10
+  },
+  {
+    "jp": "県",
+    "rd": "けん",
+    "rom": "ken",
+    "en": "prefecture",
+    "my": "တိုင်းဒေသ (prefecture)",
+    "l": 10
+  },
+  {
+    "jp": "上",
+    "rd": "うえ",
+    "rom": "ue",
+    "en": "up; above; on",
+    "my": "အပေါ်",
+    "l": 10
+  },
+  {
+    "jp": "下",
+    "rd": "した",
+    "rom": "shita",
+    "en": "down; below; under",
+    "my": "အောက်",
+    "l": 10
+  },
+  {
+    "jp": "前",
+    "rd": "まえ",
+    "rom": "mae",
+    "en": "front; before",
+    "my": "ရှေ့၊ အရှေ့",
+    "l": 10
+  },
+  {
+    "jp": "後ろ",
+    "rd": "うしろ",
+    "rom": "ushiro",
+    "en": "back; behind",
+    "my": "နောက်၊ အနောက်",
+    "l": 10
+  },
+  {
+    "jp": "右",
+    "rd": "みぎ",
+    "rom": "migi",
+    "en": "right",
+    "my": "ညာဘက်",
+    "l": 10
+  },
+  {
+    "jp": "左",
+    "rd": "ひだり",
+    "rom": "hidari",
+    "en": "left",
+    "my": "ဘယ်ဘက်",
+    "l": 10
+  },
+  {
+    "jp": "中",
+    "rd": "ちゅう",
+    "rom": "chuu",
+    "en": "inside; middle",
+    "my": "အထဲ(မှာ)",
+    "l": 10
+  },
+  {
+    "jp": "外",
+    "rd": "がい",
+    "rom": "gai",
+    "en": "outside",
+    "my": "အပြင်(မှာ)",
+    "l": 10
+  },
+  {
+    "jp": "隣",
+    "rd": "となり",
+    "rom": "tonari",
+    "en": "next to; neighbouring",
+    "my": "အနား(မှာ)",
+    "l": 10
+  },
+  {
+    "jp": "近く",
+    "rd": "ちかく",
+    "rom": "chikaku",
+    "en": "near; neighbourhood",
+    "my": "အနီးနား(မှာ)",
+    "l": 10
+  },
+  {
+    "jp": "間",
+    "rd": "あいだ",
+    "rom": "aida",
+    "en": "between; interval",
+    "my": "နှစ်ခုကြား (မှာ)",
+    "l": 10
+  },
+  {
+    "jp": "～や～など",
+    "rd": "～や～など",
+    "rom": "~ya~nado",
+    "en": "~ and ~, etc.",
+    "my": "～နဲ့～တွေ",
+    "l": 10
+  },
+  {
+    "jp": "[どうも]すみません。",
+    "rd": "[どうも]すみません。",
+    "rom": "[doumo] sumimasen.",
+    "en": "Excuse me; I'm sorry to trouble you",
+    "my": "ကျေးဇူးပါ(အနှောင့်အယှက်ဖြစ်ရင်ခွင့်လွှတ်ပါ)",
+    "l": 10
+  },
+  {
+    "jp": "ナンプラー",
+    "rd": "ナンプラー",
+    "rom": "nanpuraa",
+    "en": "fish sauce",
+    "my": "ငံပြာရည်",
+    "l": 10
+  },
+  {
+    "jp": "コーナー",
+    "rd": "コーナー",
+    "rom": "koonaa",
+    "en": "corner",
+    "my": "ကော်နာ",
+    "l": 10
+  },
+  {
+    "jp": "いちばん下",
+    "rd": "いちばんした",
+    "rom": "ichiban shita",
+    "en": "the bottom; the lowest",
+    "my": "အောက်ဆုံး",
+    "l": 10
+  },
+  {
+    "jp": "東京ディズニーランド",
+    "rd": "とうきょうディズニーランド",
+    "rom": "toukyou dizuniirando",
+    "en": "Tokyo Disneyland",
+    "my": "တိုကျို ဒစ္စနေလန်း",
+    "l": 10
+  },
+  {
+    "jp": "アジアストア",
+    "rd": "アジアストア",
+    "rom": "ajia sutoa",
+    "en": "Asia Store",
+    "my": "အာရှအာ စတိုးဆိုင်",
+    "l": 10
+  },
+  {
+    "jp": "います[子どもが]",
+    "rd": "います[こどもが]",
+    "rom": "imasu [kodomo ga]",
+    "en": "to be, to exist (a child)",
+    "my": "ရှိသည်။(ကလေးရှိသည်)",
+    "l": 11
+  },
+  {
+    "jp": "います[日本に]",
+    "rd": "います[にほんに]",
+    "rom": "imasu [nihon ni]",
+    "en": "to be, to exist (in Japan)",
+    "my": "နေသည်။ (ဂျပန်တွင်)",
+    "l": 11
+  },
+  {
+    "jp": "かかります",
+    "rd": "かかります",
+    "rom": "kakarimasu",
+    "en": "to take (time)",
+    "my": "ကြာသည်။(အချိန်ကြာတယ်)",
+    "l": 11
+  },
+  {
+    "jp": "休みます",
+    "rd": "やすみます",
+    "rom": "yasumimasu",
+    "en": "to rest; to take a day off",
+    "my": "အနားယူသည်။",
+    "l": 11
+  },
+  {
+    "jp": "[会社を]",
+    "rd": "[かいしゃを]",
+    "rom": "[kaisha o]",
+    "en": "(the company)",
+    "my": "ကုမ္ပဏီကို",
+    "l": 11
+  },
+  {
+    "jp": "1つ",
+    "rd": "ひとつ",
+    "rom": "hitotsu",
+    "en": "one (thing)",
+    "my": "တစ်ခု",
+    "l": 11
+  },
+  {
+    "jp": "2つ",
+    "rd": "ふたつ",
+    "rom": "futatsu",
+    "en": "two (things)",
+    "my": "နှစ်ခု",
+    "l": 11
+  },
+  {
+    "jp": "3つ",
+    "rd": "みっつ",
+    "rom": "mittsu",
+    "en": "three (things)",
+    "my": "သုံးခု",
+    "l": 11
+  },
+  {
+    "jp": "4つ",
+    "rd": "よっつ",
+    "rom": "yottsu",
+    "en": "four (things)",
+    "my": "လေးခု",
+    "l": 11
+  },
+  {
+    "jp": "5つ",
+    "rd": "いつつ",
+    "rom": "itsutsu",
+    "en": "five (things)",
+    "my": "ငါးခု",
+    "l": 11
+  },
+  {
+    "jp": "6つ",
+    "rd": "むっつ",
+    "rom": "muttsu",
+    "en": "six (things)",
+    "my": "ခြောက်ခု",
+    "l": 11
+  },
+  {
+    "jp": "7つ",
+    "rd": "ななつ",
+    "rom": "nanatsu",
+    "en": "seven (things)",
+    "my": "ခုနစ်ခု",
+    "l": 11
+  },
+  {
+    "jp": "8つ",
+    "rd": "やっつ",
+    "rom": "yattsu",
+    "en": "eight (things)",
+    "my": "ရှစ်ခု",
+    "l": 11
+  },
+  {
+    "jp": "9つ",
+    "rd": "ここのつ",
+    "rom": "kokonotsu",
+    "en": "nine (things)",
+    "my": "ကိုးခု",
+    "l": 11
+  },
+  {
+    "jp": "とお",
+    "rd": "とお",
+    "rom": "too",
+    "en": "ten (things)",
+    "my": "ဆယ်ခု",
+    "l": 11
+  },
+  {
+    "jp": "いくつ",
+    "rd": "いくつ",
+    "rom": "ikutsu",
+    "en": "how many (things)",
+    "my": "ဘယ်နှစ်ခု",
+    "l": 11
+  },
+  {
+    "jp": "1人",
+    "rd": "ひとり",
+    "rom": "hitori",
+    "en": "one person",
+    "my": "တစ်ယောက်",
+    "l": 11
+  },
+  {
+    "jp": "2人",
+    "rd": "ふたり",
+    "rom": "futari",
+    "en": "two people",
+    "my": "နှစ်ယောက်",
+    "l": 11
+  },
+  {
+    "jp": "～人",
+    "rd": "～にん",
+    "rom": "~nin",
+    "en": "~ people",
+    "my": "～ယောက်",
+    "l": 11
+  },
+  {
+    "jp": "～台",
+    "rd": "～だい",
+    "rom": "~dai",
+    "en": "counter for machines, vehicles, etc.",
+    "my": "～စီး၊～လုံး၊ (ကြီးမားသော အရာ(ကား၊ တီဗီ၊ ရေခဲ သေတ္တာ၊ ပန်ကာ စသည်များ))",
+    "l": 11
+  },
+  {
+    "jp": "～枚",
+    "rd": "～まい",
+    "rom": "~mai",
+    "en": "counter for flat things",
+    "my": "～ရွက်(ပါးလွှာသောအရာ(တံဆိပ်ခေါင်း၊ စာရွက်၊ စာအိတ်၊ ဓါတ်ပုံ၊ အင်္ကျီ စသည်များ))",
+    "l": 11
+  },
+  {
+    "jp": "～回",
+    "rd": "～かい",
+    "rom": "~kai",
+    "en": "counter for times; ~ times",
+    "my": "～ခေါက်(အကြိမ်အရေ)",
+    "l": 11
+  },
+  {
+    "jp": "りんご",
+    "rd": "りんご",
+    "rom": "ringo",
+    "en": "apple",
+    "my": "ပန်းသီး",
+    "l": 11
+  },
+  {
+    "jp": "みかん",
+    "rd": "みかん",
+    "rom": "mikan",
+    "en": "mandarin orange",
+    "my": "လိမ္မော်သီး",
+    "l": 11
+  },
+  {
+    "jp": "サンドイッチ",
+    "rd": "サンドイッチ",
+    "rom": "sandoitchi",
+    "en": "sandwich",
+    "my": "Sandwich",
+    "l": 11
+  },
+  {
+    "jp": "カレー[ライス]",
+    "rd": "カレー[ライス]",
+    "rom": "karee [raisu]",
+    "en": "curry [and rice]",
+    "my": "ဂျပန်မဆလာဟင်း",
+    "l": 11
+  },
+  {
+    "jp": "アイスクリーム",
+    "rd": "アイスクリーム",
+    "rom": "aisukuriimu",
+    "en": "ice cream",
+    "my": "ရေခဲမုန့်",
+    "l": 11
+  },
+  {
+    "jp": "切手",
+    "rd": "きって",
+    "rom": "kitte",
+    "en": "stamp",
+    "my": "တံဆိပ်ခေါင်း",
+    "l": 11
+  },
+  {
+    "jp": "はがき",
+    "rd": "はがき",
+    "rom": "hagaki",
+    "en": "postcard",
+    "my": "post card",
+    "l": 11
+  },
+  {
+    "jp": "封筒",
+    "rd": "ふうとう",
+    "rom": "fuutou",
+    "en": "envelope",
+    "my": "စာအိတ်",
+    "l": 11
+  },
+  {
+    "jp": "両親",
+    "rd": "りょうしん",
+    "rom": "ryoushin",
+    "en": "(both) parents",
+    "my": "မိဘနှစ်ပါး",
+    "l": 11
+  },
+  {
+    "jp": "兄弟",
+    "rd": "きょうだい",
+    "rom": "kyoudai",
+    "en": "brothers and sisters; siblings",
+    "my": "မောင်နှမ",
+    "l": 11
+  },
+  {
+    "jp": "兄",
+    "rd": "あに",
+    "rom": "ani",
+    "en": "older brother (one's own)",
+    "my": "အကို(မိမိ၏အကို)",
+    "l": 11
+  },
+  {
+    "jp": "お兄さん",
+    "rd": "おにいさん",
+    "rom": "oniisan",
+    "en": "older brother (someone else's)",
+    "my": "အကို(သူတစ်ပါး၏အကို)",
+    "l": 11
+  },
+  {
+    "jp": "姉",
+    "rd": "あね",
+    "rom": "ane",
+    "en": "older sister (one's own)",
+    "my": "အမ(မိမိ၏အမ)",
+    "l": 11
+  },
+  {
+    "jp": "お姉さん",
+    "rd": "おねえさん",
+    "rom": "oneesan",
+    "en": "older sister (someone else's)",
+    "my": "အမ(သူတစ်ပါး၏အမ)",
+    "l": 11
+  },
+  {
+    "jp": "弟",
+    "rd": "おとうと",
+    "rom": "otouto",
+    "en": "younger brother (one's own)",
+    "my": "မောင်၊ ညီ(မိမိ၏မောင်၊ ညီ)",
+    "l": 11
+  },
+  {
+    "jp": "弟さん",
+    "rd": "おとうとさん",
+    "rom": "otoutosan",
+    "en": "younger brother (someone else's)",
+    "my": "သူတစ်ပါး၏မောင်၊ ညီ",
+    "l": 11
+  },
+  {
+    "jp": "妹",
+    "rd": "いもうと",
+    "rom": "imouto",
+    "en": "younger sister (one's own)",
+    "my": "ညီမ(မိမိ၏ညီမ)",
+    "l": 11
+  },
+  {
+    "jp": "妹さん",
+    "rd": "いもうとさん",
+    "rom": "imoutosan",
+    "en": "younger sister (someone else's)",
+    "my": "သူတစ်ပါး၏ညီမ",
+    "l": 11
+  },
+  {
+    "jp": "外国",
+    "rd": "がいこく",
+    "rom": "gaikoku",
+    "en": "foreign country",
+    "my": "နိုင်ငံခြား",
+    "l": 11
+  },
+  {
+    "jp": "留学生",
+    "rd": "りゅうがくせい",
+    "rom": "ryuugakusei",
+    "en": "foreign student",
+    "my": "နိုင်ငံခြားပညာတော်သင် ကျောင်းသား",
+    "l": 11
+  },
+  {
+    "jp": "～時間",
+    "rd": "～じかん",
+    "rom": "~jikan",
+    "en": "~ hours",
+    "my": "～နာရီ(၁ နာရီ)",
+    "l": 11
+  },
+  {
+    "jp": "～週間",
+    "rd": "～しゅうかん",
+    "rom": "~shuukan",
+    "en": "~ weeks",
+    "my": "～ပတ်(ရက်သတ္တပတ်)",
+    "l": 11
+  },
+  {
+    "jp": "～ヶ月",
+    "rd": "～げつ",
+    "rom": "~getsu",
+    "en": "~ months",
+    "my": "～လကြာ",
+    "l": 11
+  },
+  {
+    "jp": "～年",
+    "rd": "～ねん",
+    "rom": "~nen",
+    "en": "~ years",
+    "my": "～နှစ်",
+    "l": 11
+  },
+  {
+    "jp": "ぐらい",
+    "rd": "ぐらい",
+    "rom": "gurai",
+    "en": "about; approximately",
+    "my": "လောက်(၁ နာရီလောက်)",
+    "l": 11
+  },
+  {
+    "jp": "どのぐらい",
+    "rd": "どのぐらい",
+    "rom": "donogurai",
+    "en": "how long; how much",
+    "my": "ဘယ်လောက်",
+    "l": 11
+  },
+  {
+    "jp": "全部で",
+    "rd": "ぜんぶで",
+    "rom": "zenbude",
+    "en": "in all; altogether",
+    "my": "အားလုံး(အရာဝတ္ထု)",
+    "l": 11
+  },
+  {
+    "jp": "みんな",
+    "rd": "みんな",
+    "rom": "minna",
+    "en": "everyone; all (people)",
+    "my": "အားလုံး(လူ၊ သက်ရှိ)",
+    "l": 11
+  },
+  {
+    "jp": "～だけ",
+    "rd": "～だけ",
+    "rom": "~dake",
+    "en": "only ~; just ~",
+    "my": "～တည်းဘဲ",
+    "l": 11
+  },
+  {
+    "jp": "かしこまりました",
+    "rd": "かしこまりました",
+    "rom": "kashikomarimashita",
+    "en": "Certainly. (polite reply)",
+    "my": "ကောင်းပါပြီ",
+    "l": 11
+  },
+  {
+    "jp": "いいお天気ですね",
+    "rd": "いいおてんきですね",
+    "rom": "ii otenki desu ne",
+    "en": "Nice weather, isn't it?",
+    "my": "ရာသီဥတုကောင်းတယ်နော်",
+    "l": 11
+  },
+  {
+    "jp": "おでかけですか",
+    "rd": "おでかけですか",
+    "rom": "odekake desu ka",
+    "en": "Are you going out?",
+    "my": "အပြင်သွားမလို့လား",
+    "l": 11
+  },
+  {
+    "jp": "ちょっと～まで",
+    "rd": "ちょっと～まで",
+    "rom": "chotto ~ made",
+    "en": "to ~ for a while",
+    "my": "ခဏ～အထိ",
+    "l": 11
+  },
+  {
+    "jp": "行ってらっしゃい",
+    "rd": "いってらっしゃい",
+    "rom": "itterasshai",
+    "en": "Have a nice day. (seeing someone off)",
+    "my": "သွားပါနော်(နှုတ်ဆက်)",
+    "l": 11
+  },
+  {
+    "jp": "行ってきます",
+    "rd": "いってきます",
+    "rom": "ittekimasu",
+    "en": "I'm off. (leaving home)",
+    "my": "သွားပြီနော်(နှုတ်ဆက်)",
+    "l": 11
+  },
+  {
+    "jp": "船便",
+    "rd": "ふなびん",
+    "rom": "funabin",
+    "en": "surface mail (by ship)",
+    "my": "ရေကြောင်းဖြင့်ပေးပို့",
+    "l": 11
+  },
+  {
+    "jp": "航空便 [エアメール]",
+    "rd": "こうくうびん [エアメール]",
+    "rom": "koukuubin [eameeru]",
+    "en": "airmail",
+    "my": "လေကြောင်းဖြင့်ပေးပို့",
+    "l": 11
+  },
+  {
+    "jp": "お願いします。",
+    "rd": "おねがいします。",
+    "rom": "onegaishimasu.",
+    "en": "Please. (request)",
+    "my": "ကျေးဇူးပြု၍",
+    "l": 11
+  },
+  {
+    "jp": "オーストラリア",
+    "rd": "オーストラリア",
+    "rom": "oosutoraria",
+    "en": "Australia",
+    "my": "Australia",
+    "l": 11
+  },
+  {
+    "jp": "簡単[な]",
+    "rd": "かんたん[な]",
+    "rom": "kantan [na]",
+    "en": "easy; simple",
+    "my": "လွယ်သော",
+    "l": 12
+  },
+  {
+    "jp": "近い",
+    "rd": "ちかい",
+    "rom": "chikai",
+    "en": "near; close",
+    "my": "နီးသော",
+    "l": 12
+  },
+  {
+    "jp": "遠い",
+    "rd": "とおい",
+    "rom": "tooi",
+    "en": "far",
+    "my": "ဝေးသော",
+    "l": 12
+  },
+  {
+    "jp": "速い",
+    "rd": "はやい",
+    "rom": "hayai",
+    "en": "fast; quick",
+    "my": "မြန်သော(အရှိန်မြန်သော)",
+    "l": 12
+  },
+  {
+    "jp": "遅い",
+    "rd": "おそい",
+    "rom": "osoi",
+    "en": "slow; late",
+    "my": "နှေးသော",
+    "l": 12
+  },
+  {
+    "jp": "多い[人が～]",
+    "rd": "おおい[ひとが～]",
+    "rom": "ooi [hito ga ~]",
+    "en": "many; a lot (people)",
+    "my": "များသော(လူ)",
+    "l": 12
+  },
+  {
+    "jp": "少ない[人が～]",
+    "rd": "すくない[ひとが～]",
+    "rom": "sukunai [hito ga ~]",
+    "en": "few; a little (people)",
+    "my": "နည်းသော(လူ)",
+    "l": 12
+  },
+  {
+    "jp": "暖かい、温かい",
+    "rd": "あたたかい、あたたかい",
+    "rom": "atatakai, atatakai",
+    "en": "warm",
+    "my": "နွေးသော",
+    "l": 12
+  },
+  {
+    "jp": "涼しい",
+    "rd": "すずしい",
+    "rom": "suzushii",
+    "en": "cool (weather)",
+    "my": "အေးမြသော",
+    "l": 12
+  },
+  {
+    "jp": "甘い",
+    "rd": "あまい",
+    "rom": "amai",
+    "en": "sweet",
+    "my": "ချိုသော",
+    "l": 12
+  },
+  {
+    "jp": "辛い",
+    "rd": "からい",
+    "rom": "karai",
+    "en": "spicy; hot",
+    "my": "စပ်သော",
+    "l": 12
+  },
+  {
+    "jp": "重い",
+    "rd": "おもい",
+    "rom": "omoi",
+    "en": "heavy",
+    "my": "လေးသော",
+    "l": 12
+  },
+  {
+    "jp": "軽い",
+    "rd": "かるい",
+    "rom": "karui",
+    "en": "light (weight)",
+    "my": "ပေါ့သော",
+    "l": 12
+  },
+  {
+    "jp": "いい[コーヒーが～]",
+    "rd": "いい[コーヒーが～]",
+    "rom": "ii [koohii ga ~]",
+    "en": "good; nice (coffee)",
+    "my": "ကောင်းသော(ကော်ဖီက)",
+    "l": 12
+  },
+  {
+    "jp": "季節",
+    "rd": "きせつ",
+    "rom": "kisetsu",
+    "en": "season",
+    "my": "ရာသီဥတု",
+    "l": 12
+  },
+  {
+    "jp": "春",
+    "rd": "はる",
+    "rom": "haru",
+    "en": "spring",
+    "my": "နွေဦးပေါက်",
+    "l": 12
+  },
+  {
+    "jp": "夏",
+    "rd": "なつ",
+    "rom": "natsu",
+    "en": "summer",
+    "my": "နွေရာသီ",
+    "l": 12
+  },
+  {
+    "jp": "秋",
+    "rd": "あき",
+    "rom": "aki",
+    "en": "autumn; fall",
+    "my": "ဆောင်းဦးပေါက်",
+    "l": 12
+  },
+  {
+    "jp": "冬",
+    "rd": "ふゆ",
+    "rom": "fuyu",
+    "en": "winter",
+    "my": "ဆောင်းရာသီ",
+    "l": 12
+  },
+  {
+    "jp": "天気",
+    "rd": "てんき",
+    "rom": "tenki",
+    "en": "weather",
+    "my": "မိုးလေဝသ၊ ရာသီဥတု",
+    "l": 12
+  },
+  {
+    "jp": "雨",
+    "rd": "あめ",
+    "rom": "ame",
+    "en": "rain",
+    "my": "မိုး",
+    "l": 12
+  },
+  {
+    "jp": "雪",
+    "rd": "ゆき",
+    "rom": "yuki",
+    "en": "snow",
+    "my": "နှင်း",
+    "l": 12
+  },
+  {
+    "jp": "曇",
+    "rd": "くもり",
+    "rom": "kumori",
+    "en": "cloudy",
+    "my": "တိမ်ထူသော",
+    "l": 12
+  },
+  {
+    "jp": "ホテル",
+    "rd": "ホテル",
+    "rom": "hoteru",
+    "en": "hotel",
+    "my": "ဟိုတယ်",
+    "l": 12
+  },
+  {
+    "jp": "空港",
+    "rd": "くうこう",
+    "rom": "kuukou",
+    "en": "airport",
+    "my": "လေဆိပ်",
+    "l": 12
+  },
+  {
+    "jp": "海",
+    "rd": "うみ",
+    "rom": "umi",
+    "en": "sea; ocean",
+    "my": "ပင်လယ်",
+    "l": 12
+  },
+  {
+    "jp": "世界",
+    "rd": "せかい",
+    "rom": "sekai",
+    "en": "world",
+    "my": "ကမ္ဘာလောက",
+    "l": 12
+  },
+  {
+    "jp": "パーティー",
+    "rd": "パーティー",
+    "rom": "paatii",
+    "en": "party",
+    "my": "ပါတီပွဲ",
+    "l": 12
+  },
+  {
+    "jp": "[お]祭り",
+    "rd": "[お]まつり",
+    "rom": "[o]matsuri",
+    "en": "festival",
+    "my": "ပွဲတော်",
+    "l": 12
+  },
+  {
+    "jp": "すき焼き",
+    "rd": "すきやき",
+    "rom": "sukiyaki",
+    "en": "sukiyaki (Japanese beef hot pot)",
+    "my": "ဂျပန် အမဲသား hot pot",
+    "l": 12
+  },
+  {
+    "jp": "刺身",
+    "rd": "さしみ",
+    "rom": "sashimi",
+    "en": "sashimi (raw fish)",
+    "my": "ဆာရှိမိ",
+    "l": 12
+  },
+  {
+    "jp": "[お]すし",
+    "rd": "[お]すし",
+    "rom": "[o]sushi",
+    "en": "sushi",
+    "my": "ဆူရှီ",
+    "l": 12
+  },
+  {
+    "jp": "天ぷら",
+    "rd": "てんぷら",
+    "rom": "tenpura",
+    "en": "tempura",
+    "my": "ဂျပန်အကြော်",
+    "l": 12
+  },
+  {
+    "jp": "豚肉",
+    "rd": "ぶたにく",
+    "rom": "butaniku",
+    "en": "pork",
+    "my": "ဝက်သား",
+    "l": 12
+  },
+  {
+    "jp": "鶏肉",
+    "rd": "とりにく",
+    "rom": "toriniku",
+    "en": "chicken (meat)",
+    "my": "ကြက်သား",
+    "l": 12
+  },
+  {
+    "jp": "牛肉",
+    "rd": "ぎゅうにく",
+    "rom": "gyuuniku",
+    "en": "beef",
+    "my": "အမဲသား",
+    "l": 12
+  },
+  {
+    "jp": "レモン",
+    "rd": "レモン",
+    "rom": "remon",
+    "en": "lemon",
+    "my": "သံပုရိုသီး",
+    "l": 12
+  },
+  {
+    "jp": "生け花",
+    "rd": "いけばな",
+    "rom": "ikebana",
+    "en": "flower arrangement",
+    "my": "ဂျပန်ပန်းအလှထိုးခြင်း",
+    "l": 12
+  },
+  {
+    "jp": "紅葉",
+    "rd": "もみじ",
+    "rom": "momiji",
+    "en": "autumn leaves; fall colors",
+    "my": "သစ်ရွက်များအရောင် ပြောင်းခြင်း",
+    "l": 12
+  },
+  {
+    "jp": "どちら",
+    "rd": "どちら",
+    "rom": "dochira",
+    "en": "which one",
+    "my": "ဘယ်ဟာ",
+    "l": 12
+  },
+  {
+    "jp": "どちらも",
+    "rd": "どちらも",
+    "rom": "dochiramo",
+    "en": "both; either",
+    "my": "နှစ်ခုစလုံး(ဘယ်ဟာမဆို)",
+    "l": 12
+  },
+  {
+    "jp": "いちばん",
+    "rd": "いちばん",
+    "rom": "ichiban",
+    "en": "the most; number one",
+    "my": "～ဆုံး (အကောင်းဆုံး၊ အများဆုံး)",
+    "l": 12
+  },
+  {
+    "jp": "ずっと",
+    "rd": "ずっと",
+    "rom": "zutto",
+    "en": "all the time; very",
+    "my": "တောက်လျှောက်၊ အမြဲတမ်း၊ အရမ်း",
+    "l": 12
+  },
+  {
+    "jp": "初めて",
+    "rd": "はじめて",
+    "rom": "hajimete",
+    "en": "for the first time",
+    "my": "ပထမဆုံး",
+    "l": 12
+  },
+  {
+    "jp": "ただいま",
+    "rd": "ただいま",
+    "rom": "tadaima",
+    "en": "I'm home.",
+    "my": "ပြန်ရောက်ပါပြီ(နှုတ်ဆက်)",
+    "l": 12
+  },
+  {
+    "jp": "お帰りなさい",
+    "rd": "おかえりなさい",
+    "rom": "okaerinasai",
+    "en": "Welcome home.",
+    "my": "ပြန်လာပါ(နှုတ်ဆက်)",
+    "l": 12
+  },
+  {
+    "jp": "わあ すごい 人ですね",
+    "rd": "わあ すごい ひとですね",
+    "rom": "waa sugoi hito desu ne",
+    "en": "Wow, so many people!",
+    "my": "ကြည့်ပါအုံး လူတွေအများကြီးဘဲ",
+    "l": 12
+  },
+  {
+    "jp": "疲れました",
+    "rd": "つかれました",
+    "rom": "tsukaremashita",
+    "en": "I got tired.",
+    "my": "ပင်ပန်းခဲ့တယ်။",
+    "l": 12
+  },
+  {
+    "jp": "祇園祭",
+    "rd": "ぎおんまつり",
+    "rom": "gionmatsuri",
+    "en": "Gion Festival",
+    "my": "Gion ပွဲတော်",
+    "l": 12
+  },
+  {
+    "jp": "ホンコン",
+    "rd": "ホンコン",
+    "rom": "honkon",
+    "en": "Hong Kong",
+    "my": "ဟောင်ကောင်",
+    "l": 12
+  },
+  {
+    "jp": "シンガポール",
+    "rd": "シンガポール",
+    "rom": "shingapooru",
+    "en": "Singapore",
+    "my": "စင်ကာပူ",
+    "l": 12
+  },
+  {
+    "jp": "ABC ストア",
+    "rd": "ABC ストア",
+    "rom": "ABC sutoa",
+    "en": "ABC Store",
+    "my": "ABCစတိုးဆိုင်",
+    "l": 12
+  },
+  {
+    "jp": "ジャパン",
+    "rd": "ジャパン",
+    "rom": "japan",
+    "en": "Japan (supermarket)",
+    "my": "Japanစူပါမားကတ်",
+    "l": 12
+  },
+  {
+    "jp": "遊びます",
+    "rd": "あそびます",
+    "rom": "asobimasu",
+    "en": "to play; to have fun",
+    "my": "ကစားသည်။",
+    "l": 13
+  },
+  {
+    "jp": "泳ぎます",
+    "rd": "およぎます",
+    "rom": "oyogimasu",
+    "en": "to swim",
+    "my": "ရေကူးသည်။",
+    "l": 13
+  },
+  {
+    "jp": "迎えます",
+    "rd": "むかえます",
+    "rom": "mukaemasu",
+    "en": "to meet; to welcome",
+    "my": "ကြိုသည်။ ကြိုဆိုသည်။",
+    "l": 13
+  },
+  {
+    "jp": "疲れます",
+    "rd": "つかれます",
+    "rom": "tsukaremasu",
+    "en": "to get tired",
+    "my": "ပင်ပန်းသည်။ မောပန်းသည်။",
+    "l": 13
+  },
+  {
+    "jp": "結婚します",
+    "rd": "けっこんします",
+    "rom": "kekkonshimasu",
+    "en": "to get married",
+    "my": "အိမ်ထောင်ပြုသည်။",
+    "l": 13
+  },
+  {
+    "jp": "買い物します",
+    "rd": "かいものします",
+    "rom": "kaimonoshimasu",
+    "en": "to shop; to go shopping",
+    "my": "စျေးဝယ်သည်။",
+    "l": 13
+  },
+  {
+    "jp": "食事します",
+    "rd": "しょくじします",
+    "rom": "shokujishimasu",
+    "en": "to have a meal; to eat",
+    "my": "ထမင်းစားသည်။",
+    "l": 13
+  },
+  {
+    "jp": "散歩します",
+    "rd": "さんぽします",
+    "rom": "sanposhimasu",
+    "en": "to take a walk; to stroll",
+    "my": "လမ်းလျှောက်သည်",
+    "l": 13
+  },
+  {
+    "jp": "[公園を]",
+    "rd": "[こうえんを]",
+    "rom": "[kouen o]",
+    "en": "(the park)",
+    "my": "(ပန်းခြံမှာ)။",
+    "l": 13
+  },
+  {
+    "jp": "大変[な]",
+    "rd": "たいへん[な]",
+    "rom": "taihen [na]",
+    "en": "hard; tough; awful",
+    "my": "ပင်ပန်းသော၊ ခက်ခဲသော",
+    "l": 13
+  },
+  {
+    "jp": "欲しい",
+    "rd": "ほしい",
+    "rom": "hoshii",
+    "en": "to want; to desire",
+    "my": "လိုချင်သော",
+    "l": 13
+  },
+  {
+    "jp": "広い",
+    "rd": "ひろい",
+    "rom": "hiroi",
+    "en": "wide; spacious",
+    "my": "ကျယ်သော",
+    "l": 13
+  },
+  {
+    "jp": "狭い",
+    "rd": "せまい",
+    "rom": "semai",
+    "en": "narrow",
+    "my": "ကျဉ်းသော",
+    "l": 13
+  },
+  {
+    "jp": "プール",
+    "rd": "プール",
+    "rom": "puuru",
+    "en": "swimming pool",
+    "my": "ရေကူးကန်",
+    "l": 13
+  },
+  {
+    "jp": "川",
+    "rd": "かわ",
+    "rom": "kawa",
+    "en": "river",
+    "my": "မြစ်ချောင်း",
+    "l": 13
+  },
+  {
+    "jp": "美術",
+    "rd": "びじゅつ",
+    "rom": "bijutsu",
+    "en": "art; fine arts",
+    "my": "အနုပညာ",
+    "l": 13
+  },
+  {
+    "jp": "釣り",
+    "rd": "つり",
+    "rom": "tsuri",
+    "en": "fishing",
+    "my": "ငါးမျှားခြင်း",
+    "l": 13
+  },
+  {
+    "jp": "スキー",
+    "rd": "スキー",
+    "rom": "sukii",
+    "en": "skiing",
+    "my": "နှင်းလျှောစီးခြင်း",
+    "l": 13
+  },
+  {
+    "jp": "週末",
+    "rd": "しゅうまつ",
+    "rom": "shuumatsu",
+    "en": "weekend",
+    "my": "စနေနှင့်တနင်္ဂနွေ(week end)",
+    "l": 13
+  },
+  {
+    "jp": "～ごろ",
+    "rd": "～ごろ",
+    "rom": "~goro",
+    "en": "around (time); about",
+    "my": "～လောက်",
+    "l": 13
+  },
+  {
+    "jp": "何か",
+    "rd": "なにか",
+    "rom": "nanika",
+    "en": "something",
+    "my": "တစ်ခုခု",
+    "l": 13
+  },
+  {
+    "jp": "どこか",
+    "rd": "どこか",
+    "rom": "dokoka",
+    "en": "somewhere",
+    "my": "တစ်နေရာရာ",
+    "l": 13
+  },
+  {
+    "jp": "のどが かわきます",
+    "rd": "のどが かわきます",
+    "rom": "nodo ga kawakimasu",
+    "en": "to be thirsty",
+    "my": "အာခေါင်ခြောက်တယ်",
+    "l": 13
+  },
+  {
+    "jp": "おなかが すきます",
+    "rd": "おなかが すきます",
+    "rom": "onaka ga sukimasu",
+    "en": "to be hungry; to get hungry",
+    "my": "ဗိုက်ဆာတယ်",
+    "l": 13
+  },
+  {
+    "jp": "そうしましょう",
+    "rd": "そうしましょう",
+    "rom": "sou shimashou",
+    "en": "Let's do that.",
+    "my": "အဲဒီလိုလုပ်ရအောင်",
+    "l": 13
+  },
+  {
+    "jp": "ご注文は？",
+    "rd": "ごちゅうもんは？",
+    "rom": "gochuumon wa?",
+    "en": "What would you like to order?",
+    "my": "ဘာစားမှာလဲ(စားသောက်ဆိုင်တွင်)",
+    "l": 13
+  },
+  {
+    "jp": "定食",
+    "rd": "ていしょく",
+    "rom": "teishoku",
+    "en": "set meal; set menu",
+    "my": "သတ်မှတ်ထားသောအစား အစာ (Set menu)",
+    "l": 13
+  },
+  {
+    "jp": "牛どん",
+    "rd": "ぎゅうどん",
+    "rom": "gyuudon",
+    "en": "beef bowl (beef over rice)",
+    "my": "အမဲသားဟင်းနှင့်ထမင်း",
+    "l": 13
+  },
+  {
+    "jp": "[少々] お待ちください",
+    "rd": "[しょうしょう] おまちください",
+    "rom": "[shoushou] omachikudasai",
+    "en": "Please wait a moment.",
+    "my": "ခဏစောင့်ပါ",
+    "l": 13
+  },
+  {
+    "jp": "別々に",
+    "rd": "べつべつに",
+    "rom": "betsubetsuni",
+    "en": "separately",
+    "my": "သီးခြားစီ (ငွေရှင်းသည့်အချိန်တွင် အသုံးများ)",
+    "l": 13
+  },
+  {
+    "jp": "アキックス",
+    "rd": "アキックス",
+    "rom": "akikkusu",
+    "en": "Akikku (company name)",
+    "my": "あきっくす ကုမ္ပဏီ",
+    "l": 13
+  },
+  {
+    "jp": "おはようテレビ",
+    "rd": "おはようテレビ",
+    "rom": "ohayou terebi",
+    "en": "Ohayo TV (program name)",
+    "my": "ohayoတီဗီအစီအစဉ်",
+    "l": 13
+  },
+  {
+    "jp": "付けます",
+    "rd": "つけます",
+    "rom": "tsukemasu",
+    "en": "to turn on (light, air conditioner, TV)",
+    "my": "မီးဖွင့်၊ အဲယားကွန်း၊ TV ဖွင့်သည်။",
+    "l": 14
+  },
+  {
+    "jp": "消します",
+    "rd": "けします",
+    "rom": "keshimasu",
+    "en": "to turn off (light, air conditioner, TV)",
+    "my": "မီးပိတ်၊ အဲယားကွန်း၊ TV ပိတ်သည်။",
+    "l": 14
+  },
+  {
+    "jp": "開けます",
+    "rd": "あけます",
+    "rom": "akemasu",
+    "en": "to open (a door)",
+    "my": "တံခါးဖွင့်သည်။",
+    "l": 14
+  },
+  {
+    "jp": "閉めます",
+    "rd": "しめます",
+    "rom": "shimemasu",
+    "en": "to close (a door)",
+    "my": "တံခါးပိတ်သည်။",
+    "l": 14
+  },
+  {
+    "jp": "急ぎます",
+    "rd": "いそぎます",
+    "rom": "isogimasu",
+    "en": "to hurry",
+    "my": "အလျင်လိုသည်။",
+    "l": 14
+  },
+  {
+    "jp": "待ちます",
+    "rd": "まちます",
+    "rom": "machimasu",
+    "en": "to wait",
+    "my": "စောင့်သည်။",
+    "l": 14
+  },
+  {
+    "jp": "持ちます",
+    "rd": "もちます",
+    "rom": "mochimasu",
+    "en": "to hold; to carry",
+    "my": "ကိုင်သည်။ ယူထားသည်။",
+    "l": 14
+  },
+  {
+    "jp": "取ります",
+    "rd": "とります",
+    "rom": "torimasu",
+    "en": "to take; to pick up",
+    "my": "ယူသည်။ လွှမ်းယူသည်။",
+    "l": 14
+  },
+  {
+    "jp": "手伝います",
+    "rd": "てつだいます",
+    "rom": "tetsudaimasu",
+    "en": "to help",
+    "my": "ကူညီသည်။",
+    "l": 14
+  },
+  {
+    "jp": "呼びます",
+    "rd": "よびます",
+    "rom": "yobimasu",
+    "en": "to call (out to)",
+    "my": "ခေါ်သည်။ အော်ခေါ်သည်။",
+    "l": 14
+  },
+  {
+    "jp": "話します",
+    "rd": "はなします",
+    "rom": "hanashimasu",
+    "en": "to speak; to talk",
+    "my": "ပြောသည်။",
+    "l": 14
+  },
+  {
+    "jp": "使います",
+    "rd": "つかいます",
+    "rom": "tsukaimasu",
+    "en": "to use",
+    "my": "အသုံးပြုသည်။",
+    "l": 14
+  },
+  {
+    "jp": "止めます",
+    "rd": "とめます",
+    "rom": "tomemasu",
+    "en": "to stop",
+    "my": "ရပ်သည်။",
+    "l": 14
+  },
+  {
+    "jp": "見せます",
+    "rd": "みせます",
+    "rom": "misemasu",
+    "en": "to show",
+    "my": "ပြသည်။",
+    "l": 14
+  },
+  {
+    "jp": "教えます[住所を～]",
+    "rd": "おしえます[じゅうしょを～]",
+    "rom": "oshiemasu [juusho o ~]",
+    "en": "to tell; to teach (an address)",
+    "my": "ပြောပြသည်(လိပ်စာကို)",
+    "l": 14
+  },
+  {
+    "jp": "座ります",
+    "rd": "すわります",
+    "rom": "suwarimasu",
+    "en": "to sit down",
+    "my": "ထိုင်သည်",
+    "l": 14
+  },
+  {
+    "jp": "立ちます",
+    "rd": "たちます",
+    "rom": "tachimasu",
+    "en": "to stand up",
+    "my": "မတ်တပ်ရပ်သည်",
+    "l": 14
+  },
+  {
+    "jp": "入ります",
+    "rd": "はいります",
+    "rom": "hairimasu",
+    "en": "to enter; to go in",
+    "my": "ဝင်သည်",
+    "l": 14
+  },
+  {
+    "jp": "[喫茶店に～]",
+    "rd": "[きっさてんに～]",
+    "rom": "[kissaten ni ~]",
+    "en": "(to a coffee shop)",
+    "my": "(လက်ဖက်ရည်ဆိုင်သို့)",
+    "l": 14
+  },
+  {
+    "jp": "出ます",
+    "rd": "でます",
+    "rom": "demasu",
+    "en": "to go out; to leave",
+    "my": "ထွက်သည်",
+    "l": 14
+  },
+  {
+    "jp": "[喫茶店を]",
+    "rd": "[きっさてんを]",
+    "rom": "[kissaten o]",
+    "en": "(from a coffee shop)",
+    "my": "(လက်ဖက်ရည်ဆိုင်မှ)",
+    "l": 14
+  },
+  {
+    "jp": "降ります[雨が～]",
+    "rd": "ふります[あめが～]",
+    "rom": "furimasu [ame ga ~]",
+    "en": "to fall (rain)",
+    "my": "ရွာသည်(မိုး)",
+    "l": 14
+  },
+  {
+    "jp": "コピーします",
+    "rd": "コピーします",
+    "rom": "kopiishimasu",
+    "en": "to copy; to photocopy",
+    "my": "မိတ္တူကူးသည်။",
+    "l": 14
+  },
+  {
+    "jp": "電気",
+    "rd": "でんき",
+    "rom": "denki",
+    "en": "electricity",
+    "my": "လျှပ်စစ်",
+    "l": 14
+  },
+  {
+    "jp": "エアコン",
+    "rd": "エアコン",
+    "rom": "eakon",
+    "en": "air conditioner",
+    "my": "အဲယားကွန်း",
+    "l": 14
+  },
+  {
+    "jp": "パスポート",
+    "rd": "パスポート",
+    "rom": "pasupooto",
+    "en": "passport",
+    "my": "ပတ်စ်ပို့",
+    "l": 14
+  },
+  {
+    "jp": "名前",
+    "rd": "なまえ",
+    "rom": "namae",
+    "en": "name",
+    "my": "နာမည်",
+    "l": 14
+  },
+  {
+    "jp": "住所",
+    "rd": "じゅうしょ",
+    "rom": "juusho",
+    "en": "address",
+    "my": "လိပ်စာ",
+    "l": 14
+  },
+  {
+    "jp": "地図",
+    "rd": "ちず",
+    "rom": "chizu",
+    "en": "map",
+    "my": "မြေပုံ",
+    "l": 14
+  },
+  {
+    "jp": "塩",
+    "rd": "しお",
+    "rom": "shio",
+    "en": "salt",
+    "my": "ဆား",
+    "l": 14
+  },
+  {
+    "jp": "砂糖",
+    "rd": "さとう",
+    "rom": "satou",
+    "en": "sugar",
+    "my": "သကြား",
+    "l": 14
+  },
+  {
+    "jp": "問題",
+    "rd": "もんだい",
+    "rom": "mondai",
+    "en": "question; problem",
+    "my": "မေးခွန်း",
+    "l": 14
+  },
+  {
+    "jp": "答え",
+    "rd": "こたえ",
+    "rom": "kotae",
+    "en": "answer",
+    "my": "အဖြေ",
+    "l": 14
+  },
+  {
+    "jp": "読み方",
+    "rd": "よみかた",
+    "rom": "yomikata",
+    "en": "how to read",
+    "my": "ဖတ်နည်း",
+    "l": 14
+  },
+  {
+    "jp": "～方",
+    "rd": "～かた",
+    "rom": "~kata",
+    "en": "how to ~; way of ~",
+    "my": "～နည်း",
+    "l": 14
+  },
+  {
+    "jp": "まっすぐ",
+    "rd": "まっすぐ",
+    "rom": "massugu",
+    "en": "straight ahead",
+    "my": "တည့်တည့်",
+    "l": 14
+  },
+  {
+    "jp": "ゆっくり",
+    "rd": "ゆっくり",
+    "rom": "yukkuri",
+    "en": "slowly",
+    "my": "ဖြေးဖြေး",
+    "l": 14
+  },
+  {
+    "jp": "すぐ",
+    "rd": "すぐ",
+    "rom": "sugu",
+    "en": "immediately; right away",
+    "my": "ချက်ချင်း",
+    "l": 14
+  },
+  {
+    "jp": "また",
+    "rd": "また",
+    "rom": "mata",
+    "en": "again; also",
+    "my": "နောက်မှ",
+    "l": 14
+  },
+  {
+    "jp": "後で",
+    "rd": "あとで",
+    "rom": "atode",
+    "en": "later; afterwards",
+    "my": "ပြီးမှ",
+    "l": 14
+  },
+  {
+    "jp": "もう少し",
+    "rd": "もうすこし",
+    "rom": "mousukoshi",
+    "en": "a little more",
+    "my": "အနည်းငယ်ထပ်ပြီး",
+    "l": 14
+  },
+  {
+    "jp": "もう～",
+    "rd": "もう～",
+    "rom": "mou ~",
+    "en": "~ more; another ~",
+    "my": "～ထပ်ပြီး",
+    "l": 14
+  },
+  {
+    "jp": "さあ",
+    "rd": "さあ",
+    "rom": "saa",
+    "en": "Come on!; Well!",
+    "my": "ကဲ---",
+    "l": 14
+  },
+  {
+    "jp": "あれ？",
+    "rd": "あれ？",
+    "rom": "are?",
+    "en": "Huh?; What?",
+    "my": "ဟောတော့",
+    "l": 14
+  },
+  {
+    "jp": "信号を右へ曲がってください",
+    "rd": "しんごうをみぎへまがってください",
+    "rom": "shingou o migi e magatte kudasai",
+    "en": "Please turn right at the traffic light.",
+    "my": "မီးပိုင့်ကို ညာဘက်ကွေ့ပါ။",
+    "l": 14
+  },
+  {
+    "jp": "これでお願いします",
+    "rd": "これでおねがいします",
+    "rom": "kore de onegaishimasu",
+    "en": "I'll take this. (when paying)",
+    "my": "ဒါနဲ့ယူပါ။(ပိုက်ဆံပေးချေသာအခါ)",
+    "l": 14
+  },
+  {
+    "jp": "お釣り",
+    "rd": "おつり",
+    "rom": "otsuri",
+    "en": "change (money back)",
+    "my": "ပိုက်ဆံအကြွေ၊ ပြန်အမ်းငွေ",
+    "l": 14
+  },
+  {
+    "jp": "みどり町",
+    "rd": "みどりちょう",
+    "rom": "midori chou",
+    "en": "Midori Town",
+    "my": "Midori မြို့",
+    "l": 14
+  },
+  {
+    "jp": "置きます",
+    "rd": "おきます",
+    "rom": "okimasu",
+    "en": "to put; to place",
+    "my": "ထားသည်။",
+    "l": 15
+  },
+  {
+    "jp": "作ります、造ります",
+    "rd": "つくります、つくります",
+    "rom": "tsukurimasu, tsukurimasu",
+    "en": "to make; to produce; to build",
+    "my": "ပြုလုပ်သည်။ ထုတ်လုပ်သည်။",
+    "l": 15
+  },
+  {
+    "jp": "売ります",
+    "rd": "うります",
+    "rom": "urimasu",
+    "en": "to sell",
+    "my": "ရောင်းသည်။",
+    "l": 15
+  },
+  {
+    "jp": "知ります",
+    "rd": "しります",
+    "rom": "shirimasu",
+    "en": "to know; to learn",
+    "my": "သိသည်။",
+    "l": 15
+  },
+  {
+    "jp": "住みます",
+    "rd": "すみます",
+    "rom": "sumimasu",
+    "en": "to live; to reside",
+    "my": "နေသည်။ နေထိုင်သည်။",
+    "l": 15
+  },
+  {
+    "jp": "研究します",
+    "rd": "けんきゅうします",
+    "rom": "kenkyuushimasu",
+    "en": "to research; to study",
+    "my": "သုတေသနပြုသည်။",
+    "l": 15
+  },
+  {
+    "jp": "資料",
+    "rd": "しりょう",
+    "rom": "shiryou",
+    "en": "materials; documents; data",
+    "my": "စာရွက်စာတမ်း",
+    "l": 15
+  },
+  {
+    "jp": "カタログ",
+    "rd": "カタログ",
+    "rom": "katarogu",
+    "en": "catalog",
+    "my": "ကတ်တလောက်",
+    "l": 15
+  },
+  {
+    "jp": "時刻表",
+    "rd": "じこくひょう",
+    "rom": "jikokuhyou",
+    "en": "timetable",
+    "my": "အချိန်ဇယား",
+    "l": 15
+  },
+  {
+    "jp": "服",
+    "rd": "ふく",
+    "rom": "fuku",
+    "en": "clothes; clothing",
+    "my": "အင်္ကျီ",
+    "l": 15
+  },
+  {
+    "jp": "製品",
+    "rd": "せいひん",
+    "rom": "seihin",
+    "en": "product; manufactured goods",
+    "my": "ပစ္စည်း",
+    "l": 15
+  },
+  {
+    "jp": "ソフト",
+    "rd": "ソフト",
+    "rom": "sofuto",
+    "en": "software",
+    "my": "softwear",
+    "l": 15
+  },
+  {
+    "jp": "電子辞書",
+    "rd": "でんしじしょ",
+    "rom": "denshijisho",
+    "en": "electronic dictionary",
+    "my": "လျှပ်စစ်အဘိဓာန်",
+    "l": 15
+  },
+  {
+    "jp": "経済",
+    "rd": "けいざい",
+    "rom": "keizai",
+    "en": "economy",
+    "my": "စီးပွားရေး",
+    "l": 15
+  },
+  {
+    "jp": "市役所",
+    "rd": "しやくしょ",
+    "rom": "shiyakusho",
+    "en": "city hall; municipal office",
+    "my": "မြို့တော်ခန်းမ/စည်ပင်သာယာရုံး",
+    "l": 15
+  },
+  {
+    "jp": "高校",
+    "rd": "こうこう",
+    "rom": "koukou",
+    "en": "high school",
+    "my": "အထက်တန်းကျောင်း",
+    "l": 15
+  },
+  {
+    "jp": "歯医者",
+    "rd": "はいしゃ",
+    "rom": "haisha",
+    "en": "dentist",
+    "my": "သွားဆရာဝန်",
+    "l": 15
+  },
+  {
+    "jp": "独身",
+    "rd": "どくしん",
+    "rom": "dokushin",
+    "en": "single; unmarried",
+    "my": "လူပျို၊ လူလွတ်၊ အပျို",
+    "l": 15
+  },
+  {
+    "jp": "すみません",
+    "rd": "すみません",
+    "rom": "sumimasen",
+    "en": "Excuse me.; I'm sorry.",
+    "my": "စိတ်မကောင်းပါဘူး",
+    "l": 15
+  },
+  {
+    "jp": "皆さん",
+    "rd": "みなさん",
+    "rom": "minasan",
+    "en": "everyone; ladies and gentlemen",
+    "my": "အားလုံး",
+    "l": 15
+  },
+  {
+    "jp": "思い出します",
+    "rd": "おもいだします",
+    "rom": "omoidashimasu",
+    "en": "to remember; to recall",
+    "my": "သတိရသည်/အမှတ်ရသည်။",
+    "l": 15
+  },
+  {
+    "jp": "いらっしゃいます",
+    "rd": "いらっしゃいます",
+    "rom": "irasshaimasu",
+    "en": "to be (polite); to come/go (polite)",
+    "my": "ရှိသည်(ယဉ်ကျေးသောအသုံး)",
+    "l": 15
+  },
+  {
+    "jp": "日本橋",
+    "rd": "にほんばし",
+    "rom": "nihonbashi",
+    "en": "Nihonbashi (Osaka shopping district)",
+    "my": "ဂျပန်တံတား (အိုဆာကာမှ လူစည်ကားသောနေရာ)",
+    "l": 15
+  },
+  {
+    "jp": "みんなの インタビュー",
+    "rd": "みんなの インタビュー",
+    "rom": "minna no intabyuu",
+    "en": "Minna no Interview (TV program)",
+    "my": "Minna no Interview တီဗီအစီအစဉ်",
+    "l": 15
+  },
+  {
+    "jp": "乗ります[電車に～]",
+    "rd": "のります[でんしゃに～]",
+    "rom": "norimasu [densha ni ~]",
+    "en": "to get on (a train)",
+    "my": "စီးသည်။ (ရထားကို)",
+    "l": 16
+  },
+  {
+    "jp": "降ります[電車を～]",
+    "rd": "おります[でんしゃを～]",
+    "rom": "orimasu [densha o ~]",
+    "en": "to get off (a train)",
+    "my": "ဆင်းသည်။ (ရထားမှ)",
+    "l": 16
+  },
+  {
+    "jp": "乗り換えます",
+    "rd": "のりかえます",
+    "rom": "norikaemasu",
+    "en": "to change (trains)",
+    "my": "ပြောင်းစီးသည်။ (ကား၊ ရထား၊ ယာဉ်)",
+    "l": 16
+  },
+  {
+    "jp": "あびます",
+    "rd": "あびます",
+    "rom": "abimasu",
+    "en": "to take a shower",
+    "my": "ရေချိုးသည်။",
+    "l": 16
+  },
+  {
+    "jp": "入れます",
+    "rd": "いれます",
+    "rom": "iremasu",
+    "en": "to put in",
+    "my": "ထည့်သည်။ သွင်းသည်။",
+    "l": 16
+  },
+  {
+    "jp": "出します",
+    "rd": "だします",
+    "rom": "dashimasu",
+    "en": "to take out; to send (a letter, a report)",
+    "my": "ထုတ်သည်။ တင်သည်(စာ၊ report)",
+    "l": 16
+  },
+  {
+    "jp": "下ろします[お金を]",
+    "rd": "おろします[おかねを]",
+    "rom": "oroshimasu [o-kane o]",
+    "en": "to withdraw (money)",
+    "my": "ထုတ်သည်(ပိုက်ဆံ)",
+    "l": 16
+  },
+  {
+    "jp": "入ります[大学に～]",
+    "rd": "はいります[だいがくに～]",
+    "rom": "hairimasu [daigaku ni ~]",
+    "en": "to enter (a university)",
+    "my": "ဝင်သည်(တက္ကသိုလ်သို့)။",
+    "l": 16
+  },
+  {
+    "jp": "出ます[大学を～]",
+    "rd": "でます[だいがくを～]",
+    "rom": "demasu [daigaku o ~]",
+    "en": "to leave (a university)",
+    "my": "ထွက်သည်(တက္ကသိုလ်မှဘဲရသည်)။",
+    "l": 16
+  },
+  {
+    "jp": "押します",
+    "rd": "おします",
+    "rom": "oshimasu",
+    "en": "to push; to press",
+    "my": "တွန်းသည်၊ ဖိသည်။",
+    "l": 16
+  },
+  {
+    "jp": "飲みます",
+    "rd": "のみます",
+    "rom": "nomimasu",
+    "en": "to drink",
+    "my": "သောက်သည်။",
+    "l": 16
+  },
+  {
+    "jp": "始めます",
+    "rd": "はじめます",
+    "rom": "hajimemasu",
+    "en": "to begin; to start",
+    "my": "စတင်သည်။",
+    "l": 16
+  },
+  {
+    "jp": "見学します",
+    "rd": "けんがくします",
+    "rom": "kengaku shimasu",
+    "en": "to visit (for study)",
+    "my": "လေ့လာသည်။",
+    "l": 16
+  },
+  {
+    "jp": "電話します",
+    "rd": "でんわします",
+    "rom": "denwa shimasu",
+    "en": "to telephone; to make a phone call",
+    "my": "ဖုန်းဆက်သည်။",
+    "l": 16
+  },
+  {
+    "jp": "若い",
+    "rd": "わかい",
+    "rom": "wakai",
+    "en": "young",
+    "my": "ငယ်သော",
+    "l": 16
+  },
+  {
+    "jp": "長い",
+    "rd": "ながい",
+    "rom": "nagai",
+    "en": "long",
+    "my": "ရှည်သော",
+    "l": 16
+  },
+  {
+    "jp": "短い",
+    "rd": "みじかい",
+    "rom": "mijikai",
+    "en": "short",
+    "my": "တိုသော",
+    "l": 16
+  },
+  {
+    "jp": "明るい",
+    "rd": "あかるい",
+    "rom": "akarui",
+    "en": "bright; light",
+    "my": "လင်းသော",
+    "l": 16
+  },
+  {
+    "jp": "暗い",
+    "rd": "くらい",
+    "rom": "kurai",
+    "en": "dark",
+    "my": "မှောင်သော",
+    "l": 16
+  },
+  {
+    "jp": "体",
+    "rd": "からだ",
+    "rom": "karada",
+    "en": "body",
+    "my": "ခန္ဓာကိုယ်",
+    "l": 16
+  },
+  {
+    "jp": "頭",
+    "rd": "あたま",
+    "rom": "atama",
+    "en": "head",
+    "my": "ခေါင်း၊ ဦးခေါင်း",
+    "l": 16
+  },
+  {
+    "jp": "髪",
+    "rd": "かみ",
+    "rom": "kami",
+    "en": "hair",
+    "my": "ဆံပင်",
+    "l": 16
+  },
+  {
+    "jp": "顔",
+    "rd": "かお",
+    "rom": "kao",
+    "en": "face",
+    "my": "မျက်နှာ",
+    "l": 16
+  },
+  {
+    "jp": "目",
+    "rd": "め",
+    "rom": "me",
+    "en": "eye",
+    "my": "မျက်လုံး",
+    "l": 16
+  },
+  {
+    "jp": "耳",
+    "rd": "みみ",
+    "rom": "mimi",
+    "en": "ear",
+    "my": "နားရွက်",
+    "l": 16
+  },
+  {
+    "jp": "鼻",
+    "rd": "はな",
+    "rom": "hana",
+    "en": "nose",
+    "my": "နှာခေါင်း",
+    "l": 16
+  },
+  {
+    "jp": "口",
+    "rd": "くち",
+    "rom": "kuchi",
+    "en": "mouth",
+    "my": "ပါးစပ်",
+    "l": 16
+  },
+  {
+    "jp": "歯",
+    "rd": "は",
+    "rom": "ha",
+    "en": "tooth",
+    "my": "သွား",
+    "l": 16
+  },
+  {
+    "jp": "おなか",
+    "rd": "おなか",
+    "rom": "onaka",
+    "en": "stomach; belly",
+    "my": "ဗိုက်",
+    "l": 16
+  },
+  {
+    "jp": "足",
+    "rd": "あし",
+    "rom": "ashi",
+    "en": "leg; foot",
+    "my": "ခြေထောက်",
+    "l": 16
+  },
+  {
+    "jp": "背",
+    "rd": "せ",
+    "rom": "se",
+    "en": "back; height",
+    "my": "အရပ် (ခန္ဓာကိုယ်)",
+    "l": 16
+  },
+  {
+    "jp": "サービス",
+    "rd": "サービス",
+    "rom": "saabisu",
+    "en": "service",
+    "my": "ဝန်ဆောင်မှု",
+    "l": 16
+  },
+  {
+    "jp": "ジョギング",
+    "rd": "ジョギング",
+    "rom": "jogingu",
+    "en": "jogging",
+    "my": "အပြေးလေ့ကျင့်ခန်း",
+    "l": 16
+  },
+  {
+    "jp": "シャワー",
+    "rd": "シャワー",
+    "rom": "shawaa",
+    "en": "shower",
+    "my": "ရေချိုးသောရေပန်း",
+    "l": 16
+  },
+  {
+    "jp": "緑",
+    "rd": "みどり",
+    "rom": "midori",
+    "en": "green",
+    "my": "အစိမ်းရောင်",
+    "l": 16
+  },
+  {
+    "jp": "[お]寺",
+    "rd": "[お]てら",
+    "rom": "[o] tera",
+    "en": "temple",
+    "my": "ဂျပန်ဘုရားကျောင်း",
+    "l": 16
+  },
+  {
+    "jp": "神社",
+    "rd": "じんじゃ",
+    "rom": "jinja",
+    "en": "Shinto shrine",
+    "my": "ဂျပန်နတ်ဘုရားကျောင်း",
+    "l": 16
+  },
+  {
+    "jp": "～番",
+    "rd": "～ばん",
+    "rom": "~ban",
+    "en": "number ~",
+    "my": "-နံပါတ်",
+    "l": 16
+  },
+  {
+    "jp": "どうやって",
+    "rd": "どうやって",
+    "rom": "dou yatte",
+    "en": "how; in what way",
+    "my": "ဘယ်လိုလုပ်ပြီး",
+    "l": 16
+  },
+  {
+    "jp": "どの～",
+    "rd": "どの～",
+    "rom": "dono ~",
+    "en": "which ~",
+    "my": "ဘယ်ဟာ",
+    "l": 16
+  },
+  {
+    "jp": "どれ",
+    "rd": "どれ",
+    "rom": "dore",
+    "en": "which one",
+    "my": "ဘယ်တစ်ခု",
+    "l": 16
+  },
+  {
+    "jp": "すごいですね",
+    "rd": "すごいですね",
+    "rom": "sugoi desu ne",
+    "en": "That's great.",
+    "my": "တော်လိုက်တာ",
+    "l": 16
+  },
+  {
+    "jp": "[いいえ、]まだまだです",
+    "rd": "[いいえ、]まだまだです",
+    "rom": "[iie,] mada mada desu",
+    "en": "No, not that good yet.",
+    "my": "ဟင့်အင်း အဲဒီလောက်မဟုတ်ပါဘူး",
+    "l": 16
+  },
+  {
+    "jp": "お引き出しですか",
+    "rd": "おひきだしですか",
+    "rom": "o-hikidashi desu ka",
+    "en": "Do you want to withdraw money?",
+    "my": "ငွေထုတ်မှာလား",
+    "l": 16
+  },
+  {
+    "jp": "まず",
+    "rd": "まず",
+    "rom": "mazu",
+    "en": "first of all; first",
+    "my": "အရင်ဆုံး",
+    "l": 16
+  },
+  {
+    "jp": "次に",
+    "rd": "つぎに",
+    "rom": "tsugi ni",
+    "en": "next; then",
+    "my": "နောက်ပြီး",
+    "l": 16
+  },
+  {
+    "jp": "キャッシュカード",
+    "rd": "キャッシュカード",
+    "rom": "kyasshu kaado",
+    "en": "cash card",
+    "my": "ငွေထုတ်ကဒ်",
+    "l": 16
+  },
+  {
+    "jp": "暗証番号",
+    "rd": "あんしょうばんごう",
+    "rom": "anshou bangou",
+    "en": "PIN number",
+    "my": "လျှို့ဝှက်နံပါတ်",
+    "l": 16
+  },
+  {
+    "jp": "金額",
+    "rd": "きんがく",
+    "rom": "kingaku",
+    "en": "amount of money",
+    "my": "ငွေပမာဏ",
+    "l": 16
+  },
+  {
+    "jp": "確認",
+    "rd": "かくにん",
+    "rom": "kakunin",
+    "en": "confirmation; checking",
+    "my": "အတည်ပြုခြင်း၊ စစ်ဆေးခြင်း",
+    "l": 16
+  },
+  {
+    "jp": "ボタン",
+    "rd": "ボタン",
+    "rom": "botan",
+    "en": "button",
+    "my": "ခလုတ် button",
+    "l": 16
+  },
+  {
+    "jp": "JR",
+    "rd": "JR",
+    "rom": "jei aaru",
+    "en": "Japan Railways",
+    "my": "ဂျပန်ရထားလိုင်း Japan Railways",
+    "l": 16
+  },
+  {
+    "jp": "雪まつり",
+    "rd": "ゆきまつり",
+    "rom": "yuki matsuri",
+    "en": "snow festival",
+    "my": "နှင်းပွဲတော်",
+    "l": 16
+  },
+  {
+    "jp": "バンドン",
+    "rd": "バンドン",
+    "rom": "bandon",
+    "en": "Bandung (in Indonesia)",
+    "my": "Bandung (in Indonesia)",
+    "l": 16
+  },
+  {
+    "jp": "フランケン",
+    "rd": "フランケン",
+    "rom": "furanken",
+    "en": "Franken (in Germany)",
+    "my": "Franken (in Germany)",
+    "l": 16
+  },
+  {
+    "jp": "ベラクルス",
+    "rd": "ベラクルス",
+    "rom": "berakurusu",
+    "en": "Veracruz (in Mexico)",
+    "my": "Veracruz (in Mexico)",
+    "l": 16
+  },
+  {
+    "jp": "梅田",
+    "rd": "うめだ",
+    "rom": "umeda",
+    "en": "Umeda",
+    "my": "Umedaမြို့",
+    "l": 16
+  },
+  {
+    "jp": "大学前",
+    "rd": "だいがくまえ",
+    "rom": "daigakumae",
+    "en": "in front of the university",
+    "my": "တက္ကသိုလ်ရှေ့(ကားမှတ်တိုင်)",
+    "l": 16
+  },
+  {
+    "jp": "覚えます",
+    "rd": "おぼえます",
+    "rom": "oboemasu",
+    "en": "to remember; to memorize",
+    "my": "မှတ်မိသည်။",
+    "l": 17
+  },
+  {
+    "jp": "忘れます",
+    "rd": "わすれます",
+    "rom": "wasuremasu",
+    "en": "to forget",
+    "my": "မေ့သည်။",
+    "l": 17
+  },
+  {
+    "jp": "なくします",
+    "rd": "なくします",
+    "rom": "nakushimasu",
+    "en": "to lose",
+    "my": "ပျောက်ပစ်သည်။",
+    "l": 17
+  },
+  {
+    "jp": "払います",
+    "rd": "はらいます",
+    "rom": "haraimasu",
+    "en": "to pay",
+    "my": "ပေးချေသည်။",
+    "l": 17
+  },
+  {
+    "jp": "返します",
+    "rd": "かえします",
+    "rom": "kaeshimasu",
+    "en": "to return; to give back",
+    "my": "ပြန်ပေးသည်။",
+    "l": 17
+  },
+  {
+    "jp": "出かけます",
+    "rd": "でかけます",
+    "rom": "dekakemasu",
+    "en": "to go out",
+    "my": "အပြင်ထွက်သည်။",
+    "l": 17
+  },
+  {
+    "jp": "脱ぎます",
+    "rd": "ぬぎます",
+    "rom": "nugimasu",
+    "en": "to take off (clothes)",
+    "my": "အင်္ကျီချွတ်သည်။",
+    "l": 17
+  },
+  {
+    "jp": "持っていきます",
+    "rd": "もっていきます",
+    "rom": "motte ikimasu",
+    "en": "to take (something) away",
+    "my": "ယူသွားသည်။",
+    "l": 17
+  },
+  {
+    "jp": "持ってきます",
+    "rd": "もってきます",
+    "rom": "motte kimasu",
+    "en": "to bring",
+    "my": "ယူလာသည်။",
+    "l": 17
+  },
+  {
+    "jp": "心配します",
+    "rd": "しんぱいします",
+    "rom": "shinpai shimasu",
+    "en": "to worry",
+    "my": "စိတ်ပူသည်။",
+    "l": 17
+  },
+  {
+    "jp": "残業します",
+    "rd": "ざんぎょうします",
+    "rom": "zangyou shimasu",
+    "en": "to work overtime",
+    "my": "အချိန်ပိုလုပ်သည်။",
+    "l": 17
+  },
+  {
+    "jp": "出張します",
+    "rd": "しゅっちょうします",
+    "rom": "shutchou shimasu",
+    "en": "to go on a business trip",
+    "my": "အလုပ်ခရီးသွားသည်",
+    "l": 17
+  },
+  {
+    "jp": "飲みます [薬を]",
+    "rd": "のみます [くすりを]",
+    "rom": "nomimasu [kusuri o]",
+    "en": "to take (medicine)",
+    "my": "သောက်သည်(ဆေးကို)။",
+    "l": 17
+  },
+  {
+    "jp": "入ります [おふろに～]",
+    "rd": "はいります [おふろに～]",
+    "rom": "hairimasu [ofuro ni ~]",
+    "en": "to take a bath",
+    "my": "ဝင်သည် (ရေချိုးကန်သို့)။",
+    "l": 17
+  },
+  {
+    "jp": "2, 3日",
+    "rd": "に、さんにち",
+    "rom": "ni, san nichi",
+    "en": "2, 3 days",
+    "my": "၂ ရက် ၃ ရက်",
+    "l": 17
+  },
+  {
+    "jp": "～までに",
+    "rd": "～までに",
+    "rom": "~ made ni",
+    "en": "by ~",
+    "my": "～အထိ",
+    "l": 17
+  },
+  {
+    "jp": "ですから",
+    "rd": "ですから",
+    "rom": "desu kara",
+    "en": "so; therefore",
+    "my": "ဖြစ်လို့",
+    "l": 17
+  },
+  {
+    "jp": "どうしましたか",
+    "rd": "どうしましたか",
+    "rom": "doushimashita ka",
+    "en": "What's the matter?",
+    "my": "ဘယ်လိုဖြစ်သလဲ",
+    "l": 17
+  },
+  {
+    "jp": "のど",
+    "rd": "のど",
+    "rom": "nodo",
+    "en": "throat",
+    "my": "လည်ချောင်း",
+    "l": 17
+  },
+  {
+    "jp": "[～が] いたいです",
+    "rd": "[～が] いたいです",
+    "rom": "[~ ga] itai desu",
+    "en": "[~] hurts; is painful",
+    "my": "နာတယ်။",
+    "l": 17
+  },
+  {
+    "jp": "かぜ",
+    "rd": "かぜ",
+    "rom": "kaze",
+    "en": "a cold",
+    "my": "အအေးမိခြင်း",
+    "l": 17
+  },
+  {
+    "jp": "それから",
+    "rd": "それから",
+    "rom": "sore kara",
+    "en": "and then; after that",
+    "my": "နောက်ပြီး",
+    "l": 17
+  },
+  {
+    "jp": "お大事に",
+    "rd": "おだいじに",
+    "rom": "odaiji ni",
+    "en": "Take care (of yourself)",
+    "my": "ဂရုစိုက်ပါ (ကျန်းမာရေးကို)။",
+    "l": 17
+  },
+  {
+    "jp": "大切 [な]",
+    "rd": "たいせつ [な]",
+    "rom": "taisetsu [na]",
+    "en": "precious; important",
+    "my": "တန်ဖိုးထားသော",
+    "l": 17
+  },
+  {
+    "jp": "大丈夫 [な]",
+    "rd": "だいじょうぶ [な]",
+    "rom": "daijoubu [na]",
+    "en": "all right; OK",
+    "my": "ကိစ္စမရှိသော",
+    "l": 17
+  },
+  {
+    "jp": "危ない [な]",
+    "rd": "あぶない [な]",
+    "rom": "abunai [na]",
+    "en": "dangerous",
+    "my": "အန္တရာယ်များသော",
+    "l": 17
+  },
+  {
+    "jp": "禁煙",
+    "rd": "きんえん",
+    "rom": "kin'en",
+    "en": "No smoking",
+    "my": "ဆေးလိပ်မသောက်ရ",
+    "l": 17
+  },
+  {
+    "jp": "[健康] 保険書",
+    "rd": "[けんこう] ほけんしょ",
+    "rom": "[kenkou] hokensho",
+    "en": "(health) insurance card",
+    "my": "ကျန်းမာရေးအာမခံကဒ်ပြား",
+    "l": 17
+  },
+  {
+    "jp": "熱",
+    "rd": "ねつ",
+    "rom": "netsu",
+    "en": "fever",
+    "my": "ကိုယ်ပူခြင်း၊ အဖျားရှိခြင်း",
+    "l": 17
+  },
+  {
+    "jp": "病気",
+    "rd": "びょうき",
+    "rom": "byouki",
+    "en": "illness; sickness",
+    "my": "ရောဂါ",
+    "l": 17
+  },
+  {
+    "jp": "薬",
+    "rd": "くすり",
+    "rom": "kusuri",
+    "en": "medicine",
+    "my": "ဆေး",
+    "l": 17
+  },
+  {
+    "jp": "[お] ふろ",
+    "rd": "[お] ふろ",
+    "rom": "[o] furo",
+    "en": "bath",
+    "my": "ရေစိမ်/ချိုးကန်",
+    "l": 17
+  },
+  {
+    "jp": "上着",
+    "rd": "うえちゃく",
+    "rom": "uwagi",
+    "en": "coat; jacket",
+    "my": "အနွေးထည်/အပေါ်ထပ်အင်္ကျီ",
+    "l": 17
+  },
+  {
+    "jp": "下着",
+    "rd": "したぎ",
+    "rom": "shitagi",
+    "en": "underwear",
+    "my": "အတွင်းခံ",
+    "l": 17
+  },
+  {
+    "jp": "できます",
+    "rd": "できます",
+    "rom": "dekimasu",
+    "en": "can do; be able to do",
+    "my": "တတ်သည်။ လုပ်တတ်သည်။ နိုင်သည်။ လုပ်နိုင်သည်။",
+    "l": 18
+  },
+  {
+    "jp": "洗います",
+    "rd": "あらいます",
+    "rom": "araimasu",
+    "en": "wash",
+    "my": "လက်ဆေးသည်။ အဝတ်လျှော်သည်။",
+    "l": 18
+  },
+  {
+    "jp": "弾きます",
+    "rd": "ひきます",
+    "rom": "hikimasu",
+    "en": "play (a musical instrument)",
+    "my": "ပီယာနိုတီးသည်။",
+    "l": 18
+  },
+  {
+    "jp": "歌います",
+    "rd": "うたいます",
+    "rom": "utaimasu",
+    "en": "sing",
+    "my": "သီချင်းဆိုသည်။",
+    "l": 18
+  },
+  {
+    "jp": "集めます",
+    "rd": "あつめます",
+    "rom": "atsumemasu",
+    "en": "collect; gather",
+    "my": "စုဆောင်းသည်။",
+    "l": 18
+  },
+  {
+    "jp": "捨てます",
+    "rd": "すてます",
+    "rom": "sutemasu",
+    "en": "throw away",
+    "my": "စွန့်ပစ်သည်။",
+    "l": 18
+  },
+  {
+    "jp": "換えます",
+    "rd": "かえます",
+    "rom": "kaemasu",
+    "en": "change; exchange",
+    "my": "လဲလှယ်သည်။",
+    "l": 18
+  },
+  {
+    "jp": "運転します",
+    "rd": "うんてんします",
+    "rom": "untenshimasu",
+    "en": "drive",
+    "my": "ကားမောင်းသည်။",
+    "l": 18
+  },
+  {
+    "jp": "予約します",
+    "rd": "よやくします",
+    "rom": "yoyakushimasu",
+    "en": "reserve; book",
+    "my": "bookingလုပ်သည်။",
+    "l": 18
+  },
+  {
+    "jp": "ピアノ",
+    "rd": "ピアノ",
+    "rom": "piano",
+    "en": "piano",
+    "my": "ပီယာနို",
+    "l": 18
+  },
+  {
+    "jp": "メートル",
+    "rd": "メートル",
+    "rom": "meetoru",
+    "en": "metre; meter",
+    "my": "မီတာ(အကွာအဝေးကိုတိုင်းတာသောမီတာ)",
+    "l": 18
+  },
+  {
+    "jp": "現金",
+    "rd": "げんきん",
+    "rom": "genkin",
+    "en": "cash",
+    "my": "ငွေသား၊ လက်ငင်းငွေပေးချေခြင်း",
+    "l": 18
+  },
+  {
+    "jp": "趣味",
+    "rd": "しゅみ",
+    "rom": "shumi",
+    "en": "hobby",
+    "my": "ဝါသနာ",
+    "l": 18
+  },
+  {
+    "jp": "日記",
+    "rd": "にっき",
+    "rom": "nikki",
+    "en": "diary",
+    "my": "နေ့စဉ်မှတ်တမ်း",
+    "l": 18
+  },
+  {
+    "jp": "お祈り",
+    "rd": "おいのり",
+    "rom": "oinori",
+    "en": "prayer",
+    "my": "ဆုတောင်းခြင်း",
+    "l": 18
+  },
+  {
+    "jp": "課長",
+    "rd": "かちょう",
+    "rom": "kachou",
+    "en": "section chief; section manager",
+    "my": "ဌာနခွဲမှူး",
+    "l": 18
+  },
+  {
+    "jp": "部長",
+    "rd": "ぶちょう",
+    "rom": "buchou",
+    "en": "department chief; department manager",
+    "my": "ဌာနမှူး",
+    "l": 18
+  },
+  {
+    "jp": "社長",
+    "rd": "しゃちょう",
+    "rom": "shachou",
+    "en": "company president; president (of a company)",
+    "my": "သူဌေး",
+    "l": 18
+  },
+  {
+    "jp": "動物",
+    "rd": "どうぶつ",
+    "rom": "doubutsu",
+    "en": "animal",
+    "my": "တိရစ္ဆာန်",
+    "l": 18
+  },
+  {
+    "jp": "馬",
+    "rd": "うま",
+    "rom": "uma",
+    "en": "horse",
+    "my": "မြင်း",
+    "l": 18
+  },
+  {
+    "jp": "インターネット",
+    "rd": "インターネット",
+    "rom": "intaanetto",
+    "en": "Internet",
+    "my": "အင်တာနက်",
+    "l": 18
+  },
+  {
+    "jp": "特に",
+    "rd": "とくに",
+    "rom": "tokuni",
+    "en": "especially; particularly",
+    "my": "အထူးသဖြင့်",
+    "l": 18
+  },
+  {
+    "jp": "へえ、",
+    "rd": "へえ、",
+    "rom": "hee,",
+    "en": "Really?",
+    "my": "ဟယ်",
+    "l": 18
+  },
+  {
+    "jp": "それはおもしろいですね",
+    "rd": "それはおもしろいですね",
+    "rom": "sore wa omoshiroi desu ne",
+    "en": "That's interesting, isn't it?",
+    "my": "အဲဒါစိတ်ဝင်စားစရာပဲနော်",
+    "l": 18
+  },
+  {
+    "jp": "なかなか",
+    "rd": "なかなか",
+    "rom": "nakanaka",
+    "en": "quite; fairly",
+    "my": "တော်တော်နဲ့---",
+    "l": 18
+  },
+  {
+    "jp": "ほんとうですか",
+    "rd": "ほんとうですか",
+    "rom": "hontou desu ka",
+    "en": "Is that true?; Really?",
+    "my": "တကယ်လားဟင်",
+    "l": 18
+  },
+  {
+    "jp": "ぜひ",
+    "rd": "ぜひ",
+    "rom": "zehi",
+    "en": "by all means; certainly",
+    "my": "ဆက်ဆက်။ ကိန်းသေ",
+    "l": 18
+  },
+  {
+    "jp": "故郷",
+    "rd": "ふるさと",
+    "rom": "furusato",
+    "en": "hometown",
+    "my": "မွေးရပ်မြေ",
+    "l": 18
+  },
+  {
+    "jp": "ビートルズ",
+    "rd": "ビートルズ",
+    "rom": "biitoruzu",
+    "en": "The Beatles",
+    "my": "The Beatles",
+    "l": 18
+  },
+  {
+    "jp": "秋葉原",
+    "rd": "あきはばら",
+    "rom": "akihabara",
+    "en": "Akihabara",
+    "my": "Akihabara တိုကျိုမှာလူစည်ကားသောနေရာတစ်ခု",
+    "l": 18
+  },
+  {
+    "jp": "登ります",
+    "rd": "のぼります",
+    "rom": "noborimasu",
+    "en": "to climb",
+    "my": "အမြင့်သို့တက်သည်။",
+    "l": 19
+  },
+  {
+    "jp": "泊まります",
+    "rd": "とまります",
+    "rom": "tomarimasu",
+    "en": "to stay overnight",
+    "my": "ညအိပ်တည်းခိုသည်",
+    "l": 19
+  },
+  {
+    "jp": "[ホテルに]",
+    "rd": "[ホテルに]",
+    "rom": "[hoteru ni]",
+    "en": "(at a hotel)",
+    "my": "(ဟိုတယ်တွင်)။",
+    "l": 19
+  },
+  {
+    "jp": "掃除します",
+    "rd": "そうじします",
+    "rom": "souji shimasu",
+    "en": "to clean",
+    "my": "သန့်ရှင်းရေးလုပ်သည်။",
+    "l": 19
+  },
+  {
+    "jp": "洗濯します",
+    "rd": "せんたくします",
+    "rom": "sentaku shimasu",
+    "en": "to wash clothes",
+    "my": "အဝတ်လျှော်သည်။",
+    "l": 19
+  },
+  {
+    "jp": "なります",
+    "rd": "なります",
+    "rom": "narimasu",
+    "en": "to become",
+    "my": "ဖြစ်လာသည်။",
+    "l": 19
+  },
+  {
+    "jp": "眠い",
+    "rd": "ねむい",
+    "rom": "nemui",
+    "en": "sleepy",
+    "my": "အိပ်ချင်သော",
+    "l": 19
+  },
+  {
+    "jp": "強い",
+    "rd": "つよい",
+    "rom": "tsuyoi",
+    "en": "strong",
+    "my": "အားသန်သော",
+    "l": 19
+  },
+  {
+    "jp": "弱い",
+    "rd": "よわい",
+    "rom": "yowai",
+    "en": "weak",
+    "my": "အားလျှော့သော/အားနည်းသော",
+    "l": 19
+  },
+  {
+    "jp": "練習",
+    "rd": "れんしゅう",
+    "rom": "renshuu",
+    "en": "practice",
+    "my": "လေ့ကျင့်ခြင်း",
+    "l": 19
+  },
+  {
+    "jp": "ゴルフ",
+    "rd": "ゴルフ",
+    "rom": "gorufu",
+    "en": "golf",
+    "my": "Golf",
+    "l": 19
+  },
+  {
+    "jp": "相撲",
+    "rd": "すもう",
+    "rom": "sumou",
+    "en": "sumo",
+    "my": "ဂျပန်နပန်းအားကစား",
+    "l": 19
+  },
+  {
+    "jp": "お茶",
+    "rd": "おちゃ",
+    "rom": "ocha",
+    "en": "tea",
+    "my": "ဂျပန်ရေနွေးကြမ်း green tea",
+    "l": 19
+  },
+  {
+    "jp": "日",
+    "rd": "にち",
+    "rom": "nichi",
+    "en": "day",
+    "my": "နေ့ရက်",
+    "l": 19
+  },
+  {
+    "jp": "調子",
+    "rd": "ちょうし",
+    "rom": "choushi",
+    "en": "condition",
+    "my": "အခြေအနေ",
+    "l": 19
+  },
+  {
+    "jp": "一度",
+    "rd": "いちど",
+    "rom": "ichido",
+    "en": "once",
+    "my": "တစ်ကြိမ်၊ တစ်ခေါက်",
+    "l": 19
+  },
+  {
+    "jp": "一度も",
+    "rd": "いちども",
+    "rom": "ichido mo",
+    "en": "not even once",
+    "my": "တစ်ကြိမ်မျှ၊ တစ်ခေါက်မျှ",
+    "l": 19
+  },
+  {
+    "jp": "だんだん",
+    "rd": "だんだん",
+    "rom": "dandan",
+    "en": "gradually",
+    "my": "တဖြေးဖြေးနဲ့",
+    "l": 19
+  },
+  {
+    "jp": "もうすぐ",
+    "rd": "もうすぐ",
+    "rom": "mou sugu",
+    "en": "soon",
+    "my": "အခုချက်ခြင်း",
+    "l": 19
+  },
+  {
+    "jp": "おかげさまで",
+    "rd": "おかげさまで",
+    "rom": "okagesama de",
+    "en": "thanks to you",
+    "my": "ကျေးဇူးတော်ကြောင့်/ပို့သတဲ့မေတ္တာကြောင့်",
+    "l": 19
+  },
+  {
+    "jp": "でも",
+    "rd": "でも",
+    "rom": "demo",
+    "en": "but",
+    "my": "ဒါပေမဲ့",
+    "l": 19
+  },
+  {
+    "jp": "乾杯",
+    "rd": "かんぱい",
+    "rom": "kanpai",
+    "en": "cheers",
+    "my": "Cheers",
+    "l": 19
+  },
+  {
+    "jp": "ダイエット",
+    "rd": "ダイエット",
+    "rom": "daietto",
+    "en": "diet",
+    "my": "ဝိတ်ချခြင်း",
+    "l": 19
+  },
+  {
+    "jp": "無理[な]",
+    "rd": "むり[な]",
+    "rom": "muri [na]",
+    "en": "impossible; unreasonable",
+    "my": "မဖြစ်နိုင်သော(အလွန်အကျွံဖြစ်သော)",
+    "l": 19
+  },
+  {
+    "jp": "体にいい",
+    "rd": "からだにいい",
+    "rom": "karada ni ii",
+    "en": "good for one's health",
+    "my": "ခန္ဓာကိုယ်အတွက်ကောင်းသော",
+    "l": 19
+  },
+  {
+    "jp": "東京スカイツリー",
+    "rd": "とうきょうスカイツリー",
+    "rom": "toukyou sukai tsurii",
+    "en": "Tokyo Skytree",
+    "my": "Tokyo Sky Tree",
+    "l": 19
+  },
+  {
+    "jp": "葛飾北斎",
+    "rd": "かつしかほくさい",
+    "rom": "katsushika hokusai",
+    "en": "Katsushika Hokusai",
+    "my": "(Edoခေတ်တွင် ကျော်ကြားခဲ့သော ပန်းချီဆရာ)",
+    "l": 19
+  },
+  {
+    "jp": "要ります[ビザが～]",
+    "rd": "いります[ビザが～]",
+    "rom": "irimasu [biza ga ~]",
+    "en": "to need",
+    "my": "လိုအပ်သည်(ဗီဇာ)",
+    "l": 20
+  },
+  {
+    "jp": "よかったら",
+    "rd": "よかったら",
+    "rom": "yokattara",
+    "en": "if you like; if it's convenient",
+    "my": "ကြိုက်မယ်ဆိုရင်၊ အဆင်ပြေမယ်ဆိုရင်",
+    "l": 20
+  },
+  {
+    "jp": "調べます",
+    "rd": "しらべます",
+    "rom": "shirabemasu",
+    "en": "to look up; to investigate",
+    "my": "စုံစမ်းသည်။",
+    "l": 20
+  },
+  {
+    "jp": "修理します",
+    "rd": "しゅうりします",
+    "rom": "shuuri shimasu",
+    "en": "to repair",
+    "my": "ပြုပြင်သည်။",
+    "l": 20
+  },
+  {
+    "jp": "いろいろ",
+    "rd": "いろいろ",
+    "rom": "iroiro",
+    "en": "various; all kinds",
+    "my": "အမျိုးမျိုး",
+    "l": 20
+  },
+  {
+    "jp": "僕",
+    "rd": "ぼく",
+    "rom": "boku",
+    "en": "I; me (used by men)",
+    "my": "ကျွန်တော်",
+    "l": 20
+  },
+  {
+    "jp": "君",
+    "rd": "きみ",
+    "rom": "kimi",
+    "en": "you",
+    "my": "မင်း",
+    "l": 20
+  },
+  {
+    "jp": "～くん",
+    "rd": "～くん",
+    "rom": "~kun",
+    "en": "suffix after a boy's name",
+    "my": "ကို/မောင်---",
+    "l": 20
+  },
+  {
+    "jp": "うん",
+    "rd": "うん",
+    "rom": "un",
+    "en": "yes; yeah",
+    "my": "အင်း",
+    "l": 20
+  },
+  {
+    "jp": "ううん",
+    "rd": "ううん",
+    "rom": "uun",
+    "en": "no; uh-uh",
+    "my": "ဟင့်အင်း",
+    "l": 20
+  },
+  {
+    "jp": "ことば",
+    "rd": "ことば",
+    "rom": "kotoba",
+    "en": "word; words",
+    "my": "စကား၊ ဝေါဟာရ",
+    "l": 20
+  },
+  {
+    "jp": "着物",
+    "rd": "きもの",
+    "rom": "kimono",
+    "en": "kimono",
+    "my": "ဂျပန်ကီမိုနို",
+    "l": 20
+  },
+  {
+    "jp": "ビザ",
+    "rd": "ビザ",
+    "rom": "biza",
+    "en": "visa",
+    "my": "Visa",
+    "l": 20
+  },
+  {
+    "jp": "初め",
+    "rd": "はじめ",
+    "rom": "hajime",
+    "en": "beginning",
+    "my": "ပထမတော့၊ အစပိုင်း",
+    "l": 20
+  },
+  {
+    "jp": "終わり",
+    "rd": "おわり",
+    "rom": "owari",
+    "en": "end; ending",
+    "my": "အဆုံးတော့",
+    "l": 20
+  },
+  {
+    "jp": "こっち",
+    "rd": "こっち",
+    "rom": "kocchi",
+    "en": "this way; here",
+    "my": "ဒီဘက်",
+    "l": 20
+  },
+  {
+    "jp": "そっち",
+    "rd": "そっち",
+    "rom": "socchi",
+    "en": "that way (near you); there",
+    "my": "ဟိုဘက်",
+    "l": 20
+  },
+  {
+    "jp": "あっち",
+    "rd": "あっち",
+    "rom": "acchi",
+    "en": "that way (over there); over there",
+    "my": "ဟို့ဘက်",
+    "l": 20
+  },
+  {
+    "jp": "どっち",
+    "rd": "どっち",
+    "rom": "docchi",
+    "en": "which way; where",
+    "my": "ဘယ်ဘက်",
+    "l": 20
+  },
+  {
+    "jp": "みんなで",
+    "rd": "みんなで",
+    "rom": "minna de",
+    "en": "together; with everyone",
+    "my": "အားလုံးနဲ့၊ အားလုံးအတူတူ",
+    "l": 20
+  },
+  {
+    "jp": "～けど",
+    "rd": "～けど",
+    "rom": "~kedo",
+    "en": "but; however",
+    "my": "ဒါပေမဲ့",
+    "l": 20
+  },
+  {
+    "jp": "おなかがいっぱいです",
+    "rd": "おなかがいっぱいです",
+    "rom": "onaka ga ippai desu",
+    "en": "I'm full; my stomach is full",
+    "my": "ဗိုက်ပြည့်တယ်",
+    "l": 20
+  },
+  {
+    "jp": "思います",
+    "rd": "おもいます",
+    "rom": "omoimasu",
+    "en": "think",
+    "my": "တွေးထင်သည်။",
+    "l": 21
+  },
+  {
+    "jp": "言います",
+    "rd": "いいます",
+    "rom": "iimasu",
+    "en": "say, speak",
+    "my": "ပြောသည်။",
+    "l": 21
+  },
+  {
+    "jp": "勝ちます",
+    "rd": "かちます",
+    "rom": "kachimasu",
+    "en": "win",
+    "my": "နိုင်သည်။",
+    "l": 21
+  },
+  {
+    "jp": "負けます",
+    "rd": "まけます",
+    "rom": "makemasu",
+    "en": "lose",
+    "my": "ရှုံးသည်",
+    "l": 21
+  },
+  {
+    "jp": "あります［お祭りが～］",
+    "rd": "あります［おまつりが～］",
+    "rom": "arimasu [omatsuri ga ~]",
+    "en": "(a festival) is held",
+    "my": "ရှိသည်(ပွဲတော်)",
+    "l": 21
+  },
+  {
+    "jp": "役にたちます",
+    "rd": "やくにたちます",
+    "rom": "yaku ni tachimasu",
+    "en": "be useful",
+    "my": "အသုံးဝင်သည်။",
+    "l": 21
+  },
+  {
+    "jp": "動きます",
+    "rd": "うごきます",
+    "rom": "ugokimasu",
+    "en": "move",
+    "my": "လှုပ်ရှားသည်။",
+    "l": 21
+  },
+  {
+    "jp": "やめます［会社を～］",
+    "rd": "やめます［かいしゃを～］",
+    "rom": "yamemasu [kaisha o ~]",
+    "en": "quit (a company)",
+    "my": "အလုပ်ထွက်သည်",
+    "l": 21
+  },
+  {
+    "jp": "気をつけます",
+    "rd": "きをつけます",
+    "rom": "ki o tsukemasu",
+    "en": "be careful",
+    "my": "သတိထားသည်။ ဂရုစိုက်သည်။",
+    "l": 21
+  },
+  {
+    "jp": "無駄［な］",
+    "rd": "むだ［な］",
+    "rom": "muda [na]",
+    "en": "wasteful",
+    "my": "အလဟဿဖြစ်သော",
+    "l": 21
+  },
+  {
+    "jp": "不便［な］",
+    "rd": "ふべん［な］",
+    "rom": "fuben [na]",
+    "en": "inconvenient",
+    "my": "အဆင်မပြေသော",
+    "l": 21
+  },
+  {
+    "jp": "すごい",
+    "rd": "すごい",
+    "rom": "sugoi",
+    "en": "amazing, terrible",
+    "my": "အံ့ဩစရာကောင်းသော",
+    "l": 21
+  },
+  {
+    "jp": "ほんとう",
+    "rd": "ほんとう",
+    "rom": "hontou",
+    "en": "truth, really",
+    "my": "တကယ်",
+    "l": 21
+  },
+  {
+    "jp": "うそ",
+    "rd": "うそ",
+    "rom": "uso",
+    "en": "lie",
+    "my": "အလိမ်၊ အညာ",
+    "l": 21
+  },
+  {
+    "jp": "自動車",
+    "rd": "じどうしゃ",
+    "rom": "jidousha",
+    "en": "automobile",
+    "my": "မော်တော်ကား",
+    "l": 21
+  },
+  {
+    "jp": "交通",
+    "rd": "こうつう",
+    "rom": "koutsuu",
+    "en": "traffic",
+    "my": "ယာဉ်သွားလာမှု",
+    "l": 21
+  },
+  {
+    "jp": "物価",
+    "rd": "ぶっか",
+    "rom": "bukka",
+    "en": "prices",
+    "my": "ကုန်ဈေးနှုန်း",
+    "l": 21
+  },
+  {
+    "jp": "放送",
+    "rd": "ほうそう",
+    "rom": "housou",
+    "en": "broadcast",
+    "my": "သတင်းလွှင့်ခြင်း",
+    "l": 21
+  },
+  {
+    "jp": "ニュース",
+    "rd": "ニュース",
+    "rom": "nyuusu",
+    "en": "news",
+    "my": "သတင်း",
+    "l": 21
+  },
+  {
+    "jp": "アニメ",
+    "rd": "アニメ",
+    "rom": "anime",
+    "en": "anime",
+    "my": "ဂျပန်ကာတွန်းကား",
+    "l": 21
+  },
+  {
+    "jp": "マンガ",
+    "rd": "マンガ",
+    "rom": "manga",
+    "en": "manga, comic",
+    "my": "ကာတွန်း(ရုပ်ပြ)စာအုပ်",
+    "l": 21
+  },
+  {
+    "jp": "デザイン",
+    "rd": "デザイン",
+    "rom": "dezain",
+    "en": "design",
+    "my": "ဒီဇိုင်း",
+    "l": 21
+  },
+  {
+    "jp": "夢",
+    "rd": "ゆめ",
+    "rom": "yume",
+    "en": "dream",
+    "my": "အိပ်မက်",
+    "l": 21
+  },
+  {
+    "jp": "天才",
+    "rd": "てんさい",
+    "rom": "tensai",
+    "en": "genius",
+    "my": "ပါရမီရှင်",
+    "l": 21
+  },
+  {
+    "jp": "試合",
+    "rd": "しあい",
+    "rom": "shiai",
+    "en": "match, game",
+    "my": "ပြိုင်ပွဲ",
+    "l": 21
+  },
+  {
+    "jp": "意見",
+    "rd": "いけん",
+    "rom": "iken",
+    "en": "opinion",
+    "my": "ထင်မြင်ချက်",
+    "l": 21
+  },
+  {
+    "jp": "話",
+    "rd": "はなし",
+    "rom": "hanashi",
+    "en": "story, talk",
+    "my": "စကား၊ ပုံပြင်",
+    "l": 21
+  },
+  {
+    "jp": "地球",
+    "rd": "ちきゅう",
+    "rom": "chikyuu",
+    "en": "the earth",
+    "my": "ကမ္ဘာမြေ",
+    "l": 21
+  },
+  {
+    "jp": "月",
+    "rd": "つき",
+    "rom": "tsuki",
+    "en": "the moon",
+    "my": "လ",
+    "l": 21
+  },
+  {
+    "jp": "最近",
+    "rd": "さいきん",
+    "rom": "saikin",
+    "en": "recently",
+    "my": "အခုတလော",
+    "l": 21
+  },
+  {
+    "jp": "たぶん",
+    "rd": "たぶん",
+    "rom": "tabun",
+    "en": "probably",
+    "my": "may be/ ～လောက်",
+    "l": 21
+  },
+  {
+    "jp": "きっと",
+    "rd": "きっと",
+    "rom": "kitto",
+    "en": "surely",
+    "my": "ကျိန်းသေ",
+    "l": 21
+  },
+  {
+    "jp": "ほんとうに",
+    "rd": "ほんとうに",
+    "rom": "hontou ni",
+    "en": "really",
+    "my": "တကယ်",
+    "l": 21
+  },
+  {
+    "jp": "そんなに",
+    "rd": "そんなに",
+    "rom": "sonna ni",
+    "en": "so (much)",
+    "my": "အဲဒီလောက်(နောက်တွင် အငြင်းလိုက်လေရှိသည်)",
+    "l": 21
+  },
+  {
+    "jp": "～について",
+    "rd": "～について",
+    "rom": "~ni tsuite",
+    "en": "about ~",
+    "my": "～နဲ့ပက်သက်ပြီး",
+    "l": 21
+  },
+  {
+    "jp": "久しぶりですね",
+    "rd": "ひさしぶりですね",
+    "rom": "hisashiburi desu ne",
+    "en": "Long time no see.",
+    "my": "မတွေ့တာကြာပြီနော်",
+    "l": 21
+  },
+  {
+    "jp": "～でも飲みませんか。",
+    "rd": "～でものみませんか。",
+    "rom": "~demo nomimasen ka.",
+    "en": "Won't you have ~?",
+    "my": "မသောက်တော့ဘူးလား",
+    "l": 21
+  },
+  {
+    "jp": "もちろん",
+    "rd": "もちろん",
+    "rom": "mochiron",
+    "en": "of course",
+    "my": "ဒါပေါ့၊ ဒါဘဲပေါ့။",
+    "l": 21
+  },
+  {
+    "jp": "もう帰らないと…",
+    "rd": "もうかえらないと…",
+    "rom": "mou kaeranai to…",
+    "en": "I have to go home...",
+    "my": "အိမ်ပြန်ရတော့မယ် (မပြန်လို့မရဘူး)",
+    "l": 21
+  },
+  {
+    "jp": "アインシュタイン",
+    "rd": "アインシュタイン",
+    "rom": "ainshutain",
+    "en": "Einstein",
+    "my": "Albert Einstein",
+    "l": 21
+  },
+  {
+    "jp": "ガガーリン",
+    "rd": "ガガーリン",
+    "rom": "gagaarin",
+    "en": "Gagarin",
+    "my": "Yuri Alekseyevich Gagarin",
+    "l": 21
+  },
+  {
+    "jp": "ガリレオ",
+    "rd": "ガリレオ",
+    "rom": "garireo",
+    "en": "Galileo",
+    "my": "Galileo Galilei",
+    "l": 21
+  },
+  {
+    "jp": "キング牧師",
+    "rd": "キングぼくし",
+    "rom": "kingu bokushi",
+    "en": "Rev. King",
+    "my": "Martin Luther King, Jr.",
+    "l": 21
+  },
+  {
+    "jp": "フランクリン",
+    "rd": "フランクリン",
+    "rom": "furankurin",
+    "en": "Franklin",
+    "my": "Benjamin Franklin",
+    "l": 21
+  },
+  {
+    "jp": "かぐや姫",
+    "rd": "かぐやひめ",
+    "rom": "kaguya hime",
+    "en": "Princess Kaguya",
+    "my": "Kaguya မင်းသမီး",
+    "l": 21
+  },
+  {
+    "jp": "天神祭り",
+    "rd": "てんじんまつり",
+    "rom": "tenjin matsuri",
+    "en": "Tenjin Festival",
+    "my": "Tenjin ပွဲတော်",
+    "l": 21
+  },
+  {
+    "jp": "吉野山",
+    "rd": "よしのやま",
+    "rom": "yoshino yama",
+    "en": "Mt. Yoshino",
+    "my": "Yoshino တောင်",
+    "l": 21
+  },
+  {
+    "jp": "カンガルー",
+    "rd": "カンガルー",
+    "rom": "kangaruu",
+    "en": "kangaroo",
+    "my": "သားပိုက်ကောင်",
+    "l": 21
+  },
+  {
+    "jp": "キャプテン・クック",
+    "rd": "キャプテン・クック",
+    "rom": "kyaputen kukku",
+    "en": "Captain Cook",
+    "my": "Captain James Cook",
+    "l": 21
+  },
+  {
+    "jp": "ヨーネン",
+    "rd": "ヨーネン",
+    "rom": "yoonen",
+    "en": "Yone (company)",
+    "my": "yone ကုမ္ပဏီ",
+    "l": 21
+  },
+  {
+    "jp": "着ます",
+    "rd": "きます",
+    "rom": "kimasu",
+    "en": "put on (clothes)",
+    "my": "ဝတ်သည်။",
+    "l": 22
+  },
+  {
+    "jp": "はきます",
+    "rd": "はきます",
+    "rom": "hakimasu",
+    "en": "put on (shoes)",
+    "my": "ဖိနပ်စီးသည်။",
+    "l": 22
+  },
+  {
+    "jp": "かぶります",
+    "rd": "かぶります",
+    "rom": "kaburimasu",
+    "en": "put on (a hat)",
+    "my": "ဦးထုပ်ဆောင်းသည်/ခြုံသည်။",
+    "l": 22
+  },
+  {
+    "jp": "かけます［めがねを～］",
+    "rd": "かけます［めがねを～］",
+    "rom": "kakemasu [megane o ~]",
+    "en": "put on (glasses)",
+    "my": "မျက်မှန်တပ်သည်။",
+    "l": 22
+  },
+  {
+    "jp": "します［ネクタイを～］",
+    "rd": "します［ネクタイを～］",
+    "rom": "shimasu [nekutai o ~]",
+    "en": "wear (a necktie)",
+    "my": "neck tie ကိုဝတ်ဆင်သည်",
+    "l": 22
+  },
+  {
+    "jp": "生まれます",
+    "rd": "うまれます",
+    "rom": "umaremasu",
+    "en": "be born",
+    "my": "မွေးဖွားသည်။",
+    "l": 22
+  },
+  {
+    "jp": "私たち",
+    "rd": "わたしたち",
+    "rom": "watashitachi",
+    "en": "we",
+    "my": "ကျွန်တော်တို့/ကျွန်မတို့",
+    "l": 22
+  },
+  {
+    "jp": "コート",
+    "rd": "コート",
+    "rom": "kooto",
+    "en": "coat",
+    "my": "အပေါ်ဝတ်အင်္ကျီ",
+    "l": 22
+  },
+  {
+    "jp": "セーター",
+    "rd": "セーター",
+    "rom": "seetaa",
+    "en": "sweater",
+    "my": "သိုးမွေးအနွေးထည်",
+    "l": 22
+  },
+  {
+    "jp": "スーツ",
+    "rd": "スーツ",
+    "rom": "suutsu",
+    "en": "suit",
+    "my": "အနောက်တိုင်းကုတ်အင်္ကျီ",
+    "l": 22
+  },
+  {
+    "jp": "帽子",
+    "rd": "ぼうし",
+    "rom": "boushi",
+    "en": "hat",
+    "my": "ဦးထုပ်",
+    "l": 22
+  },
+  {
+    "jp": "メガネ",
+    "rd": "メガネ",
+    "rom": "megane",
+    "en": "glasses",
+    "my": "မျက်မှန်",
+    "l": 22
+  },
+  {
+    "jp": "ケーキ",
+    "rd": "ケーキ",
+    "rom": "keeki",
+    "en": "cake",
+    "my": "ကိတ်မုန့်",
+    "l": 22
+  },
+  {
+    "jp": "［お］弁当",
+    "rd": "［お］べんとう",
+    "rom": "[o]bentou",
+    "en": "boxed lunch",
+    "my": "ထမင်းဗူး",
+    "l": 22
+  },
+  {
+    "jp": "ロボット",
+    "rd": "ロボット",
+    "rom": "robotto",
+    "en": "robot",
+    "my": "စက်ရုပ်",
+    "l": 22
+  },
+  {
+    "jp": "ユーモア",
+    "rd": "ユーモア",
+    "rom": "yuumoa",
+    "en": "humor",
+    "my": "ဟာသ",
+    "l": 22
+  },
+  {
+    "jp": "都合",
+    "rd": "つごう",
+    "rom": "tsugou",
+    "en": "circumstances, convenience",
+    "my": "အခြေအနေ",
+    "l": 22
+  },
+  {
+    "jp": "よく",
+    "rd": "よく",
+    "rom": "yoku",
+    "en": "often; well",
+    "my": "ခဏခဏ/မကြာမကြာ/ကောင်းကောင်း",
+    "l": 22
+  },
+  {
+    "jp": "えーと",
+    "rd": "えーと",
+    "rom": "eeto",
+    "en": "um, er",
+    "my": "အဲဒါဆိုရင်",
+    "l": 22
+  },
+  {
+    "jp": "おめでとう［ございます］",
+    "rd": "おめでとう［ございます］",
+    "rom": "omedetou [gozaimasu]",
+    "en": "congratulations",
+    "my": "ဂုဏ်ယူပါတယ်။",
+    "l": 22
+  },
+  {
+    "jp": "お探しですか",
+    "rd": "おさがしですか",
+    "rom": "osagashi desu ka",
+    "en": "Are you looking for something?",
+    "my": "တစ်ခုခုရှာနေပါသလား",
+    "l": 22
+  },
+  {
+    "jp": "では",
+    "rd": "では",
+    "rom": "dewa",
+    "en": "well then",
+    "my": "ဒါဆိုရင်-",
+    "l": 22
+  },
+  {
+    "jp": "こちら",
+    "rd": "こちら",
+    "rom": "kochira",
+    "en": "this way; this one",
+    "my": "ဒီဘက်၊ ဒီဟာ",
+    "l": 22
+  },
+  {
+    "jp": "家賃",
+    "rd": "やちん",
+    "rom": "yachin",
+    "en": "rent",
+    "my": "အိမ်ငှားခ",
+    "l": 22
+  },
+  {
+    "jp": "ダイニングキッチン",
+    "rd": "ダイニングキッチン",
+    "rom": "dainingu kitchin",
+    "en": "dining kitchen",
+    "my": "ထမင်းစားခန်းပါသော မီးဖိုဆောင်",
+    "l": 22
+  },
+  {
+    "jp": "和室",
+    "rd": "わしつ",
+    "rom": "washitsu",
+    "en": "Japanese-style room",
+    "my": "ဂျပန်ရိုးရာအခန်း",
+    "l": 22
+  },
+  {
+    "jp": "押入れ",
+    "rd": "おしいれ",
+    "rom": "oshiire",
+    "en": "closet",
+    "my": "ဂျပန်စတိုင်ဗီဒို(မွေ့ရာ၊ စောင်၊ ခေါင်းအုံးများ သိမ်းဆည်းသည့်အခန်း)",
+    "l": 22
+  },
+  {
+    "jp": "布団",
+    "rd": "ふとん",
+    "rom": "futon",
+    "en": "futon",
+    "my": "မွေ့ယာ",
+    "l": 22
+  },
+  {
+    "jp": "パリ",
+    "rd": "パリ",
+    "rom": "pari",
+    "en": "Paris",
+    "my": "ပါရီမြို့",
+    "l": 22
+  },
+  {
+    "jp": "万里の長城",
+    "rd": "まんりのちょうじょう",
+    "rom": "manri no choujou",
+    "en": "The Great Wall of China",
+    "my": "The Great Wall of China သင်ခန်းစာတွင်ပါဝင်သော",
+    "l": 22
+  },
+  {
+    "jp": "みんなのアンケート",
+    "rd": "みんなのアンケート",
+    "rom": "minna no ankeeto",
+    "en": "everyone's questionnaire",
+    "my": "မေးခွန်းမေးမြန်းခြင်း",
+    "l": 22
+  },
+  {
+    "jp": "聞きます［先生に］",
+    "rd": "ききます［せんせいに］",
+    "rom": "kikimasu [sensei ni]",
+    "en": "ask (a teacher)",
+    "my": "မေးမြန်းသည်(ဆရာကို)။",
+    "l": 23
+  },
+  {
+    "jp": "回します",
+    "rd": "まわします",
+    "rom": "mawashimasu",
+    "en": "turn, rotate",
+    "my": "လှည့်သည်။",
+    "l": 23
+  },
+  {
+    "jp": "引きます",
+    "rd": "ひきます",
+    "rom": "hikimasu",
+    "en": "pull",
+    "my": "ဆွဲသည်။",
+    "l": 23
+  },
+  {
+    "jp": "変えます",
+    "rd": "かえます",
+    "rom": "kaemasu",
+    "en": "change",
+    "my": "လဲလှယ်သည်။",
+    "l": 23
+  },
+  {
+    "jp": "触ります",
+    "rd": "さわります",
+    "rom": "sawarimasu",
+    "en": "touch",
+    "my": "ကိုင်သည်၊ ထိသည်၊ တိသည်။",
+    "l": 23
+  },
+  {
+    "jp": "出ます［お釣りが～］",
+    "rd": "でます［おつりが～］",
+    "rom": "demasu [otsuri ga ~]",
+    "en": "come out (change comes out)",
+    "my": "ထွက်လာသည်/ကျလာသည်။",
+    "l": 23
+  },
+  {
+    "jp": "歩きます",
+    "rd": "あるきます",
+    "rom": "arukimasu",
+    "en": "walk",
+    "my": "လမ်းလျှောက်သည်။",
+    "l": 23
+  },
+  {
+    "jp": "渡ります［橋を～］",
+    "rd": "わたります［はしを～］",
+    "rom": "watarimasu [hashi o ~]",
+    "en": "cross (a bridge)",
+    "my": "ဖြတ်ကျော်သည်(တံတားကို)။",
+    "l": 23
+  },
+  {
+    "jp": "曲がります［右へ～］",
+    "rd": "まがります［みぎへ～］",
+    "rom": "magarimasu [migi e ~]",
+    "en": "turn (to the right)",
+    "my": "ကွေ့သည်(ညာဘက်ကို)",
+    "l": 23
+  },
+  {
+    "jp": "寂しい",
+    "rd": "さびしい",
+    "rom": "sabishii",
+    "en": "lonely",
+    "my": "အထီးကျန်သော",
+    "l": 23
+  },
+  {
+    "jp": "［お］湯",
+    "rd": "［お］ゆ",
+    "rom": "[o]yu",
+    "en": "hot water",
+    "my": "ရေနွေး",
+    "l": 23
+  },
+  {
+    "jp": "音",
+    "rd": "おと",
+    "rom": "oto",
+    "en": "sound",
+    "my": "အသံ",
+    "l": 23
+  },
+  {
+    "jp": "サイズ",
+    "rd": "サイズ",
+    "rom": "saizu",
+    "en": "size",
+    "my": "အရွယ်အစား",
+    "l": 23
+  },
+  {
+    "jp": "故障",
+    "rd": "こしょう",
+    "rom": "koshou",
+    "en": "breakdown",
+    "my": "ပျက်စီးနေခြင်း",
+    "l": 23
+  },
+  {
+    "jp": "道",
+    "rd": "みち",
+    "rom": "michi",
+    "en": "road",
+    "my": "လမ်း",
+    "l": 23
+  },
+  {
+    "jp": "交差点",
+    "rd": "こうさてん",
+    "rom": "kousaten",
+    "en": "intersection",
+    "my": "လမ်းဆုံ",
+    "l": 23
+  },
+  {
+    "jp": "信号",
+    "rd": "しんごう",
+    "rom": "shingou",
+    "en": "traffic light",
+    "my": "မီးပွိုင့်",
+    "l": 23
+  },
+  {
+    "jp": "角",
+    "rd": "かど",
+    "rom": "kado",
+    "en": "corner",
+    "my": "လမ်းထောင့်",
+    "l": 23
+  },
+  {
+    "jp": "橋",
+    "rd": "はし",
+    "rom": "hashi",
+    "en": "bridge",
+    "my": "တံတား",
+    "l": 23
+  },
+  {
+    "jp": "駐車場",
+    "rd": "ちゅうしゃじょう",
+    "rom": "chuushajou",
+    "en": "parking lot",
+    "my": "ကားရပ်ရန်နေရာ၊ parking",
+    "l": 23
+  },
+  {
+    "jp": "建物",
+    "rd": "たてもの",
+    "rom": "tatemono",
+    "en": "building",
+    "my": "အဆောက်အဦး",
+    "l": 23
+  },
+  {
+    "jp": "何回も",
+    "rd": "なんかいも",
+    "rom": "nankai mo",
+    "en": "many times",
+    "my": "အကြိမ်များစွာ",
+    "l": 23
+  },
+  {
+    "jp": "～目",
+    "rd": "～め",
+    "rom": "~me",
+    "en": "-th (ordinal)",
+    "my": "～မြောက်",
+    "l": 23
+  },
+  {
+    "jp": "聖徳太子",
+    "rd": "しょうとくたいし",
+    "rom": "shoutoku taishi",
+    "en": "Prince Shotoku",
+    "my": "Shotokuမင်းသား",
+    "l": 23
+  },
+  {
+    "jp": "法隆寺",
+    "rd": "ほうりゅうじ",
+    "rom": "houryuuji",
+    "en": "Horyuji Temple",
+    "my": "Houryuji ဘုရားကျောင်း",
+    "l": 23
+  },
+  {
+    "jp": "元気茶",
+    "rd": "げんきちゃ",
+    "rom": "genkicha",
+    "en": "Genki tea",
+    "my": "ကျန်းမာရေးလက်ဖက်ခြောက်",
+    "l": 23
+  },
+  {
+    "jp": "本田駅",
+    "rd": "ほんだえき",
+    "rom": "honda eki",
+    "en": "Honda Station",
+    "my": "Hondaဘူတာ",
+    "l": 23
+  },
+  {
+    "jp": "図書館前",
+    "rd": "としょかんまえ",
+    "rom": "toshokan mae",
+    "en": "in front of the library",
+    "my": "စာကြည့်တိုက်ရှေ့ ဘတ်စ်ကားမှတ်တိုင်",
+    "l": 23
+  },
+  {
+    "jp": "くれます",
+    "rd": "くれます",
+    "rom": "kuremasu",
+    "en": "give (to me)",
+    "my": "ပေးသည်(တခြားသူက ကိုယ့်ကိုပေးခြင်း)",
+    "l": 24
+  },
+  {
+    "jp": "直します",
+    "rd": "なおします",
+    "rom": "naoshimasu",
+    "en": "fix, repair",
+    "my": "ပြုပြင်သည်/အမှားပြင်ဆင်သည်။",
+    "l": 24
+  },
+  {
+    "jp": "つれていきます",
+    "rd": "つれていきます",
+    "rom": "tsurete ikimasu",
+    "en": "take (someone) along",
+    "my": "ခေါ်သွားသည်။",
+    "l": 24
+  },
+  {
+    "jp": "つれてきます",
+    "rd": "つれてきます",
+    "rom": "tsurete kimasu",
+    "en": "bring (someone) along",
+    "my": "ခေါ်လာသည်။",
+    "l": 24
+  },
+  {
+    "jp": "送ります",
+    "rd": "おくります",
+    "rom": "okurimasu",
+    "en": "send",
+    "my": "ပို့ဆောင်သည်။",
+    "l": 24
+  },
+  {
+    "jp": "紹介します",
+    "rd": "しょうかいします",
+    "rom": "shoukai shimasu",
+    "en": "introduce",
+    "my": "မိတ်ဆက်သည်။",
+    "l": 24
+  },
+  {
+    "jp": "案内します",
+    "rd": "あんないします",
+    "rom": "annai shimasu",
+    "en": "show around, guide",
+    "my": "လမ်းပြသည်။",
+    "l": 24
+  },
+  {
+    "jp": "説明します",
+    "rd": "せつめいします",
+    "rom": "setsumei shimasu",
+    "en": "explain",
+    "my": "ရှင်းပြသည်။",
+    "l": 24
+  },
+  {
+    "jp": "おじいさん/おじいちゃん",
+    "rd": "おじいさん/おじいちゃん",
+    "rom": "ojiisan/ojiichan",
+    "en": "grandfather",
+    "my": "အဖိုး",
+    "l": 24
+  },
+  {
+    "jp": "おばあさん/おばあちゃん",
+    "rd": "おばあさん/おばあちゃん",
+    "rom": "obaasan/obaachan",
+    "en": "grandmother",
+    "my": "အဖွား",
+    "l": 24
+  },
+  {
+    "jp": "準備",
+    "rd": "じゅんび",
+    "rom": "junbi",
+    "en": "preparation",
+    "my": "ကြိုတင်ပြင်ဆင်ခြင်း",
+    "l": 24
+  },
+  {
+    "jp": "引っ越し",
+    "rd": "ひっこし",
+    "rom": "hikkoshi",
+    "en": "moving house",
+    "my": "အိမ်ပြောင်းခြင်း",
+    "l": 24
+  },
+  {
+    "jp": "［お］菓子",
+    "rd": "［お］かし",
+    "rom": "[o]kashi",
+    "en": "sweets",
+    "my": "မုန့်",
+    "l": 24
+  },
+  {
+    "jp": "ホームステイ",
+    "rd": "ホームステイ",
+    "rom": "hoomusutei",
+    "en": "homestay",
+    "my": "Home stay",
+    "l": 24
+  },
+  {
+    "jp": "全部",
+    "rd": "ぜんぶ",
+    "rom": "zenbu",
+    "en": "all",
+    "my": "အားလုံး",
+    "l": 24
+  },
+  {
+    "jp": "自分で",
+    "rd": "じぶんで",
+    "rom": "jibun de",
+    "en": "by oneself",
+    "my": "ကိုယ်တိုင်",
+    "l": 24
+  },
+  {
+    "jp": "他に",
+    "rd": "ほかに",
+    "rom": "hoka ni",
+    "en": "besides, other",
+    "my": "အခြား",
+    "l": 24
+  },
+  {
+    "jp": "母の日",
+    "rd": "ははのひ",
+    "rom": "haha no hi",
+    "en": "Mother's Day",
+    "my": "အမေနေ့",
+    "l": 24
+  },
+  {
+    "jp": "考えます",
+    "rd": "かんがえます",
+    "rom": "kangaemasu",
+    "en": "think",
+    "my": "စဉ်းစားသည်။",
+    "l": 25
+  },
+  {
+    "jp": "着きます",
+    "rd": "つきます",
+    "rom": "tsukimasu",
+    "en": "arrive",
+    "my": "ဆိုက်ရောက်သည်။",
+    "l": 25
+  },
+  {
+    "jp": "留学します",
+    "rd": "りゅうがくします",
+    "rom": "ryuugaku shimasu",
+    "en": "study abroad",
+    "my": "နိုင်ငံခြားပညာသင်သွားသည်။",
+    "l": 25
+  },
+  {
+    "jp": "取ります［年を～］",
+    "rd": "とります［としを～］",
+    "rom": "torimasu [toshi o ~]",
+    "en": "get older",
+    "my": "အသက်ကြီးသည်။",
+    "l": 25
+  },
+  {
+    "jp": "足ります",
+    "rd": "たります",
+    "rom": "tarimasu",
+    "en": "be enough",
+    "my": "လုံလောက်သည်။",
+    "l": 25
+  },
+  {
+    "jp": "田舎",
+    "rd": "いなか",
+    "rom": "inaka",
+    "en": "countryside",
+    "my": "တောရွာ",
+    "l": 25
+  },
+  {
+    "jp": "チャンス",
+    "rd": "チャンス",
+    "rom": "chansu",
+    "en": "chance",
+    "my": "အခွင့်အရေး",
+    "l": 25
+  },
+  {
+    "jp": "億",
+    "rd": "おく",
+    "rom": "oku",
+    "en": "100 million",
+    "my": "သန်း၁၀၀",
+    "l": 25
+  },
+  {
+    "jp": "もし［～たら］",
+    "rd": "もし［～たら］",
+    "rom": "moshi [~tara]",
+    "en": "if",
+    "my": "တကယ်လို့～ခဲ့ရင်",
+    "l": 25
+  },
+  {
+    "jp": "意味",
+    "rd": "いみ",
+    "rom": "imi",
+    "en": "meaning",
+    "my": "အဓိပ္ပါယ်",
+    "l": 25
+  },
+  {
+    "jp": "もしもし",
+    "rd": "もしもし",
+    "rom": "moshimoshi",
+    "en": "hello (on the phone)",
+    "my": "hello",
+    "l": 25
+  },
+  {
+    "jp": "転勤",
+    "rd": "てんきん",
+    "rom": "tenkin",
+    "en": "job transfer",
+    "my": "အလုပ်ပြောင်းခြင်း",
+    "l": 25
+  },
+  {
+    "jp": "こと",
+    "rd": "こと",
+    "rom": "koto",
+    "en": "thing, matter",
+    "my": "အကြောင်း",
+    "l": 25
+  },
+  {
+    "jp": "暇",
+    "rd": "ひま",
+    "rom": "hima",
+    "en": "free time",
+    "my": "အားလပ်သော",
+    "l": 25
+  },
+  {
+    "jp": "［いろいろ］お世話になりました",
+    "rd": "［いろいろ］おせわになりました",
+    "rom": "[iroiro] osewa ni narimashita",
+    "en": "Thank you for everything.",
+    "my": "ကျေးဇူးအများကြီးရှိခဲ့ပါတယ်",
+    "l": 25
+  },
+  {
+    "jp": "頑張ります",
+    "rd": "がんばります",
+    "rom": "ganbarimasu",
+    "en": "do one's best",
+    "my": "ကြိုးစားပါမယ်",
+    "l": 25
+  },
+  {
+    "jp": "どうぞ、お元気で",
+    "rd": "どうぞ、おげんきで",
+    "rom": "douzo, ogenki de",
+    "en": "Please take care.",
+    "my": "ကျန်းမာစွာနဲ့",
+    "l": 25
+  },
+  {
+    "jp": "ベトナム",
+    "rd": "ベトナム",
+    "rom": "betonamu",
+    "en": "Vietnam",
+    "my": "ဗီယက်နမ်",
+    "l": 25
+  }
+];
+
+export const CATS = [
+  "All",
+  "People",
+  "Family",
+  "Places and Locations",
+  "Things (Objects)",
+  "Food and Drink",
+  "Animals",
+  "Transportation",
+  "Nature and Weather",
+  "Body Parts",
+  "Numbers",
+  "Counters",
+  "Time Words",
+  "School and Studies",
+  "Hobbies and Activities",
+  "Money & Shopping",
+  "Health and Body",
+  "Verbs Group 1",
+  "Verbs Group 2",
+  "Verbs Irregular",
+  "い-Adjectives",
+  "な-Adjectives",
+  "Adverbs",
+  "Particles and Conjunctions",
+  "Question Words",
+  "Demonstratives",
+  "Greetings and Expressions",
+  "Colors",
+  "Size and Quantity",
+  "Common Conjunctions",
+  "Miscellaneous / Common Nouns"
+];
