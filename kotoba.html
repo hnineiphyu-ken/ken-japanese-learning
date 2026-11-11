@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <meta name="color-scheme" content="light dark"/>
   <link rel="icon" href="data:,"/>
   <title>Kotoba Vocabulary (単語) — Ken Japanese Learning</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +22,6 @@
           <span class="sub">JLPT N5 & Minna no Nihongo</span>
         </div>
       </a>
-      <div class="header-controls">
-        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
-          🌙
-        </button>
-      </div>
     </div>
   </header>
 
@@ -68,7 +62,7 @@
     </div>
 
     <!-- Total Count & Active Scope Status -->
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-size:13px; color:var(--muted); font-weight:600;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; font-size:13px; color:var(--muted); font-weight:700;">
       <span id="resultCount">Showing 0 words</span>
       <span id="pageInfo">Page 1 of 1</span>
     </div>
@@ -77,21 +71,19 @@
     <div id="wordsContainer" class="words-container"></div>
 
     <!-- Pagination -->
-    <div id="pagination" class="pagination"></div>
+    <div id="pagination" class="pager"></div>
 
   </div>
 
   <script src="assets/data/words-data.js"></script>
   <script src="assets/js/common.js"></script>
   <script>
-    // Combine full words pool
     const ALL_WORDS = [].concat(WORDS, MINNA, EXTRA_WORDS || []);
     let filteredList = [];
     let currentPage = 1;
     const PAGE_SIZE = 25;
 
     function initFilters() {
-      // Categories
       const catSelect = $('catSelect');
       if (typeof CATS !== 'undefined') {
         CATS.forEach(c => {
@@ -104,7 +96,6 @@
         });
       }
 
-      // Lessons (1-25)
       const lessonSelect = $('lessonSelect');
       for (let i = 1; i <= 25; i++) {
         const opt = document.createElement('option');
@@ -130,15 +121,10 @@
       const lesson = $('lessonSelect').value;
 
       filteredList = ALL_WORDS.filter(w => {
-        // Category filter
         if (cat !== 'All' && w.cat !== cat) return false;
-
-        // Lesson filter
         if (lesson !== 'All') {
           if (parseInt(lesson, 10) !== w.l) return false;
         }
-
-        // Search query
         if (q) {
           const matchJp = (w.jp || '').toLowerCase().includes(q);
           const matchRd = (w.rd || '').toLowerCase().includes(q);
@@ -147,7 +133,6 @@
           const matchMy = (w.my || '').toLowerCase().includes(q);
           if (!matchJp && !matchRd && !matchRom && !matchEn && !matchMy) return false;
         }
-
         return true;
       });
 
@@ -161,7 +146,7 @@
 
       if (filteredList.length === 0) {
         container.innerHTML = `
-          <div style="text-align:center; padding:50px 20px; color:var(--muted); background:var(--bg-card); border-radius:var(--radius-lg); border:1px solid var(--line);">
+          <div style="text-align:center; padding:44px 16px; color:var(--muted); background:#ffffff; border-radius:var(--radius-lg); border:2px solid var(--line);">
             <div style="font-size:32px; margin-bottom:8px; font-weight:800; font-family:'Zen Kaku Gothic New';">見つかりません</div>
             <div>No matching vocabulary found. Try adjusting your search query or filters.</div>
           </div>
@@ -196,7 +181,7 @@
             </div>
             <div style="display:flex; align-items:center; gap:8px;">
               ${w.cat ? `<span class="word-tag">${escapeHtml(w.cat)}</span>` : ''}
-              ${w.l ? `<span class="word-tag" style="color:var(--primary);">L${w.l}</span>` : ''}
+              ${w.l ? `<span class="word-tag" style="color:var(--primary); font-weight:800;">L${w.l}</span>` : ''}
               <button class="audio-btn" onclick="speakJapanese('${textToSpeak}')" title="Listen Audio">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
               </button>
@@ -210,36 +195,12 @@
     function renderPagination() {
       const container = $('pagination');
       const totalPages = Math.ceil(filteredList.length / PAGE_SIZE);
-      if (totalPages <= 1) {
-        container.innerHTML = '';
-        return;
-      }
-
-      let html = '';
-      html += `<button class="page-btn" onclick="goToPage(1)" ${currentPage === 1 ? 'disabled' : ''}>&laquo;</button>`;
-      html += `<button class="page-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>&lsaquo;</button>`;
-
-      let startPage = Math.max(1, currentPage - 2);
-      let endPage = Math.min(totalPages, startPage + 4);
-      if (endPage - startPage < 4) {
-        startPage = Math.max(1, endPage - 4);
-      }
-
-      for (let p = startPage; p <= endPage; p++) {
-        html += `<button class="page-btn ${p === currentPage ? 'active' : ''}" onclick="goToPage(${p})">${p}</button>`;
-      }
-
-      html += `<button class="page-btn" onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>&rsaquo;</button>`;
-      html += `<button class="page-btn" onclick="goToPage(${totalPages})" ${currentPage === totalPages ? 'disabled' : ''}>&raquo;</button>`;
-
-      container.innerHTML = html;
-    }
-
-    function goToPage(p) {
-      currentPage = p;
-      renderWordsList();
-      renderPagination();
-      window.scrollTo({ top: 300, behavior: 'smooth' });
+      renderPager(container, totalPages, currentPage, p => {
+        currentPage = p;
+        renderWordsList();
+        renderPagination();
+        window.scrollTo({ top: 300, behavior: 'smooth' });
+      });
     }
 
     document.addEventListener('DOMContentLoaded', () => {

@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <meta name="color-scheme" content="light dark"/>
   <link rel="icon" href="data:,"/>
   <title>Hiragana (ひらがな) — Ken Japanese Learning</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +22,6 @@
           <span class="sub">JLPT N5 & Minna no Nihongo</span>
         </div>
       </a>
-      <div class="header-controls">
-        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
-          🌙
-        </button>
-      </div>
     </div>
   </header>
 
@@ -53,27 +47,36 @@
     </div>
 
     <!-- Main Hiragana 46 Characters -->
-    <div class="card" style="margin-bottom: 24px;">
-      <h2 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 16px;">
+    <div class="card">
+      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
         Basic 46 Characters (五十音)
       </h2>
-      <div id="hiraganaGrid" class="kana-grid"></div>
+      <div id="hiraGrid" class="kana-grid"></div>
     </div>
 
     <!-- Dakuten & Handakuten -->
-    <div class="card" style="margin-bottom: 24px;">
-      <h2 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 16px;">
-        Voiced & Semi-Voiced Sounds (濁音・半濁音)
+    <div class="card">
+      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
+        Voiced &amp; Semi-Voiced Sounds (濁音・半濁音 ゛゜)
       </h2>
-      <div id="hiraganaDakuten" class="kana-grid"></div>
+      <div id="hiraDakuten" class="kana-grid"></div>
     </div>
 
     <!-- Yoon (Combination Sounds) -->
-    <div class="card" style="margin-bottom: 24px;">
-      <h2 style="font-size: 16px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 16px;">
-        Contracted Sounds (拗音 - Yoon)
+    <div class="card">
+      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
+        Contracted Sounds (拗音 - Yoon: ゃ · ゅ · ょ)
       </h2>
-      <div id="hiraganaYoon" class="kana-grid" style="grid-template-columns: repeat(3, 1fr);"></div>
+      <div id="hiraYoon" class="kana-grid" style="grid-template-columns: repeat(3, 1fr);"></div>
+    </div>
+
+    <!-- Long Vowels (ちょうおん) -->
+    <div class="card">
+      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
+        Long Vowels (長音・ちょうおん)
+      </h2>
+      <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">A long vowel is held one extra beat. When vowels continue, the first vowel stretches — in romaji, watch the spelling, not the letter you see.</p>
+      <div id="hiraLong"></div>
     </div>
 
   </div>
@@ -81,56 +84,76 @@
   <script src="assets/data/kana-data.js"></script>
   <script src="assets/js/common.js"></script>
   <script>
-    // Render Hiragana Grid
     function renderHiragana() {
-      const mainGrid = $('hiraganaGrid');
-      let html = '';
-      
-      KANA_ROWS.forEach((row, rIdx) => {
-        html += `<div class="row-label">${row.label}</div>`;
-        row.items.forEach(item => {
-          if (!item[0]) {
-            html += `<div class="kana-card" style="visibility:hidden"></div>`;
+      // 46 Basic
+      const g = $('hiraGrid');
+      let gHtml = '';
+      KANA_ROWS.forEach(row => {
+        if (row.label) gHtml += `<div class="row-label">${row.label}</div>`;
+        row.items.forEach(it => {
+          if (!it || !it[0]) {
+            gHtml += `<div class="kana-card" style="visibility:hidden"></div>`;
           } else {
-            html += `
-              <div class="kana-card" onclick="speakJapanese('${item[0]}')">
-                <span class="char">${item[0]}</span>
-                <span class="rom">${item[2]}</span>
-                <svg class="audio-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            gHtml += `
+              <div class="kana-card" onclick="speakJapanese('${it[0]}')">
+                <span class="char">${it[0]}</span>
+                <span class="rom">${it[2]}</span>
               </div>`;
           }
         });
       });
-      mainGrid.innerHTML = html;
+      g.innerHTML = gHtml;
 
       // Dakuten
-      const dakGrid = $('hiraganaDakuten');
-      let dakHtml = '';
+      const d = $('hiraDakuten');
+      let dHtml = '';
       DAKUTEN.forEach(row => {
-        dakHtml += `<div class="row-label">${row.label}</div>`;
-        row.items.forEach(item => {
-          dakHtml += `
-            <div class="kana-card" onclick="speakJapanese('${item[0]}')">
-              <span class="char">${item[0]}</span>
-              <span class="rom">${item[2]}</span>
-              <svg class="audio-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        if (row.label) dHtml += `<div class="row-label">${row.label}</div>`;
+        row.items.forEach(it => {
+          dHtml += `
+            <div class="kana-card" onclick="speakJapanese('${it[0]}')">
+              <span class="char">${it[0]}</span>
+              <span class="rom">${it[2]}</span>
             </div>`;
         });
       });
-      dakGrid.innerHTML = dakHtml;
+      d.innerHTML = dHtml;
 
       // Yoon
-      const yoonGrid = $('hiraganaYoon');
-      let yoonHtml = '';
-      YOON.forEach(item => {
-        yoonHtml += `
-          <div class="kana-card" onclick="speakJapanese('${item[0]}')">
-            <span class="char">${item[0]}</span>
-            <span class="rom">${item[2]}</span>
-            <svg class="audio-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-          </div>`;
+      const y = $('hiraYoon');
+      let yHtml = '';
+      YOON.forEach(row => {
+        row.forEach(it => {
+          yHtml += `
+            <div class="kana-card" onclick="speakJapanese('${it[0]}')">
+              <span class="char">${it[0]}</span>
+              <span class="rom">${it[2]}</span>
+            </div>`;
+        });
       });
-      yoonGrid.innerHTML = yoonHtml;
+      y.innerHTML = yHtml;
+
+      // Long Vowels
+      const l = $('hiraLong');
+      if (l && typeof LONG_VOWELS !== 'undefined') {
+        l.innerHTML = LONG_VOWELS.map(gr => {
+          return `
+            <div class="lv-row">
+              <span class="lv-rule">${escapeHtml(gr.rule)}</span>
+              <span class="lv-ex">
+                ${gr.ex.map(e => `
+                  <span class="lv-item" style="cursor:pointer;" onclick="speakJapanese('${e[0]}')">
+                    <span class="lj">${escapeHtml(e[0])}</span>
+                    <span class="lr">${escapeHtml(e[1])}</span>
+                    <span class="lm">${escapeHtml(e[2])} · ${escapeHtml(e[3])}</span>
+                  </span>
+                `).join('')}
+              </span>
+              <span class="rt-note" style="flex-basis:100%;margin-top:2px;">${escapeHtml(gr.note)}</span>
+            </div>
+          `;
+        }).join('');
+      }
     }
 
     document.addEventListener('DOMContentLoaded', renderHiragana);

@@ -3,48 +3,12 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <meta name="color-scheme" content="light dark"/>
   <link rel="icon" href="data:,"/>
   <title>Essential Basics (基本) — Ken Japanese Learning</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/app.css"/>
-  <style>
-    .ref-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 8px;
-    }
-    .ref-table th, .ref-table td {
-      padding: 10px 12px;
-      text-align: left;
-      border-bottom: 1px solid var(--line-soft);
-      font-size: 14.5px;
-    }
-    .ref-table th {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--faint);
-      font-weight: 700;
-    }
-    .ref-table tr:hover td {
-      background: var(--bg-card-subtle);
-    }
-    .ref-table .td-jp {
-      font-family: "Zen Kaku Gothic New", sans-serif;
-      font-weight: 800;
-      font-size: 16px;
-      color: var(--ink);
-    }
-    .ref-table .td-rom {
-      font-weight: 700;
-      color: var(--primary);
-      font-size: 12px;
-      text-transform: uppercase;
-    }
-  </style>
 </head>
 <body>
 
@@ -58,11 +22,6 @@
           <span class="sub">JLPT N5 & Minna no Nihongo</span>
         </div>
       </a>
-      <div class="header-controls">
-        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
-          🌙
-        </button>
-      </div>
     </div>
   </header>
 
@@ -82,13 +41,133 @@
 
     <!-- Hero Card -->
     <div class="hero-card">
-      <div class="hero-tag">Grammar & Number System</div>
+      <div class="hero-tag">Grammar & Number Foundation</div>
       <h1 class="hero-title">Essential Basics (基本)</h1>
-      <p class="hero-desc">Numbers, Counters, Telling Time, Days of the Week, Calendar Months, Dates and Common Greetings with Myanmar & English translations.</p>
+      <p class="hero-desc">Numbers 0–100,000,000, 11 Counters, 20 Core Greetings, Time & Clock, and Calendar Dates with native pronunciation audio.</p>
     </div>
 
-    <!-- Accordion Sections Container -->
-    <div id="basicsContainer"></div>
+    <!-- 1. NUMBERS -->
+    <section class="collapse open" id="col-numbers">
+      <button class="collapse-head" aria-expanded="true">
+        <span class="ch-jp jp">かず</span>
+        <span class="ch-t">
+          <span class="ct">Numbers (0 – 100,000,000)</span>
+          <span class="cd">Counting, hundreds, thousands, and ten-thousands with pagination</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" id="colBody-numbers">
+        <div id="numTable"></div>
+        <div class="pager" id="numPager"></div>
+      </div>
+    </section>
+
+    <!-- 2. COUNTERS -->
+    <section class="collapse" id="col-counters">
+      <button class="collapse-head" aria-expanded="false">
+        <span class="ch-jp jp">かぞえかた</span>
+        <span class="ch-t">
+          <span class="ct">Counters (助数詞)</span>
+          <span class="cd">〜さい age · 〜にん people · 〜かい floors · 〜つ things · 11 counters (1–10 each)</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" id="colBody-counters" hidden>
+        <p class="rt-note" style="margin:0 0 12px">Japanese counts with a counter word after the number — the counter changes with what you are counting, and some readings change too. Tap a counter to open its table.</p>
+        <div id="counterList"></div>
+      </div>
+    </section>
+
+    <!-- 3. GREETINGS -->
+    <section class="collapse" id="col-bgreet">
+      <button class="collapse-head" aria-expanded="false">
+        <span class="ch-jp jp">あいさつ</span>
+        <span class="ch-t">
+          <span class="ct">Everyday Greetings (挨拶)</span>
+          <span class="cd">20 everyday greetings with contextual usage notes</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" id="colBody-bgreet" hidden>
+        <div id="greetTable"></div>
+        <div class="pager" id="greetPager"></div>
+        <p class="rt-note" style="margin-top:14px;">These are the core greetings. The other 38 greetings &amp; expressions live in <b>Kotoba → Category: Greetings and Expressions</b>.</p>
+      </div>
+    </section>
+
+    <!-- 4. TIME & CLOCK -->
+    <section class="collapse" id="col-time">
+      <button class="collapse-head" aria-expanded="false">
+        <span class="ch-jp jp">じかん</span>
+        <span class="ch-t">
+          <span class="ct">Time &amp; Clock (時間・時・分)</span>
+          <span class="cd">〜じ hours · 〜ふん/ぷん minutes · AM / PM relative times</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" id="colBody-time" hidden>
+        <div id="timeTable"></div>
+      </div>
+    </section>
+
+    <!-- 5. DAYS, MONTHS & DATES -->
+    <section class="collapse" id="col-dates">
+      <button class="collapse-head" aria-expanded="false">
+        <span class="ch-jp jp">ようび・ひづけ</span>
+        <span class="ch-t">
+          <span class="ct">Days, Months &amp; Dates (曜日・月・日)</span>
+          <span class="cd">Weekdays · 〜がつ months · 〜にち dates · past / present / future</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body" id="colBody-dates" hidden>
+        <div id="datesTable"></div>
+      </div>
+    </section>
+
+    <!-- 6. BASICS QUIZ -->
+    <div class="card" id="basicsQuizBox" style="margin-top:24px;">
+      <div id="basicsSetup">
+        <button class="btn-primary" id="startBasicsBtn" style="width:100%;">Practice Quiz — Numbers + Counters + Greetings &rarr;</button>
+        <p style="text-align:center; font-size:13px; color:var(--muted); margin-top:10px;">10 random multiple choice questions covering numbers, counters, greetings and basic terms.</p>
+      </div>
+
+      <div id="basicsPlay" style="display:none">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <span id="bqProgressText" style="font-weight:700; font-size:13.5px; color:var(--muted);">Question 1 / 10</span>
+          <span id="bqScoreText" style="font-weight:800; font-size:14px; color:var(--primary);">Score 0</span>
+        </div>
+        <div class="quiz-progress-track">
+          <div class="quiz-progress-bar" id="bqProgressBar"></div>
+        </div>
+        <div class="quiz-prompt-box">
+          <div style="font-size:12px; font-weight:800; text-transform:uppercase; color:var(--faint);">What does this mean?</div>
+          <div class="quiz-prompt" id="bqPrompt" style="font-size:38px; margin:8px 0;"></div>
+          <div class="quiz-sub-prompt" id="bqPromptSub"></div>
+          <button id="bqSpeakBtn" class="audio-btn" style="margin-top:10px;" title="Listen Audio">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          </button>
+        </div>
+        <div class="quiz-options-grid" id="bqOptions"></div>
+        <div style="display:flex; gap:10px; margin-top:20px;">
+          <button class="btn-outline" id="bqStopBtn" style="flex:1;">Stop Quiz</button>
+          <button class="btn-primary" id="bqNextBtn" style="flex:2; display:none;">Next Question &rarr;</button>
+        </div>
+      </div>
+
+      <div id="basicsResult" style="display:none; text-align:center; padding:20px 0;">
+        <div style="font-size:48px; margin-bottom:8px;">👏</div>
+        <h3 style="font-size:22px; font-weight:900;" id="bqResultFace">おつかれさま</h3>
+        <div style="font-size:42px; font-weight:900; color:var(--primary); margin:12px 0;">
+          <span id="bqResultScore">0</span> / <span id="bqResultTotal">10</span>
+        </div>
+        <p id="bqResultMsg" style="color:var(--muted); font-size:14.5px; margin-bottom:20px;"></p>
+        <div style="display:flex; gap:10px;">
+          <button class="btn-outline" id="bqBackBtn" style="flex:1;">Back to Basics</button>
+          <button class="btn-primary" id="bqRetryBtn" style="flex:1;">Play Again</button>
+        </div>
+      </div>
+    </div>
 
   </div>
 
@@ -96,244 +175,255 @@
   <script src="assets/data/topics-data.js"></script>
   <script src="assets/js/common.js"></script>
   <script>
-    function toggleAccordion(el) {
-      el.closest('.accordion').classList.toggle('open');
+    function rtRowsWithAudio(rows) {
+      return rows.map(r => {
+        const toSpeak = r[1];
+        return `
+          <div class="rt-row">
+            <span class="rt-n">${escapeHtml(r[0])}</span>
+            <span class="rt-j">${escapeHtml(r[1])}</span>
+            <span class="rt-r">${escapeHtml(r[2])}</span>
+            <span class="rt-m">${escapeHtml(r[3])}</span>
+            <button class="audio-btn" onclick="speakJapanese('${toSpeak}')" title="Listen Audio">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+            </button>
+          </div>
+        `;
+      }).join('');
     }
 
-    function renderBasics() {
-      const container = $('basicsContainer');
-      let html = '';
+    function renderRefTables() {
+      // 1. Numbers
+      const nt = $('numTable');
+      if (nt && typeof NUM_TABLE !== 'undefined') {
+        const NUM_PS = 20;
+        let numPage = 1;
+        function drawNum() {
+          const pages = Math.max(1, Math.ceil(NUM_TABLE.length / NUM_PS));
+          if (numPage > pages) numPage = pages;
+          if (numPage < 1) numPage = 1;
+          const s = (numPage - 1) * NUM_PS;
+          nt.innerHTML = rtRowsWithAudio(NUM_TABLE.slice(s, s + NUM_PS));
+          renderPager($('numPager'), pages, numPage, p => { numPage = p; drawNum(); });
+        }
+        drawNum();
+      }
 
-      // 1. Numbers (かず)
-      html += `
-        <div class="accordion open">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            <div class="accordion-title-wrap">
-              <span class="accordion-icon">数</span>
-              <div>
-                <div class="accordion-title">Numbers (1 – 10,000)</div>
-                <div class="accordion-desc">Basic cardinal counting numbers</div>
+      // 2. Counters
+      const cl = $('counterList');
+      if (cl && typeof COUNTERS !== 'undefined') {
+        cl.innerHTML = COUNTERS.map(c => {
+          return `
+            <section class="collapse sub">
+              <button class="collapse-head" aria-expanded="false">
+                <span class="ch-jp jp">${escapeHtml(c.jp)}</span>
+                <span class="ch-t">
+                  <span class="ct">${escapeHtml(c.name)} (${escapeHtml(c.en)})</span>
+                  <span class="cd">${escapeHtml(c.my)}</span>
+                </span>
+                <span class="ch-chev" aria-hidden="true">▾</span>
+              </button>
+              <div class="collapse-body" hidden>
+                ${rtRowsWithAudio(c.rows.map(r => [r[0], r[1], r[2], r[3] + ' · ' + r[4]]))}
               </div>
-            </div>
-            <div class="accordion-chevron">▼</div>
-          </button>
-          <div class="accordion-content">
-            <table class="ref-table">
-              <thead><tr><th>No.</th><th>Japanese</th><th>Romaji</th><th>Myanmar</th><th>Audio</th></tr></thead>
-              <tbody>
-                ${NUM_TABLE.map(r => `
-                  <tr>
-                    <td style="font-weight:700;">${r[0]}</td>
-                    <td class="td-jp">${r[1]}</td>
-                    <td class="td-rom">${r[2]}</td>
-                    <td>${r[4]}</td>
-                    <td>
-                      <button class="audio-btn" onclick="speakJapanese('${r[1]}')" title="Listen">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                      </button>
-                    </td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      `;
+            </section>
+          `;
+        }).join('');
+      }
 
-      // 2. Counters (助数詞)
-      html += `
-        <div class="accordion">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            <div class="accordion-title-wrap">
-              <span class="accordion-icon">助</span>
-              <div>
-                <div class="accordion-title">Counters (助数詞)</div>
-                <div class="accordion-desc">Age, People, Flat items, Cylinders, Animals, etc.</div>
+      // 3. Time
+      const tt = $('timeTable');
+      if (tt && typeof HOUR_TABLE !== 'undefined') {
+        tt.innerHTML = `
+          <p class="rt-sub">Hours — 〜じ (ji)</p>
+          ${rtRowsWithAudio(HOUR_TABLE)}
+          <p class="rt-sub" style="margin-top:16px;">Minutes — 〜ふん / 〜ぷん (fun / pun)</p>
+          ${rtRowsWithAudio(MIN_TABLE)}
+          <p class="rt-note" style="margin-top:14px;">
+            <b>AM</b> = <span class="jp" style="font-weight:700;">ごぜん</span> (gozen) · <b>PM</b> = <span class="jp" style="font-weight:700;">ごご</span> (gogo)<br>
+            0:00 AM &rarr; <span class="jp" style="font-weight:700;">ごぜん れいじ</span> (gozen re-ji)<br>
+            16:15 &rarr; <span class="jp" style="font-weight:700;">ごご よじ じゅうごふん</span> (gogo yo-ji juu-go-fun)
+          </p>
+        `;
+      }
+
+      // 4. Dates
+      const dt = $('datesTable');
+      if (dt && typeof WEEKDAY_TABLE !== 'undefined') {
+        dt.innerHTML = `
+          <p class="rt-sub">Days of the week — ようび</p>
+          ${rtRowsWithAudio(WEEKDAY_TABLE)}
+          <p class="rt-sub" style="margin-top:16px;">Months — 〜がつ (gatsu)</p>
+          ${rtRowsWithAudio(MONTH_TABLE)}
+          <p class="rt-sub" style="margin-top:16px;">Dates of Month — 〜にち (nichi) · 1–10, 14, 20, 24 have special readings</p>
+          ${rtRowsWithAudio(DATE_TABLE)}
+          <p class="rt-sub" style="margin-top:16px;">Past · Present · Future Relative Time</p>
+          ${REL_ROWS.map(row => `
+            <p class="rt-note" style="margin-top:8px;">
+              <b>${escapeHtml(row[0])} · ${escapeHtml(row[1])}</b><br>
+              ${row[2].map(e => `
+                <span class="jp" style="font-weight:700;">${escapeHtml(e[0])}</span> 
+                <span style="color:var(--primary); font-weight:700; font-size:11px;">(${escapeHtml(e[1])})</span> &mdash; 
+                ${escapeHtml(e[2])} · ${escapeHtml(e[3])}
+              `).join('<br>')}
+            </p>
+          `).join('')}
+          <p class="rt-sub" style="margin-top:16px;">Every ~ — まい · Parts of Day</p>
+          ${rtRowsWithAudio(MAI_TABLE.map(m => ['', m[0], m[1], m[2] + ' · ' + m[3]])) }
+        `;
+      }
+
+      // 5. Greetings
+      const gt = $('greetTable');
+      if (gt && typeof GREETINGS !== 'undefined') {
+        const BPS = 10;
+        let gpage = 1;
+        function drawGreet() {
+          const pages = Math.max(1, Math.ceil(GREETINGS.length / BPS));
+          if (gpage > pages) gpage = pages;
+          if (gpage < 1) gpage = 1;
+          const s = (gpage - 1) * BPS;
+          gt.innerHTML = GREETINGS.slice(s, s + BPS).map((g, i) => {
+            return `
+              <div class="rt-row">
+                <span class="rt-n">${s + i + 1}.</span>
+                <span class="rt-j">${escapeHtml(g.jp)}</span>
+                <span class="rt-r">${escapeHtml(g.rom)}</span>
+                <span class="rt-m">
+                  ${escapeHtml(g.en)} · ${escapeHtml(g.my)}<br>
+                  <span style="color:var(--faint); font-size:12px;">သုံးသည့်အချိန် — ${escapeHtml(g.when)}</span>
+                </span>
+                <button class="audio-btn" onclick="speakJapanese('${g.jp}')" title="Listen Audio">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                </button>
               </div>
-            </div>
-            <div class="accordion-chevron">▼</div>
-          </button>
-          <div class="accordion-content">
-            ${COUNTERS.map(c => `
-              <h3 style="font-size:15px; font-weight:800; color:var(--primary); margin:16px 0 6px;">
-                ${c.jp} (${c.rom}) — ${c.name} (${c.my})
-              </h3>
-              <table class="ref-table" style="margin-bottom:14px;">
-                <thead><tr><th>No.</th><th>Japanese</th><th>Romaji</th><th>Audio</th></tr></thead>
-                <tbody>
-                  ${c.rows.map(r => `
-                    <tr>
-                      <td style="font-weight:700; width:50px;">${r[0]}</td>
-                      <td class="td-jp">${r[1]}</td>
-                      <td class="td-rom">${r[2]}</td>
-                      <td>
-                        <button class="audio-btn" onclick="speakJapanese('${r[1]}')" title="Listen">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                        </button>
-                      </td>
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
-            `).join('')}
-          </div>
-        </div>
-      `;
+            `;
+          }).join('');
+          renderPager($('greetPager'), pages, gpage, p => { gpage = p; drawGreet(); });
+        }
+        drawGreet();
+      }
 
-      // 3. Time & Clock (時間・時・分)
-      html += `
-        <div class="accordion">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            <div class="accordion-title-wrap">
-              <span class="accordion-icon">時</span>
-              <div>
-                <div class="accordion-title">Time & Clock (時間・時・分)</div>
-                <div class="accordion-desc">Hours (~ji), Minutes (~fun/pun), and relative times</div>
-              </div>
-            </div>
-            <div class="accordion-chevron">▼</div>
-          </button>
-          <div class="accordion-content">
-            <h4 style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--ink);">Hours (~時)</h4>
-            <table class="ref-table" style="margin-bottom:20px;">
-              <thead><tr><th>Hour</th><th>Japanese</th><th>Romaji</th><th>Myanmar</th><th>Audio</th></tr></thead>
-              <tbody>
-                ${HOUR_TABLE.map(r => `
-                  <tr>
-                    <td style="font-weight:700;">${r[0]}</td>
-                    <td class="td-jp">${r[1]}</td>
-                    <td class="td-rom">${r[2]}</td>
-                    <td>${r[4]}</td>
-                    <td>
-                      <button class="audio-btn" onclick="speakJapanese('${r[1]}')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                      </button>
-                    </td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-
-            <h4 style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--ink);">Minutes (~分)</h4>
-            <table class="ref-table">
-              <thead><tr><th>Min</th><th>Japanese</th><th>Romaji</th><th>Myanmar</th><th>Audio</th></tr></thead>
-              <tbody>
-                ${MIN_TABLE.map(r => `
-                  <tr>
-                    <td style="font-weight:700;">${r[0]}</td>
-                    <td class="td-jp">${r[1]}</td>
-                    <td class="td-rom">${r[2]}</td>
-                    <td>${r[4]}</td>
-                    <td>
-                      <button class="audio-btn" onclick="speakJapanese('${r[1]}')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                      </button>
-                    </td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      `;
-
-      // 4. Days, Months & Dates (曜日・月・日)
-      html += `
-        <div class="accordion">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            <div class="accordion-title-wrap">
-              <span class="accordion-icon">暦</span>
-              <div>
-                <div class="accordion-title">Calendar & Dates (曜日・月・日)</div>
-                <div class="accordion-desc">Days of the week, months, and days of the month (1st–31st)</div>
-              </div>
-            </div>
-            <div class="accordion-chevron">▼</div>
-          </button>
-          <div class="accordion-content">
-            <h4 style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--ink);">Days of the Week (曜日)</h4>
-            <table class="ref-table" style="margin-bottom:20px;">
-              <thead><tr><th>Day</th><th>Japanese</th><th>Romaji</th><th>Myanmar</th><th>Audio</th></tr></thead>
-              <tbody>
-                ${WEEKDAY_TABLE.map(r => `
-                  <tr>
-                    <td style="font-weight:700;">${r[0]}</td>
-                    <td class="td-jp">${r[1]}</td>
-                    <td class="td-rom">${r[2]}</td>
-                    <td>${r[4]}</td>
-                    <td>
-                      <button class="audio-btn" onclick="speakJapanese('${r[1]}')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                      </button>
-                    </td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-
-            <h4 style="font-size:14px; font-weight:800; margin-bottom:8px; color:var(--ink);">Days of the Month (1日 – 31日)</h4>
-            <table class="ref-table">
-              <thead><tr><th>Date</th><th>Japanese</th><th>Romaji</th><th>Myanmar</th><th>Audio</th></tr></thead>
-              <tbody>
-                ${DATE_TABLE.map(r => `
-                  <tr>
-                    <td style="font-weight:700;">${r[0]}</td>
-                    <td class="td-jp">${r[1]}</td>
-                    <td class="td-rom">${r[2]}</td>
-                    <td>${r[4]}</td>
-                    <td>
-                      <button class="audio-btn" onclick="speakJapanese('${r[1]}')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                      </button>
-                    </td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      `;
-
-      // 5. Common Greetings (挨拶)
-      html += `
-        <div class="accordion">
-          <button class="accordion-header" onclick="toggleAccordion(this)">
-            <div class="accordion-title-wrap">
-              <span class="accordion-icon">礼</span>
-              <div>
-                <div class="accordion-title">Greetings & Expressions (挨拶)</div>
-                <div class="accordion-desc">Daily conversational greetings and customary expressions</div>
-              </div>
-            </div>
-            <div class="accordion-chevron">▼</div>
-          </button>
-          <div class="accordion-content">
-            <table class="ref-table">
-              <thead><tr><th>Japanese</th><th>Romaji</th><th>English</th><th>Myanmar</th><th>Audio</th></tr></thead>
-              <tbody>
-                ${GREETINGS.map(r => `
-                  <tr>
-                    <td class="td-jp">${r[0]}</td>
-                    <td class="td-rom">${r[1]}</td>
-                    <td style="font-weight:600;">${r[2]}</td>
-                    <td>${r[3]}</td>
-                    <td>
-                      <button class="audio-btn" onclick="speakJapanese('${r[0]}')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                      </button>
-                    </td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      `;
-
-      container.innerHTML = html;
+      // Collapse Handlers
+      document.querySelectorAll('.collapse-head').forEach(h => {
+        h.addEventListener('click', () => {
+          const sec = h.parentElement;
+          const body = sec.querySelector('.collapse-body');
+          const open = sec.classList.toggle('open');
+          h.setAttribute('aria-expanded', open ? 'true' : 'false');
+          if (body) body.hidden = !open;
+        });
+      });
     }
 
-    document.addEventListener('DOMContentLoaded', renderBasics);
+    // Basics Quiz Logic
+    let bqList = [];
+    let bqCur = 0;
+    let bqScore = 0;
+    let bqAnswered = false;
+
+    function initBasicsQuiz() {
+      $('startBasicsBtn').addEventListener('click', startBasicsQuiz);
+      $('bqNextBtn').addEventListener('click', () => {
+        bqCur++;
+        showBasicsQuestion();
+      });
+      $('bqStopBtn').addEventListener('click', () => showBasicsResult(true));
+      $('bqRetryBtn').addEventListener('click', startBasicsQuiz);
+      $('bqBackBtn').addEventListener('click', () => {
+        $('basicsPlay').style.display = 'none';
+        $('basicsResult').style.display = 'none';
+        $('basicsSetup').style.display = 'block';
+      });
+      $('bqSpeakBtn').addEventListener('click', () => {
+        if (bqList[bqCur]) speakJapanese(bqList[bqCur].jp);
+      });
+    }
+
+    function startBasicsQuiz() {
+      const pool = BASICS_POOL;
+      const shuf = shuffle(pool);
+      bqList = [];
+      for (let i = 0; i < 10; i++) {
+        const target = shuf[i];
+        const wrong = shuffle(pool.filter(p => p.en !== target.en)).slice(0, 3);
+        bqList.push({
+          jp: target.jp,
+          rom: target.rom,
+          en: target.en,
+          my: target.my,
+          options: shuffle([
+            { en: target.en, my: target.my, ok: true },
+            ...wrong.map(w => ({ en: w.en, my: w.my, ok: false }))
+          ])
+        });
+      }
+      bqCur = 0;
+      bqScore = 0;
+      $('basicsSetup').style.display = 'none';
+      $('basicsResult').style.display = 'none';
+      $('basicsPlay').style.display = 'block';
+      showBasicsQuestion();
+    }
+
+    function showBasicsQuestion() {
+      if (bqCur >= bqList.length) {
+        showBasicsResult(false);
+        return;
+      }
+      bqAnswered = false;
+      const q = bqList[bqCur];
+      $('bqProgressText').textContent = `Question ${bqCur + 1} / ${bqList.length}`;
+      $('bqScoreText').textContent = `Score ${bqScore}`;
+      $('bqProgressBar').style.width = `${((bqCur) / bqList.length) * 100}%`;
+
+      $('bqPrompt').textContent = q.jp;
+      $('bqPromptSub').textContent = q.rom || '';
+      $('bqNextBtn').style.display = 'none';
+
+      const optGrid = $('bqOptions');
+      optGrid.innerHTML = '';
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'quiz-opt-btn';
+        btn.innerHTML = `
+          <span style="font-weight:800; font-size:15px;">${escapeHtml(opt.en)}</span>
+          <span style="font-size:13px; color:var(--muted); font-weight:600; margin-top:2px;">${escapeHtml(opt.my)}</span>
+        `;
+        btn.onclick = () => {
+          if (bqAnswered) return;
+          bqAnswered = true;
+          document.querySelectorAll('#bqOptions .quiz-opt-btn').forEach(b => b.disabled = true);
+          if (opt.ok) {
+            btn.classList.add('correct');
+            bqScore++;
+            $('bqScoreText').textContent = `Score ${bqScore}`;
+          } else {
+            btn.classList.add('wrong');
+            document.querySelectorAll('#bqOptions .quiz-opt-btn').forEach(b => {
+              if (b.textContent.includes(q.en)) b.classList.add('correct');
+            });
+          }
+          $('bqNextBtn').style.display = 'block';
+        };
+        optGrid.appendChild(btn);
+      });
+
+      speakJapanese(q.jp);
+    }
+
+    function showBasicsResult(stopped) {
+      $('basicsPlay').style.display = 'none';
+      $('basicsResult').style.display = 'block';
+      $('bqResultScore').textContent = bqScore;
+      $('bqResultTotal').textContent = bqList.length;
+      $('bqResultMsg').textContent = stopped ? 'Quiz ended early. Keep reviewing!' : 'Great practice session completed!';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderRefTables();
+      initBasicsQuiz();
+    });
   </script>
 </body>
 </html>

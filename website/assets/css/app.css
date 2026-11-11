@@ -1,77 +1,43 @@
 /* ==========================================================================
-   KEN JAPANESE LEARNING — MODERN DESIGN SYSTEM (Option A)
-   Themes: Light & Dark, Smooth Micro-animations, Card System, Glassmorphism
+   KEN JAPANESE LEARNING — REFINED HIGH-CONTRAST LIGHT THEME & MOBILE POLISH
    ========================================================================== */
 
 :root {
-  /* Color Palette - Light Mode */
   --bg: #f8fafc;
   --bg-card: #ffffff;
   --bg-card-subtle: #f1f5f9;
-  --bg-elevated: #ffffff;
-  --ink: #0f172a;
-  --ink-soft: #334155;
-  --muted: #64748b;
-  --faint: #94a3b8;
-  --line: #e2e8f0;
-  --line-soft: #edf2f7;
+  --bg-hover: #f1f5f9;
   
-  /* Brand Accents */
+  /* High contrast ink colors */
+  --ink: #0f172a;
+  --ink-secondary: #1e293b;
+  --muted: #475569;
+  --faint: #64748b;
+  
+  /* Crisp borders & contrast */
+  --line: #cbd5e1;
+  --line-soft: #e2e8f0;
   --primary: #c73e2c;
   --primary-hover: #b33524;
   --primary-faint: rgba(199, 62, 44, 0.08);
-  --primary-glow: rgba(199, 62, 44, 0.25);
   
-  --ok: #10b981;
+  --ok: #059669;
   --ok-bg: #ecfdf5;
-  --ok-line: #a7f3d0;
-  --bad: #ef4444;
+  --ok-line: #10b981;
+  --bad: #dc2626;
   --bad-bg: #fef2f2;
-  --bad-line: #fecaca;
+  --bad-line: #ef4444;
   
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -2px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.12), 0 4px 6px -4px rgba(15, 23, 42, 0.08);
   
   --radius-sm: 8px;
   --radius-md: 12px;
-  --radius-lg: 18px;
+  --radius-lg: 16px;
   --radius-full: 9999px;
   
-  --transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-[data-theme="dark"] {
-  /* Color Palette - Dark Mode */
-  --bg: #0b0f19;
-  --bg-card: #131b2e;
-  --bg-card-subtle: #1a243b;
-  --bg-elevated: #1e293b;
-  --ink: #f8fafc;
-  --ink-soft: #cbd5e1;
-  --muted: #94a3b8;
-  --faint: #64748b;
-  --line: #1e293b;
-  --line-soft: #182234;
-  
-  --primary: #f87171;
-  --primary-hover: #ef4444;
-  --primary-faint: rgba(248, 113, 113, 0.12);
-  --primary-glow: rgba(248, 113, 113, 0.3);
-  
-  --ok: #34d399;
-  --ok-bg: #064e3b;
-  --ok-line: #047857;
-  --bad: #f87171;
-  --bad-bg: #7f1d1d;
-  --bad-line: #b91c1c;
-  
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  --transition: all 0.18s ease-in-out;
 }
 
 * {
@@ -87,7 +53,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .jp {
@@ -104,42 +69,32 @@ a {
   text-decoration: none;
 }
 
-/* ==========================================================================
-   LAYOUT & CONTAINER
-   ========================================================================== */
+/* CONTAINER */
 .app-container {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 0 20px 100px;
+  padding: 0 16px 100px;
 }
 
-/* ==========================================================================
-   NAVIGATION BAR & HEADER
-   ========================================================================== */
+/* HEADER */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  background: rgba(248, 250, 252, 0.85);
-  border-bottom: 1px solid var(--line);
-  transition: var(--transition);
-  margin-bottom: 24px;
-}
-
-[data-theme="dark"] .site-header {
-  background: rgba(11, 15, 25, 0.85);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--line);
+  margin-bottom: 20px;
 }
 
 .header-inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
 }
 
 .brand-logo {
@@ -148,14 +103,14 @@ a {
   gap: 10px;
   font-weight: 800;
   font-size: 17px;
-  letter-spacing: -0.02em;
+  color: var(--ink);
 }
 
 .brand-icon {
   width: 36px;
   height: 36px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--primary) 0%, #ff6b6b 100%);
+  background: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,54 +118,22 @@ a {
   font-size: 19px;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 900;
-  box-shadow: 0 4px 10px var(--primary-glow);
 }
 
 .brand-text .sub {
-  font-size: 11px;
+  font-size: 11.5px;
   color: var(--muted);
-  font-weight: 500;
+  font-weight: 600;
   display: block;
-  margin-top: -3px;
 }
 
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.theme-toggle-btn {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  color: var(--ink);
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-full);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.theme-toggle-btn:hover {
-  border-color: var(--ink);
-  transform: rotate(15deg) scale(1.05);
-}
-
-/* ==========================================================================
-   MULTI-PAGE NAVIGATION TABS
-   ========================================================================== */
+/* TABS NAV */
 .nav-scroller {
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  margin: 0 -20px 24px;
-  padding: 0 20px;
+  margin-bottom: 20px;
 }
-
 .nav-scroller::-webkit-scrollbar {
   display: none;
 }
@@ -233,18 +156,18 @@ a {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 9px 16px;
+  padding: 10px 14px;
   border-radius: var(--radius-md);
   font-size: 13.5px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--muted);
   transition: var(--transition);
   white-space: nowrap;
 }
 
 .nav-item .nav-jp {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 14.5px;
+  font-weight: 800;
   font-family: "Zen Kaku Gothic New", sans-serif;
 }
 
@@ -255,107 +178,77 @@ a {
 
 .nav-item.active {
   background: var(--ink);
-  color: var(--bg);
+  color: #ffffff;
   box-shadow: var(--shadow-sm);
 }
 
 .nav-item.active .nav-jp {
-  color: var(--primary);
+  color: #ff7b72;
 }
 
-[data-theme="dark"] .nav-item.active {
-  background: #ffffff;
-  color: #0f172a;
-}
-
-/* ==========================================================================
-   PAGE HERO / BANNER
-   ========================================================================== */
+/* HERO CARD */
 .hero-card {
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-card-subtle) 100%);
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 2px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 24px;
-  margin-bottom: 24px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
   box-shadow: var(--shadow-sm);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-card::after {
-  content: "";
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 130px;
-  height: 130px;
-  background: radial-gradient(circle, var(--primary-faint) 0%, transparent 70%);
-  border-radius: var(--radius-full);
-  pointer-events: none;
 }
 
 .hero-tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
   background: var(--primary-faint);
   color: var(--primary);
-  border: 1px solid rgba(199, 62, 44, 0.15);
+  border: 1px solid rgba(199, 62, 44, 0.2);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 4px 10px;
+  padding: 3px 10px;
   border-radius: var(--radius-full);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .hero-title {
-  font-size: 24px;
-  font-weight: 800;
+  font-size: 22px;
+  font-weight: 900;
   line-height: 1.25;
   margin-bottom: 6px;
-  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 
 .hero-desc {
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--muted);
-  max-width: 650px;
+  line-height: 1.5;
 }
 
-/* ==========================================================================
-   CARDS & GRIDS
-   ========================================================================== */
+/* HIGH-CONTRAST CARD */
 .card {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 2px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 18px 20px;
   box-shadow: var(--shadow-sm);
-  transition: var(--transition);
+  margin-bottom: 20px;
 }
 
-.card:hover {
-  border-color: rgba(199, 62, 44, 0.3);
-  box-shadow: var(--shadow-md);
-}
-
-/* Kana Grid */
+/* KANA GRIDS */
 .kana-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-  margin-bottom: 16px;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 .kana-card {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 1.5px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 14px 6px 10px;
+  padding: 10px 4px 8px;
   text-align: center;
-  position: relative;
   cursor: pointer;
   transition: var(--transition);
   display: flex;
@@ -365,57 +258,40 @@ a {
 }
 
 .kana-card:hover {
-  transform: translateY(-2px);
   border-color: var(--primary);
-  box-shadow: var(--shadow-md);
   background: var(--primary-faint);
+  transform: translateY(-2px);
 }
 
 .kana-card .char {
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 800;
   line-height: 1.1;
   color: var(--ink);
 }
 
 .kana-card .rom {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 800;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 4px;
-  letter-spacing: 0.05em;
-}
-
-.audio-badge {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  width: 18px;
-  height: 18px;
-  opacity: 0.4;
-  transition: var(--transition);
-}
-
-.kana-card:hover .audio-badge {
-  opacity: 1;
   color: var(--primary);
+  margin-top: 3px;
+  letter-spacing: 0.05em;
 }
 
 .row-label {
   grid-column: 1 / -1;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--faint);
-  margin: 16px 0 4px;
+  margin: 14px 0 4px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-
 .row-label::after {
   content: "";
   flex: 1;
@@ -423,9 +299,7 @@ a {
   background: var(--line);
 }
 
-/* ==========================================================================
-   AUDIO BUTTON / TTS
-   ========================================================================== */
+/* AUDIO BUTTON */
 .audio-btn {
   background: var(--bg-card-subtle);
   border: 1px solid var(--line);
@@ -448,407 +322,492 @@ a {
   transform: scale(1.1);
 }
 
-/* ==========================================================================
-   SEARCH & FILTERS
-   ========================================================================== */
-.search-bar {
-  position: relative;
-  margin-bottom: 16px;
+/* LONG VOWELS */
+.lv-row {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-soft);
+  flex-wrap: wrap;
+}
+.lv-row:last-child {
+  border-bottom: 0;
+}
+.lv-rule {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--primary);
+  flex: none;
+  width: 80px;
+}
+.lv-ex {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.lv-item .lj {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  display: block;
+}
+.lv-item .lr {
+  font-size: 10px;
+  color: var(--primary);
+  font-weight: 800;
+  display: block;
+}
+.lv-item .lm {
+  font-size: 12.5px;
+  color: var(--muted);
+  display: block;
 }
 
-.search-input {
+/* REF TABLES & ROWS (Basics: Numbers, Counters, Time, Dates, Greetings) */
+.rt-row {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 1.2fr 1.5fr auto;
+  gap: 8px 12px;
+  align-items: center;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.rt-row:last-child {
+  border-bottom: 0;
+}
+.rt-row:hover {
+  background: var(--bg-hover);
+}
+.rt-n {
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--ink);
+}
+.rt-j {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.rt-r {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 800;
+}
+.rt-m {
+  font-size: 13.5px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.rt-sub {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 16px 0 6px;
+}
+.rt-note {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+/* ACCORDIONS (Basics & Lessons) */
+.collapse {
+  border: 2px solid var(--line);
+  border-radius: var(--radius-lg);
+  margin-bottom: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.collapse-head {
   width: 100%;
-  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 0;
+  color: var(--ink);
+  text-align: left;
+  padding: 14px 16px;
+  cursor: pointer;
+  min-height: 54px;
+}
+.collapse-head:hover {
+  background: var(--bg-hover);
+}
+.ch-jp {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--primary);
+  flex: none;
+}
+.ch-t {
+  flex: 1;
+  min-width: 0;
+}
+.ch-t .ct {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.ch-t .cd {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 1px;
+}
+.ch-chev {
+  flex: none;
+  font-size: 16px;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+.collapse.open .ch-chev {
+  transform: rotate(180deg);
+}
+.collapse-body {
+  border-top: 1px solid var(--line);
+  padding: 14px 16px 18px;
+  background: #ffffff;
+}
+.collapse-body[hidden] {
+  display: none;
+}
+.collapse.sub {
   border: 1px solid var(--line);
+  margin-bottom: 8px;
+}
+
+/* KOTOBA WORD CARDS */
+.word-card {
+  background: #ffffff;
+  border: 1.5px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 12px 16px 12px 42px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  margin-bottom: 8px;
+}
+.word-card:hover {
+  border-color: var(--ink);
+  box-shadow: var(--shadow-md);
+}
+.word-index {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--faint);
+  min-width: 32px;
+}
+.word-main {
+  width: 190px;
+  flex-shrink: 0;
+}
+.word-jp {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.word-rd {
+  font-size: 12.5px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.word-rom {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.word-meanings {
+  flex: 1;
+  min-width: 0;
+}
+.mean-en {
+  font-weight: 800;
   font-size: 15px;
   color: var(--ink);
-  transition: var(--transition);
-  box-shadow: var(--shadow-sm);
+}
+.mean-my {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 1px;
+}
+.word-tag {
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--line);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
+/* PAGINATION */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.pager-btn {
+  background: #ffffff;
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  min-width: 40px;
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+.pager-btn:hover:not(:disabled) {
+  border-color: var(--ink);
+  background: var(--bg-hover);
+}
+.pager-btn.active {
+  background: var(--ink);
+  color: #ffffff;
+  border-color: var(--ink);
+}
+.pager-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* SEARCH & INPUT */
+.search-bar {
+  position: relative;
+  margin-bottom: 12px;
+}
+.search-input {
+  width: 100%;
+  background: #ffffff;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 11px 14px 11px 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
 .search-input:focus {
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px var(--primary-faint);
+  border-color: var(--ink);
 }
-
 .search-icon {
   position: absolute;
-  left: 14px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--faint);
   pointer-events: none;
 }
-
 .filter-row {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 8px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
-
 .custom-select {
   flex: 1;
-  min-width: 160px;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
+  min-width: 150px;
+  background: #ffffff;
+  border: 2px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 10px 14px;
+  padding: 10px 12px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
   cursor: pointer;
-  transition: var(--transition);
 }
-
 .custom-select:focus {
   outline: none;
-  border-color: var(--primary);
-}
-
-/* ==========================================================================
-   WORD CARD / LIST
-   ========================================================================== */
-.words-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.word-card {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  transition: var(--transition);
-  box-shadow: var(--shadow-sm);
-}
-
-.word-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--line-soft);
-  box-shadow: var(--shadow-md);
-}
-
-.word-index {
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--faint);
-  min-width: 28px;
-}
-
-.word-main {
-  width: 200px;
-  flex-shrink: 0;
-}
-
-.word-jp {
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--ink);
-}
-
-.word-rom {
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.word-rd {
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.word-meanings {
-  flex: 1;
-  min-width: 0;
-}
-
-.mean-en {
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--ink);
-}
-
-.mean-my {
-  font-size: 14px;
-  color: var(--muted);
-  margin-top: 2px;
-}
-
-.word-tag {
-  background: var(--bg-card-subtle);
-  border: 1px solid var(--line);
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-/* ==========================================================================
-   PAGINATION
-   ========================================================================== */
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 28px;
-  flex-wrap: wrap;
-}
-
-.page-btn {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  color: var(--ink);
-  min-width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  font-weight: 600;
-  font-size: 14px;
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.page-btn:hover:not(:disabled) {
-  border-color: var(--ink);
-  background: var(--bg-card-subtle);
-}
-
-.page-btn.active {
-  background: var(--ink);
-  color: var(--bg);
   border-color: var(--ink);
 }
 
-[data-theme="dark"] .page-btn.active {
-  background: #ffffff;
-  color: #0f172a;
-}
-
-.page-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-/* ==========================================================================
-   COLLAPSIBLE ACCORDIONS (Basics & Lessons)
-   ========================================================================== */
-.accordion {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  margin-bottom: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.accordion-header {
-  width: 100%;
-  background: transparent;
+/* BUTTONS */
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
   border: 0;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  text-align: left;
+  transition: var(--transition);
 }
-
-.accordion-header:hover {
-  background: var(--bg-card-subtle);
+.btn-primary:hover {
+  background: var(--primary-hover);
 }
-
-.accordion-title-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.accordion-icon {
-  font-size: 20px;
-  font-family: "Zen Kaku Gothic New", sans-serif;
-  font-weight: 900;
-  color: var(--primary);
-}
-
-.accordion-title {
-  font-size: 16px;
+.btn-outline {
+  background: #ffffff;
+  border: 2px solid var(--line);
+  color: var(--ink);
+  padding: 12px 18px;
+  font-size: 14.5px;
   font-weight: 700;
-  color: var(--ink);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+.btn-outline:hover {
+  border-color: var(--ink);
 }
 
-.accordion-desc {
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.accordion-chevron {
-  color: var(--faint);
-  transition: transform 0.25s ease;
-}
-
-.accordion.open .accordion-chevron {
-  transform: rotate(180deg);
-  color: var(--ink);
-}
-
-.accordion-content {
-  display: none;
-  padding: 16px 20px 20px;
-  border-top: 1px solid var(--line-soft);
-}
-
-.accordion.open .accordion-content {
-  display: block;
-  animation: fadeIn 0.25s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ==========================================================================
-   QUIZ COMPONENT
-   ========================================================================== */
+/* QUIZ STYLES */
 .quiz-wrapper {
-  background: var(--bg-card);
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 2px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 30px;
-  box-shadow: var(--shadow-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
 }
-
 .quiz-progress-track {
   width: 100%;
   height: 6px;
   background: var(--line-soft);
   border-radius: var(--radius-full);
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
-
 .quiz-progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary) 0%, #ff7b72 100%);
+  background: var(--primary);
   width: 0%;
-  transition: width 0.3s ease;
 }
-
 .quiz-prompt-box {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 }
-
 .quiz-prompt {
   font-family: "Zen Kaku Gothic New", sans-serif;
-  font-size: 56px;
+  font-size: 52px;
   font-weight: 900;
-  line-height: 1.1;
   color: var(--ink);
+  line-height: 1.1;
 }
-
 .quiz-sub-prompt {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   color: var(--primary);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 8px;
+  margin-top: 6px;
 }
-
 .quiz-options-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 10px;
 }
-
 .quiz-opt-btn {
-  background: var(--bg-card);
+  background: #ffffff;
   border: 2px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 16px 20px;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 14px 16px;
+  font-size: 15.5px;
+  font-weight: 700;
   cursor: pointer;
-  transition: var(--transition);
   text-align: left;
-  display: flex;
-  flex-direction: column;
 }
-
 .quiz-opt-btn:hover:not(:disabled) {
   border-color: var(--ink);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-sm);
 }
-
 .quiz-opt-btn.correct {
   background: var(--ok-bg) !important;
-  border-color: var(--ok) !important;
+  border-color: var(--ok-line) !important;
   color: var(--ok) !important;
 }
-
 .quiz-opt-btn.wrong {
   background: var(--bad-bg) !important;
-  border-color: var(--bad) !important;
+  border-color: var(--bad-line) !important;
   color: var(--bad) !important;
 }
 
 /* ==========================================================================
-   RESPONSIVENESS (Mobile & Tablet)
+   MOBILE RESPONSIVENESS FIXES (<=600px)
    ========================================================================== */
-@media (max-width: 640px) {
+@media (max-width: 600px) {
   .app-container {
-    padding: 0 14px 80px;
+    padding: 0 10px 80px;
   }
-  
   .header-inner {
-    padding: 10px 14px;
+    padding: 10px 12px;
   }
-  
   .hero-card {
-    padding: 18px 14px;
+    padding: 16px 14px;
   }
-  
   .hero-title {
-    font-size: 20px;
+    font-size: 19px;
+  }
+  .card {
+    padding: 14px 12px;
   }
   
+  /* Kana mobile */
+  .kana-grid {
+    gap: 4px;
+  }
+  .kana-card {
+    padding: 8px 2px 6px;
+  }
+  .kana-card .char {
+    font-size: 22px;
+  }
+  
+  /* Reference table mobile stacked columns */
+  .rt-row {
+    grid-template-columns: 46px 1fr auto;
+    gap: 4px 8px;
+    padding: 8px 2px;
+  }
+  .rt-r {
+    grid-column: 2;
+  }
+  .rt-m {
+    grid-column: 2;
+  }
+  .rt-row .audio-btn {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+  
+  /* Kotoba word card mobile */
   .word-card {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: stretch;
+    gap: 6px;
+    padding: 12px 10px;
   }
-  
   .word-main {
     width: 100%;
   }
+  .word-jp {
+    font-size: 19px;
+  }
   
+  /* Quiz mobile */
   .quiz-options-grid {
     grid-template-columns: 1fr;
   }
-  
   .quiz-prompt {
-    font-size: 42px;
+    font-size: 38px;
+  }
+  .quiz-wrapper {
+    padding: 16px 12px;
   }
 }

@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-  <meta name="color-scheme" content="light dark"/>
   <link rel="icon" href="data:,"/>
   <title>Interactive Quiz (練習問題) — Ken Japanese Learning</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,39 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+Myanmar:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/app.css"/>
   <style>
-    .btn-primary {
-      background: var(--primary);
-      color: #ffffff;
-      border: 0;
-      padding: 14px 24px;
-      font-size: 16px;
-      font-weight: 700;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      width: 100%;
-      transition: var(--transition);
-      box-shadow: 0 4px 12px var(--primary-glow);
-    }
-    .btn-primary:hover {
-      background: var(--primary-hover);
-      transform: translateY(-2px);
-    }
-    .btn-outline {
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      color: var(--ink);
-      padding: 12px 20px;
-      font-size: 15px;
-      font-weight: 600;
-      border-radius: var(--radius-md);
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    .btn-outline:hover {
-      border-color: var(--ink);
-    }
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .form-label {
       display: block;
@@ -52,7 +20,7 @@
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--faint);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .score-badge {
       display: inline-flex;
@@ -61,7 +29,7 @@
       padding: 6px 14px;
       background: var(--bg-card-subtle);
       border-radius: var(--radius-full);
-      font-weight: 700;
+      font-weight: 800;
       font-size: 14px;
     }
   </style>
@@ -78,11 +46,6 @@
           <span class="sub">JLPT N5 & Minna no Nihongo</span>
         </div>
       </a>
-      <div class="header-controls">
-        <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
-          🌙
-        </button>
-      </div>
     </div>
   </header>
 
@@ -109,7 +72,7 @@
 
     <!-- 1. QUIZ SETUP SCREEN -->
     <div id="quizSetupScreen" class="card" style="max-width: 580px; margin: 0 auto;">
-      <h2 style="font-size: 18px; font-weight: 800; margin-bottom: 20px; color: var(--ink);">Customize Your Quiz</h2>
+      <h2 style="font-size: 17px; font-weight: 800; margin-bottom: 18px; color: var(--ink);">Customize Your Quiz</h2>
 
       <div class="form-group">
         <label class="form-label">Quiz Type (問題の種類)</label>
@@ -159,13 +122,13 @@
         </select>
       </div>
 
-      <button class="btn-primary" onclick="startQuizSession()">Start Quiz (開始)</button>
+      <button class="btn-primary" style="width:100%;" onclick="startQuizSession()">Start Quiz (開始) &rarr;</button>
     </div>
 
     <!-- 2. QUIZ PLAY SCREEN -->
     <div id="quizPlayScreen" class="quiz-wrapper" style="display: none; max-width: 680px; margin: 0 auto;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-        <span id="quizCounter" style="font-weight:700; font-size:14px; color:var(--muted);">Question 1 of 10</span>
+        <span id="quizCounter" style="font-weight:700; font-size:13.5px; color:var(--muted);">Question 1 of 10</span>
         <div class="score-badge">
           Score: <span id="currentScore" style="color:var(--primary); font-weight:800;">0</span>
         </div>
@@ -176,11 +139,11 @@
       </div>
 
       <div class="quiz-prompt-box">
-        <div style="font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--faint); margin-bottom:8px;">Prompt</div>
+        <div style="font-size:12px; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--faint); margin-bottom:6px;">Prompt</div>
         <div id="quizPromptChar" class="quiz-prompt">あ</div>
         <div id="quizPromptSub" class="quiz-sub-prompt"></div>
-        <button id="quizSpeakBtn" class="audio-btn" style="margin-top:12px;" onclick="speakCurrentPrompt()" title="Listen Prompt">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+        <button id="quizSpeakBtn" class="audio-btn" style="margin-top:10px;" onclick="speakCurrentPrompt()" title="Listen Prompt">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
         </button>
       </div>
 
@@ -188,22 +151,22 @@
       <div id="quizOptionsGrid" class="quiz-options-grid"></div>
 
       <!-- Bottom Next / Stop Buttons -->
-      <div style="margin-top:24px; display:flex; gap:12px;">
+      <div style="margin-top:20px; display:flex; gap:10px;">
         <button class="btn-outline" style="flex:1;" onclick="stopQuizSession()">End Quiz</button>
         <button id="quizNextBtn" class="btn-primary" style="flex:2; display:none;" onclick="loadNextQuestion()">Next Question &rarr;</button>
       </div>
     </div>
 
     <!-- 3. QUIZ RESULT SCREEN -->
-    <div id="quizResultScreen" class="card" style="display: none; max-width: 580px; margin: 0 auto; text-align: center; padding: 40px 24px;">
-      <div id="resultFace" style="font-size: 54px; margin-bottom: 12px;">🎉</div>
-      <h2 id="resultTitle" style="font-size: 24px; font-weight: 900; margin-bottom: 8px;">Quiz Completed!</h2>
-      <div style="font-size: 48px; font-weight: 900; color: var(--primary); margin: 16px 0;">
+    <div id="quizResultScreen" class="card" style="display: none; max-width: 580px; margin: 0 auto; text-align: center; padding: 36px 20px;">
+      <div id="resultFace" style="font-size: 52px; margin-bottom: 10px;">🎉</div>
+      <h2 id="resultTitle" style="font-size: 22px; font-weight: 900; margin-bottom: 6px;">Quiz Completed!</h2>
+      <div style="font-size: 44px; font-weight: 900; color: var(--primary); margin: 14px 0;">
         <span id="finalScore">0</span> / <span id="finalTotal">10</span>
       </div>
-      <p id="resultMessage" style="color: var(--muted); font-size: 15px; margin-bottom: 28px;">Great job practising! Regular review makes vocabulary permanent.</p>
+      <p id="resultMessage" style="color: var(--muted); font-size: 14.5px; margin-bottom: 24px;">Great job practising! Regular review makes vocabulary permanent.</p>
 
-      <div style="display:flex; gap:12px;">
+      <div style="display:flex; gap:10px;">
         <button class="btn-outline" style="flex:1;" onclick="resetQuiz()">Back to Setup</button>
         <button class="btn-primary" style="flex:1;" onclick="startQuizSession()">Try Again</button>
       </div>
@@ -216,13 +179,11 @@
   <script src="assets/data/topics-data.js"></script>
   <script src="assets/js/common.js"></script>
   <script>
-    // Quiz State
     let quizQuestions = [];
     let currentQIndex = 0;
     let score = 0;
     let isAnswered = false;
 
-    // Build Category options for Kotoba quiz
     function initQuizCategoryOptions() {
       const select = $('quizCategorySelect');
       if (typeof CATS !== 'undefined') {
@@ -249,7 +210,6 @@
       $('kotobaOptions').style.display = type === 'kotoba' ? 'block' : 'none';
     }
 
-    // Build Kana Pool
     function getKanaPool(script) {
       let pool = [];
       KANA_ROWS.forEach(r => {
@@ -280,7 +240,6 @@
             options: allOpts
           });
         } else {
-          // Multi-character word
           let wordChar = '';
           let wordRom = '';
           for (let k = 0; k < level; k++) {
@@ -288,7 +247,6 @@
             wordChar += part.char;
             wordRom += part.rom;
           }
-          // Make plausible distractors
           const distractors = [];
           while (distractors.length < 3) {
             let fakeRom = '';
@@ -354,7 +312,7 @@
 
       for (let i = 0; i < limit; i++) {
         const target = shuffled[i];
-        const wrong = shuffle(pool.filter(w => w.en !== target.en)).slice(0, 3);
+        const wrong = shuffle(pool.filter(p => p.en !== target.en)).slice(0, 3);
         const opts = shuffle([
           { en: target.en, my: target.my, isCorrect: true },
           ...wrong.map(w => ({ en: w.en, my: w.my, isCorrect: false }))
@@ -412,7 +370,6 @@
       $('quizPromptSub').textContent = q.sub || '';
       $('quizNextBtn').style.display = 'none';
 
-      // Render Options
       const grid = $('quizOptionsGrid');
       grid.innerHTML = '';
 
@@ -421,19 +378,18 @@
         btn.className = 'quiz-opt-btn';
 
         if (typeof opt === 'string') {
-          btn.innerHTML = `<span style="font-weight:700;">${escapeHtml(opt)}</span>`;
+          btn.innerHTML = `<span style="font-weight:800;">${escapeHtml(opt)}</span>`;
           btn.onclick = () => onSelectAnswer(btn, opt === q.correct, q.correct);
         } else {
           btn.innerHTML = `
-            <span style="font-weight:700;">${escapeHtml(opt.en)}</span>
-            <span style="font-size:13px; color:var(--muted); margin-top:2px;">${escapeHtml(opt.my)}</span>
+            <span style="font-weight:800;">${escapeHtml(opt.en)}</span>
+            <span style="font-size:13px; color:var(--muted); font-weight:600; margin-top:2px;">${escapeHtml(opt.my)}</span>
           `;
           btn.onclick = () => onSelectAnswer(btn, opt.isCorrect, q.correct);
         }
         grid.appendChild(btn);
       });
 
-      // Auto-speak Japanese prompt
       speakJapanese(q.speak || q.prompt);
     }
 
@@ -455,7 +411,6 @@
         $('currentScore').textContent = score;
       } else {
         btn.classList.add('wrong');
-        // Highlight correct
         allBtns.forEach(b => {
           if (b.textContent.includes(correctVal)) {
             b.classList.add('correct');
