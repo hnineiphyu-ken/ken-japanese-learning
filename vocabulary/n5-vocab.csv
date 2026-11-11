@@ -1,0 +1,717 @@
+category,no,japanese,reading,romaji,english,myanmar
+People,1,私,わたし,watashi,I; me,ကျွန်တော်/ကျွန်မ
+People,2,僕,ぼく,boku,I; me (masculine),ကျွန်တော် (ယောက်ျားသုံး)
+People,3,あなた,あなた,anata,you,မင်း/သင်
+People,4,彼,かれ,kare,he; him; boyfriend,သူ (ယောက်ျား)/ချစ်သူ
+People,5,彼女,かのじょ,kanojo,she; her; girlfriend,သူ (မိန်းမ)/ချစ်သူ
+People,6,皆さん,みなさん,mina-san,everyone,အားလုံး
+People,7,人,ひと,hito,person,လူ
+People,8,方,かた,kata,person (polite),လူ (ယဉ်ကျေးသော)
+People,9,子供,こども,kodomo,child; children,ကလေး
+People,10,男の子,おとこのこ,otoko no ko,boy,ယောက်ျားလေး
+People,11,女の子,おんなのこ,onna no ko,girl,မိန်းကလေး
+People,12,男の人,おとこのひと,otoko no hito,man,ယောက်ျား
+People,13,女の人,おんなのひと,onna no hito,woman,မိန်းမ
+People,14,友達,ともだち,tomodachi,friend,သူငယ်ချင်း
+People,15,先生,せんせい,sensei,teacher,ဆရာ/ဆရာမ
+People,16,学生,がくせい,gakusei,student,ကျောင်းသား
+People,17,生徒,せいと,seito,pupil; student (school),ကျောင်းသား (ကျောင်း)
+People,18,会社員,かいしゃいん,kaishain,company employee,ကုမ္ပဏီဝန်ထမ်း
+People,19,医者,いしゃ,isha,doctor,ဆရာဝန်
+People,20,警官,けいかん,keikan,police officer,ရဲအရာရှိ
+People,21,お客さん,おきゃくさん,okyaku-san,customer; guest,ဧည့်သည်/ဝယ်သူ
+Family,22,家族,かぞく,kazoku,family,မိသားစု
+Family,23,父,ちち,chichi,(my) father,အဖေ (ကိုယ့်)
+Family,24,母,はは,haha,(my) mother,အမေ (ကိုယ့်)
+Family,25,お父さん,おとうさん,otousan,father (someone else's),အဖေ (သူများရဲ့)
+Family,26,お母さん,おかあさん,okaasan,mother (someone else's),အမေ (သူများရဲ့)
+Family,27,兄,あに,ani,(my) older brother,အစ်ကို (ကိုယ့်)
+Family,28,姉,あね,ane,(my) older sister,အစ်မ (ကိုယ့်)
+Family,29,お兄さん,おにいさん,oniisan,older brother (someone else's),အစ်ကို (သူများရဲ့)
+Family,30,お姉さん,おねえさん,oneesan,older sister (someone else's),အစ်မ (သူများရဲ့)
+Family,31,弟,おとうと,otouto,younger brother,ညီ
+Family,32,妹,いもうと,imouto,younger sister,ညီမ
+Family,33,夫,おっと,otto,husband,ခင်ပွန်း
+Family,34,妻,つま,tsuma,wife,ဇနီး
+Family,35,祖父,そふ,sofu,grandfather,အဖိုး
+Family,36,祖母,そぼ,sobo,grandmother,အဖွား
+Family,37,おじいさん,おじいさん,ojiisan,grandfather; old man,အဖိုး/အဖိုးအို
+Family,38,おばあさん,おばあさん,obaasan,grandmother; old woman,အဖွား/အဖွားအို
+Places and Locations,39,学校,がっこう,gakkou,school,ကျောင်း
+Places and Locations,40,大学,だいがく,daigaku,university,တက္ကသိုလ်
+Places and Locations,41,図書館,としょかん,toshokan,library,စာကြည့်တိုက်
+Places and Locations,42,病院,びょういん,byouin,hospital,ဆေးရုံ
+Places and Locations,43,銀行,ぎんこう,ginkou,bank,ဘဏ်
+Places and Locations,44,郵便局,ゆうびんきょく,yuubinkyoku,post office,စာတိုက်
+Places and Locations,45,会社,かいしゃ,kaisha,company; office,ကုမ္ပဏီ/ရုံး
+Places and Locations,46,駅,えき,eki,station,ဘူတာ
+Places and Locations,47,空港,くうこう,kuukou,airport,လေဆိပ်
+Places and Locations,48,駐車場,ちゅうしゃじょう,chuushajou,parking lot,ကားပါကင်
+Places and Locations,49,レストラン,レストラン,resutoran,restaurant,စားသောက်ဆိုင်
+Places and Locations,50,食堂,しょくどう,shokudou,cafeteria; dining hall,စားသောက်ခန်း
+Places and Locations,51,デパート,デパート,depaato,department store,ကုန်တိုက်
+Places and Locations,52,スーパー,スーパー,suupaa,supermarket,စူပါမားကတ်
+Places and Locations,53,店,みせ,mise,shop; store,ဆိုင်
+Places and Locations,54,家,いえ,ie,house; home,အိမ်
+Places and Locations,55,うち,うち,uchi,home; my place,အိမ် (ကိုယ့်အိမ်)
+Places and Locations,56,部屋,へや,heya,room,အခန်း
+Places and Locations,57,台所,だいどころ,daidokoro,kitchen,မီးဖိုခန်း
+Places and Locations,58,お手洗い,おてあらい,otearai,restroom; toilet,အိမ်သာ
+Places and Locations,59,公園,こうえん,kouen,park,ပန်းခြံ
+Places and Locations,60,海,うみ,umi,sea; ocean,ပင်လယ်
+Places and Locations,61,山,やま,yama,mountain,တောင်
+Places and Locations,62,川,かわ,kawa,river,မြစ်
+Places and Locations,63,空,そら,sora,sky,ကောင်းကင်
+Places and Locations,64,国,くに,kuni,country; nation,နိုင်ငံ
+Places and Locations,65,町,まち,machi,town,မြို့
+Places and Locations,66,道,みち,michi,road; street; way,လမ်း
+Places and Locations,67,地図,ちず,chizu,map,မြေပုံ
+Places and Locations,68,外,そと,soto,outside,အပြင်
+Places and Locations,69,中,なか,naka,inside; among,အထဲ
+Places and Locations,70,上,うえ,ue,above; top,အပေါ်
+Places and Locations,71,下,した,shita,below; under,အောက်
+Places and Locations,72,右,みぎ,migi,right side,ညာဘက်
+Places and Locations,73,左,ひだり,hidari,left side,ဘယ်ဘက်
+Places and Locations,74,前,まえ,mae,in front; before,ရှေ့
+Places and Locations,75,後ろ,うしろ,ushiro,behind; back,နောက်
+Places and Locations,76,隣,となり,tonari,next to; neighbor,ကပ်လျက်/အိမ်နီးချင်း
+Places and Locations,77,そば,そば,soba,nearby; beside,အနီး
+Places and Locations,78,近く,ちかく,chikaku,nearby; vicinity,အနီးအနား
+Places and Locations,79,向こう,むこう,mukou,over there; beyond,ဟိုဘက်
+Things (Objects),80,本,ほん,hon,book,စာအုပ်
+Things (Objects),81,雑誌,ざっし,zasshi,magazine,မဂ္ဂဇင်း
+Things (Objects),82,新聞,しんぶん,shinbun,newspaper,သတင်းစာ
+Things (Objects),83,ノート,ノート,nooto,notebook,မှတ်စုစာအုပ်
+Things (Objects),84,紙,かみ,kami,paper,စက္ကူ
+Things (Objects),85,鉛筆,えんぴつ,enpitsu,pencil,ခဲတံ
+Things (Objects),86,ペン,ペン,pen,pen,ဘောပင်
+Things (Objects),87,消しゴム,けしゴム,keshigomu,eraser,ခဲဖျက်
+Things (Objects),88,定規,じょうぎ,jougi,ruler,ပေတံ
+Things (Objects),89,かばん,かばん,kaban,bag; briefcase,အိတ်/လွယ်အိတ်
+Things (Objects),90,財布,さいふ,saifu,wallet,ပိုက်ဆံအိတ်
+Things (Objects),91,鍵,かぎ,kagi,key; lock,သော့
+Things (Objects),92,傘,かさ,kasa,umbrella,ထီး
+Things (Objects),93,めがね,めがね,megane,glasses,မျက်မှန်
+Things (Objects),94,時計,とけい,tokei,watch; clock,နာရီ
+Things (Objects),95,カメラ,カメラ,kamera,camera,ကင်မရာ
+Things (Objects),96,テレビ,テレビ,terebi,television,တီဗီ
+Things (Objects),97,ラジオ,ラジオ,rajio,radio,ရေဒီယို
+Things (Objects),98,電話,でんわ,denwa,telephone,တယ်လီဖုန်း
+Things (Objects),99,携帯電話,けいたいでんわ,keitai denwa,mobile phone,မိုဘိုင်းဖုန်း
+Things (Objects),100,パソコン,パソコン,pasokon,personal computer,ကွန်ပျူတာ
+Things (Objects),101,机,つくえ,tsukue,desk,စာရေးခုံ
+Things (Objects),102,椅子,いす,isu,chair,ထိုင်ခုံ
+Things (Objects),103,テーブル,テーブル,teebu­ru,table,စားပွဲ
+Things (Objects),104,ドア,ドア,doa,door,တံခါး
+Things (Objects),105,窓,まど,mado,window,ပြတင်းပေါက်
+Things (Objects),106,電気,でんき,denki,electricity; light,လျှပ်စစ်/မီး
+Things (Objects),107,エアコン,エアコン,eakon,air conditioner,အဲကွန်း
+Things (Objects),108,写真,しゃしん,shashin,photograph,ဓာတ်ပုံ
+Things (Objects),109,花,はな,hana,flower,ပန်း
+Things (Objects),110,木,き,ki,tree; wood,သစ်ပင်/သစ်သား
+Things (Objects),111,服,ふく,fuku,clothes,အဝတ်အစား
+Things (Objects),112,シャツ,シャツ,shatsu,shirt,ရှပ်အင်္ကျီ
+Things (Objects),113,ズボン,ズボン,zubon,trousers; pants,ဘောင်းဘီ
+Things (Objects),114,スカート,スカート,sukaato,skirt,စကတ်
+Things (Objects),115,くつ,くつ,kutsu,shoes,ဖိနပ်
+Things (Objects),116,くつした,くつした,kutsushita,socks,ခြေအိတ်
+Things (Objects),117,帽子,ぼうし,boushi,hat; cap,ဦးထုပ်
+Things (Objects),118,コート,コート,kooto,coat,ကုတ်အင်္ကျီ
+Things (Objects),119,セーター,セーター,seetaa,sweater,ဆွယ်တာ
+Food and Drink,120,食べ物,たべもの,tabemono,food,အစားအစာ
+Food and Drink,121,飲み物,のみもの,nomimono,drink; beverage,အဖျော်ယမကာ
+Food and Drink,122,ご飯,ごはん,gohan,rice; meal,ထမင်း
+Food and Drink,123,パン,パン,pan,bread,ပေါင်မုန့်
+Food and Drink,124,肉,にく,niku,meat,အသား
+Food and Drink,125,魚,さかな,sakana,fish,ငါး
+Food and Drink,126,野菜,やさい,yasai,vegetables,ဟင်းသီးဟင်းရွက်
+Food and Drink,127,果物,くだもの,kudamono,fruit,သစ်သီး
+Food and Drink,128,たまご,たまご,tamago,egg,ကြက်ဥ
+Food and Drink,129,牛乳,ぎゅうにゅう,gyuunyuu,milk,နွားနို့
+Food and Drink,130,お茶,おちゃ,ocha,tea,လက်ဖက်ရည်
+Food and Drink,131,水,みず,mizu,water,ရေ
+Food and Drink,132,ジュース,ジュース,juusu,juice,ဖျော်ရည်
+Food and Drink,133,コーヒー,コーヒー,koohii,coffee,ကော်ဖီ
+Food and Drink,134,ビール,ビール,biiru,beer,ဘီယာ
+Food and Drink,135,お酒,おさけ,osake,sake; alcohol,အရက်
+Food and Drink,136,りんご,りんご,ringo,apple,ပန်းသီး
+Food and Drink,137,バナナ,バナナ,banana,banana,ငှက်ပျောသီး
+Food and Drink,138,みかん,みかん,mikan,mandarin orange,လိမ္မော်သီး
+Food and Drink,139,すし,すし,sushi,sushi,ဆူရှီ
+Food and Drink,140,そば,そば,soba,buckwheat noodles,ဆိုဘာ (ဂျုံခေါက်ဆွဲ)
+Food and Drink,141,うどん,うどん,udon,udon noodles,အူဒုံ (ခေါက်ဆွဲ)
+Food and Drink,142,ラーメン,ラーメン,raamen,ramen noodles,ရာမင် (ခေါက်ဆွဲ)
+Food and Drink,143,カレー,カレー,karee,curry,ဟင်း
+Food and Drink,144,サンドイッチ,サンドイッチ,sandoitchi,sandwich,အသားညှပ်ပေါင်မုန့်
+Food and Drink,145,ケーキ,ケーキ,keeki,cake,ကိတ်
+Food and Drink,146,アイスクリーム,アイスクリーム,aisukuriimu,ice cream,ရေခဲမုန့်
+Food and Drink,147,砂糖,さとう,satou,sugar,သကြား
+Food and Drink,148,塩,しお,shio,salt,ဆား
+Food and Drink,149,醤油,しょうゆ,shouyu,soy sauce,ပဲငံပြာရည်
+Animals,150,動物,どうぶつ,doubutsu,animal,တိရစ္ဆာန်
+Animals,151,犬,いぬ,inu,dog,ခွေး
+Animals,152,猫,ねこ,neko,cat,ကြောင်
+Animals,153,鳥,とり,tori,bird,ငှက်
+Animals,154,牛,うし,ushi,cow,နွား
+Animals,155,馬,うま,uma,horse,မြင်း
+Animals,156,豚,ぶた,buta,pig,ဝက်
+Transportation,157,電車,でんしゃ,densha,train,ရထား
+Transportation,158,地下鉄,ちかてつ,chikatetsu,subway; metro,မြေအောက်ရထား
+Transportation,159,バス,バス,basu,bus,ဘတ်စ်ကား
+Transportation,160,タクシー,タクシー,takushii,taxi,တက္ကစီ
+Transportation,161,飛行機,ひこうき,hikouki,airplane,လေယာဉ်
+Transportation,162,船,ふね,fune,ship; boat,သင်္ဘော/လှေ
+Transportation,163,自転車,じてんしゃ,jitensha,bicycle,စက်ဘီး
+Transportation,164,車,くるま,kuruma,car; vehicle,ကား
+Transportation,165,バイク,バイク,baiku,motorcycle,ဆိုင်ကယ်
+Nature and Weather,166,天気,てんき,tenki,weather,ရာသီဥတု
+Nature and Weather,167,雨,あめ,ame,rain,မိုး
+Nature and Weather,168,雪,ゆき,yuki,snow,နှင်း
+Nature and Weather,169,風,かぜ,kaze,wind,လေ
+Nature and Weather,170,晴れ,はれ,hare,clear weather; sunny,နေသာသောရာသီ
+Nature and Weather,171,雲,くも,kumo,cloud,တိမ်
+Nature and Weather,172,太陽,たいよう,taiyou,sun,နေ
+Nature and Weather,173,月,つき,tsuki,moon,လ
+Nature and Weather,174,星,ほし,hoshi,star,ကြယ်
+Nature and Weather,175,池,いけ,ike,pond,ရေကန်
+Nature and Weather,176,森,もり,mori,forest,တောအုပ်
+Body Parts,177,体,からだ,karada,body,ကိုယ်ခန္ဓာ
+Body Parts,178,頭,あたま,atama,head,ခေါင်း
+Body Parts,179,顔,かお,kao,face,မျက်နှာ
+Body Parts,180,目,め,me,eye,မျက်လုံး
+Body Parts,181,耳,みみ,mimi,ear,နား
+Body Parts,182,鼻,はな,hana,nose,နှာခေါင်း
+Body Parts,183,口,くち,kuchi,mouth,ပါးစပ်
+Body Parts,184,歯,は,ha,tooth; teeth,သွား
+Body Parts,185,手,て,te,hand,လက်
+Body Parts,186,足,あし,ashi,foot; leg,ခြေထောက်
+Body Parts,187,背,せ,se,height; back,ကျော/အရပ်
+Numbers,188,一,いち,ichi,one,တစ်
+Numbers,189,二,に,ni,two,နှစ်
+Numbers,190,三,さん,san,three,သုံး
+Numbers,191,四,し／よん,shi / yon,four,လေး
+Numbers,192,五,ご,go,five,ငါး
+Numbers,193,六,ろく,roku,six,ခြောက်
+Numbers,194,七,しち／なな,shichi / nana,seven,ခုနစ်
+Numbers,195,八,はち,hachi,eight,ရှစ်
+Numbers,196,九,く／きゅう,ku / kyuu,nine,ကိုး
+Numbers,197,十,じゅう,juu,ten,ဆယ်
+Numbers,198,十一,じゅういち,juuichi,eleven,ဆယ့်တစ်
+Numbers,199,十二,じゅうに,juuni,twelve,ဆယ့်နှစ်
+Numbers,200,二十,にじゅう,nijuu,twenty,နှစ်ဆယ်
+Numbers,201,百,ひゃく,hyaku,one hundred,တစ်ရာ
+Numbers,202,二百,にひゃく,nihyaku,two hundred,နှစ်ရာ
+Numbers,203,三百,さんびゃく,sanbyaku,three hundred,သုံးရာ
+Numbers,204,千,せん,sen,one thousand,တစ်ထောင်
+Numbers,205,万,まん,man,ten thousand,တစ်သောင်း
+Numbers,206,零,れい／ゼロ,rei / zero,zero,သုည
+Numbers,207,何,なん／なに,nan / nani,what; how many,ဘာ/ဘယ်လောက်
+Counters,208,〜つ,〜つ,~tsu,generic counter (1–9 things),ခု (ပစ္စည်းရေတွက်ပုံ)
+Counters,209,〜本,〜ほん/ぼん/ぽん,~hon/bon/pon,"long thin objects (pens, bottles)",ချောင်း (ရှည်သောပစ္စည်း)
+Counters,210,〜枚,〜まい,~mai,"flat thin objects (paper, plates)",ရွက်/ချပ် (ပြားသောပစ္စည်း)
+Counters,211,〜冊,〜さつ,~satsu,"bound objects (books, notebooks)",အုပ် (စာအုပ်)
+Counters,212,〜匹,〜ひき/びき/ぴき,~hiki/biki/piki,small animals,ကောင် (တိရစ္ဆာန်ငယ်)
+Counters,213,〜頭,〜とう,~tou,large animals,ကောင် (တိရစ္ဆာန်ကြီး)
+Counters,214,〜羽,〜わ/は/ば,~wa/ha/ba,birds; rabbits,ကောင် (ငှက်/ယုန်)
+Counters,215,〜台,〜だい,~dai,machines; vehicles,စီး (စက်/ယာဉ်)
+Counters,216,〜杯,〜はい/ばい/ぱい,~hai/bai/pai,cups; glasses; bowls,ခွက် (ခွက်/ပန်းကန်)
+Counters,217,〜人,〜にん/り,~nin/ri,people,ယောက် (လူ)
+Counters,218,〜個,〜こ,~ko,small round objects,လုံး (အဝိုင်းပစ္စည်း)
+Counters,219,〜階,〜かい/がい,~kai/gai,floors of a building,ထပ် (အဆောက်အအုံ)
+Counters,220,〜番,〜ばん,~ban,number in a sequence,နံပါတ်
+Counters,221,〜番目,〜ばんめ,~banme,ordinal number,နံပါတ်မြောက်
+Counters,222,ひとつ,ひとつ,hitotsu,one (thing),တစ်ခု
+Counters,223,ふたつ,ふたつ,futatsu,two (things),နှစ်ခု
+Counters,224,みっつ,みっつ,mittsu,three (things),သုံးခု
+Counters,225,よっつ,よっつ,yottsu,four (things),လေးခု
+Counters,226,いつつ,いつつ,itsutsu,five (things),ငါးခု
+Counters,227,むっつ,むっつ,muttsu,six (things),ခြောက်ခု
+Counters,228,ななつ,ななつ,nanatsu,seven (things),ခုနစ်ခု
+Counters,229,やっつ,やっつ,yattsu,eight (things),ရှစ်ခု
+Counters,230,ここのつ,ここのつ,kokonotsu,nine (things),ကိုးခု
+Counters,231,とお,とお,too,ten (things),ဆယ်ခု
+Time Words,232,今,いま,ima,now,အခု
+Time Words,233,今日,きょう,kyou,today,ဒီနေ့
+Time Words,234,明日,あした,ashita,tomorrow,မနက်ဖြန်
+Time Words,235,昨日,きのう,kinou,yesterday,မနေ့က
+Time Words,236,明後日,あさって,asatte,the day after tomorrow,သန်ဘက်ခါ
+Time Words,237,一昨日,おととい,ototoi,the day before yesterday,တဘက်ခါ
+Time Words,238,今週,こんしゅう,konshuu,this week,ဒီအပတ်
+Time Words,239,来週,らいしゅう,raishuu,next week,နောက်အပတ်
+Time Words,240,先週,せんしゅう,senshuu,last week,ပြီးခဲ့တဲ့အပတ်
+Time Words,241,今月,こんげつ,kongetsu,this month,ဒီလ
+Time Words,242,来月,らいげつ,raigetsu,next month,နောက်လ
+Time Words,243,先月,せんげつ,sengetsu,last month,ပြီးခဲ့တဲ့လ
+Time Words,244,今年,ことし,kotoshi,this year,ဒီနှစ်
+Time Words,245,来年,らいねん,rainen,next year,နောက်နှစ်
+Time Words,246,去年,きょねん,kyonen,last year,မနှစ်က
+Time Words,247,朝,あさ,asa,morning,မနက်
+Time Words,248,昼,ひる,hiru,daytime; noon,နေ့လည်
+Time Words,249,夜,よる,yoru,evening; night,ည
+Time Words,250,午前,ごぜん,gozen,AM; morning,မနက်ပိုင်း
+Time Words,251,午後,ごご,gogo,PM; afternoon,နေ့လယ်ပိုင်း
+Time Words,252,朝ご飯,あさごはん,asagohan,breakfast,မနက်စာ
+Time Words,253,昼ご飯,ひるごはん,hirugohan,lunch,နေ့လည်စာ
+Time Words,254,夕ご飯,ゆうごはん,yuugohan,dinner,ညစာ
+Time Words,255,〜時,〜じ,~ji,o'clock,နာရီ
+Time Words,256,〜分,〜ふん/ぷん,~fun/pun,minutes,မိနစ်
+Time Words,257,〜秒,〜びょう,~byou,seconds,စက္ကန့်
+Time Words,258,〜月,〜がつ,~gatsu,month (name),လ (လအမည်)
+Time Words,259,〜日,〜にち/か,~nichi/ka,day of month,ရက်
+Time Words,260,〜年,〜ねん,~nen,year,နှစ်
+Time Words,261,〜曜日,〜ようび,~youbi,day of the week,ရက် (အပတ်ရက်)
+Time Words,262,月曜日,げつようび,getsu-youbi,Monday,တနင်္လာနေ့
+Time Words,263,火曜日,かようび,ka-youbi,Tuesday,အင်္ဂါနေ့
+Time Words,264,水曜日,すいようび,sui-youbi,Wednesday,ဗုဒ္ဓဟူးနေ့
+Time Words,265,木曜日,もくようび,moku-youbi,Thursday,ကြာသပတေးနေ့
+Time Words,266,金曜日,きんようび,kin-youbi,Friday,သောကြာနေ့
+Time Words,267,土曜日,どようび,do-youbi,Saturday,စနေနေ့
+Time Words,268,日曜日,にちようび,nichi-youbi,Sunday,တနင်္ဂနွေနေ့
+Time Words,269,一月,いちがつ,ichi-gatsu,January,ဇန်နဝါရီ
+Time Words,270,二月,にがつ,ni-gatsu,February,ဖေဖော်ဝါရီ
+Time Words,271,三月,さんがつ,san-gatsu,March,မတ်
+Time Words,272,四月,しがつ,shi-gatsu,April,ဧပြီ
+Time Words,273,五月,ごがつ,go-gatsu,May,မေ
+Time Words,274,六月,ろくがつ,roku-gatsu,June,ဇွန်
+Time Words,275,七月,しちがつ,shichi-gatsu,July,ဇူလိုင်
+Time Words,276,八月,はちがつ,hachi-gatsu,August,သြဂုတ်
+Time Words,277,九月,くがつ,ku-gatsu,September,စက်တင်ဘာ
+Time Words,278,十月,じゅうがつ,juu-gatsu,October,အောက်တိုဘာ
+Time Words,279,十一月,じゅういちがつ,juuichi-gatsu,November,နိုဝင်ဘာ
+Time Words,280,十二月,じゅうにがつ,juuni-gatsu,December,ဒီဇင်ဘာ
+Time Words,281,週末,しゅうまつ,shuumatsu,weekend,ပိတ်ရက်
+Time Words,282,毎日,まいにち,mainichi,every day,နေ့တိုင်း
+Time Words,283,毎朝,まいあさ,maiasa,every morning,မနက်တိုင်း
+Time Words,284,毎週,まいしゅう,maishuu,every week,အပတ်တိုင်း
+Time Words,285,毎月,まいつき,maitsuki,every month,လတိုင်း
+Time Words,286,毎年,まいとし,maitoshi,every year,နှစ်တိုင်း
+Time Words,287,時間,じかん,jikan,time; hour,အချိန်
+Time Words,288,〜時間,〜じかん,~jikan,~ hours (duration),နာရီ (ကြာချိန်)
+Time Words,289,〜週間,〜しゅうかん,~shuukan,~ weeks (duration),အပတ် (ကြာချိန်)
+Time Words,290,〜ヶ月,〜かげつ,~kagetsu,~ months (duration),လ (ကြာချိန်)
+Time Words,291,〜年間,〜ねんかん,~nenkan,~ years (duration),နှစ် (ကြာချိန်)
+Time Words,292,半,はん,han,half,တစ်ဝက်
+Time Words,293,ごろ,ごろ,goro,around (time); about,ခန့်/ဝန်းကျင်
+Time Words,294,まだ,まだ,mada,still; not yet,သေးတယ်/မသေးဘူး
+Time Words,295,もう,もう,mou,already; anymore,ပြီးပြီ
+Time Words,296,はじめ,はじめ,hajime,beginning,အစ
+Time Words,297,おわり,おわり,owari,end; finish,အဆုံး
+School and Studies,298,勉強,べんきょう,benkyou,study; studies,စာကျက်ခြင်း
+School and Studies,299,授業,じゅぎょう,jugyou,class; lesson,သင်ခန်းစာ
+School and Studies,300,宿題,しゅくだい,shukudai,homework,အိမ်စာ
+School and Studies,301,試験,しけん,shiken,exam; test,စာမေးပွဲ
+School and Studies,302,教室,きょうしつ,kyoushitsu,classroom,စာသင်ခန်း
+School and Studies,303,国語,こくご,kokugo,Japanese language (subject),ဂျပန်စာ (ဘာသာရပ်)
+School and Studies,304,英語,えいご,eigo,English language,အင်္ဂလိပ်စာ
+School and Studies,305,日本語,にほんご,nihongo,Japanese language,ဂျပန်စာ
+School and Studies,306,数学,すうがく,suugaku,mathematics,သင်္ချာ
+School and Studies,307,科学,かがく,kagaku,science,သိပ္ပံ
+School and Studies,308,音楽,おんがく,ongaku,music,ဂီတ
+School and Studies,309,体育,たいいく,taiiku,physical education,ကာယပညာ
+School and Studies,310,言葉,ことば,kotoba,word; language; speech,စကားလုံး/ဘာသာ
+School and Studies,311,文字,もじ,moji,character; letter,စာလုံး
+School and Studies,312,漢字,かんじ,kanji,kanji (Chinese characters),ခန်းဂျီး
+School and Studies,313,ひらがな,ひらがな,hiragana,hiragana script,ဟိရဂန
+School and Studies,314,カタカナ,カタカナ,katakana,katakana script,ခတခန
+Hobbies and Activities,315,趣味,しゅみ,shumi,hobby; interest,ဝါသနာ
+Hobbies and Activities,316,映画,えいが,eiga,movie; film,ရုပ်ရှင်
+Hobbies and Activities,317,歌,うた,uta,song; singing,သီချင်း
+Hobbies and Activities,318,絵,え,e,picture; painting,ပန်းချီ/ပုံ
+Hobbies and Activities,319,旅行,りょこう,ryokou,travel; trip,ခရီးသွားခြင်း
+Hobbies and Activities,320,運動,うんどう,undou,exercise; sports,လေ့ကျင့်ခန်း/အားကစား
+Hobbies and Activities,321,スポーツ,スポーツ,supootsu,sport,အားကစား
+Hobbies and Activities,322,サッカー,サッカー,sakkaa,soccer; football,ဘောလုံး
+Hobbies and Activities,323,野球,やきゅう,yakyuu,baseball,ဘေ့စ်ဘော
+Hobbies and Activities,324,テニス,テニス,tenisu,tennis,တင်းနစ်
+Hobbies and Activities,325,水泳,すいえい,suiei,swimming,ရေကူးခြင်း
+Hobbies and Activities,326,買い物,かいもの,kaimono,shopping,ဈေးဝယ်ခြင်း
+Hobbies and Activities,327,料理,りょうり,ryouri,cooking; cuisine,ဟင်းချက်ခြင်း
+Hobbies and Activities,328,ゲーム,ゲーム,geemu,game,ဂိမ်း
+Hobbies and Activities,329,読書,どくしょ,dokusho,reading (books),စာဖတ်ခြင်း
+Hobbies and Activities,330,散歩,さんぽ,sanpo,walk; stroll,လမ်းလျှောက်ခြင်း
+Hobbies and Activities,331,パーティー,パーティー,paatii,party,ပါတီ
+Money & Shopping,332,お金,おかね,okane,money,ပိုက်ဆံ
+Money & Shopping,333,円,えん,en,yen (currency),ယန်း
+Money & Shopping,334,値段,ねだん,nedan,price,စျေးနှုန်း
+Money & Shopping,335,〜円,〜えん,~en,~ yen,ယန်း
+Money & Shopping,336,おつり,おつり,otsuri,change (money returned),ပြန်အမ်းငွေ
+Money & Shopping,337,レシート,レシート,reshiito,receipt,ငွေလက်ခံဖြတ်ပိုင်း
+Money & Shopping,338,品物,しなもの,shinamono,goods; article,ပစ္စည်း
+Money & Shopping,339,プレゼント,プレゼント,purezento,present; gift,လက်ဆောင်
+Health and Body,340,病気,びょうき,byouki,illness; sickness,ရောဂါ/နေမကောင်း
+Health and Body,341,薬,くすり,kusuri,medicine,ဆေး
+Health and Body,342,熱,ねつ,netsu,fever; temperature,အဖျား/အပူချိန်
+Health and Body,343,痛み,いたみ,itami,pain,နာကျင်မှု
+Health and Body,344,元気,げんき,genki,healthy; energetic; well,ကျန်းမာ/လန်းဆန်း
+Verbs Group 1,345,会う,会って / 会った,au,to meet,တွေ့သည်
+Verbs Group 1,346,歩く,歩いて / 歩いた,aruku,to walk,လမ်းလျှောက်သည်
+Verbs Group 1,347,遊ぶ,遊んで / 遊んだ,asobu,to play; to have fun,ကစားသည်/ပျော်သည်
+Verbs Group 1,348,洗う,洗って / 洗った,arau,to wash,ဆေးသည်
+Verbs Group 1,349,言う,言って / 言った,iu,to say,ပြောသည်
+Verbs Group 1,350,急ぐ,急いで / 急いだ,isogu,to hurry,အလျင်လိုသည်
+Verbs Group 1,351,行く,行って / 行った,iku,to go,သွားသည်
+Verbs Group 1,352,入る,入って / 入った,hairu,to enter; to go in,ဝင်သည်
+Verbs Group 1,353,起こす,起こして / 起こした,okosu,to wake (someone) up,နှိုးသည်
+Verbs Group 1,354,送る,送って / 送った,okuru,to send; to see off,ပို့သည်/လိုက်ပို့သည်
+Verbs Group 1,355,教える,教えて / 教えた,oshieru,to teach; to tell,သင်ပေးသည်
+Verbs Group 1,356,怒る,怒って / 怒った,okoru,to get angry,စိတ်ဆိုးသည်
+Verbs Group 1,357,思う,思って / 思った,omou,to think; to feel,ထင်သည်/တွေးသည်
+Verbs Group 1,358,泳ぐ,泳いで / 泳いだ,oyogu,to swim,ရေကူးသည်
+Verbs Group 1,359,終わる,終わって / 終わった,owaru,to end; to finish,ပြီးဆုံးသည်
+Verbs Group 1,360,買う,買って / 買った,kau,to buy,ဝယ်သည်
+Verbs Group 1,361,帰る,帰って / 帰った,kaeru,to return (home),ပြန်သည် (အိမ်)
+Verbs Group 1,362,書く,書いて / 書いた,kaku,to write,ရေးသည်
+Verbs Group 1,363,貸す,貸して / 貸した,kasu,to lend,ချေးငှားပေးသည်
+Verbs Group 1,364,聞く,聞いて / 聞いた,kiku,to listen; to hear; to ask,နားထောင်သည်/မေးသည်
+Verbs Group 1,365,切る,切って / 切った,kiru,to cut,ဖြတ်သည်
+Verbs Group 1,366,消す,消して / 消した,kesu,to turn off; to erase,ပိတ်သည်/ဖျက်သည်
+Verbs Group 1,367,降る,降って / 降った,furu,to fall (rain/snow),ရွာသည် (မိုး/နှင်း)
+Verbs Group 1,368,住む,住んで / 住んだ,sumu,to live; to reside,နေထိုင်သည်
+Verbs Group 1,369,座る,座って / 座った,suwaru,to sit (down),ထိုင်သည်
+Verbs Group 1,370,死ぬ,死んで / 死んだ,shinu,to die,သေသည်
+Verbs Group 1,371,知る,知って / 知った,shiru,to come to know,သိသည်
+Verbs Group 1,372,吸う,吸って / 吸った,suu,to smoke; to inhale,ရှူသည်/ဆေးလိပ်သောက်သည်
+Verbs Group 1,373,出す,出して / 出した,dasu,to take out; to submit,ထုတ်သည်/တင်ပြသည်
+Verbs Group 1,374,立つ,立って / 立った,tatsu,to stand,မတ်တပ်ရပ်သည်
+Verbs Group 1,375,使う,使って / 使った,tsukau,to use,သုံးသည်
+Verbs Group 1,376,作る,作って / 作った,tsukuru,to make; to create,လုပ်သည်/ဖန်တီးသည်
+Verbs Group 1,377,手伝う,手伝って / 手伝った,tetsudau,to help; to assist,ကူညီသည်
+Verbs Group 1,378,飛ぶ,飛んで / 飛んだ,tobu,to fly; to jump,ပျံသည်/ခုန်သည်
+Verbs Group 1,379,泊まる,泊まって / 泊まった,tomaru,to stay (overnight),တည်းခိုသည် (ညအိပ်)
+Verbs Group 1,380,取る,取って / 取った,toru,to take; to get,ယူသည်
+Verbs Group 1,381,乗る,乗って / 乗った,noru,to ride; to get on,စီးသည်
+Verbs Group 1,382,飲む,飲んで / 飲んだ,nomu,to drink,သောက်သည်
+Verbs Group 1,383,話す,話して / 話した,hanasu,to speak,ပြောသည်
+Verbs Group 1,384,払う,払って / 払った,harau,to pay,ပေးချေသည်
+Verbs Group 1,385,引く,引いて / 引いた,hiku,to pull; to look up,ဆွဲသည်/ရှာသည်
+Verbs Group 1,386,弾く,弾いて / 弾いた,hiku,to play (instrument),တီးခတ်သည်
+Verbs Group 1,387,吹く,吹いて / 吹いた,fuku,to blow,မှုတ်သည်
+Verbs Group 1,388,待つ,待って / 待った,matsu,to wait,စောင့်သည်
+Verbs Group 1,389,持つ,持って / 持った,motsu,to hold; to carry,ကိုင်သည်/သယ်သည်
+Verbs Group 1,390,もらう,もらって / もらった,morau,to receive,ရရှိသည်
+Verbs Group 1,391,やる,やって / やった,yaru,to do (casual),လုပ်သည် (အရပ်သုံး)
+Verbs Group 1,392,読む,読んで / 読んだ,yomu,to read,ဖတ်သည်
+Verbs Group 1,393,呼ぶ,呼んで / 呼んだ,yobu,to call; to invite,ခေါ်သည်/ဖိတ်သည်
+Verbs Group 1,394,分かる,分かって / 分かった,wakaru,to understand,နားလည်သည်
+Verbs Group 1,395,渡す,渡して / 渡した,watasu,to hand over; to pass,ပေးသည်/လွှဲပေးသည်
+Verbs Group 1,396,渡る,渡って / 渡った,wataru,to cross (a road/bridge),ဖြတ်ကူးသည်
+Verbs Group 2,397,起きる,起きて / 起きた,okiru,to wake up; to get up,ထသည်/နိုးထသည်
+Verbs Group 2,398,落ちる,落ちて / 落ちた,ochiru,to fall; to drop,ကျသည်
+Verbs Group 2,399,覚える,覚えて / 覚えた,oboeru,to memorize; to remember,မှတ်မိသည်
+Verbs Group 2,400,降りる,降りて / 降りた,oriru,to get off (vehicle),ဆင်းသည် (ယာဉ်ပေါ်မှ)
+Verbs Group 2,401,開ける,開けて / 開けた,akeru,to open,ဖွင့်သည်
+Verbs Group 2,402,上げる,上げて / 上げた,ageru,to give; to raise,ပေးသည်/မြှောက်သည်
+Verbs Group 2,403,集める,集めて / 集めた,atsumeru,to collect; to gather,စုဆောင်းသည်
+Verbs Group 2,404,いる,いて / いた,iru,to exist (animate),ရှိသည် (သက်ရှိ)
+Verbs Group 2,405,生まれる,生まれて / 生まれた,umareru,to be born,မွေးဖွားသည်
+Verbs Group 2,406,考える,考えて / 考えた,kangaeru,to think; to consider,စဉ်းစားသည်
+Verbs Group 2,407,食べる,食べて / 食べた,taberu,to eat,စားသည်
+Verbs Group 2,408,出かける,出かけて / 出かけた,dekakeru,to go out,အပြင်ထွက်သည်
+Verbs Group 2,409,出る,出て / 出た,deru,to leave; to go out; to come out,ထွက်သည်
+Verbs Group 2,410,止める,止めて / 止めた,tomeru,to stop (something),ရပ်သည်
+Verbs Group 2,411,閉める,閉めて / 閉めた,shimeru,to close (a door),ပိတ်သည်
+Verbs Group 2,412,着る,着て / 着た,kiru,to wear (upper body),ဝတ်သည်
+Verbs Group 2,413,見る,見て / 見た,miru,to see; to watch; to look,ကြည့်သည်
+Verbs Group 2,414,見せる,見せて / 見せた,miseru,to show,ပြသည်
+Verbs Group 2,415,迎える,迎えて / 迎えた,mukaeru,to welcome; to meet,ကြိုဆိုသည်/သွားကြိုသည်
+Verbs Group 2,416,もらえる,もらえて / もらえた,moraeru,can receive,ရနိုင်သည်
+Verbs Group 2,417,やめる,やめて / やめた,yameru,to quit; to stop (doing),ရပ်သည်/စွန့်သည်
+Verbs Group 2,418,忘れる,忘れて / 忘れた,wasureru,to forget,မေ့သည်
+Verbs Irregular,419,する,して / した,suru,to do,လုပ်သည်
+Verbs Irregular,420,勉強する,勉強して / 勉強した,benkyou suru,to study,စာကျက်သည်
+Verbs Irregular,421,仕事する,仕事して / 仕事した,shigoto suru,to work,အလုပ်လုပ်သည်
+Verbs Irregular,422,電話する,電話して / 電話した,denwa suru,to phone,ဖုန်းဆက်သည်
+Verbs Irregular,423,旅行する,旅行して / 旅行した,ryokou suru,to travel,ခရီးသွားသည်
+Verbs Irregular,424,運動する,運動して / 運動した,undou suru,to exercise,လေ့ကျင့်ခန်းလုပ်သည်
+Verbs Irregular,425,料理する,料理して / 料理した,ryouri suru,to cook,ဟင်းချက်သည်
+Verbs Irregular,426,散歩する,散歩して / 散歩した,sanpo suru,to take a walk,လမ်းလျှောက်သည်
+Verbs Irregular,427,買い物する,買い物して / 買い物した,kaimono suru,to go shopping,ဈေးဝယ်သည်
+Verbs Irregular,428,来る,来て / 来た,kuru,to come,လာသည်
+い-Adjectives,429,大きい,おおきい,ookii,big; large,ကြီးသည်
+い-Adjectives,430,小さい,ちいさい,chiisai,small; little,သေးသည်
+い-Adjectives,431,長い,ながい,nagai,long,ရှည်သည်
+い-Adjectives,432,短い,みじかい,mijikai,short,တိုသည်
+い-Adjectives,433,高い,たかい,takai,expensive; tall; high,စျေးကြီးသည်/မြင့်သည်
+い-Adjectives,434,安い,やすい,yasui,cheap; inexpensive,စျေးပေါသည်
+い-Adjectives,435,低い,ひくい,hikui,low; short (height),နိမ့်သည်
+い-Adjectives,436,新しい,あたらしい,atarashii,new,အသစ်
+い-Adjectives,437,古い,ふるい,furui,old (objects),ဟောင်း
+い-Adjectives,438,良い/いい,よい/いい,yoi / ii,good,ကောင်းသည်
+い-Adjectives,439,悪い,わるい,warui,bad,ဆိုးသည်
+い-Adjectives,440,多い,おおい,ooi,many; a lot,များသည်
+い-Adjectives,441,少ない,すくない,sukunai,few; little,နည်းသည်
+い-Adjectives,442,難しい,むずかしい,muzukashii,difficult; hard,ခက်သည်
+い-Adjectives,443,易しい,やさしい,yasashii,easy,လွယ်သည်
+い-Adjectives,444,面白い,おもしろい,omoshiroi,interesting; funny,စိတ်ဝင်စားစရာ/ရယ်စရာ
+い-Adjectives,445,つまらない,つまらない,tsumaranai,boring; uninteresting,ပျင်းစရာ
+い-Adjectives,446,忙しい,いそがしい,isogashii,busy,အလုပ်များသည်
+い-Adjectives,447,寂しい,さびしい,sabishii,lonely,အထီးကျန်သည်
+い-Adjectives,448,嬉しい,うれしい,ureshii,happy; glad,ဝမ်းသာသည်
+い-Adjectives,449,悲しい,かなしい,kanashii,sad,ဝမ်းနည်းသည်
+い-Adjectives,450,怖い,こわい,kowai,scary; frightening,ကြောက်စရာ
+い-Adjectives,451,痛い,いたい,itai,painful; hurts,နာသည်
+い-Adjectives,452,暑い,あつい,atsui,hot (weather/temperature),ပူသည် (ရာသီ)
+い-Adjectives,453,寒い,さむい,samui,cold (weather),အေးသည် (ရာသီ)
+い-Adjectives,454,温かい,あたたかい,atatakai,warm,နွေးသည်
+い-Adjectives,455,涼しい,すずしい,suzushii,cool; refreshing,အေးမြသည်
+い-Adjectives,456,熱い,あつい,atsui,hot (to the touch),ပူသည် (ထိတွေ့)
+い-Adjectives,457,冷たい,つめたい,tsumetai,cold (to the touch),အေးသည် (ထိတွေ့)
+い-Adjectives,458,明るい,あかるい,akarui,bright; cheerful,လင်းသည်/ရွှင်လန်းသည်
+い-Adjectives,459,暗い,くらい,kurai,dark; gloomy,မှောင်သည်
+い-Adjectives,460,遠い,とおい,tooi,far; distant,ဝေးသည်
+い-Adjectives,461,近い,ちかい,chikai,near; close,နီးသည်
+い-Adjectives,462,速い,はやい,hayai,fast; quick,မြန်သည်
+い-Adjectives,463,遅い,おそい,osoi,slow; late,နှေးသည်/နောက်ကျသည်
+い-Adjectives,464,早い,はやい,hayai,early,စောသည်
+い-Adjectives,465,広い,ひろい,hiroi,wide; spacious,ကျယ်သည်
+い-Adjectives,466,狭い,せまい,semai,narrow; cramped,ကျဉ်းသည်
+い-Adjectives,467,重い,おもい,omoi,heavy,လေးသည်
+い-Adjectives,468,軽い,かるい,karui,light (weight),ပေါ့သည်
+い-Adjectives,469,強い,つよい,tsuyoi,strong,သန်မာသည်
+い-Adjectives,470,弱い,よわい,yowai,weak,အားနည်းသည်
+い-Adjectives,471,丸い,まるい,marui,round; circular,လုံးသည်
+い-Adjectives,472,四角い,しかくい,shikakui,square; rectangular,လေးထောင့်ကျသည်
+い-Adjectives,473,白い,しろい,shiroi,white,ဖြူသည်
+い-Adjectives,474,黒い,くろい,kuroi,black,မည်းသည်
+い-Adjectives,475,赤い,あかい,akai,red,နီသည်
+い-Adjectives,476,青い,あおい,aoi,blue; green (nature),ပြာသည်/စိမ်းသည်
+い-Adjectives,477,黄色い,きいろい,kiiroi,yellow,ဝါသည်
+い-Adjectives,478,正しい,ただしい,tadashii,correct; right,မှန်သည်
+い-Adjectives,479,欲しい,ほしい,hoshii,want (something); desirable,လိုချင်သည်
+い-Adjectives,480,甘い,あまい,amai,sweet,ချိုသည်
+い-Adjectives,481,辛い,からい,karai,spicy; hot (taste),စပ်သည်
+い-Adjectives,482,塩辛い,しおからい,shiokarai,salty,ငန်သည်
+い-Adjectives,483,苦い,にがい,nigai,bitter,ခါးသည်
+い-Adjectives,484,酸っぱい,すっぱい,suppai,sour,ချဉ်သည်
+い-Adjectives,485,美味しい,おいしい,oishii,delicious; tasty,အရသာရှိသည်
+い-Adjectives,486,まずい,まずい,mazui,bad-tasting; unpleasant,အရသာမကောင်းဘူး
+い-Adjectives,487,若い,わかい,wakai,young,ငယ်သည်
+な-Adjectives,488,好き,すき,suki,liked; fond of,ကြိုက်သည်
+な-Adjectives,489,嫌い,きらい,kirai,disliked; hated,မကြိုက်ဘူး
+な-Adjectives,490,得意,とくい,tokui,good at; one's strong point,တော်သည်/အားသာချက်
+な-Adjectives,491,苦手,にがて,nigate,not good at; weak point,မတော်ဘူး/အားနည်းချက်
+な-Adjectives,492,大切,たいせつ,taisetsu,important; precious,အရေးကြီးသည်/တန်ဖိုးရှိသည်
+な-Adjectives,493,大事,だいじ,daiji,important; serious,အရေးကြီးသည်
+な-Adjectives,494,大丈夫,だいじょうぶ,daijoubu,all right; okay,အဆင်ပြေသည်
+な-Adjectives,495,有名,ゆうめい,yuumei,famous,ကျော်ကြားသည်
+な-Adjectives,496,賑やか,にぎやか,nigiyaka,lively; bustling,စည်ကားသည်
+な-Adjectives,497,静か,しずか,shizuka,quiet; calm,တိတ်ဆိတ်သည်
+な-Adjectives,498,綺麗,きれい,kirei,pretty; clean,လှသည်/သန့်သည်
+な-Adjectives,499,便利,べんり,benri,convenient; handy,အဆင်ပြေသည်
+な-Adjectives,500,不便,ふべん,fuben,inconvenient,အဆင်မပြေဘူး
+な-Adjectives,501,親切,しんせつ,shinsetsu,kind; helpful,ကြင်နာသည်
+な-Adjectives,502,丁寧,ていねい,teinei,polite; careful,ယဉ်ကျေးသည်/ဂရုတစိုက်လုပ်သည်
+な-Adjectives,503,真面目,まじめ,majime,serious; diligent,လေးနက်သည်/ကြိုးစားသည်
+な-Adjectives,504,暇,ひま,hima,free time; not busy,အားလပ်သည်
+な-Adjectives,505,上手,じょうず,jouzu,skillful; good at,တော်သည်
+な-Adjectives,506,下手,へた,heta,unskillful; bad at,မတော်ဘူး
+な-Adjectives,507,素直,すなお,sunao,obedient; gentle,လိမ္မာသည်/ရိုးသားသည်
+な-Adjectives,508,色々,いろいろ,iroiro,various; diverse,အမျိုးမျိုး
+な-Adjectives,509,特別,とくべつ,tokubetsu,special,အထူး
+な-Adjectives,510,必要,ひつよう,hitsuyou,necessary; needed,လိုအပ်သည်
+な-Adjectives,511,安全,あんぜん,anzen,safe; secure,လုံခြုံသည်
+な-Adjectives,512,危険,きけん,kiken,dangerous,အန္တရာယ်ရှိသည်
+な-Adjectives,513,複雑,ふくざつ,fukuzatsu,complex; complicated,ရှုပ်ထွေးသည်
+な-Adjectives,514,簡単,かんたん,kantan,easy; simple,လွယ်သည်/ရိုးရှင်းသည်
+な-Adjectives,515,正直,しょうじき,shoujiki,honest,ရိုးသားသည်
+な-Adjectives,516,変,へん,hen,strange; odd,ထူးဆန်းသည်
+Adverbs,517,とても,とても,totemo,very; extremely,အလွန်း
+Adverbs,518,あまり,あまり,amari,not very (+ negative),သိပ်မ...ဘူး
+Adverbs,519,全然,ぜんぜん,zenzen,not at all (+ negative),လုံးဝမ...ဘူး
+Adverbs,520,よく,よく,yoku,often; well,မကြာခဏ/ကောင်းကောင်း
+Adverbs,521,時々,ときどき,tokidoki,sometimes,တစ်ခါတစ်ရံ
+Adverbs,522,たいてい,たいてい,taitei,usually; generally,အများအားဖြင့်
+Adverbs,523,いつも,いつも,itsumo,always,အမြဲတမ်း
+Adverbs,524,少し,すこし,sukoshi,a little; a bit,နည်းနည်း
+Adverbs,525,もっと,もっと,motto,more,ပိုပြီး
+Adverbs,526,ちょっと,ちょっと,chotto,a little; just a moment,နည်းနည်း/ခဏ
+Adverbs,527,たくさん,たくさん,takusan,a lot; many,အများကြီး
+Adverbs,528,また,また,mata,again; also,ထပ်ပြီး/လည်း
+Adverbs,529,ぜひ,ぜひ,zehi,by all means; certainly,သေချာပေါက်
+Adverbs,530,どうぞ,どうぞ,douzo,please (offering),ကျေးဇူးပြု၍
+Adverbs,531,どうも,どうも,doumo,thank you; somehow,ကျေးဇူးတင်ပါတယ်
+Adverbs,532,だいたい,だいたい,daitai,approximately; mostly,ခန့်မှန်း/အများအားဖြင့်
+Adverbs,533,はっきり,はっきり,hakkiri,clearly,ရှင်းရှင်းလင်းလင်း
+Adverbs,534,ゆっくり,ゆっくり,yukkuri,slowly; leisurely,ဖြည်းဖြည်းချင်း
+Adverbs,535,すぐ,すぐ,sugu,immediately; soon,ချက်ချင်း
+Adverbs,536,もちろん,もちろん,mochiron,of course,သေချာပေါက်
+Adverbs,537,たぶん,たぶん,tabun,probably; perhaps,ဖြစ်နိုင်တယ်
+Adverbs,538,きっと,きっと,kitto,surely; certainly,သေချာတယ်
+Adverbs,539,一緒に,いっしょに,issho ni,together,အတူတူ
+Adverbs,540,一人で,ひとりで,hitori de,alone; by oneself,တစ်ယောက်တည်း
+Adverbs,541,まず,まず,mazu,first of all,အရင်ဆုံး
+Adverbs,542,次に,つぎに,tsugi ni,next; then,ပြီးတော့
+Adverbs,543,それから,それから,sore kara,and then; after that,ပြီးတော့
+Adverbs,544,でも,でも,demo,but; however,ဒါပေမဲ့
+Adverbs,545,だから,だから,dakara,therefore; so,ဒါကြောင့်
+Adverbs,546,本当に,ほんとうに,hontou ni,really; truly,တကယ်ပဲ
+Adverbs,547,実は,じつは,jitsu wa,actually; to tell the truth,တကယ်တော့
+Adverbs,548,特に,とくに,toku ni,especially; particularly,အထူးသဖြင့်
+Particles and Conjunctions,549,は,は,wa,topic marker,အကြောင်းအရာ (topic)
+Particles and Conjunctions,550,が,が,ga,subject marker,ကြိယာပြုသူ
+Particles and Conjunctions,551,を,を,o,direct object marker,ကြိယာခံသူ
+Particles and Conjunctions,552,に,に,ni,direction; time; location (existence),ဦးတည်ရာ/အချိန်/တည်နေရာ
+Particles and Conjunctions,553,で,で,de,location (action); means,နေရာ (လုပ်ရပ်)/နည်းလမ်း
+Particles and Conjunctions,554,へ,へ,e,direction (movement),ဦးတည်ရာ (ရွေ့လျားမှု)
+Particles and Conjunctions,555,と,と,to,and; with,နှင့်/အတူ
+Particles and Conjunctions,556,も,も,mo,also; too; even,လည်း
+Particles and Conjunctions,557,の,の,no,possession; noun modifier,၏/ပိုင်ဆိုင်မှု
+Particles and Conjunctions,558,か,か,ka,question marker,မေးခွန်း
+Particles and Conjunctions,559,ね,ね,ne,right?; isn't it? (seeking agreement),ဟုတ်တယ်နော်
+Particles and Conjunctions,560,よ,よ,yo,assertive sentence-final particle,အခိုင်အမာပြောခြင်း
+Particles and Conjunctions,561,な,な,na,sentence-final (softening; prohibition),အဆုံးသတ်စကားလုံး (ပျော့ပျောင်း)
+Particles and Conjunctions,562,から,から,kara,from; because,မှ/ကြောင့်
+Particles and Conjunctions,563,まで,まで,made,until; as far as; to,အထိ
+Particles and Conjunctions,564,より,より,yori,than; from (comparison),ထက်
+Particles and Conjunctions,565,ので,ので,node,because (reason; softer than から),ကြောင့် (ပျော့ပျောင်း)
+Particles and Conjunctions,566,が,が,ga,but; however (contrast),ဒါပေမဲ့
+Particles and Conjunctions,567,けど/けれど,けど,kedo,but; however (casual),ဒါပေမဲ့ (အရပ်သုံး)
+Particles and Conjunctions,568,と,と,to,when; if (simple conditional),လျှင်/သောအခါ
+Particles and Conjunctions,569,そして,そして,soshite,and then; and,ပြီးတော့
+Particles and Conjunctions,570,または,または,mata wa,or (formal),သို့မဟုတ်
+Particles and Conjunctions,571,か,か,ka,or (in questions); whether,သို့မဟုတ်/ဟုတ်
+Particles and Conjunctions,572,し,し,shi,and also; what's more (listing reasons),ပြီး/ထို့အပြင်
+Particles and Conjunctions,573,ながら,ながら,nagara,while doing; even though,ရင်း/သော်လည်း
+Particles and Conjunctions,574,たり〜たりする,たり〜たりする,tari~tari suru,do things like ~ (listing actions),စသည် (လုပ်ရပ်စာရင်း)
+Question Words,575,何,なに／なん,nani / nan,what,ဘာ/ဘယ်လောက်
+Question Words,576,どこ,どこ,doko,where,ဘယ်မှာ
+Question Words,577,誰,だれ,dare,who,ဘယ်သူ
+Question Words,578,どなた,どなた,donata,who (polite),ဘယ်သူ (ယဉ်ကျေးသော)
+Question Words,579,いつ,いつ,itsu,when,ဘယ်တော့
+Question Words,580,どれ,どれ,dore,which one (of 3+),ဘယ်ဟာ (၃ ခုအထက်)
+Question Words,581,どの,どの,dono,which (adj. + noun),ဘယ်ဟာ (နာမ်နဲ့တွဲ)
+Question Words,582,どちら,どちら,dochira,which (of 2); which way (polite),ဘယ်ဟာ (၂ ခုအနက်)
+Question Words,583,どう,どう,dou,how; in what way,ဘယ်လို
+Question Words,584,どうして,どうして,doushite,why; how come,ဘာကြောင့်
+Question Words,585,なぜ,なぜ,naze,why (formal),ဘာကြောင့် (တရားဝင်)
+Question Words,586,いくら,いくら,ikura,how much (price),ဘယ်လောက် (စျေး)
+Question Words,587,いくつ,いくつ,ikutsu,how many; how old,ဘယ်နှစ်ခု/အသက်ဘယ်လောက်
+Question Words,588,何人,なんにん,nan-nin,how many people,လူဘယ်နှစ်
+Question Words,589,何時,なんじ,nan-ji,what time,ဘယ်အချိန်
+Question Words,590,何分,なんぷん,nan-pun,how many minutes; what minute,ဘယ်နှစ်မိနစ်
+Question Words,591,何日,なんにち,nan-nichi,how many days; what day,ဘယ်ရက်/ဘယ်နှစ်ရက်
+Question Words,592,何月,なんがつ,nan-gatsu,what month,ဘယ်လ
+Question Words,593,何曜日,なんようび,nan-youbi,what day of the week,ဘယ်နေ့
+Question Words,594,何年,なんねん,nan-nen,what year,ဘယ်နှစ်
+Question Words,595,何番,なんばん,nan-ban,what number,နံပါတ်ဘယ်လောက်
+Question Words,596,何語,なんご,nan-go,what language,ဘာဘာသာ
+Question Words,597,何歳,なんさい,nan-sai,how old,အသက်ဘယ်လောက်
+Demonstratives,598,これ,これ,kore,this (thing near me),ဒီဟာ
+Demonstratives,599,それ,それ,sore,that (thing near you),ဟိုဟာ (မင်းဘက်)
+Demonstratives,600,あれ,あれ,are,that (thing over there),ဟိုဟာ (ဝေးဝေး)
+Demonstratives,601,この,この,kono,this ~ (adj.),ဒီ... (နာမ်နဲ့တွဲ)
+Demonstratives,602,その,その,sono,that ~ (adj.),ဟို... (နာမ်နဲ့တွဲ)
+Demonstratives,603,あの,あの,ano,that ~ over there (adj.),ဟိုး... (နာမ်နဲ့တွဲ)
+Demonstratives,604,ここ,ここ,koko,here,ဒီနေရာ
+Demonstratives,605,そこ,そこ,soko,there,ဟိုနေရာ
+Demonstratives,606,あそこ,あそこ,asoko,over there,ဟိုဘက်နေရာ
+Demonstratives,607,こちら,こちら,kochira,this way; here (polite),ဒီဘက် (ယဉ်ကျေးသော)
+Demonstratives,608,そちら,そちら,sochira,that way; there (polite),ဟိုဘက် (ယဉ်ကျေးသော)
+Demonstratives,609,あちら,あちら,achira,that way; over there (polite),ဟိုဘက် (ယဉ်ကျေးသော)
+Demonstratives,610,こう,こう,kou,this way; like this,ဒီလို
+Demonstratives,611,そう,そう,sou,that way; like that,ဟိုလို
+Demonstratives,612,ああ,ああ,aa,that way; like that (over there),ဟိုးလို
+Greetings and Expressions,613,おはようございます,おはようございます,ohayou gozaimasu,Good morning (polite),မင်္ဂလာနံနက်ခင်းပါ
+Greetings and Expressions,614,おはよう,おはよう,ohayou,Good morning (casual),မင်္ဂလာနံနက်ခင်းပါ (အရပ်သုံး)
+Greetings and Expressions,615,こんにちは,こんにちは,konnichiwa,Hello; Good afternoon,မင်္ဂလာပါ
+Greetings and Expressions,616,こんばんは,こんばんは,konbanwa,Good evening,မင်္ဂလာညနေခင်းပါ
+Greetings and Expressions,617,おやすみなさい,おやすみなさい,oyasuminasai,Good night (polite),ကောင်းသောညပါ
+Greetings and Expressions,618,おやすみ,おやすみ,oyasumi,Good night (casual),ကောင်းသောညပါ (အရပ်သုံး)
+Greetings and Expressions,619,さようなら,さようなら,sayounara,Goodbye (formal),နှုတ်ဆက်ပါတယ်
+Greetings and Expressions,620,じゃあね,じゃあね,jaa ne,See you; Bye (casual),နောက်မှတွေ့မယ်
+Greetings and Expressions,621,また明日,またあした,mata ashita,See you tomorrow,မနက်ဖြန်တွေ့မယ်
+Greetings and Expressions,622,ありがとうございます,ありがとうございます,arigatou gozaimasu,Thank you (polite),ကျေးဇူးတင်ပါတယ်
+Greetings and Expressions,623,ありがとう,ありがとう,arigatou,Thank you (casual),ကျေးဇူးပါ
+Greetings and Expressions,624,どういたしまして,どういたしまして,dou itashimashite,You're welcome,ရပါတယ်
+Greetings and Expressions,625,すみません,すみません,sumimasen,Excuse me; I'm sorry,တောင်းပန်ပါတယ်
+Greetings and Expressions,626,ごめんなさい,ごめんなさい,gomennasai,I'm sorry,တောင်းပန်ပါတယ်
+Greetings and Expressions,627,ごめん,ごめん,gomen,Sorry (casual),တောင်းပန်ပါတယ် (အရပ်သုံး)
+Greetings and Expressions,628,はじめまして,はじめまして,hajimemashite,How do you do; Nice to meet you,တွေ့ရတာဝမ်းသာပါတယ်
+Greetings and Expressions,629,よろしくお願いします,よろしくおねがいします,yoroshiku onegaishimasu,Please treat me well; Nice to meet you,တွေ့ရတာဝမ်းသာပါတယ်
+Greetings and Expressions,630,よろしく,よろしく,yoroshiku,Nice to meet you (casual),တွေ့ရတာဝမ်းသာပါတယ် (အရပ်သုံး)
+Greetings and Expressions,631,お元気ですか,おげんきですか,ogenki desu ka,How are you?,နေကောင်းလား
+Greetings and Expressions,632,元気です,げんきです,genki desu,I'm fine; I'm well,နေကောင်းပါတယ်
+Greetings and Expressions,633,そうですか,そうですか,sou desu ka,Is that so? I see.,ဟုတ်လား
+Greetings and Expressions,634,そうですね,そうですね,sou desu ne,"That's right, isn't it",ဟုတ်တယ်နော်
+Greetings and Expressions,635,わかりました,わかりました,wakarimashita,I understand; Understood,နားလည်ပါပြီ
+Greetings and Expressions,636,わかりません,わかりません,wakarimasen,I don't understand,နားမလည်ဘူး
+Greetings and Expressions,637,いただきます,いただきます,itadakimasu,Let's eat (said before eating),စားပါတော့မယ် (မစားခင်)
+Greetings and Expressions,638,ごちそうさまでした,ごちそうさまでした,gochisousama deshita,Thanks for the meal (after eating),ကျေးဇူးတင်ပါတယ် (စားပြီးနောက်)
+Greetings and Expressions,639,いってきます,いってきます,ittekimasu,I'm leaving (said when leaving home),သွားတော့မယ်
+Greetings and Expressions,640,いってらっしゃい,いってらっしゃい,itterasshai,Take care (said to person leaving home),သွားလမ်းသာပါစေ
+Greetings and Expressions,641,ただいま,ただいま,tadaima,I'm home (said when returning home),ပြန်ရောက်ပါပြီ
+Greetings and Expressions,642,おかえり / おかえりなさい,おかえり / おかえりなさい,okaeri / okaerinasai,Welcome home,ပြန်ရောက်တာကြိုဆိုပါတယ်
+Greetings and Expressions,643,はい,はい,hai,yes,ဟုတ်ကဲ့
+Greetings and Expressions,644,いいえ,いいえ,iie,no,မဟုတ်ဘူး
+Greetings and Expressions,645,ちょっとまってください,ちょっとまってください,chotto matte kudasai,Please wait a moment,ခဏစောင့်ပေးပါ
+Greetings and Expressions,646,大丈夫ですか,だいじょうぶですか,daijoubu desu ka,Are you all right?,အဆင်ပြေလား
+Greetings and Expressions,647,おめでとうございます,おめでとうございます,omedetou gozaimasu,Congratulations,ဂုဏ်ယူပါတယ်
+Greetings and Expressions,648,お願いします,おねがいします,onegaishimasu,Please (requesting something),ကျေးဇူးပြု၍
+Greetings and Expressions,649,失礼します,しつれいします,shitsurei shimasu,Excuse me (entering/leaving a room),ခွင့်လွှတ်ပါ (ဝင်ထွက်ရာတွင်)
+Greetings and Expressions,650,かんぱい,かんぱい,kanpai,Cheers!,ကျန်းမာပါစေ (ခွက်တိုက်)
+Colors,651,色,いろ,iro,color,အရောင်
+Colors,652,白,しろ,shiro,white,အဖြူ
+Colors,653,黒,くろ,kuro,black,အမည်း
+Colors,654,赤,あか,aka,red,အနီ
+Colors,655,青,あお,ao,blue,အပြာ
+Colors,656,黄色,きいろ,kiiro,yellow,အဝါ
+Colors,657,緑,みどり,midori,green,အစိမ်း
+Colors,658,茶色,ちゃいろ,chairo,brown,အညို
+Colors,659,オレンジ,オレンジ,orenji,orange,လိမ္မော်ရောင်
+Colors,660,ピンク,ピンク,pinku,pink,ပန်းရောင်
+Colors,661,紫,むらさき,murasaki,purple,ခရမ်းရောင်
+Colors,662,灰色,はいいろ,haiiro,gray,မီးခိုးရောင်
+Size and Quantity,663,大きさ,おおきさ,ookisa,size; bigness,အရွယ်အစား
+Size and Quantity,664,全部,ぜんぶ,zenbu,all; everything,အားလုံး
+Size and Quantity,665,半分,はんぶん,hanbun,half,တစ်ဝက်
+Size and Quantity,666,一番,いちばん,ichiban,number one; most; best,နံပါတ်တစ်/အကောင်းဆုံး
+Size and Quantity,667,始め,はじめ,hajime,beginning; start,အစ
+Size and Quantity,668,終わり,おわり,owari,end; finish,အဆုံး
+Size and Quantity,669,両方,りょうほう,ryouhou,both,နှစ်ခုလုံး
+Common Conjunctions,670,だから,だから,dakara,so; therefore,ဒါကြောင့်
+Common Conjunctions,671,しかし,しかし,shikashi,however; but (formal),သို့သော်လည်း
+Common Conjunctions,672,それに,それに,sore ni,moreover; in addition,ထို့အပြင်
+Common Conjunctions,673,つまり,つまり,tsumari,in other words; that is,တစ်နည်းအားဖြင့်
+Common Conjunctions,674,もし,もし,moshi,if (hypothetical),အကယ်၍
+Miscellaneous / Common Nouns,675,名前,なまえ,namae,name,နာမည်
+Miscellaneous / Common Nouns,676,年齢,ねんれい,nenrei,age,အသက်
+Miscellaneous / Common Nouns,677,〜歳,〜さい,~sai,~ years old,နှစ် (အသက်)
+Miscellaneous / Common Nouns,678,国籍,こくせき,kokuseki,nationality,နိုင်ငံသား
+Miscellaneous / Common Nouns,679,住所,じゅうしょ,juusho,address,လိပ်စာ
+Miscellaneous / Common Nouns,680,電話番号,でんわばんごう,denwa bangou,phone number,ဖုန်းနံပါတ်
+Miscellaneous / Common Nouns,681,言語,げんご,gengo,language,ဘာသာ
+Miscellaneous / Common Nouns,682,仕事,しごと,shigoto,work; job,အလုပ်
+Miscellaneous / Common Nouns,683,給料,きゅうりょう,kyuuryou,salary,လစာ
+Miscellaneous / Common Nouns,684,問題,もんだい,mondai,problem; question,ပြဿနာ/မေးခွန်း
+Miscellaneous / Common Nouns,685,答え,こたえ,kotae,answer,အဖြေ
+Miscellaneous / Common Nouns,686,意味,いみ,imi,meaning,အဓိပ္ပာယ်
+Miscellaneous / Common Nouns,687,例,れい,rei,example,ဥပမာ
+Miscellaneous / Common Nouns,688,理由,りゆう,riyuu,reason,အကြောင်းရင်း
+Miscellaneous / Common Nouns,689,こと,こと,koto,thing (abstract); fact,ကိစ္စ/အချက်
+Miscellaneous / Common Nouns,690,もの,もの,mono,thing (physical object),ပစ္စည်း/အရာ
+Miscellaneous / Common Nouns,691,ところ,ところ,tokoro,place; situation,နေရာ/အခြေအနေ
+Miscellaneous / Common Nouns,692,気,き,ki,feeling; spirit; mind,စိတ်/ခံစားချက်
+Miscellaneous / Common Nouns,693,音,おと,oto,sound; noise,အသံ
+Miscellaneous / Common Nouns,694,声,こえ,koe,voice,အသံ (လူ)
+Miscellaneous / Common Nouns,695,形,かたち,katachi,shape; form,ပုံသဏ္ဌာန်
+Miscellaneous / Common Nouns,696,味,あじ,aji,taste; flavor,အရသာ
+Miscellaneous / Common Nouns,697,匂い,におい,nioi,smell; scent,အနံ့
+Miscellaneous / Common Nouns,698,感じ,かんじ,kanji,feeling; sense,ခံစားချက်
+Miscellaneous / Common Nouns,699,夢,ゆめ,yume,dream,အိပ်မက်
+Miscellaneous / Common Nouns,700,心,こころ,kokoro,heart; mind; feeling,နှလုံးသား/စိတ်
+Miscellaneous / Common Nouns,701,力,ちから,chikara,strength; power; ability,အား/အစွမ်း
+Miscellaneous / Common Nouns,702,手紙,てがみ,tegami,letter (correspondence),စာ
+Miscellaneous / Common Nouns,703,荷物,にもつ,nimotsu,luggage; load,ခရီးဆောင်ပစ္စည်း
+Miscellaneous / Common Nouns,704,場所,ばしょ,basho,place; location,နေရာ
+Miscellaneous / Common Nouns,705,番号,ばんごう,bangou,number (ID/phone),နံပါတ်
+Miscellaneous / Common Nouns,706,〜号,〜ごう,~gou,number (trains/rooms),နံပါတ် (ရထား/အခန်း)
+Miscellaneous / Common Nouns,707,〜番線,〜ばんせん,~bansen,platform number ~,ပလက်ဖောင်းနံပါတ်
+Miscellaneous / Common Nouns,708,窓口,まどぐち,madoguchi,ticket window; counter,လက်မှတ်ရောင်းဌာန
+Miscellaneous / Common Nouns,709,切符,きっぷ,kippu,ticket,လက်မှတ်
+Miscellaneous / Common Nouns,710,改札,かいさつ,kaisatsu,ticket gate,လက်မှတ်ဂိတ်
+Miscellaneous / Common Nouns,711,ホーム,ホーム,hoomu,(train) platform,ပလက်ဖောင်း
+Miscellaneous / Common Nouns,712,出口,でぐち,deguchi,exit,ထွက်ပေါက်
+Miscellaneous / Common Nouns,713,入口,いりぐち,iriguchi,entrance,ဝင်ပေါက်
+Miscellaneous / Common Nouns,714,階段,かいだん,kaidan,stairs,လှေကား
+Miscellaneous / Common Nouns,715,エレベーター,エレベーター,erebeetaa,elevator,ဓာတ်လှေကား
+Miscellaneous / Common Nouns,716,トイレ,トイレ,toire,toilet; restroom,အိမ်သာ

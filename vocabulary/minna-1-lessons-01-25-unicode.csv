@@ -1,0 +1,1069 @@
+lesson,japanese,reading,romaji,english,myanmar_unicode,myanmar_zawgyi_source
+1,わたし,わたし,watashi,I; me,ကျွန်တော်၊ ကျွန်မ,ကၽျနးေတား၊ ကၽျနးမ
+1,あなた,あなた,anata,you,ခင်ဗျား၊ မင်း၊ နင်,ခငးဗ္ာ့၊ မငး့၊ နငး
+1,あの人,あのひと,ano hito,that person (over there),ဟိုလူ (ရိုးရိုးအသုံး),ဟိုလူ (ရို့ရို့အသဵု့)
+1,あの方,あのかた,ano kata,that person (polite),ဟိုလူ (ယဉ်ကျေးသောအသုံး),ဟိုလူ (ယဥးေက့္ေသာအသဵု့)
+1,～さん,～さん,~san,Mr./Ms. (suffix after a name),ကို--/မ--(နာမည်နောက် တွင်ထားသုံးသည်။ မိမိနာမည်တွင်မသုံးပါ။),ကိ-ု -/မ--(နာမညးေနာကး တျငးထာ့သဵု့သညး။ မိမိနာမညးတျငးမသဵု့ပါ။
+1,～ちゃん,～ちゃん,~chan,(suffix for children / close friends),မောင်--/မ--(၁၀နှစ် အောက် ကလေးငယ်များ ကိုခေါ်သောအခါတွင် သုံးသည်),ေမာငး--/မ--(ှွႏြစး ေအာကး ကေလ့ငယးမ္ာ့ ကိုေခၚေသာအခါတျငး သဵု့သညး
+1,～じん,～じん,~jin,person from ~ (nationality suffix),--လူမျိုး,--လူမ္ိဳ့
+1,アメリカ人,アメリカじん,amerika-jin,American (person),အမေရိကန်လူမျိုး,အေမရိကနးလူမ္ိဳ့
+1,先生,せんせい,sensei,teacher (as a form of address),ဆရာ/ဆရာမ,ဆရာ/ဆရာမ
+1,教師,きょうし,kyoushi,teacher (as a profession),ဆရာ/ဆရာမ (အလုပ်အကိုင်တွင်အသုံးများ),ဆရာ/ဆရာမ (အလုပး အကိုငးတင ျ းအသဵု့မ္ာ့)
+1,学生,がくせい,gakusei,student,ကျောင်းသား/ ကျောင်းသူ,ေက္ာငး့သာ့/ ေက္ာငး့သူ
+1,会社員,かいしゃいん,kaishain,company employee,ကုမ္ပဏီဝန်ထမ်း,ကုမၸဏီွနးထမး့
+1,社員,しゃいん,shain,employee,ဝန်ထမ်း,ွနးထမး့
+1,銀行員,ぎんこういん,ginkouin,bank employee,ဘဏ်ဝန်ထမ်း,ဘဏးွနးထမး့
+1,医者,いしゃ,isha,doctor,ဆရာဝန်,ဆရာွနး
+1,研究者,けんきゅうしゃ,kenkyuusha,researcher,သုတေသနပြုသူ,သုေသတန်ပဳသူ
+1,大学,だいがく,daigaku,university,တက္ကသိုလ်,တကၠသိုလး
+1,病院,びょういん,byouin,hospital,ဆေးရုံ,ေဆ့ရဵု
+1,だれ,だれ,dare,who,ဘယ်သူ(ရိုးရိုး),ဘယးသူ(ရို့ရို့)
+1,どなた,どなた,donata,who (polite),ဘယ်သူ(ယဉ်ကျေး),ဘယးသူ(ယဥးေက့္)
+1,～歳,～さい,~sai,~ years old,--နှစ်(အသက်),--ႏြစး(အသကး)
+1,何歳,なんさい,nansai,how old,အသက်ဘယ်နှစ်နှစ်လဲ,အသကးဘယးႏြစးႏြစးလဲ
+1,おいくつ,おいくつ,oikutsu,how old (polite),အသက်ဘယ်နှစ်နှစ်လဲ (ယဉ်ကျေး),
+1,…はい,…はい,...hai,yes,ဟုတ်ကဲ့,ဟုတးကံဲ
+1,…いいえ,…いいえ,...iie,no,ဟင်အင်း,ဟငးံအငး့
+1,初めまして,はじめまして,hajimemashite,How do you do? (Nice to meet you),တွေ့ရတာဝမ်းသာပါတယ်,ေတျ႕ရတာွမး့သာပါတယး
+1,～から来ました,～からきました,~kara kimashita,I came from ~,--ကနေလာပါတယ်။,--ကေနလာပါတယး။
+1,どうぞ、よろしくお願いします,どうぞ、よろしくおねがいします,"douzo, yoroshiku onegaishimasu",Please treat me well (Nice to meet you),မိတ်ဆွေအဖြစ် ခင်ခင်မင်မင်ဆက်ဆံပါ,မိတးေဆျအ်ဖစး ခငးခငးမငးမငးဆကးဆဵပါ
+1,失礼ですが,しつれいですが,shitsurei desu ga,"Excuse me, but...",တစ်ဆိတ်လောက်။ စိတ်မရှိပါနဲ့။,တစးဆိတးေလာကး။ စိတးမရြိပါနဲ႔။
+1,お名前は？,おなまえは？,onamae wa?,What is your name?,နာမည်ဘယ်လိုခေါ်ပါသလဲ။,နာမညးဘယးလိုေခၚပါသလဲ။
+1,こちらは、～さんです,こちらは、～さんです,"kochira wa, ~san desu",This is Mr./Ms. ~,သူက ကို--/မ--ဖြစ်ပါတယ်။,သူက ကိ-ု -/မ--်ဖစးပါတယး။
+1,アメリカ,アメリカ,amerika,America; the USA,အမေရိကန်,အေမရိကနး
+1,イギリス,イギリス,igirisu,England; the UK,အင်္ဂလန်,အဂၤလနး
+1,インド,インド,indo,India,အိန္ဒိယ,အိႏၵိယ
+1,インドネシア,インドネシア,indoneshia,Indonesia,အင်ဒိုနီးရှား,အငးဒိုနီ့ရြာ့
+1,韓国,かんこく,kankoku,South Korea,တောင်ကိုရီးယား,ေတာငးကိုရီ့ယာ့
+1,タイ,タイ,tai,Thailand,ထိုင်း,ထိုငး့
+1,中国,ちゅうごく,chuugoku,China,တရုတ်,တရုတး
+1,ドイツ,ドイツ,doitsu,Germany,ဂျာမနီ,ဂ္ာမနီ
+1,日本,にほん,nihon,Japan,ဂျပန်,ဂ္ပနး
+1,ブラジル,ブラジル,burajiru,Brazil,ဘရာဇီး,ဘရာဇီ့
+1,IMC,IMC,IMC,IMC (company),IMCကုမ္ပဏီ,IMCကုမၸဏီ
+1,パワー電気,パワーでんき,pawaa denki,Power Electric (company),Power Electric ကုမ္ပဏီ,Power Electric ကုမၸဏီ
+1,ブラジルエアー,ブラジルエアー,burajiru eaa,Brazil Air (company),Brazil Air ကုမ္ပဏီ,Brazil Air ကုမၸဏီ
+1,AKC,AKC,AKC,AKC (company),AKCကုမ္ပဏီ,AKCကုမၸဏီ
+1,神戸病院,こうべびょういん,koube byouin,Kobe Hospital,Kobeဆေးရုံ,Kobeေဆ့ရဵု
+1,さくら大学,さくらだいがく,sakura daigaku,Sakura University,Sakuraတက္ကသိုလ်,Sakuraတကၠသိုလး
+1,富士大学,ふじだいがく,fuji daigaku,Fuji University,Fujiတက္ကသိုလ်,Fujiတကၠသိုလး
+2,これ,これ,kore,this one,ဒီဟာ,ဒီဟာ
+2,それ,それ,sore,that one (near you),ဟိုဟာ,ဟိုဟာ
+2,あれ,あれ,are,that one (over there),ဟို့ကဟာ,ဟို့ကဟာ
+2,この～,この～,kono ~,this ~,ဒီ--,ဒီ--
+2,その～,その～,sono ~,that ~,ဟို--,ဟိ-ု -
+2,あの～,あの～,ano ~,that ~ (over there),ဟို့--,ဟို့--
+2,本,ほん,hon,book,စာအုပ်,စာအုပး
+2,辞書,じしょ,jisho,dictionary,အဘိဓာန်,အဘိဓာနး
+2,雑誌,ざっし,zasshi,magazine,မဂ္ဂဇင်း,မဂၢဇငး့
+2,新聞,しんぶん,shinbun,newspaper,သတင်းစာ,သတငး့စာ
+2,ノート,ノート,nooto,notebook,မှတ်စုစာအုပ်,မြတးစုစာအုပး
+2,手帳,てちょう,techou,pocket notebook; diary,နေ့စဉ်မှတ်တမ်း,ေနစဥးမြတးတမး့
+2,名刺,めいし,meishi,business card,လိပ်စာကတ်,လိပးစာကတး
+2,カード,カード,kaado,card,ကတ်,ကတး
+2,鉛筆,えんぴつ,enpitsu,pencil,ခဲတံ,ခဲတဵ
+2,ボールペン,ボールペン,boorupen,ballpoint pen,ဘောပင်,ေဘာပငး
+2,シャープペンシル,シャープペンシル,shaapu penshiru,mechanical pencil,ဘောပင်ခဲတံ,ေဘာပငးခဲတဵ
+2,かぎ,かぎ,kagi,key,သော့,ေသာံ
+2,時計,とけい,tokei,clock; watch,နာရီ,နာရီ
+2,傘,かさ,kasa,umbrella,ထီး,ထီ့
+2,かばん,かばん,kaban,bag,အိတ်၊ လက်ဆွဲအိတ်,အိတး၊ လကးဆဲျအိတး
+2,CD,CD,shiidii,CD,စီဒီ,စီဒီ
+2,テレビ,テレビ,terebi,television; TV,တီဗီ,တီဗျီ
+2,ラジオ,ラジオ,rajio,radio,ရေဒီယို,ေရဒီယို
+2,カメラ,カメラ,kamera,camera,ကင်မရာ,ကငးမရာ
+2,コンピュータ,コンピュータ,konpyuuta,computer,ကွန်ပျူတာ,ကျနးပ္ဴတာ
+2,車,くるま,kuruma,car,ကား၊ ယာဉ်,ကာ့၊ ယာဥး
+2,机,つくえ,tsukue,desk,စားပွဲခုံ,စာ့ပျခ ဲ ဵု
+2,椅子,いす,isu,chair,ထိုင်ခုံ,ထိုငးခဵု
+2,チョコレート,チョコレート,chokoreeto,chocolate,ချောကလက်,ေခ္ာကလကး
+2,コーヒー,コーヒー,koohii,coffee,ကော်ဖီ,ေကားဖီ
+2,[お]みやげ,[お]みやげ,[o]miyage,souvenir,ဒေသထွက် လက်ဆောင်,ေဒသထျကးလကးေဆာငး
+2,英語,えいご,eigo,English (language),အင်္ဂလိပ်စာ၊ စကား,အဂၤလိပးစာ၊ စကာ့
+2,日本語,にほんご,nihongo,Japanese (language),ဂျပန်စာ၊ စကား,ဂ္ပနးးစာ၊ စကာ့
+2,～語,～ご,~go,~ language,～စာ၊ ～စကား,--စာ၊ --စကာ့
+2,何,なに,nani,what,ဘာ (မေးခွန်းမေးရာတွင်သုံး),ဘာ (ေမ့ချနး့ေမ့ရာတျငးသဵု့)
+2,そう,そう,sou,so; like that,ဟုတ်လား၊ ဒီလိုလား,ဟုတးလာ့၊ ဒီလိုလာ့
+2,あのう,あのう,anou,um; well (hesitation),ဟိုလေ--,ဟိုေလ--
+2,えっ,えっ,e',eh?; what?,ဟယ်။ ဘာလဲ (မျှော်လင့်မထားသော အရာကို ကြားသောအခါ),ဟယး။ ဘာလဲ (ေမြ္ားလငးံမထာ့ေသာ အရာကို ၾကာ့ေသာအခါ)
+2,どうぞ,どうぞ,douzo,please; here you are,ယူပါ။ လုပ်ပါ (please),ယူပါ။ လုပးပါ (please)
+2,どうも,どうも,doumo,thanks; somehow,ကျေးဇူးပါ,ေက့္ဇူ့ပါ
+2,どうも ありがとう ございます。,どうも ありがとう ございます。,doumo arigatou gozaimasu.,thank you very much,ကျေးဇူးတင်ပါသည်,ေက့္ဇူ့တငးပါသညး
+2,そうですか,そうですか,sou desu ka,I see; is that so?,ဟုတ်လား။ နားလည်ပါပြီ,ဟုတးလာ့။ နာ့လညးပါၿပီ
+2,違います。,ちがいます。,chigaimasu.,"No, that's wrong.",မဟုတ်ပါဘူး,မဟုတးပါဘူ့
+2,あ,あ,a,ah!; oh!,ဟာ (တစ်စုံတစ်ခုကိုထူးဆန်းသောအခါ),ဟာ(တစးစဵုတစးခုကိုထူ့ဆနး့ေသာအခါ)
+2,これから お世話に なります,これから おせわに なります,kore kara osewa ni narimasu,I look forward to working with you; please take care of me,အစစအရာအရာ ကူညီဖေးမပေးပါ။,အစစအရာအရာကူညီေဖ့မေပ့ပါ။
+2,こちらこそ [どうぞ]よろしく[お願い]します,こちらこそ [どうぞ]よろしく[おねがい]します,kochira koso [douzo] yoroshiku [onegai] shimasu,"Likewise, pleased to meet you",ကျွန်တော်ကိုလည်း မိတ်ဆွေအဖြစ် အသိအမှတ်ပြုပါ။,ကၽျနးေတာံက း ိုလညး့မိတးေဆျအ်ဖစး အသိအမြတး်ပဳပါ။
+3,ここ,ここ,koko,here; this place,ဒီမှာ၊ ဒီနေရာ,ဒီမြာ၊ ဒီေနရာ
+3,そこ,そこ,soko,there (near you),ဟိုမှာ၊ ဟိုနေရာ,ဟိုမြာ၊ ဟိုေနရာ
+3,あそこ,あそこ,asoko,over there,ဟို့မှာ၊ ဟို့နေရာ,ဟို့မြာ၊ ဟို့ေနရာ
+3,どこ,どこ,doko,where,ဘယ်မှာလဲ,ဘယးမြာလဲ
+3,こちら,こちら,kochira,this way; here,ဒီမှာ၊ ဒီဘက်မှာ,ဒီမြာ၊ ဒီဘကးမြာ
+3,そちら,そちら,sochira,that way; there (near you),ဟိုမှာ၊ ဟိုဘက်မှာ,ဟိုမြာ၊ ဟိုဘကးမြာ
+3,あちら,あちら,achira,that way; over there,ဟို့မှာ၊ ဟို့ဘက်မှာ,ဟို့မြာ၊ ဟို့ဘကးမြာ
+3,どちら,どちら,dochira,which (of two); where (polite),ဘယ်မှာလဲ၊ ဘယ်ဘက်မှာလဲ,ဘယးမြာလဲ၊ ဘယးဘကးမြာလဲ
+3,教室,きょうしつ,kyoushitsu,classroom,စာသင်ခန်း,စာသငးခနး့
+3,食堂,しょくどう,shokudou,cafeteria; dining hall,ထမင်းဆိုင်၊ ထမင်းစားတဲ့နေရာ,ထမငး့ဆိုငး ထမငး့စာ့တဲံေနရာ
+3,事務所,じむしょ,jimusho,office,ရုံးခန်း,ရဵု့ခနး့
+3,会議室,かいぎしつ,kaigishitsu,meeting room,အစည်းအဝေးခန်း,အစညး့အေဝ့ခနး့
+3,受付,うけつけ,uketsuke,reception (desk),စုံစမ်းရန်ကောင်းတာ,စဵုစမး့ရနးေကာငးတာ
+3,ロビー,ロビー,robii,lobby,ဧည့်ခန်း၊ ဟိုတယ်ဧည့်ခန်း,ဧညးံခနး့၊ ဟိုတယးဧညးံခနး့
+3,部屋,へや,heya,room,အခန်း,အခနး့
+3,トイレ,トイレ,toire,toilet; restroom,အိမ်သာ,အိမးသာ
+3,お手洗い,おてあらい,otearai,toilet; restroom (polite),အိမ်သာ,အိမးသာ
+3,階段,かいだん,kaidan,stairs; staircase,လှေခါး,ေလြခါ့
+3,エレベーター,エレベーター,erebeetaa,elevator; lift,ဓာတ်လှေခါး,ဓါတးေလြခါ့
+3,エスカレーター,エスカレーター,esukareetaa,escalator,စက်လှေခါး,စကးေလြခါ့
+3,自動販売機,じどうはんばいき,jidouhanbaiki,vending machine,အလိုအလျောက် စျေးရောင်းသည့်စက်,အလိုအေလ္ာကးေစ့္ေရာငး့ သညးံစကး
+3,電話,でんわ,denwa,telephone,တယ်လီဖုန်း,တယးလီဖုနး့
+3,お国,おくに,okuni,(your) country,နိုင်ငံ,ႏိုငးငဵ
+3,会社,かいしゃ,kaisha,company,ကုမ္ပဏီ,ကုမၸဏီ
+3,うち,うち,uchi,home; house,အိမ်,အိမး
+3,靴,くつ,kutsu,shoes,ဖိနပ်,ဖိနပး
+3,ネクタイ,ネクタイ,nekutai,necktie,လည်စည်း,လညးစညး့
+3,ワイン,ワイン,wain,wine,ဝိုင်,ဝိုငး
+3,売り場,うりば,uriba,sales floor; counter,အရောင်းကောင်တာ,အေရာငး့ေကာငးတာ
+3,地下,ちか,chika,basement; underground,မြေအောက်,ေ်မေအာကး
+3,～階,～かい,~kai,~th floor,အထပ်,အထပး
+3,何階,なんかい,nankai,which floor,ဘယ်နှစ်ထပ်,ဘယးႏြစးထပး
+3,円,えん,en,yen,ဂျပန်ပိုက်ဆံ ယန်း,ဂ္ပနးပိုကးဆဵ ယနး့
+3,いくら,いくら,ikura,how much,ဘယ်လောက်လဲ,ဘယးေလာကးလဲ
+3,百,ひゃく,hyaku,hundred,တစ်ရာ,တစးရာ
+3,千,せん,sen,thousand,တစ်ထောင်,တစးေထာငး
+3,万,まん,man,ten thousand,တစ်သောင်း,တစးေသာငး့
+3,すみません,すみません,sumimasen,excuse me; sorry,တောင်းပန်ပါတယ်၊ စိတ်မရှိပါနဲ့။ တစ်ဆိတ်လောက်,ေတာငး့ပနးပါတယး၊ စိတးမရြိပါနဲ႔။ တစးဆိတးေလာကး
+3,どうも,どうも,doumo,thanks,ကျေးဇူးပါ။,ေက့္ဇူ့ပါ။
+3,いらっしゃいませ,いらっしゃいませ,irasshaimase,welcome (to a shop),ကြိုဆိုပါတယ်,ႀကိဳဆိုပါတယး
+3,[～を]見せてください,[～を]みせてください,[~o] misete kudasai,please show me ~,(ကို) ပြပါ,(-ကိ)ု ်ပပါ
+3,じゃ,じゃ,ja,well then; then,ကဲ-,ကဲ-
+3,[～を]ください,[～を]ください,[~o] kudasai,please give me ~,(ကို) ပေးပါ,(ကိ-ု ) ေပ့ပါ
+3,イタリア,イタリア,itaria,Italy,အီတလီ,အီတလီ
+3,スイス,スイス,suisu,Switzerland,ဆွစ်ဇာလန်,ဆျစးဇာလနး
+3,フランス,フランス,furansu,France,ပြင်သစ်,်ပငးသစး
+3,ジャカルタ,ジャカルタ,jakaruta,Jakarta,ဂျကာတာ,ဂ္ကာတာ
+3,バンコク,バンコク,bankoku,Bangkok,ဘန်ကောက်,ဘနးေကာကး
+3,ベルリン,ベルリン,berurin,Berlin,ဘာလင်,ဘာလငး
+3,新大阪,しんおおさか,shin-oosaka,Shin-Osaka,ရှင်းအိုဆာကာ,ရြငး့အိုဆာကာ
+4,起きます,おきます,okimasu,to get up; to wake up,ထသည်။ နိုးသည်။,ထသညး။ ႏို့သညး။
+4,寝ます,ねます,nemasu,to sleep; to go to bed,အိပ်သည်။,အိပးသညး။
+4,働きます,はたらきます,hatarakimasu,to work,အလုပ်လုပ်သည်။,အလုပးလုပးသညး။
+4,休みます,やすみます,yasumimasu,to rest; to take a day off,အနားယူသည်။,အနာ့ယူသညး။
+4,勉強します,べんきょうします,benkyou shimasu,to study,စာကျက်သည်။,စာက္ကးသညး။
+4,終わります,おわります,owarimasu,to finish; to end,ပြီးဆုံးသည်။,ၿပီ့ဆဵု့သညး။
+4,デパート,デパート,depaato,department store,ကုန်တိုက်,ကုနးတိုကး
+4,銀行,ぎんこう,ginkou,bank,ဘဏ်,ဘဏး
+4,郵便局,ゆうびんきょく,yuubin kyoku,post office,စာတိုက်,စာတိုကး
+4,図書館,としょかん,toshokan,library,စာကြည့်တိုက်,စာၾကညးံတိုကး
+4,美術館,びじゅつかん,bijutsukan,art museum,အနုပညာပြတိုက်,အႏုပညာ်ပတိုကး
+4,今,いま,ima,now,အခု,အခု
+4,～時,～じ,~ji,~ o'clock,～နာရီ,--နာရီ
+4,～ふん,～ふん,~fun,~ minutes,မိနစ်,မိနစး
+4,～ぷん,～ぷん,~pun,~ minutes,မိနစ်,မိနစး
+4,半,はん,han,half (past the hour),တစ်ဝက်,တစးဝကး
+4,何時,なんじ,nanji,what time,ဘယ်နှစ်နာရီ၊ ဘယ်အချိန်,ဘယးႏြစန း ာရီ၊ ဘယးအခ္ိနး
+4,何分,なんぷん,nanpun,how many minutes,ဘယ်နှစ်မိနစ်,ဘယးႏြစမ း ိနစး
+4,午前,ごぜん,gozen,morning; a.m.,မနက်ပိုင်း am,မနကးပိုငး့ am
+4,午後,ごご,gogo,afternoon; p.m.,နေ့ခင်းပိုင်း၊ ညနေပိုင်း pm,ေန႔ခငး့ပိုငး့၊ ညေနပိုငး့ pm
+4,朝,あさ,asa,morning,မနက်,မနကး
+4,昼,ひる,hiru,daytime; noon,နေ့လည်,ေန႔႔လညး
+4,晩/夜,ばん/よる,ban/yoru,evening; night,ည,ည
+4,おととい,おととい,ototoi,day before yesterday,တစ်နေ့က,တစးေန႔က
+4,きのう,きのう,kinou,yesterday,မနေ့က,မေန႔က
+4,今日,きょう,kyou,today,ဒီနေ့,ဒီေန႔
+4,明日,あした,ashita,tomorrow,မနက်ဖန်,မနကးဖနး
+4,あさって,あさって,asatte,day after tomorrow,သဘက်ခါ,သဘကးခါ
+4,今朝,けさ,kesa,this morning,ဒီမနက်,ဒီမနကး
+4,今晩,こんばん,konban,tonight; this evening,ဒီည,ဒီည
+4,休み,やすみ,yasumi,holiday; day off,နားရက်၊ အားလပ်ရက်,နာ့ရကး၊ အာ့လပးရကး
+4,昼休み,ひるやすみ,hiruyasumi,lunch break,နေ့လည်နားချိန်,ေနလညးနာ့ခ္ိနး
+4,試験,しけん,shiken,exam; test,စာမေးပွဲ,စာေမ့ပျဲ
+4,会議,かいぎ,kaigi,meeting; conference,အစည်းအဝေး,အစညး့အေဝ့
+4,映画,えいが,eiga,movie; film,ရုပ်ရှင်,ရုပးရြငး
+4,毎朝,まいあさ,maiasa,every morning,မနက်တိုင်း,မနကးတိုငး့
+4,毎晩,まいばん,maiban,every evening,ညတိုင်း,ညတိုငး့
+4,毎日,まいにち,mainichi,every day,နေ့တိုင်း,ေနတိုငး့
+4,月曜日,げつようび,getsuyoubi,Monday,တနင်္လာနေ့,တနလၤာေန႔
+4,火曜日,かようび,kayoubi,Tuesday,အင်္ဂါနေ့,အဂၤါေန႔
+4,水曜日,すいようび,suiyoubi,Wednesday,ဗုဒ္ဓဟူးနေ့,ဗုဒၶဟူ့ေန႔
+4,木曜日,もくようび,mokuyoubi,Thursday,ကြာသပတေးနေ့,ၾကာသပေတ့ေန႔
+4,金曜日,きんようび,kinyoubi,Friday,သောကြာနေ့,ေသာၾကာေန႔
+4,土曜日,どようび,doyoubi,Saturday,စနေနေ့,စေနေန႔
+4,日曜日,にちようび,nichiyoubi,Sunday,တနင်္ဂနွေနေ့,တနဂၤေႏျေန႔
+4,何曜日,なんようび,nanyoubi,what day of the week,ဘာနေ့,ဘာေန႔
+4,～から,～から,~kara,from ~,～မှ,--မြ
+4,～まで,～まで,~made,until ~; to ~,～အထိ,--အထိ
+4,～と～,～と～,~to~,and; with,～နှင့်,--ႏြငးံ
+4,大変ですね,たいへんですね,taihen desu ne,"That's tough, isn't it?",ဒုက္ခများမှာဘဲနော်,ဒုကၡမ္ာ့မြာဘဲေနား
+4,番号,ばんごう,bangou,number,နံပါတ်,နဵပါတး
+4,何番,なんばん,nanban,what number,ဘာနံပါတ်,ဘာနဵပါတး
+4,そちら,そちら,sochira,there (near you); that way,အဲဒီမှာ၊ အဲဒီဘက်မှာ,အဲဒီမြာ၊ အဲဒီဘကးမြာ
+4,ニューヨーク,ニューヨーク,nyuuyooku,New York,နယူးယောက်မြို့,နယူ့ေယာကးၿမိဳ႕
+4,ペキン,ペキン,pekin,Beijing,ပီကင်းမြို့,ပီကငး့ၿမိဳ႕
+4,ロサンゼルス,ロサンゼルス,rosanzerusu,Los Angeles,လော့စ်အိန်ဂျယ်လိစ်မြို့,ေလာံစးအိနးဂ္ယးလစးၿမိဳ႕
+4,ロンドン,ロンドン,rondon,London,လန်ဒန်မြို့,လနးဒနးၿမိဳ႕
+4,あすか,あすか,asuka,Asuka (restaurant name),Asuka စားသောက်ဆိုင်,Asukaစာ့ေသာကးဆိုငး
+4,アップル銀行,アップルぎんこう,appuru ginkou,Apple Bank,Apple ဘဏ်,Appleဘဏး
+4,みどり図書館,みどりとしょかん,midori toshokan,Midori Library,Midori စာကြည့်တိုက်,Midoriစာၾကညးံတိုကး
+4,やまと美術館,やまとびじゅつかん,yamato bijutsukan,Yamato Art Museum,Yamato အနုပညာပြတိုက်,Yamatoအႏုပညာ်ပတိုကး
+5,行きます,いきます,ikimasu,to go,သွားသည်,သျာ့သညး
+5,来ます,きます,kimasu,to come,လာသည်,လာသညး
+5,帰ります,かえります,kaerimasu,to go home; to return,ပြန်သည် (အိမ်ပြန်သည်),်ပနးသညး (အိမး်ပနးသညး)
+5,学校,がっこう,gakkou,school,စာသင်ကျောင်း,စာသငးေက္ာငး့
+5,スーパー,スーパー,suupaa,supermarket,super market,super market
+5,駅,えき,eki,station,ဘူတာ,ဘူတာ
+5,飛行機,ひこうき,hikouki,airplane,လေယာဉ်ပျံ,ေလယာဥးပ္ဵ
+5,船,ふね,fune,boat; ship,သင်္ဘော,သေဘၤာ
+5,電車,でんしゃ,densha,(electric) train,လျှပ်စစ်ရထား,လြ္ပးစစးရထာ့
+5,地下鉄,ちかてつ,chikatetsu,subway,မြေအောက်ရထား,ေ်မေအာကးရထာ့
+5,新幹線,しんかんせん,shinkansen,bullet train,ကျည်ဆံရထား,က္ညးဆဵရထာ့
+5,バス,バス,basu,bus,ဘတ်စ်ကား,ဘတးစးကာ့
+5,タクシー,タクシー,takushii,taxi,တက္ကစီ,တကၠစီ
+5,自転車,じてんしゃ,jitensha,bicycle,စက်ဘီး,စကးဘီ့
+5,歩いて,あるいて,aruite,on foot; walking,လမ်းလျှောက်ပြီး,လမး့ေလြ္ာကးၿပီ့
+5,人,ひと,hito,person; people,လူ,လူ
+5,友達,ともだち,tomodachi,friend,သူငယ်ချင်း,သူငယးခ္ငး့
+5,彼,かれ,kare,he; boyfriend,သူချစ်သူ,သူခ္စးသူ
+5,彼女,かのじょ,kanojo,she; girlfriend,သူမ/ချစ်သူ,သူမ/ခ္စးသူ
+5,家族,かぞく,kazoku,family,မိသားစု,မိသာ့စု
+5,一人,ひとり,hitori,alone; one person,တစ်ယောက်တည်း,တစးေယာကးတညး့
+5,先週,せんしゅう,senshuu,last week,ပြီးခဲ့တဲ့ အပတ်,ၿပီ့ခဲံတဲံ အပတး
+5,今週,こんしゅう,konshuu,this week,အခု အပတ်,အခု အပတး
+5,来週,らいしゅう,raishuu,next week,လာမဲ့ အပတ်,လာမဲံ အပတး
+5,先月,せんげつ,sengetsu,last month,ပြီးခဲ့တဲ့ လ,ၿပီ့ခဲံတဲံ လ
+5,今月,こんげつ,kongetsu,this month,ဒီလ,ဒီလ
+5,来月,らいげつ,raigetsu,next month,လာမဲ့ လ (နောက်လ),လာမဲံ လ(ေနာကးလ)
+5,去年,きょねん,kyonen,last year,မနှစ်က (ပြီးခဲ့တဲ့ နှစ်),မႏြစးက (ၿပီ့ခဲံတဲံ ႏြစး)
+5,今年,ことし,kotoshi,this year,ဒီနှစ်,ဒီႏြစး
+5,来年,らいねん,rainen,next year,နောက်နှစ်၊ နောင်နှစ်,ေနာကးႏြစး၊ ေနာငးႏြစး
+5,～年,～ねん,~nen,year ~,～နှစ်,-ႏြစး
+5,何年,なんねん,nannen,what year,ဘာနှစ်လဲ,ဘာႏြစးလဲ
+5,～月,～がつ,~gatsu,month of ~; ~th month,～လ (ဇန်နဝါရီလ၊ ဖေဖော်ဝါရီလ),-လ(ဇနးနွါရီလ၊ ေဖေဖားွါရီလ)
+5,何月,なんがつ,nangatsu,what month,ဘယ်လ,ဘယးလ
+5,１日,ついたち,tsuitachi,1st (of the month),၁ ရက်,၁ ရကး
+5,２日,ふつか,futsuka,2nd,၂ ရက်,၂ ရကး
+5,３日,みっか,mikka,3rd,၃ ရက်,၃ ရကး
+5,４日,よっか,yokka,4th,၄ ရက်၊,၄ ရကး၊
+5,５日,いつか,itsuka,5th,၅ ရက်,၅ ရကး
+5,６日,むいか,muika,6th,၆ ရက်,၆ ရကး
+5,７日,なのか,nanoka,7th,၇ ရက်,၇ ရကး
+5,８日,ようか,youka,8th,၈ ရက်,၈ ရကး
+5,９日,ここのか,kokonoka,9th,၉ ရက်,၉ ရကး
+5,１０日,とおか,tooka,10th,၁၀ ရက်,၁၀ ရကး
+5,１４日,じゅうよっか,juuyokka,14th,၁၄ ရက်,၁၄ ရကး
+5,２０日,はつか,hatsuka,20th,၂၀ ရက်,၂၀ ရကး
+5,２４日,にじゅうよっか,nijuuyokka,24th,၂၄ ရက်,၂၄ ရကး
+5,～日,～にち,~nichi,~th day,～ရက်,---ရကး
+5,何日,なんにち,nannichi,what day (of the month),ဘယ်ရက်,ဘယးရကး
+5,いつ,いつ,itsu,when,ဘယ်တုန်းက၊ ဘယ်တော့,ဘယးတုနး့က၊ ဘယးေတာံ
+5,誕生日,たんじょうび,tanjoubi,birthday,မွေးနေ့,ေမျ့ေန႔
+5,そうですね。,そうですね。,sou desu ne.,"That's right, isn't it?",ဟုတ်တယ်နော်,ဟုတးတယးေနား
+5,[どうも]ありがとう ございました,[どうも]ありがとう ございました,[doumo] arigatou gozaimashita,thank you very much (past),ကျေးဇူးအများကြီးတင်ပါတယ်,ေက့္ဇူ့အမ္ာ့ႀကီ့တငးပါတယး
+5,どういたしまして,どういたしまして,dou itashimashite,You're welcome.,ရပါတယ်၊ ကြိုဆိုပါတယ်,ရပါတယး၊ ၾကိဳဆိုပါတယး
+5,～番線,～ばんせん,~bansen,platform ~,ရထား စီးသော platform,ရထာ့စီ့ေသာ platform
+5,次,つぎ,tsugi,next,နောက်ဟာ,ေနာကးဟာ
+5,普通,ふつう,futsuu,ordinary (train); local train,သာမာန်/ရိုးရိုးရထား,သာမာနး/ရို့ရို့ရထာ့
+5,急行,きゅうこう,kyuukou,express (train),အမြန်ရထား,အ်မနးရထာ့
+5,特急,とっきゅう,tokkyuu,limited express,အထူးရထား,အထူ့ရထာ့
+5,甲子園,こうしえん,koushien,Koshien,Koushien,Koushien
+5,大阪城,おおさかじょう,oosakajou,Osaka Castle,အိုဆာကာရဲတိုက်,အိုဆာကာရဲတိုကး
+6,食べます,たべます,tabemasu,to eat,စားသည်။,စာ့သညး။
+6,飲みます,のみます,nomimasu,to drink,သောက်သည်။,ေသာကးသညး။
+6,吸います,すいます,suimasu,to smoke,ဆေးလိပ်သောက်သည်။,ေဆ့လိပးေသာကးသညး။
+6,見ます,みます,mimasu,to see,ကြည့်သည်။,ၾကညးံသညး။
+6,聞きます,ききます,kikimasu,to listen,နားထောင်သည်။,နာ့ေထာငးသညး။
+6,読みます,よみます,yomimasu,to read,ဖတ်သည်။,ဖတးသညး။
+6,書きます,かきます,kakimasu,to write,ရေးသည်။,ေရ့သညး။
+6,買います,かいます,kaimasu,to buy,ဝယ်သည်။,ဝယးသညး။
+6,撮ります,とります,torimasu,to take (a photo),ရိုက်သည်,ရိုကးသညး
+6,[写真を～],[しゃしんを～],[shashin o ~],to take a photo,(ဓာတ်ပုံကို)။,(ဓါတးပဵုကို)။
+6,します,します,shimasu,to do,လုပ်သည်။,လုပးသညး။
+6,会います,あいます,aimasu,to meet,တွေ့သည်,ေတျ႕သညး
+6,[友達に～],[ともだちに～],[tomodachi ni ~],[with a friend] ~,(သူငယ်ချင်းနဲ့)။,(သူငယးခ္ငး့နဲ႔)။
+6,ごはん,ごはん,gohan,cooked rice; meal,ထမင်း,ထမငး့
+6,朝ご飯,あさごはん,asagohan,breakfast,မနက်စာ၊ မနက်ထမင်း,မနကးစာ၊ မနကးထမငး့
+6,昼ご飯,ひるごはん,hirugohan,lunch,နေ့လည်စာ၊ နေ့လည်ထမင်း,ေန႔႔လညးစာ၊ ေန႔႔လညးထမငး့
+6,晩ご飯,ばんごはん,bangohan,dinner; supper,ညစာ၊ ညထမင်း,ညစာ၊ ညထမငး့
+6,パン,パン,pan,bread,ပေါင်မုန့်,ေပါငးမုနး႔
+6,卵,たまご,tamago,egg,ကြက်ဥ,ၾကကးဥ
+6,肉,にく,niku,meat,အသား,အသာ့
+6,魚,さかな,sakana,fish,ငါး,ငါ့
+6,野菜,やさい,yasai,vegetables,ဟင်းသီးဟင်းရွက်,ဟငး့သီ့ဟငး့ရျတး
+6,果物,くだもの,kudamono,fruit,သစ်သီးဝလံ,သစးသီ့ဝလဵ
+6,水,みず,mizu,water,ရေ,ေရ
+6,お茶,おちゃ,ocha,tea (green tea),ဂျပန်ရေနွေးကြမ်း,ဂ္ပနးေရေႏျ့ၾကမး့
+6,紅茶,こうちゃ,koucha,black tea,လက်ဖက်ရည်,လကးဖကးးရညး
+6,牛乳,ぎゅうにゅう,gyuunyuu,cow's milk,နွားနို့,ႏျာ့ႏို႔
+6,ミルク,ミルク,miruku,milk,နွားနို့၊ နို့ရည်,ႏျာ့ႏို႔၊ ႏိုရညး
+6,ジュース,ジュース,juusu,juice,ဖျော်ရည်,ေဖ္ားရညး
+6,ビール,ビール,biiru,beer,ဘီယာ,ဘီယာ
+6,[お]酒,[お]さけ,[o]sake,sake,အရက်,အရကး
+6,たばこ,たばこ,tabako,cigarette,ဆေးလိပ်,ေဆ့လိပး
+6,手紙,てがみ,tegami,letter,စာ letter,စာ letter
+6,レポート,レポート,repooto,report,report အစီရင်ခံစာ,report အစီရငးခဵစာ
+6,写真,しゃしん,shashin,photograph,ဓာတ်ပုံ,ဓါတးပဵု
+6,ビデオ,ビデオ,bideo,video,ဗီဒီယို,ဗီဒီယို
+6,店,みせ,mise,shop; store,ဆိုင်,ဆိုငး
+6,庭,にわ,niwa,garden,ခြံ၊ ခြံဝင်း,ၿခဵ၊ ၿခဵဝငး့
+6,宿題,しゅくだい,shukudai,homework,အိမ်စာ,အိမးစာ
+6,テニス,テニス,tenisu,tennis,တင်းနစ်အားကစား,တငး့နစးအာ့ကစာ့
+6,サッカー,サッカー,sakkaa,soccer; football,ဘောလုံးအားကစား,ေဘာလဵု့အာ့ကစာ့
+6,お花見,おはなみ,ohanami,cherry-blossom viewing,ပန်းကြည့်ခြင်း,ပနး့ၾကညးံ်ခငး့
+6,何,なに,nani,what,ဘာ,ဘာ
+6,一緒に,いっしょに,issho ni,together,အတူတူ,အတူတူ
+6,ちょっと,ちょっと,chotto,a little; just a moment,ခဏ၊ နည်းနည်း,ခဏ၊ နညး့နညး့
+6,いつも,いつも,itsumo,always; usually,အမြဲတမ်း,အၿမဲတမး့
+6,ときどき,ときどき,tokidoki,sometimes,တခါတလေ,တခါတေလ
+6,それから,それから,sore kara,and then; after that,အဲဒီနောက်,အဲဒီေနာကး
+6,ええ,ええ,ee,yes,အင်း,အငး့
+6,いいですね,いいですね,ii desu ne,"that's good, isn't it?",ကောင်းတယ်နော်,ေကာငး့တယးေနား
+6,わかりました,わかりました,wakarimashita,I understand; I see,နားလည်ပါပြီ,နာ့လညးပါၿပီ
+6,何ですか,なんですか,nan desu ka,what is it?,ဘာလဲ,ဘာလဲ
+6,じゃ、また[あした],じゃ、また[あした],"ja, mata [ashita]","Well then, see you [tomorrow].",ကဲဒါဆို--မနက်ဖြန်,ကဲဒါဆို--မနကး်ဖနး
+6,メキシコ,メキシコ,mekishiko,Mexico,မက္ကဆီကို,မကၠဆီကို
+6,大阪デパート,おおさかデパート,oosaka depaato,Osaka Department Store,အိုဆာကာကုန်တိုက်,အိုဆာကာကုနးတိုကး
+6,つるや,つるや,tsuruya,Tsuruya (restaurant name),Tsuruya စားသောက်ဆိုင်,Tsuruyaစာ့ေသာကးဆိုငး
+6,フランス屋,フランスや,furansu ya,Furansu-ya (supermarket),Furansu စူပါမားကတ်,Furansuစူပါမာ့ကတး
+6,毎日屋,まいにちや,mainichi ya,Mainichi-ya (supermarket),Mainichi စူပါမားကတ်,Mainichiစူပါမာ့ကတး
+7,切ります,きります,kirimasu,to cut,ဖြတ်သည်။ ကိုက်ဖြတ်သည်။,်ဖတးသညး။ ကိုကး်ဖတးသညး။
+7,送ります,おくります,okurimasu,to send,ပို့သည်။(ပစ္စည်း၊ စာ),ပို႔သညး။(ပစၥညး့၊ စာ)
+7,あげます,あげます,agemasu,to give,ပေးသည်။,ေပ့သညး။
+7,貰います,もらいます,moraimasu,to receive,ယူသည်။ လက်ခံရရှိသည်။,ယူသညး။ လကးခဵရရြိသညး။
+7,貸します,かします,kashimasu,to lend,ငှားသည်။ (သူများကို ငှား),ငြါ့သညး။ (သူမ္ာ့ကိုငြါ့)
+7,借ります,かります,karimasu,to borrow,ချေးငှားသည်။(သူများဆီမှ ချေး),ေခ့္ငြါ့သညး။(သူမ္ာ့ဆီမြေခ့္)
+7,教えます,おしえます,oshiemasu,to teach,သင်ကြားသည်။,သငးၾကာ့သညး။
+7,習います,ならいます,naraimasu,to learn,သင်ယူသည်။,သငးယသ ူ ညး။
+7,かけます[電話を～],かけます[でんわを～],kakemasu [denwa o ~],to make a (phone) call,ဖုန်းဆက်သည်။,ဖုနး့ဆကးသညး။
+7,手,て,te,hand,လက်,လကး
+7,はし,はし,hashi,chopsticks,တူ(ထမင်းစားတဲ့တူ),တူ(ထမငး့စာ့တဲံတူ)
+7,スプーン,スプーン,supuun,spoon,ဇွန်း,ဇျနး့
+7,ナイフ,ナイフ,naifu,knife,ဓား,ဓါ့
+7,フォーク,フォーク,fooku,fork,ခက်ရင်း,ခကးရငး့
+7,はさみ,はさみ,hasami,scissors,ကတ်ကြေး,ကတးေၾက့
+7,パソコン,パソコン,pasokon,personal computer,ကွန်ပျူတာ,ကျနးပ္ဴတာ
+7,ケータイ,ケータイ,keetai,mobile phone,လက်ကိုင်ဖုန်း,လကးကိုငးဖုနး့
+7,メール,メール,meeru,e-mail,အီးမေးလ်,အီ့ေမ့လး
+7,年賀状,ねんがじょう,nengajou,New Year's card,new year card,new year card
+7,パンチ,パンチ,panchi,punch,punch,punch
+7,ホッチキス,ホッチキス,hocchikisu,stapler,stapler,stapler
+7,セロテープ,セロテープ,seroteepu,cellophane tape,တိပ်,တိပး
+7,消しゴム,けしゴム,keshigomu,eraser,ခဲဖျက်,ခဲဖ္တး
+7,紙,かみ,kami,paper,စာရွက်,စာရျကး
+7,花,はな,hana,flower,ပန်း,ပနး့
+7,シャツ,シャツ,shatsu,shirt,ရှပ်အင်္ကျီ,ရြပးအကၤ ္ီ
+7,プレゼント,プレゼント,purezento,present; gift,လက်ဆောင်,လကးေဆာငး
+7,荷物,にもつ,nimotsu,luggage; parcel,အထုပ်၊ ပါဆယ်အထုပ်,အထုပး၊ ပါဆယးအထုပး
+7,お金,おかね,okane,money,ပိုက်ဆံ,ပိုကးဆဵ
+7,切符,きっぷ,kippu,ticket,လက်မှတ်,လကးမြတး
+7,クリスマス,クリスマス,kurisumasu,Christmas,ခရစ်စမတ်,ခရစးစမတး
+7,父,ちち,chichi,(one's own) father,အဖေ(မိမိ၏ဖခင်ကိုခေါ်သောအခေါ်အဝေါ်),အေဖ(မိမိ၏ဖခငးကိုေခၚ ေသာအေခၚအေဝၚ)
+7,母,はは,haha,(one's own) mother,အမေ(မိမိ၏မိခင်ကိုခေါ်သောအခေါ်အဝေါ်),အေမ(မိမိ၏မိခငးကိုေခၚ ေသာအေခၚအေဝၚ)
+7,お父さん,おとうさん,otousan,(someone else's) father,အဖေ(သူတစ်ပါး၏အဖေကိုခေါ်သောအခေါ်အဝေါ်),အေဖ(သူတစးပါ့၏အေဖကို ေခၚေသာအေခၚအေဝၚ)
+7,お母さん,おかあさん,okaasan,(someone else's) mother,အမေ(သူတစ်ပါး၏အမေကိုခေါ်သောအခေါ်အဝေါ်),အေမ(သူတစးပါ့၏အေမကို ေခၚေသာအေခၚအေဝၚ)
+7,もう～,もう～,mou ~,already ~,～ပြီးပြီ,---ၿပီ့ၿပီ
+7,まだ,まだ,mada,not yet,မ---သေးဘူး,မ---ေသ့ဘူ့
+7,これから,これから,kore kara,from now on,အခုကစပြီး---,အခုကစၿပီ့---
+7,[～、]すてきですね,[～、]すてきですね,"[~,] suteki desu ne","That's lovely, isn't it?",လှလိုက်တာ,လြလိုကးတာ
+7,いらっしゃい,いらっしゃい,irasshai,welcome,ကြိုဆိုပါတယ်,ႀကိဳဆိုပါတယး
+7,どうぞ、おあがりください。,どうぞ、おあがりください。,"douzo, oagari kudasai.",Please come in.,ကျေးဇူးပြုပြီး အိမ်ပေါ်တက်ပါ။,ေက့္ဇူ့်ပဳၿပီ့ အိမးေပၚတကးပါ။
+7,失礼します,しつれいします,shitsurei shimasu,Excuse me (on entering/leaving),ခွင့်ပြုပါ (သူတစ်ပါး၏ အခန်းသို့ဝင်ရန် ခွင့်တောင်းခြင်း),ချငးံ်ပဳပါ (သူတစးပါ့၏ အခနး့ သိ႔ဝ ု ငးရနး ချငးံေတာငး့်ခငး့)
+7,[～は]いかがですか,[～は]いかがですか,[~wa] ikaga desu ka,How about ~?,ဘယ်လိုလဲဟင်,ဘယးလိုလဲဟငး
+7,いただきます,いただきます,itadakimasu,Thank you for the food (said before eating),စားပါမယ် (အစား အသောက်ကို မစားခင်တွင် ပြောသောစကား),စာ့ပါမယး (အစာ့ အေသာကးကို မစာ့ခငးတင ျ း ေ်ပာေသာစကာ့)
+7,ごちそうさま[でした],ごちそうさま[でした],gochisousama [deshita],Thank you for the meal (said after eating),စားပြီးပါပြီ (အစား အသောက်ကို စားပြီးသည့်အခါ ပြောသောစကား),စာ့ၿပီ့ပါၿပီ (အစာ့အေသာကးကုိ စာ့ၿပီ့သညးံအခါေ်ပာေသာ စကာ့)
+7,スペイン,スペイン,supein,Spain,စပိန်,စပိနး
+8,ハンサム [な],ハンサム [な],hansamu [na],handsome,ခန့်ချောသော(ကျား),ခနး႔ေခ္ာေသာ(က္ာ့)
+8,きれい[な],きれい[な],kirei[na],beautiful; clean,လှသော၊ ချောမောသော(မ),လြေသာ၊ ေခ္ာေမာေသာ(မ)
+8,静か[な],しずか[な],shizuka[na],quiet,တိတ်ဆိတ်သော,တိတးဆိတးေသာ
+8,賑やか[な],にぎやか[な],nigiyaka[na],lively; bustling,စည်ကားသော,စညးကာ့ေသာ
+8,有名 [な],ゆうめい [な],yuumei [na],famous,နာမည်ကြီးသော,နာမညးႀကီ့ေသာ
+8,親切 [な],しんせつ [な],shinsetsu [na],kind,ဖော်ရွေသော။ ကြင်နာတတ်သော,ေဖၚေရျေသာ။ ၾကငးနာတတးေသာ
+8,元気 [な],げんき [な],genki [na],fine; healthy; energetic,ကျန်းမာသော၊ သန်မာသော,က္နး့မာေသာ၊ သနးမာေသာ
+8,暇 [な],ひま [な],hima [na],free time; leisure,အားသော၊ အားလပ်သော,အာ့ေသာ၊ အာ့လပးေသာ
+8,便利 [な],べんり [な],benri [na],convenient,အဆင်ပြေသော,အဆငးေ်ပေသာ
+8,素敵 [な],すてき [な],suteki [na],wonderful; lovely,လှသော၊ စွမ်းဖွယ်ကောင်းသော,လြေသာ၊ စျမဲ ကးဖျယးေကာငး့ေသာ
+8,大きい,おおきい,ookii,big; large,ကြီးသော,ႀကီ့ေသာ
+8,小さい,ちいさい,chiisai,small; little,သေးသော,ေသ့ေသာ
+8,新しい,あたらしい,atarashii,new,သစ်သော၊ အသစ်ဖြစ်သော,သစးေသာ၊ အသစး်ဖစးေသာ
+8,古い,ふるい,furui,old,ဟောင်းသော၊,ေဟာငး့ေသာ၊
+8,いい、良い,いい、よい,"ii, yoi",good,ကောင်းသော,ေကာငး့ေသာ
+8,悪い,わるい,warui,bad,ဆိုးသော,ဆို့ေသာ
+8,暑い、熱い,あつい、あつい,"atsui, atsui",hot,ပူအိုက်သော,ပူအိုကးေသာ
+8,寒い,さむい,samui,cold (weather),ချမ်းသော(ရာသီဥတု),ခ္မး့ေသာ(ရာသီဥတု)
+8,冷たい,つめたい,tsumetai,cold (to the touch); cool,အေးမြသော,ေအ့်မေသာ
+8,難しい,むずかしい,muzukashii,difficult,ခက်သော,ခကးေသာ
+8,易しい,やさしい,yasashii,easy,လွယ်သော,လျယးေသာ
+8,高い,たかい,takai,high; expensive,မြင့်သော၊ စျေးကြီးသော,်မငးံေသာ၊ ေစ့္ႀကီ့ေသာ
+8,安い,やすい,yasui,cheap; inexpensive,သက်သာသော၊ စျေးပေါသော,သကးသာေသာ၊ ေစ့္ေပါေသာ
+8,低い,ひくい,hikui,low,နိမ့်သော,နိမးံေသာ
+8,おもしろい,おもしろい,omoshiroi,interesting,စိတ်ဝင်စားစရာကောင်းသော,စိတးဝငးစာ့စရာေကာငး့ေသာ
+8,おいしい,おいしい,oishii,delicious; tasty,အရသာရှိသော,အရသာရြိေသာ
+8,忙しい,いそがしい,isogashii,busy,အလုပ်များသော,အလုပးမ္ာ့ေသာ
+8,楽しい,たのしい,tanoshii,fun; enjoyable,ပျော်ရွှင်သော,ေပ္ားရႊငးေသာ
+8,白い,しろい,shiroi,white,ဖြူ့သော,်ဖဴေသာ
+8,黒い,くろい,kuroi,black,မဲသော,မဲေသာ
+8,赤い,あかい,akai,red,နီသော,နီေသာ
+8,青い,あおい,aoi,blue,ပြာသော,်ပာေသာ
+8,桜,さくら,sakura,cherry blossom,ဆာကူရာပန်း၊ ချယ်ရီပန်း,ဆာကူရာပနးး့၊ ခ္ယးရီပနး့
+8,山,やま,yama,mountain,တောတောင်,ေတာေတာငး
+8,町,まち,machi,town; city,မြို့,ၿမိဳ႕
+8,食べ物,たべもの,tabemono,food,စားစရာ,စာ့စရာ
+8,所,ところ,tokoro,place,နေရာ,ေနရာ
+8,寮,りょう,ryou,dormitory,အဆောင်,အေဆာငး
+8,レストラン,レストラン,resutoran,restaurant,စားသောက်ဆိုင်,စာ့ေသာကးဆိုငး
+8,生活,せいかつ,seikatsu,life; living,နေထိုင်မှု,ေနထိုငးမႈ
+8,[お]仕事,[お]しごと,[o]shigoto,work; job,အလုပ်အကိုင်,အလုပးအကိုးငး
+8,どう,どう,dou,how,ဘယ်လိုလဲ,ဘယးလိုလဲ
+8,どんな～,どんな～,donna ~,what kind of ~,ဘယ်လိုမျိုး,ဘယးလိုမ္ိဳ့
+8,とても,とても,totemo,very,အလွန်,အလျနး
+8,あまり,あまり,amari,not very; not much,သိပ်--,သိပး--
+8,そして,そして,soshite,and then; and,အဲဒီနောက်၊ ပြီးနောက်,အဲဒီေနာကး၊ ၿပီ့ေနာကး
+8,～が、～,～が、～,"~ga, ~",~ but ~,～ပေမဲ့လဲ～,-ေပမဲံလဲ-
+8,お元気ですか,おげんきですか,ogenki desu ka,How are you?,နေကောင်းလား (နှုတ်ဆက်သည့်အခါတွင်လည်းသုံးပါသည်),ေနေကာငး့လာ့(ႏႈတးဆကးသညးံအခါတျငးလညး့သဵု့ပါသညး)
+8,そうですね,そうですね,sou desu ne,"That's right, isn't it?",ဟုတ်တယ်နော်,ဟုတးတယးေနား
+8,もういっぱい,もういっぱい,mou ippai,one more (cup/glass),နောက်တစ်ခွက်,ေနာကးတစးချကး
+8,いかがですか,いかがですか,ikaga desu ka,How is it?; How about ~?,ဘယ်လိုလဲဟင်,ဘယးလိုလဲဟငး
+8,いいえ、けっこうです,いいえ、けっこうです,"iie, kekkou desu","No, thank you; No, that's enough",ဟင့်အင်း တော်ပါပြီ,ဟငးံအငး့ ေတားပါၿပီ
+8,もう～です[ね],もう～です[ね],mou ~desu [ne],already ~,～ပြီနော်,---ၿပီေနား
+8,そろそろ 失礼します,そろそろ しつれいします,sorosoro shitsurei shimasu,It's about time I left; I must be going,ဒါဆိုရင် ပြန်တော့မယ် (ခွင့်ပြုပါအုံး),ဒါဆိုရငး ်ပနးေတာံမယး(ချငးံ်ပဳပါအုဵ့)
+8,いいえ,いいえ,iie,Not at all; Don't mention it,ရပါတယ်။ ကိစ္စမရှိပါဘူး,ရပါတယး။ ကိစၥမရြိပါဘူ့
+8,また いらっしゃって ください,また いらっしゃって ください,mata irasshatte kudasai,Please come again,နောက်လဲ လာပါနော်,ေနာကးလဲ လာပါေနား
+8,シャンハイ,シャンハイ,shanhai,Shanghai,ရှင်ဟိုင်း,ရြနးဟိုငး့
+8,金閣寺,きんかくじ,kinkakuji,Kinkakuji (Golden Pavilion),Kinkakuji ကျောင်းတော်,Kinkakuji ေက္ာငး့ေတား
+8,奈良公園,ならこうえん,nara kouen,Nara Park,Nara ပန်းခြံ,Nara ပနး့ၿခဵ
+8,富士山,ふじさん,fujisan,Mt. Fuji,ဖူဂျီတောင်,ဖူဂ္ီေတာငး
+8,「七人の 侍」,「しちにんの さむらい」,shichinin no samurai,"""Seven Samurai""",စာမူရိုင်း၇ယောက်ရွေ့ရုပ်ရှင်,စာမူရိုငး့၇ေယာကးေရြ့ရုပးရြငး
+9,わかります,わかります,wakarimasu,to understand,နားလည်သည်။,နာ့လညးသညး။
+9,あります,あります,arimasu,to be; to exist (inanimate),ရှိသည်။(သက်မဲ့),ရြိသညး။(သကးမဲ)ံ
+9,好き[な],すき[な],suki[na],like; fond of,ကြိုက်သော,ႀကိဳကးေသာ
+9,嫌い[な],きらい[な],kirai[na],dislike; hate,မုန်းသော,မုနး့ေသာ
+9,上手 [な],じょうず [な],jouzu [na],good at; skillful,တော်သော,ေတားေသာ
+9,下手 [な],へた [な],heta [na],poor at; unskillful,ညံ့သော,ညဵံေသာ
+9,飲み物,のみもの,nomimono,drink; beverage,သောက်စရာ,ေသာကးစရာ
+9,料理,りょうり,ryouri,cooking; dish,ဟင်း၊ အစားအစာ,ဟငး့၊ အစာ့အစာ
+9,スポーツ,スポーツ,supootsu,sports,အားကစား,အာ့ကစာ့
+9,野球,やきゅう,yakyuu,baseball,base ball,base ball
+9,ダンス,ダンス,dansu,dance,အက,အက
+9,旅行,りょこう,ryokou,travel; trip,ခရီးသွားခြင်း,ခရီ့သျာ့်ခငး့
+9,音楽,おんがく,ongaku,music,ဂီတ,ဂီတ
+9,歌,うた,uta,song,သီချင်း,သီခ္ငး့
+9,クラシック,クラシック,kurashikku,classical (music),ရှေးဟောင်းသီချင်း,ေရြ့ေဟာငး့သီခ္ငး့
+9,ジャズ,ジャズ,jazu,jazz,jassသီချင်း,jassသီခ္ငး့
+9,コンサート,コンサート,konsaato,concert,ဂီတဖျော်ဖြေပွဲ,ဂီတေဖ္ားေ်ဖပျဲ
+9,カラオケ,カラオケ,karaoke,karaoke,ကာရာအိုကေ,ကာရာအိုေက
+9,歌舞伎,かぶき,kabuki,kabuki (traditional Japanese theatre),ဂျပန်ရိုးရာဇာတ်ပွဲ,ဂ္ပနးရို့ရာဇာတးပျဲ
+9,絵,え,e,picture; painting,ပန်းချီ,ပနး့ခ္ီ
+9,字,じ,ji,character; letter,စာလုံး,စာလဵု့
+9,漢字,かんじ,kanji,kanji; Chinese character,ဂျပန်စာလုံး,ဂ္ပနးစာလဵု့
+9,ひらがな,ひらがな,hiragana,hiragana,ဟိရဂနစာလုံး,ဟိရဂနစာလဵု့
+9,かたかな,かたかな,katakana,katakana,ခတခနစာလုံး,ခတခနစာလဵု့
+9,ローマ字,ローマじ,rooma ji,Roman letters; romaji,ရိုးမာဂျိစာလုံး,ရို့မာဂ္ိစာလဵု့
+9,細かいお金,こまかいおかね,komakai okane,small change,ပိုက်ဆံအကြွေ,ပိုကးဆဵအေႂကျ
+9,チケット,チケット,chiketto,ticket,လက်မှတ်,လကးမြတး
+9,時間,じかん,jikan,time,အချိန်,အခ္ိနး
+9,用事,ようじ,youji,errand; business,ကိစ္စ,ကိစၥ
+9,約束,やくそく,yakusoku,promise; appointment,ကတိ၊ ချိန်းဆိုထားခြင်း,ကတိ၊ ခ္ိနး့ဆိုထာ့်ခငး့
+9,アルバイト,アルバイト,arubaito,part-time job,အချိန်ပိုင်းအလုပ်,အခ္ိနးပိုငး့အလုပး
+9,ご主人,ごしゅじん,goshujin,(your) husband,ခင်ပွန်း(သူတစ်ပါး၏ ယောက်ျား),ခငးပျနး့(သူတပါ့၏ေယာကး္ာ့)
+9,夫 /主人,おっと/しゅじん,otto/shujin,(my) husband,မိမိ၏ယောက်ျား,မိမိ၏ေယာကး္ာ့
+9,奥さん,おくさん,okusan,(your) wife,ဇနီး (သူတစ်ပါး၏ ဇနီး),ဇနီ့ (သူတပါ့၏ ဇနီ့)
+9,妻/家内,つま/かない,tsuma/kanai,(my) wife,မိမိ၏ဇနီး၊ မိန်းမ,မိမိ၏ဇနီ့၊ မိနး့မ
+9,子ども,こども,kodomo,child; children,ကလေး,ကေလ့
+9,よく,よく,yoku,often; well,ကောင်းကောင်း၊ ခဏခဏ,ေကာငး့ေကာငး့၊ ခဏခဏ
+9,だいたい,だいたい,daitai,roughly; mostly,အကြမ်းအားဖြင့်,အၾကမး့အာ့်ဖငးံ
+9,たくさん,たくさん,takusan,a lot; many,အများကြီး၊ များများ,အမ္ာ့ႀကီ့၊ မ္ာ့မ္ာ့
+9,少し,すこし,sukoshi,a little; a bit,နည်းနည်း,နညး့နညး့
+9,全然,ぜんぜん,zenzen,(not) at all,လုံးဝ,လဵု့ဝ
+9,早く,はやく,hayaku,early; quickly,စောစော၊ မြန်မြန်,ေစာေစာ၊ ်မနး်မနး
+9,～から,～から,~kara,because ~,～ဖြစ်လို့,---်ဖစးလ႔ို
+9,どうして,どうして,doushite,why,ဘာဖြစ်လို့,ဘာ်ဖစးလ႔ို
+9,貸してください。,かしてください。,kashite kudasai.,please lend me ~,ငှားပါ,ငြာ့ပါ
+9,いいですよ。,いいですよ。,ii desu yo.,that's fine; OK,ရပါတယ်,ရပါတယး
+9,残念です[が],ざんねんです[が],zannen desu[ga],that's a pity; unfortunately,စိတ်မကောင်းပါဘူး,စိတးမေကာငး့ပါဘူ့
+9,ああ、,ああ、,"aa,",ah!; oh!,အော်--,ေအား--
+9,いっしょに いかがですか,いっしょに いかがですか,issho ni ikaga desu ka,how about ~ together?,အတူတူ ဘယ်လိုလဲဟင်း,အတူတူ ဘယးလိုလဲဟငး
+9,[～は]ちょっと…,[～は]ちょっと…,[~wa] chotto...,a little...; (hesitation / soft refusal),နည်းနည်း၊ ခဏ၊ သိပ်ပြီးတော့-- (အကြောင်းအရာတစ်ခုကို ငြင်းသည့်အခါသုံးသည်),နညး့နညး့၊ ခဏ၊ သိပးၿပီ့ေတာံ-- (အေၾကာငး့အရာတစးခုကို ်ငငး့သညးံအခါသဵု့သညး)
+9,だめですか,だめですか,dame desu ka,is that no good?; won't it do?,မရဘူးလား,မရဘူ့လာ့
+9,また 今度 お願いします,また こんど おねがいします,mata kondo onegai shimasu,maybe next time; (I'll ask) again next time,နောက်တခါ---တောင်းဆိုပါတယ် (ဒီတစ်ခေါက်အဆင်မပြေသောကြောင်း နောက်တခါကျမှ),ေနာကးတခါ---ေတာငး့ဆိုပါတယး (ဒီတစးေခါကးအဆငးမေ်ပေသာေၾကာငးံေနာကးတခါက္မြ)
+10,あります,あります,arimasu,there is (inanimate),ရှိသည်။(သက်မဲ့),ရြိသညး။(သကးမဲ)ံ
+10,います,います,imasu,there is (people/animals),ရှိသည်။ နေသည်။(သက်ရှိ),ရြိသညး။ ေနသညး။(သကးရြိ)
+10,いろいろ[な],いろいろ[な],iroiro[na],various,အမျိုးမျိုး,အမ္ိဳ့မ္ိဳ့
+10,男の人,おとこのひと,otoko no hito,man,အမျိုးသား၊ ယောက်ျားလေး,အမ္ိဳ့သာ့၊ ေယာကး္ာ့ေလ့
+10,女の人,おんなのひと,onna no hito,woman,အမျိုးသမီး၊ မိန်းကလေး,အမ္ိဳ့သမီ့၊ မိနး့ကေလ့
+10,男の子,おとこのこ,otoko no ko,boy,ကောင်လေး,ေကာငးေလ့
+10,女の子,おんなのこ,onna no ko,girl,ကောင်မလေး,ေကာငးမေလ့
+10,犬,いぬ,inu,dog,ခွေး,ေချ့
+10,猫,ねこ,neko,cat,ကြောင်,ေၾကာငး
+10,パンダ,パンダ,panda,panda,ပန်ဒါ,ပနးဒါ
+10,象,ぞう,zou,elephant,ဆင်,ဆငး
+10,木,き,ki,tree,သစ်ပင်,သစးပငး
+10,物,もの,mono,thing,အရာဝတ္ထု,အရာဝတၳဳ
+10,電池,でんち,denchi,battery,ဓာတ်ခဲ,ဓါတးခဲ
+10,箱,はこ,hako,box,ဗူး,ဗူ့
+10,スイッチ,スイッチ,suitchi,switch,မီးခလုတ်,မီ့ခလုတး
+10,冷蔵庫,れいぞうこ,reizouko,refrigerator,ရေခဲသေတ္တာ,ေရခဲေသတၱာ
+10,テーブル,テーブル,teeburu,table,စားပွဲခုံ,စာ့ပျခ ဲ ဵု
+10,ベッド,ベッド,beddo,bed,အိပ်ရာ၊ ကုတင်,အိပးရာ၊ ကုတငး
+10,棚,たな,tana,shelf,စင်(စာအုပ်စင်၊ ပန်းကန်စင်),စငး(စာအုပးစငး၊ ပနး့ကနးးစငး)
+10,ドア,ドア,doa,door,တံခါး,တဵခါ့
+10,窓,まど,mado,window,ပြတင်းပေါက်,်ပတငး့ေပါကး
+10,ポスト,ポスト,posuto,mailbox; postbox,စာတိုက်ပုံး,စာတိုကးပဵု့
+10,ビル,ビル,biru,building,အဆောက်အဦး,အေဆာကးအဦ့
+10,ATM,ATM,eetiiemu,ATM,အလိုအလျောက်ငွေထုတ်စက်,အလိုအေလ္ာကးေငျထုတးစကး
+10,コンビニ,コンビニ,konbini,convenience store,convenience store,convenience store
+10,公園,こうえん,kouen,park,ပန်းခြံ,ပနး့ၿခဵ
+10,喫茶店,きっさてん,kissaten,coffee shop; tea house,လက်ဖက်ရည်/ကော်ဖီဆိုင်,လကးဖကးရညး/ေကားဖီဆိုငး
+10,本屋,ほんや,honya,bookstore,စာအုပ်ဆိုင်,စာအုပးဆိုငး
+10,～屋,～や,~ya,~ shop,～ဆိုင်,---ဆိုငး
+10,乗り場,のりば,noriba,boarding place; stop,～ယာဉ်စီးတဲ့နေရာ,---ယာဥးစီ့တဲံေနရာ
+10,県,けん,ken,prefecture,တိုင်းဒေသ (prefecture),တုိငး့ေဒသ (prefecture)
+10,上,うえ,ue,up; above; on,အပေါ်,အေပၚ
+10,下,した,shita,down; below; under,အောက်,ေအာကး
+10,前,まえ,mae,front; before,ရှေ့၊ အရှေ့,ေရြ႕၊ အေရြ႕
+10,後ろ,うしろ,ushiro,back; behind,နောက်၊ အနောက်,ေနာကး၊ အေနာကး
+10,右,みぎ,migi,right,ညာဘက်,ညာဘကး
+10,左,ひだり,hidari,left,ဘယ်ဘက်,ဘယးဘကး
+10,中,ちゅう,chuu,inside; middle,အထဲ(မှာ),အထဲ(မြာ)
+10,外,がい,gai,outside,အပြင်(မှာ),အ်ပငး(မြာ)
+10,隣,となり,tonari,next to; neighbouring,အနား(မှာ),အနာ့(မြာ)
+10,近く,ちかく,chikaku,near; neighbourhood,အနီးနား(မှာ),အနီ့နာ့(မြာ)
+10,間,あいだ,aida,between; interval,နှစ်ခုကြား (မှာ),ႏြစးခုၾကာ့ (မြာ)
+10,～や～など,～や～など,~ya~nado,"~ and ~, etc.",～နဲ့～တွေ,---နဲ႔---ေတျ
+10,[どうも]すみません。,[どうも]すみません。,[doumo] sumimasen.,Excuse me; I'm sorry to trouble you,ကျေးဇူးပါ(အနှောင့်အယှက်ဖြစ်ရင်ခွင့်လွှတ်ပါ),ေက့္ဇူ့ပါ(အေႏြာကးအယြကး်ဖစးရငးချငးံလႊတးပါ)
+10,ナンプラー,ナンプラー,nanpuraa,fish sauce,ငံပြာရည်,ငဵ်ပာရညး
+10,コーナー,コーナー,koonaa,corner,ကော်နာ,ေကားနာ
+10,いちばん下,いちばんした,ichiban shita,the bottom; the lowest,အောက်ဆုံး,ေအာကးဆဵု့
+10,東京ディズニーランド,とうきょうディズニーランド,toukyou dizuniirando,Tokyo Disneyland,တိုကျို ဒစ္စနေလန်း,တိုက္ိဳ ဒစးစေနလနး့
+10,アジアストア,アジアストア,ajia sutoa,Asia Store,အာရှအာ စတိုးဆိုင်,အာဂ္ီအာ စတို့ဆုိငး
+11,います[子どもが],います[こどもが],imasu [kodomo ga],"to be, to exist (a child)",ရှိသည်။(ကလေးရှိသည်),ရြိသညး။(ကေလ့ရြိသညး)
+11,います[日本に],います[にほんに],imasu [nihon ni],"to be, to exist (in Japan)",နေသည်။ (ဂျပန်တွင်),ေနသညး။ (ဂ္ပနးတငျး)
+11,かかります,かかります,kakarimasu,to take (time),ကြာသည်။(အချိန်ကြာတယ်),ၾကာသညး။(အခ္ိနးၾကာတယး)
+11,休みます,やすみます,yasumimasu,to rest; to take a day off,အနားယူသည်။,အနာ့ယူသညး။
+11,[会社を],[かいしゃを],[kaisha o],(the company),ကုမ္ပဏီကို,ကုမၸဏီကို
+11,1つ,ひとつ,hitotsu,one (thing),တစ်ခု,တစးခု
+11,2つ,ふたつ,futatsu,two (things),နှစ်ခု,ႏြစးခု
+11,3つ,みっつ,mittsu,three (things),သုံးခု,သဵု့ခု
+11,4つ,よっつ,yottsu,four (things),လေးခု,ေလ့ခု
+11,5つ,いつつ,itsutsu,five (things),ငါးခု,ငါ့ခု
+11,6つ,むっつ,muttsu,six (things),ခြောက်ခု,ေ်ခာကးခု
+11,7つ,ななつ,nanatsu,seven (things),ခုနစ်ခု,ခုႏြစးခု
+11,8つ,やっつ,yattsu,eight (things),ရှစ်ခု,ရြစးခု
+11,9つ,ここのつ,kokonotsu,nine (things),ကိုးခု,ကို့ခု
+11,とお,とお,too,ten (things),ဆယ်ခု,ဆယးခု
+11,いくつ,いくつ,ikutsu,how many (things),ဘယ်နှစ်ခု,ဘယးႏြစးခု
+11,1人,ひとり,hitori,one person,တစ်ယောက်,တစးေယာကး
+11,2人,ふたり,futari,two people,နှစ်ယောက်,ႏြစးေယာကး
+11,～人,～にん,~nin,~ people,～ယောက်,---ေယာကး
+11,～台,～だい,~dai,"counter for machines, vehicles, etc.",～စီး၊～လုံး၊ (ကြီးမားသော အရာ(ကား၊ တီဗီ၊ ရေခဲ သေတ္တာ၊ ပန်ကာ စသည်များ)),---စီ့၊--လဵု့၊ (ႀကီ့မာ့ေသာ အရာ(ကာ့၊ တီဗီ၊ ေရခဲ ေသတၱာ၊ပနးကာ စသညးမ္ာ့))
+11,～枚,～まい,~mai,counter for flat things,～ရွက်(ပါးလွှာသောအရာ(တံဆိပ်ခေါင်း၊ စာရွက်၊ စာအိတ်၊ ဓါတ်ပုံ၊ အင်္ကျီ စသည်များ)),---ရျကး(ပါ့လႊာေသာအရာ(တဵဆိပးေခါငး့၊ စာရျကး၊ စာအိတး၊ဓါတးပဵု၊ အကၤ ္ီ စသညးမ္ာ့))
+11,～回,～かい,~kai,counter for times; ~ times,～ခေါက်(အကြိမ်အရေ),---ေခါကး(အႀကိမးအေရ)
+11,りんご,りんご,ringo,apple,ပန်းသီး,ပနး့သီ့
+11,みかん,みかん,mikan,mandarin orange,လိမ္မော်သီး,လိေမၼားသီ့
+11,サンドイッチ,サンドイッチ,sandoitchi,sandwich,Sandwich,Sandwich
+11,カレー[ライス],カレー[ライス],karee [raisu],curry [and rice],ဂျပန်မဆလာဟင်း,ဂ္ပနးးမဆလာဟငး့
+11,アイスクリーム,アイスクリーム,aisukuriimu,ice cream,ရေခဲမုန့်,ေရခဲမုနး႔
+11,切手,きって,kitte,stamp,တံဆိပ်ခေါင်း,တဵဆိပးေခါငး့
+11,はがき,はがき,hagaki,postcard,post card,post card
+11,封筒,ふうとう,fuutou,envelope,စာအိတ်,စာအိတး
+11,両親,りょうしん,ryoushin,(both) parents,မိဘနှစ်ပါး,မိဘႏြစးပါ့
+11,兄弟,きょうだい,kyoudai,brothers and sisters; siblings,မောင်နှမ,ေမာငးႏြစးမ
+11,兄,あに,ani,older brother (one's own),အကို(မိမိ၏အကို),အကို(မိမိ၏အကို)
+11,お兄さん,おにいさん,oniisan,older brother (someone else's),အကို(သူတစ်ပါး၏အကို),အကို(သူတစးပါ့၏အကို)
+11,姉,あね,ane,older sister (one's own),အမ(မိမိ၏အမ),အမ(မိမိ၏အမ)
+11,お姉さん,おねえさん,oneesan,older sister (someone else's),အမ(သူတစ်ပါး၏အမ),အမ(သူတစးပါ့၏အမ)
+11,弟,おとうと,otouto,younger brother (one's own),မောင်၊ ညီ(မိမိ၏မောင်၊ ညီ),ေမာငး၊ ညီ(မိမိ၏ေမာငး၊ ညီ)
+11,弟さん,おとうとさん,otoutosan,younger brother (someone else's),သူတစ်ပါး၏မောင်၊ ညီ,သူတစးပါ့၏ေမာငး၊ ညီ
+11,妹,いもうと,imouto,younger sister (one's own),ညီမ(မိမိ၏ညီမ),ညီမ(မိမိ၏ညီမ)
+11,妹さん,いもうとさん,imoutosan,younger sister (someone else's),သူတစ်ပါး၏ညီမ,သူတစးပါ့၏ညီမ
+11,外国,がいこく,gaikoku,foreign country,နိုင်ငံခြား,ႏိုငးငဵ်ခာ့
+11,留学生,りゅうがくせい,ryuugakusei,foreign student,နိုင်ငံခြားပညာတော်သင် ကျောင်းသား,ႏိုငးငဵ်ခာ့ပညာေတားသငးေက္ာငး့သာ့
+11,～時間,～じかん,~jikan,~ hours,～နာရီ(၁ နာရီ),---နာရီ(၁ နာရီ)
+11,～週間,～しゅうかん,~shuukan,~ weeks,～ပတ်(ရက်သတ္တပတ်),---ပတး(ရကးသတၱပတး)
+11,～ヶ月,～げつ,~getsu,~ months,～လကြာ,-လၾကာ
+11,～年,～ねん,~nen,~ years,～နှစ်,---ႏြစး
+11,ぐらい,ぐらい,gurai,about; approximately,လောက်(၁ နာရီလောက်),ေလာကး(၁ နာရီေလာကး)
+11,どのぐらい,どのぐらい,donogurai,how long; how much,ဘယ်လောက်,ဘယးေလာကး
+11,全部で,ぜんぶで,zenbude,in all; altogether,အားလုံး(အရာဝတ္ထု),အာ့လဵု့(အရာဝတၳဳ)
+11,みんな,みんな,minna,everyone; all (people),အားလုံး(လူ၊ သက်ရှိ),အာ့လဵု့(လူ၊ သကးရြိ)
+11,～だけ,～だけ,~dake,only ~; just ~,～တည်းဘဲ,---တညး့ဘဲ
+11,かしこまりました,かしこまりました,kashikomarimashita,Certainly. (polite reply),ကောင်းပါပြီ,ေကာငး့ပါၿပီ
+11,いいお天気ですね,いいおてんきですね,ii otenki desu ne,"Nice weather, isn't it?",ရာသီဥတုကောင်းတယ်နော်,ရာသီဥတုေကာငး့တယးေနား
+11,おでかけですか,おでかけですか,odekake desu ka,Are you going out?,အပြင်သွားမလို့လား,အ်ပငးသာျ ့မလိုလာ့
+11,ちょっと～まで,ちょっと～まで,chotto ~ made,to ~ for a while,ခဏ～အထိ,ခဏ---အထိ
+11,行ってらっしゃい,いってらっしゃい,itterasshai,Have a nice day. (seeing someone off),သွားပါနော်(နှုတ်ဆက်),သျာ့ပါေနား(ႏႈတးဆကး)
+11,行ってきます,いってきます,ittekimasu,I'm off. (leaving home),သွားပြီနော်(နှုတ်ဆက်),သျာ့ၿပီေနား(ႏႈတးဆကး)
+11,船便,ふなびん,funabin,surface mail (by ship),ရေကြောင်းဖြင့်ပေးပို့,ေရေၾကာငး့်ဖငးံေပ့ပို႔
+11,航空便 [エアメール],こうくうびん [エアメール],koukuubin [eameeru],airmail,လေကြောင်းဖြင့်ပေးပို့,ေလေၾကာငး့်ဖငးံေပ့ပို႔
+11,お願いします。,おねがいします。,onegaishimasu.,Please. (request),ကျေးဇူးပြု၍,ေက့္ဇူ့်ပဳ၍
+11,オーストラリア,オーストラリア,oosutoraria,Australia,Australia,Australia
+12,簡単[な],かんたん[な],kantan [na],easy; simple,လွယ်သော,လျယးေသာ
+12,近い,ちかい,chikai,near; close,နီးသော,နီ့ေသာ
+12,遠い,とおい,tooi,far,ဝေးသော,ေဝ့ေသာ
+12,速い,はやい,hayai,fast; quick,မြန်သော(အရှိန်မြန်သော),်မနးေသာ(အရြိနး်မနးေသာ)
+12,遅い,おそい,osoi,slow; late,နှေးသော,ေႏြ့ေသာ
+12,多い[人が～],おおい[ひとが～],ooi [hito ga ~],many; a lot (people),များသော(လူ),မ္ာ့ေသာ(လူ)
+12,少ない[人が～],すくない[ひとが～],sukunai [hito ga ~],few; a little (people),နည်းသော(လူ),နညး့ေသာ(လူ)
+12,暖かい、温かい,あたたかい、あたたかい,"atatakai, atatakai",warm,နွေးသော,ေႏျ့ေသာ
+12,涼しい,すずしい,suzushii,cool (weather),အေးမြသော,ေအ့်မေသာ
+12,甘い,あまい,amai,sweet,ချိုသော,ခ္ိဳေသာ
+12,辛い,からい,karai,spicy; hot,စပ်သော,စပးေသာ
+12,重い,おもい,omoi,heavy,လေးသော,ေလ့ေသာ
+12,軽い,かるい,karui,light (weight),ပေါ့သော,ေပါံေသာ
+12,いい[コーヒーが～],いい[コーヒーが～],ii [koohii ga ~],good; nice (coffee),ကောင်းသော(ကော်ဖီက),ေကာငး့ေသာ(ေကားဖီက)
+12,季節,きせつ,kisetsu,season,ရာသီဥတု,ရာသီဥတု
+12,春,はる,haru,spring,နွေဦးပေါက်,ေႏျဦ့ေပါကး
+12,夏,なつ,natsu,summer,နွေရာသီ,ေႏျရာသီ
+12,秋,あき,aki,autumn; fall,ဆောင်းဦးပေါက်,ေဆာငး့ဦ့ေပါကး
+12,冬,ふゆ,fuyu,winter,ဆောင်းရာသီ,ေဆာငး့ရာသီ
+12,天気,てんき,tenki,weather,မိုးလေဝသ၊ ရာသီဥတု,မို့ေလဝသ၊ ရာသီဥတု
+12,雨,あめ,ame,rain,မိုး,မို့
+12,雪,ゆき,yuki,snow,နှင်း,ႏြငး့
+12,曇,くもり,kumori,cloudy,တိမ်ထူသော,တိမးထူေသာ
+12,ホテル,ホテル,hoteru,hotel,ဟိုတယ်,ဟိုတယး
+12,空港,くうこう,kuukou,airport,လေဆိပ်,ေလဆိပး
+12,海,うみ,umi,sea; ocean,ပင်လယ်,ပငးလယး
+12,世界,せかい,sekai,world,ကမ္ဘာလောက,ကမာၻေလာက
+12,パーティー,パーティー,paatii,party,ပါတီပွဲ,ပါတီပျဲ
+12,[お]祭り,[お]まつり,[o]matsuri,festival,ပွဲတော်,ပျေဲ တား
+12,すき焼き,すきやき,sukiyaki,sukiyaki (Japanese beef hot pot),ဂျပန် အမဲသား hot pot,ဂ္ပနး အမဲသာ့ hot pot
+12,刺身,さしみ,sashimi,sashimi (raw fish),ဆာရှိမိ,ဆာရြိမိ
+12,[お]すし,[お]すし,[o]sushi,sushi,ဆူရှီ,ဆူရြီ
+12,天ぷら,てんぷら,tenpura,tempura,ဂျပန်အကြော်,ဂ္ပနးအေၾကား
+12,豚肉,ぶたにく,butaniku,pork,ဝက်သား,ဝကးသာ့
+12,鶏肉,とりにく,toriniku,chicken (meat),ကြက်သား,ၾကကးသာ့
+12,牛肉,ぎゅうにく,gyuuniku,beef,အမဲသား,အမဲသာ့
+12,レモン,レモン,remon,lemon,သံပုရိုသီး,သဵပုရိုသီ့
+12,生け花,いけばな,ikebana,flower arrangement,ဂျပန်ပန်းအလှထိုးခြင်း,ဂ္ပနးပနး့အလြထို့်ခငး့
+12,紅葉,もみじ,momiji,autumn leaves; fall colors,သစ်ရွက်များအရောင် ပြောင်းခြင်း,သစးရျကးမ္ာ့အေရာငးေ်ပာငး့်ခငး့
+12,どちら,どちら,dochira,which one,ဘယ်ဟာ,ဘယးဟာ
+12,どちらも,どちらも,dochiramo,both; either,နှစ်ခုစလုံး(ဘယ်ဟာမဆို),ႏြစးခုစလဵု့(ဘယးဟာမဆို)
+12,いちばん,いちばん,ichiban,the most; number one,～ဆုံး (အကောင်းဆုံး၊ အများဆုံး),～ဆဵု့ (အေကာငး့ဆဵု့၊အမ္ာ့ဆဵု့)
+12,ずっと,ずっと,zutto,all the time; very,တောက်လျှောက်၊ အမြဲတမ်း၊ အရမ်း,ေတာကးေလြ္ာကး၊အၿမဲတမး့၊ အရမး့
+12,初めて,はじめて,hajimete,for the first time,ပထမဆုံး,ပထမဆဵု့
+12,ただいま,ただいま,tadaima,I'm home.,ပြန်ရောက်ပါပြီ(နှုတ်ဆက်),်ပနးေရာကးပါၿပီ(ႏႈတးဆကး)
+12,お帰りなさい,おかえりなさい,okaerinasai,Welcome home.,ပြန်လာပါ(နှုတ်ဆက်),်ပနးးလာပါ(ႏႈတးဆကး)
+12,わあ すごい 人ですね,わあ すごい ひとですね,waa sugoi hito desu ne,"Wow, so many people!",ကြည့်ပါအုံး လူတွေအများကြီးဘဲ,ၾကညးံပါအုဵ့လူေတျအမ္ာ့ႀကီ့ဘဲ
+12,疲れました,つかれました,tsukaremashita,I got tired.,ပင်ပန်းခဲ့တယ်။,ပငးပနး့ခဲံတယး။
+12,祇園祭,ぎおんまつり,gionmatsuri,Gion Festival,Gion ပွဲတော်,Gion ပျေဲ တား
+12,ホンコン,ホンコン,honkon,Hong Kong,ဟောင်ကောင်,ေဟာငးေကာငး
+12,シンガポール,シンガポール,shingapooru,Singapore,စင်ကာပူ,စငးကာပူ
+12,ABC ストア,ABC ストア,ABC sutoa,ABC Store,ABCစတိုးဆိုင်,ABCစတုိ့ဆိုငး
+12,ジャパン,ジャパン,japan,Japan (supermarket),Japanစူပါမားကတ်,Japanစူပါမာ့ကတး
+13,遊びます,あそびます,asobimasu,to play; to have fun,ကစားသည်။,ကစာ့သညး။
+13,泳ぎます,およぎます,oyogimasu,to swim,ရေကူးသည်။,ေရကူ့သညး။
+13,迎えます,むかえます,mukaemasu,to meet; to welcome,ကြိုသည်။ ကြိုဆိုသည်။,ႀကိဳသညး။ ႀကိဳဆိုသညး။
+13,疲れます,つかれます,tsukaremasu,to get tired,ပင်ပန်းသည်။ မောပန်းသည်။,ပငးပနး့သညး။ ေမာပနး့သညး။
+13,結婚します,けっこんします,kekkonshimasu,to get married,အိမ်ထောင်ပြုသည်။,အိမးေထာငး်ပဳသညး။
+13,買い物します,かいものします,kaimonoshimasu,to shop; to go shopping,စျေးဝယ်သည်။,ေစ့္ဝယးသညး။
+13,食事します,しょくじします,shokujishimasu,to have a meal; to eat,ထမင်းစားသည်။,ထမငး့စာ့သညး။
+13,散歩します,さんぽします,sanposhimasu,to take a walk; to stroll,လမ်းလျှောက်သည်,လမး့ေလြ္ာကးသညး
+13,[公園を],[こうえんを],[kouen o],(the park),(ပန်းခြံမှာ)။,(ပနး့ၿခဵမြာ)။
+13,大変[な],たいへん[な],taihen [na],hard; tough; awful,ပင်ပန်းသော၊ ခက်ခဲသော,ပငးပနး့ေသာ၊ ခကးခဲေသာ
+13,欲しい,ほしい,hoshii,to want; to desire,လိုချင်သော,လိုခ္ငးေသာ
+13,広い,ひろい,hiroi,wide; spacious,ကျယ်သော,က္ယးေသာ
+13,狭い,せまい,semai,narrow,ကျဉ်းသော,က္ဥး့ေသာ
+13,プール,プール,puuru,swimming pool,ရေကူးကန်,ေရကူ့ကနး
+13,川,かわ,kawa,river,မြစ်ချောင်း,်မစးေခ္ာငး့
+13,美術,びじゅつ,bijutsu,art; fine arts,အနုပညာ,အႏုပညာ
+13,釣り,つり,tsuri,fishing,ငါးမျှားခြင်း,ငါ့မြ္ာ့်ခငး့
+13,スキー,スキー,sukii,skiing,နှင်းလျှောစီးခြင်း,ႏြငး့ေလြ္ာစီ့်ခငး့
+13,週末,しゅうまつ,shuumatsu,weekend,စနေနှင့်တနင်္ဂနွေ(week end),စေနႏြငးံတနဂၤေႏျ(week end)
+13,～ごろ,～ごろ,~goro,around (time); about,～လောက်,---ေလာကး
+13,何か,なにか,nanika,something,တစ်ခုခု,တစးခုခု
+13,どこか,どこか,dokoka,somewhere,တစ်နေရာရာ,တစးေနရာရာ
+13,のどが かわきます,のどが かわきます,nodo ga kawakimasu,to be thirsty,အာခေါင်ခြောက်တယ်,အာေခါငးေ်ခာကးတယး
+13,おなかが すきます,おなかが すきます,onaka ga sukimasu,to be hungry; to get hungry,ဗိုက်ဆာတယ်,ဗိုကးဆာတယး
+13,そうしましょう,そうしましょう,sou shimashou,Let's do that.,အဲဒီလိုလုပ်ရအောင်,အဲဒီလိုလုပးရေအာငး
+13,ご注文は？,ごちゅうもんは？,gochuumon wa?,What would you like to order?,ဘာစားမှာလဲ(စားသောက်ဆိုင်တွင်),ဘာစာ့မြာလဲ(စာ့ေသာကးဆိုငးတငျး)
+13,定食,ていしょく,teishoku,set meal; set menu,သတ်မှတ်ထားသောအစား အစာ (Set menu),သတးမြတးထာ့ေသာအစာ့အစာ (Set menu)
+13,牛どん,ぎゅうどん,gyuudon,beef bowl (beef over rice),အမဲသားဟင်းနှင့်ထမင်း,အမဲသာ့ဟငး့ႏြငးံထမငး့
+13,[少々] お待ちください,[しょうしょう] おまちください,[shoushou] omachikudasai,Please wait a moment.,ခဏစောင့်ပါ,ခဏေစာငးံပါ
+13,別々に,べつべつに,betsubetsuni,separately,သီးခြားစီ (ငွေရှင်းသည့်အချိန်တွင် အသုံးများ),သီ့်ခာ့စီ (ေငျရြငး့သညးံအခ္ိနးတငျးအသဵု့မ္ာ့)
+13,アキックス,アキックス,akikkusu,Akikku (company name),あきっくす ကုမ္ပဏီ,あきっくす ကုမၸဏီ
+13,おはようテレビ,おはようテレビ,ohayou terebi,Ohayo TV (program name),ohayoတီဗီအစီအစဉ်,ohayoတီဗျအီစီအစဥး
+14,付けます,つけます,tsukemasu,"to turn on (light, air conditioner, TV)",မီးဖွင့်၊ အဲယားကွန်း၊ TV ဖွင့်သည်။,မီ့ဖျငးံ၊ အဲယာ့ကျနး့၊ TVဖျငးံသညး။
+14,消します,けします,keshimasu,"to turn off (light, air conditioner, TV)",မီးပိတ်၊ အဲယားကွန်း၊ TV ပိတ်သည်။,မီ့ပိတ၊း အဲယာ့ကျနး့၊ TVပိတသ း ညး။
+14,開けます,あけます,akemasu,to open (a door),တံခါးဖွင့်သည်။,တဵခါ့ဖျငးံသညး။
+14,閉めます,しめます,shimemasu,to close (a door),တံခါးပိတ်သည်။,တဵခါ့ပိတးသညး။
+14,急ぎます,いそぎます,isogimasu,to hurry,အလျင်လိုသည်။,အလ္ငးလိုသညး။
+14,待ちます,まちます,machimasu,to wait,စောင့်သည်။,ေစာငးံသညး။
+14,持ちます,もちます,mochimasu,to hold; to carry,ကိုင်သည်။ ယူထားသည်။,ကိုငးသညး။ ယူထာ့သညး။
+14,取ります,とります,torimasu,to take; to pick up,ယူသည်။ လွှမ်းယူသည်။,ယူသညး။ လြမး့ယူသညး။
+14,手伝います,てつだいます,tetsudaimasu,to help,ကူညီသည်။,ကူညီသညး။
+14,呼びます,よびます,yobimasu,to call (out to),ခေါ်သည်။ အော်ခေါ်သည်။,ေခၚသညး။ ေအားေခၚသညး။
+14,話します,はなします,hanashimasu,to speak; to talk,ပြောသည်။,ေ်ပာသညး။
+14,使います,つかいます,tsukaimasu,to use,အသုံးပြုသည်။,အသဵု့်ပဳသညး။
+14,止めます,とめます,tomemasu,to stop,ရပ်သည်။,ရပးသညး။
+14,見せます,みせます,misemasu,to show,ပြသည်။,်ပသညး။
+14,教えます[住所を～],おしえます[じゅうしょを～],oshiemasu [juusho o ~],to tell; to teach (an address),ပြောပြသည်(လိပ်စာကို),ေ်ပာ်ပသညး(လိပးစာကိ)ု
+14,座ります,すわります,suwarimasu,to sit down,ထိုင်သည်,ထိုငးသညး
+14,立ちます,たちます,tachimasu,to stand up,မတ်တပ်ရပ်သည်,မတးတပးရပးသညး
+14,入ります,はいります,hairimasu,to enter; to go in,ဝင်သည်,ဝငးသညး
+14,[喫茶店に～],[きっさてんに～],[kissaten ni ~],(to a coffee shop),(လက်ဖက်ရည်ဆိုင်သို့),(လကးဖကးရညးဆိုငးသ႔)ို
+14,出ます,でます,demasu,to go out; to leave,ထွက်သည်,ထျကးသညး
+14,[喫茶店を],[きっさてんを],[kissaten o],(from a coffee shop),(လက်ဖက်ရည်ဆိုင်မှ),(လကးဖကးရညးဆိုငးမြ)
+14,降ります[雨が～],ふります[あめが～],furimasu [ame ga ~],to fall (rain),ရွာသည်(မိုး),ရျာသညး(မို့)
+14,コピーします,コピーします,kopiishimasu,to copy; to photocopy,မိတ္တူကူးသည်။,မိတၱဴကူ့သညး။
+14,電気,でんき,denki,electricity,လျှပ်စစ်,လြ္ပးစစး
+14,エアコン,エアコン,eakon,air conditioner,အဲယားကွန်း,အဲယာ့ကျနး့
+14,パスポート,パスポート,pasupooto,passport,ပတ်စ်ပို့,ပတးစးပို႔
+14,名前,なまえ,namae,name,နာမည်,နာမညး
+14,住所,じゅうしょ,juusho,address,လိပ်စာ,လိပးစာ
+14,地図,ちず,chizu,map,မြေပုံ,ေ်မပဵု
+14,塩,しお,shio,salt,ဆား,ဆာ့
+14,砂糖,さとう,satou,sugar,သကြား,သၾကာ့
+14,問題,もんだい,mondai,question; problem,မေးခွန်း,ေမ့ချနး့
+14,答え,こたえ,kotae,answer,အဖြေ,အေ်ဖ
+14,読み方,よみかた,yomikata,how to read,ဖတ်နည်း,ဖတးနညး့
+14,～方,～かた,~kata,how to ~; way of ~,～နည်း,---နညး့
+14,まっすぐ,まっすぐ,massugu,straight ahead,တည့်တည့်,တညးံတညးံ
+14,ゆっくり,ゆっくり,yukkuri,slowly,ဖြေးဖြေး,ေ်ဖ့ေ်ဖ့
+14,すぐ,すぐ,sugu,immediately; right away,ချက်ချင်း,ခ္ကးခ္ငး့
+14,また,また,mata,again; also,နောက်မှ,ေနာကးမြ
+14,後で,あとで,atode,later; afterwards,ပြီးမှ,ၿပီ့မြ
+14,もう少し,もうすこし,mousukoshi,a little more,အနည်းငယ်ထပ်ပြီး,အနညး့ငယးထပးၿပီ့
+14,もう～,もう～,mou ~,~ more; another ~,～ထပ်ပြီး,---ထပးၿပီ့
+14,さあ,さあ,saa,Come on!; Well!,ကဲ---,ကဲ---
+14,あれ？,あれ？,are?,Huh?; What?,ဟောတော့,ေဟာေတာံ
+14,信号を右へ曲がってください,しんごうをみぎへまがってください,shingou o migi e magatte kudasai,Please turn right at the traffic light.,မီးပိုင့်ကို ညာဘက်ကွေ့ပါ။,မီ့ပိျဳငးံကို ညာဘကးေကျ႕ပါ။
+14,これでお願いします,これでおねがいします,kore de onegaishimasu,I'll take this. (when paying),ဒါနဲ့ယူပါ။(ပိုက်ဆံပေးချေသာအခါ),ဒါနဲယူပါ။(ပိုကးဆဵေပ့သာအခါ)
+14,お釣り,おつり,otsuri,change (money back),ပိုက်ဆံအကြွေ၊ ပြန်အမ်းငွေ,ပိုကးဆဵအေႂကျ၊ ်ပနးအမး့ေငျ
+14,みどり町,みどりちょう,midori chou,Midori Town,Midori မြို့,Midori ၿမိဳ႕
+15,置きます,おきます,okimasu,to put; to place,ထားသည်။,ထာ့သညး။
+15,作ります、造ります,つくります、つくります,"tsukurimasu, tsukurimasu",to make; to produce; to build,ပြုလုပ်သည်။ ထုတ်လုပ်သည်။,်ပဳလုပးသညး။ ထုတးလုပးသညး။
+15,売ります,うります,urimasu,to sell,ရောင်းသည်။,ေရာငး့သညး။
+15,知ります,しります,shirimasu,to know; to learn,သိသည်။,သိသညး။
+15,住みます,すみます,sumimasu,to live; to reside,နေသည်။ နေထိုင်သည်။,ေနသညး။ ေနထိုငးသညး။
+15,研究します,けんきゅうします,kenkyuushimasu,to research; to study,သုတေသနပြုသည်။,သုေသတန်ပဳသညး။
+15,資料,しりょう,shiryou,materials; documents; data,စာရွက်စာတမ်း,စာရျကးစာတမး့
+15,カタログ,カタログ,katarogu,catalog,ကတ်တလောက်,ကတးတေလာကး
+15,時刻表,じこくひょう,jikokuhyou,timetable,အချိန်ဇယား,အခ္ိနးဇယာ့
+15,服,ふく,fuku,clothes; clothing,အင်္ကျီ,အကၤ ္ီီ
+15,製品,せいひん,seihin,product; manufactured goods,ပစ္စည်း,ပစၥညး့
+15,ソフト,ソフト,sofuto,software,softwear,softwear
+15,電子辞書,でんしじしょ,denshijisho,electronic dictionary,လျှပ်စစ်အဘိဓာန်,လြ္ပးစစးအဘိဓာနး
+15,経済,けいざい,keizai,economy,စီးပွားရေး,စီ့ပျာ့ေရ့
+15,市役所,しやくしょ,shiyakusho,city hall; municipal office,မြို့တော်ခန်းမ/စည်ပင်သာယာရုံး,ၿမိဳ႕ေတားခနး့မ/စညးပငးသာယာရဵု့
+15,高校,こうこう,koukou,high school,အထက်တန်းကျောင်း,အထကးတနး့ေက္ာငး့
+15,歯医者,はいしゃ,haisha,dentist,သွားဆရာဝန်,သျာ့ဆရာဝနး
+15,独身,どくしん,dokushin,single; unmarried,လူပျို၊ လူလွတ်၊ အပျို,လူပ္ိဳ၊ လူလျတး၊ အပ္ိဳ
+15,すみません,すみません,sumimasen,Excuse me.; I'm sorry.,စိတ်မကောင်းပါဘူး,စိတးမေကာငး့ပါဘူ့
+15,皆さん,みなさん,minasan,everyone; ladies and gentlemen,အားလုံး,အာ့လဵု့
+15,思い出します,おもいだします,omoidashimasu,to remember; to recall,သတိရသည်/အမှတ်ရသည်။,သတိရသညး/အမြတးရသညး။
+15,いらっしゃいます,いらっしゃいます,irasshaimasu,to be (polite); to come/go (polite),ရှိသည်(ယဉ်ကျေးသောအသုံး),ရြိသညး(ယဥးေက့္ေသာအသဵု့)
+15,日本橋,にほんばし,nihonbashi,Nihonbashi (Osaka shopping district),ဂျပန်တံတား (အိုဆာကာမှ လူစည်ကားသောနေရာ),ဂ္ပနးတဵတာ့ (အိုဆာကာမြလူစညးကာ့ေသာေနရာ)
+15,みんなの インタビュー,みんなの インタビュー,minna no intabyuu,Minna no Interview (TV program),Minna no Interview တီဗီအစီအစဉ်,Minna no Interview တီဗီအစီအစဥး
+16,乗ります[電車に～],のります[でんしゃに～],norimasu [densha ni ~],to get on (a train),စီးသည်။ (ရထားကို),စီ့သညး။ (ရထာ့ကိ)ု
+16,降ります[電車を～],おります[でんしゃを～],orimasu [densha o ~],to get off (a train),ဆင်းသည်။ (ရထားမှ),ဆငး့သညး။ (ရထာ့မြ)
+16,乗り換えます,のりかえます,norikaemasu,to change (trains),ပြောင်းစီးသည်။ (ကား၊ ရထား၊ ယာဉ်),ေ်ပာငး့စီ့သညး။ (ကာ့၊ ရထာ့၊ ယာဥး)
+16,あびます,あびます,abimasu,to take a shower,ရေချိုးသည်။,ေရခ္ိဳ့သညး။
+16,入れます,いれます,iremasu,to put in,ထည့်သည်။ သွင်းသည်။,ထညံးသညး။ သျငး့သညး။
+16,出します,だします,dashimasu,"to take out; to send (a letter, a report)",ထုတ်သည်။ တင်သည်(စာ၊ report),ထုတးသညး။ တငးသညး(စာ၊ report)
+16,下ろします[お金を],おろします[おかねを],oroshimasu [o-kane o],to withdraw (money),ထုတ်သည်(ပိုက်ဆံ),ထုတးသညး(ပိုကးဆဵ)
+16,入ります[大学に～],はいります[だいがくに～],hairimasu [daigaku ni ~],to enter (a university),ဝင်သည်(တက္ကသိုလ်သို့)။,ဝငးသညး(တကၠသိုလးသို႔)။
+16,出ます[大学を～],でます[だいがくを～],demasu [daigaku o ~],to leave (a university),ထွက်သည်(တက္ကသိုလ်မှဘဲရသည်)။,ထျကးသညး(တကၠသိုလးမြဘဲျ႕ရ သညး)။
+16,押します,おします,oshimasu,to push; to press,တွန်းသည်၊ ဖိသည်။,တျနး့သညး၊ ဖိသညး။
+16,飲みます,のみます,nomimasu,to drink,သောက်သည်။,ေသာကးသညး။
+16,始めます,はじめます,hajimemasu,to begin; to start,စတင်သည်။,စတငးသညး။
+16,見学します,けんがくします,kengaku shimasu,to visit (for study),လေ့လာသည်။,ေလံလာသညး။
+16,電話します,でんわします,denwa shimasu,to telephone; to make a phone call,ဖုန်းဆက်သည်။,ဖုနး့ဆကးသညး။
+16,若い,わかい,wakai,young,ငယ်သော,ငယးေသာ
+16,長い,ながい,nagai,long,ရှည်သော,ရြညးေသာ
+16,短い,みじかい,mijikai,short,တိုသော,တိုေသာ
+16,明るい,あかるい,akarui,bright; light,လင်းသော,လငး့ေသာ
+16,暗い,くらい,kurai,dark,မှောင်သော,ေမြာငးေသာ
+16,体,からだ,karada,body,ခန္ဓာကိုယ်,ခႏၶာကိုယး
+16,頭,あたま,atama,head,ခေါင်း၊ ဦးခေါင်း,ေခါငး့၊ ဦ့ေခါငး့
+16,髪,かみ,kami,hair,ဆံပင်,ဆဵပငး
+16,顔,かお,kao,face,မျက်နှာ,မ္ကးႏြာ
+16,目,め,me,eye,မျက်လုံး,မ္ကးလဵု့
+16,耳,みみ,mimi,ear,နားရွက်,နာ့ရျကး
+16,鼻,はな,hana,nose,နှာခေါင်း,ႏြာေခါငး့
+16,口,くち,kuchi,mouth,ပါးစပ်,ပါ့စပး
+16,歯,は,ha,tooth,သွား,သျာ့
+16,おなか,おなか,onaka,stomach; belly,ဗိုက်,ဗိုကး
+16,足,あし,ashi,leg; foot,ခြေထောက်,ေ်ခေထာကး
+16,背,せ,se,back; height,အရပ် (ခန္ဓာကိုယ်),အရပး (ခႏၶာကိုယး)
+16,サービス,サービス,saabisu,service,ဝန်ဆောင်မှု,ဝနးေဆာငးမႈ
+16,ジョギング,ジョギング,jogingu,jogging,အပြေးလေ့ကျင့်ခန်း,အေ်ပ့ေလံက္ငးံခနး့
+16,シャワー,シャワー,shawaa,shower,ရေချိုးသောရေပန်း,ေရခ္ိဳ့ေသာေရပနး့
+16,緑,みどり,midori,green,အစိမ်းရောင်,အစိမး့ေရာငး
+16,[お]寺,[お]てら,[o] tera,temple,ဂျပန်ဘုရားကျောင်း,ဂ္ပနးဘုရာ့ေက္ာငး့
+16,神社,じんじゃ,jinja,Shinto shrine,ဂျပန်နတ်ဘုရားကျောင်း,ဂ္ပနးနတးဘုရာ့ေက္ာငး့
+16,～番,～ばん,~ban,number ~,-နံပါတ်,-နဵပါတး
+16,どうやって,どうやって,dou yatte,how; in what way,ဘယ်လိုလုပ်ပြီး,ဘယးလိုလုပးၿပီ့
+16,どの～,どの～,dono ~,which ~,ဘယ်ဟာ,ဘယးဟာ
+16,どれ,どれ,dore,which one,ဘယ်တစ်ခု,ဘယးတစးခု
+16,すごいですね,すごいですね,sugoi desu ne,That's great.,တော်လိုက်တာ,ေတားလိုကးတာ
+16,[いいえ、]まだまだです,[いいえ、]まだまだです,"[iie,] mada mada desu","No, not that good yet.",ဟင့်အင်း အဲဒီလောက်မဟုတ်ပါဘူး,ဟငးံအငး့ အဲဒီေလာကးမဟုတးပါဘူ့
+16,お引き出しですか,おひきだしですか,o-hikidashi desu ka,Do you want to withdraw money?,ငွေထုတ်မှာလား,ေငျထုတးမြာလာ့
+16,まず,まず,mazu,first of all; first,အရင်ဆုံး,အရငးဆဵု့
+16,次に,つぎに,tsugi ni,next; then,နောက်ပြီး,ေနာကးၿပီ့
+16,キャッシュカード,キャッシュカード,kyasshu kaado,cash card,ငွေထုတ်ကဒ်,ေငျထုတးကဒး
+16,暗証番号,あんしょうばんごう,anshou bangou,PIN number,လျှို့ဝှက်နံပါတ်,လြ္ိ႕ဝြကးနဵပါတး
+16,金額,きんがく,kingaku,amount of money,ငွေပမာဏ,ေငျပမာဏ
+16,確認,かくにん,kakunin,confirmation; checking,အတည်ပြုခြင်း၊ စစ်ဆေးခြင်း,အတညး်ပဳ်ခငး့၊ စစးေဆ့်ခငး့
+16,ボタン,ボタン,botan,button,ခလုတ် button,ခလုတး button
+16,JR,JR,jei aaru,Japan Railways,ဂျပန်ရထားလိုင်း Japan Railways,ဂ္ပနးရထာ့လိုငး့ Japan Railways
+16,雪まつり,ゆきまつり,yuki matsuri,snow festival,နှင်းပွဲတော်,ႏြငး့ပျေ ဲ တား
+16,バンドン,バンドン,bandon,Bandung (in Indonesia),Bandung (in Indonesia),Bandung (in Indonesia)
+16,フランケン,フランケン,furanken,Franken (in Germany),Franken (in Germany),Franken (in Germany)
+16,ベラクルス,ベラクルス,berakurusu,Veracruz (in Mexico),Veracruz (in Mexico),Veracruz (in Mexico)
+16,梅田,うめだ,umeda,Umeda,Umedaမြို့,Umedaၿမိဳ႕
+16,大学前,だいがくまえ,daigakumae,in front of the university,တက္ကသိုလ်ရှေ့(ကားမှတ်တိုင်),တကၠသိုလးေရြ႕(ကာ့မြတး တိုငး)
+17,覚えます,おぼえます,oboemasu,to remember; to memorize,မှတ်မိသည်။,မြတးမိသညး။
+17,忘れます,わすれます,wasuremasu,to forget,မေ့သည်။,ေမံသညး။
+17,なくします,なくします,nakushimasu,to lose,ပျောက်ပစ်သည်။,ေဖ္ာကးပစးသညး။
+17,払います,はらいます,haraimasu,to pay,ပေးချေသည်။,ေပ့ေခ္သညး။
+17,返します,かえします,kaeshimasu,to return; to give back,ပြန်ပေးသည်။,်ပနးေပ့သညး။
+17,出かけます,でかけます,dekakemasu,to go out,အပြင်ထွက်သည်။,အ်ပငးထက ျ းသညး။
+17,脱ぎます,ぬぎます,nugimasu,to take off (clothes),အင်္ကျီချွတ်သည်။,အကၤ္ ီခၽျတးသညး။
+17,持っていきます,もっていきます,motte ikimasu,to take (something) away,ယူသွားသည်။,ယူသျာ့သညး။
+17,持ってきます,もってきます,motte kimasu,to bring,ယူလာသည်။,ယူလာသညး။
+17,心配します,しんぱいします,shinpai shimasu,to worry,စိတ်ပူသည်။,စိတးပူသညး။
+17,残業します,ざんぎょうします,zangyou shimasu,to work overtime,အချိန်ပိုလုပ်သည်။,အခ္ိနးပိုလုပးသညး။
+17,出張します,しゅっちょうします,shutchou shimasu,to go on a business trip,အလုပ်ခရီးသွားသည်,အလုပးခရီ့သျာ့သညး
+17,飲みます [薬を],のみます [くすりを],nomimasu [kusuri o],to take (medicine),သောက်သည်(ဆေးကို)။,ေသာကးသညး(ေဆ့ကိ)ု ။
+17,入ります [おふろに～],はいります [おふろに～],hairimasu [ofuro ni ~],to take a bath,ဝင်သည် (ရေချိုးကန်သို့)။,ဝငးသညး (ေရခ္ိဳ့ကနးသို႔)။
+17,"2, 3日",に、さんにち,"ni, san nichi","2, 3 days",၂ ရက် ၃ ရက်,၂ ရကး ၃ ရကး
+17,～までに,～までに,~ made ni,by ~,～အထိ,---အထိ
+17,ですから,ですから,desu kara,so; therefore,ဖြစ်လို့,်ဖစးလ႔ို
+17,どうしましたか,どうしましたか,doushimashita ka,What's the matter?,ဘယ်လိုဖြစ်သလဲ,ဘယးလို်ဖစးသလဲ
+17,のど,のど,nodo,throat,လည်ချောင်း,လညးေခ္ာငး့
+17,[～が] いたいです,[～が] いたいです,[~ ga] itai desu,[~] hurts; is painful,နာတယ်။,နာတယး။
+17,かぜ,かぜ,kaze,a cold,အအေးမိခြင်း,အေအ့မိ်ခငး့
+17,それから,それから,sore kara,and then; after that,နောက်ပြီး,ေနာကးၿပီ့
+17,お大事に,おだいじに,odaiji ni,Take care (of yourself),ဂရုစိုက်ပါ (ကျန်းမာရေးကို)။,ဂရုစိုကးပါ (က္နး့မာေရ့ကို)။
+17,大切 [な],たいせつ [な],taisetsu [na],precious; important,တန်ဖိုးထားသော,တနးဖို့ထာ့ေသာ
+17,大丈夫 [な],だいじょうぶ [な],daijoubu [na],all right; OK,ကိစ္စမရှိသော,ကိစၥမရြိေသာ
+17,危ない [な],あぶない [な],abunai [na],dangerous,အန္တရာယ်များသော,အႏာၱရာယးမ္ာ့ေသာ
+17,禁煙,きんえん,kin'en,No smoking,ဆေးလိပ်မသောက်ရ,ေဆ့လိပးမေသာကးရ
+17,[健康] 保険書,[けんこう] ほけんしょ,[kenkou] hokensho,(health) insurance card,ကျန်းမာရေးအာမခံကဒ်ပြား,က္နး့မာေရ့အာမခဵကဒး်ပာ့
+17,熱,ねつ,netsu,fever,ကိုယ်ပူခြင်း၊ အဖျားရှိခြင်း,ကိုယးပူ်ခငး့၊ အဖ္ာ့ရြိ်ခငး့
+17,病気,びょうき,byouki,illness; sickness,ရောဂါ,ေရာဂါ
+17,薬,くすり,kusuri,medicine,ဆေး,ေဆ့
+17,[お] ふろ,[お] ふろ,[o] furo,bath,ရေစိမ်/ချိုးကန်,ေရစိမး/ခ္ိဳ့ကနး
+17,上着,うえちゃく,uwagi,coat; jacket,အနွေးထည်/အပေါ်ထပ်အင်္ကျီ,အေႏျ့ထညး/အေပၚထပးအကၤ ္ီီ
+17,下着,したぎ,shitagi,underwear,အတွင်းခံ,အတျငး့ခဵ
+18,できます,できます,dekimasu,can do; be able to do,တတ်သည်။ လုပ်တတ်သည်။ နိုင်သည်။ လုပ်နိုင်သည်။,တတးသညး။ လုပးတတးသညး။ ႏိုငးသညး။ လုပးႏိုငးသညး။
+18,洗います,あらいます,araimasu,wash,လက်ဆေးသည်။ အဝတ်လျှော်သည်။,လကးေဆ့သညး။ အဝတးေလြ္ားသညး။
+18,弾きます,ひきます,hikimasu,play (a musical instrument),ပီယာနိုတီးသည်။,ပီယာႏိုတီ့သညး။
+18,歌います,うたいます,utaimasu,sing,သီချင်းဆိုသည်။,သီခ္ငး့ဆိုသညး။
+18,集めます,あつめます,atsumemasu,collect; gather,စုဆောင်းသည်။,စုေဆာငး့သညး။
+18,捨てます,すてます,sutemasu,throw away,စွန့်ပစ်သည်။,စျနး႔ပစးသညး။
+18,換えます,かえます,kaemasu,change; exchange,လဲလှယ်သည်။,လဲလြယးသညး။
+18,運転します,うんてんします,untenshimasu,drive,ကားမောင်းသည်။,ကာ့ေမာငး့သညး။
+18,予約します,よやくします,yoyakushimasu,reserve; book,bookingလုပ်သည်။,bookingလုပးသညး။
+18,ピアノ,ピアノ,piano,piano,ပီယာနို,ပီယာႏို
+18,メートル,メートル,meetoru,metre; meter,မီတာ(အကွာအဝေးကိုတိုင်းတာသောမီတာ),မီတာ(အကျာအေဝ့ကိုတိုငး့တာေသာမီတာ)
+18,現金,げんきん,genkin,cash,ငွေသား၊ လက်ငင်းငွေပေးချေခြင်း,ေငျသာ့၊ လကးငငး့ေငျေပ့ေခ္်ခငး့
+18,趣味,しゅみ,shumi,hobby,ဝါသနာ,ဝါသနာ
+18,日記,にっき,nikki,diary,နေ့စဉ်မှတ်တမ်း,ေနစဥးမြတးတမး့
+18,お祈り,おいのり,oinori,prayer,ဆုတောင်းခြင်း,ဆုေတာငး့်ခငး့
+18,課長,かちょう,kachou,section chief; section manager,ဌာနခွဲမှူး,ဌာနချမ ဲ ြဴ့
+18,部長,ぶちょう,buchou,department chief; department manager,ဌာနမှူး,ဌာနမြဴ့
+18,社長,しゃちょう,shachou,company president; president (of a company),သူဌေး,သူေဌ့
+18,動物,どうぶつ,doubutsu,animal,တိရစ္ဆာန်,တိရိစာၦနး
+18,馬,うま,uma,horse,မြင်း,်မငး့
+18,インターネット,インターネット,intaanetto,Internet,အင်တာနက်,အငးတာနကး
+18,特に,とくに,tokuni,especially; particularly,အထူးသဖြင့်,အထူ့သ်ဖငးံ
+18,へえ、,へえ、,"hee,",Really?,ဟယ်,ဟယး
+18,それはおもしろいですね,それはおもしろいですね,sore wa omoshiroi desu ne,"That's interesting, isn't it?",အဲဒါစိတ်ဝင်စားစရာပဲနော်,အဲဒါစိတးဝငးစာ့စရာပဲေနား
+18,なかなか,なかなか,nakanaka,quite; fairly,တော်တော်နဲ့---,ေတားေတားနဲ႔---
+18,ほんとうですか,ほんとうですか,hontou desu ka,Is that true?; Really?,တကယ်လားဟင်,တကယးလာ့ဟငး
+18,ぜひ,ぜひ,zehi,by all means; certainly,ဆက်ဆက်။ ကိန်းသေ,ဆကးဆကး။ က္ိနး့ေသ
+18,故郷,ふるさと,furusato,hometown,မွေးရပ်မြေ,ေမျ့ရပးေ်မ
+18,ビートルズ,ビートルズ,biitoruzu,The Beatles,The Beatles,The Beatles
+18,秋葉原,あきはばら,akihabara,Akihabara,Akihabara တိုကျိုမှာလူစည်ကားသောနေရာတစ်ခု,Akihabara တိုက္ိဳမြလူစညးကာ့ေသာေနရာတစးခု
+19,登ります,のぼります,noborimasu,to climb,အမြင့်သို့တက်သည်။,အ်မငးံသတို ကးသညး။
+19,泊まります,とまります,tomarimasu,to stay overnight,ညအိပ်တည်းခိုသည်,ညအိပးတညး့ခိုသညး
+19,[ホテルに],[ホテルに],[hoteru ni],(at a hotel),(ဟိုတယ်တွင်)။,(ဟိုတယးတျငး)။
+19,掃除します,そうじします,souji shimasu,to clean,သန့်ရှင်းရေးလုပ်သည်။,သနးရြငး့ေရ့လုပးသညး။
+19,洗濯します,せんたくします,sentaku shimasu,to wash clothes,အဝတ်လျှော်သည်။,အဝတးေလြ္ားသညး။
+19,なります,なります,narimasu,to become,ဖြစ်လာသည်။,်ဖစးလာသညး။
+19,眠い,ねむい,nemui,sleepy,အိပ်ချင်သော,အိပးခ္ငးေသာ
+19,強い,つよい,tsuyoi,strong,အားသန်သော,အာ့သနးေသာ
+19,弱い,よわい,yowai,weak,အားလျှော့သော/အားနည်းသော,အာ့ေလြ္ာံေသာ/အာ့နညး့ေသာ
+19,練習,れんしゅう,renshuu,practice,လေ့ကျင့်ခြင်း,ေလံက္ငးံ်ခငး့
+19,ゴルフ,ゴルフ,gorufu,golf,Golf,Golf
+19,相撲,すもう,sumou,sumo,ဂျပန်နပန်းအားကစား,ဂ္ပနးနပနး့အာ့ကစာ့
+19,お茶,おちゃ,ocha,tea,ဂျပန်ရေနွေးကြမ်း green tea,ဂ္ပနးေရေႏျ့ၾကမး့ green tea
+19,日,にち,nichi,day,နေ့ရက်,ေန႔ရကး
+19,調子,ちょうし,choushi,condition,အခြေအနေ,အေ်ခအေန
+19,一度,いちど,ichido,once,တစ်ကြိမ်၊ တစ်ခေါက်,တစးႀကိမး၊ တစးေခါကး
+19,一度も,いちども,ichido mo,not even once,တစ်ကြိမ်မျှ၊ တစ်ခေါက်မျှ,တစးႀကိမးမြ္၊ တစးေခါကးမြ္
+19,だんだん,だんだん,dandan,gradually,တဖြေးဖြေးနဲ့,တေ်ဖ့ေ်ဖ့နဲ႔
+19,もうすぐ,もうすぐ,mou sugu,soon,အခုချက်ခြင်း,အခုခ္ကး်ခငး့
+19,おかげさまで,おかげさまで,okagesama de,thanks to you,ကျေးဇူးတော်ကြောင့်/ပို့သတဲ့မေတ္တာကြောင့်,ေက့္ဇူ့ေတားေၾကာငးံ/ပိုသတဲံေမတၱာေၾကာငးံ
+19,でも,でも,demo,but,ဒါပေမဲ့,ဒါေပမဲံ
+19,乾杯,かんぱい,kanpai,cheers,Cheers,Cheers
+19,ダイエット,ダイエット,daietto,diet,ဝိတ်ချခြင်း,ဝိတးခ္်ခငး့
+19,無理[な],むり[な],muri [na],impossible; unreasonable,မဖြစ်နိုင်သော(အလွန်အကျွံဖြစ်သော),မ်ဖစးႏိုငးေသာ(အလျနးအကၽျဵ်ဖစးေသာ)
+19,体にいい,からだにいい,karada ni ii,good for one's health,ခန္ဓာကိုယ်အတွက်ကောင်းသော,ခႏၶာကိုယးအတျကးေကာငး့ေသာ
+19,東京スカイツリー,とうきょうスカイツリー,toukyou sukai tsurii,Tokyo Skytree,Tokyo Sky Tree,Tokyo Sky Tree
+19,葛飾北斎,かつしかほくさい,katsushika hokusai,Katsushika Hokusai,(Edoခေတ်တွင် ကျော်ကြားခဲ့သော ပန်းချီဆရာ),(Edoေခတးတျငး ေက္ားၾကာ့ခဲံေသာ ပနး့ခ္ီ့ဆရာ)
+20,要ります[ビザが～],いります[ビザが～],irimasu [biza ga ~],to need,လိုအပ်သည်(ဗီဇာ),လိုအပးသညး(ဗီဇာ)
+20,よかったら,よかったら,yokattara,if you like; if it's convenient,ကြိုက်မယ်ဆိုရင်၊ အဆင်ပြေမယ်ဆိုရင်,ႀကိဳကးမယးဆိုရငး၊ အဆငးေ်ပမယးဆိုရငး
+20,調べます,しらべます,shirabemasu,to look up; to investigate,စုံစမ်းသည်။,စဵုစမး့သညး။
+20,修理します,しゅうりします,shuuri shimasu,to repair,ပြုပြင်သည်။,်ပဳ်ပငးသညး။
+20,いろいろ,いろいろ,iroiro,various; all kinds,အမျိုးမျိုး,အမ္ိဳ့မ္ိဳ့
+20,僕,ぼく,boku,I; me (used by men),ကျွန်တော်,ကၽျနးေတား
+20,君,きみ,kimi,you,မင်း,မငး့
+20,～くん,～くん,~kun,suffix after a boy's name,ကို/မောင်---,ကိ/ု ေမာငး---
+20,うん,うん,un,yes; yeah,အင်း,အငး့
+20,ううん,ううん,uun,no; uh-uh,ဟင့်အင်း,ဟငးံအငး့
+20,ことば,ことば,kotoba,word; words,စကား၊ ဝေါဟာရ,စကာ့၊ ေဝါဟာရ
+20,着物,きもの,kimono,kimono,ဂျပန်ကီမိုနို,ဂ္ပနးကီမိုႏို
+20,ビザ,ビザ,biza,visa,Visa,Visa
+20,初め,はじめ,hajime,beginning,ပထမတော့၊ အစပိုင်း,ပထမေတာံ၊ အစပိုငး့
+20,終わり,おわり,owari,end; ending,အဆုံးတော့,အဆဵု့ေတာံ
+20,こっち,こっち,kocchi,this way; here,ဒီဘက်,ဒီဘကး
+20,そっち,そっち,socchi,that way (near you); there,ဟိုဘက်,ဟုိဘကး
+20,あっち,あっち,acchi,that way (over there); over there,ဟို့ဘက်,ဟို့ဘကး
+20,どっち,どっち,docchi,which way; where,ဘယ်ဘက်,ဘယးဘကး
+20,みんなで,みんなで,minna de,together; with everyone,အားလုံးနဲ့၊ အားလုံးအတူတူ,အာ့လဵု့နဲ႔၊ အာ့လဵု့အတူတူ
+20,～けど,～けど,~kedo,but; however,ဒါပေမဲ့,ဒါေပမဲံ
+20,おなかがいっぱいです,おなかがいっぱいです,onaka ga ippai desu,I'm full; my stomach is full,ဗိုက်ပြည့်တယ်,ဗိုကး်ပညးံတယး
+21,思います,おもいます,omoimasu,think,တွေးထင်သည်။,ေတျ့ထငးသညး။
+21,言います,いいます,iimasu,"say, speak",ပြောသည်။,ေ်ပာသညး။
+21,勝ちます,かちます,kachimasu,win,နိုင်သည်။,ႏိုငးသညး။
+21,負けます,まけます,makemasu,lose,ရှုံးသည်,ရြဵဳ့သညး
+21,あります［お祭りが～］,あります［おまつりが～］,arimasu [omatsuri ga ~],(a festival) is held,ရှိသည်(ပွဲတော်),ရြိသညး (ပျ ေ ဲ တား)
+21,役にたちます,やくにたちます,yaku ni tachimasu,be useful,အသုံးဝင်သည်။,အသဵု့ဝငးသညး။
+21,動きます,うごきます,ugokimasu,move,လှုပ်ရှားသည်။,လြဳပးရြာ့သညး။
+21,やめます［会社を～］,やめます［かいしゃを～］,yamemasu [kaisha o ~],quit (a company),အလုပ်ထွက်သည်,အလုပးထ က ျ းသညး
+21,気をつけます,きをつけます,ki o tsukemasu,be careful,သတိထားသည်။ ဂရုစိုက်သည်။,သတိထာ့သညး။ ဂရုစိုကးသညး။
+21,無駄［な］,むだ［な］,muda [na],wasteful,အလဟဿဖြစ်သော,အလဟႆ်ဖစးေသာ
+21,不便［な］,ふべん［な］,fuben [na],inconvenient,အဆင်မပြေသော,အဆငးမေ်ပေသာ
+21,すごい,すごい,sugoi,"amazing, terrible",အံ့ဩစရာကောင်းသော,အဵၾသစရာေကာငး့ေသာ
+21,ほんとう,ほんとう,hontou,"truth, really",တကယ်,တကယး
+21,うそ,うそ,uso,lie,အလိမ်၊ အညာ,အလိမး၊ အညာ
+21,自動車,じどうしゃ,jidousha,automobile,မော်တော်ကား,ေမားေတားကာ့
+21,交通,こうつう,koutsuu,traffic,ယာဉ်သွားလာမှု,ယာဥးသ ာ ျ ့လာမႈ
+21,物価,ぶっか,bukka,prices,ကုန်ဈေးနှုန်း,ကုနးေစ့္ႏႈနး့
+21,放送,ほうそう,housou,broadcast,သတင်းလွှင့်ခြင်း,သတငး့လႊငးံ်ခငး့
+21,ニュース,ニュース,nyuusu,news,သတင်း,သတငး့
+21,アニメ,アニメ,anime,anime,ဂျပန်ကာတွန်းကား,ဂ္ပနးကာတျနး့ကာ့
+21,マンガ,マンガ,manga,"manga, comic",ကာတွန်း(ရုပ်ပြ)စာအုပ်,ကာတျနး့ (ရုပး်ပ)စာအုပး
+21,デザイン,デザイン,dezain,design,ဒီဇိုင်း,ဒီဇုိငး့
+21,夢,ゆめ,yume,dream,အိပ်မက်,အိမးမကး
+21,天才,てんさい,tensai,genius,ပါရမီရှင်,ပါရမီရြငး
+21,試合,しあい,shiai,"match, game",ပြိုင်ပွဲ,ၿပိဳငးပျဲ
+21,意見,いけん,iken,opinion,ထင်မြင်ချက်,ထငး်မငးခ္ကး
+21,話,はなし,hanashi,"story, talk",စကား၊ ပုံပြင်,စကာ့၊ ပဵု်ပငး
+21,地球,ちきゅう,chikyuu,the earth,ကမ္ဘာမြေ,ကမာၻေ်မ
+21,月,つき,tsuki,the moon,လ,လ
+21,最近,さいきん,saikin,recently,အခုတလော,အခုတေလာ
+21,たぶん,たぶん,tabun,probably,may be/ ～လောက်,may be/---ေလာကး
+21,きっと,きっと,kitto,surely,ကျိန်းသေ,က္ိနး့ေသ
+21,ほんとうに,ほんとうに,hontou ni,really,တကယ်,တကယး
+21,そんなに,そんなに,sonna ni,so (much),အဲဒီလောက်(နောက်တွင် အငြင်းလိုက်လေရှိသည်),အဲဒီေလာကး(ေနာကးတျငး အ်ငငး့လိုကးေလံရြိသညး)
+21,～について,～について,~ni tsuite,about ~,～နဲ့ပက်သက်ပြီး,---နဲပကးသကးၿပီ့
+21,久しぶりですね,ひさしぶりですね,hisashiburi desu ne,Long time no see.,မတွေ့တာကြာပြီနော်,မေတျ႕တာၾကာၿပီေနား
+21,～でも飲みませんか。,～でものみませんか。,~demo nomimasen ka.,Won't you have ~?,မသောက်တော့ဘူးလား,မေသာကးေတာံဘူ့လာ့
+21,もちろん,もちろん,mochiron,of course,ဒါပေါ့၊ ဒါဘဲပေါ့။,ဒါေပါံ၊ ဒါဘဲေပါံ။
+21,もう帰らないと…,もうかえらないと…,mou kaeranai to…,I have to go home...,အိမ်ပြန်ရတော့မယ် (မပြန်လို့မရဘူး),အိမး်ပနးရေတာံမယး (မ်ပနးလ မ ႔ ို ရဘူ့)
+21,アインシュタイン,アインシュタイン,ainshutain,Einstein,Albert Einstein,Albert Einstein
+21,ガガーリン,ガガーリン,gagaarin,Gagarin,Yuri Alekseyevich Gagarin,Yuri Alekseyevich Gagarin
+21,ガリレオ,ガリレオ,garireo,Galileo,Galileo Galilei,Galileo Galilei
+21,キング牧師,キングぼくし,kingu bokushi,Rev. King,"Martin Luther King, Jr.","Martin Luther King, Jr."
+21,フランクリン,フランクリン,furankurin,Franklin,Benjamin Franklin,Benjamin Franklin
+21,かぐや姫,かぐやひめ,kaguya hime,Princess Kaguya,Kaguya မင်းသမီး,Kaguya မငး့သမီ့
+21,天神祭り,てんじんまつり,tenjin matsuri,Tenjin Festival,Tenjin ပွဲတော်,Tenjin ပျ ေ ဲ တား
+21,吉野山,よしのやま,yoshino yama,Mt. Yoshino,Yoshino တောင်,Yoshino ေတာငး
+21,カンガルー,カンガルー,kangaruu,kangaroo,သားပိုက်ကောင်,သာ့ပိုကးေကာငး
+21,キャプテン・クック,キャプテン・クック,kyaputen kukku,Captain Cook,Captain James Cook,Captain James Cook
+21,ヨーネン,ヨーネン,yoonen,Yone (company),yone ကုမ္ပဏီ,yone ကုမၸဏီ
+22,着ます,きます,kimasu,put on (clothes),ဝတ်သည်။,ဝတးသညး။
+22,はきます,はきます,hakimasu,put on (shoes),ဖိနပ်စီးသည်။,ဖိနပးစီ့သညး။
+22,かぶります,かぶります,kaburimasu,put on (a hat),ဦးထုပ်ဆောင်းသည်/ခြုံသည်။,ဦ့ထုပးေဆာငး့သညး/ၿခဵဳသညး။
+22,かけます［めがねを～］,かけます［めがねを～］,kakemasu [megane o ~],put on (glasses),မျက်မှန်တပ်သည်။,မ္ကးမြနးတပးသညး။
+22,します［ネクタイを～］,します［ネクタイを～］,shimasu [nekutai o ~],wear (a necktie),neck tie ကိုဝတ်ဆင်သည်,neck tie ကိုဝတးဆငးသညး
+22,生まれます,うまれます,umaremasu,be born,မွေးဖွားသည်။,ေမျ့ဖျာ့သညး။
+22,私たち,わたしたち,watashitachi,we,ကျွန်တော်တို့/ကျွန်မတို့,ကၽျနးေတားတို/႔ ကၽျနး မတို ႔
+22,コート,コート,kooto,coat,အပေါ်ဝတ်အင်္ကျီ,အေပၚဝတး အကၤ ္ီ
+22,セーター,セーター,seetaa,sweater,သိုးမွေးအနွေးထည်,သို့ေမႊ့အေႏျ့ထညး
+22,スーツ,スーツ,suutsu,suit,အနောက်တိုင်းကုတ်အင်္ကျီ,အေနာကးတိုငး့ကုတး အကၤ ္ီ
+22,帽子,ぼうし,boushi,hat,ဦးထုပ်,ဦ့ထုပး
+22,メガネ,メガネ,megane,glasses,မျက်မှန်,မ္ကးမြနး
+22,ケーキ,ケーキ,keeki,cake,ကိတ်မုန့်,ကိတးမုနး ႔
+22,［お］弁当,［お］べんとう,[o]bentou,boxed lunch,ထမင်းဗူး,ထမငး့ဗူ့
+22,ロボット,ロボット,robotto,robot,စက်ရုပ်,စကးရုပး
+22,ユーモア,ユーモア,yuumoa,humor,ဟာသ,ဟာသ
+22,都合,つごう,tsugou,"circumstances, convenience",အခြေအနေ,အေ်ခအေန
+22,よく,よく,yoku,often; well,ခဏခဏ/မကြာမကြာ/ကောင်းကောင်း,ခဏခဏ/မၾကာမၾကာ/ေကာငး့ေကာငး့
+22,えーと,えーと,eeto,"um, er",အဲဒါဆိုရင်,အဲဒါဆိုရငး
+22,おめでとう［ございます］,おめでとう［ございます］,omedetou [gozaimasu],congratulations,ဂုဏ်ယူပါတယ်။,ဂုဏးယူပါတယး။
+22,お探しですか,おさがしですか,osagashi desu ka,Are you looking for something?,တစ်ခုခုရှာနေပါသလား,တစးခုခုရြာေနပါသလာ့
+22,では,では,dewa,well then,ဒါဆိုရင်-,ဒါဆိုရငး -
+22,こちら,こちら,kochira,this way; this one,ဒီဘက်၊ ဒီဟာ,ဒီဘကး၊ ဒီဟာ
+22,家賃,やちん,yachin,rent,အိမ်ငှားခ,အိမးငြါ့ခ
+22,ダイニングキッチン,ダイニングキッチン,dainingu kitchin,dining kitchen,ထမင်းစားခန်းပါသော မီးဖိုဆောင်,ထမငး့စာ့ခနး့ပါေသာ မီ့ဖိုေဆာငး
+22,和室,わしつ,washitsu,Japanese-style room,ဂျပန်ရိုးရာအခန်း,ဂ္ပနးရုိ့ရာအခနး့
+22,押入れ,おしいれ,oshiire,closet,ဂျပန်စတိုင်ဗီဒို(မွေ့ရာ၊ စောင်၊ ခေါင်းအုံးများ သိမ်းဆည်းသည့်အခန်း),ဂ္ပနးစတိုငးဗီဒို(ေမျ႕ရာ၊ ေဆာငး၊ ေခါငး့အဵု့မ္ာ့ သိမး့ဆညး့သညးံအခနး့)
+22,布団,ふとん,futon,futon,မွေ့ယာ,ေမျ႕ယာ
+22,パリ,パリ,pari,Paris,ပါရီမြို့,ပါရီၿမိဳ ႕
+22,万里の長城,まんりのちょうじょう,manri no choujou,The Great Wall of China,The Great Wall of China သင်ခန်းစာတွင်ပါဝင်သော,The Great Wall of China သငးခနး့စာတျငးပါဝငးေသာ
+22,みんなのアンケート,みんなのアンケート,minna no ankeeto,everyone's questionnaire,မေးခွန်းမေးမြန်းခြင်း,ေမ့ချနး့ေမ့်မနးး့်ခငး့
+23,聞きます［先生に］,ききます［せんせいに］,kikimasu [sensei ni],ask (a teacher),မေးမြန်းသည်(ဆရာကို)။,ေမ့်မနး့သညး (ဆရာကိ) ု။
+23,回します,まわします,mawashimasu,"turn, rotate",လှည့်သည်။,လြညးံသညး။
+23,引きます,ひきます,hikimasu,pull,ဆွဲသည်။,ဆျဲသညး။
+23,変えます,かえます,kaemasu,change,လဲလှယ်သည်။,လဲလြယးသညး။
+23,触ります,さわります,sawarimasu,touch,ကိုင်သည်၊ ထိသည်၊ တိသည်။,ကိုငးသညး၊ ထိသညး၊ တိ သ ု ညး။
+23,出ます［お釣りが～］,でます［おつりが～］,demasu [otsuri ga ~],come out (change comes out),ထွက်လာသည်/ကျလာသည်။,ထျကးလာသညး/က္လာသညး။
+23,歩きます,あるきます,arukimasu,walk,လမ်းလျှောက်သည်။,လမး့ေလြ္ာကးသညး။
+23,渡ります［橋を～］,わたります［はしを～］,watarimasu [hashi o ~],cross (a bridge),ဖြတ်ကျော်သည်(တံတားကို)။,်ဖတးေက္ားသညး (တဵတာ့ကို)။
+23,曲がります［右へ～］,まがります［みぎへ～］,magarimasu [migi e ~],turn (to the right),ကွေ့သည်(ညာဘက်ကို),ေကျ႕သညး (ညာဘကးက) ို
+23,寂しい,さびしい,sabishii,lonely,အထီးကျန်သော,အထီ့က္နးေသာ
+23,［お］湯,［お］ゆ,[o]yu,hot water,ရေနွေး,ေရေႏျ့
+23,音,おと,oto,sound,အသံ,အသဵ
+23,サイズ,サイズ,saizu,size,အရွယ်အစား,အရျယးအစာ့
+23,故障,こしょう,koshou,breakdown,ပျက်စီးနေခြင်း,ပ္ကးစီ့ေန်ခငး့
+23,道,みち,michi,road,လမ်း,လမး့
+23,交差点,こうさてん,kousaten,intersection,လမ်းဆုံ,လမး့ဆဵု
+23,信号,しんごう,shingou,traffic light,မီးပွိုင့်,မီ့ပိျဳငးံ
+23,角,かど,kado,corner,လမ်းထောင့်,လမး့ေထာငးံ
+23,橋,はし,hashi,bridge,တံတား,တဵတာ့
+23,駐車場,ちゅうしゃじょう,chuushajou,parking lot,ကားရပ်ရန်နေရာ၊ parking,ကာ့ရပးရနးေနရာ၊ parking
+23,建物,たてもの,tatemono,building,အဆောက်အဦး,အေဆာကးအဦ့
+23,何回も,なんかいも,nankai mo,many times,အကြိမ်များစွာ,အႀကိမးမ္ာ့စျာ
+23,～目,～め,~me,-th (ordinal),～မြောက်,---ေ်မာကး
+23,聖徳太子,しょうとくたいし,shoutoku taishi,Prince Shotoku,Shotokuမင်းသား,Shotokuမငး့သာ့
+23,法隆寺,ほうりゅうじ,houryuuji,Horyuji Temple,Houryuji ဘုရားကျောင်း,Houryuji ဘုရာ့ေက္ာငး့
+23,元気茶,げんきちゃ,genkicha,Genki tea,ကျန်းမာရေးလက်ဖက်ခြောက်,က္နး့မာေရ့လကးဖကးေ်ခာကး
+23,本田駅,ほんだえき,honda eki,Honda Station,Hondaဘူတာ,Hondaဘူတာ
+23,図書館前,としょかんまえ,toshokan mae,in front of the library,စာကြည့်တိုက်ရှေ့ ဘတ်စ်ကားမှတ်တိုင်,စာၾကညးံတိုကးေရြ ႕ ဘတးစးကာ့မြတးတိုငး
+24,くれます,くれます,kuremasu,give (to me),ပေးသည်(တခြားသူက ကိုယ့်ကိုပေးခြင်း),ေပ့သညး (တ်ခာ့သူက ကိုယးံကိုေပ့်ခငး့)
+24,直します,なおします,naoshimasu,"fix, repair",ပြုပြင်သည်/အမှားပြင်ဆင်သည်။,်ပဳ်ပငးသညး/အမြာ့်ပငးဆငးသညး။
+24,つれていきます,つれていきます,tsurete ikimasu,take (someone) along,ခေါ်သွားသည်။,ေခၚသျာ့သညး။
+24,つれてきます,つれてきます,tsurete kimasu,bring (someone) along,ခေါ်လာသည်။,ေခၚလာသညး။
+24,送ります,おくります,okurimasu,send,ပို့ဆောင်သည်။,ပိုေဆာငးသညး။
+24,紹介します,しょうかいします,shoukai shimasu,introduce,မိတ်ဆက်သည်။,မိတးဆကးသညး။
+24,案内します,あんないします,annai shimasu,"show around, guide",လမ်းပြသည်။,လမး့်ပသညး။
+24,説明します,せつめいします,setsumei shimasu,explain,ရှင်းပြသည်။,ရြငး့်ပသညး။
+24,おじいさん/おじいちゃん,おじいさん/おじいちゃん,ojiisan/ojiichan,grandfather,အဖိုး,အဖို့
+24,おばあさん/おばあちゃん,おばあさん/おばあちゃん,obaasan/obaachan,grandmother,အဖွား,အဖျာ့
+24,準備,じゅんび,junbi,preparation,ကြိုတင်ပြင်ဆင်ခြင်း,ႀကိဳတငး်ပငးဆငး်ခငး့
+24,引っ越し,ひっこし,hikkoshi,moving house,အိမ်ပြောင်းခြင်း,အိမးေ်ပာငး့်ခငး့
+24,［お］菓子,［お］かし,[o]kashi,sweets,မုန့်,မုနး ႔
+24,ホームステイ,ホームステイ,hoomusutei,homestay,Home stay,Home stay
+24,全部,ぜんぶ,zenbu,all,အားလုံး,အာ့လဵု့
+24,自分で,じぶんで,jibun de,by oneself,ကိုယ်တိုင်,ကိုယးတိုငး
+24,他に,ほかに,hoka ni,"besides, other",အခြား,အ်ခာ့
+24,母の日,ははのひ,haha no hi,Mother's Day,အမေနေ့,အေမေန႔
+25,考えます,かんがえます,kangaemasu,think,စဉ်းစားသည်။,စဥး့စာ့သညး။
+25,着きます,つきます,tsukimasu,arrive,ဆိုက်ရောက်သည်။,ဆိုကးေရာကးသညး။
+25,留学します,りゅうがくします,ryuugaku shimasu,study abroad,နိုင်ငံခြားပညာသင်သွားသည်။,ႏိုငးငဵ်ခာ့ပညာသငးသ ာ ျ ့သညး။
+25,取ります［年を～］,とります［としを～］,torimasu [toshi o ~],get older,အသက်ကြီးသည်။,အသကးႀကီ့သညး။
+25,足ります,たります,tarimasu,be enough,လုံလောက်သည်။,လဵုေလာကးသညး။
+25,田舎,いなか,inaka,countryside,တောရွာ,ေတာရျာ
+25,チャンス,チャンス,chansu,chance,အခွင့်အရေး,အချငးံအေရ့
+25,億,おく,oku,100 million,သန်း၁၀၀,သနး့ ၁၀၀
+25,もし［～たら］,もし［～たら］,moshi [~tara],if,တကယ်လို့～ခဲ့ရင်,တကယးလို ---ခဲံရငး ႔
+25,意味,いみ,imi,meaning,အဓိပ္ပါယ်,အဓိပၸါယး
+25,もしもし,もしもし,moshimoshi,hello (on the phone),hello,hello
+25,転勤,てんきん,tenkin,job transfer,အလုပ်ပြောင်းခြင်း,အလုပးေ်ပာငး့်ခငး့
+25,こと,こと,koto,"thing, matter",အကြောင်း,အေၾကာငး့
+25,暇,ひま,hima,free time,အားလပ်သော,အာ့လပးေသာ
+25,［いろいろ］お世話になりました,［いろいろ］おせわになりました,[iroiro] osewa ni narimashita,Thank you for everything.,ကျေးဇူးအများကြီးရှိခဲ့ပါတယ်,ေက့္ဇူ့အမ္ာ့ႀကီ့ရြိခဲံပါတယး
+25,頑張ります,がんばります,ganbarimasu,do one's best,ကြိုးစားပါမယ်,ႀကိဳ့စာ့ပါမယး
+25,どうぞ、お元気で,どうぞ、おげんきで,"douzo, ogenki de",Please take care.,ကျန်းမာစွာနဲ့,က္နး့မာစျာနဲ ႔
+25,ベトナム,ベトナム,betonamu,Vietnam,ဗီယက်နမ်,ဗီယကးနမး
