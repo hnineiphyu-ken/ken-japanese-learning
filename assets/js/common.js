@@ -73,3 +73,20 @@ function renderPager(el, pages, cur, cb) {
     });
   });
 }
+
+function toggleMobileNav() {
+  const menu = $('mobileNavMenu');
+  if (menu) {
+    menu.classList.toggle('open');
+  }
+}
+
+document.addEventListener('click', function(e) {
+  const menu = $('mobileNavMenu');
+  const btn = document.querySelector('.hamburger-btn');
+  if (menu && menu.classList.contains('open')) {
+    if (!menu.contains(e.target) && (!btn || !btn.contains(e.target))) {
+      menu.classList.remove('open');
+    }
+  }
+});
