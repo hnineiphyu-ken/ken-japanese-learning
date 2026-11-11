@@ -56,7 +56,7 @@
 
     <!-- 2. Dakuten & Handakuten (Collapse) -->
     <section class="collapse">
-      <button class="collapse-head" aria-expanded="false">
+      <button class="collapse-head" onclick="toggleSection(this)" aria-expanded="false">
         <span class="ch-jp jp">濁音</span>
         <span class="ch-t">
           <span class="ct">Voiced &amp; Semi-Voiced Sounds (濁音・半濁音 ゛゜)</span>
@@ -71,7 +71,7 @@
 
     <!-- 3. Yoon (Collapse) -->
     <section class="collapse">
-      <button class="collapse-head" aria-expanded="false">
+      <button class="collapse-head" onclick="toggleSection(this)" aria-expanded="false">
         <span class="ch-jp jp">拗音</span>
         <span class="ch-t">
           <span class="ct">Contracted Sounds (拗音 - Yoon: ャ · ュ · ョ)</span>
@@ -86,7 +86,7 @@
 
     <!-- 4. Special Foreign Sounds (Collapse) -->
     <section class="collapse">
-      <button class="collapse-head" aria-expanded="false">
+      <button class="collapse-head" onclick="toggleSection(this)" aria-expanded="false">
         <span class="ch-jp jp">特別</span>
         <span class="ch-t">
           <span class="ct">Special Katakana (とくべつなカタカナ — for foreign words)</span>
@@ -102,7 +102,7 @@
 
     <!-- 5. Long Vowels (Collapse) -->
     <section class="collapse">
-      <button class="collapse-head" aria-expanded="false">
+      <button class="collapse-head" onclick="toggleSection(this)" aria-expanded="false">
         <span class="ch-jp jp">長音</span>
         <span class="ch-t">
           <span class="ct">Long Vowels (長音・ちょうおん)</span>
@@ -121,6 +121,14 @@
   <script src="assets/data/kana-data.js"></script>
   <script src="assets/js/common.js"></script>
   <script>
+    function toggleSection(btn) {
+      const sec = btn.parentElement;
+      const body = sec.querySelector('.collapse-body');
+      const open = sec.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (body) body.hidden = !open;
+    }
+
     function renderKatakana() {
       // 46 Basic (idx 1)
       const g = $('kataGrid');
@@ -141,22 +149,19 @@
       });
       g.innerHTML = gHtml;
 
-      // Dakuten
+      // Dakuten (flat array of 25 items)
       const d = $('kataDakuten');
       let dHtml = '';
-      DAKUTEN.forEach(row => {
-        if (row.label) dHtml += `<div class="row-label">${row.label}</div>`;
-        row.items.forEach(it => {
-          dHtml += `
-            <div class="kana-card" onclick="speakJapanese('${it[1]}')">
-              <span class="char">${it[1]}</span>
-              <span class="rom">${it[2]}</span>
-            </div>`;
-        });
+      DAKUTEN.forEach(it => {
+        dHtml += `
+          <div class="kana-card" onclick="speakJapanese('${it[1]}')">
+            <span class="char">${it[1]}</span>
+            <span class="rom">${it[2]}</span>
+          </div>`;
       });
       d.innerHTML = dHtml;
 
-      // Yoon
+      // Yoon (nested array of rows, each row has 3 items)
       const y = $('kataYoon');
       let yHtml = '';
       YOON.forEach(row => {
@@ -210,17 +215,6 @@
           `;
         }).join('');
       }
-
-      // Wire Collapses
-      document.querySelectorAll('.collapse-head').forEach(h => {
-        h.addEventListener('click', () => {
-          const sec = h.parentElement;
-          const body = sec.querySelector('.collapse-body');
-          const open = sec.classList.toggle('open');
-          h.setAttribute('aria-expanded', open ? 'true' : 'false');
-          if (body) body.hidden = !open;
-        });
-      });
     }
 
     document.addEventListener('DOMContentLoaded', renderKatakana);
