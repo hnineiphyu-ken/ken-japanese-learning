@@ -157,92 +157,137 @@ export default function QuizPage() {
       {/* SETUP CARD */}
       {quizState === 'setup' && (
         <section className="card">
-          <div className="quiz-card-head" style={{ borderBottom: '2px solid var(--line-soft)', paddingBottom: '14px', marginBottom: '22px' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 800, margin: 0 }}>
+          <div className="quiz-card-head" style={{ borderBottom: '2px solid var(--line-soft)', paddingBottom: '16px', marginBottom: '24px' }}>
+            <h3 style={{ fontSize: '19px', fontWeight: 800, margin: '0 0 4px', color: 'var(--ink)' }}>
               Customize Your Quiz
             </h3>
-            <span style={{ fontSize: '13px', color: 'var(--muted)', fontWeight: 600 }}>
-              Select target skill, question volume, and options
+            <span style={{ fontSize: '13.5px', color: 'var(--muted)', fontWeight: 600 }}>
+              Select target skill, script options, and question count
             </span>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '18px', marginBottom: '22px' }}>
-            <div>
-              <label className="form-label" style={{ display: 'block', fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--faint)', marginBottom: '8px' }}>
-                Quiz Type (問題の種類)
-              </label>
-              <select
-                className="custom-select"
-                value={quizType}
-                onChange={e => setQuizType(e.target.value)}
+          {/* 1. QUIZ TYPE - VISUAL 3-CARD SELECTION */}
+          <div className="quiz-select-group">
+            <label className="form-label">
+              1. Select Target Skill (問題の種類)
+            </label>
+            <div className="quiz-type-grid">
+              <button
+                type="button"
+                className={`quiz-type-card ${quizType === 'kana' ? 'active' : ''}`}
+                onClick={() => setQuizType('kana')}
               >
-                <option value="kana">Kana (Hiragana &amp; Katakana)</option>
-                <option value="kotoba">Kotoba (1,445 Vocabulary Words)</option>
-                <option value="basics">Basics (Numbers, Counters, Greetings)</option>
-              </select>
-            </div>
+                <div className="quiz-type-icon jp">あ</div>
+                <div>
+                  <div className="quiz-type-title">Kana</div>
+                  <div className="quiz-type-desc">Hiragana &amp; Katakana</div>
+                </div>
+              </button>
 
-            {quizType === 'kana' && (
-              <div>
-                <label className="form-label" style={{ display: 'block', fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--faint)', marginBottom: '8px' }}>
-                  Script (文字)
-                </label>
-                <select
-                  className="custom-select"
-                  value={scriptType}
-                  onChange={e => setScriptType(e.target.value)}
-                >
-                  <option value="hiragana">Hiragana (ひらがな)</option>
-                  <option value="katakana">Katakana (カタカナ)</option>
-                </select>
-              </div>
-            )}
-
-            {quizType === 'kotoba' && (
-              <div>
-                <label className="form-label" style={{ display: 'block', fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--faint)', marginBottom: '8px' }}>
-                  Lesson Scope (課)
-                </label>
-                <select
-                  className="custom-select"
-                  value={selectedLesson}
-                  onChange={e => setSelectedLesson(e.target.value)}
-                >
-                  <option value="all">All Lessons (1–25)</option>
-                  {Array.from({ length: 25 }, (_, i) => i + 1).map(l => (
-                    <option key={l} value={l}>
-                      Minna no Nihongo Lesson {l} (第{l}課)
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
-
-            <div>
-              <label className="form-label" style={{ display: 'block', fontSize: '12px', fontWeight: 800, textTransform: 'uppercase', color: 'var(--faint)', marginBottom: '8px' }}>
-                Questions Count (問題数)
-              </label>
-              <select
-                className="custom-select"
-                value={questionCount}
-                onChange={e => setQuestionCount(parseInt(e.target.value, 10))}
+              <button
+                type="button"
+                className={`quiz-type-card ${quizType === 'kotoba' ? 'active' : ''}`}
+                onClick={() => setQuizType('kotoba')}
               >
-                <option value={10}>10 Questions</option>
-                <option value={20}>20 Questions</option>
-                <option value={30}>30 Questions</option>
-                <option value={50}>50 Questions</option>
-              </select>
+                <div className="quiz-type-icon jp">語</div>
+                <div>
+                  <div className="quiz-type-title">Kotoba</div>
+                  <div className="quiz-type-desc">1,445 Vocabulary</div>
+                </div>
+              </button>
+
+              <button
+                type="button"
+                className={`quiz-type-card ${quizType === 'basics' ? 'active' : ''}`}
+                onClick={() => setQuizType('basics')}
+              >
+                <div className="quiz-type-icon jp">基</div>
+                <div>
+                  <div className="quiz-type-title">Basics</div>
+                  <div className="quiz-type-desc">Numbers &amp; Counters</div>
+                </div>
+              </button>
             </div>
           </div>
 
-          <button
-            type="button"
-            className="btn-primary"
-            style={{ width: '100%', padding: '14px', fontSize: '15px' }}
-            onClick={generateQuiz}
-          >
-            Start Quiz Now →
-          </button>
+          {/* 2. SUB-OPTIONS (SCRIPT OR LESSON) */}
+          {quizType === 'kana' && (
+            <div className="quiz-select-group">
+              <label className="form-label">
+                2. Choose Script (文字)
+              </label>
+              <div className="pill-select-row">
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${scriptType === 'hiragana' ? 'active' : ''}`}
+                  onClick={() => setScriptType('hiragana')}
+                >
+                  <span className="jp" style={{ fontWeight: 800 }}>あ</span> Hiragana (ひらがな)
+                </button>
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${scriptType === 'katakana' ? 'active' : ''}`}
+                  onClick={() => setScriptType('katakana')}
+                >
+                  <span className="jp" style={{ fontWeight: 800 }}>ア</span> Katakana (カタカナ)
+                </button>
+              </div>
+            </div>
+          )}
+
+          {quizType === 'kotoba' && (
+            <div className="quiz-select-group">
+              <label className="form-label">
+                2. Lesson Scope (課)
+              </label>
+              <select
+                className="custom-select"
+                value={selectedLesson}
+                onChange={e => setSelectedLesson(e.target.value)}
+              >
+                <option value="all">All Lessons (1–25) · Full N5 Syllabus</option>
+                {Array.from({ length: 25 }, (_, i) => i + 1).map(l => (
+                  <option key={l} value={l}>
+                    Minna no Nihongo Lesson {l} (第{l}課)
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+
+          {/* 3. QUESTION COUNT - PILL SELECTOR */}
+          <div className="quiz-select-group">
+            <label className="form-label">
+              {quizType === 'basics' ? '2. Question Count (問題数)' : '3. Question Count (問題数)'}
+            </label>
+            <div className="pill-select-row">
+              {[10, 20, 30, 50].map(cnt => (
+                <button
+                  key={cnt}
+                  type="button"
+                  className={`pill-opt-btn ${questionCount === cnt ? 'active' : ''}`}
+                  onClick={() => setQuestionCount(cnt)}
+                >
+                  {cnt} Questions
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* 4. MODERN ACTION BUTTON */}
+          <div style={{ marginTop: '28px' }}>
+            <button
+              type="button"
+              className="btn-primary-action"
+              onClick={generateQuiz}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="10 8 16 12 10 16 10 8" />
+              </svg>
+              <span>Start Quiz Now →</span>
+            </button>
+          </div>
         </section>
       )}
 
@@ -324,8 +369,9 @@ export default function QuizPage() {
             {answered && (
               <button
                 type="button"
-                className="btn-primary"
+                className="lesson-action-btn primary"
                 onClick={handleNext}
+                style={{ padding: '10px 22px', fontSize: '14px' }}
               >
                 {curIndex + 1 < questions.length ? 'Next Question →' : 'View Results →'}
               </button>
@@ -350,8 +396,9 @@ export default function QuizPage() {
           <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
             <button
               type="button"
-              className="btn-primary"
+              className="lesson-action-btn primary"
               onClick={generateQuiz}
+              style={{ padding: '10px 22px', fontSize: '14px' }}
             >
               Try Again ↺
             </button>
@@ -359,6 +406,7 @@ export default function QuizPage() {
               type="button"
               className="lesson-action-btn"
               onClick={() => setQuizState('setup')}
+              style={{ padding: '10px 22px', fontSize: '14px' }}
             >
               Change Settings ⚙
             </button>
