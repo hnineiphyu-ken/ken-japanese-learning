@@ -46,13 +46,20 @@
       <p class="hero-desc">Used primarily for loanwords from foreign languages, scientific names, onomatopoeia, and technical terminology. Tap any character to hear native audio pronunciation.</p>
     </div>
 
-    <!-- 1. Main Katakana 46 Characters (Always Open) -->
-    <div class="card">
-      <h2 style="font-size: 15px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 14px;">
-        Basic 46 Characters (五十音)
-      </h2>
-      <div id="kataGrid" class="kana-grid"></div>
-    </div>
+    <!-- 1. Main Katakana 46 Characters (Collapse - Default Open) -->
+    <section class="collapse open">
+      <button class="collapse-head" onclick="toggleSection(this)" aria-expanded="true">
+        <span class="ch-jp jp">五十音</span>
+        <span class="ch-t">
+          <span class="ct">Basic 46 Characters (五十音・ごじゅうおん)</span>
+          <span class="cd">The standard 46 base katakana characters (a, i, u, e, o through wa, wo, n)</span>
+        </span>
+        <span class="ch-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="collapse-body">
+        <div id="kataGrid" class="kana-grid"></div>
+      </div>
+    </section>
 
     <!-- 2. Dakuten & Handakuten (Collapse) -->
     <section class="collapse">
