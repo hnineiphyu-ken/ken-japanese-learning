@@ -32,6 +32,10 @@ export default function Header() {
             <span className="sub">JLPT N5 &amp; Minna no Nihongo</span>
           </div>
         </NavLink>
+        <div className="header-powered">
+          <span>Powered by</span>
+          <strong className="author-name">Ken Nebula</strong>
+        </div>
         <button
           className="hamburger-btn"
           onClick={() => setMobileOpen(prev => !prev)}
@@ -65,6 +69,9 @@ export default function Header() {
         <NavLink to="/lessons" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
           <span className="nav-jp">課</span> Lessons (1-25)
         </NavLink>
+        <div className="mobile-nav-footer">
+          <span>Powered by <strong>Ken Nebula</strong></span>
+        </div>
       </nav>
     </header>
   );
