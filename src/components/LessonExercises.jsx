@@ -52,9 +52,9 @@ export default function LessonExercises({ lessonNum }) {
           Lesson {lessonNum} Exercises (練習・問題)
         </h4>
         <p style={{ color: 'var(--muted)', fontSize: '13.5px', maxWidth: '480px', margin: '0 auto 14px', lineHeight: '1.6' }}>
-          Textbook exercises (練習 A・B・C 및 問題) for Lesson {lessonNum} are currently being compiled via <b>Muse Gojo</b> data pipeline.
+          Textbook exercises (練習 A・B・C and 問題) for Lesson {lessonNum} will be added soon.
         </p>
-        <span className="badge-coming-soon">Ingestion In Progress ⏳</span>
+        <span className="badge-coming-soon">Coming Soon ⏳</span>
       </div>
     );
   }

@@ -128,7 +128,7 @@ export default function LessonsPage() {
           Complete Shokyu 1 syllabus. Study all 1,068 chapter vocabulary words with native pronunciation, or take a dedicated practice quiz for each lesson.
         </p>
 
-        {/* Muse Gojo Expansion Roadmap Announcement */}
+        {/* Syllabus Roadmap Announcement */}
         <div
           style={{
             marginTop: '16px',
@@ -144,7 +144,7 @@ export default function LessonsPage() {
         >
           <span style={{ fontSize: '18px' }}>✨</span>
           <div style={{ flex: '1 1 300px', fontSize: '13px', lineHeight: '1.5', color: 'var(--ink)' }}>
-            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. <b>Lesson 1 Complete Exercises (練習 A・B・C &amp; 問題)</b> are now 100% active with interactive self-testing &amp; pronunciation! Further lesson exercises are being compiled via <b>Muse Gojo</b> pipeline.
+            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. <b>Lesson 1 Complete Exercises (練習 A・B・C &amp; 問題)</b> are now 100% active with interactive self-testing &amp; pronunciation! Further lesson exercises will be added progressively.
           </div>
           <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>Lesson 1 Active ✅</span>
         </div>
@@ -376,9 +376,9 @@ export default function LessonsPage() {
                         Lesson {meta.l} Example Sentences (例文・短文)
                       </h4>
                       <p style={{ color: 'var(--muted)', fontSize: '13.5px', maxWidth: '480px', margin: '0 auto 14px', lineHeight: '1.6' }}>
-                        Curated example sentences illustrating core particles and sentence patterns for Lesson {meta.l}. Data generation by <b>Muse Gojo</b> is in progress.
+                        Curated example sentences illustrating core particles and sentence patterns for Lesson {meta.l}. Coming soon.
                       </p>
-                      <span className="badge-coming-soon">Data Ingestion Pending ⏳</span>
+                      <span className="badge-coming-soon">Coming Soon ⏳</span>
                     </div>
                   )}
 
@@ -390,9 +390,9 @@ export default function LessonsPage() {
                         Lesson {meta.l} Grammar Patterns (文法解説)
                       </h4>
                       <p style={{ color: 'var(--muted)', fontSize: '13.5px', maxWidth: '480px', margin: '0 auto 14px', lineHeight: '1.6' }}>
-                        Step-by-step grammatical breakdowns with Burmese &amp; English explanations for Lesson {meta.l}. Data compilation by <b>Muse Gojo</b> is in progress.
+                        Step-by-step grammatical breakdowns with Burmese &amp; English explanations for Lesson {meta.l}. Coming soon.
                       </p>
-                      <span className="badge-coming-soon">Content Drafting Active ⏳</span>
+                      <span className="badge-coming-soon">Coming Soon ⏳</span>
                     </div>
                   )}
 
@@ -404,9 +404,9 @@ export default function LessonsPage() {
                         Lesson {meta.l} Dialogue &amp; Conversation (会話)
                       </h4>
                       <p style={{ color: 'var(--muted)', fontSize: '13.5px', maxWidth: '480px', margin: '0 auto 14px', lineHeight: '1.6' }}>
-                        Full real-world situational conversations with native audio pacing for Lesson {meta.l}. Data compilation by <b>Muse Gojo</b> is in progress.
+                        Full real-world situational conversations with native audio pacing for Lesson {meta.l}. Coming soon.
                       </p>
-                      <span className="badge-coming-soon">Audio &amp; Script Prep ⏳</span>
+                      <span className="badge-coming-soon">Coming Soon ⏳</span>
                     </div>
                   )}
                 </div>
