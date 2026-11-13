@@ -4,6 +4,8 @@ import { MINNA_META } from '../data/topicsData';
 import { MINNA } from '../data/wordsData';
 import { speakJapanese, shuffle } from '../utils/speech';
 import Pagination from '../components/Pagination';
+import LessonExercises from '../components/LessonExercises';
+import { LESSON_EXERCISES } from '../data/lessonExercises';
 
 export default function LessonsPage() {
   const navigate = useNavigate();
@@ -142,9 +144,9 @@ export default function LessonsPage() {
         >
           <span style={{ fontSize: '18px' }}>✨</span>
           <div style={{ flex: '1 1 300px', fontSize: '13px', lineHeight: '1.5', color: 'var(--ink)' }}>
-            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. Full sentence patterns (例文), grammar explanations (文法), and conversations (会話) are currently being compiled via <b>Muse Gojo</b> data pipeline (Coming Soon)!
+            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. <b>Lesson 1 Complete Exercises (練習 A・B・C &amp; 問題)</b> are now 100% active with interactive self-testing &amp; pronunciation! Further lesson exercises are being compiled via <b>Muse Gojo</b> pipeline.
           </div>
-          <span className="badge-coming-soon">Pipeline Active ⏳</span>
+          <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>Lesson 1 Active ✅</span>
         </div>
       </div>
 
@@ -254,7 +256,7 @@ export default function LessonsPage() {
                     animation: 'fadeIn 0.2s ease-out'
                   }}
                 >
-                  {/* Category Tabs: Vocabulary vs Sentences vs Grammar vs Dialogue */}
+                  {/* Category Tabs: Vocabulary vs Exercises vs Sentences vs Grammar vs Dialogue */}
                   <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
                     <button
                       type="button"
@@ -263,6 +265,21 @@ export default function LessonsPage() {
                       style={{ fontSize: '12.5px', padding: '6px 14px' }}
                     >
                       Vocabulary ({count})
+                    </button>
+                    <button
+                      type="button"
+                      className={`lesson-action-btn ${activeStudyTab === 'exercises' ? 'primary' : ''}`}
+                      onClick={() => setActiveStudyTab('exercises')}
+                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
+                    >
+                      <span>Exercises (練習・問題)</span>
+                      {LESSON_EXERCISES[meta.l] ? (
+                        <span className="badge-coming-soon" style={{ marginLeft: '6px', background: '#16a34a', color: '#ffffff' }}>
+                          Live ✅
+                        </span>
+                      ) : (
+                        <span className="badge-coming-soon" style={{ marginLeft: '6px' }}>Soon</span>
+                      )}
                     </button>
                     <button
                       type="button"
@@ -346,7 +363,12 @@ export default function LessonsPage() {
                     </div>
                   )}
 
-                  {/* TAB 2: SENTENCES (COMING SOON) */}
+                  {/* TAB 2: EXERCISES & DRILLS (練習・問題) */}
+                  {activeStudyTab === 'exercises' && (
+                    <LessonExercises lessonNum={meta.l} />
+                  )}
+
+                  {/* TAB 3: SENTENCES (COMING SOON) */}
                   {activeStudyTab === 'sentences' && (
                     <div className="coming-soon-card">
                       <div style={{ fontSize: '28px', marginBottom: '8px' }}>💬</div>
@@ -360,7 +382,7 @@ export default function LessonsPage() {
                     </div>
                   )}
 
-                  {/* TAB 3: GRAMMAR NOTES (COMING SOON) */}
+                  {/* TAB 4: GRAMMAR NOTES (COMING SOON) */}
                   {activeStudyTab === 'grammar' && (
                     <div className="coming-soon-card">
                       <div style={{ fontSize: '28px', marginBottom: '8px' }}>📝</div>
@@ -374,7 +396,7 @@ export default function LessonsPage() {
                     </div>
                   )}
 
-                  {/* TAB 4: CONVERSATIONS (COMING SOON) */}
+                  {/* TAB 5: CONVERSATIONS (COMING SOON) */}
                   {activeStudyTab === 'dialogue' && (
                     <div className="coming-soon-card">
                       <div style={{ fontSize: '28px', marginBottom: '8px' }}>🗣️</div>

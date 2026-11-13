@@ -22,6 +22,23 @@ if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
   };
 }
 
+// Explicit phonetic normalization map for irregular Japanese date & number readings
+const PHONETIC_MAP = {
+  '1日': 'ついたち', '１日': 'ついたち',
+  '2日': 'ふつか', '２日': 'ふつか',
+  '3日': 'みっか', '３日': 'みっか',
+  '4日': 'よっか', '４日': 'よっか',
+  '5日': 'いつか', '５日': 'いつか',
+  '6日': 'むいか', '６日': 'むいか',
+  '7日': 'なのか', '７日': 'なのか',
+  '8日': 'ようか', '８日': 'ようか',
+  '9日': 'ここのか', '９日': 'ここのか',
+  '10日': 'とおか', '１０日': 'とおか',
+  '14日': 'じゅうよっか', '１４日': 'じゅうよっか',
+  '20日': 'はつか', '２０日': 'はつか',
+  '24日': 'にじゅうよっか', '２４日': 'にじゅうよっか'
+};
+
 export function speakJapanese(text) {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     console.warn('Speech synthesis not supported');
@@ -41,9 +58,15 @@ export function speakJapanese(text) {
 
     if (!cleanText) return;
 
+    // Check if whole text or exact word matches irregular phonetic map
+    if (PHONETIC_MAP[cleanText]) {
+      cleanText = PHONETIC_MAP[cleanText];
+    }
+
     const u = new SpeechSynthesisUtterance(cleanText);
     u.lang = 'ja-JP';
-    u.rate = 0.88;
+    // Slightly relaxed rate for crystal-clear syllable enunciation (prevents slurring muika into mikka)
+    u.rate = cleanText === 'むいか' || cleanText === 'みっか' ? 0.82 : 0.86;
 
     const voice = getJapaneseVoice();
     if (voice) {
