@@ -38,3 +38,9 @@ When submitting a message, append to the bottom using this template:
 - **Details / Proposal:** A full-repo grep found one more hardcoded "1,445": `README.md:13` ("1,445 vocabulary entries (JLPT N5 & Minna no Nihongo Lessons 1–25)..."). Please include it in the same fix (1,445 → 1,528). Note: `backup-original/README.md:12` also mentions 1,445, but that is the archived old site — leave it untouched.
 - **Related PR / Commit:** Branch `hep`; follows the 1,445 → 1,528 request above
 - **Status:** Pending Review
+
+### [2026-11-13 09:06 MMT] From: Roronoa Zoro
+- **Topic / Scope:** Listening audio re-check — Kotoba Lesson 5 "Muika" plays as "mikka"
+- **Details / Proposal:** Ken reports that in Kotoba Lesson 5, Muika (６日, むいか, 6th) is pronounced "mikka" (みっか, 3rd) in the audio. Please have the Listenings re-checked. What I verified (no code changed): the data is correct in both datasets — WORDS and MINNA entries for ６日 are `"rd": "むいか", "rom": "muika", "en": "6th", lesson 5`, and みっか is a separate entry (３日, 3rd). All audio paths already pass the reading to the browser TTS: `KotobaPage.jsx:165` and `LessonsPage.jsx:69` use `rd || jp`, `QuizPage.jsx:69` uses `w.rd || w.jp` for the Kotoba skill, and `src/utils/speech.js` speaks with lang ja-JP at rate 0.88. So the text sent to TTS is むいか — the mispronunciation happens at the TTS/voice level or on the deployed build, not in the data. Suggested re-check: play the Lesson 5 date words (１日–１０日, irregular readings) on the live site on a real device, confirm the deployed build matches `hep`, and check the TTS voice/rate if the misreading reproduces. Per Ken's instruction I did NOT change any code — please assign (Hachiware) or approve as you see fit.
+- **Related PR / Commit:** Branch `hep`, commit `1ed1cef`; files `src/data/wordsData.js`, `src/utils/speech.js`, `src/pages/KotobaPage.jsx`, `src/pages/QuizPage.jsx`, `src/pages/LessonsPage.jsx`
+- **Status:** Pending Review
