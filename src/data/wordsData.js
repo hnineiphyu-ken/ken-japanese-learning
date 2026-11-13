@@ -1,6 +1,8 @@
 /**
- * VOCABULARY & MINNA NO NIHONGO DATA
+ * JLPT N5 + Minna no Nihongo Complete Vocabulary Dataset
+ * Unique entries: 1523
  */
+
 export const WORDS = [
   {
     "jp": "私",
@@ -5027,8 +5029,11 @@ export const WORDS = [
     "rd": "なんじ",
     "rom": "nan-ji",
     "en": "what time",
-    "my": "ဘယ်အချိန်",
-    "cat": "Question Words"
+    "my": "ဘယ်အချိန် / ဘယ်နာရီ",
+    "cat": "Question Words",
+    "t": [
+      "time"
+    ]
   },
   {
     "jp": "何分",
@@ -5042,9 +5047,13 @@ export const WORDS = [
     "jp": "何日",
     "rd": "なんにち",
     "rom": "nan-nichi",
-    "en": "how many days; what day",
-    "my": "ဘယ်ရက်/ဘယ်နှစ်ရက်",
-    "cat": "Question Words"
+    "en": "what date; how many days",
+    "my": "ဘယ်ရက် / ဘယ်နှစ်ရက်",
+    "cat": "Question Words",
+    "t": [
+      "time",
+      "dates"
+    ]
   },
   {
     "jp": "何月",
@@ -5052,7 +5061,11 @@ export const WORDS = [
     "rom": "nan-gatsu",
     "en": "what month",
     "my": "ဘယ်လ",
-    "cat": "Question Words"
+    "cat": "Question Words",
+    "t": [
+      "time",
+      "dates"
+    ]
   },
   {
     "jp": "何曜日",
@@ -5062,6 +5075,7 @@ export const WORDS = [
     "my": "ဘယ်နေ့",
     "cat": "Question Words",
     "t": [
+      "time",
       "dates"
     ]
   },
@@ -6891,9 +6905,12 @@ export const WORDS = [
     "jp": "毎晩",
     "rd": "まいばん",
     "rom": "maiban",
-    "en": "every evening",
+    "en": "every night; every evening",
     "my": "ညတိုင်း",
-    "cat": "Minna L4"
+    "cat": "Minna L4",
+    "t": [
+      "time"
+    ]
   },
   {
     "jp": "～から",
@@ -12471,17 +12488,6 @@ export const WORDS = [
     ]
   },
   {
-    "jp": "何時",
-    "rd": "なんじ",
-    "rom": "nan-ji",
-    "en": "what time",
-    "my": "ဘယ်နာရီ",
-    "cat": "Time Words",
-    "t": [
-      "time"
-    ]
-  },
-  {
     "jp": "１分",
     "rd": "いっぷん",
     "rom": "ip-pun",
@@ -12808,42 +12814,6 @@ export const WORDS = [
     ]
   },
   {
-    "jp": "何日",
-    "rd": "なんにち",
-    "rom": "nan-nichi",
-    "en": "what date; how many days",
-    "my": "ဘယ်ရက်",
-    "cat": "Time Words",
-    "t": [
-      "time",
-      "dates"
-    ]
-  },
-  {
-    "jp": "何月",
-    "rd": "なんがつ",
-    "rom": "nan-gatsu",
-    "en": "what month",
-    "my": "ဘယ်လ",
-    "cat": "Time Words",
-    "t": [
-      "time",
-      "dates"
-    ]
-  },
-  {
-    "jp": "何曜日",
-    "rd": "なんようび",
-    "rom": "nan-youbi",
-    "en": "what day of the week",
-    "my": "ဘယ်နေ့",
-    "cat": "Time Words",
-    "t": [
-      "time",
-      "dates"
-    ]
-  },
-  {
     "jp": "再来週",
     "rd": "さらいしゅう",
     "rom": "saraishuu",
@@ -12913,17 +12883,6 @@ export const WORDS = [
     "t": [
       "time",
       "dates"
-    ]
-  },
-  {
-    "jp": "毎晩",
-    "rd": "まいばん",
-    "rom": "maiban",
-    "en": "every night",
-    "my": "ညတိုင်း",
-    "cat": "Time Words",
-    "t": [
-      "time"
     ]
   }
 ];

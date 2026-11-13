@@ -98,7 +98,7 @@ export default function KotobaPage() {
         <div className="hero-tag">Core Lexicon</div>
         <h1 className="hero-title">Kotoba Vocabulary (単語)</h1>
         <p className="hero-desc">
-          1,445 essential JLPT N5 and Minna no Nihongo (Lessons 1–25) words with Kanji, Furigana reading, Romaji, English and Myanmar translations. Click speaker icon for instant audio pronunciation.
+          1,523 essential JLPT N5 and Minna no Nihongo (Lessons 1–25) words with Kanji, Furigana reading, Romaji, English and Myanmar translations. Click speaker icon for instant audio pronunciation.
         </p>
       </div>
 

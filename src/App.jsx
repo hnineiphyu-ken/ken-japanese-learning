@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
-import HiraganaPage from './pages/HiraganaPage';
-import KatakanaPage from './pages/KatakanaPage';
-import BasicsPage from './pages/BasicsPage';
-import KotobaPage from './pages/KotobaPage';
-import QuizPage from './pages/QuizPage';
-import LessonsPage from './pages/LessonsPage';
+
+const HiraganaPage = lazy(() => import('./pages/HiraganaPage'));
+const KatakanaPage = lazy(() => import('./pages/KatakanaPage'));
+const BasicsPage = lazy(() => import('./pages/BasicsPage'));
+const KotobaPage = lazy(() => import('./pages/KotobaPage'));
+const QuizPage = lazy(() => import('./pages/QuizPage'));
+const LessonsPage = lazy(() => import('./pages/LessonsPage'));
 
 export default function App() {
   return (

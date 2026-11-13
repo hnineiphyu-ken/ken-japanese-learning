@@ -10,7 +10,7 @@ Built with **React 18**, **Vite**, and **React Router DOM v6** for zero-reload, 
 - **`/` (Hiragana)**: 46 basic characters (五十音), Dakuten/Handakuten, Yoon (拗音), and Long Vowels (長音) in collapsible cards with native Japanese audio pronunciation.
 - **`/katakana` (Katakana)**: 46 basic characters, Dakuten/Handakuten, Yoon, Special Foreign Katakana (特別なカタカナ), and Long Vowel Dash rules (ー).
 - **`/basics` (Basics)**: Numbers (0–100,000,000 with pagination), 11 Core Counters (助数詞), 20 Everyday Greetings with usage notes, Time & Clock, Calendar Dates, and an interactive Basics Quiz.
-- **`/kotoba` (Kotoba Vocabulary)**: 1,445 vocabulary entries (JLPT N5 & Minna no Nihongo Lessons 1–25) with live multi-field search, semantic category filtering (30 categories), lesson filtering, and pagination.
+- **`/kotoba` (Kotoba Vocabulary)**: 1,523 vocabulary entries (JLPT N5 & Minna no Nihongo Lessons 1–25) with live multi-field search, semantic category filtering (30 categories), lesson filtering, and pagination.
 - **`/quiz` (Interactive Quiz)**: Practice for Kana, Vocabulary, and Basics with selectable question volume (10/20/30/50), sound pronunciation, live progress track, and performance grading.
 - **`/lessons` (Lessons 1–25)**: Chapter-by-chapter vocabulary syllabus for Minna no Nihongo with direct links to study words or launch lesson-specific quizzes.
 

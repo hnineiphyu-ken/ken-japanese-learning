@@ -192,7 +192,7 @@ export default function QuizPage() {
                 <div className="quiz-type-icon jp">語</div>
                 <div>
                   <div className="quiz-type-title">Kotoba</div>
-                  <div className="quiz-type-desc">1,445 Vocabulary</div>
+                  <div className="quiz-type-desc">1,523 Vocabulary</div>
                 </div>
               </button>
 
