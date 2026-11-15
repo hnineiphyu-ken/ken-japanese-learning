@@ -40,7 +40,6 @@ export default function HiraganaPage() {
                     title={`Listen ${hira} (${rom})`}
                   >
                     <span className="kana-jp jp">{hira}</span>
-                    <span className="kana-sub">{kata}</span>
                     <span className="kana-rom">{rom}</span>
                   </button>
                 );
@@ -69,7 +68,6 @@ export default function HiraganaPage() {
                 title={`Listen ${hira} (${rom})`}
               >
                 <span className="kana-jp jp">{hira}</span>
-                <span className="kana-sub">{kata}</span>
                 <span className="kana-rom">{rom}</span>
               </button>
             );
@@ -97,7 +95,6 @@ export default function HiraganaPage() {
                   title={`Listen ${hira} (${rom})`}
                 >
                   <span className="kana-jp jp">{hira}</span>
-                  <span className="kana-sub">{kata}</span>
                   <span className="kana-rom">{rom}</span>
                 </button>
               );

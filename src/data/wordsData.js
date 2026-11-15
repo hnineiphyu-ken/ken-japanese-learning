@@ -3103,7 +3103,7 @@ export const WORDS = [
   },
   {
     "jp": "会う",
-    "rd": "会って / 会った",
+    "rd": "あう",
     "rom": "au",
     "en": "to meet",
     "my": "တွေ့သည်",
@@ -3111,7 +3111,7 @@ export const WORDS = [
   },
   {
     "jp": "歩く",
-    "rd": "歩いて / 歩いた",
+    "rd": "あるく",
     "rom": "aruku",
     "en": "to walk",
     "my": "လမ်းလျှောက်သည်",
@@ -3119,7 +3119,7 @@ export const WORDS = [
   },
   {
     "jp": "遊ぶ",
-    "rd": "遊んで / 遊んだ",
+    "rd": "あそぶ",
     "rom": "asobu",
     "en": "to play; to have fun",
     "my": "ကစားသည်/ပျော်သည်",
@@ -3127,7 +3127,7 @@ export const WORDS = [
   },
   {
     "jp": "洗う",
-    "rd": "洗って / 洗った",
+    "rd": "あらう",
     "rom": "arau",
     "en": "to wash",
     "my": "ဆေးသည်",
@@ -3135,7 +3135,7 @@ export const WORDS = [
   },
   {
     "jp": "言う",
-    "rd": "言って / 言った",
+    "rd": "いう",
     "rom": "iu",
     "en": "to say",
     "my": "ပြောသည်",
@@ -3143,7 +3143,7 @@ export const WORDS = [
   },
   {
     "jp": "急ぐ",
-    "rd": "急いで / 急いだ",
+    "rd": "いそぐ",
     "rom": "isogu",
     "en": "to hurry",
     "my": "အလျင်လိုသည်",
@@ -3151,7 +3151,7 @@ export const WORDS = [
   },
   {
     "jp": "行く",
-    "rd": "行って / 行った",
+    "rd": "いく",
     "rom": "iku",
     "en": "to go",
     "my": "သွားသည်",
@@ -3159,7 +3159,7 @@ export const WORDS = [
   },
   {
     "jp": "入る",
-    "rd": "入って / 入った",
+    "rd": "はいる",
     "rom": "hairu",
     "en": "to enter; to go in",
     "my": "ဝင်သည်",
@@ -3167,7 +3167,7 @@ export const WORDS = [
   },
   {
     "jp": "起こす",
-    "rd": "起こして / 起こした",
+    "rd": "おこす",
     "rom": "okosu",
     "en": "to wake (someone) up",
     "my": "နှိုးသည်",
@@ -3175,7 +3175,7 @@ export const WORDS = [
   },
   {
     "jp": "送る",
-    "rd": "送って / 送った",
+    "rd": "おくる",
     "rom": "okuru",
     "en": "to send; to see off",
     "my": "ပို့သည်/လိုက်ပို့သည်",
@@ -3183,15 +3183,15 @@ export const WORDS = [
   },
   {
     "jp": "教える",
-    "rd": "教えて / 教えた",
+    "rd": "おしえる",
     "rom": "oshieru",
     "en": "to teach; to tell",
     "my": "သင်ပေးသည်",
-    "cat": "Verbs Group 1"
+    "cat": "Verbs Group 2"
   },
   {
     "jp": "怒る",
-    "rd": "怒って / 怒った",
+    "rd": "おこる",
     "rom": "okoru",
     "en": "to get angry",
     "my": "စိတ်ဆိုးသည်",
@@ -3199,7 +3199,7 @@ export const WORDS = [
   },
   {
     "jp": "思う",
-    "rd": "思って / 思った",
+    "rd": "おもう",
     "rom": "omou",
     "en": "to think; to feel",
     "my": "ထင်သည်/တွေးသည်",
@@ -3207,7 +3207,7 @@ export const WORDS = [
   },
   {
     "jp": "泳ぐ",
-    "rd": "泳いで / 泳いだ",
+    "rd": "およぐ",
     "rom": "oyogu",
     "en": "to swim",
     "my": "ရေကူးသည်",
@@ -3215,7 +3215,7 @@ export const WORDS = [
   },
   {
     "jp": "終わる",
-    "rd": "終わって / 終わった",
+    "rd": "おわる",
     "rom": "owaru",
     "en": "to end; to finish",
     "my": "ပြီးဆုံးသည်",
@@ -3223,7 +3223,7 @@ export const WORDS = [
   },
   {
     "jp": "買う",
-    "rd": "買って / 買った",
+    "rd": "かう",
     "rom": "kau",
     "en": "to buy",
     "my": "ဝယ်သည်",
@@ -3231,7 +3231,7 @@ export const WORDS = [
   },
   {
     "jp": "帰る",
-    "rd": "帰って / 帰った",
+    "rd": "かえる",
     "rom": "kaeru",
     "en": "to return (home)",
     "my": "ပြန်သည် (အိမ်)",
@@ -3239,7 +3239,7 @@ export const WORDS = [
   },
   {
     "jp": "書く",
-    "rd": "書いて / 書いた",
+    "rd": "かく",
     "rom": "kaku",
     "en": "to write",
     "my": "ရေးသည်",
@@ -3247,7 +3247,7 @@ export const WORDS = [
   },
   {
     "jp": "貸す",
-    "rd": "貸して / 貸した",
+    "rd": "かす",
     "rom": "kasu",
     "en": "to lend",
     "my": "ချေးငှားပေးသည်",
@@ -3255,7 +3255,7 @@ export const WORDS = [
   },
   {
     "jp": "聞く",
-    "rd": "聞いて / 聞いた",
+    "rd": "きく",
     "rom": "kiku",
     "en": "to listen; to hear; to ask",
     "my": "နားထောင်သည်/မေးသည်",
@@ -3263,7 +3263,7 @@ export const WORDS = [
   },
   {
     "jp": "切る",
-    "rd": "切って / 切った",
+    "rd": "きる",
     "rom": "kiru",
     "en": "to cut",
     "my": "ဖြတ်သည်",
@@ -3271,7 +3271,7 @@ export const WORDS = [
   },
   {
     "jp": "消す",
-    "rd": "消して / 消した",
+    "rd": "けす",
     "rom": "kesu",
     "en": "to turn off; to erase",
     "my": "ပိတ်သည်/ဖျက်သည်",
@@ -3279,7 +3279,7 @@ export const WORDS = [
   },
   {
     "jp": "降る",
-    "rd": "降って / 降った",
+    "rd": "ふる",
     "rom": "furu",
     "en": "to fall (rain/snow)",
     "my": "ရွာသည် (မိုး/နှင်း)",
@@ -3287,7 +3287,7 @@ export const WORDS = [
   },
   {
     "jp": "住む",
-    "rd": "住んで / 住んだ",
+    "rd": "すむ",
     "rom": "sumu",
     "en": "to live; to reside",
     "my": "နေထိုင်သည်",
@@ -3295,7 +3295,7 @@ export const WORDS = [
   },
   {
     "jp": "座る",
-    "rd": "座って / 座った",
+    "rd": "すわる",
     "rom": "suwaru",
     "en": "to sit (down)",
     "my": "ထိုင်သည်",
@@ -3303,7 +3303,7 @@ export const WORDS = [
   },
   {
     "jp": "死ぬ",
-    "rd": "死んで / 死んだ",
+    "rd": "しぬ",
     "rom": "shinu",
     "en": "to die",
     "my": "သေသည်",
@@ -3311,7 +3311,7 @@ export const WORDS = [
   },
   {
     "jp": "知る",
-    "rd": "知って / 知った",
+    "rd": "しる",
     "rom": "shiru",
     "en": "to come to know",
     "my": "သိသည်",
@@ -3319,7 +3319,7 @@ export const WORDS = [
   },
   {
     "jp": "吸う",
-    "rd": "吸って / 吸った",
+    "rd": "すう",
     "rom": "suu",
     "en": "to smoke; to inhale",
     "my": "ရှူသည်/ဆေးလိပ်သောက်သည်",
@@ -3327,7 +3327,7 @@ export const WORDS = [
   },
   {
     "jp": "出す",
-    "rd": "出して / 出した",
+    "rd": "だす",
     "rom": "dasu",
     "en": "to take out; to submit",
     "my": "ထုတ်သည်/တင်ပြသည်",
@@ -3335,7 +3335,7 @@ export const WORDS = [
   },
   {
     "jp": "立つ",
-    "rd": "立って / 立った",
+    "rd": "たつ",
     "rom": "tatsu",
     "en": "to stand",
     "my": "မတ်တပ်ရပ်သည်",
@@ -3343,7 +3343,7 @@ export const WORDS = [
   },
   {
     "jp": "使う",
-    "rd": "使って / 使った",
+    "rd": "つかう",
     "rom": "tsukau",
     "en": "to use",
     "my": "သုံးသည်",
@@ -3351,7 +3351,7 @@ export const WORDS = [
   },
   {
     "jp": "作る",
-    "rd": "作って / 作った",
+    "rd": "つくる",
     "rom": "tsukuru",
     "en": "to make; to create",
     "my": "လုပ်သည်/ဖန်တီးသည်",
@@ -3359,7 +3359,7 @@ export const WORDS = [
   },
   {
     "jp": "手伝う",
-    "rd": "手伝って / 手伝った",
+    "rd": "てつだう",
     "rom": "tetsudau",
     "en": "to help; to assist",
     "my": "ကူညီသည်",
@@ -3367,7 +3367,7 @@ export const WORDS = [
   },
   {
     "jp": "飛ぶ",
-    "rd": "飛んで / 飛んだ",
+    "rd": "とぶ",
     "rom": "tobu",
     "en": "to fly; to jump",
     "my": "ပျံသည်/ခုန်သည်",
@@ -3375,7 +3375,7 @@ export const WORDS = [
   },
   {
     "jp": "泊まる",
-    "rd": "泊まって / 泊まった",
+    "rd": "とまる",
     "rom": "tomaru",
     "en": "to stay (overnight)",
     "my": "တည်းခိုသည် (ညအိပ်)",
@@ -3383,7 +3383,7 @@ export const WORDS = [
   },
   {
     "jp": "取る",
-    "rd": "取って / 取った",
+    "rd": "とる",
     "rom": "toru",
     "en": "to take; to get",
     "my": "ယူသည်",
@@ -3391,7 +3391,7 @@ export const WORDS = [
   },
   {
     "jp": "乗る",
-    "rd": "乗って / 乗った",
+    "rd": "のる",
     "rom": "noru",
     "en": "to ride; to get on",
     "my": "စီးသည်",
@@ -3399,7 +3399,7 @@ export const WORDS = [
   },
   {
     "jp": "飲む",
-    "rd": "飲んで / 飲んだ",
+    "rd": "のむ",
     "rom": "nomu",
     "en": "to drink",
     "my": "သောက်သည်",
@@ -3407,7 +3407,7 @@ export const WORDS = [
   },
   {
     "jp": "話す",
-    "rd": "話して / 話した",
+    "rd": "はなす",
     "rom": "hanasu",
     "en": "to speak",
     "my": "ပြောသည်",
@@ -3415,7 +3415,7 @@ export const WORDS = [
   },
   {
     "jp": "払う",
-    "rd": "払って / 払った",
+    "rd": "はらう",
     "rom": "harau",
     "en": "to pay",
     "my": "ပေးချေသည်",
@@ -3423,7 +3423,7 @@ export const WORDS = [
   },
   {
     "jp": "引く",
-    "rd": "引いて / 引いた",
+    "rd": "ひく",
     "rom": "hiku",
     "en": "to pull; to look up",
     "my": "ဆွဲသည်/ရှာသည်",
@@ -3431,7 +3431,7 @@ export const WORDS = [
   },
   {
     "jp": "弾く",
-    "rd": "弾いて / 弾いた",
+    "rd": "ひく",
     "rom": "hiku",
     "en": "to play (instrument)",
     "my": "တီးခတ်သည်",
@@ -3439,7 +3439,7 @@ export const WORDS = [
   },
   {
     "jp": "吹く",
-    "rd": "吹いて / 吹いた",
+    "rd": "ふく",
     "rom": "fuku",
     "en": "to blow",
     "my": "မှုတ်သည်",
@@ -3447,7 +3447,7 @@ export const WORDS = [
   },
   {
     "jp": "待つ",
-    "rd": "待って / 待った",
+    "rd": "まつ",
     "rom": "matsu",
     "en": "to wait",
     "my": "စောင့်သည်",
@@ -3455,7 +3455,7 @@ export const WORDS = [
   },
   {
     "jp": "持つ",
-    "rd": "持って / 持った",
+    "rd": "もつ",
     "rom": "motsu",
     "en": "to hold; to carry",
     "my": "ကိုင်သည်/သယ်သည်",
@@ -3463,7 +3463,7 @@ export const WORDS = [
   },
   {
     "jp": "もらう",
-    "rd": "もらって / もらった",
+    "rd": "もらう",
     "rom": "morau",
     "en": "to receive",
     "my": "ရရှိသည်",
@@ -3471,7 +3471,7 @@ export const WORDS = [
   },
   {
     "jp": "やる",
-    "rd": "やって / やった",
+    "rd": "やる",
     "rom": "yaru",
     "en": "to do (casual)",
     "my": "လုပ်သည် (အရပ်သုံး)",
@@ -3479,7 +3479,7 @@ export const WORDS = [
   },
   {
     "jp": "読む",
-    "rd": "読んで / 読んだ",
+    "rd": "よむ",
     "rom": "yomu",
     "en": "to read",
     "my": "ဖတ်သည်",
@@ -3487,7 +3487,7 @@ export const WORDS = [
   },
   {
     "jp": "呼ぶ",
-    "rd": "呼んで / 呼んだ",
+    "rd": "よぶ",
     "rom": "yobu",
     "en": "to call; to invite",
     "my": "ခေါ်သည်/ဖိတ်သည်",
@@ -3495,7 +3495,7 @@ export const WORDS = [
   },
   {
     "jp": "分かる",
-    "rd": "分かって / 分かった",
+    "rd": "わかる",
     "rom": "wakaru",
     "en": "to understand",
     "my": "နားလည်သည်",
@@ -3503,7 +3503,7 @@ export const WORDS = [
   },
   {
     "jp": "渡す",
-    "rd": "渡して / 渡した",
+    "rd": "わたす",
     "rom": "watasu",
     "en": "to hand over; to pass",
     "my": "ပေးသည်/လွှဲပေးသည်",
@@ -3511,7 +3511,7 @@ export const WORDS = [
   },
   {
     "jp": "渡る",
-    "rd": "渡って / 渡った",
+    "rd": "わたる",
     "rom": "wataru",
     "en": "to cross (a road/bridge)",
     "my": "ဖြတ်ကူးသည်",
@@ -3519,7 +3519,7 @@ export const WORDS = [
   },
   {
     "jp": "起きる",
-    "rd": "起きて / 起きた",
+    "rd": "おきる",
     "rom": "okiru",
     "en": "to wake up; to get up",
     "my": "ထသည်/နိုးထသည်",
@@ -3527,7 +3527,7 @@ export const WORDS = [
   },
   {
     "jp": "落ちる",
-    "rd": "落ちて / 落ちた",
+    "rd": "おちる",
     "rom": "ochiru",
     "en": "to fall; to drop",
     "my": "ကျသည်",
@@ -3535,7 +3535,7 @@ export const WORDS = [
   },
   {
     "jp": "覚える",
-    "rd": "覚えて / 覚えた",
+    "rd": "おぼえる",
     "rom": "oboeru",
     "en": "to memorize; to remember",
     "my": "မှတ်မိသည်",
@@ -3543,7 +3543,7 @@ export const WORDS = [
   },
   {
     "jp": "降りる",
-    "rd": "降りて / 降りた",
+    "rd": "おりる",
     "rom": "oriru",
     "en": "to get off (vehicle)",
     "my": "ဆင်းသည် (ယာဉ်ပေါ်မှ)",
@@ -3551,7 +3551,7 @@ export const WORDS = [
   },
   {
     "jp": "開ける",
-    "rd": "開けて / 開けた",
+    "rd": "あける",
     "rom": "akeru",
     "en": "to open",
     "my": "ဖွင့်သည်",
@@ -3559,7 +3559,7 @@ export const WORDS = [
   },
   {
     "jp": "上げる",
-    "rd": "上げて / 上げた",
+    "rd": "あげる",
     "rom": "ageru",
     "en": "to give; to raise",
     "my": "ပေးသည်/မြှောက်သည်",
@@ -3567,7 +3567,7 @@ export const WORDS = [
   },
   {
     "jp": "集める",
-    "rd": "集めて / 集めた",
+    "rd": "あつめる",
     "rom": "atsumeru",
     "en": "to collect; to gather",
     "my": "စုဆောင်းသည်",
@@ -3575,7 +3575,7 @@ export const WORDS = [
   },
   {
     "jp": "いる",
-    "rd": "いて / いた",
+    "rd": "いる",
     "rom": "iru",
     "en": "to exist (animate)",
     "my": "ရှိသည် (သက်ရှိ)",
@@ -3583,7 +3583,7 @@ export const WORDS = [
   },
   {
     "jp": "生まれる",
-    "rd": "生まれて / 生まれた",
+    "rd": "うまれる",
     "rom": "umareru",
     "en": "to be born",
     "my": "မွေးဖွားသည်",
@@ -3591,7 +3591,7 @@ export const WORDS = [
   },
   {
     "jp": "考える",
-    "rd": "考えて / 考えた",
+    "rd": "かんがえる",
     "rom": "kangaeru",
     "en": "to think; to consider",
     "my": "စဉ်းစားသည်",
@@ -3599,7 +3599,7 @@ export const WORDS = [
   },
   {
     "jp": "食べる",
-    "rd": "食べて / 食べた",
+    "rd": "たべる",
     "rom": "taberu",
     "en": "to eat",
     "my": "စားသည်",
@@ -3607,7 +3607,7 @@ export const WORDS = [
   },
   {
     "jp": "出かける",
-    "rd": "出かけて / 出かけた",
+    "rd": "でかける",
     "rom": "dekakeru",
     "en": "to go out",
     "my": "အပြင်ထွက်သည်",
@@ -3615,7 +3615,7 @@ export const WORDS = [
   },
   {
     "jp": "出る",
-    "rd": "出て / 出た",
+    "rd": "でる",
     "rom": "deru",
     "en": "to leave; to go out; to come out",
     "my": "ထွက်သည်",
@@ -3623,7 +3623,7 @@ export const WORDS = [
   },
   {
     "jp": "止める",
-    "rd": "止めて / 止めた",
+    "rd": "とめる",
     "rom": "tomeru",
     "en": "to stop (something)",
     "my": "ရပ်သည်",
@@ -3631,7 +3631,7 @@ export const WORDS = [
   },
   {
     "jp": "閉める",
-    "rd": "閉めて / 閉めた",
+    "rd": "しめる",
     "rom": "shimeru",
     "en": "to close (a door)",
     "my": "ပိတ်သည်",
@@ -3639,7 +3639,7 @@ export const WORDS = [
   },
   {
     "jp": "着る",
-    "rd": "着て / 着た",
+    "rd": "きる",
     "rom": "kiru",
     "en": "to wear (upper body)",
     "my": "ဝတ်သည်",
@@ -3647,7 +3647,7 @@ export const WORDS = [
   },
   {
     "jp": "見る",
-    "rd": "見て / 見た",
+    "rd": "みる",
     "rom": "miru",
     "en": "to see; to watch; to look",
     "my": "ကြည့်သည်",
@@ -3655,7 +3655,7 @@ export const WORDS = [
   },
   {
     "jp": "見せる",
-    "rd": "見せて / 見せた",
+    "rd": "みせる",
     "rom": "miseru",
     "en": "to show",
     "my": "ပြသည်",
@@ -3663,7 +3663,7 @@ export const WORDS = [
   },
   {
     "jp": "迎える",
-    "rd": "迎えて / 迎えた",
+    "rd": "むかえる",
     "rom": "mukaeru",
     "en": "to welcome; to meet",
     "my": "ကြိုဆိုသည်/သွားကြိုသည်",
@@ -3671,7 +3671,7 @@ export const WORDS = [
   },
   {
     "jp": "もらえる",
-    "rd": "もらえて / もらえた",
+    "rd": "もらえる",
     "rom": "moraeru",
     "en": "can receive",
     "my": "ရနိုင်သည်",
@@ -3679,7 +3679,7 @@ export const WORDS = [
   },
   {
     "jp": "やめる",
-    "rd": "やめて / やめた",
+    "rd": "やめる",
     "rom": "yameru",
     "en": "to quit; to stop (doing)",
     "my": "ရပ်သည်/စွန့်သည်",
@@ -3687,7 +3687,7 @@ export const WORDS = [
   },
   {
     "jp": "忘れる",
-    "rd": "忘れて / 忘れた",
+    "rd": "わすれる",
     "rom": "wasureru",
     "en": "to forget",
     "my": "မေ့သည်",
@@ -3695,7 +3695,7 @@ export const WORDS = [
   },
   {
     "jp": "する",
-    "rd": "して / した",
+    "rd": "する",
     "rom": "suru",
     "en": "to do",
     "my": "လုပ်သည်",
@@ -3703,7 +3703,7 @@ export const WORDS = [
   },
   {
     "jp": "勉強する",
-    "rd": "勉強して / 勉強した",
+    "rd": "べんきょうする",
     "rom": "benkyou suru",
     "en": "to study",
     "my": "စာကျက်သည်",
@@ -3711,7 +3711,7 @@ export const WORDS = [
   },
   {
     "jp": "仕事する",
-    "rd": "仕事して / 仕事した",
+    "rd": "しごとする",
     "rom": "shigoto suru",
     "en": "to work",
     "my": "အလုပ်လုပ်သည်",
@@ -3719,7 +3719,7 @@ export const WORDS = [
   },
   {
     "jp": "電話する",
-    "rd": "電話して / 電話した",
+    "rd": "でんわする",
     "rom": "denwa suru",
     "en": "to phone",
     "my": "ဖုန်းဆက်သည်",
@@ -3727,7 +3727,7 @@ export const WORDS = [
   },
   {
     "jp": "旅行する",
-    "rd": "旅行して / 旅行した",
+    "rd": "りょこうする",
     "rom": "ryokou suru",
     "en": "to travel",
     "my": "ခရီးသွားသည်",
@@ -3735,7 +3735,7 @@ export const WORDS = [
   },
   {
     "jp": "運動する",
-    "rd": "運動して / 運動した",
+    "rd": "うんどうする",
     "rom": "undou suru",
     "en": "to exercise",
     "my": "လေ့ကျင့်ခန်းလုပ်သည်",
@@ -3743,7 +3743,7 @@ export const WORDS = [
   },
   {
     "jp": "料理する",
-    "rd": "料理して / 料理した",
+    "rd": "りょうりする",
     "rom": "ryouri suru",
     "en": "to cook",
     "my": "ဟင်းချက်သည်",
@@ -3751,7 +3751,7 @@ export const WORDS = [
   },
   {
     "jp": "散歩する",
-    "rd": "散歩して / 散歩した",
+    "rd": "さんぽする",
     "rom": "sanpo suru",
     "en": "to take a walk",
     "my": "လမ်းလျှောက်သည်",
@@ -3759,7 +3759,7 @@ export const WORDS = [
   },
   {
     "jp": "買い物する",
-    "rd": "買い物して / 買い物した",
+    "rd": "かいものする",
     "rom": "kaimono suru",
     "en": "to go shopping",
     "my": "ဈေးဝယ်သည်",
@@ -3767,7 +3767,7 @@ export const WORDS = [
   },
   {
     "jp": "来る",
-    "rd": "来て / 来た",
+    "rd": "くる",
     "rom": "kuru",
     "en": "to come",
     "my": "လာသည်",
@@ -6313,7 +6313,7 @@ export const WORDS = [
   },
   {
     "jp": "IMC",
-    "rd": "IMC",
+    "rd": "アイエムシー",
     "rom": "IMC",
     "en": "IMC (company)",
     "my": "IMCကုမ္ပဏီ",
@@ -6337,7 +6337,7 @@ export const WORDS = [
   },
   {
     "jp": "AKC",
-    "rd": "AKC",
+    "rd": "エーケーシー",
     "rom": "AKC",
     "en": "AKC (company)",
     "my": "AKCကုမ္ပဏီ",
@@ -6449,7 +6449,7 @@ export const WORDS = [
   },
   {
     "jp": "CD",
-    "rd": "CD",
+    "rd": "シーディー",
     "rom": "shiidii",
     "en": "CD",
     "my": "စီဒီ",
@@ -8469,7 +8469,7 @@ export const WORDS = [
   },
   {
     "jp": "ATM",
-    "rd": "ATM",
+    "rd": "エーティーエム",
     "rom": "eetiiemu",
     "en": "ATM",
     "my": "အလိုအလျောက်ငွေထုတ်စက်",
@@ -9237,7 +9237,7 @@ export const WORDS = [
   },
   {
     "jp": "ABC ストア",
-    "rd": "ABC ストア",
+    "rd": "エービーシー ストア",
     "rom": "ABC sutoa",
     "en": "ABC Store",
     "my": "ABCစတိုးဆိုင်",
@@ -10165,7 +10165,7 @@ export const WORDS = [
   },
   {
     "jp": "JR",
-    "rd": "JR",
+    "rd": "ジェイアール",
     "rom": "jei aaru",
     "en": "Japan Railways",
     "my": "ဂျပန်ရထားလိုင်း Japan Railways",
@@ -10445,7 +10445,7 @@ export const WORDS = [
   },
   {
     "jp": "上着",
-    "rd": "うえちゃく",
+    "rd": "うわぎ",
     "rom": "uwagi",
     "en": "coat; jacket",
     "my": "အနွေးထည်/အပေါ်ထပ်အင်္ကျီ",
@@ -11037,7 +11037,7 @@ export const WORDS = [
   },
   {
     "jp": "あります［お祭りが～］",
-    "rd": "あります［おまつりが～］",
+    "rd": "あります",
     "rom": "arimasu [omatsuri ga ~]",
     "en": "(a festival) is held",
     "my": "ရှိသည်(ပွဲတော်)",
@@ -11061,7 +11061,7 @@ export const WORDS = [
   },
   {
     "jp": "やめます［会社を～］",
-    "rd": "やめます［かいしゃを～］",
+    "rd": "やめます",
     "rom": "yamemasu [kaisha o ~]",
     "en": "quit (a company)",
     "my": "အလုပ်ထွက်သည်",
@@ -11077,7 +11077,7 @@ export const WORDS = [
   },
   {
     "jp": "無駄［な］",
-    "rd": "むだ［な］",
+    "rd": "むだ",
     "rom": "muda [na]",
     "en": "wasteful",
     "my": "အလဟဿဖြစ်သော",
@@ -11085,7 +11085,7 @@ export const WORDS = [
   },
   {
     "jp": "不便［な］",
-    "rd": "ふべん［な］",
+    "rd": "ふべん",
     "rom": "fuben [na]",
     "en": "inconvenient",
     "my": "အဆင်မပြေသော",
@@ -11389,7 +11389,7 @@ export const WORDS = [
   },
   {
     "jp": "かけます［めがねを～］",
-    "rd": "かけます［めがねを～］",
+    "rd": "かけます",
     "rom": "kakemasu [megane o ~]",
     "en": "put on (glasses)",
     "my": "မျက်မှန်တပ်သည်။",
@@ -11397,7 +11397,7 @@ export const WORDS = [
   },
   {
     "jp": "します［ネクタイを～］",
-    "rd": "します［ネクタイを～］",
+    "rd": "します",
     "rom": "shimasu [nekutai o ~]",
     "en": "wear (a necktie)",
     "my": "neck tie ကိုဝတ်ဆင်သည်",
@@ -11437,7 +11437,7 @@ export const WORDS = [
   },
   {
     "jp": "［お］弁当",
-    "rd": "［お］べんとう",
+    "rd": "おべんとう",
     "rom": "[o]bentou",
     "en": "boxed lunch",
     "my": "ထမင်းဗူး",
@@ -11477,7 +11477,7 @@ export const WORDS = [
   },
   {
     "jp": "おめでとう［ございます］",
-    "rd": "おめでとう［ございます］",
+    "rd": "おめでとうございます",
     "rom": "omedetou [gozaimasu]",
     "en": "congratulations",
     "my": "ဂုဏ်ယူပါတယ်။",
@@ -11565,7 +11565,7 @@ export const WORDS = [
   },
   {
     "jp": "聞きます［先生に］",
-    "rd": "ききます［せんせいに］",
+    "rd": "ききます",
     "rom": "kikimasu [sensei ni]",
     "en": "ask (a teacher)",
     "my": "မေးမြန်းသည်(ဆရာကို)။",
@@ -11605,7 +11605,7 @@ export const WORDS = [
   },
   {
     "jp": "出ます［お釣りが～］",
-    "rd": "でます［おつりが～］",
+    "rd": "でます",
     "rom": "demasu [otsuri ga ~]",
     "en": "come out (change comes out)",
     "my": "ထွက်လာသည်/ကျလာသည်။",
@@ -11621,7 +11621,7 @@ export const WORDS = [
   },
   {
     "jp": "渡ります［橋を～］",
-    "rd": "わたります［はしを～］",
+    "rd": "わたります",
     "rom": "watarimasu [hashi o ~]",
     "en": "cross (a bridge)",
     "my": "ဖြတ်ကျော်သည်(တံတားကို)။",
@@ -11629,7 +11629,7 @@ export const WORDS = [
   },
   {
     "jp": "曲がります［右へ～］",
-    "rd": "まがります［みぎへ～］",
+    "rd": "まがります",
     "rom": "magarimasu [migi e ~]",
     "en": "turn (to the right)",
     "my": "ကွေ့သည်(ညာဘက်ကို)",
@@ -11637,7 +11637,7 @@ export const WORDS = [
   },
   {
     "jp": "［お］湯",
-    "rd": "［お］ゆ",
+    "rd": "おゆ",
     "rom": "[o]yu",
     "en": "hot water",
     "my": "ရေနွေး",
@@ -11845,7 +11845,7 @@ export const WORDS = [
   },
   {
     "jp": "［お］菓子",
-    "rd": "［お］かし",
+    "rd": "おかし",
     "rom": "[o]kashi",
     "en": "sweets",
     "my": "မုန့်",
@@ -11909,7 +11909,7 @@ export const WORDS = [
   },
   {
     "jp": "取ります［年を～］",
-    "rd": "とります［としを～］",
+    "rd": "とります",
     "rom": "torimasu [toshi o ~]",
     "en": "get older",
     "my": "အသက်ကြီးသည်။",
@@ -11949,7 +11949,7 @@ export const WORDS = [
   },
   {
     "jp": "もし［～たら］",
-    "rd": "もし［～たら］",
+    "rd": "もし",
     "rom": "moshi [~tara]",
     "en": "if",
     "my": "တကယ်လို့～ခဲ့ရင်",
@@ -11973,7 +11973,7 @@ export const WORDS = [
   },
   {
     "jp": "［いろいろ］お世話になりました",
-    "rd": "［いろいろ］おせわになりました",
+    "rd": "いろいろおせわになりました",
     "rom": "[iroiro] osewa ni narimashita",
     "en": "Thank you for everything.",
     "my": "ကျေးဇူးအများကြီးရှိခဲ့ပါတယ်",
@@ -13218,7 +13218,7 @@ export const MINNA = [
   },
   {
     "jp": "IMC",
-    "rd": "IMC",
+    "rd": "アイエムシー",
     "rom": "IMC",
     "en": "IMC (company)",
     "my": "IMCကုမ္ပဏီ",
@@ -13242,7 +13242,7 @@ export const MINNA = [
   },
   {
     "jp": "AKC",
-    "rd": "AKC",
+    "rd": "エーケーシー",
     "rom": "AKC",
     "en": "AKC (company)",
     "my": "AKCကုမ္ပဏီ",
@@ -13442,7 +13442,7 @@ export const MINNA = [
   },
   {
     "jp": "CD",
-    "rd": "CD",
+    "rd": "シーディー",
     "rom": "shiidii",
     "en": "CD",
     "my": "စီဒီ",
@@ -16954,7 +16954,7 @@ export const MINNA = [
   },
   {
     "jp": "ATM",
-    "rd": "ATM",
+    "rd": "エーティーエム",
     "rom": "eetiiemu",
     "en": "ATM",
     "my": "အလိုအလျောက်ငွေထုတ်စက်",
@@ -18058,7 +18058,7 @@ export const MINNA = [
   },
   {
     "jp": "ABC ストア",
-    "rd": "ABC ストア",
+    "rd": "エービーシー ストア",
     "rom": "ABC sutoa",
     "en": "ABC Store",
     "my": "ABCစတိုးဆိုင်",
@@ -19314,7 +19314,7 @@ export const MINNA = [
   },
   {
     "jp": "JR",
-    "rd": "JR",
+    "rd": "ジェイアール",
     "rom": "jei aaru",
     "en": "Japan Railways",
     "my": "ဂျပန်ရထားလိုင်း Japan Railways",
@@ -19626,7 +19626,7 @@ export const MINNA = [
   },
   {
     "jp": "上着",
-    "rd": "うえちゃく",
+    "rd": "うわぎ",
     "rom": "uwagi",
     "en": "coat; jacket",
     "my": "အနွေးထည်/အပေါ်ထပ်အင်္ကျီ",
@@ -20306,7 +20306,7 @@ export const MINNA = [
   },
   {
     "jp": "あります［お祭りが～］",
-    "rd": "あります［おまつりが～］",
+    "rd": "あります",
     "rom": "arimasu [omatsuri ga ~]",
     "en": "(a festival) is held",
     "my": "ရှိသည်(ပွဲတော်)",
@@ -20330,7 +20330,7 @@ export const MINNA = [
   },
   {
     "jp": "やめます［会社を～］",
-    "rd": "やめます［かいしゃを～］",
+    "rd": "やめます",
     "rom": "yamemasu [kaisha o ~]",
     "en": "quit (a company)",
     "my": "အလုပ်ထွက်သည်",
@@ -20346,7 +20346,7 @@ export const MINNA = [
   },
   {
     "jp": "無駄［な］",
-    "rd": "むだ［な］",
+    "rd": "むだ",
     "rom": "muda [na]",
     "en": "wasteful",
     "my": "အလဟဿဖြစ်သော",
@@ -20354,7 +20354,7 @@ export const MINNA = [
   },
   {
     "jp": "不便［な］",
-    "rd": "ふべん［な］",
+    "rd": "ふべん",
     "rom": "fuben [na]",
     "en": "inconvenient",
     "my": "အဆင်မပြေသော",
@@ -20698,7 +20698,7 @@ export const MINNA = [
   },
   {
     "jp": "かけます［めがねを～］",
-    "rd": "かけます［めがねを～］",
+    "rd": "かけます",
     "rom": "kakemasu [megane o ~]",
     "en": "put on (glasses)",
     "my": "မျက်မှန်တပ်သည်။",
@@ -20706,7 +20706,7 @@ export const MINNA = [
   },
   {
     "jp": "します［ネクタイを～］",
-    "rd": "します［ネクタイを～］",
+    "rd": "します",
     "rom": "shimasu [nekutai o ~]",
     "en": "wear (a necktie)",
     "my": "neck tie ကိုဝတ်ဆင်သည်",
@@ -20778,7 +20778,7 @@ export const MINNA = [
   },
   {
     "jp": "［お］弁当",
-    "rd": "［お］べんとう",
+    "rd": "おべんとう",
     "rom": "[o]bentou",
     "en": "boxed lunch",
     "my": "ထမင်းဗူး",
@@ -20826,7 +20826,7 @@ export const MINNA = [
   },
   {
     "jp": "おめでとう［ございます］",
-    "rd": "おめでとう［ございます］",
+    "rd": "おめでとうございます",
     "rom": "omedetou [gozaimasu]",
     "en": "congratulations",
     "my": "ဂုဏ်ယူပါတယ်။",
@@ -20922,7 +20922,7 @@ export const MINNA = [
   },
   {
     "jp": "聞きます［先生に］",
-    "rd": "ききます［せんせいに］",
+    "rd": "ききます",
     "rom": "kikimasu [sensei ni]",
     "en": "ask (a teacher)",
     "my": "မေးမြန်းသည်(ဆရာကို)။",
@@ -20962,7 +20962,7 @@ export const MINNA = [
   },
   {
     "jp": "出ます［お釣りが～］",
-    "rd": "でます［おつりが～］",
+    "rd": "でます",
     "rom": "demasu [otsuri ga ~]",
     "en": "come out (change comes out)",
     "my": "ထွက်လာသည်/ကျလာသည်။",
@@ -20978,7 +20978,7 @@ export const MINNA = [
   },
   {
     "jp": "渡ります［橋を～］",
-    "rd": "わたります［はしを～］",
+    "rd": "わたります",
     "rom": "watarimasu [hashi o ~]",
     "en": "cross (a bridge)",
     "my": "ဖြတ်ကျော်သည်(တံတားကို)။",
@@ -20986,7 +20986,7 @@ export const MINNA = [
   },
   {
     "jp": "曲がります［右へ～］",
-    "rd": "まがります［みぎへ～］",
+    "rd": "まがります",
     "rom": "magarimasu [migi e ~]",
     "en": "turn (to the right)",
     "my": "ကွေ့သည်(ညာဘက်ကို)",
@@ -21002,7 +21002,7 @@ export const MINNA = [
   },
   {
     "jp": "［お］湯",
-    "rd": "［お］ゆ",
+    "rd": "おゆ",
     "rom": "[o]yu",
     "en": "hot water",
     "my": "ရေနွေး",
@@ -21242,7 +21242,7 @@ export const MINNA = [
   },
   {
     "jp": "［お］菓子",
-    "rd": "［お］かし",
+    "rd": "おかし",
     "rom": "[o]kashi",
     "en": "sweets",
     "my": "မုန့်",
@@ -21314,7 +21314,7 @@ export const MINNA = [
   },
   {
     "jp": "取ります［年を～］",
-    "rd": "とります［としを～］",
+    "rd": "とります",
     "rom": "torimasu [toshi o ~]",
     "en": "get older",
     "my": "အသက်ကြီးသည်။",
@@ -21354,7 +21354,7 @@ export const MINNA = [
   },
   {
     "jp": "もし［～たら］",
-    "rd": "もし［～たら］",
+    "rd": "もし",
     "rom": "moshi [~tara]",
     "en": "if",
     "my": "တကယ်လို့～ခဲ့ရင်",
@@ -21402,7 +21402,7 @@ export const MINNA = [
   },
   {
     "jp": "［いろいろ］お世話になりました",
-    "rd": "［いろいろ］おせわになりました",
+    "rd": "いろいろおせわになりました",
     "rom": "[iroiro] osewa ni narimashita",
     "en": "Thank you for everything.",
     "my": "ကျေးဇူးအများကြီးရှိခဲ့ပါတယ်",

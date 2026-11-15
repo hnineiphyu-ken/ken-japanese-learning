@@ -40,7 +40,6 @@ export default function KatakanaPage() {
                     title={`Listen ${kata} (${rom})`}
                   >
                     <span className="kana-jp jp">{kata}</span>
-                    <span className="kana-sub">{hira}</span>
                     <span className="kana-rom">{rom}</span>
                   </button>
                 );
@@ -69,7 +68,6 @@ export default function KatakanaPage() {
                 title={`Listen ${kata} (${rom})`}
               >
                 <span className="kana-jp jp">{kata}</span>
-                <span className="kana-sub">{hira}</span>
                 <span className="kana-rom">{rom}</span>
               </button>
             );
@@ -97,7 +95,6 @@ export default function KatakanaPage() {
                   title={`Listen ${kata} (${rom})`}
                 >
                   <span className="kana-jp jp">{kata}</span>
-                  <span className="kana-sub">{hira}</span>
                   <span className="kana-rom">{rom}</span>
                 </button>
               );
@@ -125,7 +122,6 @@ export default function KatakanaPage() {
                 title={`Listen ${kata} (${rom})`}
               >
                 <span className="kana-jp jp">{kata}</span>
-                <span className="kana-sub">-</span>
                 <span className="kana-rom">{rom}</span>
               </button>
             );

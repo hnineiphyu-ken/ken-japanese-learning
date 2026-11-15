@@ -48,13 +48,23 @@ export function speakJapanese(text) {
   try {
     window.speechSynthesis.cancel();
 
-    // Clean text: strip leading/trailing tildes, brackets, extra symbols
+    // Clean text: strip leading/trailing tildes, ellipses, brackets, extra symbols
     let cleanText = String(text)
+      .replace(/^[.…\s]+/, '')
+      .replace(/[.…\s]+$/, '')
       .replace(/^[～~]/, '')
       .replace(/[～~]$/, '')
       .replace(/\[(.*?)\]/g, '$1')
       .replace(/\((.*?)\)/g, '$1')
+      .replace(/［(.*?)］/g, '$1')
+      .replace(/（(.*?)）/g, '$1')
+      .replace(/[～~]/g, '')
       .trim();
+
+    // If multiple phrases separated by slash (e.g. おかえり / おかえりなさい), speak the first one
+    if (cleanText.includes('/')) {
+      cleanText = cleanText.split('/')[0].trim();
+    }
 
     if (!cleanText) return;
 
