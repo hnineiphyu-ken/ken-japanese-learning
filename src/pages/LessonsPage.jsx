@@ -187,9 +187,9 @@ export default function LessonsPage() {
         >
           <span style={{ fontSize: '18px' }}>✨</span>
           <div style={{ flex: '1 1 300px', fontSize: '13px', lineHeight: '1.5', color: 'var(--ink)' }}>
-            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. <b>Lesson 1 Complete Coursework (単語, 文型, 例文, 会話, 文法解説, 練習 A·B·C &amp; 問題)</b> is now 100% active with interactive self-testing &amp; native pronunciation!
+            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. <b>Lessons 1 through 7 Complete Coursework (単語, 文型, 例文, 会話, 文法解説, 練習 A·B·C &amp; 問題)</b> are now 100% active with interactive self-testing &amp; native audio pronunciation!
           </div>
-          <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>Lesson 1 100% Complete ✅</span>
+          <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>Lessons 1–7 Live ✅</span>
         </div>
       </div>
 
