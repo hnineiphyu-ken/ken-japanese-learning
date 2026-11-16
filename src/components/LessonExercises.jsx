@@ -11,6 +11,9 @@ export default function LessonExercises({ lessonNum }) {
   // Renshuu B selected drill number (1 to 7)
   const [selectedDrillNo, setSelectedDrillNo] = useState(1);
 
+  // Renshuu C selected dialogue number ('all' | 1 | 2 | 3)
+  const [selectedDialogueNo, setSelectedDialogueNo] = useState('all');
+
   // Mondai selected question number (1 to 6)
   const [selectedMondaiNo, setSelectedMondaiNo] = useState(1);
 
@@ -61,51 +64,38 @@ export default function LessonExercises({ lessonNum }) {
 
   return (
     <div style={{ marginTop: '14px' }}>
-      {/* Exercise Category Sub-Nav */}
+      {/* Exercise Category Selector */}
       <div
         style={{
           display: 'flex',
-          gap: '8px',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '12px',
           flexWrap: 'wrap',
           marginBottom: '18px',
-          padding: '8px',
+          padding: '10px 14px',
           background: 'var(--bg-card-subtle)',
           borderRadius: 'var(--radius-md)',
           border: '1.5px solid var(--line-soft)'
         }}
       >
-        <button
-          type="button"
-          className={`lesson-action-btn ${activeSubTab === 'renshuuA' ? 'primary' : ''}`}
-          onClick={() => setActiveSubTab('renshuuA')}
-          style={{ fontSize: '12.5px', padding: '6px 14px' }}
-        >
-          <span>Grammar (練習 A)</span>
-        </button>
-        <button
-          type="button"
-          className={`lesson-action-btn ${activeSubTab === 'renshuuB' ? 'primary' : ''}`}
-          onClick={() => setActiveSubTab('renshuuB')}
-          style={{ fontSize: '12.5px', padding: '6px 14px' }}
-        >
-          <span>Drills (練習 B)</span>
-        </button>
-        <button
-          type="button"
-          className={`lesson-action-btn ${activeSubTab === 'renshuuC' ? 'primary' : ''}`}
-          onClick={() => setActiveSubTab('renshuuC')}
-          style={{ fontSize: '12.5px', padding: '6px 14px' }}
-        >
-          <span>Dialogues (練習 C)</span>
-        </button>
-        <button
-          type="button"
-          className={`lesson-action-btn ${activeSubTab === 'mondai' ? 'primary' : ''}`}
-          onClick={() => setActiveSubTab('mondai')}
-          style={{ fontSize: '12.5px', padding: '6px 14px' }}
-        >
-          <span>Review Questions (問題)</span>
-        </button>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 280px' }}>
+          <label htmlFor={`exercise-part-select-${lessonNum}`} style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
+            📝 Exercise Part:
+          </label>
+          <select
+            id={`exercise-part-select-${lessonNum}`}
+            className="custom-select"
+            value={activeSubTab}
+            onChange={e => setActiveSubTab(e.target.value)}
+            style={{ flex: 1, minWidth: '220px' }}
+          >
+            <option value="renshuuA">📐 練習 A — Grammar Structure Patterns (文法パターン · 6 patterns)</option>
+            <option value="renshuuB">⚡ 練習 B — Substitution Drills (ドリル練習 · 7 drills)</option>
+            <option value="renshuuC">💬 練習 C — Situational Dialogues (会話・場面練習 · 3 dialogues)</option>
+            <option value="mondai">📋 問題 — Review Questions &amp; Self-Check (復習問題 · 6 questions)</option>
+          </select>
+        </div>
       </div>
 
       {/* ======================================================== */}
@@ -270,19 +260,65 @@ export default function LessonExercises({ lessonNum }) {
             </div>
           </div>
 
-          {/* Drill Number Selector Tabs (1 to 7) */}
-          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '6px', marginBottom: '16px' }}>
-            {data.renshuuB.map(drill => (
-              <button
-                key={drill.no}
-                type="button"
-                className={`lesson-action-btn ${selectedDrillNo === drill.no ? 'primary' : ''}`}
-                onClick={() => setSelectedDrillNo(drill.no)}
-                style={{ fontSize: '12px', padding: '5px 12px', whiteSpace: 'nowrap' }}
+          {/* Drill Selector Bar (replaces 7 buttons) */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '10px',
+              flexWrap: 'wrap',
+              marginBottom: '16px',
+              padding: '10px 14px',
+              background: '#ffffff',
+              border: '1.5px solid var(--line)',
+              borderRadius: 'var(--radius-md)'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 260px' }}>
+              <label htmlFor="drill-select" style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
+                ⚡ Select Drill:
+              </label>
+              <select
+                id="drill-select"
+                className="custom-select"
+                value={selectedDrillNo}
+                onChange={e => setSelectedDrillNo(Number(e.target.value))}
+                style={{ flex: 1, minWidth: '180px' }}
               >
-                Drill {drill.no}
+                {data.renshuuB.map(drill => (
+                  <option key={drill.no} value={drill.no}>
+                    Drill {drill.no}: {drill.title} ({drill.items.length} items)
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <button
+                type="button"
+                className="lesson-action-btn"
+                disabled={selectedDrillNo <= 1}
+                onClick={() => setSelectedDrillNo(prev => Math.max(1, prev - 1))}
+                title="Previous Drill"
+                style={{ padding: '6px 12px', fontSize: '12.5px' }}
+              >
+                ◀ Prev
               </button>
-            ))}
+              <span style={{ fontSize: '12.5px', fontWeight: 800, color: 'var(--muted)', padding: '0 4px' }}>
+                {selectedDrillNo} / {data.renshuuB.length}
+              </span>
+              <button
+                type="button"
+                className="lesson-action-btn"
+                disabled={selectedDrillNo >= data.renshuuB.length}
+                onClick={() => setSelectedDrillNo(prev => Math.min(data.renshuuB.length, prev + 1))}
+                title="Next Drill"
+                style={{ padding: '6px 12px', fontSize: '12.5px' }}
+              >
+                Next ▶
+              </button>
+            </div>
           </div>
 
           {/* Active Drill Card */}
@@ -453,7 +489,80 @@ export default function LessonExercises({ lessonNum }) {
             </p>
           </div>
 
-          {data.renshuuC.map(item => (
+          {/* Dialogue Selector Bar */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '10px',
+              flexWrap: 'wrap',
+              padding: '10px 14px',
+              background: '#ffffff',
+              border: '1.5px solid var(--line)',
+              borderRadius: 'var(--radius-md)'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 260px' }}>
+              <label htmlFor="dialogue-select" style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
+                💬 Select Dialogue:
+              </label>
+              <select
+                id="dialogue-select"
+                className="custom-select"
+                value={selectedDialogueNo}
+                onChange={e => setSelectedDialogueNo(e.target.value === 'all' ? 'all' : Number(e.target.value))}
+                style={{ flex: 1, minWidth: '180px' }}
+              >
+                <option value="all">View All Dialogues (1–3)</option>
+                {data.renshuuC.map(d => (
+                  <option key={d.no} value={d.no}>
+                    Dialogue {d.no}: {d.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {selectedDialogueNo !== 'all' && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <button
+                  type="button"
+                  className="lesson-action-btn"
+                  disabled={selectedDialogueNo <= 1}
+                  onClick={() => setSelectedDialogueNo(prev => Math.max(1, prev - 1))}
+                  title="Previous Dialogue"
+                  style={{ padding: '6px 12px', fontSize: '12.5px' }}
+                >
+                  ◀ Prev
+                </button>
+                <span style={{ fontSize: '12.5px', fontWeight: 800, color: 'var(--muted)', padding: '0 4px' }}>
+                  {selectedDialogueNo} / {data.renshuuC.length}
+                </span>
+                <button
+                  type="button"
+                  className="lesson-action-btn"
+                  disabled={selectedDialogueNo >= data.renshuuC.length}
+                  onClick={() => setSelectedDialogueNo(prev => Math.min(data.renshuuC.length, prev + 1))}
+                  title="Next Dialogue"
+                  style={{ padding: '6px 12px', fontSize: '12.5px' }}
+                >
+                  Next ▶
+                </button>
+                <button
+                  type="button"
+                  className="lesson-action-btn"
+                  onClick={() => setSelectedDialogueNo('all')}
+                  style={{ padding: '6px 12px', fontSize: '12.5px' }}
+                >
+                  View All
+                </button>
+              </div>
+            )}
+          </div>
+
+          {data.renshuuC
+            .filter(item => selectedDialogueNo === 'all' || item.no === selectedDialogueNo)
+            .map(item => (
             <div
               key={item.no}
               style={{
@@ -589,19 +698,65 @@ export default function LessonExercises({ lessonNum }) {
       {/* ======================================================== */}
       {activeSubTab === 'mondai' && (
         <div>
-          {/* Question No Selector (1 to 6) */}
-          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '6px', marginBottom: '16px' }}>
-            {data.mondai.map(m => (
-              <button
-                key={m.no}
-                type="button"
-                className={`lesson-action-btn ${selectedMondaiNo === m.no ? 'primary' : ''}`}
-                onClick={() => setSelectedMondaiNo(m.no)}
-                style={{ fontSize: '12px', padding: '5px 12px', whiteSpace: 'nowrap' }}
+          {/* Question Selector Bar (replaces 6 buttons) */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '10px',
+              flexWrap: 'wrap',
+              marginBottom: '16px',
+              padding: '10px 14px',
+              background: '#ffffff',
+              border: '1.5px solid var(--line)',
+              borderRadius: 'var(--radius-md)'
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 260px' }}>
+              <label htmlFor="mondai-select" style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
+                📋 Select Question:
+              </label>
+              <select
+                id="mondai-select"
+                className="custom-select"
+                value={selectedMondaiNo}
+                onChange={e => setSelectedMondaiNo(Number(e.target.value))}
+                style={{ flex: 1, minWidth: '180px' }}
               >
-                Mondai {m.no}
+                {data.mondai.map(m => (
+                  <option key={m.no} value={m.no}>
+                    Question {m.no}: {m.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <button
+                type="button"
+                className="lesson-action-btn"
+                disabled={selectedMondaiNo <= 1}
+                onClick={() => setSelectedMondaiNo(prev => Math.max(1, prev - 1))}
+                title="Previous Question"
+                style={{ padding: '6px 12px', fontSize: '12.5px' }}
+              >
+                ◀ Prev Q
               </button>
-            ))}
+              <span style={{ fontSize: '12.5px', fontWeight: 800, color: 'var(--muted)', padding: '0 4px' }}>
+                {selectedMondaiNo} / {data.mondai.length}
+              </span>
+              <button
+                type="button"
+                className="lesson-action-btn"
+                disabled={selectedMondaiNo >= data.mondai.length}
+                onClick={() => setSelectedMondaiNo(prev => Math.min(data.mondai.length, prev + 1))}
+                title="Next Question"
+                style={{ padding: '6px 12px', fontSize: '12.5px' }}
+              >
+                Next Q ▶
+              </button>
+            </div>
           </div>
 
           {/* Active Mondai Card */}

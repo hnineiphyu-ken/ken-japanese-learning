@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { MINNA_META } from '../data/topicsData';
 import { MINNA } from '../data/wordsData';
 import { speakJapanese, shuffle } from '../utils/speech';
@@ -9,10 +9,16 @@ import { LESSON_EXERCISES } from '../data/lessonExercises';
 
 export default function LessonsPage() {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Selected lesson filter: 'all' | number (e.g. 1, 2, ... 25)
+  const queryLesson = searchParams.get('lesson');
+  const initialLesson = queryLesson && !isNaN(Number(queryLesson)) ? Number(queryLesson) : 'all';
+  const [selectedLessonFilter, setSelectedLessonFilter] = useState(initialLesson);
 
   // Active expanded lesson for study: number | null
-  const [expandedLesson, setExpandedLesson] = useState(null);
-  // Active study tab inside expanded lesson: 'vocab' | 'sentences' | 'grammar' | 'dialogue'
+  const [expandedLesson, setExpandedLesson] = useState(initialLesson !== 'all' ? initialLesson : null);
+  // Active study section inside expanded lesson: 'vocab' | 'exercises' | 'sentences' | 'grammar' | 'dialogue'
   const [activeStudyTab, setActiveStudyTab] = useState('vocab');
   const [lessonWordPage, setLessonWordPage] = useState(1);
   const WORDS_PER_PAGE = 15;
@@ -30,19 +36,55 @@ export default function LessonsPage() {
     return map;
   }, []);
 
-  function handleToggleStudy(lessonNum) {
-    if (expandedLesson === lessonNum) {
-      setExpandedLesson(null);
+  function handleSelectLesson(val) {
+    if (val === 'all') {
+      setSelectedLessonFilter('all');
+      setSearchParams(prev => {
+        const next = new URLSearchParams(prev);
+        next.delete('lesson');
+        return next;
+      });
     } else {
-      setExpandedLesson(lessonNum);
+      const num = Number(val);
+      setSelectedLessonFilter(num);
+      setExpandedLesson(num);
       setActiveStudyTab('vocab');
       setLessonWordPage(1);
-      // Close quiz if it was open for this lesson
-      if (activeQuiz && activeQuiz.lessonNum === lessonNum) {
-        setActiveQuiz(null);
-      }
+      setSearchParams(prev => {
+        const next = new URLSearchParams(prev);
+        next.set('lesson', String(num));
+        return next;
+      });
+    }
+    if (activeQuiz) {
+      setActiveQuiz(null);
     }
   }
+
+  function handleToggleStudy(lessonNum) {
+    if (selectedLessonFilter !== 'all') {
+      if (expandedLesson === lessonNum) {
+        setExpandedLesson(null);
+      } else {
+        setExpandedLesson(lessonNum);
+        setActiveStudyTab('vocab');
+        setLessonWordPage(1);
+      }
+    } else {
+      // When in All Lessons overview, clicking Study Lesson directly focuses into this lesson
+      handleSelectLesson(lessonNum);
+    }
+    if (activeQuiz && activeQuiz.lessonNum === lessonNum) {
+      setActiveQuiz(null);
+    }
+  }
+
+  const displayedLessons = useMemo(() => {
+    if (selectedLessonFilter === 'all') {
+      return MINNA_META;
+    }
+    return MINNA_META.filter(m => m.l === Number(selectedLessonFilter));
+  }, [selectedLessonFilter]);
 
   function handleStartLessonQuiz(lessonNum) {
     const lessonWords = wordsByLesson[lessonNum] || [];
@@ -150,9 +192,88 @@ export default function LessonsPage() {
         </div>
       </div>
 
+      {/* Lesson Navigator & Select Bar */}
+      <div
+        className="card"
+        style={{
+          padding: '16px 20px',
+          marginBottom: '20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          gap: '12px',
+          flexWrap: 'wrap',
+          background: '#ffffff',
+          border: '2px solid var(--line)',
+          borderRadius: 'var(--radius-md)'
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 320px' }}>
+          <label htmlFor="lesson-jump-select" style={{ fontSize: '13.5px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
+            📚 Select Lesson:
+          </label>
+          <select
+            id="lesson-jump-select"
+            className="custom-select"
+            value={selectedLessonFilter}
+            onChange={e => handleSelectLesson(e.target.value)}
+            style={{ flex: 1, minWidth: '220px' }}
+          >
+            <option value="all">All Lessons (1–25 Syllabus Overview)</option>
+            {MINNA_META.map(m => (
+              <option key={m.l} value={m.l}>
+                Lesson {m.l}: {m.jp} — {m.t} ({wordsByLesson[m.l]?.length || 0} words)
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Quick Prev / Next / View All buttons */}
+        {selectedLessonFilter !== 'all' ? (
+          <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
+            <button
+              type="button"
+              className="lesson-action-btn"
+              disabled={Number(selectedLessonFilter) <= 1}
+              onClick={() => handleSelectLesson(Number(selectedLessonFilter) - 1)}
+              title="Previous Lesson"
+              style={{ padding: '7px 14px', fontSize: '12.5px' }}
+            >
+              ◀ Prev
+            </button>
+            <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', padding: '0 4px' }}>
+              L{selectedLessonFilter} / 25
+            </span>
+            <button
+              type="button"
+              className="lesson-action-btn"
+              disabled={Number(selectedLessonFilter) >= 25}
+              onClick={() => handleSelectLesson(Number(selectedLessonFilter) + 1)}
+              title="Next Lesson"
+              style={{ padding: '7px 14px', fontSize: '12.5px' }}
+            >
+              Next ▶
+            </button>
+            <button
+              type="button"
+              className="lesson-action-btn"
+              onClick={() => handleSelectLesson('all')}
+              title="Show All Lessons"
+              style={{ padding: '7px 14px', fontSize: '12.5px' }}
+            >
+              View All (1–25)
+            </button>
+          </div>
+        ) : (
+          <div style={{ fontSize: '12.5px', color: 'var(--muted)', fontWeight: 700 }}>
+            Showing all 25 lessons
+          </div>
+        )}
+      </div>
+
       {/* Lesson List */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        {MINNA_META.map(meta => {
+        {displayedLessons.map(meta => {
           const words = wordsByLesson[meta.l] || [];
           const count = words.length;
           const isStudying = expandedLesson === meta.l;
@@ -256,55 +377,58 @@ export default function LessonsPage() {
                     animation: 'fadeIn 0.2s ease-out'
                   }}
                 >
-                  {/* Category Tabs: Vocabulary vs Exercises vs Sentences vs Grammar vs Dialogue */}
-                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
-                    <button
-                      type="button"
-                      className={`lesson-action-btn ${activeStudyTab === 'vocab' ? 'primary' : ''}`}
-                      onClick={() => setActiveStudyTab('vocab')}
-                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
-                    >
-                      Vocabulary ({count})
-                    </button>
-                    <button
-                      type="button"
-                      className={`lesson-action-btn ${activeStudyTab === 'exercises' ? 'primary' : ''}`}
-                      onClick={() => setActiveStudyTab('exercises')}
-                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
-                    >
-                      <span>Exercises (練習・問題)</span>
-                      {LESSON_EXERCISES[meta.l] ? (
-                        <span className="badge-coming-soon" style={{ marginLeft: '6px', background: '#16a34a', color: '#ffffff' }}>
-                          Live ✅
+                  {/* Clean Study Section Select Box (replaces cluttered wrapping tabs) */}
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      gap: '12px',
+                      flexWrap: 'wrap',
+                      marginBottom: '18px',
+                      padding: '10px 14px',
+                      background: 'var(--bg-card-subtle)',
+                      borderRadius: 'var(--radius-md)',
+                      border: '1.5px solid var(--line-soft)'
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 280px' }}>
+                      <label htmlFor={`study-section-${meta.l}`} style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
+                        🎯 Study Section:
+                      </label>
+                      <select
+                        id={`study-section-${meta.l}`}
+                        className="custom-select"
+                        value={activeStudyTab}
+                        onChange={e => setActiveStudyTab(e.target.value)}
+                        style={{ flex: 1, minWidth: '220px' }}
+                      >
+                        <option value="vocab">📖 Vocabulary List ({count} words)</option>
+                        <option value="exercises">
+                          ✍️ Exercises (練習・問題) {LESSON_EXERCISES[meta.l] ? '— Live ✅' : '— Soon ⏳'}
+                        </option>
+                        <option value="sentences">💬 Sentences (例文) — Soon ⏳</option>
+                        <option value="grammar">📐 Grammar Notes (文法) — Soon ⏳</option>
+                        <option value="dialogue">👥 Conversations (会話) — Soon ⏳</option>
+                      </select>
+                    </div>
+
+                    <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                      {activeStudyTab === 'vocab' && (
+                        <span className="word-tag" style={{ background: 'var(--primary-faint)', color: 'var(--primary)', fontWeight: 800 }}>
+                          {count} Words
                         </span>
-                      ) : (
-                        <span className="badge-coming-soon" style={{ marginLeft: '6px' }}>Soon</span>
                       )}
-                    </button>
-                    <button
-                      type="button"
-                      className={`lesson-action-btn ${activeStudyTab === 'sentences' ? 'primary' : ''}`}
-                      onClick={() => setActiveStudyTab('sentences')}
-                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
-                    >
-                      Sentences (例文) <span className="badge-coming-soon" style={{ marginLeft: '4px' }}>Soon</span>
-                    </button>
-                    <button
-                      type="button"
-                      className={`lesson-action-btn ${activeStudyTab === 'grammar' ? 'primary' : ''}`}
-                      onClick={() => setActiveStudyTab('grammar')}
-                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
-                    >
-                      Grammar Notes (文法) <span className="badge-coming-soon" style={{ marginLeft: '4px' }}>Soon</span>
-                    </button>
-                    <button
-                      type="button"
-                      className={`lesson-action-btn ${activeStudyTab === 'dialogue' ? 'primary' : ''}`}
-                      onClick={() => setActiveStudyTab('dialogue')}
-                      style={{ fontSize: '12.5px', padding: '6px 14px' }}
-                    >
-                      Conversations (会話) <span className="badge-coming-soon" style={{ marginLeft: '4px' }}>Soon</span>
-                    </button>
+                      {activeStudyTab === 'exercises' && (
+                        LESSON_EXERCISES[meta.l] ? (
+                          <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>
+                            Live ✅
+                          </span>
+                        ) : (
+                          <span className="badge-coming-soon">Soon ⏳</span>
+                        )
+                      )}
+                    </div>
                   </div>
 
                   {/* TAB 1: VOCABULARY LIST (ACTIVE) */}
