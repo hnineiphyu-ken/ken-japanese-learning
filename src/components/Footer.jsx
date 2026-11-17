@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-badge">JLPT N5 · 初級</div>
         <div className="footer-powered">
-          <span>Powered by</span>
+          <span>Developed by</span>
           <strong className="author-name">Ken Nebula</strong>
         </div>
         <p className="footer-sub">
