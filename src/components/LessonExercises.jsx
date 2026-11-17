@@ -147,10 +147,14 @@ export default function LessonExercises({ lessonNum }) {
                 </span>
               </div>
 
-              <div style={{ fontSize: '13px', color: 'var(--muted)', marginBottom: '14px', lineHeight: '1.5' }}>
-                <b>မြန်မာရှင်းလင်းချက်:</b> {item.descMy}
-                <br />
-                <span style={{ fontSize: '12px', color: 'var(--faint)' }}>{item.descEn}</span>
+              <div style={{ fontSize: '13.5px', color: 'var(--ink-secondary)', marginBottom: '14px', lineHeight: '1.5' }}>
+                <span>{item.descMy}</span>
+                {item.descEn && (
+                  <>
+                    <br />
+                    <span style={{ fontSize: '12px', color: 'var(--faint)' }}>{item.descEn}</span>
+                  </>
+                )}
               </div>
 
               {/* Example sentences list */}
