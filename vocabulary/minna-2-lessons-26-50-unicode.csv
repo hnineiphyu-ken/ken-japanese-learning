@@ -1,0 +1,919 @@
+lesson,japanese,reading,romaji,english,myanmar_unicode,myanmar_zawgyi_source
+26,見ます,みます,mimasu,to see / look at,ကြည့်သည်,ၾကည့္သည္
+26,探します,さがします,sagashimasu,to search / look for,ရှာသည်,ရွာသည္
+26,遅れます,おくれます,okuremasu,to be late,နောက်ကျသည်,ေနာက္က်သည္
+26,間に合います,まにあいます,maniaimasu,to be in time,အချိန်မီသည်,အခ်ိန္မီသည္
+26,やります,やります,yarimasu,to do / perform,လုပ်သည်,လုပ္သည္
+26,参加します,さんかします,sanka shimasu,to participate,ပါဝင်သည်,ပါဝင္သည္
+26,都合がいい,つごうがいい,tsugou ga ii,convenient (time),အဆင်ပြေသည် (အချိန်),အဆင္ေျပသည္ (အခ်ိန္)
+26,都合が悪い,つごうがわるい,tsugou ga warui,inconvenient,အဆင်မပြေသည် (အချိန်),အဆင္မေျပသည္ (အခ်ိန္)
+26,気分がいい,きぶんがいい,kibun ga ii,to feel good,စိတ်ချမ်းသာသည်,စိတ္ခ်မ္းသာသည္
+26,気分が悪い,きぶんがわるい,kibun ga warui,to feel bad,နေမကောင်းသည်,ေနမေကာင္းသည္
+26,新聞社,しんぶんしゃ,shinbunsha,newspaper company,သတင်းစာတိုက်,သတင္းစာတိုက္
+26,運動会,うんどうかい,undoukai,sports day,အားကစားပွဲ,အားကစားပြဲ
+26,盆踊り,ぼんおどり,bon'odori,Bon dance,ဘွန်းအက,ဘြန္းအက
+26,場所,ばしょ,basho,place,နေရာ,ေနရာ
+26,ボランティア,ボランティア,borantia,volunteer,စေတနာ့ဝန်ထမ်း,ေစတနာ့ဝန္ထမ္း
+26,ごみ,ごみ,gomi,trash / garbage,အမှိုက်,အမႈိက္
+26,国会議事堂,こっかいぎじどう,kokkai gijidou,National Diet Building,လွှတ်တော်အဆောက်အအုံ,လႊတ္ေတာ္အေဆာက္အအုံ
+26,平日,へいじつ,heijitsu,weekday,ပုံမှန်အလုပ်နေ့,ပုံမွန္အလုပ္ေန႔
+26,～弁,～べん,~ben,dialect,～စကား (ဒေသသုံး),～စကား (ေဒသသုံး)
+26,こんな～ / そんな～ / あんな～,こんな～ / そんな～ / あんな～,konna~ / sonna~ / anna~,like this / like that / like that (over there),ဒီလို～ / အဲဒီလို～ / ဟိုလို～,ဒီလို～ / အဲဒီလို～ / ဟိုလို～
+26,こどもの日,こどものひ,kodomo no hi,Children's Day,ကလေးများနေ့,ကေလးမ်ားေန႔
+27,飼います,かいます,kaimasu,"keep (a pet), raise (an animal)",မွေးမြူသည်,ေမြးျမဴသည္
+27,建てます,たてます,tatemasu,build,ဆောက်သည်,ေဆာက္သည္
+27,［道を］走ります,［みちを］はしります,[michi wo] hashirimasu,"run, drive [along a road]",(လမ်းပေါ်) ပြေးသည်၊ မောင်းသည်,(လမ္းေပၚ) ေျပးသည္၊ ေမာင္းသည္
+27,［山が］見えます,［やまが］みえます,[yama ga] miemasu,[a mountain] can be seen,(တောင်ကို) မြင်ရသည်,(ေတာင္ကို) ျမင္ရသည္
+27,［音が］聞こえます,［おとが］きこえます,[oto ga] kikoemasu,[a sound] can be heard,(အသံကို) ကြားရသည်,(အသံကို) ၾကားရသည္
+27,［ビルが］できます,［ビルが］できます,[biru ga] dekimasu,"[a building] be made, be completed",(အဆောက်အအုံ) ဆောက်ပြီးစီးသည်,(အေဆာက္အအုံ) ေဆာက္ၿပီးစီးသည္
+27,［教室を］開きます,［きょうしつを］ひらきます,[kyoushitsu wo] hirakimasu,open [a class],(အတန်းကို) ဖွင့်သည်,(အတန္းကို) ဖြင့္သည္
+27,ペット,ペット,petto,pet,အိမ်မွေးတိရစ္ဆာန်,အိမ္ေမြးတိရစာၦန္
+27,鳥,とり,tori,bird,ငှက်,ငွက္
+27,声,こえ,koe,voice,အသံ,အသံ
+27,波,なみ,nami,wave,လှိုင်း,လႈိင္း
+27,花火,はなび,hanabi,fireworks,မီးရှူးမီးပန်း,မီးရွဴးမီးပန္း
+27,昼間,ひるま,hiruma,daytime,နေ့ခင်း,ေန႔ခင္း
+27,道具,どうぐ,dougu,tool,ကိရိယာ,ကိရိယာ
+27,通信販売,つうしんはんばい,tsuushinhanbai,mail order,စာတိုက်မှာယူရောင်းချခြင်း,စာတိုက္မွာယူေရာင္းခ်ျခင္း
+27,クリーニング,クリーニング,kuriiningu,"cleaning, laundry",လျှော်ဖွပ်ခြင်း,ေလွ်ာ္ဖြပ္ျခင္း
+27,マンション,マンション,manshon,"condominium, apartment",တိုက်ခန်း,တိုက္ခန္း
+27,～教室,～きょうしつ,~kyoushitsu,~ class,～အတန်း,～အတန္း
+27,パーティールーム,パーティールーム,paateiruumu,party room,ပါတီခန်း,ပါတီခန္း
+27,～後,～ご,~go,after ~,～ပြီးနောက်,～ၿပီးေနာက္
+27,～しか,～しか,~shika,only,～သာလျှင်,～သာလွ်င္
+27,他の,ほかの,hoka no,other,အခြား,အျခား
+27,はっきり,はっきり,hakkiri,clearly,ရှင်းရှင်းလင်းလင်း,ရွင္းရွင္းလင္းလင္း
+27,日曜大工,にちようだいく,nichiyoudaiku,do-it-yourself,အားလပ်ရက်လက်မှုပညာ,အားလပ္ရက္လက္မႈပညာ
+27,本棚,ほんだな,hondana,bookshelf,စာအုပ်စင်,စာအုပ္စင္
+27,いつか,いつか,itsuka,"someday, sometime",တစ်နေ့နေ့,တစ္ေန႔ေန႔
+27,家,いえ,ie,"house, home",အိမ်,အိမ္
+27,素晴らしい,すばらしい,subarashii,"marvelous, wonderful",အံ့ဩဖွယ်ကောင်းသော,အံ့ဩဖြယ္ေကာင္းေသာ
+27,心配な,しんぱいな,shinpai na,worried,စိတ်ပူသော,စိတ္ပူေသာ
+27,家具,かぐ,kagu,furniture,အိမ်သုံးပရိဘောဂ,အိမ္သုံးပရိေဘာဂ
+27,～方,～かた,~kata,~ person,～ပုဂ္ဂိုလ်,～ပုဂၢိဳလ္
+27,キッチン,キッチン,kitchin,kitchen,မီးဖိုချောင်,မီးဖိုေခ်ာင္
+28,景色,けしき,keshiki,"scenery, view",ရှုခင်း,ရႈခင္း
+28,台所,だいどころ,daidokoro,kitchen,မီးဖိုချောင်,မီးဖိုေခ်ာင္
+28,［パンが］売れます,［パンが］うれます,[pan ga] uremasu,[bread] sell,(ပေါင်မုန့်) ရောင်းရသည်,(ေပါင္မုန႔္) ေရာင္းရသည္
+28,踊ります,おどります,odorimasu,dance,ကသည်,ကသည္
+28,噛みます,かみます,kamimasu,chew,ဝါးသည်,ဝါးသည္
+28,噛みます,かみます,kamimasu,bite,ကိုက်သည်,ကိုက္သည္
+28,選びます,えらびます,erabimasu,choose,ရွေးချယ်သည်,ေ႐ြးခ်ယ္သည္
+28,［会社に］通います,［かいしゃに］かよいます,[kaisha ni] kayoimasu,go to and from [company],(ကုမ္ပဏီသို့) သွားလာသည်,(ကုမၸဏီသို႔) သြားလာသည္
+28,メモします,メモします,memo shimasu,take a memo,မှတ်စုရေးသည်,မွတ္စုေရးသည္
+28,まじめな,まじめな,majime na,serious,တည်ကြည်သော,တည္ၾကည္ေသာ
+28,熱心な,ねっしんな,nesshin na,earnest,စိတ်အားထက်သန်သော,စိတ္အားထက္သန္ေသာ
+28,偉い,えらい,erai,great,ထူးချွန်သော၊ ကြီးမြတ်သော,ထူးခြၽန္ေသာ၊ ႀကီးျမတ္ေသာ
+28,ちょうどいい,ちょうどいい,choudo ii,"proper, just right",အတော်အသင့်၊ လျော်ကန်သော,အေတာ္အသင့္၊ ေလ်ာ္ကန္ေသာ
+28,経験,けいけん,keiken,experience,အတွေ့အကြုံ,အေတြ႕အႀကဳံ
+28,力,ちから,chikara,power,အင်အား၊ ခွန်အား,အင္အား၊ ခြန္အား
+28,人気,にんき,ninki,popularity,လူကြိုက်များခြင်း,လူႀကိဳက္မ်ားျခင္း
+28,形,かたち,katachi,"form, shape",ပုံသဏ္ဌာန်,ပုံသဏၭာန္
+28,色,いろ,iro,color,အရောင်,အေရာင္
+28,味,あじ,aji,taste,အရသာ,အရသာ
+28,ガム,ガム,gamu,chewing gum,ပီကေ,ပီေက
+28,品物,しなもの,shinamono,goods,ကုန်ပစ္စည်း,ကုန္ပစၥည္း
+28,値段,ねだん,nedan,price,ဈေးနှုန်း,ေဈးႏႈန္း
+28,給料,きゅうりょう,kyuuryou,salary,လစာ,လစာ
+28,ボーナス,ボーナス,boonasu,bonus,ဘောနပ်စ်,ေဘာနပ္စ္
+28,番組,ばんぐみ,bangumi,program,အစီအစဉ်,အစီအစဥ္
+28,ドラマ,ドラマ,dorama,drama,ဇာတ်လမ်းတွဲ,ဇာတ္လမ္းတြဲ
+28,小説,しょうせつ,shousetsu,novel,ဝတ္ထု,ဝတၳဳ
+28,小説家,しょうせつか,shousetsuka,novelist,ဝတ္ထုရေးဆရာ,ဝတၳဳေရးဆရာ
+28,歌手,かしゅ,kashu,singer,အဆိုတော်,အဆိုေတာ္
+28,息子,むすこ,musuko,my son,သား (ကိုယ့်သား),သား (ကိုယ့္သား)
+28,息子さん,むすこさん,musukosan,someone else's son,သား (သူများသား),သား (သူမ်ားသား)
+28,娘,むすめ,musume,my daughter,သမီး (ကိုယ့်သမီး),သမီး (ကိုယ့္သမီး)
+28,娘さん,むすめさん,musumesan,someone else's daughter,သမီး (သူများသမီး),သမီး (သူမ်ားသမီး)
+28,自分,じぶん,jibun,oneself,ကိုယ်တိုင်,ကိုယ္တိုင္
+28,将来,しょうらい,shourai,future,အနာဂတ်,အနာဂတ္
+28,しばらく,しばらく,shibaraku,a little while,ခဏတာ,ခဏတာ
+28,大抵,たいてい,taitei,usually,များသောအားဖြင့်,မ်ားေသာအားျဖင့္
+28,それに,それに,sore ni,And also,ထို့အပြင်,ထို႔အျပင္
+28,それで,それで,sore de,That's why,ဒါကြောင့်,ဒါေၾကာင့္
+28,ちょっとお願いがあるんですが。,ちょっとおねがいがあるんですが。,chotto onegai ga arun desu ga.,I have a favor to ask.,အကူအညီလေးတစ်ခုတောင်းချင်လို့ပါ,အကူအညီေလးတစ္ခုေတာင္းခ်င္လို႔ပါ
+28,会話,かいわ,kaiwa,conversation,စကားပြောဆိုခြင်း,စကားေျပာဆိုျခင္း
+28,おしゃべりします,おしゃべりします,oshaberi shimasu,chat,စကားစမြည်ပြောသည်,စကားစျမည္ေျပာသည္
+28,～機,～き,~ki,~ machine,～စက်,～စက္
+28,ゲーム,ゲーム,geemu,game,ဂိမ်း,ဂိမ္း
+28,美容院,びよういん,biyouin,beauty parlor,အလှပြင်ဆိုင်,အလွျပင္ဆိုင္
+28,実は,じつは,jitsu wa,actually,တကယ်တော့,တကယ္ေတာ့
+28,うーん。,うーん。,uun.,Let me see.,အင်း,အင္း
+29,［ドアが］開きます,［ドアが］あきます,[doa ga] akimasu,[a door] open,(တံခါး) ပွင့်သည်,(တံခါး) ပြင့္သည္
+29,［ドアが］閉まります,［ドアが］しまります,[doa ga] shimarimasu,"[a door] close, shut",(တံခါး) ပိတ်သည်,(တံခါး) ပိတ္သည္
+29,［電気が］つきます,［でんきが］つきます,[denki ga] tsukimasu,[a light] come on,(မီး) လင်းသည်,(မီး) လင္းသည္
+29,［電気が］消えます,［でんきが］きえます,[denki ga] kiemasu,"[a light] go off, disappear",(မီး) ပိတ်သွားသည်၊ ပျောက်သွားသည်,(မီး) ပိတ္သြားသည္၊ ေပ်ာက္သြားသည္
+29,［椅子が］壊れます,［いすが］こわれます,[isu ga] kowaremasu,[a chair] break,(ကုလားထိုင်) ပျက်သည်,(ကုလားထိုင္) ပ်က္သည္
+29,［グラスが］割れます,［グラスが］われます,[gurasu ga] waremasu,"[a glass] break, smash",(ဖန်ခွက်) ကွဲသည်,(ဖန္ခြက္) ကြဲသည္
+29,［枝が］折れます,［えだが］おれます,[eda ga] oremasu,"[a branch] break, snap",(အကိုင်းအခက်) ကျိုးသည်,(အကိုင္းအခက္) က်ိဳးသည္
+29,［紙が］破れます,［かみが］やぶれます,[kami ga] yaburemasu,[the paper] tear,(စက္ကူ) စုတ်ပြဲသည်,(စကၠဴ) စုတ္ၿပဲသည္
+29,［服が］汚れます,［ふくが］よごれます,[fuku ga] yogoremasu,[the clothes] get dirty,(အဝတ်အစား) ညစ်ပေသည်,(အဝတ္အစား) ညစ္ေပသည္
+29,［が］付きます,［が］つきます,[ga] tsukimasu,[a pocket] be attached,(အိတ်) ကပ်ပါရှိသည်,(အိတ္) ကပ္ပါရွိသည္
+29,［が］外れます,［が］はずれます,[ga] hazuremasu,[a button] come off,(ကြယ်) ပြုတ်ထွက်သည်,(ၾကယ္) ျပဳတ္ထြက္သည္
+29,［が］止まります,［が］とまります,[ga] tomarimasu,[a car] stop,(ကား) ရပ်သည်,(ကား) ရပ္သည္
+29,間違えます,まちがえます,machigaemasu,make a mistake,မှားယွင်းသည်,မွားယြင္းသည္
+29,落とします,おとします,otoshimasu,"drop, lose",လွှတ်ချသည်၊ ပျောက်သည်,လႊတ္ခ်သည္၊ ေပ်ာက္သည္
+29,［鍵が］掛かります,［かぎが］かかります,[kagi ga] kakarimasu,be locked,သော့ခတ်ထားသည်,ေသာ့ခတ္ထားသည္
+29,お皿,おさら,osara,"plate, dish",ပန်းကန်,ပန္းကန္
+29,お茶碗,おちゃわん,ochawan,rice bowl,ထမင်းပန်းကန်,ထမင္းပန္းကန္
+29,コップ,コップ,koppu,glass,ဖန်ခွက်,ဖန္ခြက္
+29,ガラス,ガラス,garasu,glass (material),မှန်,မွန္
+29,袋,ふくろ,fukuro,bag,အိတ်,အိတ္
+29,枝,えだ,eda,branch,အကိုင်းအခက်,အကိုင္းအခက္
+29,駅員,えきいん,ekiin,station employee,ဘူတာဝန်ထမ်း,ဘူတာဝန္ထမ္း
+29,この辺,このへん,kono hen,around here,ဒီအနီးအနား,ဒီအနီးအနား
+29,～辺,～へん,~hen,the place around ~,～အနီးအနား,～အနီးအနား
+29,このくらい,このくらい,kono kurai,about this size,ဒီလောက်,ဒီေလာက္
+29,お先にどうぞ。,おさきにどうぞ。,osaki ni douzo.,"Go ahead, please.",အရင်သွားပါ,အရင္သြားပါ
+29,ああ、よかった。,ああ、よかった。,"aa, yokatta.",Thank goodness!,တော်သေးတာပေါ့,ေတာ္ေသးတာေပါ့
+29,今の電車,いまのでんしゃ,ima no densha,the train which has just left,ခုနကထွက်သွားတဲ့ရထား,ခုနကထြက္သြားတဲ့ရထား
+29,忘れ物,わすれもの,wasuremono,"things left behind, lost property",မေ့ကျန်ခဲ့တဲ့ပစ္စည်း,ေမ့က်န္ခဲ့တဲ့ပစၥည္း
+29,～側,～がわ,~gawa,side,～ဘက်ခြမ်း,～ဘက္ျခမ္း
+29,ポケット,ポケット,poketto,pocket,အိတ်ကပ်,အိတ္ကပ္
+29,覚えていません。,おぼえていません。,oboete imasen.,I don't remember.,မမှတ်မိဘူး,မမွတ္မိဘူး
+29,網棚,あみだな,amidana,baggage rack,ပစ္စည်းတင်စင်,ပစၥည္းတင္စင္
+29,確か,たしか,tashika,If I am correct,သေချာရင်,ေသခ်ာရင္
+29,片づけます,かたづけます,katazukemasu,"put things in order, tidy up",ရှင်းလင်းသိမ်းဆည်းသည်,ရွင္းလင္းသိမ္းဆည္းသည္
+29,交番,こうばん,kouban,police box,ရဲကင်း,ရဲကင္း
+29,書類,しょるい,shorui,document,စာရွက်စာတမ်း,စာ႐ြက္စာတမ္း
+29,返事,へんじ,henji,reply,အကြောင်းပြန်ခြင်း,အေၾကာင္းျပန္ျခင္း
+29,取り替えます,とりかえます,torikaemasu,"exchange, replace",လဲလှယ်သည်,လဲလွယ္သည္
+29,拭きます,ふきます,fukimasu,wipe,သုတ်သည်,သုတ္သည္
+29,スピーチ,スピーチ,supiichi,speech,မိန့်ခွန်း,မိန႔္ခြန္း
+30,貼ります,はります,harimasu,"post, paste",ကပ်သည်,ကပ္သည္
+30,掛けます,かけます,kakemasu,hang,ချိတ်ဆွဲသည်,ခ်ိတ္ဆြဲသည္
+30,飾ります,かざります,kazarimasu,"display, decorate",အလှဆင်သည်,အလွဆင္သည္
+30,並べます,ならべます,narabemasu,"arrange, line up",စီစဉ်တန်းစီသည်,စီစဥ္တန္းစီသည္
+30,植えます,うえます,uemasu,plant,စိုက်ပျိုးသည်,စိုက္ပ်ိဳးသည္
+30,戻します,もどします,modoshimasu,"return, put ~ back",ပြန်ထားသည်,ျပန္ထားသည္
+30,まとめます,まとめます,matomemasu,put ~ together,စုစည်းသည်,စုစည္းသည္
+30,まとめます,まとめます,matomemasu,sum up,အကျဉ်းချုပ်သည်,အက်ဥ္းခ်ဳပ္သည္
+30,しまいます,しまいます,shimaimasu,put away,သိမ်းဆည်းသည်,သိမ္းဆည္းသည္
+30,決めます,きめます,kimemasu,decide,ဆုံးဖြတ်သည်,ဆုံးျဖတ္သည္
+30,予習します,よしゅうします,yoshou shimasu,prepare one's lesson,ကြိုတင်လေ့လာသည်,ႀကိဳတင္ေလ့လာသည္
+30,復習します,ふくしゅうします,fukushou shimasu,review one's lesson,ပြန်လည်လေ့လာသည်,ျပန္လည္ေလ့လာသည္
+30,そのままにします,そのままにします,sono mama ni shimasu,leave things as they are,အတိုင်းထားသည်,အတိုင္းထားသည္
+30,授業,じゅぎょう,jugyou,lesson,သင်ခန်းစာ,သင္ခန္းစာ
+30,講義,こうぎ,kougi,lecture,ပို့ချချက်,ပို႔ခ်ခ်က္
+30,ミーティング,ミーティング,miitingu,meeting,အစည်းအဝေး,အစည္းအေဝး
+30,予定,よてい,yotei,"plan, schedule",အစီအစဉ်,အစီအစဥ္
+30,お知らせ,おしらせ,oshirase,notice,အသိပေးချက်,အသိေပးခ်က္
+30,案内書,あんないしょ,annaisho,guidebook,လမ်းညွှန်စာအုပ်,လမ္းၫႊန္စာအုပ္
+30,カレンダー,カレンダー,karendaa,calendar,ပြက္ခဒိန်,ျပကၡဒိန္
+30,ポスター,ポスター,posutaa,poster,ပိုစတာ,ပိုစတာ
+30,ごみ箱,ごみばこ,gomibako,trash box,အမှိုက်ပုံး,အမႈိက္ပုံး
+30,人形,にんぎょう,ningyou,doll,အရုပ်,အ႐ုပ္
+30,花瓶,かびん,kabin,vase,ပန်းအိုး,ပန္းအိုး
+30,鏡,かがみ,kagami,mirror,မှန်,မွန္
+30,引き出し,ひきだし,hikidashi,drawer,အံဆွဲ,အံဆြဲ
+30,玄関,げんかん,genkan,front door,အိမ်ရှေ့ဝင်ပေါက်,အိမ္ေရွ႕ဝင္ေပါက္
+30,廊下,ろうか,rouka,corridor,စင်္ကြံ,စႀကႍ
+30,壁,かべ,kabe,wall,နံရံ,နံရံ
+30,池,いけ,ike,pond,ကန်,ကန္
+30,元の所,もとのところ,moto no tokoro,original place,မူလနေရာ,မူလေနရာ
+30,周り,まわり,mawari,"round, around",ပတ်ဝန်းကျင်,ပတ္ဝန္းက်င္
+30,真ん中,まんなか,mannaka,center,အလယ်ဗဟို,အလယ္ဗဟို
+30,隅,すみ,sumi,corner,ထောင့်,ေထာင့္
+30,まだ,まだ,mada,still,နေသေးသည်,ေနေသးသည္
+30,予定表,よていひょう,yoteihyou,schedule,အချိန်ဇယား,အခ်ိန္ဇယား
+30,ご苦労さま。,ごくろうさま。,gokurousama.,Thank you for your hard work.,ပင်ပန်းသွားပါပြီ,ပင္ပန္းသြားပါၿပီ
+30,希望,きぼう,kibou,"hope, request",မျှော်လင့်ချက်၊ တောင်းဆိုချက်,ေမွ်ာ္လင့္ခ်က္၊ ေတာင္းဆိုခ်က္
+30,何かご希望がありますか。,なにかごきぼうがありますか。,nanika gokibou ga arimasu ka.,Do you have any requests?,တစ်ခုခုတောင်းဆိုချင်တာရှိပါသလား,တစ္ခုခုေတာင္းဆိုခ်င္တာရွိပါသလား
+30,ミュージカル,ミュージカル,myuujikaru,musical,ဂီတပြဇာတ်,ဂီတျပဇာတ္
+30,それはいいですね。,それはいいですね。,sore wa ii desu ne.,That's a good idea.,အဲဒါကောင်းတယ်နော်,အဲဒါေကာင္းတယ္ေနာ္
+30,～とか、～とか,～とか、～とか,"~toka, ~toka","~, ~, and so on",～တို့၊ ～တို့,～တို႔၊ ～တို႔
+30,生活します,せいかつします,seikatsu shimasu,to lead a life,နေထိုင်စားသောက်သည်,ေနထိုင္စားေသာက္သည္
+30,ガイドブック,ガイドブック,gaidobukku,guidebook,လမ်းညွှန်စာအုပ်,လမ္းၫႊန္စာအုပ္
+30,非常時,ひじょうじ,hijouji,emergency,အရေးပေါ်အခြေအနေ,အေရးေပၚအေျခအေန
+30,リュック,リュック,ryukku,backpack,ကျောပိုးအိတ်,ေက်ာပိုးအိတ္
+30,懐中電灯,かいちゅうでんとう,kaichuudentou,"torch, flashlight",ဓာတ်မီး,ဓာတ္မီး
+31,申し込みます,もうしこみます,moushikomimasu,"apply for, enter for",လျှောက်ထားသည်,ေလွ်ာက္ထားသည္
+31,［休みを］取ります,［やすみを］とります,[yasumi wo] torimasu,take [a holiday],(ခွင့်) ယူသည်,(ခြင့္) ယူသည္
+31,お子さん,おこさん,okosan,someone else's child,ကလေး (သူများကလေး),ကေလး (သူမ်ားကေလး)
+31,続けます,つづけます,tsuzukemasu,continue,ဆက်လက်လုပ်ဆောင်သည်,ဆက္လက္လုပ္ေဆာင္သည္
+31,見つけます,みつけます,mitsukemasu,find,ရှာတွေ့သည်,ရွာေတြ႕သည္
+31,［試験を］受けます,［しけんを］うけます,[shiken wo] ukemasu,take [an examination],(စာမေးပွဲ) ဖြေဆိုသည်,(စာေမးပြဲ) ေျဖဆိုသည္
+31,休憩します,きゅうけいします,kyuukei shimasu,take a break,အနားယူသည်,အနားယူသည္
+31,連休,れんきゅう,renkyuu,consecutive holidays,ဆက်တိုက်အားလပ်ရက်,ဆက္တိုက္အားလပ္ရက္
+31,作文,さくぶん,sakubun,essay,စာစီစာကုံး,စာစီစာကုံး
+31,展覧会,てんらんかい,tenrankai,exhibition,ပြပွဲ,ျပပြဲ
+31,結婚式,けっこんしき,kekkonshiki,wedding ceremony,မင်္ဂလာဆောင်,မဂၤလာေဆာင္
+31,お葬式,おそうしき,osoushiki,funeral,ဈာပန,ဈာပန
+31,式,しき,shiki,ceremony,အခမ်းအနား,အခမ္းအနား
+31,本社,ほんしゃ,honsha,head office,ရုံးချုပ်,႐ုံးခ်ဳပ္
+31,支店,してん,shiten,branch office,ဌာနခွဲရုံး,ဌာနခြဲ႐ုံး
+31,教会,きょうかい,kyoukai,church,ခရစ်ယာန်ဘုရားကျောင်း,ခရစ္ယာန္ဘုရားေက်ာင္း
+31,大学院,だいがくいん,daigakuin,graduate school,ဘွဲ့လွန်ကျောင်း,ဘြဲ႕လြန္ေက်ာင္း
+31,動物園,どうぶつえん,doubutsuen,zoo,တိရစ္ဆာန်ဥယျာဉ်,တိရစာၦန္ဥယ်ာဥ္
+31,温泉,おんせん,onsen,"hot spring, spa",ရေပူစမ်း,ေရပူစမ္း
+31,～の方,～のほう,~no hou,direction of ~,～ဘက်အရပ်,～ဘက္အရပ္
+31,ずっと,ずっと,zutto,all the time,အမြဲတမ်း,အၿမဲတမ္း
+31,残ります,のこります,nokorimasu,"remain, be left",ကျန်ရှိသည်,က်န္ရွိသည္
+31,月に,つきに,tsuki ni,per month,တစ်လလျှင်,တစ္လလွ်င္
+31,普通の,ふつうの,futsuu no,"ordinary, common, usual",သာမန်,သာမန္
+31,～号,～ごう,~gou,"train number, typhoon number",～အမှတ် (ရထား၊ မုန်တိုင်း),～အမွတ္ (ရထား၊ မုန္တိုင္း)
+31,発表,はっぴょう,happyou,presentation,တင်ပြခြင်း,တင္ျပျခင္း
+31,帰り,かえり,kaeri,on the way back,အပြန်လမ်း,အျပန္လမ္း
+31,入学試験,にゅうがくしけん,nyuugakushiken,entrance examination,ဝင်ခွင့်စာမေးပွဲ,ဝင္ခြင့္စာေမးပြဲ
+32,［道が］込みます,［みちが］こみます,[michi ga] komimasu,[a road] get crowded,(လမ်း) ကြပ်သည်,(လမ္း) ၾကပ္သည္
+32,［道が］すきます,［みちが］すきます,[michi ga] sukimasu,[a road] get empty,(လမ်း) ရှင်းသည်,(လမ္း) ရွင္းသည္
+32,運動します,うんどうします,undou shimasu,take exercise,လေ့ကျင့်ခန်းလုပ်သည်,ေလ့က်င့္ခန္းလုပ္သည္
+32,成功します,せいこうします,seikou shimasu,succeed,အောင်မြင်သည်,ေအာင္ျမင္သည္
+32,失敗します,しっぱいします,shippai shimasu,fail,ကျရှုံးသည်,က်ရႈံးသည္
+32,［に］合格します,［に］ごうかくします,[ni] goukaku shimasu,pass [an examination],(စာမေးပွဲ) အောင်သည်,(စာေမးပြဲ) ေအာင္သည္
+32,［雨が］やみます,［あめが］やみます,[ame ga] yamimasu,[rain] stop,(မိုး) တိတ်သည်,(မိုး) တိတ္သည္
+32,晴れます,はれます,haremasu,clear up,ကြည်လင်သည်,ၾကည္လင္သည္
+32,曇ります,くもります,kumorimasu,get cloudy,တိမ်ဖုံးသည်,တိမ္ဖုံးသည္
+32,［熱が］続きます,［ねつが］つづきます,[netsu ga] tsuzukimasu,[high temperature] continue,(အဖျား) ဆက်ရှိနေသည်,(အဖ်ား) ဆက္ရွိေနသည္
+32,［風邪を］ひきます,［かぜを］ひきます,[kaze wo] hikimasu,catch [a cold],(အအေးမိ) နှာစေးသည်,(အေအးမိ) ႏွာေစးသည္
+32,冷やします,ひやします,hiyashimasu,cool,အေးစေသည်,ေအးေစသည္
+32,十分な,じゅうぶんな,juubun na,enough,လုံလောက်သော,လုံေလာက္ေသာ
+32,可笑しい,おかしい,okashii,"strange, funny",ထူးဆန်းသော၊ ရယ်စရာကောင်းသော,ထူးဆန္းေသာ၊ ရယ္စရာေကာင္းေသာ
+32,うるさい,うるさい,urusai,noisy,ဆူညံသော,ဆူညံေသာ
+32,やけど,やけど,yakedo,burning,မီးလောင်ဒဏ်ရာ,မီးေလာင္ဒဏ္ရာ
+32,怪我,けが,kega,injury,ဒဏ်ရာ,ဒဏ္ရာ
+32,咳,せき,seki,cough,ချောင်းဆိုးခြင်း,ေခ်ာင္းဆိုးျခင္း
+32,インフルエンザ,インフルエンザ,infuruenza,influenza,တုပ်ကွေး,တုပ္ေကြး
+32,空,そら,sora,sky,ကောင်းကင်,ေကာင္းကင္
+32,太陽,たいよう,taiyou,sun,နေ,ေန
+32,星,ほし,hoshi,star,ကြယ်,ၾကယ္
+32,風,かぜ,kaze,wind,လေ,ေလ
+32,北,きた,kita,north,မြောက်,ေျမာက္
+32,南,みなみ,minami,south,တောင်,ေတာင္
+32,西,にし,nishi,west,အနောက်,အေနာက္
+32,東,ひがし,higashi,east,အရှေ့,အေရွ႕
+32,水道,すいどう,suidou,water supply,ရေပိုက်လိုင်း,ေရပိုက္လိုင္း
+32,エンジン,エンジン,enjin,engine,အင်ဂျင်,အင္ဂ်င္
+32,今夜,こんや,konya,this evening,ယနေ့ည,ယေန႔ည
+32,夕方,ゆうがた,yuugata,late afternoon,ညနေခင်း,ညေနခင္း
+32,まえ,まえ,mae,"a time in the past, before",အရင်,အရင္
+32,遅く,おそく,osoku,late,နောက်ကျစွာ,ေနာက္က်စြာ
+32,こんなに,こんなに,konna ni,like this,ဒီလောက်,ဒီေလာက္
+32,そんなに,そんなに,sonna ni,like that,အဲဒီလောက်,အဲဒီေလာက္
+32,あんなに,あんなに,anna ni,like that,ဟိုလောက်,ဟိုေလာက္
+32,もしかしたら,もしかしたら,moshikashitara,"possibly, perhaps",ဖြစ်ကောင်းဖြစ်နိုင်သည်,ျဖစ္ေကာင္းျဖစ္ႏိုင္သည္
+32,それはいけませんね。,それはいけませんね。,sore wa ikemasen ne.,That's too bad.,စိတ်မကောင်းပါဘူးနော်,စိတ္မေကာင္းပါဘူးေနာ္
+32,元気,げんき,genki,vigor,ကျန်းမာလန်းဆန်းခြင်း,က်န္းမာလန္းဆန္းျခင္း
+32,胃,い,i,stomach,အစာအိမ်,အစာအိမ္
+32,働きすぎ,はたらきすぎ,hatarakisugi,working too much,အလုပ်အလွန်အကျွံလုပ်ခြင်း,အလုပ္အလြန္အကြၽံလုပ္ျခင္း
+32,ストレス,ストレス,sutoresu,stress,စိတ်ဖိစီးမှု,စိတ္ဖိစီးမႈ
+32,無理をします,むりをします,muri wo shimasu,work more than one's capacity,အင်အားထက်ပိုလုပ်သည်,အင္အားထက္ပိုလုပ္သည္
+32,ゆっくりします,ゆっくりします,yukkuri shimasu,take one's time,ဖြည်းဖြည်းချင်းလုပ်သည်,ျဖည္းျဖည္းခ်င္းလုပ္သည္
+32,［試合に］出ます,［しあいに］でます,[shiai ni] demasu,participate [in the game],(ပြိုင်ပွဲတွင်) ပါဝင်သည်,(ၿပိဳင္ပြဲတြင္) ပါဝင္သည္
+32,チーム,チーム,chiimu,team,အသင်း,အသင္း
+32,［パーティーに］出ます,［パーティーに］でます,[paatei ni] demasu,attend a party,(ပါတီသို့) တက်ရောက်သည်,(ပါတီသို႔) တက္ေရာက္သည္
+32,先生,せんせい,sensei,doctor (as a form of address),ဆရာဝန်,ဆရာဝန္
+32,国際～,こくさい～,kokusai ~,international ~,နိုင်ငံတကာ～,ႏိုင္ငံတကာ～
+33,いくら～ても,いくら～ても,ikura ~temo,no matter how (much) ~,ဘယ်လောက်ပဲဖြစ်ဖြစ်,ဘယ္ေလာက္ပဲျဖစ္ျဖစ္
+33,～ほど,～ほど,~hodo,about ~,～ခန့်၊ ～လောက်,～ခန႔္၊ ～ေလာက္
+33,［仕事が］始まります,［しごとが］はじまります,[shigoto ga] hajimarimasu,begin / start,စတင်သည်,စတင္သည္
+33,［に］出席します,［に］しゅっせきします,[ni] shusseki shimasu,attend [a meeting],[အစည်းအဝေးကို] တက်ရောက်သည်,[အစည္းအေဝးကို] တက္ေရာက္သည္
+33,戻ります,もどります,modorimasu,return,ပြန်လာသည်,ျပန္လာသည္
+33,逃げます,にげます,nigemasu,run away,ထွက်ပြေးသည်,ထြက္ေျပးသည္
+33,騒ぎます,さわぎます,sawagimasu,make a noise,ဆူညံသည်,ဆူညံသည္
+33,諦めます,あきらめます,akiramemasu,give up,လက်လျှော့သည်,လက္ေလွ်ာ့သည္
+33,投げます,なげます,nagemasu,throw,ပစ်သည်,ပစ္သည္
+33,守ります,まもります,mamorimasu,keep / follow,လိုက်နာသည်၊ စောင့်ထိန်းသည်,လိုက္နာသည္၊ ေစာင့္ထိန္းသည္
+33,伝えます,つたえます,tsutaemasu,convey,ပြောပြသည်,ေျပာျပသည္
+33,［車に］注意します,［くるまに］ちゅういします,[kuruma ni] chuui shimasu,be careful [of the cars],[ကားများကို] သတိထားသည်,[ကားမ်ားကို] သတိထားသည္
+33,［席を］外します,［せきを］はずします,[seki wo] hazushimasu,be away [from one's desk],[နေရာမှ] ခဏထွက်သွားသည်,[ေနရာမွ] ခဏထြက္သြားသည္
+33,だめな,だめな,damena,not permitted,ခွင့်မပြုသော,ခြင့္မျပဳေသာ
+33,席,せき,seki,seat,ထိုင်ခုံ,ထိုင္ခုံ
+33,ファイト,ファイト,faito,fight,တိုက်ပွဲ,တိုက္ပြဲ
+33,マーク,マーク,maaku,mark,အမှတ်အသား,အမွတ္အသား
+33,ボール,ボール,booru,ball,ဘောလုံး,ေဘာလုံး
+33,洗濯機,せんたくき,sentakuki,washing machine,အဝတ်လျှော်စက်,အဝတ္ေလွ်ာ္စက္
+33,規則,きそく,kisoku,rule,စည်းမျဉ်း,စည္းမ်ဥ္း
+33,使用禁止,しようきんし,shiyoukinshi,Do not use.,အသုံးမပြုရ,အသုံးမျပဳရ
+33,立入禁止,たちいりきんし,tachiiri kinshi,No entry,ဝင်ရောက်ခွင့်မရှိ,ဝင္ေရာက္ခြင့္မရွိ
+33,入口,いりぐち,iriguchi,entrance,ဝင်ပေါက်,ဝင္ေပါက္
+33,出口,でぐち,deguchi,exit,ထွက်ပေါက်,ထြက္ေပါက္
+33,非常口,ひじょうぐち,hijouguchi,emergency exit,အရေးပေါ်ထွက်ပေါက်,အေရးေပၚထြက္ေပါက္
+33,無料,むりょう,muryou,free of charge,အခမဲ့,အခမဲ့
+33,本日休業,ほんじつきゅうぎょう,honjitsukyuugyou,closed today,ယနေ့ပိတ်သည်,ယေန႔ပိတ္သည္
+33,営業中,えいぎょうちゅう,eigyouchuu,open for business,ဖွင့်လှစ်နေသည်,ဖြင့္လွစ္ေနသည္
+33,使用中,しようちゅう,shiyouchuu,in use,အသုံးပြုနေသည်,အသုံးျပဳေနသည္
+33,～中,～ちゅう,~chuu,~ ing,～နေဆဲ,～ေနဆဲ
+33,どういう～,どういう～,douiu ~,what kind of ~,ဘယ်လိုလဲ,ဘယ္လိုလဲ
+33,あと～,あと～,ato ~,~ left,～ကျန်သေးသည်,～က်န္ေသးသည္
+33,駐車違反,ちゅうしゃいはん,chuushaihan,parking violation,ယာဉ်ရပ်နားစည်းကမ်းဖောက်ဖျက်ခြင်း,ယာဥ္ရပ္နားစည္းကမ္းေဖာက္ဖ်က္ျခင္း
+33,そりゃあ,そりゃあ,soryaa,well,ဒါပေါ့,ဒါေပါ့
+33,～以内,～いない,~inai,within ~,～အတွင်း,～အတြင္း
+33,警察,けいさつ,keesatsu,police,ရဲ,ရဲ
+33,罰金,ばっきん,bakkin,fine,ဒဏ်ကြေး,ဒဏ္ေၾကး
+33,締め切り,しめきり,shimekiri,deadline,နောက်ဆုံးရက်,ေနာက္ဆုံးရက္
+33,もう～ない,もう～ない,mou ~nai,not any longer,နောက်ထပ်တော့မရှိ,ေနာက္ထပ္ေတာ့မရွိ
+33,飲み放題,のみほうだい,nomihoudai,all-you-can-drink,ကြိုက်သလောက်သောက်နိုင်သော,ႀကိဳက္သေလာက္ေသာက္ႏိုင္ေသာ
+33,リサイクル,リサイクル,risaikuru,recycling,ပြန်လည်အသုံးပြုခြင်း,ျပန္လည္အသုံးျပဳျခင္း
+33,割引,わりびき,waribiki,discount,လျှော့ဈေး,ေလွ်ာ့ေဈး
+33,徐行,じょこう,jokou,Go Slow,ဖြည်းဖြည်းသွားပါ,ျဖည္းျဖည္းသြားပါ
+33,募集中,ぼしゅうちゅう,boshuuchuu,Applications Wanted,လျှောက်လွှာခေါ်ယူနေသည်,ေလွ်ာက္လႊာေခၚယူေနသည္
+33,［電話が］あります,［でんわが］あります,[denwa ga] arimasu,have a telephone call,ဖုန်းလာသည်,ဖုန္းလာသည္
+33,同じ,おなじ,onaji,the same,တူညီသော,တူညီေသာ
+34,お客さん,おきゃくさん,okyakusan,visitor / guest / customer / client,ဧည့်သည်၊ ဖောက်သည်,ဧည့္သည္၊ ေဖာက္သည္
+34,［歯を］磨きます,［はを］みがきます,[ha wo] migakimasu,brush [one's teeth],[သွားကို] တိုက်သည်,[သြားကို] တိုက္သည္
+34,［靴を］磨きます,［くつを］みがきます,[kutsu wo] migakimasu,polish [shoes],[ဖိနပ်ကို] တိုက်ချွတ်သည်,[ဖိနပ္ကို] တိုက္ခြၽတ္သည္
+34,組み立てます,くみたてます,kumitatemasu,assemble,တပ်ဆင်သည်,တပ္ဆင္သည္
+34,折ります,おります,orimasu,bend / fold,ကွေးသည်၊ ခေါက်သည်,ေကြးသည္၊ ေခါက္သည္
+34,［に］気がつきます,［に］きがつきます,[ni] ki ga tsukimasu,become aware of [things left behind],[ကျန်ခဲ့သောပစ္စည်းကို] သတိထားမိသည်,[က်န္ခဲ့ေသာပစၥည္းကို] သတိထားမိသည္
+34,［醤油を］つけます,［しょうゆを］つけます,[shouyu wo] tsukemasu,put [in soy sauce],[ပဲငံပြာရည်တွင်] နှစ်သည်,[ပဲငံျပာရည္တြင္] ႏွစ္သည္
+34,［鍵が］見つかります,［かぎが］みつかります,[kagi ga] mitsukarimasu,[a key] be found,[သော့ကို] တွေ့သည်,[ေသာ့ကို] ေတြ႕သည္
+34,質問します,しつもんします,shitsumon shimasu,ask a question,မေးခွန်းမေးသည်,ေမးခြန္းေမးသည္
+34,スポーツクラブ,スポーツクラブ,supootsu kurabu,sports club,အားကစားကလပ်,အားကစားကလပ္
+34,シートベルト,シートベルト,shiito beruto,seat belt,ထိုင်ခုံခါးပတ်,ထိုင္ခုံခါးပတ္
+34,説明書,せつめいしょ,setsumeesho,explanatory pamphlet / instructions,အသုံးပြုနည်းလက်စွဲ,အသုံးျပဳနည္းလက္စြဲ
+34,図,ず,zu,figure / drawing,ပုံ,ပုံ
+34,線,せん,sen,line,မျဉ်း,မ်ဥ္း
+34,矢印,やじるし,yajirushi,arrow,မြှား,ျမႇား
+34,黒,くろ,kuro,black,အနက်ရောင်,အနက္ေရာင္
+34,白,しろ,shiro,white,အဖြူရောင်,အျဖဴေရာင္
+34,赤,あか,aka,red,အနီရောင်,အနီေရာင္
+34,青,あお,ao,blue,အပြာရောင်,အျပာေရာင္
+34,紺,こん,kon,navy blue,နက်ပြာရောင်,နက္ျပာေရာင္
+34,黄色,きいろ,kiiro,yellow,အဝါရောင်,အဝါေရာင္
+34,茶色,ちゃいろ,chairo,brown,အညိုရောင်,အညိဳေရာင္
+34,醤油,しょうゆ,shouyu,soy sauce,ပဲငံပြာရည်,ပဲငံျပာရည္
+34,ソース,ソース,soosu,sauce,ဆော့စ်,ေဆာ့စ္
+34,～か～,～か～,~ka~,~ or ~,～သို့မဟုတ်～,～သို႔မဟုတ္～
+34,夕べ,ゆうべ,yuube,last night,မနေ့ညက,မေန႔ညက
+34,さっき,さっき,sakki,a short while ago,ခုနက,ခုနက
+34,茶道,さどう,sadou,tea ceremony,လက်ဖက်ရည်သောက်အခမ်းအနား,လက္ဖက္ရည္ေသာက္အခမ္းအနား
+34,お茶をたてます,おちゃをたてます,ocha wo tatemasu,make green tea,လက်ဖက်ရည်ဖျော်သည်,လက္ဖက္ရည္ေဖ်ာ္သည္
+34,先に,さきに,saki ni,first / before,အရင်,အရင္
+34,載せます,のせます,nosemasu,place on / load onto,တင်သည်,တင္သည္
+34,これでいいですか。,これでいいですか。,kore de ii desu ka.,Is this all right?,ဒီအတိုင်းရလား,ဒီအတိုင္းရလား
+34,苦い,にがい,nigai,bitter,ခါးသည်,ခါးသည္
+34,［傘を］さします,［かさを］さします,[kasa wo] sashimasu,put up [an umbrella],[ထီးကို] ဆောင်းသည်,[ထီးကို] ေဆာင္းသည္
+34,城,しろ,shiro,castle,ရဲတိုက်,ရဲတိုက္
+35,昔,むかし,mukashi,old days,ရှေးတုန်းက,ေရွးတုန္းက
+35,［病気が］治ります,［びょうきが］なおります,[byouki ga] naorimasu,recover from [sickness] / get well,[ရောဂါမှ] သက်သာလာသည်,[ေရာဂါမွ] သက္သာလာသည္
+35,［故障が］直ります,［こしょうが］なおります,[koshou ga] naorimasu,be fixed / be repaired,[ပျက်စီးမှုမှ] ပြင်ဆင်ပြီးသည်,[ပ်က္စီးမႈမွ] ျပင္ဆင္ၿပီးသည္
+35,キー,キー,kii,key,သော့,ေသာ့
+35,［花が］咲きます,［はなが］さきます,[hana ga] sakimasu,[flower] bloom,[ပန်း] ပွင့်သည်,[ပန္း] ပြင့္သည္
+35,［色が］変わります,［いろが］かわります,[iro ga] kawarimasu,[the color] change,[အရောင်] ပြောင်းလဲသည်,[အေရာင္] ေျပာင္းလဲသည္
+35,困ります,こまります,komarimasu,be in trouble,ဒုက္ခရောက်သည်,ဒုကၡေရာက္သည္
+35,［丸を］付けます,［まるを］つけます,[maru wo] tsukemasu,draw [a circle],[စက်ဝိုင်းကို] ဆွဲသည်,[စက္ဝိုင္းကို] ဆြဲသည္
+35,［電話が］かかります,［でんわが］かかります,[denwa ga] kakarimasu,have [a phone call],[ဖုန်း] လာသည်,[ဖုန္း] လာသည္
+35,正しい,ただしい,tadashii,correct,မှန်ကန်သည်,မွန္ကန္သည္
+35,向こう,むこう,mukou,over there / the other side,ဟိုဘက်,ဟိုဘက္
+35,島,しま,shima,island,ကျွန်း,ကြၽန္း
+35,港,みなと,minato,port,ဆိပ်ကမ်း,ဆိပ္ကမ္း
+35,近所,きんじょ,kinjo,neighborhood,ရပ်ကွက်၊ ပတ်ဝန်းကျင်,ရပ္ကြက္၊ ပတ္ဝန္းက်င္
+35,屋上,おくじょう,okujou,rooftop,တိုက်ခေါင်မိုး,တိုက္ေခါင္မိုး
+35,海外,かいがい,kaigai,overseas,နိုင်ငံခြား,ႏိုင္ငံျခား
+35,山登り,やまのぼり,yamanobori,mountain climbing,တောင်တက်ခြင်း,ေတာင္တက္ျခင္း
+35,機会,きかい,kikai,chance / opportunity,အခွင့်အလမ်း,အခြင့္အလမ္း
+35,許可,きょか,kyoka,permission,ခွင့်ပြုချက်,ခြင့္ျပဳခ်က္
+35,丸,まる,maru,circle,စက်ဝိုင်း,စက္ဝိုင္း
+35,設備,せつび,setsubi,equipment / facilities,စက်ကိရိယာ၊ အဆောက်အအုံပစ္စည်း,စက္ကိရိယာ၊ အေဆာက္အအုံပစၥည္း
+35,カーテン,カーテン,kaaten,curtain,လိုက်ကာ,လိုက္ကာ
+35,ひも,ひも,himo,string,ကြိုး,ႀကိဳး
+35,葉,は,ha,leaf,အရွက်,အ႐ြက္
+35,もっと,もっと,motto,more,ပို၍,ပို၍
+35,これで終わりましょう。,これでおわりましょう。,kore de owarimashou.,We'll finish now.,ဒီမှာပဲ ပြီးကြစို့,ဒီမွာပဲ ၿပီးၾကစို႔
+35,それなら,それなら,sorenara,in that case,ဒါဆိုရင်,ဒါဆိုရင္
+35,夜行バス,やこうバス,yakou basu,night bus,ညဘတ်စ်,ညဘတ္စ္
+35,旅行社,りょこうしゃ,ryokousha,travel agency,ခရီးသွားအေဂျင်စီ,ခရီးသြားေအဂ်င္စီ
+35,詳しい,くわしい,kuwashii,detailed,အသေးစိတ်,အေသးစိတ္
+35,スキー場,スキーじょう,sukii jou,ski resort,နှင်းလျှောစီးကွင်း,ႏွင္းေလွ်ာစီးကြင္း
+35,さあ,さあ,saa,well / let me see.,ကဲ,ကဲ
+35,歴史,れきし,rekishi,history,သမိုင်း,သမိုင္း
+35,レバー,レバー,rebaa,lever,လီဗာ,လီဗာ
+35,入力,にゅうりょく,nyuuryoku,input,ထည့်သွင်းခြင်း,ထည့္သြင္းျခင္း
+35,ふりがな,ふりがな,furigana,furigana,ဖူရိဂန,ဖူရိဂန
+35,炊飯器,すいはんき,suihanki,rice cooker,ထမင်းပေါင်းအိုး,ထမင္းေပါင္းအိုး
+35,クリックします,クリックします,kurikku shimasu,click,ကလစ်နှိပ်သည်,ကလစ္ႏွိပ္သည္
+36,柔道,じゅうどう,juudou,judo,ဂျူဒို,ဂ်ဴဒို
+36,ほとんど,ほとんど,hotondo,almost all / hardly / scarcely,နီးပါးလုံး,နီးပါးလုံး
+36,違います,ちがいます,chigaimasu,be different,ကွဲပြားသည်,ကြဲျပားသည္
+36,曲,きょく,kyoku,a piece of music,သီချင်းတစ်ပုဒ်,သီခ်င္းတစ္ပုဒ္
+36,打ちます,うちます,uchimasu,type / hit,ရိုက်သည်၊ ထုသည်,႐ိုက္သည္၊ ထုသည္
+36,貯金します,ちょきんします,chokin shimasu,save money,ငွေစုသည်,ေငြစုသည္
+36,［9時を］過ぎます,［9じを］すぎます,[9ji wo] sugimasu,pass [9 o'clock],[၉ နာရီကို] ကျော်လွန်သည်,[၉ နာရီကို] ေက်ာ္လြန္သည္
+36,［習慣に］慣れます,［しゅうかんに］なれます,[shuukan ni] naremasu,get accustomed to [the customs],[အလေ့အထကို] ကျင့်သားရသည်,[အေလ့အထကို] က်င့္သားရသည္
+36,電子～,でんし～,denshi ~,electronic ~,အီလက်ထရွန်းနစ်～,အီလက္ထ႐ြန္းနစ္～
+36,携帯～,けいたい～,keetai ~,portable ~,သယ်ဆောင်နိုင်သော～,သယ္ေဆာင္ႏိုင္ေသာ～
+36,剣道,けんどう,kendou,kendo,ခန်ဒို,ခန္ဒို
+36,毎週,まいしゅう,maishuu,every week,အပတ်တိုင်း,အပတ္တိုင္း
+36,毎月,まいつき,maitsuki,every month,လတိုင်း,လတိုင္း
+36,毎年,まいとし,maitoshi,every year,နှစ်တိုင်း,ႏွစ္တိုင္း
+36,やっと,やっと,yatto,finally,နောက်ဆုံးတော့,ေနာက္ဆုံးေတာ့
+36,かなり,かなり,kanari,quite,တော်တော်,ေတာ္ေတာ္
+36,必ず,かならず,kanarazu,without fail,မဖြစ်မနေ,မျဖစ္မေန
+36,絶対に,ぜったいに,zettai ni,absolutely,လုံးဝ,လုံးဝ
+36,上手に,じょうずに,jouzu ni,well / skillfully,ကျွမ်းကျင်စွာ,ကြၽမ္းက်င္စြာ
+36,できるだけ,できるだけ,dekiru dake,as much as possible,တတ်နိုင်သမျှ,တတ္ႏိုင္သမွ်
+36,この頃,このごろ,kono goro,these days / lately,ဒီရက်ပိုင်း,ဒီရက္ပိုင္း
+36,そのほうが,そのほうが,sono hou ga,That is more ~,အဲဒါက ပိုတယ်,အဲဒါက ပိုတယ္
+36,お客様,おきゃくさま,okyakusama,guest / customer,ဧည့်သည်၊ ဖောက်သည်,ဧည့္သည္၊ ေဖာက္သည္
+36,特別な,とくべつな,tokubetsu na,special,အထူး,အထူး
+36,していらっしゃいます,していらっしゃいます,shite irasshaimasu,be doing,လုပ်နေတော်မူသည်,လုပ္ေနေတာ္မူသည္
+36,水泳,すいえい,suiei,swimming,ရေကူးခြင်း,ေရကူးျခင္း
+36,タンゴ,タンゴ,tango,tango,တန်ဂို,တန္ဂို
+36,チャレンジします,チャレンジします,charenji shimasu,challenge,စိန်ခေါ်သည်,စိန္ေခၚသည္
+36,気持ち,きもち,kimochi,feeling,ခံစားချက်,ခံစားခ်က္
+36,宇宙,うちゅう,uchuu,space,အာကာသ,အာကာသ
+36,［事故に］遭います,［じこに］あいます,[jiko ni] aimasu,encounter [an accident],[မတော်တဆမှုနှင့်] ကြုံတွေ့သည်,[မေတာ္တဆမႈႏွင့္] ႀကဳံေတြ႕သည္
+36,腐ります,くさります,kusarimasu,rot,ပုပ်သည်,ပုပ္သည္
+36,ラッシュ,ラッシュ,rasshu,rush hour,လူစည်ကားချိန်,လူစည္ကားခ်ိန္
+37,誰か,だれか,dareka,somebody,တစ်စုံတစ်ယောက်,တစ္စုံတစ္ေယာက္
+37,褒めます,ほめます,homemasu,praise,ချီးကျူးသည်,ခ်ီးက်ဴးသည္
+37,叱ります,しかります,shikarimasu,scold,ဆူသည်,ဆူသည္
+37,誘います,さそいます,sasoimasu,invite,ဖိတ်ခေါ်သည်,ဖိတ္ေခၚသည္
+37,起こします,おこします,okoshimasu,wake (someone) up,နှိုးသည်,ႏႈိးသည္
+37,招待します,しょうたいします,shoutai shimasu,invite,ဖိတ်ကြားသည်,ဖိတ္ၾကားသည္
+37,頼みます,たのみます,tanomimasu,ask / request,တောင်းဆိုသည်,ေတာင္းဆိုသည္
+37,注意します,ちゅういします,chuui shimasu,warn / advise,သတိပေးသည်,သတိေပးသည္
+37,とります,とります,torimasu,rob / steal,ခိုးသည်,ခိုးသည္
+37,踏みます,ふみます,fumimasu,step on,နင်းသည်,နင္းသည္
+37,壊します,こわします,kowashimasu,break / destroy,ချိုးဖျက်သည်,ခ်ိဳးဖ်က္သည္
+37,汚します,よごします,yogoshimasu,make ~ dirty,ညစ်ပတ်စေသည်,ညစ္ပတ္ေစသည္
+37,行います,おこないます,okonaimasu,hold / carry out,ကျင်းပသည်၊ ဆောင်ရွက်သည်,က်င္းပသည္၊ ေဆာင္႐ြက္သည္
+37,輸出します,ゆしゅつします,yushutsu shimasu,export,တင်ပို့သည်,တင္ပို႔သည္
+37,輸入します,ゆにゅうします,yunyuu shimasu,import,တင်သွင်းသည်,တင္သြင္းသည္
+37,翻訳します,ほんやくします,honyaku shimasu,translate,ဘာသာပြန်သည်,ဘာသာျပန္သည္
+37,発明します,はつめいします,hatsumei shimasu,invent,တီထွင်သည်,တီထြင္သည္
+37,発見します,はっけんします,hakken shimasu,discover,ရှာဖွေတွေ့ရှိသည်,ရွာေဖြေတြ႕ရွိသည္
+37,設計します,せっけいします,sekkei shimasu,design,ဒီဇိုင်းဆွဲသည်,ဒီဇိုင္းဆြဲသည္
+37,米,こめ,kome,rice,ဆန်,ဆန္
+37,麦,むぎ,mugi,barley,မုယော,မုေယာ
+37,石油,せきゆ,sekiyu,oil,ရေနံ,ေရနံ
+37,原料,げんりょう,genryou,raw material,ကုန်ကြမ်း,ကုန္ၾကမ္း
+37,デート,デート,deeto,date (romantic),ချိန်းတွေ့ခြင်း,ခ်ိန္းေတြ႕ျခင္း
+37,泥棒,どろぼう,dorobou,thief,သူခိုး,သူခိုး
+37,警官,けいかん,keekan,policeman,ရဲသား,ရဲသား
+37,建築家,けんちくか,kenchikuka,architect,ဗိသုကာပညာရှင်,ဗိသုကာပညာရွင္
+37,科学者,かがくしゃ,kagakusha,scientist,သိပ္ပံပညာရှင်,သိပၸံပညာရွင္
+37,世界中,せかいじゅう,sekaijuu,all over the world,ကမ္ဘာတစ်ဝှမ်း,ကမာၻတစ္ဝွမ္း
+37,～中,～じゅう,~juu,all over ~,～တစ်ဝှမ်း,～တစ္ဝွမ္း
+37,～によって,～によって,~ni yotte,by ~,～အရ,～အရ
+37,よかったですね。,よかったですね。,yokatta desu ne.,That's lucky isn't it?,ကံကောင်းလိုက်တာ,ကံေကာင္းလိုက္တာ
+37,埋め立てます,うめたてます,umetatemasu,reclaim,မြေဖို့သည်,ေျမဖို႔သည္
+37,技術,ぎじゅつ,gijutsu,technology,နည်းပညာ,နည္းပညာ
+37,土地,とち,tochi,land,မြေ,ေျမ
+37,騒音,そうおん,souon,noise,ဆူညံသံ,ဆူညံသံ
+37,アクセス,アクセス,akusesu,access,ဝင်ရောက်နိုင်ခြင်း,ဝင္ေရာက္ႏိုင္ျခင္း
+37,［うちが］焼けます,［うちが］やけます,[uchi ga] yakemasu,[a house] burn down,[အိမ်] မီးလောင်သည်,[အိမ္] မီးေလာင္သည္
+37,キロ,キロ,kiro,kilograms / kilometers,ကီလိုဂရမ်၊ ကီလိုမီတာ,ကီလိုဂရမ္၊ ကီလိုမီတာ
+37,金色,きんいろ,kiniro,gold,ရွှေရောင်,ေ႐ႊေရာင္
+37,その後,そのご,sono go,after that,အဲဒီနောက်,အဲဒီေနာက္
+37,インスタントラーメン,インスタントラーメン,insutanto raamen,instant ramen,အသင့်စား ရာမင်,အသင့္စား ရာမင္
+37,美しい,うつくしい,utsukushii,beautiful,လှပသည်,လွပသည္
+37,世紀,せいき,seiki,century,ရာစုနှစ်,ရာစုႏွစ္
+37,世界遺産,せかいいさん,sekai isan,World Heritage Site,ကမ္ဘာ့အမွေအနှစ်နေရာ,ကမာၻ႔အေမြအႏွစ္ေနရာ
+37,本物,ほんもの,honmono,real / authentic,အစစ်၊ စစ်မှန်သော,အစစ္၊ စစ္မွန္ေသာ
+37,金,きん,kin,gold,ရွှေ,ေ႐ႊ
+38,［に］参加します,［に］さんかします,[ni] sanka shimasu,attend [a tour],[ခရီးစဉ်တွင်] ပါဝင်သည်,[ခရီးစဥ္တြင္] ပါဝင္သည္
+38,習慣,しゅうかん,shuukan,custom,ဓလေ့,ဓေလ့
+38,村,むら,mura,village,ရွာ,႐ြာ
+38,方法,ほうほう,houhou,method,နည်းလမ်း,နည္းလမ္း
+38,工場,こうじょう,koujou,factory,စက်ရုံ,စက္႐ုံ
+38,健康,けんこう,kenkou,health,ကျန်းမာရေး,က်န္းမာေရး
+38,育てます,そだてます,sodatemasu,breed / bring up,မွေးမြူသည်,ေမြးျမဴသည္
+38,運びます,はこびます,hakobimasu,carry,သယ်သည်,သယ္သည္
+38,入院します,にゅういんします,nyuuin shimasu,enter hospital,ဆေးရုံတက်သည်,ေဆး႐ုံတက္သည္
+38,退院します,たいいんします,taiin shimasu,leave hospital,ဆေးရုံဆင်းသည်,ေဆး႐ုံဆင္းသည္
+38,［電源を］入れます,［でんげんを］いれます,[dengen wo] iremasu,turn on [the power switch],[ပါဝါကို] ဖွင့်သည်,[ပါဝါကို] ဖြင့္သည္
+38,［電源を］切ります,［でんげんを］きります,[dengen wo] kirimasu,turn off [the power switch],[ပါဝါကို] ပိတ်သည်,[ပါဝါကို] ပိတ္သည္
+38,［鍵を］掛けます,［かぎを］かけます,[kagi wo] kakemasu,lock,သော့ခတ်သည်,ေသာ့ခတ္သည္
+38,気持ちがいい,きもちがいい,kimochi ga ii,pleasant / agreeable,စိတ်ချမ်းသာစရာ,စိတ္ခ်မ္းသာစရာ
+38,気持ちが悪い,きもちがわるい,kimochi ga warui,unpleasant,စိတ်မချမ်းသာစရာ,စိတ္မခ်မ္းသာစရာ
+38,大きな,おおきな,ookina,large,ကြီးမားသော,ႀကီးမားေသာ
+38,小さな,ちいさな,chiisana,small,သေးငယ်သော,ေသးငယ္ေသာ
+38,赤ちゃん,あかちゃん,akachan,baby,ကလေး,ကေလး
+38,小学校,しょうがっこう,shougakkou,elementary school,မူလတန်းကျောင်း,မူလတန္းေက်ာင္း
+38,中学校,ちゅうがっこう,chuugakkou,middle school,အလယ်တန်းကျောင်း,အလယ္တန္းေက်ာင္း
+38,駅前,えきまえ,ekimae,the area in front of the station,ဘူတာရှေ့,ဘူတာေရွ႕
+38,海岸,かいがん,kaigan,seaside / seashore,ပင်လယ်ကမ်းခြေ,ပင္လယ္ကမ္းေျခ
+38,電源,でんげん,dengen,power switch,ပါဝါခလုတ်,ပါဝါခလုတ္
+38,～製,～せい,~sei,made in ~,～တွင်ထုတ်လုပ်သော,～တြင္ထုတ္လုပ္ေသာ
+38,あ、いけない。,あ、いけない。,a ikenai.,Oops!,အိုး၊ မတော်တဆ,အိုး၊ မေတာ္တဆ
+38,お先に失礼します。,おさきにしつれいします。,osaki ni shitsurei shimasu.,Excuse me (for leaving before you).,အရင်ပြန်ခွင့်ပြုပါ,အရင္ျပန္ခြင့္ျပဳပါ
+38,回覧,かいらん,kairan,circular,လှည့်လည်စာ,လွည့္လည္စာ
+38,研究室,けんきゅうしつ,kenkyuushitsu,laboratory,သုတေသနခန်း,သုေတသနခန္း
+38,きちんと,きちんと,kichinto,neatly / tidily,သပ်သပ်ရပ်ရပ်,သပ္သပ္ရပ္ရပ္
+38,整理します,せいりします,seiri shimasu,put (things) in order / tidy up,ရှင်းလင်းသည်,ရွင္းလင္းသည္
+38,～という本,～というほん,~to iu hon,the book titled ~,～ဆိုတဲ့စာအုပ်,～ဆိုတဲ့စာအုပ္
+38,～冊,～さつ,~satsu,counting for books,စာအုပ်ရေတွက်ပုံစံ,စာအုပ္ေရတြက္ပုံစံ
+38,判子,はんこ,hanko,seal stamp,တံဆိပ်တုံး,တံဆိပ္တုံး
+38,［判子を］押します,［はんこを］おします,[hanko wo] oshimasu,affix [a seal],[တံဆိပ်ကို] နှိပ်သည်,[တံဆိပ္ကို] ႏွိပ္သည္
+38,指輪,ゆびわ,yubiwa,ring,လက်စွပ်,လက္စြပ္
+38,一昨年,おととし,ototoshi,the year before last,လွန်ခဲ့တဲ့နှစ်နှစ်ကနှစ်,လြန္ခဲ့တဲ့ႏွစ္ႏွစ္ကႏွစ္
+38,嘘をつきます,うそをつきます,uso wo tsukimasu,to tell a lie,လိမ်သည်,လိမ္သည္
+38,かな,かな,kana,hiragana and katakana script,ခန,ခန
+39,ハイキング,ハイキング,haikingu,hiking,တောင်တက်ခြင်း,ေတာင္တက္ျခင္း
+39,操作,そうさ,sousa,operation,လုပ်ဆောင်မှု၊ လည်ပတ်မှု,လုပ္ေဆာင္မႈ၊ လည္ပတ္မႈ
+39,太ります,ふとります,futorimasu,get fat,ဝလာသည်,ဝလာသည္
+39,痩せます,やせます,yasemasu,lose weight,ပိန်သွားသည်,ပိန္သြားသည္
+39,硬い,かたい,katai,hard / tough,မာသည်၊ ခက်သည်,မာသည္၊ ခက္သည္
+39,軟らかい,やわらかい,yawarakai,soft / tender,ပျော့သည်၊ နူးညံ့သည်,ေပ်ာ့သည္၊ ႏူးညံ့သည္
+39,［質問に］答えます,［しつもんに］こたえます,[shitsumon ni] kotaemasu,answer [a question],[မေးခွန်းကို] ဖြေသည်,[ေမးခြန္းကို] ေျဖသည္
+39,［ビルが］倒れます,［ビルが］たおれます,[biru ga] taoremasu,[a building] fall down,[အဆောက်အအုံ] ပြိုလဲသည်,[အေဆာက္အအုံ] ၿပိဳလဲသည္
+39,［道を］通ります,［みちを］とおります,[michi wo] toorimasu,pass [along a street],[လမ်းကို] ဖြတ်သန်းသည်,[လမ္းကို] ျဖတ္သန္းသည္
+39,死にます,しにます,shinimasu,die,သေသည်,ေသသည္
+39,びっくりします,びっくりします,bikkuri shimasu,be surprised,အံ့အားသင့်သည်,အံ့အားသင့္သည္
+39,がっかりします,がっかりします,gakkari shimasu,be disappointed,စိတ်ပျက်သည်,စိတ္ပ်က္သည္
+39,安心します,あんしんします,anshin shimasu,be relieved,စိတ်အေးသည်,စိတ္ေအးသည္
+39,遅刻します,ちこくします,chikoku shimasu,be late,နောက်ကျသည်,ေနာက္က်သည္
+39,早退します,そうたいします,soutai shimasu,leave (work or school) earlier than usual,စောစောပြန်သည်,ေစာေစာျပန္သည္
+39,喧嘩します,けんかします,kenka shimasu,quarrel / fight,ရန်ဖြစ်သည်,ရန္ျဖစ္သည္
+39,離婚します,りこんします,rikon shimasu,divorce,ကွာရှင်းသည်,ကြာရွင္းသည္
+39,複雑な,ふくざつな,fukuzatsuna,complicated / complex,ရှုပ်ထွေးသည်,ရႈပ္ေထြးသည္
+39,邪魔な,じゃまな,jamana,obstructive,အနှောင့်အယှက်ဖြစ်သည်,အေႏွာင့္အယွက္ျဖစ္သည္
+39,汚い,きたない,kitanai,dirty,ညစ်ပတ်သည်,ညစ္ပတ္သည္
+39,嬉しい,うれしい,ureshii,glad / happy,ဝမ်းသာသည်,ဝမ္းသာသည္
+39,悲しい,かなしい,kanashii,sad,ဝမ်းနည်းသည်,ဝမ္းနည္းသည္
+39,恥ずかしい,はずかしい,hazukashii,embarrassed / ashamed,ရှက်သည်,ရွက္သည္
+39,地震,じしん,jishin,earthquake,ငလျင်,ငလ်င္
+39,台風,たいふう,taifuu,typhoon,တိုင်ဖွန်း,တိုင္ဖြန္း
+39,火事,かじ,kaji,fire,မီးလောင်မှု,မီးေလာင္မႈ
+39,事故,じこ,jiko,accident,မတော်တဆမှု,မေတာ္တဆမႈ
+39,お見合い,おみあい,[o]miai,interview with a view to marriage,လက်ထပ်ရန် တွေ့ဆုံခြင်း,လက္ထပ္ရန္ ေတြ႕ဆုံျခင္း
+39,電話代,でんわだい,denwadai,telephone charge,ဖုန်းခ,ဖုန္းခ
+39,～代,～だい,~dai,charge / fare / fee,～ခ၊ ～ကြေး,～ခ၊ ～ေၾကး
+39,フロント,フロント,furonto,front desk,ဧည့်ကြိုကောင်တာ,ဧည့္ႀကိဳေကာင္တာ
+39,～号室,～ごうしつ,~goushitsu,room number -,～အခန်းအမှတ်,～အခန္းအမွတ္
+39,汗,あせ,ase,sweat,ချွေး,ေခြၽး
+39,タオル,タオル,taoru,towel,မျက်နှာသုတ်ပဝါ,မ်က္ႏွာသုတ္ပဝါ
+39,石鹸,せっけん,sekken,soap,ဆပ်ပြာ,ဆပ္ျပာ
+39,大勢,おおぜい,oozei,a great number of people,လူအများအပြား,လူအမ်ားအျပား
+39,お疲れさまでした。,おつかれさまでした。,otsukaresamadeshita.,Thank you for your hard work.,ပင်ပန်းခဲ့တာ ကျေးဇူးတင်ပါတယ်,ပင္ပန္းခဲ့တာ ေက်းဇူးတင္ပါတယ္
+39,伺います,うかがいます,ukagaimasu,humble way of saying いきます,သွားသည် (ယဉ်ကျေးသော ပုံစံ),သြားသည္ (ယဥ္ေက်းေသာ ပုံစံ)
+39,途中で,とちゅうで,tochuu de,on the way,လမ်းတွင်,လမ္းတြင္
+39,トラック,トラック,torakku,truck,ထရပ်ကား,ထရပ္ကား
+39,ぶつかります,ぶつかります,butsukarimasu,bump,တိုက်မိသည်,တိုက္မိသည္
+39,会場,かいじょう,kaijou,meeting place / venue,အစည်းအဝေးကျင်းပရာနေရာ,အစည္းအေဝးက်င္းပရာေနရာ
+39,雷,かみなり,kaminari,thunder,မိုးခြိမ်း,မိုးၿခိမ္း
+39,津波,つなみ,tsunami,tsunami,ဆူနာမီ,ဆူနာမီ
+39,首相,しゅしょう,shushou,prime minister,ဝန်ကြီးချုပ်,ဝန္ႀကီးခ်ဳပ္
+40,相談します,そうだんします,soudan shimasu,consult / discuss,တိုင်ပင်သည်,တိုင္ပင္သည္
+40,数えます,かぞえます,kazoemasu,count,ရေတွက်သည်,ေရတြက္သည္
+40,はかります,はかります,hakarimasu,measure / weigh,တိုင်းတာသည်၊ ချိန်တွယ်သည်,တိုင္းတာသည္၊ ခ်ိန္တြယ္သည္
+40,確かめます,たしかめます,tashikamemasu,confirm,အတည်ပြုသည်,အတည္ျပဳသည္
+40,［サイズが］合います,［サイズが］あいます,[saizu ga] aimasu,[the size] fit,[အရွယ်အစား] ကိုက်ညီသည်,[အ႐ြယ္အစား] ကိုက္ညီသည္
+40,出発します,しゅっぱつします,shuppatsu shimasu,depart,ထွက်ခွာသည်,ထြက္ခြာသည္
+40,到着します,とうちゃくします,touchaku shimasu,arrive,ရောက်ရှိသည်,ေရာက္ရွိသည္
+40,酔います,よいます,yoimasu,get drunk,မူးသည်,မူးသည္
+40,必要な,ひつような,hitsuyouna,necessary,လိုအပ်သည်,လိုအပ္သည္
+40,忘年会,ぼうねんかい,bounenkai,yearend party,နှစ်ကုန်ပါတီ,ႏွစ္ကုန္ပါတီ
+40,新年会,しんねんかい,shinnenkai,New year's party,နှစ်သစ်ပါတီ,ႏွစ္သစ္ပါတီ
+40,二次会,にじかい,nijikai,second party,ဒုတိယပါတီ,ဒုတိယပါတီ
+40,大会,たいかい,taikai,mass meeting,အစည်းအဝေးကြီး၊ ပြိုင်ပွဲကြီး,အစည္းအေဝးႀကီး၊ ၿပိဳင္ပြဲႀကီး
+40,マラソン,マラソン,marason,marathon,မာရသွန်,မာရသြန္
+40,コンテスト,コンテスト,kontesuto,contest,ပြိုင်ပွဲ,ၿပိဳင္ပြဲ
+40,表,おもて,omote,face / front,အရှေ့၊ မျက်နှာစာ,အေရွ႕၊ မ်က္ႏွာစာ
+40,裏,うら,ura,back (side),အနောက်၊ နောက်ကျော,အေနာက္၊ ေနာက္ေက်ာ
+40,申し込み,もうしこみ,moushikomi,application,လျှောက်လွှာ,ေလွ်ာက္လႊာ
+40,間違い,まちがい,machigai,mistake,အမှား,အမွား
+40,傷,きず,kizu,wound / scratch,ဒဏ်ရာ,ဒဏ္ရာ
+40,ズボン,ズボン,zubon,trousers,ဘောင်းဘီ,ေဘာင္းဘီ
+40,長さ,ながさ,nagasa,length,အရှည်,အရွည္
+40,重さ,おもさ,omosa,weight,အလေးချိန်,အေလးခ်ိန္
+40,高さ,たかさ,takasa,height,အမြင့်,အျမင့္
+40,大きさ,おおきさ,ookisa,size / scale,အရွယ်အစား,အ႐ြယ္အစား
+40,便,びん,bin,flight (number),လေယာဉ်ခရီးစဉ် (အမှတ်),ေလယာဥ္ခရီးစဥ္ (အမွတ္)
+40,～個,～こ,~ko,counting for small object,～ခု (အသေးစားပစ္စည်းရေတွက်ပုံ),～ခု (အေသးစားပစၥည္းေရတြက္ပုံ)
+40,～本,～ほん,~hon,counting for long object,～ချောင်း (ရှည်သောပစ္စည်းရေတွက်ပုံ),～ေခ်ာင္း (ရွည္ေသာပစၥည္းေရတြက္ပုံ)
+40,～杯,～はい,~hai,counting for full cups / glasses,～ခွက် (ခွက်အပြည့်ရေတွက်ပုံ),～ခြက္ (ခြက္အျပည့္ေရတြက္ပုံ)
+40,～グラム,～グラム,~guramu,grams,～ဂရမ်,～ဂရမ္
+40,～センチ,～センチ,~senchi,centimeters,～စင်တီမီတာ,～စင္တီမီတာ
+40,～ミリ,～ミリ,~miri,millimeters,～မီလီမီတာ,～မီလီမီတာ
+40,～以上,～いじょう,~ijou,over ~,～အထက်,～အထက္
+40,～以下,～いか,~ika,under ~,～အောက်,～ေအာက္
+40,どうでしょうか。,どうでしょうか。,dou deshou ka.,How is~?,ဘယ်လိုလဲ,ဘယ္လိုလဲ
+40,テスト,テスト,tesuto,test / exam,စာမေးပွဲ,စာေမးပြဲ
+40,成績,せいせき,seeseki,grade / score / result,အမှတ်၊ ရလဒ်,အမွတ္၊ ရလဒ္
+40,ところで,ところで,tokorode,by the way,စကားမစပ်,စကားမစပ္
+40,いらっしゃいます,いらっしゃいます,irasshaimasu,polite of きます,လာသည် (ယဉ်ကျေးသော ပုံစံ),လာသည္ (ယဥ္ေက်းေသာ ပုံစံ)
+40,様子,ようす,yousu,situation / condition / appearance,အခြေအနေ၊ ပုံပန်း,အေျခအေန၊ ပုံပန္း
+40,うまくいきます,うまくいきます,umakuikimasu,go well,အဆင်ပြေသည်,အဆင္ေျပသည္
+40,天気予報,てんきよほう,tenki yohou,weather forecast,မိုးလေဝသခန့်မှန်းချက်,မိုးေလဝသခန႔္မွန္းခ်က္
+40,お年寄り,おとしより,[o]toshiyori,elderly person,သက်ကြီးရွယ်အို,သက္ႀကီး႐ြယ္အို
+40,［問題が］出ます,［もんだいが］でます,[mondai ga] demasu,[problems] be on the test,[မေးခွန်း] စာမေးပွဲတွင် ပါဝင်သည်,[ေမးခြန္း] စာေမးပြဲတြင္ ပါဝင္သည္
+40,発表会,はっぴょうかい,happyoukai,presentation meeting,တင်ပြပွဲ,တင္ျပပြဲ
+41,管理人,かんりにん,kanrinin,janitor,အုပ်ချုပ်သူ၊ အဆောက်အအုံစောင့်,အုပ္ခ်ဳပ္သူ၊ အေဆာက္အအုံေစာင့္
+41,上げます,あげます,agemasu,raise,မြှင့်သည်,ျမႇင့္သည္
+41,下げます,さげます,sagemasu,lower,နှိမ့်သည်,ႏွိမ့္သည္
+41,珍しい,めずらしい,mezurashii,rare / uncommon,ရှားပါးသည်,ရွားပါးသည္
+41,～ずつ,～ずつ,~zutsu,(some amount) per ~,～စီ,～စီ
+41,頂きます,いただきます,itadakimasu,receive(polite),လက်ခံရရှိသည် (ယဉ်ကျေးသော ပုံစံ),လက္ခံရရွိသည္ (ယဥ္ေက်းေသာ ပုံစံ)
+41,くださいます,くださいます,kudasaimasu,give,ပေးသည် (ယဉ်ကျေးသော ပုံစံ),ေပးသည္ (ယဥ္ေက်းေသာ ပုံစံ)
+41,やります,やります,yarimasu,give (to a younger person or animal),ပေးသည် (ငယ်သူ/တိရစ္ဆာန်ကို),ေပးသည္ (ငယ္သူ/တိရစာၦန္ကို)
+41,呼びます,よびます,yobimasu,invite (call someone over),ခေါ်သည်၊ ဖိတ်ခေါ်သည်,ေခၚသည္၊ ဖိတ္ေခၚသည္
+41,親切にします,しんせつにします,shinsetsu ni shimasu,be kind to,ကြင်နာစွာ ဆက်ဆံသည်,ၾကင္နာစြာ ဆက္ဆံသည္
+41,かわいい,かわいい,kawaii,cute / lovely,ချစ်စရာကောင်းသည်,ခ်စ္စရာေကာင္းသည္
+41,お祝い,おいわい,[o]iwai,celebration,ဂုဏ်ပြုပွဲ,ဂုဏ္ျပဳပြဲ
+41,お年玉,おとしだま,[o]toshidama,money given as a New year's gift,နှစ်သစ်လက်ဆောင် မုန့်ဖိုး,ႏွစ္သစ္လက္ေဆာင္ မုန႔္ဖိုး
+41,お見舞い,おみまい,[o]mimai,gift to a sick person,လူနာမေးလက်ဆောင်,လူနာေမးလက္ေဆာင္
+41,興味,きょうみ,kyoumi,interest,စိတ်ဝင်စားမှု,စိတ္ဝင္စားမႈ
+41,情報,じょうほう,jouhou,information,သတင်းအချက်အလက်,သတင္းအခ်က္အလက္
+41,文法,ぶんぽう,bunpou,grammar,သဒ္ဒါ,သဒၵါ
+41,発音,はつおん,hatsuon,pronunciation,အသံထွက်,အသံထြက္
+41,猿,さる,saru,ape / monkey,မျောက်,ေမ်ာက္
+41,餌,えさ,esa,feed,အစာ (တိရစ္ဆာန်အစာ),အစာ (တိရစာၦန္အစာ)
+41,おもちゃ,おもちゃ,omocha,toy,ကစားစရာ,ကစားစရာ
+41,絵本,えほん,ehon,picture book,ရုပ်ပုံစာအုပ်,႐ုပ္ပုံစာအုပ္
+41,絵はがき,えはがき,ehagaki,picture postcard,ရုပ်ပုံ ပို့စကတ်,႐ုပ္ပုံ ပို႔စကတ္
+41,ドライバー,ドライバー,doraibaa,screwdriver,ဝက်အူလှည့်,ဝက္အူလွည့္
+41,ハンカチ,ハンカチ,hankachi,handkerchief,လက်ကိုင်ပဝါ,လက္ကိုင္ပဝါ
+41,靴下,くつした,kutsushita,socks,ခြေအိတ်,ေျခအိတ္
+41,手袋,てぶくろ,tebukuro,gloves,လက်အိတ်,လက္အိတ္
+41,バッグ,バッグ,baggu,bag,အိတ်,အိတ္
+41,祖父,そふ,sofu,my grandfather,အဘိုး (ကိုယ့်ဘက်),အဘိုး (ကိုယ့္ဘက္)
+41,祖母,そぼ,sobo,my grandmother,အဖွား (ကိုယ့်ဘက်),အဖြား (ကိုယ့္ဘက္)
+41,孫,まご,mago,grandchild,မြေး,ေျမး
+41,叔父,おじ,oji,my uncle,ဦးလေး (ကိုယ့်ဘက်),ဦးေလး (ကိုယ့္ဘက္)
+41,叔父さん,おじさん,ojisan,someone else's uncle,ဦးလေး (သူများဘက်),ဦးေလး (သူမ်ားဘက္)
+41,叔母,おば,oba,my aunt,အဒေါ် (ကိုယ့်ဘက်),အေဒၚ (ကိုယ့္ဘက္)
+41,叔母さん,おばさん,obasan,someone else's aunt,အဒေါ် (သူများဘက်),အေဒၚ (သူမ်ားဘက္)
+41,はあ,はあ,haa,yes / I see,ဟုတ်ကဲ့၊ အော်,ဟုတ္ကဲ့၊ ေအာ္
+41,預かります,あずかります,azukarimasu,keep / be deposited,သိမ်းထားသည်၊ အပ်နှံခံသည်,သိမ္းထားသည္၊ အပ္ႏွံခံသည္
+41,先日,せんじつ,senjitsu,the other day,လွန်ခဲ့သည့်ရက်က,လြန္ခဲ့သည့္ရက္က
+41,助かります,たすかります,tasukarimasu,be saved / be of help,ကူညီရာရောက်သည်၊ အဆင်ပြေသည်,ကူညီရာေရာက္သည္၊ အဆင္ေျပသည္
+41,二人,ふたり,futari,couple,နှစ်ယောက် (စုံတွဲ),ႏွစ္ေယာက္ (စုံတြဲ)
+41,暖房,だんぼう,danbou,heating,အပူပေးစနစ်,အပူေပးစနစ္
+41,冷房,れいぼう,reibou,air conditioning,အအေးပေးစနစ်,အေအးေပးစနစ္
+41,お宅,おたく,[o]taku,someone else's house,အိမ် (သူများဘက်),အိမ္ (သူမ်ားဘက္)
+41,温度,おんど,ondo,temperature,အပူချိန်,အပူခ်ိန္
+41,幼稚園,ようちえん,youchien,kindergarten,မူကြိုကျောင်း,မူႀကိဳေက်ာင္း
+41,一言,ひとこと,hitokoto,a word,စကားတစ်ခွန်း,စကားတစ္ခြန္း
+41,お孫さん,おまごさん,[o]magosan,someone else's grandchild,မြေး (သူများဘက်),ေျမး (သူမ်ားဘက္)
+41,この間,このあいだ,kono aida,the other day,မကြာသေးမီက,မၾကာေသးမီက
+42,ふた,ふた,futa,lid / cover / cap,အဖုံး,အဖုံး
+42,楽しみ,たのしみ,tanoshimi,pleasure,ပျော်ရွှင်မှု၊ မျှော်လင့်စရာ,ေပ်ာ္႐ႊင္မႈ၊ ေမွ်ာ္လင့္စရာ
+42,並びます,ならびます,narabimasu,stand in a queue,တန်းစီသည်,တန္းစီသည္
+42,包みます,つつみます,tsutsumimasu,wrap,ထုပ်ပိုးသည်,ထုပ္ပိုးသည္
+42,沸かします,わかします,wakashimasu,boil,ဆူအောင်တည်သည်,ဆူေအာင္တည္သည္
+42,混ぜます,まぜます,mazemasu,mix,ရောမွှေသည်,ေရာေမႊသည္
+42,計算します,けいさんします,keesan shimasu,calculate,တွက်ချက်သည်,တြက္ခ်က္သည္
+42,弁護士,べんごし,bengoshi,lawyer,ရှေ့နေ,ေရွ႕ေန
+42,音楽家,おんがくか,ongakuka,musician,ဂီတပညာရှင်,ဂီတပညာရွင္
+42,子どもたち,こどもたち,kodomotachi,children,ကလေးများ,ကေလးမ်ား
+42,教育,きょういく,kyouiku,education,ပညာရေး,ပညာေရး
+42,文化,ぶんか,bunka,culture,ယဉ်ကျေးမှု,ယဥ္ေက်းမႈ
+42,社会,しゃかい,shakai,society,လူ့အဖွဲ့အစည်း,လူ႔အဖြဲ႕အစည္း
+42,法律,ほうりつ,houritsu,law,ဥပဒေ,ဥပေဒ
+42,戦争,せんそう,sensou,war,စစ်ပွဲ,စစ္ပြဲ
+42,平和,へいわ,heiwa,peace,ငြိမ်းချမ်းရေး,ၿငိမ္းခ်မ္းေရး
+42,目的,もくてき,mokuteki,purpose / goal,ရည်ရွယ်ချက်,ရည္႐ြယ္ခ်က္
+42,安全,あんぜん,anzen,safety,လုံခြုံမှု,လုံၿခဳံမႈ
+42,論文,ろんぶん,ronbun,thesis,ကျမ်းစာ၊ သုတေသနစာတမ်း,က်မ္းစာ၊ သုေတသနစာတမ္း
+42,関係,かんけい,kankei,relationship,ဆက်ဆံရေး,ဆက္ဆံေရး
+42,ミキサー,ミキサー,mikisaa,mixer,မွှေစက်,ေမႊစက္
+42,やかん,やかん,yakan,kettle,ရေနွေးအိုး,ေရေႏြးအိုး
+42,栓抜き,せんぬき,sennuki,cap opener,အဖုံးဖွင့်ကိရိယာ,အဖုံးဖြင့္ကိရိယာ
+42,缶切り,かんきり,kankiri,can opener,သံဘူးဖွင့်ကိရိယာ,သံဘူးဖြင့္ကိရိယာ
+42,缶詰,かんづめ,kanzume,canned food,သံဘူးအစားအစာ,သံဘူးအစားအစာ
+42,風呂敷,ふろしき,furoshiki,wrapping cloth used to carry things,ထုပ်ပိုးပုဝါ,ထုပ္ပိုးပုဝါ
+42,そろばん,そろばん,soroban,abacus,ပုတီးတွက်စက် (ဆော်ရိုဘန်),ပုတီးတြက္စက္ (ေဆာ္႐ိုဘန္)
+42,体温計,たいおんけい,taionkei,thermometer,အပူချိန်တိုင်းကိရိယာ,အပူခ်ိန္တိုင္းကိရိယာ
+42,材料,ざいりょう,zairyou,material / ingredient,ပါဝင်ပစ္စည်း,ပါဝင္ပစၥည္း
+42,石,いし,ishi,stone,ကျောက်,ေက်ာက္
+42,ピラミッド,ピラミッド,piramiddo,pyramid,ပိရမစ်,ပိရမစ္
+42,ある～,ある～,aru ~,a certain ~,တစ်စုံတစ်ခု～,တစ္စုံတစ္ခု～
+42,一生懸命,いっしょうけんめい,isshoukenmei,with all one's effort,အစွမ်းကုန်ကြိုးစားခြင်း,အစြမ္းကုန္ႀကိဳးစားျခင္း
+42,なぜ,なぜ,naze,why,ဘာကြောင့်,ဘာေၾကာင့္
+42,ローン,ローン,roon,loan,ချေးငွေ,ေခ်းေငြ
+42,セット,セット,setto,set,အစုံ,အစုံ
+42,あと,あと,ato,the amount left unused,ကျန်ရှိသည့်ပမာဏ,က်န္ရွိသည့္ပမာဏ
+42,丈夫な,じょうぶな,joubuna,strong,ခိုင်ခံ့သည်,ခိုင္ခံ့သည္
+42,半分,はんぶん,hanbun,half,တစ်ဝက်,တစ္ဝက္
+42,自然,しぜん,shizen,nature,သဘာဝ,သဘာဝ
+42,のし袋,のしぶくろ,noshibukuro,envelope for a gift of money,လက်ဆောင်ငွေထည့်စာအိတ်,လက္ေဆာင္ေငြထည့္စာအိတ္
+42,［ボーナスが］出ます,［ボーナスが］でます,[boonasu ga] demasu,[bonus] be paid,[ဘောနပ်စ်] ပေးသည်,[ေဘာနပ္စ္] ေပးသည္
+42,政治,せいじ,seiji,politics,နိုင်ငံရေး,ႏိုင္ငံေရး
+42,アパート,アパート,apaato,apartment,တိုက်ခန်း,တိုက္ခန္း
+43,優しい,やさしい,yasashii,gentle / kind,ကြင်နာသည်,ၾကင္နာသည္
+43,楽な,らくな,rakuna,comfortable / easy,သက်တောင့်သက်သာရှိသည်,သက္ေတာင့္သက္သာရွိသည္
+43,［輸出が］増えます,［ゆしゅつが］ふえます,[yushutsu ga] fuemasu,[exports] increase,[ပို့ကုန်] တိုးလာသည်,[ပို႔ကုန္] တိုးလာသည္
+43,［輸出が］減ります,［ゆしゅつが］へります,[yushutsu ga] herimasu,[exports] decrease,[ပို့ကုန်] လျော့နည်းလာသည်,[ပို႔ကုန္] ေလ်ာ့နည္းလာသည္
+43,［値段が］上がります,［ねだんが］あがります,[nedan ga] agarimasu,[the price] rise,[ဈေးနှုန်း] တက်လာသည်,[ေဈးႏႈန္း] တက္လာသည္
+43,［値段が］下がります,［ねだんが］さがります,[nedan ga] sagarimasu,[the price] fall,[ဈေးနှုန်း] ကျလာသည်,[ေဈးႏႈန္း] က်လာသည္
+43,［紐が］切れます,［ひもが］きれます,[himo ga] kiremasu,[a string] break,[ကြိုး] ပြတ်သည်,[ႀကိဳး] ျပတ္သည္
+43,［ボタンが］取れます,［ボタンが］とれます,[botan ga] toremasu,[a button] come off,[ကြယ်သီး] ပြုတ်ကျသည်,[ၾကယ္သီး] ျပဳတ္က်သည္
+43,［荷物が］落ちます,［にもつが］おちます,[nimotsu ga] ochimasu,[baggage] fall down,[အထုပ်အပိုး] ကျသည်,[အထုပ္အပိုး] က်သည္
+43,［が］なくなります,［が］なくなります,[ga] nakunarimasu,[petrol / gasoline] run out,[ဓာတ်ဆီ] ကုန်သွားသည်,[ဓာတ္ဆီ] ကုန္သြားသည္
+43,幸せな,しあわせな,shiawasena,happy,ပျော်ရွှင်သည်,ေပ်ာ္႐ႊင္သည္
+43,うまい,うまい,umai,tasty,အရသာရှိသည်,အရသာရွိသည္
+43,まずい,まずい,mazui,not tasty,အရသာမရှိသည်,အရသာမရွိသည္
+43,つまらない,つまらない,tsumaranai,boring / dull,ပျင်းစရာကောင်းသည်,ပ်င္းစရာေကာင္းသည္
+43,ガソリン,ガソリン,gasorin,petrol / gasoline,ဓာတ်ဆီ,ဓာတ္ဆီ
+43,火,ひ,hi,fire,မီး,မီး
+43,センス,センス,sensu,taste / sense,အရသာခံစားမှု၊ ခံစားချက်,အရသာခံစားမႈ၊ ခံစားခ်က္
+43,今にも,いまにも,imanimo,at any moment,ယခုပင်,ယခုပင္
+43,わあ,わあ,waa,Wow!,ဝါး!,ဝါး!
+43,会員,かいいん,kaiin,member,အဖွဲ့ဝင်,အဖြဲ႕ဝင္
+43,適当な,てきとうな,tekitouna,suitable / proper,သင့်တော်သည်,သင့္ေတာ္သည္
+43,年齢,ねんれい,nenrei,age,အသက်,အသက္
+43,収入,しゅうにゅう,shuunyuu,income,ဝင်ငွေ,ဝင္ေငြ
+43,ぴったり,ぴったり,pittari,exactly / just right,အတိအကျ၊ ကွက်တိဖြစ်သည်,အတိအက်၊ ကြက္တိျဖစ္သည္
+43,その上,そのうえ,sono ue,in addition to that,အပြင်လည်း,အျပင္လည္း
+43,～と言います,～といいます,~to iimasu,(one's name) is ~,～ဟုခေါ်သည်,～ဟုေခၚသည္
+43,変な,へんな,henna,strange,ထူးဆန်းသည်,ထူးဆန္းသည္
+44,細い,ほそい,hosoi,thin,ပါးလွှာသည်,ပါးလႊာသည္
+44,太い,ふとい,futoi,thick,ထူသည်,ထူသည္
+44,危険な,きけんな,kikenna,dangerous,အန္တရာယ်ရှိသည်,အႏၲရာယ္ရွိသည္
+44,厚い,あつい,atsui,thick,ထူသည်,ထူသည္
+44,薄い,うすい,usui,thin,ပါးသည်,ပါးသည္
+44,泣きます,なきます,nakimasu,cry,ငိုသည်,ငိုသည္
+44,笑います,わらいます,waraimasu,laugh,ရယ်သည်,ရယ္သည္
+44,乾きます,かわきます,kawakimasu,dry,ခြောက်သွေ့သည်,ေျခာက္ေသြ႕သည္
+44,濡れます,ぬれます,nuremasu,get wet,စိုစွတ်သည်,စိုစြတ္သည္
+44,滑ります,すべります,suberimasu,slip,ချော်လဲသည်,ေခ်ာ္လဲသည္
+44,［事故が］起きます,［じこが］おきます,[jiko ga] okimasu,[an accident] happen,[မတော်တဆမှု] ဖြစ်ပွားသည်,[မေတာ္တဆမႈ] ျဖစ္ပြားသည္
+44,調節します,ちょうせつします,chousetsu shimasu,adjust,ညှိသည်,ညႇိသည္
+44,安全な,あんぜんな,anzenna,safe,လုံခြုံသည်,လုံၿခဳံသည္
+44,丁寧な,ていねいな,teineina,polite,ယဉ်ကျေးသည်,ယဥ္ေက်းသည္
+44,細かい,こまかい,komakai,small / fine,သေးငယ်သည်၊ အသေးစိတ်,ေသးငယ္သည္၊ အေသးစိတ္
+44,濃い,こい,koi,dark / strong / thick,ပြင်းသည်၊ ရင့်သည်,ျပင္းသည္၊ ရင့္သည္
+44,薄い,うすい,usui,weak (taste) / light (color),ပေါ့သည် (အရသာ)၊ ဖျော့သည် (အရောင်),ေပါ့သည္ (အရသာ)၊ ေဖ်ာ့သည္ (အေရာင္)
+44,空気,くうき,kuuki,air,လေ,ေလ
+44,涙,なみだ,namida,tear,မျက်ရည်,မ်က္ရည္
+44,和食,わしょく,washoku,Japanese dish,ဂျပန်အစားအစာ,ဂ်ပန္အစားအစာ
+44,洋食,ようしょく,youshoku,Western dish,အနောက်တိုင်းအစားအစာ,အေနာက္တိုင္းအစားအစာ
+44,おかず,おかず,okazu,side dish,အရံဟင်း,အရံဟင္း
+44,量,りょう,ryou,quantity,ပမာဏ,ပမာဏ
+44,～倍,～ばい,~bai,double / twice,～ဆ,～ဆ
+44,シングル,シングル,shinguru,single room,တစ်ယောက်ခန်း,တစ္ေယာက္ခန္း
+44,ツイン,ツイン,tsuin,twin bedded room,နှစ်ယောက်ခန်း,ႏွစ္ေယာက္ခန္း
+44,箪笥,たんす,tansu,chest of drawers,အဝတ်ဘီရို (ဗီရို),အဝတ္ဘီ႐ို (ဗီ႐ို)
+44,洗濯物,せんたくもの,sentakumono,washing / laundry,လျှော်ဖွပ်ရမည့်အဝတ်များ,ေလွ်ာ္ဖြပ္ရမည့္အဝတ္မ်ား
+44,理由,りゆう,riyuu,reason,အကြောင်းပြချက်,အေၾကာင္းျပခ်က္
+44,どうなさいますか。,どうなさいますか。,dou nasaimasu ka.,What can I do for you?,ဘာလုပ်ပေးရမလဲ,ဘာလုပ္ေပးရမလဲ
+44,カット,カット,katto,haircut,ဆံပင်ညှပ်ခြင်း,ဆံပင္ညႇပ္ျခင္း
+44,シャンプー,シャンプー,shanpuu,shampoo,ခေါင်းလျှော်ရည်,ေခါင္းေလွ်ာ္ရည္
+44,どういう風になさいますか。,どういうふうになさいますか。,dou iu fuu ni nasaimasu ka.,How would you like it done?,ဘယ်လိုလုပ်ပေးရမလဲ,ဘယ္လိုလုပ္ေပးရမလဲ
+44,ショート,ショート,shooto,short,အတို (ဆံပင်အတို),အတို (ဆံပင္အတို)
+44,みたいにしてください。,みたいにしてください。,mitai ni shite kudasai.,Do it like ~.,～လိုလုပ်ပေးပါ,～လိုလုပ္ေပးပါ
+44,これでよろしいでしょうか。,これでよろしいでしょうか。,kore de yoroshii deshou ka.,Would this be all right?,ဒီအတိုင်းအဆင်ပြေပါသလား,ဒီအတိုင္းအဆင္ေျပပါသလား
+44,どうもお疲れ様でした。,どうもおつかれさまでした。,doumo otsukaresamadeshita.,Thank you for being patient.,ကျေးဇူးတင်ပါတယ် (စောင့်ဆိုင်းပေးမှုအတွက်),ေက်းဇူးတင္ပါတယ္ (ေစာင့္ဆိုင္းေပးမႈအတြက္)
+44,DVD（ディーブイディー）,ディーブイディー,diibuidii,DVD,ဒီဗွီဒီ,ဒီဗြီဒီ
+44,眠ります,ねむります,nemurimasu,sleep,အိပ်သည်,အိပ္သည္
+45,知らせます,しらせます,shirasemasu,inform,အကြောင်းကြားသည်,အေၾကာင္းၾကားသည္
+45,謝ります,あやまります,ayamarimasu,apologize,တောင်းပန်သည်,ေတာင္းပန္သည္
+45,信じます,しんじます,shinjimasu,believe / trust,ယုံကြည်သည်,ယုံၾကည္သည္
+45,キャンセルします,キャンセルします,kyanseru shimasu,cancel,ပယ်ဖျက်သည်,ပယ္ဖ်က္သည္
+45,保証書,ほしょうしょ,hoshousho,guarantee,အာမခံစာရွက်,အာမခံစာ႐ြက္
+45,領収書,りょうしゅうしょ,ryoushuusho,receipt,ငွေလက်ခံဖြတ်ပိုင်း,ေငြလက္ခံျဖတ္ပိုင္း
+45,贈り物,おくりもの,okurimono,gift,လက်ဆောင်,လက္ေဆာင္
+45,間違い電話,まちがいでんわ,machigai denwa,wrong number,ဖုန်းမှားခေါ်ခြင်း,ဖုန္းမွားေခၚျခင္း
+45,キャンプ,キャンプ,kyanpu,camping / camp,စခန်းချခြင်း,စခန္းခ်ျခင္း
+45,係り,かかり,kakari,person in charge,တာဝန်ခံ,တာဝန္ခံ
+45,中止,ちゅうし,chuushi,calling off,ရပ်ဆိုင်းခြင်း,ရပ္ဆိုင္းျခင္း
+45,点,てん,ten,point / score,အမှတ်,အမွတ္
+45,札,さつ,satsu,bill,ငွေစက္ကူ,ေငြစကၠဴ
+45,ちゃんと,ちゃんと,chanto,regularly / properly,သေသေချာချာ,ေသေသခ်ာခ်ာ
+45,急に,きゅうに,kyuuni,suddenly,ရုတ်တရက်,႐ုတ္တရက္
+45,楽しみにしています。,たのしみにしています。,tanoshimi ni shite imasu.,be looking forward to,မျှော်လင့်စောင့်စားနေသည်,ေမွ်ာ္လင့္ေစာင့္စားေနသည္
+45,以上です。,いじょうです。,ijou desu.,That's all.,ဒါပါပဲ,ဒါပါပဲ
+45,係員,かかりいん,kakariin,person in charge / attendant,တာဝန်ရှိသူ,တာဝန္ရွိသူ
+45,コース,コース,koosu,course,လမ်းကြောင်း,လမ္းေၾကာင္း
+45,スタート,スタート,sutaato,start,စတင်ခြင်း,စတင္ျခင္း
+45,～位,～い,~i,~st / ~nd,အဆင့်,အဆင့္
+45,優勝します,ゆうしょうします,yuushou shimasu,win the championship,ချန်ပီယံဆုရသည်,ခ်န္ပီယံဆုရသည္
+45,梅,うめ,ume,plum blossom,မက်ပန်း,မက္ပန္း
+45,１１９番,ひゃくじゅうきゅうばん,hyakujuukyuuban,ambulance and fire brigade emergency tel. no.,၁၁၉ (မီးသတ်၊ လူနာတင်အရေးပေါ်ဖုန်း),၁၁၉ (မီးသတ္၊ လူနာတင္အေရးေပၚဖုန္း)
+45,１１０番,ひゃくとおばん,hyakutooban,police emergency tel. no.,၁၁၀ (ရဲအရေးပေါ်ဖုန်း),၁၁၀ (ရဲအေရးေပၚဖုန္း)
+46,［に］入学します,［に］にゅうがくします,[ni] nyuugaku shimasu,enter [a university],ကျောင်းဝင်သည်,ေက်ာင္းဝင္သည္
+46,［を］卒業します,［を］そつぎょうします,[wo] sotsugyou shimasu,graduate [from a university],ကျောင်းပြီးသည်၊ ဘွဲ့ရသည်,ေက်ာင္းၿပီးသည္၊ ဘြဲ႕ရသည္
+46,［パンが］焼けます,［パンが］やけます,[pan ga] yakemasu,[bread] be baked,ပေါင်မုန့်ဖုတ်ပြီးသည်,ေပါင္မုန႔္ဖုတ္ၿပီးသည္
+46,［肉が］焼けます,［肉が］やけます,[niku ga] yakemasu,[meat] be grilled,အသားကင်ပြီးသည်,အသားကင္ၿပီးသည္
+46,申し訳ありません。,もうしわけありません。,moushiwake arimasen.,I'm sorry.,တောင်းပန်ပါတယ်,ေတာင္းပန္ပါတယ္
+46,焼きます,やきます,yakimasu,bake / grill / roast,ဖုတ်သည်၊ ကင်သည်,ဖုတ္သည္၊ ကင္သည္
+46,渡します,わたします,watashimasu,hand over,ပေးအပ်သည်,ေပးအပ္သည္
+46,帰って来ます,かえってきます,kaette kimasu,come back,ပြန်လာသည်,ျပန္လာသည္
+46,［バスが］出ます,［バスが］でます,[basu ga] demasu,[a bus] leave,ဘတ်စ်ကားထွက်သည်,ဘတ္စ္ကားထြက္သည္
+46,留守,るす,rusu,being away from home,အိမ်မှာမရှိခြင်း,အိမ္မွာမရွိျခင္း
+46,宅配便,たくはいびん,takuhaibin,delivery service,အိမ်တိုင်ရာရောက်ပို့ဆောင်ရေး,အိမ္တိုင္ရာေရာက္ပို႔ေဆာင္ေရး
+46,原因,げんいん,genin,cause,အကြောင်းရင်း,အေၾကာင္းရင္း
+46,注射,ちゅうしゃ,chuusha,injection,ဆေးထိုးခြင်း,ေဆးထိုးျခင္း
+46,食欲,しょくよく,shokuyoku,appetite,အစာစားချင်စိတ်,အစာစားခ်င္စိတ္
+46,パンフレット,パンフレット,panfuretto,pamphlet,လက်ကမ်းစာစောင်,လက္ကမ္းစာေစာင္
+46,ステレオ,ステレオ,sutereo,stereo,စတီရီယို,စတီရီယို
+46,こちら,こちら,kochira,my place,ဒီဘက်,ဒီဘက္
+46,～の所,～のところ,~ no tokoro,the place around ~,～အနားတဝိုက်,～အနားတဝိုက္
+46,ちょうど,ちょうど,choudo,just exactly,အတိအကျ,အတိအက်
+46,たった今,たったいま,tatta ima,just now,ခုလေးတင်,ခုေလးတင္
+46,今いいでしょうか。,いまいいでしょうか。,ima ii deshou ka.,May I bother you now?,အခုအဆင်ပြေလား,အခုအဆင္ေျပလား
+46,ガスサービスセンター,ガスサービスセンター,gasu saabisu sentaa,gas service center,ဓာတ်ငွေ့ဝန်ဆောင်မှုစင်တာ,ဓာတ္ေငြ႕ဝန္ေဆာင္မႈစင္တာ
+46,ガスレンジ,ガスレンジ,gasu renji,gas range,ဓာတ်ငွေ့မီးဖို,ဓာတ္ေငြ႕မီးဖို
+46,具合,ぐあい,guai,condition,အခြေအနေ,အေျခအေန
+46,どちらさまでしょうか。,どちらさまでしょうか。,dochirasama deshou ka.,Who is this please?,ဘယ်သူပါလဲ,ဘယ္သူပါလဲ
+46,向かいます,むかいます,mukaimasu,head for,ဦးတည်သွားသည်,ဦးတည္သြားသည္
+46,お待たせしました。,おまたせしました。,omatase shimashita.,Sorry to have kept you waiting.,စောင့်ခိုင်းမိလို့ တောင်းပန်ပါတယ်,ေစာင့္ခိုင္းမိလို႔ ေတာင္းပန္ပါတယ္
+46,半年,はんとし,hantoshi,half year,ခြောက်လ,ေျခာက္လ
+46,届きます,とどきます,todokimasu,arrive / be delivered,ရောက်သည်၊ ပို့ဆောင်ခံရသည်,ေရာက္သည္၊ ပို႔ေဆာင္ခံရသည္
+47,燃えます,もえます,moemasu,[trash] burn,လောင်ကျွမ်းသည်,ေလာင္ကြၽမ္းသည္
+47,［風が］吹きます,［かぜが］ふきます,[kaze ga] fukimasu,[wind] blow,လေတိုက်သည်,ေလတိုက္သည္
+47,亡くなります,なくなります,nakunarimasu,pass away,ကွယ်လွန်သည်,ကြယ္လြန္သည္
+47,データ,データ,deeta,data,အချက်အလက်,အခ်က္အလက္
+47,［人が］集まります,［ひとが］あつまります,[hito ga] atsumarimasu,[people] gather,လူစုသည်,လူစုသည္
+47,別れます,わかれます,wakaremasu,[people] separate,ခွဲခွာသည်,ခြဲခြာသည္
+47,長生きします,ながいきします,nagaiki shimasu,live long,အသက်ရှည်သည်,အသက္ရွည္သည္
+47,音がします,おとがします,oto ga shimasu,sound be heard,အသံကြားရသည်,အသံၾကားရသည္
+47,声がします,こえがします,koe ga shimasu,voice be heard,အသံကြားရသည်,အသံၾကားရသည္
+47,味がします,あじがします,aji ga shimasu,taste,အရသာရှိသည်,အရသာရွိသည္
+47,匂いがします,においがします,nioi ga shimasu,smell,အနံ့ရသည်,အနံ႔ရသည္
+47,ひどい,ひどい,hidoi,terrible,ဆိုးရွားသည်,ဆိုး႐ြားသည္
+47,怖い,こわい,kowai,scary / frightening,ကြောက်စရာကောင်းသည်,ေၾကာက္စရာေကာင္းသည္
+47,実験,じっけん,jikken,experiment,စမ်းသပ်မှု,စမ္းသပ္မႈ
+47,人口,じんこう,jinkou,population,လူဦးရေ,လူဦးေရ
+47,臭い,におい,nioi,smell,အနံ့,အနံ႔
+47,科学,かがく,kagaku,science,သိပ္ပံ,သိပၸံ
+47,医学,いがく,igaku,medical science,ဆေးပညာ,ေဆးပညာ
+47,文学,ぶんがく,bungaku,literature,စာပေ,စာေပ
+47,パトカー,パトカー,patokaa,patrol car,ရဲကား,ရဲကား
+47,救急車,きゅうきゅうしゃ,kyuukyuusha,ambulance,လူနာတင်ယာဉ်,လူနာတင္ယာဥ္
+47,賛成,さんせい,sansei,agreement,သဘောတူခြင်း,သေဘာတူျခင္း
+47,反対,はんたい,hantai,objection,ကန့်ကွက်ခြင်း,ကန႔္ကြက္ျခင္း
+47,男性,だんせい,dansei,male,အမျိုးသား,အမ်ိဳးသား
+47,女性,じょせい,josei,female,အမျိုးသမီး,အမ်ိဳးသမီး
+47,どうも,どうも,doumo,it appears that,ထင်ရသည်,ထင္ရသည္
+47,～によると,～によると,~ni yoru to,according to ~,～အဆိုအရ,～အဆိုအရ
+47,恋人,こいびと,koibito,sweetheart / boyfriend / girlfriend,ချစ်သူ,ခ်စ္သူ
+47,婚約します,こんやくします,konyaku shimasu,get engaged,စေ့စပ်သည်,ေစ့စပ္သည္
+47,相手,あいて,aite,partner,အဖော်၊ တစ်ဖက်လူ,အေဖာ္၊ တစ္ဖက္လူ
+47,知り合います,しりあいます,shiriaimasu,get acquainted,သိကျွမ်းသည်,သိကြၽမ္းသည္
+47,厳しい,きびしい,kibishii,strict,တင်းကျပ်သည်,တင္းက်ပ္သည္
+47,大統領,だいとうりょう,daitouryou,president,သမ္မတ,သမၼတ
+48,ファイル,ファイル,fairu,file,ဖိုင်,ဖိုင္
+48,下ろします,おろします,oroshimasu,put down,ချသည်,ခ်သည္
+48,届けます,とどけます,todokemasu,deliver,ပို့ပေးသည်,ပို႔ေပးသည္
+48,世話をします,せわをします,sewa o shimasu,take care of ~,ပြုစုစောင့်ရှောက်သည်,ျပဳစုေစာင့္ေရွာက္သည္
+48,嫌な,いやな,iya na,unwilling,မနှစ်သက်သော,မႏွစ္သက္ေသာ
+48,塾,じゅく,juku,cram school,ကျူရှင်,က်ဴရွင္
+48,生徒,せいと,seito,student,ကျောင်းသား,ေက်ာင္းသား
+48,者,もの,mono,person,လူ၊ ပုဂ္ဂိုလ်,လူ၊ ပုဂၢိဳလ္
+48,入管,にゅうかん,nyuukan,Immigration Bureau,လူဝင်မှုကြီးကြပ်ရေးဌာန,လူဝင္မႈႀကီးၾကပ္ေရးဌာန
+48,再入国ビザ,さいにゅうこくビザ,sainyuukoku biza,reentry visa,ပြန်ဝင်ခွင့်ဗီဇာ,ျပန္ဝင္ခြင့္ဗီဇာ
+48,自由に,じゆうに,jiyuu ni,freely,လွတ်လပ်စွာ,လြတ္လပ္စြာ
+48,～間,～かん,~kan,for ~,～ကြာ,～ၾကာ
+48,いいことですね。,いいことですね。,ii koto desu ne.,That's good.,ကောင်းတယ်နော်,ေကာင္းတယ္ေနာ္
+48,お忙しいですか。,おいそがしいですか。,oisogashii desu ka.,Are you busy?,အလုပ်များနေလား,အလုပ္မ်ားေနလား
+48,営業,えいぎょう,eigyou,business / sales,စီးပွားရေး၊ အရောင်း,စီးပြားေရး၊ အေရာင္း
+48,それまでに,それまでに,sore made ni,by that time,အဲဒီအချိန်အထိ,အဲဒီအခ်ိန္အထိ
+48,構いません。,かまいません。,kamaimasen.,it's all right.,ရပါတယ်,ရပါတယ္
+48,楽しみます,たのしみます,tanoshimimasu,enjoy oneself,ပျော်ရွှင်စွာဖြတ်သန်းသည်,ေပ်ာ္႐ႊင္စြာျဖတ္သန္းသည္
+48,録音,ろくおん,rokuon,audio recording,အသံသွင်းခြင်း,အသံသြင္းျခင္း
+49,利用します,りようします,riyou shimasu,use,အသုံးပြုသည်,အသုံးျပဳသည္
+49,［会社に］勤めます,［かいしゃに］つとめます,[kaisha ni] tsutomemasu,work [for a company],အလုပ်လုပ်သည်,အလုပ္လုပ္သည္
+49,休みます,やすみます,yasumimasu,go to bed / sleep,အိပ်သည်,အိပ္သည္
+49,［いすに］掛けます,［いすに］かけます,[isu ni] kakemasu,sit on [a chair],ထိုင်သည်,ထိုင္သည္
+49,過ごします,すごします,sugoshimasu,spend (time),ဖြတ်သန်းသည်,ျဖတ္သန္းသည္
+49,［コンビニに］寄ります,［コンビニに］よります,[konbini ni] yorimasu,drop into [a convenience store],ဝင်သည်,ဝင္သည္
+49,いらっしゃいます,いらっしゃいます,irasshaimasu,be / go / come,ရှိသည်၊ သွားသည်၊ လာသည်,ရွိသည္၊ သြားသည္၊ လာသည္
+49,召し上がります,めしあがります,meshiagarimasu,eat / drink,စားသည်၊ သောက်သည်,စားသည္၊ ေသာက္သည္
+49,おっしゃいます,おっしゃいます,osshaimasu,say,ပြောသည်,ေျပာသည္
+49,なさいます,なさいます,nasaimasu,do,လုပ်သည်,လုပ္သည္
+49,ご覧になります,ごらんになります,goran ni narimasu,see / look at,ကြည့်သည်,ၾကည့္သည္
+49,ご存じです,ごぞんじです,gozonji desu,know,သိသည်,သိသည္
+49,挨拶,あいさつ,aisatsu,greeting / message,နှုတ်ဆက်ခြင်း,ႏႈတ္ဆက္ျခင္း
+49,灰皿,はいざら,haizara,ashtray,ဆေးလိပ်ပြာခံ,ေဆးလိပ္ျပာခံ
+49,旅館,りょかん,ryokan,Japanese style hotel,ဂျပန်ဟိုတယ် (ရီယိုကန်),ဂ်ပန္ဟိုတယ္ (ရီယိုကန္)
+49,バス停,バスてい,basu tei,bus stop,ဘတ်စ်ကားမှတ်တိုင်,ဘတ္စ္ကားမွတ္တိုင္
+49,貿易,ぼうえき,boueki,trade,ကုန်သွယ်ရေး,ကုန္သြယ္ေရး
+49,～様,～さま,~sama,polite of さん,～ရှင်၊ ～ခင်ဗျား,～ရွင္၊ ～ခင္ဗ်ား
+49,帰りに,かえりに,kaeri ni,on the way back,အပြန်လမ်းမှာ,အျပန္လမ္းမွာ
+49,たまに,たまに,tamani,once in a while,တခါတရံ,တခါတရံ
+49,ちっとも,ちっとも,chittomo,not at all,လုံးဝမ～,လုံးဝမ～
+49,遠慮なく,えんりょなく,enryo naku,without hesitation,အားမနာဘဲ,အားမနာဘဲ
+49,－年－組,－ねん－くみ,~nen ~kumi,class / Xth grade,～နှစ်၊ ～တန်း,～ႏွစ္၊ ～တန္း
+49,［熱を］出します,［ねつを］だします,[netsu o] dashimasu,run [a fever],ဖျားသည်,ဖ်ားသည္
+49,よろしくお伝えください。,よろしくおつたえください。,yoroshiku otsutae kudasai.,please say hello.,နှုတ်ဆက်ပေးပါ,ႏႈတ္ဆက္ေပးပါ
+49,失礼いたします。,しつれいいたします。,shitsurei itashimasu.,Good bye.,ခွင့်ပြုပါဦး,ခြင့္ျပဳပါဦး
+49,奥様,おくさま,okusama,(your/his) wife (polite),ဇနီး (ရိုသေစွာ),ဇနီး (႐ိုေသစြာ)
+50,［を］淹れます,［を］いれます,[wo] iremasu,make [coffee],ကော်ဖီဖျော်သည်,ေကာ္ဖီေဖ်ာ္သည္
+50,初めに,はじめに,hajime ni,first,အစဦးဆုံး,အစဦးဆုံး
+50,用意します,よういします,youi shimasu,prepare,ပြင်ဆင်သည်,ျပင္ဆင္သည္
+50,スケジュール,スケジュール,sukejuuru,schedule,အချိန်ဇယား,အခ်ိန္ဇယား
+50,参ります,まいります,mairimasu,go / come,သွားသည်၊ လာသည်,သြားသည္၊ လာသည္
+50,おります,おります,orimasu,be,ရှိသည်,ရွိသည္
+50,頂きます,いただきます,itadakimasu,eat / drink / receive,စားသည်၊ သောက်သည်၊ လက်ခံရယူသည်,စားသည္၊ ေသာက္သည္၊ လက္ခံရယူသည္
+50,申します,もうします,moushimasu,say,ပြောသည်,ေျပာသည္
+50,致します,いたします,itashimasu,do,လုပ်သည်,လုပ္သည္
+50,拝見します,はいけんします,haiken shimasu,see / look at,ကြည့်သည်,ၾကည့္သည္
+50,存じます,ぞんじます,zonjimasu,know,သိသည်,သိသည္
+50,お目にかかります,おめにかかります,ome ni kakarimasu,meet (humble),တွေ့ဆုံသည်,ေတြ႕ဆုံသည္
+50,ございます,ございます,gozaimasu,be,ရှိသည်,ရွိသည္
+50,私,わたくし,watakushi,I,ကျွန်တော်၊ ကျွန်မ,ကြၽန္ေတာ္၊ ကြၽန္မ
+50,ガイド,ガイド,gaido,guide,လမ်းညွှန်,လမ္းၫႊန္
+50,郊外,こうがい,kougai,suburbs,ဆင်ခြေဖုံး,ဆင္ေျခဖုံး
+50,アルバム,アルバム,arubamu,album,အယ်လ်ဘမ်,အယ္လ္ဘမ္
+50,再来週,さらいしゅう,saraishuu,the week after next,နောက်တစ်ပတ်ပြီး,ေနာက္တစ္ပတ္ၿပီး
+50,再来月,さらいげつ,saraigetsu,the month after next,နောက်တစ်လပြီး,ေနာက္တစ္လၿပီး
+50,再来年,さらいねん,sarainen,the year after next,နောက်တစ်နှစ်ပြီး,ေနာက္တစ္ႏွစ္ၿပီး
+50,最初に,さいしょに,saisho ni,first of all,ပထမဦးဆုံး,ပထမဦးဆုံး
+50,最後に,さいごに,saigo ni,lastly,နောက်ဆုံး,ေနာက္ဆုံး
+50,ただ今,ただいま,tadaima,just now,ခုလေးတင်,ခုေလးတင္
+50,緊張します,きんちょうします,kinchou shimasu,become tense,စိတ်လှုပ်ရှားသည်,စိတ္လႈပ္ရွားသည္
+50,［ビデオに］撮ります,［ビデオに］とります,[bideo ni] torimasu,record [on video],ဗီဒီယိုရိုက်သည်,ဗီဒီယို႐ိုက္သည္
+50,賞金,しょうきん,shoukin,prize money,ဆုငွေ,ဆုေငြ
+50,きりん,きりん,kirin,giraffe,သစ်ကုလားအုတ်,သစ္ကုလားအုတ္
+50,ころ,ころ,koro,times / days,အချိန်ကာလ,အခ်ိန္ကာလ
+50,［夢が］叶います,［ゆめが］かないます,[yume ga] kanaimasu,[dream] come true,အိပ်မက်အကောင်အထည်ပေါ်သည်,အိပ္မက္အေကာင္အထည္ေပၚသည္
+50,一言よろしいでしょうか。,ひとことよろしいでしょうか。,hitokoto yoroshii deshou ka.,May I say one word?,စကားတစ်ခွန်းပြောလို့ရမလား,စကားတစ္ခြန္းေျပာလို႔ရမလား
+50,協力します,きょうりょくします,kyouryoku shimasu,cooperate,ပူးပေါင်းဆောင်ရွက်သည်,ပူးေပါင္းေဆာင္႐ြက္သည္
+50,心から,こころから,kokoro kara,from my heart,စိတ်ရင်းဖြင့်,စိတ္ရင္းျဖင့္
+50,感謝します,かんしゃします,kansha shimasu,be thankful,ကျေးဇူးတင်သည်,ေက်းဇူးတင္သည္
+50,応援,おうえん,ouen,cheering,အားပေးခြင်း,အားေပးျခင္း
+50,メールアドレス,メールアドレス,meeru adoresu,Email address,အီးမေးလ်လိပ်စာ,အီးေမးလ္လိပ္စာ
