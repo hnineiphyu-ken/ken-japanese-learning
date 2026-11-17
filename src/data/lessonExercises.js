@@ -5014,5 +5014,1667 @@ export const LESSON_EXERCISES = {
         ]
       }
     ]
+  },
+  "8": {
+    "renshuuA": [
+      {
+        "patternNo": 1,
+        "pattern": "名詞 は な-形容詞 です",
+        "descMy": "နာမ်တစ်ခု၏ ဂုဏ်သတ္တိအခြေအနေကို な-နာမဝိသေသနဖြင့် အတည်ဖော်ပြခြင်း",
+        "descEn": "Describing a noun with a na-adjective (Affirmative)",
+        "examples": [
+          {
+            "jp": "桜は きれいです。",
+            "rd": "さくらは きれいです。",
+            "rom": "Sakura wa kirei desu.",
+            "my": "ချယ်ရီပန်းသည် လှပပါသည်။"
+          },
+          {
+            "jp": "富士山は 有名です。",
+            "rd": "ふじさんは ゆうめいです。",
+            "rom": "Fujisan wa yuumei desu.",
+            "my": "ဖူဂျီတောင်သည် နာမည်ကြီးပါသည်။"
+          },
+          {
+            "jp": "この 町は 静かです。",
+            "rd": "この まちは しずかです。",
+            "rom": "Kono machi wa shizuka desu.",
+            "my": "ဒီမြို့သည် တိတ်ဆိတ်အေးချမ်းပါသည်။"
+          },
+          {
+            "jp": "ミラーさんは 親切です。",
+            "rd": "みらーさんは しんせつです。",
+            "rom": "Miraa-san wa shinsetsu desu.",
+            "my": "မီလာစံသည် သဘောကောင်းဖော်ရွေပါသည်။"
+          }
+        ]
+      },
+      {
+        "patternNo": 2,
+        "pattern": "名詞 は な-形容詞 じゃ ありません",
+        "descMy": "な-နာမဝိသေသန၏ ပစ္စုပ္ပန် ငြင်းပယ်ဝါကျ ပုံစံ",
+        "descEn": "Negative form of na-adjectives (ja arimasen)",
+        "examples": [
+          {
+            "jp": "琵琶湖の水は きれいじゃ ありません。",
+            "rd": "びわこのみずは きれいじゃ ありません。",
+            "rom": "Biwako no mizu wa kirei ja arimasen.",
+            "my": "ဘီဝါအိုင်ရေသည် မသန့်ရှင်းပါ။"
+          },
+          {
+            "jp": "この 町は にぎやかじゃ ありません。",
+            "rd": "この まちは にぎやかじゃ ありません。",
+            "rom": "Kono machi wa nigiyaka ja arimasen.",
+            "my": "ဒီမြို့သည် မစည်ကားပါ။"
+          },
+          {
+            "jp": "きょうは 暇じゃ ありません。",
+            "rd": "きょうは ひまじゃ ありません。",
+            "rom": "Kyou wa hima ja arimasen.",
+            "my": "ဒီနေ့ အားလပ်ချိန် မရှိပါ။"
+          }
+        ]
+      },
+      {
+        "patternNo": 3,
+        "pattern": "名詞 は い-形容詞 です",
+        "descMy": "နာမ်တစ်ခု၏ ဂုဏ်သတ္တိအခြေအနေကို い-နာမဝိသေသနဖြင့် အတည်ဖော်ပြခြင်း",
+        "descEn": "Describing a noun with an i-adjective (Affirmative)",
+        "examples": [
+          {
+            "jp": "富士山は 高いです。",
+            "rd": "ふじさんは たかいです。",
+            "rom": "Fujisan wa takai desu.",
+            "my": "ဖူဂျီတောင်သည် မြင့်မားပါသည်။"
+          },
+          {
+            "jp": "日本の 食べ物は おいしいです。",
+            "rd": "にほんの たべものは おいしいです。",
+            "rom": "Nihon no tabemono wa oishii desu.",
+            "my": "ဂျပန်အစားအစာသည် အရသာရှိပါသည်။"
+          },
+          {
+            "jp": "ペキンは 寒いです。",
+            "rd": "ぺきんは さむいです。",
+            "rom": "Pekin wa samui desu.",
+            "my": "ပေကျင်းသည် အေးပါသည်။"
+          }
+        ]
+      },
+      {
+        "patternNo": 4,
+        "pattern": "名詞 は い-形容詞［〜くない］ です",
+        "descMy": "い-နာမဝိသေသန၏ ပစ္စုပ္ပန် ငြင်းပယ်ဝါကျ ပုံစံ ('い' ဖြုတ်ပြီး 'くない です' ဆက်ပါ)",
+        "descEn": "Negative form of i-adjectives (drop 'i' and add 'kunai desu')",
+        "examples": [
+          {
+            "jp": "上海は 寒くないです。",
+            "rd": "しゃんはいは さむくないです。",
+            "rom": "Shanhai wa samukunai desu.",
+            "my": "ရှန်ဟိုင်းသည် မအေးပါ။"
+          },
+          {
+            "jp": "この 本は おもしろくないです。",
+            "rd": "この ほんは おもしろくないです。",
+            "rom": "Kono hon wa omoshirokunai desu.",
+            "my": "ဒီစာအုပ်သည် စိတ်ဝင်စားစရာ မကောင်းပါ။"
+          },
+          {
+            "jp": "寮の 部屋は あまり よくないです。",
+            "rd": "りょうの へやは あまり よくないです。",
+            "rom": "Ryou no heya wa amari yokunai desu.",
+            "my": "အဆောင်အခန်းသည် သိပ်မကောင်းလှပါ။ (いい➔よくない)"
+          }
+        ]
+      },
+      {
+        "patternNo": 5,
+        "pattern": "な-形容詞 ＋ な ＋ 名詞  /  い-形容詞 ＋ 名詞",
+        "descMy": "နာမ်၏ ရှေ့တွင် ကပ်၍ အထူးပြုဖော်ပြခြင်း",
+        "descEn": "Adjectives modifying nouns directly",
+        "examples": [
+          {
+            "jp": "桜は きれいな 花です。",
+            "rd": "さくらは きれいな はなです。",
+            "rom": "Sakura wa kirei na hana desu.",
+            "my": "ချယ်ရီပန်းသည် လှပသော ပန်းတစ်မျိုး ဖြစ်ပါသည်။"
+          },
+          {
+            "jp": "奈良は 静かな 町です。",
+            "rd": "ならは しずかな まちです。",
+            "rom": "Nara wa shizuka na machi desu.",
+            "my": "နာရာမြို့သည် တိတ်ဆိတ်အေးချမ်းသော မြို့တစ်မြို့ ဖြစ်ပါသည်။"
+          },
+          {
+            "jp": "富士山は 高い 山です。",
+            "rd": "ふじさんは たかい やまです。",
+            "rom": "Fujisan wa takai yama desu.",
+            "my": "ဖူဂျီတောင်သည် မြင့်မားသော တောင်တစ်တောင် ဖြစ်ပါသည်။"
+          },
+          {
+            "jp": "これは 新しい 車です。",
+            "rd": "これは あたらしい くるまです。",
+            "rom": "Kore wa atarashii kuruma desu.",
+            "my": "ဒါသည် ကားအသစ်တစ်စီး ဖြစ်ပါသည်။"
+          }
+        ]
+      }
+    ],
+    "renshuuB": [
+      {
+        "drillNo": 1,
+        "title": "練習 B-1: な-形容詞 の 肯定文 (Na-adj Affirmative Drill)",
+        "example": {
+          "jp": "例: サントスさん (親切) ➔ サントスさんは 親切です。",
+          "rd": "れい: さんとすさん (しんせつ) ➔ さんとすさんは しんせつです。",
+          "rom": "Rei: Santosu-san (shinsetsu) -> Santosu-san wa shinsetsu desu.",
+          "my": "နမူနာ: ဆန်းတော့စ်စံ (သဘောကောင်းဖော်ရွေ) ➔ ဆန်းတော့စ်စံသည် သဘောကောင်းဖော်ရွေပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "この 町 (静か)",
+            "promptRd": "この まち (しずか)",
+            "answerJp": "この 町は 静かです。",
+            "answerRd": "この まちは しずかです。",
+            "rom": "Kono machi wa shizuka desu.",
+            "my": "ဒီမြို့သည် တိတ်ဆိတ်ပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "富士山 (有名)",
+            "promptRd": "ふじさん (ゆうめい)",
+            "answerJp": "富士山は 有名です。",
+            "answerRd": "ふじさんは ゆうめいです。",
+            "rom": "Fujisan wa yuumei desu.",
+            "my": "ဖူဂျီတောင်သည် နာမည်ကြီးပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "この 図書館 (便利)",
+            "promptRd": "この としょかん (べんり)",
+            "answerJp": "この 図書館は 便利です。",
+            "answerRd": "この としょかんは べんりです。",
+            "rom": "Kono toshokan wa benri desu.",
+            "my": "ဒီစာကြည့်တိုက်သည် အဆင်ပြေပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "ワット先生 (元気)",
+            "promptRd": "わっとせんせい (げんき)",
+            "answerJp": "ワット先生は 元気です。",
+            "answerRd": "わっとせんせいは げんきです。",
+            "rom": "Watto-sensei wa genki desu.",
+            "my": "ဝပ်ဆရာသည် နေကောင်းကျန်းမာပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 2,
+        "title": "練習 B-2: な-形容詞 の 否定文 (Na-adj Negative Drill)",
+        "example": {
+          "jp": "例: 琵琶湖の水 (きれい) ➔ 琵琶湖の水は きれいじゃ ありません。",
+          "rd": "れい: びわこのみず (きれい) ➔ びわこのみずは きれいじゃ ありません。",
+          "rom": "Rei: Biwako no mizu (kirei) -> Biwako no mizu wa kirei ja arimasen.",
+          "my": "နမူနာ: ဘီဝါအိုင်ရေ (သန့်ရှင်း) ➔ ဘီဝါအိုင်ရေသည် မသန့်ရှင်းပါ။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "この 町 (にぎやか)",
+            "promptRd": "この まち (にぎやか)",
+            "answerJp": "この 町は にぎやかじゃ ありません。",
+            "answerRd": "この まちは にぎやかじゃ ありません。",
+            "rom": "Kono machi wa nigiyaka ja arimasen.",
+            "my": "ဒီမြို့သည် မစည်ကားပါ။"
+          },
+          {
+            "num": 2,
+            "prompt": "あした (暇)",
+            "promptRd": "あした (ひま)",
+            "answerJp": "あしたは 暇じゃ ありません。",
+            "answerRd": "あしたは ひまじゃ ありません。",
+            "rom": "Ashita wa hima ja arimasen.",
+            "my": "မနက်ဖြန် အားလပ်ချိန်မရှိပါ။"
+          },
+          {
+            "num": 3,
+            "prompt": "あの 寮 (静か)",
+            "promptRd": "あの りょう (しずか)",
+            "answerJp": "あの 寮は 静かじゃ ありません。",
+            "answerRd": "あの りょうは しずかじゃ ありません。",
+            "rom": "Ano ryou wa shizuka ja arimasen.",
+            "my": "ဟိုအဆောင်သည် မတိတ်ဆိတ်ပါ။"
+          },
+          {
+            "num": 4,
+            "prompt": "この 辞書 (便利)",
+            "promptRd": "この じしょ (べんり)",
+            "answerJp": "この 辞書は 便利じゃ ありません。",
+            "answerRd": "この じしょは べんりじゃ ありません。",
+            "rom": "Kono jisho wa benri ja arimasen.",
+            "my": "ဒီအဘိဓာန်သည် အဆင်မပြေလှပါ။"
+          }
+        ]
+      },
+      {
+        "drillNo": 3,
+        "title": "練習 B-3: い-形容詞 の 肯定文 (I-adj Affirmative Drill)",
+        "example": {
+          "jp": "例: 富士山 (高い) ➔ 富士山は 高いです。",
+          "rd": "れい: ふじさん (たかい) ➔ ふじさんは たかいです。",
+          "rom": "Rei: Fujisan (takai) -> Fujisan wa takai desu.",
+          "my": "နမူနာ: ဖူဂျီတောင် (မြင့်) ➔ ဖူဂျီတောင်သည် မြင့်မားပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "日本の 食べ物 (おいしい)",
+            "promptRd": "にほんの たべもの (おいしい)",
+            "answerJp": "日本の 食べ物は おいしいです。",
+            "answerRd": "にほんの たべものは おいしいです。",
+            "rom": "Nihon no tabemono wa oishii desu.",
+            "my": "ဂျပန်အစားအစာသည် အရသာရှိပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "ペキン (寒い)",
+            "promptRd": "ぺきん (さむい)",
+            "answerJp": "ペキンは 寒いです。",
+            "answerRd": "ぺきんは さむいです。",
+            "rom": "Pekin wa samui desu.",
+            "my": "ပေကျင်းသည် အေးပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "仕事 (忙しい)",
+            "promptRd": "しごと (いそがしい)",
+            "answerJp": "仕事は 忙しいです。",
+            "answerRd": "しごとは いそがしいです。",
+            "rom": "Shigoto wa isogashii desu.",
+            "my": "အလုပ် အလုပ်များပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "この 映画 (おもしろい)",
+            "promptRd": "この えいが (おもしろい)",
+            "answerJp": "この 映画は おもしろいです。",
+            "answerRd": "この えいがは おもしろいです。",
+            "rom": "Kono eiga wa omoshiroi desu.",
+            "my": "ဒီရုပ်ရှင်သည် စိတ်ဝင်စားစရာ ကောင်းပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 4,
+        "title": "練習 B-4: い-形容詞 の 否定文 (I-adj Negative Drill)",
+        "example": {
+          "jp": "例: 上海 (寒い) ➔ 上海は 寒くないです。",
+          "rd": "れい: しゃんはい (さむい) ➔ しゃんはいは さむくないです。",
+          "rom": "Rei: Shanhai (samui) -> Shanhai wa samukunai desu.",
+          "my": "နမူနာ: ရှန်ဟိုင်း (အေး) ➔ ရှန်ဟိုင်းသည် မအေးပါ။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "この 本 (おもしろい)",
+            "promptRd": "この ほん (おもしろい)",
+            "answerJp": "この 本は おもしろくないです。",
+            "answerRd": "この ほんは おもしろくないです。",
+            "rom": "Kono hon wa omoshirokunai desu.",
+            "my": "ဒီစာအုပ်သည် စိတ်ဝင်စားစရာ မကောင်းပါ။"
+          },
+          {
+            "num": 2,
+            "prompt": "この 時計 (高い)",
+            "promptRd": "この とけい (たかい)",
+            "answerJp": "この 時計は 高くないです。",
+            "answerRd": "この とけいは たかくないです。",
+            "rom": "Kono tokei wa takakunai desu.",
+            "my": "ဒီနာရီသည် ဈေးမကြီးပါ။"
+          },
+          {
+            "num": 3,
+            "prompt": "日本語 (難しい)",
+            "promptRd": "にほんご (むずかしい)",
+            "answerJp": "日本語は 難しくないです。",
+            "answerRd": "にほんごは むずかしくないです。",
+            "rom": "Nihongo wa muzukashikunai desu.",
+            "my": "ဂျပန်စာသည် မခက်ခဲပါ။"
+          },
+          {
+            "num": 4,
+            "prompt": "寮の 部屋 (いい)",
+            "promptRd": "りょうの へや (いい)",
+            "answerJp": "寮の 部屋は よくないです。",
+            "answerRd": "りょうの へやは よくないです。",
+            "rom": "Ryou no heya wa yokunai desu.",
+            "my": "အဆောင်အခန်းသည် မကောင်းပါ။ (いい➔よくない)"
+          }
+        ]
+      },
+      {
+        "drillNo": 5,
+        "title": "練習 B-5: 形容詞 ＋ 名詞 (Adjective Modifying Noun)",
+        "example": {
+          "jp": "例: 桜 (きれいな 花) ➔ 桜は きれいな 花です。",
+          "rd": "れい: さくら (きれいな はな) ➔ さくらは きれいな はなです。",
+          "rom": "Rei: Sakura (kirei na hana) -> Sakura wa kirei na hana desu.",
+          "my": "နမူနာ: ချယ်ရီပန်း (လှပသောပန်း) ➔ ချယ်ရီပန်းသည် လှပသောပန်းတစ်မျိုး ဖြစ်ပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "奈良 (静かな 町)",
+            "promptRd": "なら (しずかな まち)",
+            "answerJp": "奈良は 静かな 町です。",
+            "answerRd": "ならは しずかな まちです。",
+            "rom": "Nara wa shizuka na machi desu.",
+            "my": "နာရာသည် တိတ်ဆိတ်သော မြို့တစ်မြို့ ဖြစ်ပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "富士山 (高い 山)",
+            "promptRd": "ふじさん (たかい やま)",
+            "answerJp": "富士山は 高い 山です。",
+            "answerRd": "ふじさんは たかい やまです。",
+            "rom": "Fujisan wa takai yama desu.",
+            "my": "ဖူဂျီတောင်သည် မြင့်သောတောင် ဖြစ်ပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "ミラーさん (親切な 人)",
+            "promptRd": "みらーさん (しんせつな ひと)",
+            "answerJp": "ミラーさんは 親切な 人です。",
+            "answerRd": "みらーさんは しんせつな ひとです。",
+            "rom": "Miraa-san wa shinsetsu na hito desu.",
+            "my": "မီလာစံသည် သဘောကောင်းသောလူတစ်ဦး ဖြစ်ပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "これは (新しい 車)",
+            "promptRd": "これは (あたらしい くるま)",
+            "answerJp": "これは 新しい 車です。",
+            "answerRd": "これは あたらしい くるまです。",
+            "rom": "Kore wa atarashii kuruma desu.",
+            "my": "ဒါသည် ကားအသစ်တစ်စီး ဖြစ်ပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 6,
+        "title": "練習 B-6: とても / あまり (Degree Adverb Drill)",
+        "example": {
+          "jp": "例1: 日本 (とても 暑い) ➔ 日本は とても 暑いです。\n例2: 上海 (あまり 寒くない) ➔ 上海は あまり 寒くないです。",
+          "rd": "れい1: にほん (とても あつい) ➔ にほんは とても あついです。\nれい2: しゃんはい (あまり さむくない) ➔ しゃんはいは あまり さむくないです。",
+          "rom": "Rei 1: Nihon (totemo atsui) -> Nihon wa totemo atsui desu.\nRei 2: Shanhai (amari samukunai) -> Shanhai wa amari samukunai desu.",
+          "my": "နမူနာ ၁: ဂျပန် (အလွန်ပူ) ➔ ဂျပန်သည် အလွန်ပူပါသည်။\nနမူနာ ၂: ရှန်ဟိုင်း (သိပ်မအေး) ➔ ရှန်ဟိုင်းသည် သိပ်မအေးလှပါ။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "日本の 食べ物 (とても おいしい)",
+            "promptRd": "にほんの たべもの (とても おいしい)",
+            "answerJp": "日本の 食べ物は とても おいしいです。",
+            "answerRd": "にほんの たべものは とても おいしいです。",
+            "rom": "Nihon no tabemono wa totemo oishii desu.",
+            "my": "ဂျပန်အစားအစာသည် အလွန်အရသာရှိပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "琵琶湖の水 (あまり きれいじゃ ありません)",
+            "promptRd": "びわこのみず (あまり きれいじゃ ありません)",
+            "answerJp": "琵琶湖の水は あまり きれいじゃ ありません。",
+            "answerRd": "びわこのみずは あまり きれいじゃ ありません。",
+            "rom": "Biwako no mizu wa amari kirei ja arimasen.",
+            "my": "ဘီဝါအိုင်ရေသည် သိပ်မသန့်ရှင်းလှပါ။"
+          },
+          {
+            "num": 3,
+            "prompt": "仕事 (とても 忙しい)",
+            "promptRd": "しごと (とても いそがしい)",
+            "answerJp": "仕事は とても 忙しいです。",
+            "answerRd": "しごとは とても いそがしいです。",
+            "rom": "Shigoto wa totemo isogashii desu.",
+            "my": "အလုပ်သည် အလွန်အလုပ်များပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "この 本 (あまり おもしろくない)",
+            "promptRd": "この ほん (あまり おもしろくない)",
+            "answerJp": "この 本は あまり おもしろくないです。",
+            "answerRd": "この ほんは あまり おもしろくないです。",
+            "rom": "Kono hon wa amari omoshirokunai desu.",
+            "my": "ဒီစာအုပ်သည် သိပ်စိတ်ဝင်စားစရာ မကောင်းလှပါ။"
+          }
+        ]
+      },
+      {
+        "drillNo": 7,
+        "title": "練習 B-7: どうですか (Evaluation & Impression Drill)",
+        "example": {
+          "jp": "例: 日本の 生活 ➔ 日本の 生活は どうですか。……楽しいです。",
+          "rd": "れい: にほんの せいかつ ➔ にほんの せいかつは どうですか。……たのしいです。",
+          "rom": "Rei: Nihon no seikatsu -> Nihon no seikatsu wa dou desu ka. ...Tanoshii desu.",
+          "my": "နမူနာ: ဂျပန်မှာ နေထိုင်ရတာ ➔ ဂျပန်မှာ နေထိုင်ရတာ ဘယ်လိုနေလဲ။ ……ပျော်စရာကောင်းပါတယ်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "大学の 寮 (古い/便利)",
+            "promptRd": "だいがくの りょう (ふるい/べんり)",
+            "answerJp": "大学の 寮は どうですか。……古いですが、便利です。",
+            "answerRd": "だいがくの りょうは どうですか。……ふるいですが、べんりです。",
+            "rom": "Daigaku no ryou wa dou desu ka. ...Furui desu ga, benri desu.",
+            "my": "တက္ကသိုလ်အဆောင် ဘယ်လိုနေလဲ။ ……ဟောင်းပေမယ့် အဆင်ပြေပါတယ်။"
+          },
+          {
+            "num": 2,
+            "prompt": "仕事 (忙しい/おもしろい)",
+            "promptRd": "しごと (いそがしい/おもしろい)",
+            "answerJp": "仕事は どうですか。……忙しいですが、おもしろいです。",
+            "answerRd": "しごとは どうですか。……いそがしいですが、おもしろいです。",
+            "rom": "Shigoto wa dou desu ka. ...Isogashii desu ga, omoshiroi desu.",
+            "my": "အလုပ် ဘယ်လိုနေလဲ။ ……အလုပ်များပေမယ့် စိတ်ဝင်စားစရာကောင်းပါတယ်။"
+          },
+          {
+            "num": 3,
+            "prompt": "日本の 食べ物 (おいしい/高い)",
+            "promptRd": "にほんの たべもの (おいしい/たかい)",
+            "answerJp": "日本の 食べ物は どうですか。……おいしいですが、高いです。",
+            "answerRd": "にほんの たべものは どうですか。……おいしいですが、たかいです。",
+            "rom": "Nihon no tabemono wa dou desu ka. ...Oishii desu ga, takai desu.",
+            "my": "ဂျပန်အစားအစာ ဘယ်လိုနေလဲ။ ……အရသာရှိပေမယ့် ဈေးကြီးပါတယ်။"
+          },
+          {
+            "num": 4,
+            "prompt": "会社の 人 (親切)",
+            "promptRd": "かいしゃの ひと (しんせつ)",
+            "answerJp": "会社の 人は どうですか。……とても 親切です。",
+            "answerRd": "かいしゃの ひとは どうですか。……とても しんせつです。",
+            "rom": "Kaisha no hito wa dou desu ka. ...Totemo shinsetsu desu.",
+            "my": "ကုမ္ပဏီကလူတွေ ဘယ်လိုနေလဲ။ ……အရမ်းသဘောကောင်းကြပါတယ်။"
+          }
+        ]
+      }
+    ],
+    "renshuuC": [
+      {
+        "dialogueNo": 1,
+        "title": "練習 C-1: 生活や 仕事についての 質問 (Life & Work Impressions)",
+        "dialogue": [
+          {
+            "speaker": "A",
+            "jp": "日本の 生活は どうですか。",
+            "rd": "にほんの せいかつは どうですか。",
+            "rom": "Nihon no seikatsu wa dou desu ka.",
+            "my": "ဂျပန်မှာ နေထိုင်ရတာ ဘယ်လိုနေလဲခင်ဗျာ။"
+          },
+          {
+            "speaker": "B",
+            "jp": "毎日 とても 楽しいです。",
+            "rd": "まいにち とても たのしいです。",
+            "rom": "Mainichi totemo tanoshii desu.",
+            "my": "နေ့တိုင်း အရမ်းပျော်စရာကောင်းပါတယ်။"
+          },
+          {
+            "speaker": "A",
+            "jp": "お仕事は どうですか。",
+            "rd": "おしごとは どうですか。",
+            "rom": "Oshigoto wa dou desu ka.",
+            "my": "အလုပ်ကော ဘယ်လိုနေလဲခင်ဗျာ။"
+          },
+          {
+            "speaker": "B",
+            "jp": "そうですね。忙しいですが、おもしろいです。",
+            "rd": "そうですね。いそがしいですが、おもしろいです。",
+            "rom": "Sou desu ne. Isogashii desu ga, omoshiroi desu.",
+            "my": "အလုပ်များပေမယ့် စိတ်ဝင်စားစရာကောင်းပါတယ်။"
+          }
+        ],
+        "substitutions": [
+          {
+            "num": 1,
+            "label": "大学 / 難しい / おもしろい",
+            "lines": [
+              {
+                "role": "A",
+                "jp": "大学の 勉強は どうですか。",
+                "rd": "だいがくの べんきょうは どうですか。",
+                "rom": "Daigaku no benkyou wa dou desu ka."
+              },
+              {
+                "role": "B",
+                "jp": "毎日 とても おもしろいです。",
+                "rd": "まいにち とても おもしろいです。",
+                "rom": "Mainichi totemo omoshiroi desu."
+              },
+              {
+                "role": "A",
+                "jp": "日本語は どうですか。",
+                "rd": "にほんごは どうですか。",
+                "rom": "Nihongo wa dou desu ka."
+              },
+              {
+                "role": "B",
+                "jp": "そうですね。難しいですが、楽しいです。",
+                "rd": "そうですね。むずかしいですが、たのしいです。",
+                "rom": "Sou desu ne. Muzukashii desu ga, tanoshii desu."
+              }
+            ]
+          },
+          {
+            "num": 2,
+            "label": "寮 / 古い / 便利",
+            "lines": [
+              {
+                "role": "A",
+                "jp": "大学の 寮は どうですか。",
+                "rd": "だいがくの りょうは どうですか。",
+                "rom": "Daigaku no ryou wa dou desu ka."
+              },
+              {
+                "role": "B",
+                "jp": "古いですが、とても 便利です。",
+                "rd": "ふるいですが、とても べんりです。",
+                "rom": "Furui desu ga, totemo benri desu."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "dialogueNo": 2,
+        "title": "練習 C-2: お茶の 勧め (Offering Refreshments)",
+        "dialogue": [
+          {
+            "speaker": "A",
+            "jp": "お茶、もう 一杯 いかがですか。",
+            "rd": "おちゃ、もう いっぱい いかがですか。",
+            "rom": "Ocha, mou ippai ikaga desu ka.",
+            "my": "လက်ဖက်ရည် နောက်တစ်ခွက်လောက် သောက်မလားခင်ဗျာ။"
+          },
+          {
+            "speaker": "B",
+            "jp": "いいえ、けっこうです。",
+            "rd": "いいえ、けっこうです。",
+            "rom": "Iie, kekkou desu.",
+            "my": "ရပါပြီခင်ဗျာ၊ တော်ပါပြီ။"
+          },
+          {
+            "speaker": "B",
+            "jp": "あ、もう 8時ですね。そろそろ 失礼します。",
+            "rd": "あ、もう はちじですね。そろそろ しつれいします。",
+            "rom": "A, mou hachiji desu ne. Sorosoro shitsurei shimasu.",
+            "my": "အာ၊ ၈ နာရီထိုးပြီပဲ။ ကျွနု်ပ် ပြန်ခွင့်ပြုပါဦးနော်။"
+          },
+          {
+            "speaker": "A",
+            "jp": "そうですか。きょうは ありがとう ございました。",
+            "rd": "そうですか。きょうは ありがとう ございました。",
+            "rom": "Sou desu ka. Kyou wa arigatou gozaimashita.",
+            "my": "ဟုတ်ပါပြီ။ ဒီနေ့ လာလည်ပေးတာ ကျေးဇူးတင်ပါတယ်။"
+          }
+        ],
+        "substitutions": [
+          {
+            "num": 1,
+            "label": "コーヒー / 9時",
+            "lines": [
+              {
+                "role": "A",
+                "jp": "コーヒー、もう 一杯 いかがですか。",
+                "rd": "こーひー、もう いっぱい いかがですか。",
+                "rom": "Koohii, mou ippai ikaga desu ka."
+              },
+              {
+                "role": "B",
+                "jp": "あ、もう 9時ですね。そろそろ 失礼します。",
+                "rd": "あ、もう くじですね。そろそろ しつれいします。",
+                "rom": "A, mou kuji desu ne. Sorosoro shitsurei shimasu."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "mondai": [
+      {
+        "no": 1,
+        "title": "問題 1: 質問への 回答 (Personal Opinion Q&A)",
+        "items": [
+          {
+            "num": 1,
+            "q": "あなたの 町は にぎやかですか。",
+            "qRd": "あなたの まちは にぎやかですか。",
+            "sampleAns": "はい、にぎやかです。 / いいえ、静かです。",
+            "sampleAnsRd": "はい、にぎやかです。 / いいえ、しずかです。",
+            "my": "သင့်မြို့သည် စည်ကားပါသလား။"
+          },
+          {
+            "num": 2,
+            "q": "日本の 食べ物は どうですか。",
+            "qRd": "にほんの たべものは どうですか。",
+            "sampleAns": "とても おいしいですが、高いです。",
+            "sampleAnsRd": "とても おいしいですが、たかいです。",
+            "my": "ဂျပန်အစားအစာ ဘယ်လိုနေလဲခင်ဗျာ။"
+          },
+          {
+            "num": 3,
+            "q": "日本語は 難しいですか。",
+            "qRd": "にほんごは むずかしいですか。",
+            "sampleAns": "いいえ、あまり 難しくないです。おもしろいです。",
+            "sampleAnsRd": "いいえ、あまり むずかしくないです。おもしろいです。",
+            "my": "ဂျပန်စာသည် ခက်ခဲပါသလား။"
+          },
+          {
+            "num": 4,
+            "q": "あなたのうちは どんな うちですか。",
+            "qRd": "あなたのうちは どんな うちですか。",
+            "sampleAns": "きれいで、静かな うちです。",
+            "sampleAnsRd": "きれいで、しずかな うちです。",
+            "my": "သင့်အိမ်သည် ဘယ်လိုအိမ်မျိုးပါလဲ။"
+          }
+        ]
+      },
+      {
+        "no": 2,
+        "title": "問題 2: 対話・状況把握 (Dialogue Comprehension)",
+        "items": [
+          {
+            "num": 1,
+            "dialogue": "A: その 辞書は いいですか。\nB: ええ、とても 便利ですよ。",
+            "dialogueRd": "A: その じしょは いいですか。\nB: ええ、とても べんりですよ。",
+            "meaningMy": "အဲ့ဒီအဘိဓာန်က ကောင်းလားခင်ဗျာ။ ……ဟုတ်ကဲ့၊ အရမ်းအဆင်ပြေတယ်ဗျ။",
+            "correctOption": "便利な 辞書です"
+          }
+        ]
+      },
+      {
+        "no": 3,
+        "title": "問題 3: 正誤判定 (True [◯] or False [✕])",
+        "items": [
+          {
+            "num": 1,
+            "dialogue": "A: 大阪は どんな 町ですか。\nB: とても にぎやかな 町です。そして 食べ物が 安いです。",
+            "dialogueRd": "A: おおさかは どんな まちですか。\nB: とても にぎやかな まちです。そして たべものが やすいです。",
+            "statement": "大阪は 静かな 町です。",
+            "statementRd": "おおさかは しずかな まちです。",
+            "statementMy": "အိုဆာကာသည် တိတ်ဆိတ်သော မြို့တစ်မြို့ ဖြစ်ပါသည်။",
+            "isCorrect": false,
+            "symbol": "✕",
+            "reasonMy": "အိုဆာကာသည် စည်ကားသောမြို့ (にぎやかな町) ဖြစ်သောကြောင့် မှားယွင်းပါသည်။"
+          }
+        ]
+      },
+      {
+        "no": 4,
+        "title": "問題 4: 助詞・形容詞の 選択 (Adjective Forms & Particles)",
+        "items": [
+          {
+            "num": 1,
+            "q": "富士山は (＿＿) 山です。",
+            "qRd": "ふじさんは (＿＿) やまです。",
+            "options": [
+              "高い",
+              "高いくな",
+              "高いの"
+            ],
+            "ans": "高い",
+            "my": "ဖူဂျီတောင်သည် မြင့်မားသော တောင်ဖြစ်ပါသည်။"
+          },
+          {
+            "num": 2,
+            "q": "奈良は (＿＿) 町です。",
+            "qRd": "ならは (＿＿) まちです。",
+            "options": [
+              "静かな",
+              "静か",
+              "静かだ"
+            ],
+            "ans": "静かな",
+            "my": "နာရာသည် တိတ်ဆိတ်သော မြို့ဖြစ်ပါသည်။"
+          }
+        ]
+      }
+    ]
+  },
+  "9": {
+    "renshuuA": [
+      {
+        "patternNo": 1,
+        "pattern": "名詞 が 好きです / 嫌いです",
+        "descMy": "နှစ်သက်မှုနှင့် မနှစ်သက်မှုကို ဖော်ပြခြင်း (ဝိဘတ် 'が' သုံးပါ)",
+        "descEn": "Stating likes and dislikes (with particle ga)",
+        "examples": [
+          {
+            "jp": "わたしは イタリア料理が 好きです。",
+            "rd": "わたしは いたりありょうりが すきです。",
+            "rom": "Watashi wa Itaria ryouri ga suki desu.",
+            "my": "ကျွန်တော်သည် အီတလီအစားအစာကို နှစ်သက်ပါသည်။"
+          },
+          {
+            "jp": "わたしは カラオケが 好きじゃ ありません。",
+            "rd": "わたしは からおけが すきじゃ ありません。",
+            "rom": "Watashi wa karaoke ga suki ja arimasen.",
+            "my": "ကျွန်တော်သည် ကာရာအိုကေ သိပ်မကြိုက်ပါ။"
+          },
+          {
+            "jp": "わたしは スポーツが 嫌いです。",
+            "rd": "わたしは すぽーつが きらいです。",
+            "rom": "Watashi wa supootsu ga kirai desu.",
+            "my": "ကျွန်တော်သည် အားကစားကို မကြိုက်/မုန်းပါသည်။"
+          }
+        ]
+      },
+      {
+        "patternNo": 2,
+        "pattern": "名詞 が 上手です / 下手です",
+        "descMy": "ကျွမ်းကျင်မှုနှင့် မကျွမ်းကျင်မှုကို ဖော်ပြခြင်း",
+        "descEn": "Stating skills and weaknesses (with particle ga)",
+        "examples": [
+          {
+            "jp": "カリナさんは 絵が 上手です。",
+            "rd": "かりなさんは えが じょうずです。",
+            "rom": "Karina-san wa e ga jouzu desu.",
+            "my": "ခါရီနာစံသည် ပန်းချီဆွဲ ကျွမ်းကျင်ပါသည်။"
+          },
+          {
+            "jp": "ミラーさんは ダンスが 上手です。",
+            "rd": "みらーさんは だんすが じょうずです。",
+            "rom": "Miraa-san wa dansu ga jouzu desu.",
+            "my": "မီလာစံသည် အက ကျွမ်းကျင်ပါသည်။"
+          },
+          {
+            "jp": "わたしは 歌が 下手です。",
+            "rd": "わたしは うたが へたです。",
+            "rom": "Watashi wa uta ga heta desu.",
+            "my": "ကျွန်တော်သည် သီချင်းဆို ညံ့ဖျင်းပါသည်။"
+          }
+        ]
+      },
+      {
+        "patternNo": 3,
+        "pattern": "名詞 が わかります / あります",
+        "descMy": "နားလည်နိုင်စွမ်းနှင့် ပိုင်ဆိုင်မှုရှိခြင်း",
+        "descEn": "Expressing comprehension and possession",
+        "examples": [
+          {
+            "jp": "わたしは 日本語が わかります。",
+            "rd": "わたしは にほんごが わかります。",
+            "rom": "Watashi wa nihongo ga wakarimasu.",
+            "my": "ကျွန်တော်သည် ဂျပန်စကားကို နားလည်ပါသည်။"
+          },
+          {
+            "jp": "わたしは 車が あります。",
+            "rd": "わたしは くるまが あります。",
+            "rom": "Watashi wa kuruma ga arimasu.",
+            "my": "ကျွန်တော့်မှာ ကားရှိပါသည်။"
+          },
+          {
+            "jp": "わたしは 時間が ありません。",
+            "rd": "わたしは じかんが ありません。",
+            "rom": "Watashi wa jikan ga arimasen.",
+            "my": "ကျွန်တော့်မှာ အချိန်မရှိပါ။"
+          }
+        ]
+      },
+      {
+        "patternNo": 4,
+        "pattern": "S1 から、S2",
+        "descMy": "အကြောင်းရင်းဖော်ပြချက် ('...သောကြောင့် / ...မို့လို့')",
+        "descEn": "Stating reasons with kara ('because')",
+        "examples": [
+          {
+            "jp": "時間が ありませんから、新聞を 読みません。",
+            "rd": "じかんが ありませんから、しんぶんを よみません。",
+            "rom": "Jikan ga arimasen kara, shinbun o yomimasen.",
+            "my": "အချိန်မရှိသောကြောင့် သတင်းစာ မဖတ်ပါ။"
+          },
+          {
+            "jp": "きょうは 息子の 誕生日ですから、早く 帰ります。",
+            "rd": "きょうは むすこの たんじょうびですから、はやく かえります。",
+            "rom": "Kyou wa musuko no tanjoubi desu kara, hayaku kaerimasu.",
+            "my": "ဒီနေ့သည် သားဖြစ်သူ၏ မွေးနေ့ဖြစ်သောကြောင့် စောစော အိမ်ပြန်ပါမည်။"
+          }
+        ]
+      }
+    ],
+    "renshuuB": [
+      {
+        "drillNo": 1,
+        "title": "練習 B-1: 好き / 嫌い (Likes & Dislikes Drill)",
+        "example": {
+          "jp": "例: イタリア料理 ➔ イタリア料理が 好きです。",
+          "rd": "れい: いたりありょうり ➔ いたりありょうりが すきです。",
+          "rom": "Rei: Itaria ryouri -> Itaria ryouri ga suki desu.",
+          "my": "နမူနာ: အီတလီအစားအစာ ➔ အီတလီအစားအစာကို နှစ်သက်ပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "日本の 音楽",
+            "promptRd": "にほんの おんがく",
+            "answerJp": "日本の 音楽が 好きです。",
+            "answerRd": "にほんの おんがくが すきです。",
+            "rom": "Nihon no ongaku ga suki desu.",
+            "my": "ဂျပန်တေးဂီတကို နှစ်သက်ပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "お酒",
+            "promptRd": "おさけ",
+            "answerJp": "お酒が 好きです。",
+            "answerRd": "おさけが すきです。",
+            "rom": "Osake ga suki desu.",
+            "my": "အရက်/ဘီယာကို နှစ်သက်ပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "スポーツ [あまり]",
+            "promptRd": "すぽーつ [あまり]",
+            "answerJp": "スポーツは あまり 好きじゃ ありません。",
+            "answerRd": "すぽーつは あまり すきじゃ ありません。",
+            "rom": "Supootsu wa amari suki ja arimasen.",
+            "my": "အားကစား သိပ်မကြိုက်လှပါ။"
+          },
+          {
+            "num": 4,
+            "prompt": "カラオケ [嫌い]",
+            "promptRd": "からおけ [きらい]",
+            "answerJp": "カラオケが 嫌いです。",
+            "answerRd": "からおけが きらいです。",
+            "rom": "Karaoke ga kirai desu.",
+            "my": "ကာရာအိုကေ မကြိုက်/မုန်းပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 2,
+        "title": "練習 B-2: どんな 名詞 (Specific Preferences)",
+        "example": {
+          "jp": "例: スポーツ / 野球 ➔ どんな スポーツが 好きですか。……野球が 好きです。",
+          "rd": "れい: すぽーつ / やきゅう ➔ どんな すぽーつが すきですか。……やきゅうが すきです。",
+          "rom": "Rei: Supootsu / yakyuu -> Donna supootsu ga suki desu ka. ...Yakyuu ga suki desu.",
+          "my": "နမူနာ: အားကစား / ဘေ့စ်ဘော ➔ ဘယ်လို အားကစားကို ကြိုက်သလဲ။ ……ဘေ့စ်ဘောကို ကြိုက်ပါတယ်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "音楽 / ジャズ",
+            "promptRd": "おんがく / じゃず",
+            "answerJp": "どんな 音楽が 好きですか。……ジャズが 好きです。",
+            "answerRd": "どんな おんがくが すきですか。……じゃずが すきです。",
+            "rom": "Donna ongaku ga suki desu ka. ...Jazu ga suki desu.",
+            "my": "ဘယ်လို ဂီတကို ကြိုက်သလဲ။ ……ဂျက်ဇ် (Jazz) ကို ကြိုက်ပါတယ်။"
+          },
+          {
+            "num": 2,
+            "prompt": "料理 / イタリア料理",
+            "promptRd": "りょうり / いたりありょうり",
+            "answerJp": "どんな 料理が 好きですか。……イタリア料理が 好きです。",
+            "answerRd": "どんな りょうりが すきですか。……いたりありょうりが すきです。",
+            "rom": "Donna ryouri ga suki desu ka. ...Itaria ryouri ga suki desu.",
+            "my": "ဘယ်လို ဟင်းလျာကို ကြိုက်သလဲ။ ……အီတလီဟင်းလျာကို ကြိုက်ပါတယ်။"
+          },
+          {
+            "num": 3,
+            "prompt": "映画 / アクション映画",
+            "promptRd": "えいが / あくしょんえいが",
+            "answerJp": "どんな 映画が 好きですか。……アクション映画が 好きです。",
+            "answerRd": "どんな えいがが すきですか。……あくしょんえいがが すきです。",
+            "rom": "Donna eiga ga suki desu ka. ...Akushon eiga ga suki desu.",
+            "my": "ဘယ်လို ရုပ်ရှင်ကို ကြိုက်သလဲ။ ……Action ရုပ်ရှင်ကို ကြိုက်ပါတယ်။"
+          },
+          {
+            "num": 4,
+            "prompt": "飲み物 / ビール",
+            "promptRd": "のみもの / びーる",
+            "answerJp": "どんな 飲み物が 好きですか。……ビールが 好きです。",
+            "answerRd": "どんな のみものが すきですか。……びーるが すきです。",
+            "rom": "Donna nomimono ga suki desu ka. ...Biiru ga suki desu.",
+            "my": "ဘယ်လို အအေး/အသောက်ကို ကြိုက်သလဲ။ ……ဘီယာကို ကြိုက်ပါတယ်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 3,
+        "title": "練習 B-3: 上手 / 下手 (Skill Drill)",
+        "example": {
+          "jp": "例: カリナさん / 絵 (上手) ➔ カリナさんは 絵が 上手です。",
+          "rd": "れい: かりなさん / え (じょうず) ➔ かりなさんは えが じょうずです。",
+          "rom": "Rei: Karina-san / e (jouzu) -> Karina-san wa e ga jouzu desu.",
+          "my": "နမူနာ: ခါရီနာစံ / ပန်းချီ (ကျွမ်းကျင်) ➔ ခါရီနာစံသည် ပန်းချီဆွဲ တော်/ကျွမ်းကျင်ပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "ミラーさん / ダンス",
+            "promptRd": "みらーさん / だんす",
+            "answerJp": "ミラーさんは ダンスが 上手です。",
+            "answerRd": "みらーさんは だんすが じょうずです。",
+            "rom": "Miraa-san wa dansu ga jouzu desu.",
+            "my": "မီလာစံသည် အက တော်ပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "サントスさん / 料理",
+            "promptRd": "さんとすさん / りょうり",
+            "answerJp": "サントスさんは 料理が 上手です。",
+            "answerRd": "さんとすさんは りょうりが じょうずです。",
+            "rom": "Santosu-san wa ryouri ga jouzu desu.",
+            "my": "ဆန်းတော့စ်စံသည် ဟင်းချက် တော်ပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "わたし / 歌 (下手)",
+            "promptRd": "わたし / うた (へた)",
+            "answerJp": "わたしは 歌が 下手です。",
+            "answerRd": "わたしは うたが へたです。",
+            "rom": "Watashi wa uta ga heta desu.",
+            "my": "ကျွန်တော်သည် သီချင်းဆို ညံ့ဖျင်းပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "山田さん / ゴルフ",
+            "promptRd": "やまださん / ごるふ",
+            "answerJp": "山田さんは ゴルフが 上手です。",
+            "answerRd": "やまださんは ごるふが じょうずです。",
+            "rom": "Yamada-san wa gorufu ga jouzu desu.",
+            "my": "ယာမာဒါစံသည် ဂေါက်သီးရိုက် ကျွမ်းကျင်ပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 4,
+        "title": "練習 B-4: わかります / あります (Comprehension & Possession Drill)",
+        "example": {
+          "jp": "例1: 日本語 (少し) ➔ 日本語が 少し わかります。\n例2: 車 (ある) ➔ 車が あります。",
+          "rd": "れい1: にほんご (すこし) ➔ にほんごが すこし わかります。\nれい2: くるま (ある) ➔ くるまが あります。",
+          "rom": "Rei 1: Nihongo (sukoshi) -> Nihongo ga sukoshi wakarimasu.\nRei 2: Kuruma (aru) -> Kuruma ga arimasu.",
+          "my": "နမူနာ ၁: ဂျပန်စကား (အနည်းငယ်) ➔ ဂျပန်စကား အနည်းငယ် နားလည်ပါတယ်။\nနမူနာ ၂: ကား (ရှိ) ➔ ကားရှိပါတယ်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "ひらがな (だいたい)",
+            "promptRd": "ひらがな (だいたい)",
+            "answerJp": "ひらがなが だいたい わかります。",
+            "answerRd": "ひらがなが だいたい わかります。",
+            "rom": "Hiragana ga daitai wakarimasu.",
+            "my": "ဟီရာဂါနာကို အကြမ်းဖျင်း နားလည်ပါတယ်။"
+          },
+          {
+            "num": 2,
+            "prompt": "英語 (よく)",
+            "promptRd": "えいご (よく)",
+            "answerJp": "英語が よく わかります。",
+            "answerRd": "えいごが よく わかります。",
+            "rom": "Eigo ga yoku wakarimasu.",
+            "my": "အင်္ဂလိပ်စာကို ကောင်းစွာ နားလည်ပါတယ်။"
+          },
+          {
+            "num": 3,
+            "prompt": "細かい お金 (ない)",
+            "promptRd": "こまかい おかね (ない)",
+            "answerJp": "細かい お金が ありません。",
+            "answerRd": "こまかい おかねが ありません。",
+            "rom": "Komakai okane ga arimasen.",
+            "my": "ပိုက်ဆံအကြွေ မရှိပါ။"
+          },
+          {
+            "num": 4,
+            "prompt": "時間 (ない)",
+            "promptRd": "じかん (ない)",
+            "answerJp": "時間が ありません。",
+            "answerRd": "じかんが ありません。",
+            "rom": "Jikan ga arimasen.",
+            "my": "အချိန်မရှိပါ။"
+          }
+        ]
+      },
+      {
+        "drillNo": 5,
+        "title": "練習 B-5: 〜から、〜 (Reason Drill)",
+        "example": {
+          "jp": "例: 時間が ありません / 新聞を 読みません ➔ 時間が ありませんから、新聞を 読みません。",
+          "rd": "れい: じかんが ありません / しんぶんを よみません ➔ じかんが ありませんから、しんぶんを よみません。",
+          "rom": "Rei: Jikan ga arimasen / shinbun o yomimasen -> Jikan ga arimasen kara, shinbun o yomimasen.",
+          "my": "နမူနာ: အချိန်မရှိပါ / သတင်းစာမဖတ်ပါ ➔ အချိန်မရှိသောကြောင့် သတင်းစာ မဖတ်ပါ။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "お金が ありません / 買いません",
+            "promptRd": "おかねが ありません / かいません",
+            "answerJp": "お金が ありませんから、買いません。",
+            "answerRd": "おかねが ありませんから、かいません。",
+            "rom": "Okane ga arimasen kara, kaimasen.",
+            "my": "ပိုက်ဆံမရှိသောကြောင့် မဝယ်ပါ။"
+          },
+          {
+            "num": 2,
+            "prompt": "きょうは 息子の 誕生日です / 早く 帰ります",
+            "promptRd": "きょうは むすこの たんじょうびです / はやく かえります",
+            "answerJp": "きょうは 息子の 誕生日ですから、早く 帰ります。",
+            "answerRd": "きょうは むすこの たんじょうびですから、はやく かえります。",
+            "rom": "Kyou wa musuko no tanjoubi desu kara, hayaku kaerimasu.",
+            "my": "ဒီနေ့ သား၏မွေးနေ့ဖြစ်သောကြောင့် စောစောပြန်ပါမည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "日本語が わかりません / テレビを 見ません",
+            "promptRd": "にほんごが わかりません / てれびを みません",
+            "answerJp": "日本語が わかりませんから、テレビを 見ません。",
+            "answerRd": "にほんごが わかりませんから、てれびを みません。",
+            "rom": "Nihongo ga wakarimasen kara, terebi o mimasen.",
+            "my": "ဂျပန်စကား နားမလည်သောကြောင့် တီဗွီမကြည့်ပါ။"
+          },
+          {
+            "num": 4,
+            "prompt": "用事が あります / あした 行きません",
+            "promptRd": "ようじが あります / あした いきません",
+            "answerJp": "用事が ありますから、あした 行きません。",
+            "answerRd": "ようじが ありますから、あした いきません。",
+            "rom": "Youji ga arimasu kara, ashita ikimasen.",
+            "my": "ကိစ္စရှိသောကြောင့် မနက်ဖြန် မသွားပါ။"
+          }
+        ]
+      }
+    ],
+    "renshuuC": [
+      {
+        "dialogueNo": 1,
+        "title": "練習 C-1: コンサートの 誘い (Event Invitation)",
+        "dialogue": [
+          {
+            "speaker": "A",
+            "jp": "クラシックの コンサートの チケットが あります。いっしょに 行きませんか。",
+            "rd": "くらしっくの こんさーとの ちけっとが あります。いっしょに いきませんか。",
+            "rom": "Kurashikku no konsaato no chiketto ga arimasu. Issho ni ikimasen ka.",
+            "my": "Classical ဂီတလက်မှတ် ရှိပါတယ်။ အတူတူ သွားမလားခင်ဗျာ။"
+          },
+          {
+            "speaker": "B",
+            "jp": "いいですね。いつですか。",
+            "rd": "いいですね。いつですか。",
+            "rom": "Ii desu ne. Itsu desu ka.",
+            "my": "ကောင်းသားပဲနော်။ ဘယ်တော့လဲခင်ဗျာ။"
+          },
+          {
+            "speaker": "A",
+            "jp": "来週の 金曜日の 晩です。",
+            "rd": "らいしゅうの きんようびの ばんです。",
+            "rom": "Raishuu no kinyoubi no ban desu.",
+            "my": "နောက်တစ်ပတ် သောကြာနေ့ည ဖြစ်ပါတယ်။"
+          },
+          {
+            "speaker": "B",
+            "jp": "金曜日ですか。友達と 約束が ありますから、残念ですが……。",
+            "rd": "きんようびですか。ともだちと やくそくが ありますから、ざんねんですが……。",
+            "rom": "Kinyoubi desu ka. Tomodachi to yakusoku ga arimasu kara, zannen desu ga...",
+            "my": "သောကြာနေ့လား။ သူငယ်ချင်းနဲ့ ချိန်းထားတာရှိလို့ စိတ်မကောင်းပေမယ့်……။"
+          }
+        ],
+        "substitutions": [
+          {
+            "num": 1,
+            "label": "野球の 試合 / 土曜日の 午後 / 用事",
+            "lines": [
+              {
+                "role": "A",
+                "jp": "野球の 試合の チケットが あります。いっしょに 行きませんか。",
+                "rd": "やきゅうの しあいの ちけっとが あります。いっしょに いきませんか。",
+                "rom": "Yakyuu no shiai no chiketto ga arimasu. Issho ni ikimasen ka."
+              },
+              {
+                "role": "A",
+                "jp": "土曜日の 午後です。",
+                "rd": "どようびの ごごです。",
+                "rom": "Doyoubi no gogo desu."
+              },
+              {
+                "role": "B",
+                "jp": "用事が ありますから、残念ですが……。",
+                "rd": "ようじが ありますから、ざんねんですが……。",
+                "rom": "Youji ga arimasu kara, zannen desu ga..."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "mondai": [
+      {
+        "no": 1,
+        "title": "問題 1: 質問への 回答 (Preferences Q&A)",
+        "items": [
+          {
+            "num": 1,
+            "q": "どんな 料理が 好きですか。",
+            "qRd": "どんな りょうりが すきですか。",
+            "sampleAns": "イタリア料理が 好きです。",
+            "sampleAnsRd": "いたりありょうりが すきです。",
+            "my": "ဘယ်လို ဟင်းလျာမျိုးကို ကြိုက်သလဲခင်ဗျာ။"
+          },
+          {
+            "num": 2,
+            "q": "スポーツが 上手ですか。",
+            "qRd": "すぽーつが じょうずですか。",
+            "sampleAns": "いいえ、あまり 上手じゃ ありません。",
+            "sampleAnsRd": "いいえ、あまり じょうずじゃ ありません。",
+            "my": "အားကစား တော်ပါသလား။"
+          },
+          {
+            "num": 3,
+            "q": "漢字が わかりますか。",
+            "qRd": "かんじが わかりますか。",
+            "sampleAns": "少し わかります。 / いいえ、全然 わかりません。",
+            "sampleAnsRd": "すこし わかります。 / いいえ、ぜんぜん わかりません。",
+            "my": "ကန်ဂျီ နားလည်ပါသလား။"
+          },
+          {
+            "num": 4,
+            "q": "車が ありますか。",
+            "qRd": "くるまが ありますか。",
+            "sampleAns": "はい、あります。 / いいえ、ありません。",
+            "sampleAnsRd": "はい、あります。 / いいえ、ありません。",
+            "my": "ကား ရှိပါသလား။"
+          }
+        ]
+      },
+      {
+        "no": 2,
+        "title": "問題 2: 助詞の 選択 (Particle Practice: が, を, から)",
+        "items": [
+          {
+            "num": 1,
+            "q": "わたしは 日本の 歌 (＿＿) 好きです。",
+            "qRd": "わたしは にほんの うた (＿＿) すきです。",
+            "options": [
+              "が",
+              "を",
+              "に"
+            ],
+            "ans": "が",
+            "my": "ကျွန်တော်သည် ဂျပန်သီချင်းများကို နှစ်သက်ပါသည်။"
+          },
+          {
+            "num": 2,
+            "q": "時間が ありません (＿＿)、タクシーで 行きます。",
+            "qRd": "じかんが ありません (＿＿)、たくしーで いきます。",
+            "options": [
+              "から",
+              "で",
+              "と"
+            ],
+            "ans": "から",
+            "my": "အချိန်မရှိသောကြောင့် တက္ကစီဖြင့် သွားပါမည်။"
+          }
+        ]
+      }
+    ]
+  },
+  "10": {
+    "renshuuA": [
+      {
+        "patternNo": 1,
+        "pattern": "場所 に 物 が あります",
+        "descMy": "နေရာတစ်ခုခုတွင် သက်မဲ့အရာဝတ္ထု/အပင် တည်ရှိကြောင်း ဖော်ပြခြင်း",
+        "descEn": "Existence of inanimate things and plants (arimasu)",
+        "examples": [
+          {
+            "jp": "あそこに 交番が あります。",
+            "rd": "あそこに こうばんが あります。",
+            "rom": "Asoko ni kouban ga arimasu.",
+            "my": "ဟိုနေရာတွင် ရဲကင်းစခန်း ရှိပါသည်။"
+          },
+          {
+            "jp": "あそこに 自動販売機が あります。",
+            "rd": "あそこに じどうはんばいきが あります。",
+            "rom": "Asoko ni jidouhanbaiki ga arimasu.",
+            "my": "ဟိုနေရာတွင် အလိုအလျောက်အရောင်းစက် ရှိပါသည်။"
+          },
+          {
+            "jp": "庭に 木が あります。",
+            "rd": "にわに きが あります。",
+            "rom": "Niwa ni ki ga arimasu.",
+            "my": "ခြံထဲတွင် သစ်ပင် ရှိပါသည်။"
+          }
+        ]
+      },
+      {
+        "patternNo": 2,
+        "pattern": "場所 に 人/動物 が います",
+        "descMy": "နေရာတစ်ခုခုတွင် သက်ရှိလူနှင့် တိရစ္ဆာန် တည်ရှိကြောင်း ဖော်ပြခြင်း",
+        "descEn": "Existence of living beings, people, and animals (imasu)",
+        "examples": [
+          {
+            "jp": "あそこに 男の子が います。",
+            "rd": "あそこに おとこのこが います。",
+            "rom": "Asoko ni otokonoko ga imasu.",
+            "my": "ဟိုနေရာတွင် ယောက်ျားလေးတစ်ယောက် ရှိပါသည်။"
+          },
+          {
+            "jp": "庭に 猫が います。",
+            "rd": "にわに ねこが います。",
+            "rom": "Niwa ni neko ga imasu.",
+            "my": "ခြံထဲတွင် ကြောင်တစ်ကောင် ရှိပါသည်။"
+          },
+          {
+            "jp": "事務所に 山田さんが います。",
+            "rd": "じむしょに やまださんが います。",
+            "rom": "Jimusho ni Yamada-san ga imasu.",
+            "my": "ရုံးခန်းထဲတွင် ယာမာဒါစံ ရှိပါသည်။"
+          }
+        ]
+      },
+      {
+        "patternNo": 3,
+        "pattern": "N1 (場所) の N2 (位置) に 物/人 が あります/います",
+        "descMy": "အရာဝတ္ထုတစ်ခု၏ အပေါ်/အောက်/ဘေး/အတွင်း စသည့် တည်နေရာဖော်ပြချက်",
+        "descEn": "Specific positions (ue, shita, naka, tonari, etc.)",
+        "examples": [
+          {
+            "jp": "机の 上に 写真が あります。",
+            "rd": "つくえの うえに しゃしんが あります。",
+            "rom": "Tsukue no ue ni shashin ga arimasu.",
+            "my": "စားပွဲပေါ်တွင် ဓာတ်ပုံတစ်ပုံ ရှိပါသည်။"
+          },
+          {
+            "jp": "箱の 中に 時計が あります。",
+            "rd": "はこの なかに とけいが あります。",
+            "rom": "Hako no naka ni tokei ga arimasu.",
+            "my": "သေတ္တာထဲတွင် နာရီ ရှိပါသည်။"
+          },
+          {
+            "jp": "銀行の 隣に 郵便局が あります。",
+            "rd": "ぎんこうの となりに ゆうびんきょくが あります。",
+            "rom": "Ginkou no tonari ni yuubinkyoku ga arimasu.",
+            "my": "ဘဏ်၏ ဘေးကပ်လျက်တွင် စာတိုက် ရှိပါသည်။"
+          }
+        ]
+      },
+      {
+        "patternNo": 4,
+        "pattern": "名詞 は 場所 に あります/います",
+        "descMy": "အရာဝတ္ထု သို့မဟုတ် လူ ဘယ်နေရာတွင် တည်ရှိကြောင်း ဖော်ပြခြင်း",
+        "descEn": "Topic location (N wa place ni arimasu/imasu)",
+        "examples": [
+          {
+            "jp": "郵便局は 銀行の 隣に あります。",
+            "rd": "ゆうびんきょくは ぎんこうの となりに あります。",
+            "rom": "Yuubinkyoku wa ginkou no tonari ni arimasu.",
+            "my": "စာတိုက်သည် ဘဏ်၏ ဘေးကပ်လျက်တွင် ရှိပါသည်။"
+          },
+          {
+            "jp": "ミラーさんは 会議室に います。",
+            "rd": "みらーさんは かいぎしつに います。",
+            "rom": "Miraa-san wa kaigishitsu ni imasu.",
+            "my": "မီလာစံသည် အစည်းအဝေးခန်းထဲတွင် ရှိပါသည်။"
+          }
+        ]
+      }
+    ],
+    "renshuuB": [
+      {
+        "drillNo": 1,
+        "title": "練習 B-1: あります (Inanimate Existence Drill)",
+        "example": {
+          "jp": "例: 交番 ➔ あそこに 交番が あります。",
+          "rd": "れい: こうばん ➔ あそこに こうばんが あります。",
+          "rom": "Rei: Kouban -> Asoko ni kouban ga arimasu.",
+          "my": "နမူနာ: ရဲကင်း ➔ ဟိုနေရာတွင် ရဲကင်းစခန်း ရှိပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "公衆電話",
+            "promptRd": "こうしゅうでんわ",
+            "answerJp": "あそこに 公衆電話が あります。",
+            "answerRd": "あそこに こうしゅうでんわが あります。",
+            "rom": "Asoko ni koushuudenwa ga arimasu.",
+            "my": "ဟိုနေရာတွင် အများသုံးဖုန်း ရှိပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "ビル",
+            "promptRd": "びる",
+            "answerJp": "あそこに ビルが あります。",
+            "answerRd": "あそこに びるが あります。",
+            "rom": "Asoko ni biru ga arimasu.",
+            "my": "ဟိုနေရာတွင် တိုက်တာအဆောက်အအုံ ရှိပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "公園",
+            "promptRd": "こうえん",
+            "answerJp": "あそこに 公園が あります。",
+            "answerRd": "あそこに こうえんが あります。",
+            "rom": "Asoko ni kouen ga arimasu.",
+            "my": "ဟိုနေရာတွင် ပန်းခြံ ရှိပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "ポスト",
+            "promptRd": "ぽすと",
+            "answerJp": "あそこに ポストが あります。",
+            "answerRd": "あそこに ぽすとが あります。",
+            "rom": "Asoko ni posuto ga arimasu.",
+            "my": "ဟိုနေရာတွင် စာတိုက်ပုံး ရှိပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 2,
+        "title": "練習 B-2: います (Animate Existence Drill)",
+        "example": {
+          "jp": "例: 男の子 ➔ あそこに 男の子が います。",
+          "rd": "れい: おとこのこ ➔ あそこに おとこのこが います。",
+          "rom": "Rei: Otokonoko -> Asoko ni otokonoko ga imasu.",
+          "my": "နမူနာ: ယောက်ျားလေး ➔ ဟိုနေရာတွင် ယောက်ျားလေးတစ်ယောက် ရှိပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "男の人",
+            "promptRd": "おとこのひと",
+            "answerJp": "あそこに 男の人が います。",
+            "answerRd": "あそこに おとこのひとが います。",
+            "rom": "Asoko ni otoko no hito ga imasu.",
+            "my": "ဟိုနေရာတွင် အမျိုးသားတစ်ယောက် ရှိပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "女の子",
+            "promptRd": "おんなのこ",
+            "answerJp": "あそこに 女の子が います。",
+            "answerRd": "あそこに おんなのこが います。",
+            "rom": "Asoko ni onnanoko ga imasu.",
+            "my": "ဟိုနေရာတွင် မိန်းကလေးတစ်ယောက် ရှိပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "犬",
+            "promptRd": "いぬ",
+            "answerJp": "あそこに 犬が います。",
+            "answerRd": "あそこに いぬが います。",
+            "rom": "Asoko ni inu ga imasu.",
+            "my": "ဟိုနေရာတွင် ခွေးတစ်ကောင် ရှိပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "猫",
+            "promptRd": "ねこ",
+            "answerJp": "あそこに 猫が います。",
+            "answerRd": "あそこに ねこが います。",
+            "rom": "Asoko ni neko ga imasu.",
+            "my": "ဟိုနေရာတွင် ကြောင်တစ်ကောင် ရှိပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 3,
+        "title": "練習 B-3: 位置 (Positions: 上, 下, 中, 前, 隣)",
+        "example": {
+          "jp": "例: 机 / 上 / 写真 ➔ 机の 上に 写真が あります。",
+          "rd": "れい: つくえ / うえ / しゃしん ➔ つくえの うえに しゃしんが あります。",
+          "rom": "Rei: Tsukue / ue / shashin -> Tsukue no ue ni shashin ga arimasu.",
+          "my": "နမူနာ: စားပွဲ / အပေါ် / ဓာတ်ပုံ ➔ စားပွဲပေါ်တွင် ဓာတ်ပုံတစ်ပုံ ရှိပါသည်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "机 / 下 / 猫",
+            "promptRd": "つくえ / した / ねこ",
+            "answerJp": "机の 下に 猫が います。",
+            "answerRd": "つくえの したに ねこが います。",
+            "rom": "Tsukue no shita ni neko ga imasu.",
+            "my": "စားပွဲအောက်တွင် ကြောင်တစ်ကောင် ရှိပါသည်။"
+          },
+          {
+            "num": 2,
+            "prompt": "箱 / 中 / 時計",
+            "promptRd": "はこ / なか / とけい",
+            "answerJp": "箱の 中に 時計が あります。",
+            "answerRd": "はこの なかに とけいが あります。",
+            "rom": "Hako no naka ni tokei ga arimasu.",
+            "my": "သေတ္တာထဲတွင် နာရီ ရှိပါသည်။"
+          },
+          {
+            "num": 3,
+            "prompt": "銀行 / 隣 / 郵便局",
+            "promptRd": "ぎんこう / となり / ゆうびんきょく",
+            "answerJp": "銀行の 隣に 郵便局が あります。",
+            "answerRd": "ぎんこうの となりに ゆうびんきょくが あります。",
+            "rom": "Ginkou no tonari ni yuubinkyoku ga arimasu.",
+            "my": "ဘဏ်ဘေးတွင် စာတိုက် ရှိပါသည်။"
+          },
+          {
+            "num": 4,
+            "prompt": "駅 / 前 / タクシー乗り場",
+            "promptRd": "えき / まえ / たくしーのりば",
+            "answerJp": "駅の 前に タクシー乗り場が あります。",
+            "answerRd": "えきの まえに たくしーのりばが あります。",
+            "rom": "Eki no mae ni takushii noriba ga arimasu.",
+            "my": "ဘူတာရုံရှေ့တွင် တက္ကစီဂိတ် ရှိပါသည်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 4,
+        "title": "練習 B-4: 何が ありますか (What is in the room?)",
+        "example": {
+          "jp": "例: 部屋 / 何 ➔ 部屋に 何が ありますか。……机が あります。",
+          "rd": "れい: へや / なに ➔ へやに なにが ありますか。……つくえが あります。",
+          "rom": "Rei: Heya / nani -> Heya ni nani ga arimasu ka. ...Tsukue ga arimasu.",
+          "my": "နမူနာ: အခန်း / ဘာ ➔ အခန်းထဲမှာ ဘာရှိသလဲ။ ……စားပွဲ ရှိပါတယ်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "冷蔵庫 / 何",
+            "promptRd": "れいぞうこ / なに",
+            "answerJp": "冷蔵庫に 何が ありますか。……果物や 飲み物が あります。",
+            "answerRd": "れいぞうこに なにが ありますか。……くだものや のみものが あります。",
+            "rom": "Reizouko ni nani ga arimasu ka. ...Kudamono ya nomimono ga arimasu.",
+            "my": "ရေခဲသေတ္တာထဲမှာ ဘာရှိသလဲ။ ……သစ်သီးများနှင့် အအေးများ ရှိပါတယ်။"
+          },
+          {
+            "num": 2,
+            "prompt": "庭 / だれ",
+            "promptRd": "にわ / だれ",
+            "answerJp": "庭に だれが いますか。……だれも いません。",
+            "answerRd": "にわに だれが いますか。……だれも いません。",
+            "rom": "Niwa ni dare ga imasu ka. ...Dare mo imasen.",
+            "my": "ခြံထဲမှာ ဘယ်သူရှိသလဲ။ ……ဘယ်သူမှ မရှိပါ။"
+          },
+          {
+            "num": 3,
+            "prompt": "会議室 / だれ",
+            "promptRd": "かいぎしつ / だれ",
+            "answerJp": "会議室に だれが いますか。……ミラーさんが います。",
+            "answerRd": "かいぎしつに だれが いますか。……みらーさんが います。",
+            "rom": "Kaigishitsu ni dare ga imasu ka. ...Miraa-san ga imasu.",
+            "my": "အစည်းအဝေးခန်းထဲမှာ ဘယ်သူရှိသလဲ။ ……မီလာစံ ရှိပါတယ်။"
+          },
+          {
+            "num": 4,
+            "prompt": "箱 / 中",
+            "promptRd": "はこ / なか",
+            "answerJp": "箱の 中に 何が ありますか。……手紙や 写真が あります。",
+            "answerRd": "はこの なかに なにが ありますか。……てがみや しゃしんが あります。",
+            "rom": "Hako no naka ni nani ga arimasu ka. ...Tegami ya shashin ga arimasu.",
+            "my": "သေတ္တာထဲမှာ ဘာရှိသလဲ။ ……စာများနှင့် ဓာတ်ပုံများ ရှိပါတယ်။"
+          }
+        ]
+      },
+      {
+        "drillNo": 5,
+        "title": "練習 B-5: どこに ありますか / いますか (Where is it?)",
+        "example": {
+          "jp": "例: 郵便局 ➔ 郵便局は どこに ありますか。……駅の 近くに あります。",
+          "rd": "れい: ゆうびんきょく ➔ ゆうびんきょくは どこに ありますか。……えきの ちかくに あります。",
+          "rom": "Rei: Yuubinkyoku -> Yuubinkyoku wa doko ni arimasu ka. ...Eki no chikaku ni arimasu.",
+          "my": "နမူနာ: စာတိုက် ➔ စာတိုက်သည် ဘယ်မှာရှိသလဲ။ ……ဘူတာရုံအနီးမှာ ရှိပါတယ်။"
+        },
+        "items": [
+          {
+            "num": 1,
+            "prompt": "ミラーさん",
+            "promptRd": "みらーさん",
+            "answerJp": "ミラーさんは どこに いますか。……会議室に います。",
+            "answerRd": "みらーさんは どこに いますか。……かいぎしつに います。",
+            "rom": "Miraa-san wa doko ni imasu ka. ...Kaigishitsu ni imasu.",
+            "my": "မီလာစံ ဘယ်မှာရှိသလဲ။ ……အစည်းအဝေးခန်းထဲမှာ ရှိပါတယ်။"
+          },
+          {
+            "num": 2,
+            "prompt": "本屋",
+            "promptRd": "ほんや",
+            "answerJp": "本屋は どこに ありますか。……駅の 前に あります。",
+            "answerRd": "ほんやは どこに ありますか。……えきの まえに あります。",
+            "rom": "Honya wa doko ni arimasu ka. ...Eki no mae ni arimasu.",
+            "my": "စာအုပ်ဆိုင် ဘယ်မှာရှိသလဲ။ ……ဘူတာရုံရှေ့မှာ ရှိပါတယ်။"
+          },
+          {
+            "num": 3,
+            "prompt": "自転車",
+            "promptRd": "じてんしゃ",
+            "answerJp": "自転車は どこに ありますか。……スーパーの 横に あります。",
+            "answerRd": "じてんしゃは どこに ありますか。……すーぱーの よこに あります。",
+            "rom": "Jitensha wa doko ni arimasu ka. ...Suupaa no yoko ni arimasu.",
+            "my": "စက်ဘီး ဘယ်မှာရှိသလဲ။ ……စူပါမားကတ်ဘေးမှာ ရှိပါတယ်။"
+          },
+          {
+            "num": 4,
+            "prompt": "犬",
+            "promptRd": "いぬ",
+            "answerJp": "犬は どこに いますか。……ドアの 後ろに います。",
+            "answerRd": "いぬは どこに いますか。……どあの うしろに います。",
+            "rom": "Inu wa doko ni imasu ka. ...Doa no ushiro ni imasu.",
+            "my": "ခွေး ဘယ်မှာရှိသလဲ။ ……တံခါးနောက်မှာ ရှိပါတယ်။"
+          }
+        ]
+      }
+    ],
+    "renshuuC": [
+      {
+        "dialogueNo": 1,
+        "title": "練習 C-1: スーパーでの 買い物 (Asking Item Locations)",
+        "dialogue": [
+          {
+            "speaker": "A",
+            "jp": "すみません。チリソースは ありますか。",
+            "rd": "すみません。ちりそーすは ありますか。",
+            "rom": "Sumimasen. Chiri soosu wa arimasu ka.",
+            "my": "အားနာပါတယ်ခင်ဗျာ။ ငရုတ်သီးဆော့စ် ရှိပါသလား။"
+          },
+          {
+            "speaker": "B",
+            "jp": "はい、あります。あちらの アジア料理の コーナーです。",
+            "rd": "はい、あります。あちらの あじありょうりの こーなーです。",
+            "rom": "Hai, arimasu. Achira no Ajia ryouri no koonaa desu.",
+            "my": "ဟုတ်ကဲ့၊ ရှိပါတယ်။ ဟိုဘက်က အာရှအစားအစာကောင်တာမှာ ဖြစ်ပါတယ်။"
+          },
+          {
+            "speaker": "A",
+            "jp": "棚の どのへんですか。",
+            "rd": "たなの どのへんですか。",
+            "rom": "Tana no dono hen desu ka.",
+            "my": "စင်ရဲ့ ဘယ်နားလောက်မှာပါလဲခင်ဗျာ။"
+          },
+          {
+            "speaker": "B",
+            "jp": "一番 下の 段に あります。",
+            "rd": "いちばん したの だんに あります。",
+            "rom": "Ichiban shita no dan ni arimasu.",
+            "my": "အောက်ဆုံးအထပ်မှာ ရှိပါတယ်။"
+          }
+        ],
+        "substitutions": [
+          {
+            "num": 1,
+            "label": "パン / パン売り場 / 上の 段",
+            "lines": [
+              {
+                "role": "A",
+                "jp": "すみません。食パンは ありますか。",
+                "rd": "すみません。しょくぱんは ありますか。",
+                "rom": "Sumimasen. Shokupan wa arimasu ka."
+              },
+              {
+                "role": "B",
+                "jp": "はい、あちらの パン売り場です。一番 上の 段に あります。",
+                "rd": "はい、あちらの ぱんうりばです。いちばん うえの だんに あります。",
+                "rom": "Hai, achira no pan uriba desu. Ichiban ue no dan ni arimasu."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "mondai": [
+      {
+        "no": 1,
+        "title": "問題 1: 質問への 回答 (Existence Q&A)",
+        "items": [
+          {
+            "num": 1,
+            "q": "あなたの 部屋に 何が ありますか。",
+            "qRd": "あなたの へやに なにが ありますか。",
+            "sampleAns": "机や ベッドなどが あります。",
+            "sampleAnsRd": "つくえや べっどなどが あります。",
+            "my": "သင့်အခန်းထဲမှာ ဘာတွေရှိပါသလဲ။"
+          },
+          {
+            "num": 2,
+            "q": "あなたのうちに 猫や 犬が いますか。",
+            "qRd": "あなたのうちに ねこや いぬが いますか。",
+            "sampleAns": "はい、猫が います。 / いいえ、いません。",
+            "sampleAnsRd": "はい、ねこが います。 / いいえ、いません。",
+            "my": "သင့်အိမ်မှာ ကြောင် သို့မဟုတ် ခွေး ရှိပါသလား။"
+          },
+          {
+            "num": 3,
+            "q": "郵便局は どこに ありますか。",
+            "qRd": "ゆうびんきょくは どこに ありますか。",
+            "sampleAns": "駅の 近くに あります。",
+            "sampleAnsRd": "えきの ちかくに あります。",
+            "my": "စာတိုက် ဘယ်မှာရှိပါသလဲ။"
+          }
+        ]
+      },
+      {
+        "no": 2,
+        "title": "問題 2: 助詞の 選択 (Particle Practice: に, が, は, や)",
+        "items": [
+          {
+            "num": 1,
+            "q": "机の 上 (＿＿) 写真が あります。",
+            "qRd": "つくえの うえ (＿＿) しゃしんが あります。",
+            "options": [
+              "に",
+              "で",
+              "を"
+            ],
+            "ans": "に",
+            "my": "စားပွဲပေါ်တွင် ဓာတ်ပုံတစ်ပုံ ရှိပါသည်။"
+          },
+          {
+            "num": 2,
+            "q": "あそこに 男の子 (＿＿) います。",
+            "qRd": "あそこに おとこのこ (＿＿) います。",
+            "options": [
+              "が",
+              "は",
+              "で"
+            ],
+            "ans": "が",
+            "my": "ဟိုနေရာတွင် ယောက်ျားလေးတစ်ယောက် ရှိပါသည်။"
+          }
+        ]
+      }
+    ]
   }
 };
