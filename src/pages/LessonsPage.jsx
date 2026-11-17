@@ -484,11 +484,11 @@ export default function LessonsPage() {
                             <div key={wIdx} className="rt-row">
                               <span className="rt-n">{num}.</span>
                               <span className="rt-j jp">
-                                {w.jp}
+                                <div>{w.jp}</div>
                                 {w.rd && w.rd !== w.jp && (
-                                  <span style={{ display: 'block', fontSize: '12px', color: 'var(--muted)' }}>
+                                  <div className="rt-rd jp">
                                     {w.rd}
-                                  </span>
+                                  </div>
                                 )}
                               </span>
                               <span className="rt-r">{w.rom}</span>
@@ -578,14 +578,22 @@ export default function LessonsPage() {
                                       {b.pattern}
                                     </span>
                                   </div>
-                                  <div className="jp" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
+                                  <div className="jp" style={{ fontSize: '16.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                     {b.jp}
                                     {b.altJp && <span style={{ fontSize: '13px', color: 'var(--muted)', marginLeft: '6px' }}>{b.altJp}</span>}
                                   </div>
-                                  <div style={{ fontSize: '12px', color: 'var(--faint)', marginTop: '2px' }}>
-                                    {b.rom}
-                                  </div>
-                                  <div style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '3px', fontWeight: 600 }}>
+                                  {b.rd && b.rd !== b.jp && (
+                                    <div className="lesson-furigana jp">
+                                      <span className="lesson-furigana-badge">Furigana</span>
+                                      <span>{b.rd}</span>
+                                    </div>
+                                  )}
+                                  {b.rom && (
+                                    <div className="lesson-romaji">
+                                      {b.rom}
+                                    </div>
+                                  )}
+                                  <div style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '4px', fontWeight: 600 }}>
                                     {b.my}
                                   </div>
                                 </div>
@@ -645,11 +653,22 @@ export default function LessonsPage() {
                                   <div style={{ flex: '1 1 auto' }}>
                                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
                                       <span style={{ fontWeight: 800, color: 'var(--muted)', fontSize: '13px' }}>{r.no})</span>
-                                      <span className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
+                                      <span className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                         {r.q}
                                       </span>
                                     </div>
-                                    <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '2px', paddingLeft: '18px' }}>
+                                    {r.qRd && r.qRd !== r.q && (
+                                      <div className="lesson-furigana jp" style={{ paddingLeft: '18px' }}>
+                                        <span className="lesson-furigana-badge">Furigana</span>
+                                        <span>{r.qRd}</span>
+                                      </div>
+                                    )}
+                                    {r.qRom && (
+                                      <div className="lesson-romaji" style={{ paddingLeft: '18px' }}>
+                                        {r.qRom}
+                                      </div>
+                                    )}
+                                    <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px', paddingLeft: '18px' }}>
                                       {r.qMy}
                                     </div>
                                   </div>
@@ -681,10 +700,21 @@ export default function LessonsPage() {
                                   }}
                                 >
                                   <div>
-                                    <div className="jp" style={{ fontSize: '14.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                    <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                       {r.a}
                                     </div>
-                                    <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
+                                    {r.aRd && r.aRd !== r.a && (
+                                      <div className="lesson-furigana jp">
+                                        <span className="lesson-furigana-badge">Furigana</span>
+                                        <span>{r.aRd}</span>
+                                      </div>
+                                    )}
+                                    {r.aRom && (
+                                      <div className="lesson-romaji">
+                                        {r.aRom}
+                                      </div>
+                                    )}
+                                    <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
                                       {r.aMy}
                                     </div>
                                   </div>
@@ -706,10 +736,16 @@ export default function LessonsPage() {
                                   <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px dashed var(--line-soft)' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
                                       <div style={{ flex: '1 1 auto' }}>
-                                        <div className="jp" style={{ fontSize: '14.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                        <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                           {r.followUp.q}
                                         </div>
-                                        <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
+                                        {r.followUp.qRd && r.followUp.qRd !== r.followUp.q && (
+                                          <div className="lesson-furigana jp">
+                                            <span className="lesson-furigana-badge">Furigana</span>
+                                            <span>{r.followUp.qRd}</span>
+                                          </div>
+                                        )}
+                                        <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
                                           {r.followUp.qMy}
                                         </div>
                                       </div>
@@ -739,10 +775,16 @@ export default function LessonsPage() {
                                       }}
                                     >
                                       <div>
-                                        <div className="jp" style={{ fontSize: '14.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                        <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                           {r.followUp.a}
                                         </div>
-                                        <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
+                                        {r.followUp.aRd && r.followUp.aRd !== r.followUp.a && (
+                                          <div className="lesson-furigana jp">
+                                            <span className="lesson-furigana-badge">Furigana</span>
+                                            <span>{r.followUp.aRd}</span>
+                                          </div>
+                                        )}
+                                        <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
                                           {r.followUp.aMy}
                                         </div>
                                       </div>
@@ -867,10 +909,21 @@ export default function LessonsPage() {
                                   }}
                                 >
                                   <div style={{ flex: '1 1 auto' }}>
-                                    <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
+                                    <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                       {ex.jp}
                                     </div>
-                                    <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '2px' }}>
+                                    {ex.rd && ex.rd !== ex.jp && (
+                                      <div className="lesson-furigana jp">
+                                        <span className="lesson-furigana-badge">Furigana</span>
+                                        <span>{ex.rd}</span>
+                                      </div>
+                                    )}
+                                    {ex.rom && (
+                                      <div className="lesson-romaji">
+                                        {ex.rom}
+                                      </div>
+                                    )}
+                                    <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
                                       {ex.my}
                                     </div>
                                     {ex.ans && (
@@ -993,12 +1046,20 @@ export default function LessonsPage() {
                                   {line.speaker}
                                 </div>
                                 <div style={{ flex: '1 1 auto' }}>
-                                  <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                  <div className="jp" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
                                     {line.jp}
                                   </div>
-                                  <div style={{ fontSize: '12px', color: 'var(--faint)', marginTop: '2px' }}>
-                                    {line.rom}
-                                  </div>
+                                  {line.rd && line.rd !== line.jp && (
+                                    <div className="lesson-furigana jp">
+                                      <span className="lesson-furigana-badge">Furigana</span>
+                                      <span>{line.rd}</span>
+                                    </div>
+                                  )}
+                                  {line.rom && (
+                                    <div className="lesson-romaji">
+                                      {line.rom}
+                                    </div>
+                                  )}
                                   <div style={{ fontSize: '13px', color: 'var(--muted)', marginTop: '3px' }}>
                                     {line.my}
                                   </div>
