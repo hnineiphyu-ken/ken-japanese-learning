@@ -172,10 +172,9 @@ export default function LessonExercises({ lessonNum }) {
                       <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
                         {ex.jp}
                       </div>
-                      {ex.rd && (
+                      {ex.rd && ex.rd !== ex.jp && (
                         <div className="lesson-furigana jp">
-                          <span className="lesson-furigana-badge">Furigana</span>
-                          <span>{ex.rd}</span>
+                          {ex.rd}
                         </div>
                       )}
                       {ex.rom && (
@@ -402,10 +401,9 @@ export default function LessonExercises({ lessonNum }) {
                   <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)', marginTop: '4px' }}>
                     {drill.example.jp}
                   </div>
-                  {drill.example.rd && (
+                  {drill.example.rd && drill.example.rd !== drill.example.jp && (
                     <div className="lesson-furigana jp">
-                      <span className="lesson-furigana-badge">Furigana</span>
-                      <span>{drill.example.rd}</span>
+                      {drill.example.rd}
                     </div>
                   )}
                   {drill.example.rom && (
@@ -443,10 +441,9 @@ export default function LessonExercises({ lessonNum }) {
                               <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
                                 {it.prompt}
                               </span>
-                              {it.promptRd && (
+                              {it.promptRd && it.promptRd !== it.prompt && (
                                 <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                                  <span>{it.promptRd}</span>
+                                  {it.promptRd}
                                 </div>
                               )}
                             </div>
@@ -483,10 +480,9 @@ export default function LessonExercises({ lessonNum }) {
                                     <span className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                       {ansJp}
                                     </span>
-                                    {ansRd && (
+                                    {ansRd && ansRd !== ansJp && (
                                       <div className="lesson-furigana jp">
-                                        <span className="lesson-furigana-badge">Furigana</span>
-                                        <span>{ansRd}</span>
+                                        {ansRd}
                                       </div>
                                     )}
                                     {it.rom && (
@@ -675,10 +671,9 @@ export default function LessonExercises({ lessonNum }) {
                       <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                         {line.jp}
                       </div>
-                      {line.rd && (
+                      {line.rd && line.rd !== line.jp && (
                         <div className="lesson-furigana jp">
-                          <span className="lesson-furigana-badge">Furigana</span>
-                          <span>{line.rd}</span>
+                          {line.rd}
                         </div>
                       )}
                       {line.rom && (
@@ -728,10 +723,9 @@ export default function LessonExercises({ lessonNum }) {
                           <div className="jp" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--ink)' }}>
                             {sLine.jp}
                           </div>
-                          {sLine.rd && (
+                          {sLine.rd && sLine.rd !== sLine.jp && (
                             <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
-                              <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                              <span>{sLine.rd}</span>
+                              {sLine.rd}
                             </div>
                           )}
                           {sLine.rom && (
@@ -893,10 +887,9 @@ export default function LessonExercises({ lessonNum }) {
                                 <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
                                   {it.q}
                                 </span>
-                                {it.qRd && (
+                                {it.qRd && it.qRd !== it.q && (
                                   <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
-                                    <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                                    <span>{it.qRd}</span>
+                                    {it.qRd}
                                   </div>
                                 )}
                               </div>
@@ -926,10 +919,9 @@ export default function LessonExercises({ lessonNum }) {
                               <div style={{ fontSize: '14px', fontWeight: 800, color: 'var(--ink)' }} className="jp">
                                 ➔ {it.sampleAns}
                               </div>
-                              {it.sampleAnsRd && (
+                              {it.sampleAnsRd && it.sampleAnsRd !== it.sampleAns && (
                                 <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                                  <span>{it.sampleAnsRd}</span>
+                                  {it.sampleAnsRd}
                                 </div>
                               )}
                               <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
@@ -967,10 +959,9 @@ export default function LessonExercises({ lessonNum }) {
                                 <div className="jp" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
                                   {it.dialogue}
                                 </div>
-                                {it.dialogueRd && (
+                                {it.dialogueRd && it.dialogueRd !== it.dialogue && (
                                   <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
-                                    <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                                    <span>{it.dialogueRd}</span>
+                                    {it.dialogueRd}
                                   </div>
                                 )}
                                 <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
@@ -1048,19 +1039,17 @@ export default function LessonExercises({ lessonNum }) {
                               <div className="jp" style={{ fontSize: '13.5px', color: 'var(--ink)', margin: '4px 0 6px', whiteSpace: 'pre-line', background: 'var(--bg-card-subtle)', padding: '6px 10px', borderRadius: '6px' }}>
                                 {it.dialogue}
                               </div>
-                              {it.dialogueRd && (
+                              {it.dialogueRd && it.dialogueRd !== it.dialogue && (
                                 <div className="lesson-furigana jp" style={{ fontSize: '12px', marginBottom: '6px' }}>
-                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
                                   <span style={{ whiteSpace: 'pre-line' }}>{it.dialogueRd}</span>
                                 </div>
                               )}
                               <div className="jp" style={{ fontSize: '14.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                 {it.statement}
                               </div>
-                              {it.statementRd && (
+                              {it.statementRd && it.statementRd !== it.statement && (
                                 <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                                  <span>{it.statementRd}</span>
+                                  {it.statementRd}
                                 </div>
                               )}
                               <div style={{ fontSize: '12px', color: 'var(--muted)' }}>
@@ -1117,10 +1106,9 @@ export default function LessonExercises({ lessonNum }) {
                                   <span className="jp" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
                                     {it.q}
                                   </span>
-                                  {it.qRd && (
+                                  {it.qRd && it.qRd !== it.q && (
                                     <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                      <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                                      <span>{it.qRd}</span>
+                                      {it.qRd}
                                     </div>
                                   )}
                                 </div>
@@ -1182,10 +1170,9 @@ export default function LessonExercises({ lessonNum }) {
                                 <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
                                   {it.q}
                                 </span>
-                                {it.qRd && (
+                                {it.qRd && it.qRd !== it.q && (
                                   <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                    <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
-                                    <span>{it.qRd}</span>
+                                    {it.qRd}
                                   </div>
                                 )}
                               </div>

@@ -582,10 +582,9 @@ export default function LessonsPage() {
                                     {b.jp}
                                     {b.altJp && <span style={{ fontSize: '13px', color: 'var(--muted)', marginLeft: '6px' }}>{b.altJp}</span>}
                                   </div>
-                                  {b.rd && (
+                                  {b.rd && b.rd !== b.jp && (
                                     <div className="lesson-furigana jp">
-                                      <span className="lesson-furigana-badge">Furigana</span>
-                                      <span>{b.rd}</span>
+                                      {b.rd}
                                     </div>
                                   )}
                                   {b.rom && (
@@ -657,10 +656,9 @@ export default function LessonsPage() {
                                         {r.q}
                                       </span>
                                     </div>
-                                    {r.qRd && (
+                                    {r.qRd && r.qRd !== r.q && (
                                       <div className="lesson-furigana jp" style={{ paddingLeft: '18px' }}>
-                                        <span className="lesson-furigana-badge">Furigana</span>
-                                        <span>{r.qRd}</span>
+                                        {r.qRd}
                                       </div>
                                     )}
                                     {r.qRom && (
@@ -703,10 +701,9 @@ export default function LessonsPage() {
                                     <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                       {r.a}
                                     </div>
-                                    {r.aRd && (
+                                    {r.aRd && r.aRd !== r.a && (
                                       <div className="lesson-furigana jp">
-                                        <span className="lesson-furigana-badge">Furigana</span>
-                                        <span>{r.aRd}</span>
+                                        {r.aRd}
                                       </div>
                                     )}
                                     {r.aRom && (
@@ -739,10 +736,9 @@ export default function LessonsPage() {
                                         <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                           {r.followUp.q}
                                         </div>
-                                        {r.followUp.qRd && (
+                                        {r.followUp.qRd && r.followUp.qRd !== r.followUp.q && (
                                           <div className="lesson-furigana jp">
-                                            <span className="lesson-furigana-badge">Furigana</span>
-                                            <span>{r.followUp.qRd}</span>
+                                            {r.followUp.qRd}
                                           </div>
                                         )}
                                         <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
@@ -778,10 +774,9 @@ export default function LessonsPage() {
                                         <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                           {r.followUp.a}
                                         </div>
-                                        {r.followUp.aRd && (
+                                        {r.followUp.aRd && r.followUp.aRd !== r.followUp.a && (
                                           <div className="lesson-furigana jp">
-                                            <span className="lesson-furigana-badge">Furigana</span>
-                                            <span>{r.followUp.aRd}</span>
+                                            {r.followUp.aRd}
                                           </div>
                                         )}
                                         <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
@@ -912,10 +907,9 @@ export default function LessonsPage() {
                                     <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                       {ex.jp}
                                     </div>
-                                    {ex.rd && (
+                                    {ex.rd && ex.rd !== ex.jp && (
                                       <div className="lesson-furigana jp">
-                                        <span className="lesson-furigana-badge">Furigana</span>
-                                        <span>{ex.rd}</span>
+                                        {ex.rd}
                                       </div>
                                     )}
                                     {ex.rom && (
@@ -1049,10 +1043,9 @@ export default function LessonsPage() {
                                   <div className="jp" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
                                     {line.jp}
                                   </div>
-                                  {line.rd && (
+                                  {line.rd && line.rd !== line.jp && (
                                     <div className="lesson-furigana jp">
-                                      <span className="lesson-furigana-badge">Furigana</span>
-                                      <span>{line.rd}</span>
+                                      {line.rd}
                                     </div>
                                   )}
                                   {line.rom && (
@@ -1151,10 +1144,9 @@ export default function LessonsPage() {
                         <div className="jp" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--ink)' }}>
                           {activeQuiz.questions[activeQuiz.curIndex].jp}
                         </div>
-                        {activeQuiz.questions[activeQuiz.curIndex].rd && (
+                        {activeQuiz.questions[activeQuiz.curIndex].rd && activeQuiz.questions[activeQuiz.curIndex].rd !== activeQuiz.questions[activeQuiz.curIndex].jp && (
                           <div className="lesson-furigana jp" style={{ fontSize: '15px', justifyContent: 'center', marginTop: '6px' }}>
-                            <span className="lesson-furigana-badge">Furigana</span>
-                            <span>{activeQuiz.questions[activeQuiz.curIndex].rd}</span>
+                            {activeQuiz.questions[activeQuiz.curIndex].rd}
                           </div>
                         )}
                         <div className="lesson-romaji" style={{ marginTop: '4px', textAlign: 'center' }}>
