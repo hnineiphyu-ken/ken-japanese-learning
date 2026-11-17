@@ -447,7 +447,7 @@ export default function LessonsPage() {
                       {activeStudyTab === 'grammar' && (
                         LESSON_CONTENT[meta.l]?.grammar ? (
                           <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>
-                            7 Points Live ✅
+                            {LESSON_CONTENT[meta.l].grammar.length} Points Live ✅
                           </span>
                         ) : (
                           <span className="badge-coming-soon">Soon ⏳</span>
@@ -582,7 +582,7 @@ export default function LessonsPage() {
                                     {b.jp}
                                     {b.altJp && <span style={{ fontSize: '13px', color: 'var(--muted)', marginLeft: '6px' }}>{b.altJp}</span>}
                                   </div>
-                                  {b.rd && b.rd !== b.jp && (
+                                  {b.rd && (
                                     <div className="lesson-furigana jp">
                                       <span className="lesson-furigana-badge">Furigana</span>
                                       <span>{b.rd}</span>
@@ -657,7 +657,7 @@ export default function LessonsPage() {
                                         {r.q}
                                       </span>
                                     </div>
-                                    {r.qRd && r.qRd !== r.q && (
+                                    {r.qRd && (
                                       <div className="lesson-furigana jp" style={{ paddingLeft: '18px' }}>
                                         <span className="lesson-furigana-badge">Furigana</span>
                                         <span>{r.qRd}</span>
@@ -703,7 +703,7 @@ export default function LessonsPage() {
                                     <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                       {r.a}
                                     </div>
-                                    {r.aRd && r.aRd !== r.a && (
+                                    {r.aRd && (
                                       <div className="lesson-furigana jp">
                                         <span className="lesson-furigana-badge">Furigana</span>
                                         <span>{r.aRd}</span>
@@ -739,7 +739,7 @@ export default function LessonsPage() {
                                         <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                           {r.followUp.q}
                                         </div>
-                                        {r.followUp.qRd && r.followUp.qRd !== r.followUp.q && (
+                                        {r.followUp.qRd && (
                                           <div className="lesson-furigana jp">
                                             <span className="lesson-furigana-badge">Furigana</span>
                                             <span>{r.followUp.qRd}</span>
@@ -778,7 +778,7 @@ export default function LessonsPage() {
                                         <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                                           {r.followUp.a}
                                         </div>
-                                        {r.followUp.aRd && r.followUp.aRd !== r.followUp.a && (
+                                        {r.followUp.aRd && (
                                           <div className="lesson-furigana jp">
                                             <span className="lesson-furigana-badge">Furigana</span>
                                             <span>{r.followUp.aRd}</span>
@@ -835,7 +835,7 @@ export default function LessonsPage() {
                             </p>
                           </div>
                           <span className="badge-coming-soon" style={{ background: 'var(--ink)', color: '#fff' }}>
-                            7 Grammar Points
+                            {LESSON_CONTENT[meta.l].grammar.length} Grammar Points
                           </span>
                         </div>
 
@@ -912,7 +912,7 @@ export default function LessonsPage() {
                                     <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                       {ex.jp}
                                     </div>
-                                    {ex.rd && ex.rd !== ex.jp && (
+                                    {ex.rd && (
                                       <div className="lesson-furigana jp">
                                         <span className="lesson-furigana-badge">Furigana</span>
                                         <span>{ex.rd}</span>
@@ -1049,7 +1049,7 @@ export default function LessonsPage() {
                                   <div className="jp" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
                                     {line.jp}
                                   </div>
-                                  {line.rd && line.rd !== line.jp && (
+                                  {line.rd && (
                                     <div className="lesson-furigana jp">
                                       <span className="lesson-furigana-badge">Furigana</span>
                                       <span>{line.rd}</span>
@@ -1151,13 +1151,14 @@ export default function LessonsPage() {
                         <div className="jp" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--ink)' }}>
                           {activeQuiz.questions[activeQuiz.curIndex].jp}
                         </div>
-                        <div style={{ fontSize: '14px', color: 'var(--muted)', marginTop: '4px', fontWeight: 600 }}>
-                          {activeQuiz.questions[activeQuiz.curIndex].rd && (
-                            <span className="jp" style={{ marginRight: '6px' }}>
-                              {activeQuiz.questions[activeQuiz.curIndex].rd}
-                            </span>
-                          )}
-                          ({activeQuiz.questions[activeQuiz.curIndex].rom})
+                        {activeQuiz.questions[activeQuiz.curIndex].rd && (
+                          <div className="lesson-furigana jp" style={{ fontSize: '15px', justifyContent: 'center', marginTop: '6px' }}>
+                            <span className="lesson-furigana-badge">Furigana</span>
+                            <span>{activeQuiz.questions[activeQuiz.curIndex].rd}</span>
+                          </div>
+                        )}
+                        <div className="lesson-romaji" style={{ marginTop: '4px', textAlign: 'center' }}>
+                          {activeQuiz.questions[activeQuiz.curIndex].rom}
                         </div>
 
                         {/* CLEAN LISTEN BUTTON WITH SVG ICON & TEXT — PROPER PILL SHAPE */}

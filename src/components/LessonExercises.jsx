@@ -172,7 +172,7 @@ export default function LessonExercises({ lessonNum }) {
                       <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
                         {ex.jp}
                       </div>
-                      {ex.rd && ex.rd !== ex.jp && (
+                      {ex.rd && (
                         <div className="lesson-furigana jp">
                           <span className="lesson-furigana-badge">Furigana</span>
                           <span>{ex.rd}</span>
@@ -402,7 +402,7 @@ export default function LessonExercises({ lessonNum }) {
                   <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)', marginTop: '4px' }}>
                     {drill.example.jp}
                   </div>
-                  {drill.example.rd && drill.example.rd !== drill.example.jp && (
+                  {drill.example.rd && (
                     <div className="lesson-furigana jp">
                       <span className="lesson-furigana-badge">Furigana</span>
                       <span>{drill.example.rd}</span>
@@ -435,13 +435,21 @@ export default function LessonExercises({ lessonNum }) {
                         }}
                       >
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                            <span style={{ fontWeight: 800, fontSize: '14px', color: 'var(--muted)' }}>
+                          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                            <span style={{ fontWeight: 800, fontSize: '14px', color: 'var(--muted)', marginTop: '2px' }}>
                               {it.num})
                             </span>
-                            <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
-                              {it.prompt}
-                            </span>
+                            <div>
+                              <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
+                                {it.prompt}
+                              </span>
+                              {it.promptRd && (
+                                <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
+                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
+                                  <span>{it.promptRd}</span>
+                                </div>
+                              )}
+                            </div>
                           </div>
 
                           <button
@@ -466,35 +474,41 @@ export default function LessonExercises({ lessonNum }) {
                               animation: 'fadeIn 0.15s ease-out'
                             }}
                           >
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
-                              <div style={{ flex: '1 1 auto' }}>
-                                <span className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
-                                  {it.answerJp}
-                                </span>
-                                {it.answerRd && it.answerRd !== it.answerJp && (
-                                  <div className="lesson-furigana jp">
-                                    <span className="lesson-furigana-badge">Furigana</span>
-                                    <span>{it.answerRd}</span>
+                            {(() => {
+                              const ansJp = it.answerJp || it.jp;
+                              const ansRd = it.answerRd || it.rd;
+                              return (
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
+                                  <div style={{ flex: '1 1 auto' }}>
+                                    <span className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                      {ansJp}
+                                    </span>
+                                    {ansRd && (
+                                      <div className="lesson-furigana jp">
+                                        <span className="lesson-furigana-badge">Furigana</span>
+                                        <span>{ansRd}</span>
+                                      </div>
+                                    )}
+                                    {it.rom && (
+                                      <div className="lesson-romaji">
+                                        {it.rom}
+                                      </div>
+                                    )}
                                   </div>
-                                )}
-                                {it.rom && (
-                                  <div className="lesson-romaji">
-                                    {it.rom}
-                                  </div>
-                                )}
-                              </div>
-                              <button
-                                type="button"
-                                className="audio-btn"
-                                onClick={() => speakJapanese(it.answerRd || it.answerJp)}
-                                title="Listen Answer"
-                              >
-                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                  <path d="M11 5L6 9H2v6h4l5 4V5z" />
-                                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                                </svg>
-                              </button>
-                            </div>
+                                  <button
+                                    type="button"
+                                    className="audio-btn"
+                                    onClick={() => speakJapanese(ansRd || ansJp)}
+                                    title="Listen Answer"
+                                  >
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                      <path d="M11 5L6 9H2v6h4l5 4V5z" />
+                                      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                                    </svg>
+                                  </button>
+                                </div>
+                              );
+                            })()}
                             <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
                               {it.my}
                             </div>
@@ -661,7 +675,7 @@ export default function LessonExercises({ lessonNum }) {
                       <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
                         {line.jp}
                       </div>
-                      {line.rd && line.rd !== line.jp && (
+                      {line.rd && (
                         <div className="lesson-furigana jp">
                           <span className="lesson-furigana-badge">Furigana</span>
                           <span>{line.rd}</span>
@@ -714,7 +728,7 @@ export default function LessonExercises({ lessonNum }) {
                           <div className="jp" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--ink)' }}>
                             {sLine.jp}
                           </div>
-                          {sLine.rd && sLine.rd !== sLine.jp && (
+                          {sLine.rd && (
                             <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
                               <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
                               <span>{sLine.rd}</span>
@@ -879,7 +893,7 @@ export default function LessonExercises({ lessonNum }) {
                                 <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
                                   {it.q}
                                 </span>
-                                {it.qRd && it.qRd !== it.q && (
+                                {it.qRd && (
                                   <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
                                     <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
                                     <span>{it.qRd}</span>
@@ -912,6 +926,12 @@ export default function LessonExercises({ lessonNum }) {
                               <div style={{ fontSize: '14px', fontWeight: 800, color: 'var(--ink)' }} className="jp">
                                 ➔ {it.sampleAns}
                               </div>
+                              {it.sampleAnsRd && (
+                                <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
+                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
+                                  <span>{it.sampleAnsRd}</span>
+                                </div>
+                              )}
                               <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
                                 {it.my}
                               </div>
@@ -947,7 +967,7 @@ export default function LessonExercises({ lessonNum }) {
                                 <div className="jp" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
                                   {it.dialogue}
                                 </div>
-                                {it.dialogueRd && it.dialogueRd !== it.dialogue && (
+                                {it.dialogueRd && (
                                   <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
                                     <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
                                     <span>{it.dialogueRd}</span>
@@ -1028,9 +1048,21 @@ export default function LessonExercises({ lessonNum }) {
                               <div className="jp" style={{ fontSize: '13.5px', color: 'var(--ink)', margin: '4px 0 6px', whiteSpace: 'pre-line', background: 'var(--bg-card-subtle)', padding: '6px 10px', borderRadius: '6px' }}>
                                 {it.dialogue}
                               </div>
+                              {it.dialogueRd && (
+                                <div className="lesson-furigana jp" style={{ fontSize: '12px', marginBottom: '6px' }}>
+                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
+                                  <span style={{ whiteSpace: 'pre-line' }}>{it.dialogueRd}</span>
+                                </div>
+                              )}
                               <div className="jp" style={{ fontSize: '14.5px', fontWeight: 800, color: 'var(--ink)' }}>
                                 {it.statement}
                               </div>
+                              {it.statementRd && (
+                                <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
+                                  <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
+                                  <span>{it.statementRd}</span>
+                                </div>
+                              )}
                               <div style={{ fontSize: '12px', color: 'var(--muted)' }}>
                                 {it.statementMy}
                               </div>
@@ -1079,11 +1111,19 @@ export default function LessonExercises({ lessonNum }) {
                         >
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
                             <div>
-                              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                <span style={{ fontWeight: 800, color: 'var(--muted)' }}>{it.num})</span>
-                                <span className="jp" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
-                                  {it.q}
-                                </span>
+                              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                                <span style={{ fontWeight: 800, color: 'var(--muted)', marginTop: '2px' }}>{it.num})</span>
+                                <div>
+                                  <span className="jp" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
+                                    {it.q}
+                                  </span>
+                                  {it.qRd && (
+                                    <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
+                                      <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
+                                      <span>{it.qRd}</span>
+                                    </div>
+                                  )}
+                                </div>
                               </div>
                               <div style={{ display: 'flex', gap: '6px', marginTop: '6px', flexWrap: 'wrap' }}>
                                 {it.options.map((opt, oIdx) => (
@@ -1136,11 +1176,19 @@ export default function LessonExercises({ lessonNum }) {
                           }}
                         >
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span style={{ fontWeight: 800, color: 'var(--muted)' }}>{it.num})</span>
-                              <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
-                                {it.q}
-                              </span>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                              <span style={{ fontWeight: 800, color: 'var(--muted)', marginTop: '2px' }}>{it.num})</span>
+                              <div>
+                                <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
+                                  {it.q}
+                                </span>
+                                {it.qRd && (
+                                  <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
+                                    <span className="lesson-furigana-badge" style={{ fontSize: '9px', padding: '0 4px' }}>Furigana</span>
+                                    <span>{it.qRd}</span>
+                                  </div>
+                                )}
+                              </div>
                             </div>
                             <button
                               type="button"
