@@ -7,6 +7,7 @@ import Pagination from '../components/Pagination';
 import LessonExercises from '../components/LessonExercises';
 import { LESSON_EXERCISES } from '../data/lessonExercises';
 import { LESSON_CONTENT } from '../data/lessonContent';
+import RubyText from '../utils/RubyText';
 
 export default function LessonsPage() {
   const navigate = useNavigate();
@@ -578,15 +579,10 @@ export default function LessonsPage() {
                                       {b.pattern}
                                     </span>
                                   </div>
-                                  <div className="jp" style={{ fontSize: '16.5px', fontWeight: 800, color: 'var(--ink)' }}>
-                                    {b.jp}
+                                  <div className="jp ruby-text" style={{ fontSize: '16.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                    <RubyText text={b.jp} />
                                     {b.altJp && <span style={{ fontSize: '13px', color: 'var(--muted)', marginLeft: '6px' }}>{b.altJp}</span>}
                                   </div>
-                                  {b.rd && b.rd !== b.jp && (
-                                    <div className="lesson-furigana jp">
-                                      {b.rd}
-                                    </div>
-                                  )}
                                   {b.rom && (
                                     <div className="lesson-romaji">
                                       {b.rom}
@@ -652,15 +648,10 @@ export default function LessonsPage() {
                                   <div style={{ flex: '1 1 auto' }}>
                                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '6px' }}>
                                       <span style={{ fontWeight: 800, color: 'var(--muted)', fontSize: '13px' }}>{r.no})</span>
-                                      <span className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
-                                        {r.q}
+                                      <span className="jp ruby-text" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                        <RubyText text={r.q} />
                                       </span>
                                     </div>
-                                    {r.qRd && r.qRd !== r.q && (
-                                      <div className="lesson-furigana jp" style={{ paddingLeft: '18px' }}>
-                                        {r.qRd}
-                                      </div>
-                                    )}
                                     {r.qRom && (
                                       <div className="lesson-romaji" style={{ paddingLeft: '18px' }}>
                                         {r.qRom}
@@ -698,14 +689,9 @@ export default function LessonsPage() {
                                   }}
                                 >
                                   <div>
-                                    <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
-                                      {r.a}
+                                    <div className="jp ruby-text" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
+                                      <RubyText text={r.a} />
                                     </div>
-                                    {r.aRd && r.aRd !== r.a && (
-                                      <div className="lesson-furigana jp">
-                                        {r.aRd}
-                                      </div>
-                                    )}
                                     {r.aRom && (
                                       <div className="lesson-romaji">
                                         {r.aRom}
@@ -733,14 +719,9 @@ export default function LessonsPage() {
                                   <div style={{ marginTop: '10px', paddingTop: '10px', borderTop: '1px dashed var(--line-soft)' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
                                       <div style={{ flex: '1 1 auto' }}>
-                                        <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
-                                          {r.followUp.q}
+                                        <div className="jp ruby-text" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
+                                          <RubyText text={r.followUp.q} />
                                         </div>
-                                        {r.followUp.qRd && r.followUp.qRd !== r.followUp.q && (
-                                          <div className="lesson-furigana jp">
-                                            {r.followUp.qRd}
-                                          </div>
-                                        )}
                                         <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
                                           {r.followUp.qMy}
                                         </div>
@@ -771,14 +752,9 @@ export default function LessonsPage() {
                                       }}
                                     >
                                       <div>
-                                        <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
-                                          {r.followUp.a}
+                                        <div className="jp ruby-text" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
+                                          <RubyText text={r.followUp.a} />
                                         </div>
-                                        {r.followUp.aRd && r.followUp.aRd !== r.followUp.a && (
-                                          <div className="lesson-furigana jp">
-                                            {r.followUp.aRd}
-                                          </div>
-                                        )}
                                         <div style={{ fontSize: '12.5px', color: 'var(--muted)', marginTop: '3px' }}>
                                           {r.followUp.aMy}
                                         </div>
@@ -904,14 +880,9 @@ export default function LessonsPage() {
                                   }}
                                 >
                                   <div style={{ flex: '1 1 auto' }}>
-                                    <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
-                                      {ex.jp}
+                                    <div className="jp ruby-text" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                      <RubyText text={ex.jp} />
                                     </div>
-                                    {ex.rd && ex.rd !== ex.jp && (
-                                      <div className="lesson-furigana jp">
-                                        {ex.rd}
-                                      </div>
-                                    )}
                                     {ex.rom && (
                                       <div className="lesson-romaji">
                                         {ex.rom}
@@ -1040,14 +1011,9 @@ export default function LessonsPage() {
                                   {line.speaker}
                                 </div>
                                 <div style={{ flex: '1 1 auto' }}>
-                                  <div className="jp" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
-                                    {line.jp}
+                                  <div className="jp ruby-text" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
+                                    <RubyText text={line.jp} />
                                   </div>
-                                  {line.rd && line.rd !== line.jp && (
-                                    <div className="lesson-furigana jp">
-                                      {line.rd}
-                                    </div>
-                                  )}
                                   {line.rom && (
                                     <div className="lesson-romaji">
                                       {line.rom}
@@ -1141,14 +1107,9 @@ export default function LessonsPage() {
                       </div>
 
                       <div style={{ textAlign: 'center', margin: '24px 0 20px' }}>
-                        <div className="jp" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--ink)' }}>
-                          {activeQuiz.questions[activeQuiz.curIndex].jp}
+                        <div className="jp ruby-text" style={{ fontSize: '36px', fontWeight: 900, color: 'var(--ink)' }}>
+                          <RubyText text={activeQuiz.questions[activeQuiz.curIndex].jp} />
                         </div>
-                        {activeQuiz.questions[activeQuiz.curIndex].rd && activeQuiz.questions[activeQuiz.curIndex].rd !== activeQuiz.questions[activeQuiz.curIndex].jp && (
-                          <div className="lesson-furigana jp" style={{ fontSize: '15px', justifyContent: 'center', marginTop: '6px' }}>
-                            {activeQuiz.questions[activeQuiz.curIndex].rd}
-                          </div>
-                        )}
                         <div className="lesson-romaji" style={{ marginTop: '4px', textAlign: 'center' }}>
                           {activeQuiz.questions[activeQuiz.curIndex].rom}
                         </div>

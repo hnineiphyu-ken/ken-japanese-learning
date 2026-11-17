@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { LESSON_EXERCISES } from '../data/lessonExercises';
 import { speakJapanese } from '../utils/speech';
+import RubyText from '../utils/RubyText';
 
 export default function LessonExercises({ lessonNum }) {
   const data = LESSON_EXERCISES[lessonNum];
@@ -169,14 +170,9 @@ export default function LessonExercises({ lessonNum }) {
                     }}
                   >
                     <div style={{ flex: '1 1 auto' }}>
-                      <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
-                        {ex.jp}
+                      <div className="jp ruby-text" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                        <RubyText text={ex.jp} />
                       </div>
-                      {ex.rd && ex.rd !== ex.jp && (
-                        <div className="lesson-furigana jp">
-                          {ex.rd}
-                        </div>
-                      )}
                       {ex.rom && (
                         <div className="lesson-romaji">
                           {ex.rom}
@@ -398,14 +394,9 @@ export default function LessonExercises({ lessonNum }) {
                       </svg>
                     </button>
                   </div>
-                  <div className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)', marginTop: '4px' }}>
-                    {drill.example.jp}
+                  <div className="jp ruby-text" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)', marginTop: '4px' }}>
+                    <RubyText text={drill.example.jp} />
                   </div>
-                  {drill.example.rd && drill.example.rd !== drill.example.jp && (
-                    <div className="lesson-furigana jp">
-                      {drill.example.rd}
-                    </div>
-                  )}
                   {drill.example.rom && (
                     <div className="lesson-romaji">
                       {drill.example.rom}
@@ -438,14 +429,9 @@ export default function LessonExercises({ lessonNum }) {
                               {it.num})
                             </span>
                             <div>
-                              <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
-                                {it.prompt}
+                              <span className="jp ruby-text" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
+                                <RubyText text={it.prompt} />
                               </span>
-                              {it.promptRd && it.promptRd !== it.prompt && (
-                                <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                  {it.promptRd}
-                                </div>
-                              )}
                             </div>
                           </div>
 
@@ -477,14 +463,9 @@ export default function LessonExercises({ lessonNum }) {
                               return (
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '10px' }}>
                                   <div style={{ flex: '1 1 auto' }}>
-                                    <span className="jp" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
-                                      {ansJp}
+                                    <span className="jp ruby-text" style={{ fontSize: '15.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                      <RubyText text={ansJp} />
                                     </span>
-                                    {ansRd && ansRd !== ansJp && (
-                                      <div className="lesson-furigana jp">
-                                        {ansRd}
-                                      </div>
-                                    )}
                                     {it.rom && (
                                       <div className="lesson-romaji">
                                         {it.rom}
@@ -668,14 +649,9 @@ export default function LessonExercises({ lessonNum }) {
                       {line.role}
                     </span>
                     <div style={{ flex: '1 1 auto' }}>
-                      <div className="jp" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
-                        {line.jp}
+                      <div className="jp ruby-text" style={{ fontSize: '15px', fontWeight: 800, color: 'var(--ink)' }}>
+                        <RubyText text={line.jp} />
                       </div>
-                      {line.rd && line.rd !== line.jp && (
-                        <div className="lesson-furigana jp">
-                          {line.rd}
-                        </div>
-                      )}
                       {line.rom && (
                         <div className="lesson-romaji">{line.rom}</div>
                       )}
@@ -720,14 +696,9 @@ export default function LessonExercises({ lessonNum }) {
                           {sLine.role}:
                         </span>
                         <div style={{ flex: '1 1 auto' }}>
-                          <div className="jp" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--ink)' }}>
-                            {sLine.jp}
+                          <div className="jp ruby-text" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--ink)' }}>
+                            <RubyText text={sLine.jp} />
                           </div>
-                          {sLine.rd && sLine.rd !== sLine.jp && (
-                            <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
-                              {sLine.rd}
-                            </div>
-                          )}
                           {sLine.rom && (
                             <div className="lesson-romaji">{sLine.rom}</div>
                           )}
@@ -884,14 +855,9 @@ export default function LessonExercises({ lessonNum }) {
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                               <span style={{ fontWeight: 800, color: 'var(--muted)', marginTop: '2px' }}>{it.num})</span>
                               <div>
-                                <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
-                                  {it.q}
+                                <span className="jp ruby-text" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
+                                  <RubyText text={it.q} />
                                 </span>
-                                {it.qRd && it.qRd !== it.q && (
-                                  <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
-                                    {it.qRd}
-                                  </div>
-                                )}
                               </div>
                               <button
                                 type="button"
@@ -916,14 +882,9 @@ export default function LessonExercises({ lessonNum }) {
                           </div>
                           {isRevealed && (
                             <div style={{ marginTop: '8px', padding: '8px 10px', background: 'var(--bg-card-subtle)', borderRadius: '6px', borderLeft: '3px solid var(--ink)' }}>
-                              <div style={{ fontSize: '14px', fontWeight: 800, color: 'var(--ink)' }} className="jp">
-                                ➔ {it.sampleAns}
+                              <div style={{ fontSize: '14px', fontWeight: 800, color: 'var(--ink)' }} className="jp ruby-text">
+                                ➔ <RubyText text={it.sampleAns} />
                               </div>
-                              {it.sampleAnsRd && it.sampleAnsRd !== it.sampleAns && (
-                                <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                  {it.sampleAnsRd}
-                                </div>
-                              )}
                               <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
                                 {it.my}
                               </div>
@@ -956,14 +917,9 @@ export default function LessonExercises({ lessonNum }) {
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', flex: '1 1 auto' }}>
                               <span style={{ fontWeight: 800, color: 'var(--muted)', marginTop: '2px' }}>{it.num})</span>
                               <div>
-                                <div className="jp" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
-                                  {it.dialogue}
+                                <div className="jp ruby-text" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
+                                  <RubyText text={it.dialogue} />
                                 </div>
-                                {it.dialogueRd && it.dialogueRd !== it.dialogue && (
-                                  <div className="lesson-furigana jp" style={{ fontSize: '12.5px' }}>
-                                    {it.dialogueRd}
-                                  </div>
-                                )}
                                 <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
                                   {it.meaningMy}
                                 </div>
@@ -1036,22 +992,12 @@ export default function LessonExercises({ lessonNum }) {
                                   </svg>
                                 </button>
                               </div>
-                              <div className="jp" style={{ fontSize: '13.5px', color: 'var(--ink)', margin: '4px 0 6px', whiteSpace: 'pre-line', background: 'var(--bg-card-subtle)', padding: '6px 10px', borderRadius: '6px' }}>
-                                {it.dialogue}
+                              <div className="jp ruby-text" style={{ fontSize: '13.5px', color: 'var(--ink)', margin: '4px 0 6px', whiteSpace: 'pre-line', background: 'var(--bg-card-subtle)', padding: '6px 10px', borderRadius: '6px' }}>
+                                <RubyText text={it.dialogue} />
                               </div>
-                              {it.dialogueRd && it.dialogueRd !== it.dialogue && (
-                                <div className="lesson-furigana jp" style={{ fontSize: '12px', marginBottom: '6px' }}>
-                                  <span style={{ whiteSpace: 'pre-line' }}>{it.dialogueRd}</span>
-                                </div>
-                              )}
-                              <div className="jp" style={{ fontSize: '14.5px', fontWeight: 800, color: 'var(--ink)' }}>
-                                {it.statement}
+                              <div className="jp ruby-text" style={{ fontSize: '14.5px', fontWeight: 800, color: 'var(--ink)' }}>
+                                <RubyText text={it.statement} />
                               </div>
-                              {it.statementRd && it.statementRd !== it.statement && (
-                                <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                  {it.statementRd}
-                                </div>
-                              )}
                               <div style={{ fontSize: '12px', color: 'var(--muted)' }}>
                                 {it.statementMy}
                               </div>
@@ -1103,14 +1049,9 @@ export default function LessonExercises({ lessonNum }) {
                               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                                 <span style={{ fontWeight: 800, color: 'var(--muted)', marginTop: '2px' }}>{it.num})</span>
                                 <div>
-                                  <span className="jp" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
-                                    {it.q}
+                                  <span className="jp ruby-text" style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--ink)' }}>
+                                    <RubyText text={it.q} />
                                   </span>
-                                  {it.qRd && it.qRd !== it.q && (
-                                    <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                      {it.qRd}
-                                    </div>
-                                  )}
                                 </div>
                               </div>
                               <div style={{ display: 'flex', gap: '6px', marginTop: '6px', flexWrap: 'wrap' }}>
@@ -1167,14 +1108,9 @@ export default function LessonExercises({ lessonNum }) {
                             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
                               <span style={{ fontWeight: 800, color: 'var(--muted)', marginTop: '2px' }}>{it.num})</span>
                               <div>
-                                <span className="jp" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
-                                  {it.q}
+                                <span className="jp ruby-text" style={{ fontWeight: 800, fontSize: '15px', color: 'var(--ink)' }}>
+                                  <RubyText text={it.q} />
                                 </span>
-                                {it.qRd && it.qRd !== it.q && (
-                                  <div className="lesson-furigana jp" style={{ fontSize: '12.5px', marginTop: '2px' }}>
-                                    {it.qRd}
-                                  </div>
-                                )}
                               </div>
                             </div>
                             <button
@@ -1216,8 +1152,8 @@ export default function LessonExercises({ lessonNum }) {
                       {m.template.map((row, rIdx) => (
                         <div key={rIdx} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 12px', background: '#ffffff', borderRadius: '6px', border: '1px solid var(--line-soft)' }}>
                           <div>
-                            <div className="jp" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
-                              {row.jp}
+                            <div className="jp ruby-text" style={{ fontSize: '16px', fontWeight: 800, color: 'var(--ink)' }}>
+                              <RubyText text={row.jp} />
                             </div>
                             <div style={{ fontSize: '12px', color: 'var(--muted)', marginTop: '2px' }}>
                               {row.my}

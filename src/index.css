@@ -489,6 +489,22 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
+ruby {
+  ruby-align: center;
+  ruby-position: over;
+}
+rt {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 0.58em;
+  font-weight: 700;
+  color: var(--ink-secondary);
+  line-height: 1;
+  user-select: none;
+}
+.ruby-sentence {
+  line-height: 2 !important;
+  display: inline-block;
+}
 .lesson-furigana {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-size: 13.5px;
