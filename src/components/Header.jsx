@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import { useActiveLevel } from '../utils/useActiveLevel';
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const headerRef = useRef(null);
+  const { isN4, isN5, switchLevel } = useActiveLevel();
 
   // Close mobile nav on route change
   useEffect(() => {
@@ -25,17 +27,43 @@ export default function Header() {
   return (
     <header className="site-header" ref={headerRef}>
       <div className="header-inner">
-        <NavLink to="/" className="brand-logo">
-          <div className="brand-icon">あ</div>
+        <NavLink to={isN4 ? "/n4/lessons" : "/n5/hiragana"} className="brand-logo">
+          <div className="brand-icon">{isN4 ? '二' : 'あ'}</div>
           <div className="brand-text">
             <span>Ken Japanese</span>
-            <span className="sub">JLPT N5 &amp; Minna no Nihongo</span>
+            <span className="sub">
+              {isN4 ? 'JLPT N4 · Minna no Nihongo 初級 II' : 'JLPT N5 · Minna no Nihongo 初級 I'}
+            </span>
           </div>
         </NavLink>
+
+        {/* Global Level Switcher (N5 ↔ N4) */}
+        <div className="header-level-toggle" role="group" aria-label="JLPT Level Selector">
+          <button
+            type="button"
+            className={`level-btn ${isN5 ? 'active' : ''}`}
+            onClick={() => switchLevel('n5')}
+            title="Switch to JLPT N5 (初級 1 · Lessons 1–25)"
+          >
+            <span className="lvl-badge">N5</span>
+            <span className="lvl-name">初級 1</span>
+          </button>
+          <button
+            type="button"
+            className={`level-btn ${isN4 ? 'active' : ''}`}
+            onClick={() => switchLevel('n4')}
+            title="Switch to JLPT N4 (初級 2 · Lessons 26–50)"
+          >
+            <span className="lvl-badge">N4</span>
+            <span className="lvl-name">初級 2</span>
+          </button>
+        </div>
+
         <div className="header-powered">
           <span>Developed by</span>
           <strong className="author-name">Ken Nebula</strong>
         </div>
+
         <button
           className="hamburger-btn"
           onClick={() => setMobileOpen(prev => !prev)}
@@ -51,24 +79,67 @@ export default function Header() {
 
       {/* Mobile Dropdown Navigation Menu */}
       <nav className={`mobile-nav-menu ${mobileOpen ? 'open' : ''}`}>
-        <NavLink to="/" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`} end>
-          <span className="nav-jp">あ</span> Hiragana
-        </NavLink>
-        <NavLink to="/katakana" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span className="nav-jp">ア</span> Katakana
-        </NavLink>
-        <NavLink to="/basics" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span className="nav-jp">基</span> Basics
-        </NavLink>
-        <NavLink to="/kotoba" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span className="nav-jp">語</span> Kotoba (Vocab)
-        </NavLink>
-        <NavLink to="/quiz" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span className="nav-jp">問</span> Quiz
-        </NavLink>
-        <NavLink to="/lessons" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span className="nav-jp">課</span> Lessons (1-25)
-        </NavLink>
+        {/* Mobile Level Switcher */}
+        <div style={{ padding: '8px 16px 12px', borderBottom: '1px solid var(--line)', display: 'flex', justifyContent: 'center' }}>
+          <div className="header-level-toggle" style={{ width: '100%', maxWidth: '280px', justifyContent: 'center' }}>
+            <button
+              type="button"
+              className={`level-btn ${isN5 ? 'active' : ''}`}
+              onClick={() => switchLevel('n5')}
+              style={{ flex: 1, justifyContent: 'center' }}
+            >
+              <span className="lvl-badge">N5</span>
+              <span className="lvl-name">初級 1</span>
+            </button>
+            <button
+              type="button"
+              className={`level-btn ${isN4 ? 'active' : ''}`}
+              onClick={() => switchLevel('n4')}
+              style={{ flex: 1, justifyContent: 'center' }}
+            >
+              <span className="lvl-badge">N4</span>
+              <span className="lvl-name">初級 2</span>
+            </button>
+          </div>
+        </div>
+
+        {isN4 ? (
+          <>
+            <NavLink to="/n4/lessons" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">課</span> Lessons (26–50)
+            </NavLink>
+            <NavLink to="/n4/kotoba" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">語</span> Kotoba (918 Vocab)
+            </NavLink>
+            <NavLink to="/n4/quiz" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">問</span> Quiz (N4)
+            </NavLink>
+            <NavLink to="/n5/basics" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">基</span> N5 Basics
+            </NavLink>
+          </>
+        ) : (
+          <>
+            <NavLink to="/n5/hiragana" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">あ</span> Hiragana
+            </NavLink>
+            <NavLink to="/n5/katakana" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">ア</span> Katakana
+            </NavLink>
+            <NavLink to="/n5/basics" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">基</span> Basics
+            </NavLink>
+            <NavLink to="/n5/kotoba" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">語</span> Kotoba (Vocab)
+            </NavLink>
+            <NavLink to="/n5/quiz" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">問</span> Quiz
+            </NavLink>
+            <NavLink to="/n5/lessons" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
+              <span className="nav-jp">課</span> Lessons (1–25)
+            </NavLink>
+          </>
+        )}
         <div className="mobile-nav-footer">
           <span>Developed by <strong>Ken Nebula</strong></span>
         </div>

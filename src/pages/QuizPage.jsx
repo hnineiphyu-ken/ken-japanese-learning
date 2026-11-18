@@ -2,19 +2,27 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { KANA_ROWS, DAKUTEN, YOON } from '../data/kanaData';
 import { WORDS, MINNA } from '../data/wordsData';
+import { WORDS_N4, MINNA_N4 } from '../data/wordsDataN4';
 import { BASIC_COUNT, COUNTERS, GREETINGS } from '../data/topicsData';
 import { speakJapanese, shuffle } from '../utils/speech';
+import { useActiveLevel } from '../utils/useActiveLevel';
 
-export default function QuizPage() {
+export default function QuizPage({ level: propLevel }) {
+  const { isN4: hookIsN4 } = useActiveLevel();
+  const isN4 = propLevel ? propLevel.toLowerCase() === 'n4' : hookIsN4;
+
   const [searchParams] = useSearchParams();
-  const queryType = searchParams.get('type') || 'kana';
+  const queryType = searchParams.get('type') || (isN4 ? 'kotoba' : 'kana');
   const queryLesson = searchParams.get('lesson') || '';
 
   // Settings
-  const [quizType, setQuizType] = useState(queryType);
+  const [quizType, setQuizType] = useState(isN4 ? 'kotoba' : queryType);
   const [scriptType, setScriptType] = useState('hiragana');
   const [questionCount, setQuestionCount] = useState(20);
   const [selectedLesson, setSelectedLesson] = useState(queryLesson || 'all');
+
+  const lessonStart = isN4 ? 26 : 1;
+  const lessonEnd = isN4 ? 50 : 25;
 
   // Quiz running state
   const [quizState, setQuizState] = useState('setup'); // 'setup' | 'playing' | 'result'
@@ -56,11 +64,14 @@ export default function QuizPage() {
         };
       });
     } else if (quizType === 'kotoba') {
-      let wordSubset = WORDS;
+      const activeMinna = isN4 ? MINNA_N4 : MINNA;
+      const activeWords = isN4 ? WORDS_N4 : WORDS;
+      let wordSubset = activeWords;
+
       if (selectedLesson !== 'all') {
         const lNum = parseInt(selectedLesson, 10);
-        wordSubset = MINNA.filter(w => w.l === lNum);
-        if (wordSubset.length < 5) wordSubset = MINNA;
+        wordSubset = activeMinna.filter(w => w.l === lNum);
+        if (wordSubset.length < 5) wordSubset = activeMinna;
       }
 
       pool = wordSubset.map(w => ({
@@ -147,10 +158,12 @@ export default function QuizPage() {
     <div>
       {/* Hero Card */}
       <div className="hero-card">
-        <div className="hero-tag">Practice &amp; Testing</div>
-        <h1 className="hero-title">Interactive Quiz (練習問題)</h1>
+        <div className="hero-tag">{isN4 ? 'JLPT N4 Practice · 初級 II' : 'JLPT N5 Practice · 初級 I'}</div>
+        <h1 className="hero-title">Interactive Quiz (練習問題) — {isN4 ? 'JLPT N4' : 'JLPT N5'}</h1>
         <p className="hero-desc">
-          Challenge your Japanese memory with customizable multiple choice questions. Tap audio speaker anytime to hear native pronunciation.
+          {isN4
+            ? 'Challenge your JLPT N4 Japanese vocabulary with customizable multiple-choice drills across Lessons 26 through 50.'
+            : 'Challenge your Japanese memory with customizable multiple choice questions across Kana, N5 Vocabulary (Lessons 1–25), and basic counters.'}
         </p>
       </div>
 
@@ -192,7 +205,7 @@ export default function QuizPage() {
                 <div className="quiz-type-icon jp">語</div>
                 <div>
                   <div className="quiz-type-title">Kotoba</div>
-                  <div className="quiz-type-desc">1,523 Vocabulary</div>
+                  <div className="quiz-type-desc">{isN4 ? '918 N4 Vocabulary' : '1,523 N5 Vocabulary'}</div>
                 </div>
               </button>
 
@@ -245,8 +258,12 @@ export default function QuizPage() {
                 value={selectedLesson}
                 onChange={e => setSelectedLesson(e.target.value)}
               >
-                <option value="all">All Lessons (1–25) · Full N5 Syllabus</option>
-                {Array.from({ length: 25 }, (_, i) => i + 1).map(l => (
+                <option value="all">
+                  {isN4
+                    ? 'All Lessons (26–50) · Full N4 Syllabus'
+                    : 'All Lessons (1–25) · Full N5 Syllabus'}
+                </option>
+                {Array.from({ length: 25 }, (_, i) => i + lessonStart).map(l => (
                   <option key={l} value={l}>
                     Minna no Nihongo Lesson {l} (第{l}課)
                   </option>

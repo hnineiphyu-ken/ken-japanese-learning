@@ -83,15 +83,15 @@ export default function LessonsPage() {
 
   const displayedLessons = useMemo(() => {
     if (selectedLessonFilter === 'all') {
-      return MINNA_META;
+      return activeMeta;
     }
-    return MINNA_META.filter(m => m.l === Number(selectedLessonFilter));
+    return activeMeta.filter(m => m.l === Number(selectedLessonFilter));
   }, [selectedLessonFilter]);
 
   function handleStartLessonQuiz(lessonNum) {
     const lessonWords = wordsByLesson[lessonNum] || [];
     if (lessonWords.length < 4) {
-      navigate(`/quiz?type=kotoba&lesson=${lessonNum}`);
+      navigate(`/${isN4 ? "n4" : "n5"}/quiz?type=kotoba&lesson=${lessonNum}`);
       return;
     }
 
@@ -221,8 +221,8 @@ export default function LessonsPage() {
             onChange={e => handleSelectLesson(e.target.value)}
             style={{ flex: 1, minWidth: '220px' }}
           >
-            <option value="all">All Lessons (1–25 Syllabus Overview)</option>
-            {MINNA_META.map(m => (
+            <option value="all">{isN4 ? "All Lessons (26–50 Syllabus Overview)" : "All Lessons (1–25 Syllabus Overview)"}</option>
+            {activeMeta.map(m => (
               <option key={m.l} value={m.l}>
                 Lesson {m.l}: {m.jp} — {m.t} ({wordsByLesson[m.l]?.length || 0} words)
               </option>
@@ -236,7 +236,7 @@ export default function LessonsPage() {
             <button
               type="button"
               className="lesson-action-btn"
-              disabled={Number(selectedLessonFilter) <= 1}
+              disabled={Number(selectedLessonFilter) <= minLesson}
               onClick={() => handleSelectLesson(Number(selectedLessonFilter) - 1)}
               title="Previous Lesson"
               style={{ padding: '7px 14px', fontSize: '12.5px' }}
@@ -244,12 +244,12 @@ export default function LessonsPage() {
               ◀ Prev
             </button>
             <span style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', padding: '0 4px' }}>
-              L{selectedLessonFilter} / 25
+              L{selectedLessonFilter} / {maxLesson}
             </span>
             <button
               type="button"
               className="lesson-action-btn"
-              disabled={Number(selectedLessonFilter) >= 25}
+              disabled={Number(selectedLessonFilter) >= maxLesson}
               onClick={() => handleSelectLesson(Number(selectedLessonFilter) + 1)}
               title="Next Lesson"
               style={{ padding: '7px 14px', fontSize: '12.5px' }}
@@ -263,12 +263,12 @@ export default function LessonsPage() {
               title="Show All Lessons"
               style={{ padding: '7px 14px', fontSize: '12.5px' }}
             >
-              View All (1–25)
+              View All ({minLesson}–{maxLesson})
             </button>
           </div>
         ) : (
           <div style={{ fontSize: '12.5px', color: 'var(--muted)', fontWeight: 700 }}>
-            Showing all 25 lessons
+            Showing all 25 lessons ({minLesson}–{maxLesson})
           </div>
         )}
       </div>
@@ -407,16 +407,16 @@ export default function LessonsPage() {
                       >
                         <option value="vocab">📖 Vocabulary List ({count} words)</option>
                         <option value="exercises">
-                          ✍️ Exercises (練習・問題) {LESSON_EXERCISES[meta.l] ? '— Live ✅' : '— Soon ⏳'}
+                          ✍️ Exercises (練習・問題) {activeExercises[meta.l] ? '— Live ✅' : '— Soon ⏳'}
                         </option>
                         <option value="sentences">
-                          💬 Sentences (文型・例文) {LESSON_CONTENT[meta.l]?.bunkei ? '— Live ✅' : '— Soon ⏳'}
+                          💬 Sentences (文型・例文) {activeContent[meta.l]?.bunkei ? '— Live ✅' : '— Soon ⏳'}
                         </option>
                         <option value="grammar">
-                          📐 Grammar Notes (文法解説) {LESSON_CONTENT[meta.l]?.grammar ? '— Live ✅' : '— Soon ⏳'}
+                          📐 Grammar Notes (文法解説) {activeContent[meta.l]?.grammar ? '— Live ✅' : '— Soon ⏳'}
                         </option>
                         <option value="dialogue">
-                          👥 Conversations (会話) {LESSON_CONTENT[meta.l]?.kaiwa ? '— Live ✅' : '— Soon ⏳'}
+                          👥 Conversations (会話) {activeContent[meta.l]?.kaiwa ? '— Live ✅' : '— Soon ⏳'}
                         </option>
                       </select>
                     </div>
@@ -428,7 +428,7 @@ export default function LessonsPage() {
                         </span>
                       )}
                       {activeStudyTab === 'exercises' && (
-                        LESSON_EXERCISES[meta.l] ? (
+                        activeExercises[meta.l] ? (
                           <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>
                             Live ✅
                           </span>
@@ -437,7 +437,7 @@ export default function LessonsPage() {
                         )
                       )}
                       {activeStudyTab === 'sentences' && (
-                        LESSON_CONTENT[meta.l]?.bunkei ? (
+                        activeContent[meta.l]?.bunkei ? (
                           <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>
                             4 Patterns + 6 Examples Live ✅
                           </span>
@@ -446,16 +446,16 @@ export default function LessonsPage() {
                         )
                       )}
                       {activeStudyTab === 'grammar' && (
-                        LESSON_CONTENT[meta.l]?.grammar ? (
+                        activeContent[meta.l]?.grammar ? (
                           <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>
-                            {LESSON_CONTENT[meta.l].grammar.length} Points Live ✅
+                            {activeContent[meta.l].grammar.length} Points Live ✅
                           </span>
                         ) : (
                           <span className="badge-coming-soon">Soon ⏳</span>
                         )
                       )}
                       {activeStudyTab === 'dialogue' && (
-                        LESSON_CONTENT[meta.l]?.kaiwa ? (
+                        activeContent[meta.l]?.kaiwa ? (
                           <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>
                             Full Dialogue Live ✅
                           </span>
@@ -529,7 +529,7 @@ export default function LessonsPage() {
 
                   {/* TAB 3: SENTENCES (文型 & 例文) */}
                   {activeStudyTab === 'sentences' && (
-                    LESSON_CONTENT[meta.l]?.bunkei ? (
+                    activeContent[meta.l]?.bunkei ? (
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                         {/* 1. BUNKEI (文型) */}
                         <div
@@ -556,7 +556,7 @@ export default function LessonsPage() {
                           </div>
 
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                            {LESSON_CONTENT[meta.l].bunkei.map(b => (
+                            {activeContent[meta.l].bunkei.map(b => (
                               <div
                                 key={b.no}
                                 style={{
@@ -633,7 +633,7 @@ export default function LessonsPage() {
                           </div>
 
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                            {LESSON_CONTENT[meta.l].reibun.map(r => (
+                            {activeContent[meta.l].reibun.map(r => (
                               <div
                                 key={r.no}
                                 style={{
@@ -794,7 +794,7 @@ export default function LessonsPage() {
 
                   {/* TAB 4: GRAMMAR NOTES (文法解説) */}
                   {activeStudyTab === 'grammar' && (
-                    LESSON_CONTENT[meta.l]?.grammar ? (
+                    activeContent[meta.l]?.grammar ? (
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px', flexWrap: 'wrap', gap: '8px' }}>
                           <div>
@@ -806,11 +806,11 @@ export default function LessonsPage() {
                             </p>
                           </div>
                           <span className="badge-coming-soon" style={{ background: 'var(--ink)', color: '#fff' }}>
-                            {LESSON_CONTENT[meta.l].grammar.length} Grammar Points
+                            {activeContent[meta.l].grammar.length} Grammar Points
                           </span>
                         </div>
 
-                        {LESSON_CONTENT[meta.l].grammar.map(g => (
+                        {activeContent[meta.l].grammar.map(g => (
                           <div
                             key={g.no}
                             style={{
@@ -930,7 +930,7 @@ export default function LessonsPage() {
 
                   {/* TAB 5: CONVERSATIONS (会話) */}
                   {activeStudyTab === 'dialogue' && (
-                    LESSON_CONTENT[meta.l]?.kaiwa ? (
+                    activeContent[meta.l]?.kaiwa ? (
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         {/* Dialogue Header Card */}
                         <div
@@ -946,24 +946,24 @@ export default function LessonsPage() {
                             <div>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
                                 <span style={{ background: 'var(--ink)', color: '#fff', fontSize: '11px', fontWeight: 900, padding: '2px 8px', borderRadius: '4px' }}>
-                                  {LESSON_CONTENT[meta.l].kaiwa.cd}
+                                  {activeContent[meta.l].kaiwa.cd}
                                 </span>
                                 <span className="word-tag" style={{ fontSize: '11px', fontWeight: 800 }}>
-                                  Textbook Page {LESSON_CONTENT[meta.l].kaiwa.page}
+                                  Textbook Page {activeContent[meta.l].kaiwa.page}
                                 </span>
                               </div>
                               <h3 style={{ fontSize: '18px', fontWeight: 900, color: 'var(--ink)', margin: 0 }} className="jp">
-                                第{meta.l}課 会話: {LESSON_CONTENT[meta.l].kaiwa.title} ({LESSON_CONTENT[meta.l].kaiwa.titleMy})
+                                第{meta.l}課 会話: {activeContent[meta.l].kaiwa.title} ({activeContent[meta.l].kaiwa.titleMy})
                               </h3>
                               <p style={{ fontSize: '13px', color: 'var(--muted)', margin: '4px 0 0' }}>
-                                {LESSON_CONTENT[meta.l].kaiwa.settingMy}
+                                {activeContent[meta.l].kaiwa.settingMy}
                               </p>
                             </div>
                           </div>
 
                           {/* Character badges */}
                           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
-                            {LESSON_CONTENT[meta.l].kaiwa.characters.map((c, cIdx) => (
+                            {activeContent[meta.l].kaiwa.characters.map((c, cIdx) => (
                               <div
                                 key={cIdx}
                                 style={{
@@ -982,7 +982,7 @@ export default function LessonsPage() {
 
                           {/* Script lines */}
                           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '18px' }}>
-                            {LESSON_CONTENT[meta.l].kaiwa.lines.map((line, lIdx) => (
+                            {activeContent[meta.l].kaiwa.lines.map((line, lIdx) => (
                               <div
                                 key={lIdx}
                                 style={{
@@ -1051,7 +1051,7 @@ export default function LessonsPage() {
                               💡 မိတ်ဆက်ခြင်းဆိုင်ရာ အရေးကြီးသော ယဉ်ကျေးမှုမှတ်စုများ (Cultural Notes):
                             </div>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '12px', color: 'var(--muted)', lineHeight: '1.5' }}>
-                              {LESSON_CONTENT[meta.l].kaiwa.culturalNotes.map((note, nIdx) => (
+                              {activeContent[meta.l].kaiwa.culturalNotes.map((note, nIdx) => (
                                 <div key={nIdx}>• {note}</div>
                               ))}
                             </div>

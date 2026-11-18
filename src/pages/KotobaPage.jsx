@@ -2,9 +2,14 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Pagination from '../components/Pagination';
 import { WORDS, MINNA, CATS } from '../data/wordsData';
+import { WORDS_N4, MINNA_N4, CATS_N4 } from '../data/wordsDataN4';
 import { speakJapanese } from '../utils/speech';
+import { useActiveLevel } from '../utils/useActiveLevel';
 
-export default function KotobaPage() {
+export default function KotobaPage({ level: propLevel }) {
+  const { isN4: hookIsN4 } = useActiveLevel();
+  const isN4 = propLevel ? propLevel.toLowerCase() === 'n4' : hookIsN4;
+
   const [searchParams, setSearchParams] = useSearchParams();
   const initialLesson = searchParams.get('lesson') || 'all';
   const initialCat = searchParams.get('cat') || 'All';
@@ -15,24 +20,44 @@ export default function KotobaPage() {
   const [page, setPage] = useState(1);
   const PER_PAGE = 30;
 
-  // Sync if URL query param changes
+  // Active dataset partition based on route level
+  const activeWords = isN4 ? WORDS_N4 : WORDS;
+  const activeMinna = isN4 ? MINNA_N4 : MINNA;
+  const activeCats = isN4 ? CATS_N4 : CATS;
+  const lessonStart = isN4 ? 26 : 1;
+  const lessonEnd = isN4 ? 50 : 25;
+  const lessonList = useMemo(() => {
+    return Array.from({ length: 25 }, (_, i) => i + lessonStart);
+  }, [lessonStart]);
+
+  // Sync if URL query param changes or level switches
   useEffect(() => {
     const qLesson = searchParams.get('lesson');
     if (qLesson) {
-      setSelectedLesson(qLesson);
+      const num = parseInt(qLesson, 10);
+      if (num >= lessonStart && num <= lessonEnd) {
+        setSelectedLesson(qLesson);
+      } else {
+        setSelectedLesson('all');
+      }
       setPage(1);
+    } else {
+      setSelectedLesson('all');
     }
+
     const qCat = searchParams.get('cat');
-    if (qCat) {
+    if (qCat && activeCats.includes(qCat)) {
       setSelectedCat(qCat);
       setPage(1);
+    } else {
+      setSelectedCat('All');
     }
-  }, [searchParams]);
+  }, [searchParams, isN4, lessonStart, lessonEnd, activeCats]);
 
   // Filter words
   const filteredWords = useMemo(() => {
     const q = search.trim().toLowerCase();
-    const sourcePool = selectedLesson !== 'all' ? MINNA : WORDS;
+    const sourcePool = selectedLesson !== 'all' ? activeMinna : activeWords;
 
     return sourcePool.filter(w => {
       // Lesson filter
@@ -40,7 +65,7 @@ export default function KotobaPage() {
         const lNum = parseInt(selectedLesson, 10);
         if (w.l !== lNum) return false;
       }
-      // Category filter (only applies to WORDS)
+      // Category filter (only applies when all lessons selected)
       if (selectedLesson === 'all' && selectedCat !== 'All') {
         if (w.cat !== selectedCat) return false;
       }
@@ -57,7 +82,7 @@ export default function KotobaPage() {
       }
       return true;
     });
-  }, [search, selectedCat, selectedLesson]);
+  }, [search, selectedCat, selectedLesson, activeWords, activeMinna]);
 
   const totalPages = Math.max(1, Math.ceil(filteredWords.length / PER_PAGE));
 
@@ -95,10 +120,16 @@ export default function KotobaPage() {
     <div>
       {/* Hero Card */}
       <div className="hero-card">
-        <div className="hero-tag">Core Lexicon</div>
-        <h1 className="hero-title">Kotoba Vocabulary (単語)</h1>
+        <div className="hero-tag">
+          {isN4 ? 'JLPT N4 Lexicon · 初級 II' : 'JLPT N5 Lexicon · 初級 I'}
+        </div>
+        <h1 className="hero-title">
+          Kotoba Vocabulary (単語) — {isN4 ? 'JLPT N4' : 'JLPT N5'}
+        </h1>
         <p className="hero-desc">
-          1,523 essential JLPT N5 and Minna no Nihongo (Lessons 1–25) words with Kanji, Furigana reading, Romaji, English and Myanmar translations. Click speaker icon for instant audio pronunciation.
+          {isN4
+            ? '918 essential JLPT N4 and Minna no Nihongo Shokyu 2 (Lessons 26–50) words with Kanji, Furigana reading, Romaji, English and Myanmar translations. Click speaker icon for instant audio pronunciation.'
+            : '1,523 essential JLPT N5 and Minna no Nihongo Shokyu 1 (Lessons 1–25) words with Kanji, Furigana reading, Romaji, English and Myanmar translations. Click speaker icon for instant audio pronunciation.'}
         </p>
       </div>
 
@@ -120,7 +151,7 @@ export default function KotobaPage() {
           onChange={handleCatChange}
           style={{ flex: '1 1 180px' }}
         >
-          {CATS.map(c => (
+          {activeCats.map(c => (
             <option key={c} value={c}>
               Category: {c}
             </option>
@@ -132,10 +163,12 @@ export default function KotobaPage() {
           className="custom-select"
           value={selectedLesson}
           onChange={handleLessonChange}
-          style={{ flex: '1 1 160px' }}
+          style={{ flex: '1 1 180px' }}
         >
-          <option value="all">All Lessons (1–25)</option>
-          {Array.from({ length: 25 }, (_, i) => i + 1).map(l => (
+          <option value="all">
+            {isN4 ? 'All Lessons (26–50)' : 'All Lessons (1–25)'}
+          </option>
+          {lessonList.map(l => (
             <option key={l} value={l}>
               Lesson {l} (第{l}課)
             </option>
@@ -145,7 +178,7 @@ export default function KotobaPage() {
 
       {/* Result counter */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', fontSize: '13px', color: 'var(--muted)', fontWeight: 700 }}>
-        <span>Showing {filteredWords.length} words found</span>
+        <span>Showing {filteredWords.length} {isN4 ? 'N4' : 'N5'} words found</span>
         <span>Page {page} of {totalPages}</span>
       </div>
 
@@ -178,7 +211,11 @@ export default function KotobaPage() {
             </div>
 
             <div className="word-tags" style={{ display: 'flex', gap: '6px', marginTop: '10px' }}>
-              {w.l && <span className="word-tag" style={{ background: 'var(--primary-faint)', color: 'var(--primary)' }}>L{w.l}</span>}
+              {w.l && (
+                <span className="word-tag" style={{ background: isN4 ? '#e0e7ff' : 'var(--primary-faint)', color: isN4 ? '#4338ca' : 'var(--primary)' }}>
+                  L{w.l}
+                </span>
+              )}
               {w.cat && <span className="word-tag">{w.cat}</span>}
             </div>
           </div>
@@ -188,7 +225,9 @@ export default function KotobaPage() {
       {/* Empty State */}
       {currentWords.length === 0 && (
         <div style={{ textAlign: 'center', padding: '40px 20px', background: '#fff', borderRadius: 'var(--radius-lg)', border: '1.5px solid var(--line)' }}>
-          <p style={{ fontSize: '16px', fontWeight: 700, color: 'var(--muted)' }}>No words matched your search or filter.</p>
+          <p style={{ fontSize: '16px', fontWeight: 700, color: 'var(--muted)' }}>
+            No {isN4 ? 'N4' : 'N5'} words matched your search or filter.
+          </p>
           <button
             type="button"
             className="btn-primary"

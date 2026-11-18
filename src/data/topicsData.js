@@ -2583,3 +2583,5 @@ export const TOPICS = [
     "d": "Big, new, hot, delicious, busy…"
   }
 ];
+
+export { MINNA_META_N4 } from './topicsDataN4';

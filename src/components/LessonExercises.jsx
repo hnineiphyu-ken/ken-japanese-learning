@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { LESSON_EXERCISES } from '../data/lessonExercises';
+import { LESSON_EXERCISES_N4 } from '../data/lessonExercisesN4';
 import { speakJapanese } from '../utils/speech';
 import RubyText from '../utils/RubyText';
 
-export default function LessonExercises({ lessonNum }) {
-  const data = LESSON_EXERCISES[lessonNum];
+export default function LessonExercises({ lessonNum, exercisesData }) {
+  const data = exercisesData || (Number(lessonNum) >= 26 ? LESSON_EXERCISES_N4[lessonNum] : LESSON_EXERCISES[lessonNum]);
 
   // Sub-tabs: 'renshuuA' | 'renshuuB' | 'renshuuC' | 'mondai'
   const [activeSubTab, setActiveSubTab] = useState('renshuuA');
