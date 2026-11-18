@@ -32,6 +32,32 @@ export default function QuizPage({ level: propLevel }) {
   const [answered, setAnswered] = useState(false);
   const [selectedOpt, setSelectedOpt] = useState(null);
 
+  // When level changes (N5 <-> N4), end any running quiz and reset to setup settings
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+    }
+    setQuizState('setup');
+    setQuestions([]);
+    setCurIndex(0);
+    setScore(0);
+    setAnswered(false);
+    setSelectedOpt(null);
+
+    if (isN4) {
+      setQuizType('kotoba');
+      const qL = searchParams.get('lesson');
+      const num = qL && !isNaN(Number(qL)) ? Number(qL) : null;
+      setSelectedLesson(num && num >= 26 && num <= 50 ? String(num) : 'all');
+    } else {
+      const qType = searchParams.get('type');
+      setQuizType(qType || 'kana');
+      const qL = searchParams.get('lesson');
+      const num = qL && !isNaN(Number(qL)) ? Number(qL) : null;
+      setSelectedLesson(num && num >= 1 && num <= 25 ? String(num) : 'all');
+    }
+  }, [isN4]);
+
   useEffect(() => {
     if (queryLesson) {
       setQuizType('kotoba');
