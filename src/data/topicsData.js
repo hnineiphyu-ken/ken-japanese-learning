@@ -2584,4 +2584,4 @@ export const TOPICS = [
   }
 ];
 
-export { MINNA_META_N4 } from './topicsDataN4';
+export { MINNA_META_N4 } from './topicsDataN4.js';

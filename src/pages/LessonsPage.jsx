@@ -1,25 +1,40 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { MINNA_META } from '../data/topicsData';
+import { MINNA_META_N4 } from '../data/topicsDataN4';
 import { MINNA } from '../data/wordsData';
+import { MINNA_N4 } from '../data/wordsDataN4';
 import { speakJapanese, shuffle } from '../utils/speech';
 import Pagination from '../components/Pagination';
 import LessonExercises from '../components/LessonExercises';
 import { LESSON_EXERCISES } from '../data/lessonExercises';
+import { LESSON_EXERCISES_N4 } from '../data/lessonExercisesN4';
 import { LESSON_CONTENT } from '../data/lessonContent';
+import { LESSON_CONTENT_N4 } from '../data/lessonContentN4';
 import RubyText from '../utils/RubyText';
+import { useActiveLevel } from '../utils/useActiveLevel';
 
-export default function LessonsPage() {
+export default function LessonsPage({ level: propLevel }) {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const { isN4: hookIsN4 } = useActiveLevel();
+  const isN4 = propLevel ? propLevel.toLowerCase() === 'n4' : hookIsN4;
 
-  // Selected lesson filter: 'all' | number (e.g. 1, 2, ... 25)
+  const activeMeta = isN4 ? MINNA_META_N4 : MINNA_META;
+  const activeContent = isN4 ? LESSON_CONTENT_N4 : LESSON_CONTENT;
+  const activeExercises = isN4 ? LESSON_EXERCISES_N4 : LESSON_EXERCISES;
+  const activeMinna = isN4 ? MINNA_N4 : MINNA;
+  const minLesson = isN4 ? 26 : 1;
+  const maxLesson = isN4 ? 50 : 25;
+
+  // Selected lesson filter: 'all' | number
   const queryLesson = searchParams.get('lesson');
-  const initialLesson = queryLesson && !isNaN(Number(queryLesson)) ? Number(queryLesson) : 'all';
-  const [selectedLessonFilter, setSelectedLessonFilter] = useState(initialLesson);
+  const parsedLesson = queryLesson && !isNaN(Number(queryLesson)) ? Number(queryLesson) : null;
+  const validInitialLesson = parsedLesson && parsedLesson >= minLesson && parsedLesson <= maxLesson ? parsedLesson : 'all';
+  const [selectedLessonFilter, setSelectedLessonFilter] = useState(validInitialLesson);
 
   // Active expanded lesson for study: number | null
-  const [expandedLesson, setExpandedLesson] = useState(initialLesson !== 'all' ? initialLesson : null);
+  const [expandedLesson, setExpandedLesson] = useState(validInitialLesson !== 'all' ? validInitialLesson : null);
   // Active study section inside expanded lesson: 'vocab' | 'exercises' | 'sentences' | 'grammar' | 'dialogue'
   const [activeStudyTab, setActiveStudyTab] = useState('vocab');
   const [lessonWordPage, setLessonWordPage] = useState(1);
@@ -28,15 +43,33 @@ export default function LessonsPage() {
   // Active quiz state: null | { lessonNum, questions, curIndex, score, answered, selectedOpt, finished }
   const [activeQuiz, setActiveQuiz] = useState(null);
 
+  // Sync if route level or query param changes
+  useEffect(() => {
+    const qLesson = searchParams.get('lesson');
+    if (qLesson && !isNaN(Number(qLesson))) {
+      const num = Number(qLesson);
+      if (num >= minLesson && num <= maxLesson) {
+        setSelectedLessonFilter(num);
+        setExpandedLesson(num);
+      } else {
+        setSelectedLessonFilter('all');
+        setExpandedLesson(null);
+      }
+    } else {
+      setSelectedLessonFilter('all');
+      setExpandedLesson(null);
+    }
+  }, [isN4, minLesson, maxLesson, searchParams]);
+
   // Group words by lesson
   const wordsByLesson = useMemo(() => {
     const map = {};
-    MINNA.forEach(w => {
+    activeMinna.forEach(w => {
       if (!map[w.l]) map[w.l] = [];
       map[w.l].push(w);
     });
     return map;
-  }, []);
+  }, [activeMinna]);
 
   function handleSelectLesson(val) {
     if (val === 'all') {
@@ -166,10 +199,18 @@ export default function LessonsPage() {
     <div>
       {/* Hero Card */}
       <div className="hero-card">
-        <div className="hero-tag">Structured Coursework</div>
-        <h1 className="hero-title">Minna no Nihongo Lessons 1–25 (第1課〜第25課)</h1>
+        <div className="hero-tag">
+          {isN4 ? 'JLPT N4 Syllabus · 初級 II' : 'JLPT N5 Syllabus · 初級 I'}
+        </div>
+        <h1 className="hero-title">
+          {isN4
+            ? 'Minna no Nihongo Lessons 26–50 (第26課〜第50課)'
+            : 'Minna no Nihongo Lessons 1–25 (第1課〜第25課)'}
+        </h1>
         <p className="hero-desc">
-          Complete Shokyu 1 syllabus. Study all 1,068 chapter vocabulary words with native pronunciation, or take a dedicated practice quiz for each lesson.
+          {isN4
+            ? 'Complete Shokyu 2 syllabus. Study all 918 chapter vocabulary words, Bunkei patterns, Reibun dialogues with Q&A, situational Kaiwa, Myanmar grammar explanations, and interactive exercises (練習 A, B, C, 問題).'
+            : 'Complete Shokyu 1 syllabus. Study all 1,068 chapter vocabulary words with native pronunciation, Bunkei patterns, Reibun dialogues with Q&A, situational Kaiwa, Myanmar grammar explanations, and interactive exercises (練習 A, B, C, 問題).'}
         </p>
 
         {/* Syllabus Roadmap Announcement */}
@@ -188,9 +229,19 @@ export default function LessonsPage() {
         >
           <span style={{ fontSize: '18px' }}>✨</span>
           <div style={{ flex: '1 1 300px', fontSize: '13px', lineHeight: '1.5', color: 'var(--ink)' }}>
-            <b>Minna no Nihongo N5 Syllabus Roadmap:</b> All 1,068 vocabulary words are live. <b>Lessons 1 through 7 Complete Coursework (単語, 文型, 例文, 会話, 文法解説, 練習 A·B·C &amp; 問題)</b> are now 100% active with interactive self-testing &amp; native audio pronunciation!
+            {isN4 ? (
+              <>
+                <b>Minna no Nihongo N4 Syllabus:</b> All 25 Lessons (Lessons 26 to 50) and 918 vocabulary words are 100% active with complete coursework, exercises, drills, and answer keys!
+              </>
+            ) : (
+              <>
+                <b>Minna no Nihongo N5 Syllabus:</b> All 25 Lessons (Lessons 1 to 25) are 100% complete with full coursework, exercises, authentic furigana ruby map &amp; native audio pronunciation!
+              </>
+            )}
           </div>
-          <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>Lessons 1–7 Live ✅</span>
+          <span className="badge-coming-soon" style={{ background: '#16a34a', color: '#ffffff' }}>
+            {isN4 ? 'Lessons 26–50 Live ✅' : 'Lessons 1–25 Live ✅'}
+          </span>
         </div>
       </div>
 
