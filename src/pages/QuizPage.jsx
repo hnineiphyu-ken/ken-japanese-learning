@@ -394,11 +394,19 @@ export default function QuizPage({ level: propLevel }) {
                   onClick={() => handleSelect(opt, idx)}
                   style={{ textAlign: 'left', padding: '12px 14px' }}
                 >
-                  <span style={{ fontWeight: 800, fontSize: '14px' }}>{opt.text}</span>
+                  <span style={{ fontWeight: 800, fontSize: '14px' }}>{answered && opt.isCorrect ? '✓ ' : ''}{answered && selectedOpt === idx && !opt.isCorrect ? '✗ ' : ''}{opt.text}</span>
                 </button>
               );
             })}
           </div>
+
+          {answered && (
+            <p role="status" aria-live="polite" style={{ marginTop: '14px', fontSize: '14px', fontWeight: 800, color: currentQ.options[selectedOpt]?.isCorrect ? 'var(--ok)' : 'var(--bad)' }}>
+              {currentQ.options[selectedOpt]?.isCorrect
+                ? '✓ Correct!'
+                : `✗ Wrong — correct answer: ${currentQ.options.find(o => o.isCorrect)?.text ?? ''}`}
+            </p>
+          )}
 
           <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <button

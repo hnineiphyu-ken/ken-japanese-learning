@@ -261,7 +261,7 @@ export default function LessonsPage({ level: propLevel }) {
           borderRadius: 'var(--radius-md)'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 320px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 320px', minWidth: 0 }}>
           <label htmlFor="lesson-jump-select" style={{ fontSize: '13.5px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
             📚 Select Lesson:
           </label>
@@ -270,12 +270,12 @@ export default function LessonsPage({ level: propLevel }) {
             className="custom-select"
             value={selectedLessonFilter}
             onChange={e => handleSelectLesson(e.target.value)}
-            style={{ flex: 1, minWidth: '220px' }}
+            style={{ flex: '1 1 0', minWidth: 0, maxWidth: '100%' }}
           >
             <option value="all">{isN4 ? "All Lessons (26–50 Syllabus Overview)" : "All Lessons (1–25 Syllabus Overview)"}</option>
             {activeMeta.map(m => (
               <option key={m.l} value={m.l}>
-                Lesson {m.l}: {m.jp} — {m.t} ({wordsByLesson[m.l]?.length || 0} words)
+                L{m.l}: {m.jp} ({wordsByLesson[m.l]?.length || 0} words)
               </option>
             ))}
           </select>
@@ -454,7 +454,7 @@ export default function LessonsPage({ level: propLevel }) {
                         className="custom-select"
                         value={activeStudyTab}
                         onChange={e => setActiveStudyTab(e.target.value)}
-                        style={{ flex: 1, minWidth: '220px' }}
+                        style={{ flex: '1 1 0', minWidth: 0, maxWidth: '100%' }}
                       >
                         <option value="vocab">📖 Vocabulary List ({count} words)</option>
                         <option value="exercises">
