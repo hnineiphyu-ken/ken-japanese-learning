@@ -228,7 +228,7 @@ export default function LessonsPage({ level: propLevel }) {
           }}
         >
           <span style={{ fontSize: '18px' }}>✨</span>
-          <div style={{ flex: '1 1 300px', fontSize: '13px', lineHeight: '1.5', color: 'var(--ink)' }}>
+          <div style={{ flex: '1 1 200px', minWidth: 0, fontSize: '13px', lineHeight: '1.5', color: 'var(--ink)' }}>
             {isN4 ? (
               <>
                 <b>Minna no Nihongo N4 Syllabus:</b> All 25 Lessons (Lessons 26 to 50) and 918 vocabulary words are 100% active with complete coursework, exercises, drills, and answer keys!
@@ -249,7 +249,7 @@ export default function LessonsPage({ level: propLevel }) {
       <div
         className="card"
         style={{
-          padding: '16px 20px',
+          padding: '14px 16px',
           marginBottom: '20px',
           display: 'flex',
           alignItems: 'center',
@@ -261,16 +261,17 @@ export default function LessonsPage({ level: propLevel }) {
           borderRadius: 'var(--radius-md)'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flex: '1 1 320px', minWidth: 0 }}>
-          <label htmlFor="lesson-jump-select" style={{ fontSize: '13.5px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
-            📚 Select Lesson:
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: '1 1 240px', minWidth: 0, width: '100%' }}>
+          <label htmlFor="lesson-jump-select" style={{ fontSize: '13px', fontWeight: 800, color: 'var(--ink)', whiteSpace: 'nowrap' }}>
+            📚 Select:
           </label>
           <select
             id="lesson-jump-select"
             className="custom-select"
             value={selectedLessonFilter}
             onChange={e => handleSelectLesson(e.target.value)}
-            style={{ flex: '1 1 0', minWidth: 0, maxWidth: '100%' }}
+            style={{ flex: '1 1 0', minWidth: 0, width: '100%', maxWidth: '100%' }}
+          >
           >
             <option value="all">{isN4 ? "All Lessons (26–50 Syllabus Overview)" : "All Lessons (1–25 Syllabus Overview)"}</option>
             {activeMeta.map(m => (

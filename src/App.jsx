@@ -2,6 +2,7 @@ import React, { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 
+const LandingPage = lazy(() => import('./pages/LandingPage'));
 const HiraganaPage = lazy(() => import('./pages/HiraganaPage'));
 const KatakanaPage = lazy(() => import('./pages/KatakanaPage'));
 const BasicsPage = lazy(() => import('./pages/BasicsPage'));
@@ -13,8 +14,8 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* Root Redirects to /n5 */}
-        <Route index element={<Navigate to="/n5" replace />} />
+        {/* Root Level Portal */}
+        <Route index element={<LandingPage />} />
 
         {/* JLPT N5 Scope (初級 1 · Lessons 1–25) */}
         <Route path="n5">

@@ -1,9 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useActiveLevel } from '../utils/useActiveLevel';
 
 export default function Navigation() {
   const { isN4 } = useActiveLevel();
+  const location = useLocation();
+
+  // Hide horizontal subnavigation bar on the Landing / Level Selection Portal
+  if (location.pathname === '/' || location.pathname === '') {
+    return null;
+  }
 
   return (
     <div className="nav-scroller">

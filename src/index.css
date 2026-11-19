@@ -53,6 +53,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .jp {
@@ -186,8 +187,29 @@ a {
   letter-spacing: -0.2px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .header-inner .header-level-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-text .sub {
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .portal-indicator-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-text .sub {
+    display: none;
+  }
+  .header-portal-btn .portal-text {
     display: none;
   }
 }
@@ -1312,3 +1334,533 @@ rt {
   color: var(--ink);
   font-weight: 800;
 }
+
+/* ==========================================================================
+   LANDING PORTAL & MULTI-LEVEL SELECTION ARCHITECTURE
+   ========================================================================== */
+
+/* Header controls wrapper */
+.header-actions,
+.header-right-cluster {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+/* Return to Portal Button (In-level Header) */
+.header-portal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--bg-card-subtle);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.header-portal-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.header-portal-btn .portal-icon {
+  font-size: 14px;
+  color: var(--primary);
+  line-height: 1;
+}
+
+/* Landing Portal Indicator Pill */
+.portal-indicator-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1.5px solid rgba(5, 150, 105, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #047857;
+}
+.portal-indicator-pill .portal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+/* Mobile Portal Return Action Row */
+.mobile-portal-action-row {
+  padding: 6px 4px 10px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.mobile-portal-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #fff5f5;
+  border: 1.5px solid #fecaca;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--ink);
+  transition: var(--transition);
+}
+.mobile-portal-back-btn:hover {
+  background: #fee2e2;
+  border-color: var(--primary);
+}
+.mpb-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mpb-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.mpb-title {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #991b1b;
+  line-height: 1.2;
+}
+.mpb-sub {
+  font-size: 11px;
+  color: #b91c1c;
+  font-weight: 500;
+  margin-top: 2px;
+}
+.mpb-arrow {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--primary);
+}
+
+.mobile-landing-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 0;
+}
+.mobile-nav-heading {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--faint);
+  padding: 6px 12px 2px;
+}
+
+/* Landing Page Container */
+.landing-page-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Hero Section */
+.portal-hero {
+  text-align: center;
+  padding: 38px 24px 30px;
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg-card-subtle) 100%);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.portal-kanji-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  background: var(--primary-faint);
+  border: 1px solid rgba(199, 62, 44, 0.2);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+.portal-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.portal-desc {
+  font-size: 14.5px;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Tracks Selection Section */
+.portal-tracks-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.portal-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-title-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.portal-tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Track Card */
+.portal-track-card {
+  background: #ffffff;
+  border: 2px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.portal-track-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--ink);
+}
+
+.portal-watermark {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 110px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(15, 23, 42, 0.035);
+  font-family: "Zen Kaku Gothic New", serif;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.track-level-pill {
+  font-size: 11.5px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.n5-pill {
+  background: rgba(199, 62, 44, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(199, 62, 44, 0.25);
+}
+.n4-pill {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+.track-status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ok);
+  background: var(--ok-bg);
+  border: 1px solid var(--ok-line);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.track-card-title {
+  font-size: 21px;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.01em;
+}
+.track-card-subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--faint);
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+.track-card-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.track-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
+}
+.stat-box {
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  padding: 8px 4px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stat-number {
+  font-size: 15px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.stat-caption {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.portal-enter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  font-size: 14.5px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #ffffff;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+.n5-btn {
+  background: var(--primary);
+}
+.n5-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+.n4-btn {
+  background: #1e40af;
+}
+.n4-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.track-quick-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+.quick-chip {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.quick-chip:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: #ffffff;
+}
+
+/* Roadmap Card */
+.portal-roadmap-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1.5px dashed var(--line);
+  border-radius: var(--radius-md);
+  gap: 14px;
+}
+.roadmap-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.roadmap-pill {
+  font-size: 11px;
+  font-weight: 800;
+  background: var(--bg-card-subtle);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.roadmap-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0;
+}
+.roadmap-sub {
+  font-size: 12px;
+  color: var(--faint);
+  margin: 0;
+}
+.roadmap-badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* Architecture Highlights Strip */
+.portal-highlights-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 4px;
+}
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+  padding: 14px 14px;
+}
+.highlight-icon {
+  font-size: 20px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.highlight-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.highlight-text strong {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.highlight-text span {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Mobile & Tablet Responsive Adjustments */
+@media (max-width: 768px) {
+  .portal-tracks-grid {
+    grid-template-columns: 1fr;
+  }
+  .portal-highlights-strip {
+    grid-template-columns: 1fr;
+  }
+  .portal-title {
+    font-size: 24px;
+  }
+  .portal-hero {
+    padding: 26px 18px 22px;
+  }
+  .portal-roadmap-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .portal-indicator-pill {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand-text .sub {
+    display: none !important;
+  }
+  .header-portal-btn .portal-text {
+    display: none !important;
+  }
+  .header-portal-btn {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portal-title {
+    font-size: 21px;
+  }
+  .track-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
