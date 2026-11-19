@@ -272,7 +272,6 @@ export default function LessonsPage({ level: propLevel }) {
             onChange={e => handleSelectLesson(e.target.value)}
             style={{ flex: '1 1 0', minWidth: 0, width: '100%', maxWidth: '100%' }}
           >
-          >
             <option value="all">{isN4 ? "All Lessons (26–50 Syllabus Overview)" : "All Lessons (1–25 Syllabus Overview)"}</option>
             {activeMeta.map(m => (
               <option key={m.l} value={m.l}>
