@@ -1884,3 +1884,114 @@ rt {
   }
 }
 
+/* ==========================================================================
+   WORKSTREAM B — QUIZ FURIGANA, LESSON RANGE & CONJUNCTION BLANK STYLING
+   ========================================================================== */
+
+.quiz-prompt {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--ink);
+  line-height: 1.75;
+  word-break: break-word;
+}
+
+.quiz-prompt-sentence {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 2.15;
+  padding: 6px 10px;
+}
+
+.quiz-prompt ruby rt {
+  font-size: 0.42em;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.02em;
+}
+
+.quiz-prompt-sentence ruby rt {
+  font-size: 0.48em;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.quiz-opt-btn ruby rt {
+  font-size: 0.62em;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.quiz-blank-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  padding: 0 10px;
+  margin: 0 4px;
+  border-bottom: 3px solid var(--primary);
+  background: var(--primary-faint);
+  color: var(--primary);
+  border-radius: 6px 6px 2px 2px;
+  font-weight: 900;
+  line-height: 1.35;
+  vertical-align: baseline;
+  transition: var(--transition);
+}
+
+.quiz-blank-slot.filled {
+  background: var(--ok-bg);
+  border-bottom-color: var(--ok-line);
+  color: var(--ok);
+}
+
+.quiz-range-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quiz-range-field {
+  flex: 1 1 180px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.quiz-range-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.quiz-range-sep {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--faint);
+}
+
+.quiz-feedback-box {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: var(--bg-card-subtle);
+  border: 1.5px solid var(--line-soft);
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 640px) {
+  .quiz-prompt {
+    font-size: 30px;
+  }
+  .quiz-prompt-sentence {
+    font-size: 19px;
+    line-height: 2.25;
+  }
+  .quiz-range-sep {
+    display: none;
+  }
+}
+
+

@@ -7,10 +7,6 @@ import { MINNA_N4 } from '../data/wordsDataN4';
 import { speakJapanese, shuffle } from '../utils/speech';
 import Pagination from '../components/Pagination';
 import LessonExercises from '../components/LessonExercises';
-import { LESSON_EXERCISES } from '../data/lessonExercises';
-import { LESSON_EXERCISES_N4 } from '../data/lessonExercisesN4';
-import { LESSON_CONTENT } from '../data/lessonContent';
-import { LESSON_CONTENT_N4 } from '../data/lessonContentN4';
 import RubyText from '../utils/RubyText';
 import { useActiveLevel } from '../utils/useActiveLevel';
 
@@ -21,11 +17,13 @@ export default function LessonsPage({ level: propLevel }) {
   const isN4 = propLevel ? propLevel.toLowerCase() === 'n4' : hookIsN4;
 
   const activeMeta = isN4 ? MINNA_META_N4 : MINNA_META;
-  const activeContent = isN4 ? LESSON_CONTENT_N4 : LESSON_CONTENT;
-  const activeExercises = isN4 ? LESSON_EXERCISES_N4 : LESSON_EXERCISES;
   const activeMinna = isN4 ? MINNA_N4 : MINNA;
   const minLesson = isN4 ? 26 : 1;
   const maxLesson = isN4 ? 50 : 25;
+
+  // Dynamically loaded level datasets (code-split to keep LessonsPage chunk < 500 kB)
+  const [activeContent, setActiveContent] = useState({});
+  const [activeExercises, setActiveExercises] = useState({});
 
   // Selected lesson filter: 'all' | number
   const queryLesson = searchParams.get('lesson');
@@ -42,6 +40,47 @@ export default function LessonsPage({ level: propLevel }) {
 
   // Active quiz state: null | { lessonNum, questions, curIndex, score, answered, selectedOpt, finished }
   const [activeQuiz, setActiveQuiz] = useState(null);
+
+  // Dynamically load active level coursework (separates N5 and N4 into independent chunks)
+  useEffect(() => {
+    let cancelled = false;
+    const loader = isN4
+      ? import('../data/lessonContentN4.js').then(m => m.LESSON_CONTENT_N4)
+      : import('../data/lessonContent.js').then(m => m.LESSON_CONTENT);
+
+    loader
+      .then(data => {
+        if (!cancelled) setActiveContent(data || {});
+      })
+      .catch(() => {
+        if (!cancelled) setActiveContent({});
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isN4]);
+
+  // Lazy-load exercises dataset only when the user switches to the Exercises tab
+  useEffect(() => {
+    if (activeStudyTab !== 'exercises') return;
+    let cancelled = false;
+    const loader = isN4
+      ? import('../data/lessonExercisesN4.js').then(m => m.LESSON_EXERCISES_N4)
+      : import('../data/lessonExercises.js').then(m => m.LESSON_EXERCISES);
+
+    loader
+      .then(data => {
+        if (!cancelled) setActiveExercises(data || {});
+      })
+      .catch(() => {
+        if (!cancelled) setActiveExercises({});
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isN4, activeStudyTab]);
 
   // Sync if route level or query param changes
   useEffect(() => {
@@ -458,7 +497,7 @@ export default function LessonsPage({ level: propLevel }) {
                       >
                         <option value="vocab">📖 Vocabulary List ({count} words)</option>
                         <option value="exercises">
-                          ✍️ Exercises (練習・問題) {activeExercises[meta.l] ? '— Live ✅' : '— Soon ⏳'}
+                          ✍️ Exercises (練習・問題) — Live ✅
                         </option>
                         <option value="sentences">
                           💬 Sentences (文型・例文) {activeContent[meta.l]?.bunkei ? '— Live ✅' : '— Soon ⏳'}
@@ -575,7 +614,7 @@ export default function LessonsPage({ level: propLevel }) {
 
                   {/* TAB 2: EXERCISES & DRILLS (練習・問題) */}
                   {activeStudyTab === 'exercises' && (
-                    <LessonExercises lessonNum={meta.l} />
+                    <LessonExercises lessonNum={meta.l} exercisesData={activeExercises[meta.l]} />
                   )}
 
                   {/* TAB 3: SENTENCES (文型 & 例文) */}

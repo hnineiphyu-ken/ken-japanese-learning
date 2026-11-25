@@ -1,11 +1,45 @@
-import React, { useState } from 'react';
-import { LESSON_EXERCISES } from '../data/lessonExercises';
-import { LESSON_EXERCISES_N4 } from '../data/lessonExercisesN4';
+import React, { useState, useEffect } from 'react';
 import { speakJapanese } from '../utils/speech';
 import RubyText from '../utils/RubyText';
 
 export default function LessonExercises({ lessonNum, exercisesData }) {
-  const data = exercisesData || (Number(lessonNum) >= 26 ? LESSON_EXERCISES_N4[lessonNum] : LESSON_EXERCISES[lessonNum]);
+  const [loadedData, setLoadedData] = useState(exercisesData || null);
+  const [loading, setLoading] = useState(!exercisesData);
+
+  useEffect(() => {
+    if (exercisesData) {
+      setLoadedData(exercisesData);
+      setLoading(false);
+      return;
+    }
+
+    let cancelled = false;
+    setLoading(true);
+    const isN4Lesson = Number(lessonNum) >= 26;
+    const loader = isN4Lesson
+      ? import('../data/lessonExercisesN4.js').then(m => m.LESSON_EXERCISES_N4[lessonNum])
+      : import('../data/lessonExercises.js').then(m => m.LESSON_EXERCISES[lessonNum]);
+
+    loader
+      .then(res => {
+        if (!cancelled) {
+          setLoadedData(res || null);
+          setLoading(false);
+        }
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setLoadedData(null);
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [lessonNum, exercisesData]);
+
+  const data = exercisesData || loadedData;
 
   // Sub-tabs: 'renshuuA' | 'renshuuB' | 'renshuuC' | 'mondai'
   const [activeSubTab, setActiveSubTab] = useState('renshuuA');
@@ -47,6 +81,14 @@ export default function LessonExercises({ lessonNum, exercisesData }) {
       }
       return next;
     });
+  }
+
+  if (loading) {
+    return (
+      <div style={{ padding: '28px 16px', textAlign: 'center', color: 'var(--muted)', fontSize: '13.5px', fontWeight: 700 }}>
+        Loading Lesson {lessonNum} Exercises...
+      </div>
+    );
   }
 
   if (!data) {

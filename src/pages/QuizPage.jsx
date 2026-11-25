@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { KANA_ROWS, DAKUTEN, YOON } from '../data/kanaData';
+import { KANA_ROWS, DAKUTEN } from '../data/kanaData';
 import { WORDS, MINNA } from '../data/wordsData';
 import { WORDS_N4, MINNA_N4 } from '../data/wordsDataN4';
 import { BASIC_COUNT, COUNTERS, GREETINGS } from '../data/topicsData';
 import { speakJapanese, shuffle } from '../utils/speech';
 import { useActiveLevel } from '../utils/useActiveLevel';
+import RubyText from '../utils/RubyText';
 
 export default function QuizPage({ level: propLevel }) {
   const { isN4: hookIsN4 } = useActiveLevel();
@@ -15,17 +16,23 @@ export default function QuizPage({ level: propLevel }) {
   const queryType = searchParams.get('type') || (isN4 ? 'kotoba' : 'kana');
   const queryLesson = searchParams.get('lesson') || '';
 
+  const lessonStart = isN4 ? 26 : 1;
+  const lessonEnd = isN4 ? 50 : 25;
+
   // Settings
   const [quizType, setQuizType] = useState(isN4 ? 'kotoba' : queryType);
   const [scriptType, setScriptType] = useState('hiragana');
   const [questionCount, setQuestionCount] = useState(20);
-  const [selectedLesson, setSelectedLesson] = useState(queryLesson || 'all');
 
-  const lessonStart = isN4 ? 26 : 1;
-  const lessonEnd = isN4 ? 50 : 25;
+  // Flexible Lesson Scope: 'all' | 'single' | 'range'
+  const [lessonScopeMode, setLessonScopeMode] = useState(queryLesson ? 'single' : 'all');
+  const [selectedLesson, setSelectedLesson] = useState(queryLesson || String(lessonStart));
+  const [rangeFrom, setRangeFrom] = useState(lessonStart);
+  const [rangeTo, setRangeTo] = useState(Math.min(lessonStart + 4, lessonEnd));
 
   // Quiz running state
   const [quizState, setQuizState] = useState('setup'); // 'setup' | 'playing' | 'result'
+  const [loadingQuiz, setLoadingQuiz] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [curIndex, setCurIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -44,106 +51,205 @@ export default function QuizPage({ level: propLevel }) {
     setAnswered(false);
     setSelectedOpt(null);
 
+    const start = isN4 ? 26 : 1;
+    const end = isN4 ? 50 : 25;
+    setRangeFrom(start);
+    setRangeTo(Math.min(start + 4, end));
+
+    const qL = searchParams.get('lesson');
+    const num = qL && !isNaN(Number(qL)) ? Number(qL) : null;
+    if (num && num >= start && num <= end) {
+      setLessonScopeMode('single');
+      setSelectedLesson(String(num));
+    } else {
+      setLessonScopeMode('all');
+      setSelectedLesson(String(start));
+    }
+
     if (isN4) {
-      setQuizType('kotoba');
-      const qL = searchParams.get('lesson');
-      const num = qL && !isNaN(Number(qL)) ? Number(qL) : null;
-      setSelectedLesson(num && num >= 26 && num <= 50 ? String(num) : 'all');
+      const qType = searchParams.get('type');
+      const validN4Types = ['kotoba', 'grammar', 'conjunction'];
+      setQuizType(validN4Types.includes(qType) ? qType : 'kotoba');
     } else {
       const qType = searchParams.get('type');
       setQuizType(qType || 'kana');
-      const qL = searchParams.get('lesson');
-      const num = qL && !isNaN(Number(qL)) ? Number(qL) : null;
-      setSelectedLesson(num && num >= 1 && num <= 25 ? String(num) : 'all');
     }
   }, [isN4]);
 
   useEffect(() => {
     if (queryLesson) {
-      setQuizType('kotoba');
-      setSelectedLesson(queryLesson);
-    }
-  }, [queryLesson]);
-
-  function generateQuiz() {
-    let pool = [];
-
-    if (quizType === 'kana') {
-      const basicList = [];
-      KANA_ROWS.forEach(r => {
-        r.items.forEach(it => {
-          if (it) basicList.push({ hira: it[0], kata: it[1], rom: it[2] });
-        });
-      });
-      DAKUTEN.forEach(it => {
-        basicList.push({ hira: it[0], kata: it[1], rom: it[2] });
-      });
-
-      pool = basicList.map(item => {
-        const char = scriptType === 'katakana' ? item.kata : item.hira;
-        return {
-          prompt: char,
-          sub: scriptType === 'katakana' ? 'Katakana' : 'Hiragana',
-          speakText: char,
-          correctAnswer: item.rom,
-          allPool: basicList.map(b => b.rom)
-        };
-      });
-    } else if (quizType === 'kotoba') {
-      const activeMinna = isN4 ? MINNA_N4 : MINNA;
-      const activeWords = isN4 ? WORDS_N4 : WORDS;
-      let wordSubset = activeWords;
-
-      if (selectedLesson !== 'all') {
-        const lNum = parseInt(selectedLesson, 10);
-        wordSubset = activeMinna.filter(w => w.l === lNum);
-        if (wordSubset.length < 5) wordSubset = activeMinna;
+      const num = Number(queryLesson);
+      if (!isNaN(num) && num >= lessonStart && num <= lessonEnd) {
+        setQuizType('kotoba');
+        setLessonScopeMode('single');
+        setSelectedLesson(String(num));
       }
+    }
+  }, [queryLesson, lessonStart, lessonEnd]);
 
-      pool = wordSubset.map(w => ({
-        prompt: w.jp,
-        sub: `${w.rd || ''} ${w.rom ? '(' + w.rom + ')' : ''}`,
-        speakText: w.rd || w.jp,
-        correctAnswer: `${w.en} · ${w.my}`,
-        shortAnswer: w.en,
-        allPool: wordSubset.map(item => `${item.en} · ${item.my}`)
-      }));
-    } else {
-      // Basics pool
-      const basicsList = [
-        ...BASIC_COUNT.map(r => ({ prompt: r[1], sub: r[2], speakText: r[1], ans: `${r[3]} · ${r[4]}` })),
-        ...COUNTERS.flatMap(c => c.rows.map(r => ({ prompt: r[1], sub: `${r[2]} (${c.name || c.en})`, speakText: r[1], ans: `${r[3]} · ${r[4]}` }))),
-        ...GREETINGS.map(g => ({ prompt: g.jp, sub: g.rom, speakText: g.jp, ans: `${g.en} · ${g.my}` }))
-      ];
+  function handleRangeFromChange(val) {
+    const num = Number(val);
+    setRangeFrom(num);
+    if (num > rangeTo) setRangeTo(num);
+  }
 
-      pool = basicsList.map(b => ({
-        prompt: b.prompt,
-        sub: b.sub,
-        speakText: b.speakText,
-        correctAnswer: b.ans,
-        allPool: basicsList.map(item => item.ans)
-      }));
+  function handleRangeToChange(val) {
+    const num = Number(val);
+    setRangeTo(num);
+    if (num < rangeFrom) setRangeFrom(num);
+  }
+
+  function matchesLessonScope(lessonNumber) {
+    if (lessonScopeMode === 'all') return true;
+    if (lessonScopeMode === 'single') return Number(lessonNumber) === Number(selectedLesson);
+    if (lessonScopeMode === 'range') {
+      const n = Number(lessonNumber);
+      return n >= rangeFrom && n <= rangeTo;
+    }
+    return true;
+  }
+
+  async function generateQuiz() {
+    setLoadingQuiz(true);
+    let quizList = [];
+
+    try {
+      if (quizType === 'kana') {
+        const basicList = [];
+        KANA_ROWS.forEach(r => {
+          r.items.forEach(it => {
+            if (it) basicList.push({ hira: it[0], kata: it[1], rom: it[2] });
+          });
+        });
+        DAKUTEN.forEach(it => {
+          basicList.push({ hira: it[0], kata: it[1], rom: it[2] });
+        });
+
+        const pool = basicList.map(item => {
+          const char = scriptType === 'katakana' ? item.kata : item.hira;
+          return {
+            prompt: char,
+            sub: scriptType === 'katakana' ? 'Katakana' : 'Hiragana',
+            speakText: char,
+            correctAnswer: item.rom,
+            allPool: basicList.map(b => b.rom)
+          };
+        });
+
+        const shuffled = shuffle(pool);
+        const count = Math.min(questionCount, shuffled.length);
+        for (let i = 0; i < count; i++) {
+          const target = shuffled[i];
+          const wrongList = shuffle(target.allPool.filter(a => a !== target.correctAnswer)).slice(0, 3);
+          quizList.push({
+            type: 'kana',
+            prompt: target.prompt,
+            sub: target.sub,
+            speakText: target.speakText,
+            options: shuffle([
+              { text: target.correctAnswer, isCorrect: true },
+              ...wrongList.map(w => ({ text: w, isCorrect: false }))
+            ])
+          });
+        }
+      } else if (quizType === 'kotoba') {
+        const activeMinna = isN4 ? MINNA_N4 : MINNA;
+        const activeWords = isN4 ? WORDS_N4 : WORDS;
+        let wordSubset = lessonScopeMode === 'all'
+          ? activeWords
+          : activeMinna.filter(w => matchesLessonScope(w.l));
+
+        if (wordSubset.length < 4) {
+          wordSubset = activeMinna;
+        }
+
+        const distractorPool = activeMinna.map(item => `${item.en} · ${item.my}`);
+        const shuffled = shuffle(wordSubset);
+        const count = Math.min(questionCount, shuffled.length);
+
+        for (let i = 0; i < count; i++) {
+          const w = shuffled[i];
+          const correctAnswer = `${w.en} · ${w.my}`;
+          const wrongList = shuffle(distractorPool.filter(a => a !== correctAnswer)).slice(0, 3);
+          quizList.push({
+            type: 'kotoba',
+            lessonBadge: w.l ? `Lesson ${w.l}` : null,
+            prompt: w.jp,
+            sub: `${w.rd || ''} ${w.rom ? '(' + w.rom + ')' : ''}`.trim(),
+            speakText: w.rd || w.jp,
+            options: shuffle([
+              { text: correctAnswer, isCorrect: true },
+              ...wrongList.map(text => ({ text, isCorrect: false }))
+            ])
+          });
+        }
+      } else if (quizType === 'grammar' || quizType === 'conjunction') {
+        const isGrammar = quizType === 'grammar';
+        const mod = isGrammar
+          ? await import('../data/grammarQuizData.js')
+          : await import('../data/conjunctionData.js');
+        const allItems = isGrammar
+          ? (isN4 ? mod.GRAMMAR_QUESTIONS_N4 : mod.GRAMMAR_QUESTIONS_N5)
+          : (isN4 ? mod.CONJUNCTION_QUESTIONS_N4 : mod.CONJUNCTION_QUESTIONS_N5);
+
+        const cueText = isGrammar
+          ? 'Choose the right grammar form (မှန်ကန်သော သဒ္ဒါပုံစံ ရွေးပါ):'
+          : 'Choose the right particle / conjunction (စကားဆက် ရွေးပါ):';
+
+        const filtered = allItems.filter(q => matchesLessonScope(q.l));
+        const shuffled = shuffle(filtered);
+        const count = Math.min(questionCount, shuffled.length);
+
+        for (let i = 0; i < count; i++) {
+          const item = shuffled[i];
+          quizList.push({
+            type: quizType,
+            lessonBadge: `Lesson ${item.l}`,
+            cue: cueText,
+            prompt: item.jp,
+            sub: item.my,
+            speakText: item.fullJp,
+            note: item.note,
+            options: shuffle(
+              item.options.map(optText => ({
+                text: optText,
+                isCorrect: optText === item.answer
+              }))
+            )
+          });
+        }
+      } else {
+        // Basics pool (N5)
+        const basicsList = [
+          ...BASIC_COUNT.map(r => ({ prompt: r[1], sub: r[2], speakText: r[1], ans: `${r[3]} · ${r[4]}` })),
+          ...COUNTERS.flatMap(c => c.rows.map(r => ({ prompt: r[1], sub: `${r[2]} (${c.name || c.en})`, speakText: r[1], ans: `${r[3]} · ${r[4]}` }))),
+          ...GREETINGS.map(g => ({ prompt: g.jp, sub: g.rom, speakText: g.jp, ans: `${g.en} · ${g.my}` }))
+        ];
+
+        const allAns = basicsList.map(item => item.ans);
+        const shuffled = shuffle(basicsList);
+        const count = Math.min(questionCount, shuffled.length);
+
+        for (let i = 0; i < count; i++) {
+          const target = shuffled[i];
+          const wrongList = shuffle(allAns.filter(a => a !== target.ans)).slice(0, 3);
+          quizList.push({
+            type: 'basics',
+            prompt: target.prompt,
+            sub: target.sub,
+            speakText: target.speakText,
+            options: shuffle([
+              { text: target.ans, isCorrect: true },
+              ...wrongList.map(text => ({ text, isCorrect: false }))
+            ])
+          });
+        }
+      }
+    } finally {
+      setLoadingQuiz(false);
     }
 
-    const shuffled = shuffle(pool);
-    const count = Math.min(questionCount, shuffled.length);
-    const quizList = [];
-
-    for (let i = 0; i < count; i++) {
-      const target = shuffled[i];
-      const wrongList = shuffle(target.allPool.filter(a => a !== target.correctAnswer)).slice(0, 3);
-      const options = shuffle([
-        { text: target.correctAnswer, isCorrect: true },
-        ...wrongList.map(w => ({ text: w, isCorrect: false }))
-      ]);
-
-      quizList.push({
-        prompt: target.prompt,
-        sub: target.sub,
-        speakText: target.speakText,
-        options
-      });
-    }
+    if (quizList.length === 0) return;
 
     setQuestions(quizList);
     setCurIndex(0);
@@ -152,7 +258,9 @@ export default function QuizPage({ level: propLevel }) {
     setSelectedOpt(null);
     setQuizState('playing');
 
-    if (quizList[0]) {
+    const isFillBlank = (type) => type === 'conjunction' || type === 'grammar';
+
+    if (quizList[0] && quizList[0].speakText && !isFillBlank(quizList[0].type)) {
       speakJapanese(quizList[0].speakText);
     }
   }
@@ -164,6 +272,9 @@ export default function QuizPage({ level: propLevel }) {
     if (opt.isCorrect) {
       setScore(s => s + 1);
     }
+    if ((currentQ?.type === 'conjunction' || currentQ?.type === 'grammar') && currentQ.speakText) {
+      speakJapanese(currentQ.speakText);
+    }
   }
 
   function handleNext() {
@@ -172,13 +283,36 @@ export default function QuizPage({ level: propLevel }) {
       setCurIndex(nextIdx);
       setAnswered(false);
       setSelectedOpt(null);
-      speakJapanese(questions[nextIdx].speakText);
+      const nextQ = questions[nextIdx];
+      if (nextQ.speakText && nextQ.type !== 'conjunction' && nextQ.type !== 'grammar') {
+        speakJapanese(nextQ.speakText);
+      }
     } else {
       setQuizState('result');
     }
   }
 
+  function renderQuizPrompt(q) {
+    if (!q) return null;
+    if ((q.type === 'conjunction' || q.type === 'grammar') && q.prompt.includes('（　　）')) {
+      const parts = q.prompt.split('（　　）');
+      const correctText = q.options.find(o => o.isCorrect)?.text || '　　';
+      return (
+        <span className="ruby-text">
+          <RubyText text={parts[0]} />
+          <span className={`quiz-blank-slot ${answered ? 'filled' : ''}`}>
+            {answered ? <RubyText text={correctText} /> : '　　'}
+          </span>
+          <RubyText text={parts.slice(1).join('（　　）')} />
+        </span>
+      );
+    }
+    return <RubyText text={q.prompt} className="ruby-text" />;
+  }
+
   const currentQ = questions[curIndex];
+  const supportsLessonScope = ['kotoba', 'grammar', 'conjunction'].includes(quizType);
+  const lessonNumbers = Array.from({ length: 25 }, (_, i) => i + lessonStart);
 
   return (
     <div>
@@ -188,8 +322,8 @@ export default function QuizPage({ level: propLevel }) {
         <h1 className="hero-title">Interactive Quiz (練習問題) — {isN4 ? 'JLPT N4' : 'JLPT N5'}</h1>
         <p className="hero-desc">
           {isN4
-            ? 'Challenge your JLPT N4 Japanese vocabulary with customizable multiple-choice drills across Lessons 26 through 50.'
-            : 'Challenge your Japanese memory with customizable multiple choice questions across Kana, N5 Vocabulary (Lessons 1–25), and basic counters.'}
+            ? 'Practice JLPT N4 Kotoba, Grammar patterns, and Particles & Conjunctions (စကားဆက်) across Lessons 26–50 with authentic Furigana and audio.'
+            : 'Practice JLPT N5 Kana, Kotoba, Grammar patterns, Particles & Conjunctions (စကားဆက်), and Basics across Lessons 1–25 with authentic Furigana and audio.'}
         </p>
       </div>
 
@@ -201,27 +335,29 @@ export default function QuizPage({ level: propLevel }) {
               Customize Your Quiz
             </h3>
             <span style={{ fontSize: '13.5px', color: 'var(--muted)', fontWeight: 600 }}>
-              Select target skill, script options, and question count
+              Select target skill, lesson scope (All / Single / From–To Range), and question count
             </span>
           </div>
 
-          {/* 1. QUIZ TYPE - VISUAL 3-CARD SELECTION */}
+          {/* 1. QUIZ TYPE */}
           <div className="quiz-select-group">
             <label className="form-label">
               1. Select Target Skill (問題の種類)
             </label>
             <div className="quiz-type-grid">
-              <button
-                type="button"
-                className={`quiz-type-card ${quizType === 'kana' ? 'active' : ''}`}
-                onClick={() => setQuizType('kana')}
-              >
-                <div className="quiz-type-icon jp">あ</div>
-                <div>
-                  <div className="quiz-type-title">Kana</div>
-                  <div className="quiz-type-desc">Hiragana &amp; Katakana</div>
-                </div>
-              </button>
+              {!isN4 && (
+                <button
+                  type="button"
+                  className={`quiz-type-card ${quizType === 'kana' ? 'active' : ''}`}
+                  onClick={() => setQuizType('kana')}
+                >
+                  <div className="quiz-type-icon jp">あ</div>
+                  <div>
+                    <div className="quiz-type-title">Kana</div>
+                    <div className="quiz-type-desc">Hiragana &amp; Katakana</div>
+                  </div>
+                </button>
+              )}
 
               <button
                 type="button"
@@ -237,19 +373,45 @@ export default function QuizPage({ level: propLevel }) {
 
               <button
                 type="button"
-                className={`quiz-type-card ${quizType === 'basics' ? 'active' : ''}`}
-                onClick={() => setQuizType('basics')}
+                className={`quiz-type-card ${quizType === 'grammar' ? 'active' : ''}`}
+                onClick={() => setQuizType('grammar')}
               >
-                <div className="quiz-type-icon jp">基</div>
+                <div className="quiz-type-icon jp">文</div>
                 <div>
-                  <div className="quiz-type-title">Basics</div>
-                  <div className="quiz-type-desc">Numbers &amp; Counters</div>
+                  <div className="quiz-type-title">Grammar Check</div>
+                  <div className="quiz-type-desc">Patterns &amp; Usage (文法)</div>
                 </div>
               </button>
+
+              <button
+                type="button"
+                className={`quiz-type-card ${quizType === 'conjunction' ? 'active' : ''}`}
+                onClick={() => setQuizType('conjunction')}
+              >
+                <div className="quiz-type-icon jp">助</div>
+                <div>
+                  <div className="quiz-type-title">စကားဆက်</div>
+                  <div className="quiz-type-desc">Particles &amp; Conjunctions</div>
+                </div>
+              </button>
+
+              {!isN4 && (
+                <button
+                  type="button"
+                  className={`quiz-type-card ${quizType === 'basics' ? 'active' : ''}`}
+                  onClick={() => setQuizType('basics')}
+                >
+                  <div className="quiz-type-icon jp">基</div>
+                  <div>
+                    <div className="quiz-type-title">Basics</div>
+                    <div className="quiz-type-desc">Numbers &amp; Counters</div>
+                  </div>
+                </button>
+              )}
             </div>
           </div>
 
-          {/* 2. SUB-OPTIONS (SCRIPT OR LESSON) */}
+          {/* 2. SUB-OPTIONS (SCRIPT OR FLEXIBLE LESSON SCOPE) */}
           {quizType === 'kana' && (
             <div className="quiz-select-group">
               <label className="form-label">
@@ -274,27 +436,84 @@ export default function QuizPage({ level: propLevel }) {
             </div>
           )}
 
-          {quizType === 'kotoba' && (
+          {supportsLessonScope && (
             <div className="quiz-select-group">
               <label className="form-label">
-                2. Lesson Scope (課)
+                2. Lesson Scope (課の選択)
               </label>
-              <select
-                className="custom-select"
-                value={selectedLesson}
-                onChange={e => setSelectedLesson(e.target.value)}
-              >
-                <option value="all">
-                  {isN4
-                    ? 'All Lessons (26–50) · Full N4 Syllabus'
-                    : 'All Lessons (1–25) · Full N5 Syllabus'}
-                </option>
-                {Array.from({ length: 25 }, (_, i) => i + lessonStart).map(l => (
-                  <option key={l} value={l}>
-                    Minna no Nihongo Lesson {l} (第{l}課)
-                  </option>
-                ))}
-              </select>
+
+              {/* 3-Mode Scope Selector Pills */}
+              <div className="pill-select-row" style={{ marginBottom: '12px' }}>
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${lessonScopeMode === 'all' ? 'active' : ''}`}
+                  onClick={() => setLessonScopeMode('all')}
+                >
+                  All Lessons ({lessonStart}–{lessonEnd})
+                </button>
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${lessonScopeMode === 'single' ? 'active' : ''}`}
+                  onClick={() => setLessonScopeMode('single')}
+                >
+                  Single Lesson (၁ ခန်းတည်း)
+                </button>
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${lessonScopeMode === 'range' ? 'active' : ''}`}
+                  onClick={() => setLessonScopeMode('range')}
+                >
+                  From–To Range (အခန်းတွဲ)
+                </button>
+              </div>
+
+              {lessonScopeMode === 'single' && (
+                <select
+                  className="custom-select"
+                  value={selectedLesson}
+                  onChange={e => setSelectedLesson(e.target.value)}
+                >
+                  {lessonNumbers.map(l => (
+                    <option key={l} value={l}>
+                      Minna no Nihongo Lesson {l} (第{l}課)
+                    </option>
+                  ))}
+                </select>
+              )}
+
+              {lessonScopeMode === 'range' && (
+                <div className="quiz-range-row">
+                  <div className="quiz-range-field">
+                    <span className="quiz-range-label">From (မှ):</span>
+                    <select
+                      className="custom-select"
+                      value={rangeFrom}
+                      onChange={e => handleRangeFromChange(e.target.value)}
+                    >
+                      {lessonNumbers.map(l => (
+                        <option key={l} value={l}>
+                          Lesson {l} (第{l}課)
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <span className="quiz-range-sep">→</span>
+                  <div className="quiz-range-field">
+                    <span className="quiz-range-label">To (အထိ):</span>
+                    <select
+                      className="custom-select"
+                      value={rangeTo}
+                      onChange={e => handleRangeToChange(e.target.value)}
+                    >
+                      {lessonNumbers.filter(l => l >= rangeFrom).map(l => (
+                        <option key={l} value={l}>
+                          Lesson {l} (第{l}課)
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              )}
             </div>
           )}
 
@@ -317,18 +536,19 @@ export default function QuizPage({ level: propLevel }) {
             </div>
           </div>
 
-          {/* 4. MODERN ACTION BUTTON */}
+          {/* 4. ACTION BUTTON */}
           <div style={{ marginTop: '28px' }}>
             <button
               type="button"
               className="btn-primary-action"
               onClick={generateQuiz}
+              disabled={loadingQuiz}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                 <circle cx="12" cy="12" r="10" />
                 <polygon points="10 8 16 12 10 16 10 8" />
               </svg>
-              <span>Start Quiz Now →</span>
+              <span>{loadingQuiz ? 'Preparing Quiz...' : 'Start Quiz Now →'}</span>
             </button>
           </div>
         </section>
@@ -337,10 +557,17 @@ export default function QuizPage({ level: propLevel }) {
       {/* PLAYING CARD */}
       {quizState === 'playing' && currentQ && (
         <section className="card">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-            <span style={{ fontWeight: 800, fontSize: '14px', color: 'var(--muted)' }}>
-              Question {curIndex + 1} of {questions.length}
-            </span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', gap: '8px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ fontWeight: 800, fontSize: '14px', color: 'var(--muted)' }}>
+                Question {curIndex + 1} of {questions.length}
+              </span>
+              {currentQ.lessonBadge && (
+                <span className="word-tag" style={{ background: 'var(--bg-card-subtle)', color: 'var(--ink)', fontWeight: 800 }}>
+                  {currentQ.lessonBadge}
+                </span>
+              )}
+            </div>
             <span style={{ fontWeight: 800, fontSize: '14.5px', color: 'var(--primary)', background: 'var(--primary-faint)', padding: '4px 12px', borderRadius: 'var(--radius-full)' }}>
               Score: {score}
             </span>
@@ -353,32 +580,44 @@ export default function QuizPage({ level: propLevel }) {
             />
           </div>
 
-          <div style={{ textAlign: 'center', margin: '26px 0 20px' }}>
-            <div className="jp" style={{ fontSize: '38px', fontWeight: 900, color: 'var(--ink)' }}>
-              {currentQ.prompt}
+          <div style={{ textAlign: 'center', margin: '24px 0 20px' }}>
+            {currentQ.cue && (
+              <div style={{ fontSize: '12.5px', fontWeight: 700, color: 'var(--faint)', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
+                {currentQ.cue}
+              </div>
+            )}
+
+            <div
+              className={`jp quiz-prompt ${['conjunction', 'grammar'].includes(currentQ.type) ? 'quiz-prompt-sentence' : ''}`}
+            >
+              {renderQuizPrompt(currentQ)}
             </div>
+
             {currentQ.sub && (
-              <div style={{ fontSize: '14px', color: 'var(--muted)', marginTop: '4px', fontWeight: 600 }}>
+              <div style={{ fontSize: '14.5px', color: 'var(--muted)', marginTop: '8px', fontWeight: 600 }}>
                 {currentQ.sub}
               </div>
             )}
-            <div style={{ marginTop: '12px' }}>
-              <button
-                type="button"
-                className="audio-pill-btn"
-                onClick={() => speakJapanese(currentQ.speakText)}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
-                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-                  <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
-                </svg>
-                <span>Listen Audio</span>
-              </button>
-            </div>
+
+            {currentQ.speakText && (
+              <div style={{ marginTop: '14px' }}>
+                <button
+                  type="button"
+                  className="audio-pill-btn"
+                  onClick={() => speakJapanese(currentQ.speakText)}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                  </svg>
+                  <span>{(currentQ.type === 'conjunction' || currentQ.type === 'grammar') && !answered ? 'Listen Full Sentence' : 'Listen Audio'}</span>
+                </button>
+              </div>
+            )}
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '10px' }}>
+          <div className="quiz-options-grid">
             {currentQ.options.map((opt, idx) => {
               let btnClass = 'quiz-opt-btn';
               if (answered) {
@@ -394,18 +633,29 @@ export default function QuizPage({ level: propLevel }) {
                   onClick={() => handleSelect(opt, idx)}
                   style={{ textAlign: 'left', padding: '12px 14px' }}
                 >
-                  <span style={{ fontWeight: 800, fontSize: '14px' }}>{answered && opt.isCorrect ? '✓ ' : ''}{answered && selectedOpt === idx && !opt.isCorrect ? '✗ ' : ''}{opt.text}</span>
+                  <span className="jp" style={{ fontWeight: 800, fontSize: (currentQ.type === 'conjunction' || currentQ.type === 'grammar') ? '16px' : '14px' }}>
+                    {answered && opt.isCorrect ? '✓ ' : ''}
+                    {answered && selectedOpt === idx && !opt.isCorrect ? '✗ ' : ''}
+                    <RubyText text={opt.text} />
+                  </span>
                 </button>
               );
             })}
           </div>
 
           {answered && (
-            <p role="status" aria-live="polite" style={{ marginTop: '14px', fontSize: '14px', fontWeight: 800, color: currentQ.options[selectedOpt]?.isCorrect ? 'var(--ok)' : 'var(--bad)' }}>
-              {currentQ.options[selectedOpt]?.isCorrect
-                ? '✓ Correct!'
-                : `✗ Wrong — correct answer: ${currentQ.options.find(o => o.isCorrect)?.text ?? ''}`}
-            </p>
+            <div className="quiz-feedback-box" role="status" aria-live="polite">
+              <p style={{ margin: 0, fontSize: '14px', fontWeight: 800, color: currentQ.options[selectedOpt]?.isCorrect ? 'var(--ok)' : 'var(--bad)' }}>
+                {currentQ.options[selectedOpt]?.isCorrect
+                  ? '✓ Correct! (မှန်ပါသည်)'
+                  : `✗ Wrong — Correct answer: ${currentQ.options.find(o => o.isCorrect)?.text ?? ''}`}
+              </p>
+              {currentQ.note && (
+                <p style={{ margin: '6px 0 0', fontSize: '13px', color: 'var(--ink-secondary)', lineHeight: 1.55, fontWeight: 600 }}>
+                  💡 {currentQ.note}
+                </p>
+              )}
+            </div>
           )}
 
           <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -420,11 +670,11 @@ export default function QuizPage({ level: propLevel }) {
             {answered && (
               <button
                 type="button"
-                className="lesson-action-btn primary"
+                className="btn-primary-action"
+                style={{ width: 'auto', padding: '10px 24px' }}
                 onClick={handleNext}
-                style={{ padding: '10px 22px', fontSize: '14px' }}
               >
-                {curIndex + 1 < questions.length ? 'Next Question →' : 'View Results →'}
+                {curIndex + 1 < questions.length ? 'Next Question →' : 'View Results'}
               </button>
             )}
           </div>
@@ -433,33 +683,33 @@ export default function QuizPage({ level: propLevel }) {
 
       {/* RESULT CARD */}
       {quizState === 'result' && (
-        <section className="card" style={{ textAlign: 'center', padding: '36px 20px' }}>
-          <div style={{ fontSize: '48px', fontWeight: 900, color: 'var(--primary)', marginBottom: '8px' }}>
-            {score} / {questions.length}
+        <section className="card" style={{ textAlign: 'center', padding: '36px 24px' }}>
+          <div style={{ fontSize: '42px', marginBottom: '12px' }}>
+            {score / questions.length >= 0.8 ? '🎉' : score / questions.length >= 0.5 ? '👍' : '💪'}
           </div>
-          <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--ink)', marginBottom: '8px' }}>
-            {score === questions.length ? '🌟 Perfect Score! အပြည့်အဝ တတ်မြောက်သွားပါပြီ!' : score >= questions.length * 0.7 ? '🎉 Great Job! တော်တော်လေး ကောင်းမွန်ပါတယ်!' : 'Keep practicing! ထပ်မံ လေ့ကျင့်ပါဦး!'}
-          </div>
-          <p style={{ color: 'var(--muted)', fontSize: '13.5px', marginBottom: '24px' }}>
-            You scored {Math.round((score / questions.length) * 100)}% accuracy.
+          <h2 style={{ fontSize: '26px', fontWeight: 900, marginBottom: '8px', color: 'var(--ink)' }}>
+            Quiz Complete!
+          </h2>
+          <p style={{ fontSize: '16px', color: 'var(--muted)', marginBottom: '24px', fontWeight: 600 }}>
+            You scored <strong style={{ color: 'var(--ink)', fontSize: '22px' }}>{score}</strong> out of <strong>{questions.length}</strong> ({Math.round((score / questions.length) * 100)}%)
           </p>
 
-          <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
             <button
               type="button"
-              className="lesson-action-btn primary"
+              className="btn-primary-action"
+              style={{ width: 'auto', padding: '12px 28px' }}
               onClick={generateQuiz}
-              style={{ padding: '10px 22px', fontSize: '14px' }}
             >
-              Try Again ↺
+              Try Again
             </button>
             <button
               type="button"
-              className="lesson-action-btn"
+              className="audio-pill-btn"
+              style={{ padding: '12px 24px', fontSize: '14px' }}
               onClick={() => setQuizState('setup')}
-              style={{ padding: '10px 22px', fontSize: '14px' }}
             >
-              Change Settings ⚙
+              Change Settings
             </button>
           </div>
         </section>
