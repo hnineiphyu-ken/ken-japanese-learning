@@ -21,6 +21,7 @@ export default function QuizPage({ level: propLevel }) {
 
   // Settings
   const [quizType, setQuizType] = useState(isN4 ? 'kotoba' : queryType);
+  const [kotobaDirection, setKotobaDirection] = useState('jp-mm'); // 'jp-mm' | 'mm-jp' | 'mixed'
   const [scriptType, setScriptType] = useState('hiragana');
   const [questionCount, setQuestionCount] = useState(20);
 
@@ -109,6 +110,10 @@ export default function QuizPage({ level: propLevel }) {
     return true;
   }
 
+  function shouldAutoSpeak(q) {
+    return Boolean(q && q.speakText && q.type !== 'conjunction' && q.type !== 'grammar');
+  }
+
   async function generateQuiz() {
     setLoadingQuiz(true);
     let quizList = [];
@@ -163,25 +168,58 @@ export default function QuizPage({ level: propLevel }) {
           wordSubset = activeMinna;
         }
 
-        const distractorPool = activeMinna.map(item => `${item.en} · ${item.my}`);
+        const meaningDistractorPool = [...new Set(activeMinna.map(item => `${item.en} · ${item.my}`))];
+        const jpItemMap = new Map();
+        activeMinna.forEach(item => {
+          if (item.jp && !jpItemMap.has(item.jp)) jpItemMap.set(item.jp, item.rd || '');
+        });
+        const jpDistractorPool = Array.from(jpItemMap.entries()).map(([jp, rd]) => ({ jp, rd }));
         const shuffled = shuffle(wordSubset);
         const count = Math.min(questionCount, shuffled.length);
 
         for (let i = 0; i < count; i++) {
           const w = shuffled[i];
-          const correctAnswer = `${w.en} · ${w.my}`;
-          const wrongList = shuffle(distractorPool.filter(a => a !== correctAnswer)).slice(0, 3);
-          quizList.push({
-            type: 'kotoba',
-            lessonBadge: w.l ? `Lesson ${w.l}` : null,
-            prompt: w.jp,
-            sub: `${w.rd || ''} ${w.rom ? '(' + w.rom + ')' : ''}`.trim(),
-            speakText: w.rd || w.jp,
-            options: shuffle([
-              { text: correctAnswer, isCorrect: true },
-              ...wrongList.map(text => ({ text, isCorrect: false }))
-            ])
-          });
+          const dir = kotobaDirection === 'mixed'
+            ? (Math.random() < 0.5 ? 'jp-mm' : 'mm-jp')
+            : kotobaDirection;
+
+          const meaningText = [w.en, w.my].filter(Boolean).join(' · ');
+
+          if (dir === 'mm-jp') {
+            const wrongList = shuffle(jpDistractorPool.filter(item => item.jp !== w.jp)).slice(0, 3);
+            const readingPart = w.rd && w.rd !== w.jp ? ` (${w.rd})` : '';
+            const romPart = w.rom ? ` · ${w.rom}` : '';
+            quizList.push({
+              type: 'kotoba',
+              direction: 'mm-jp',
+              isMeaningPrompt: true,
+              lessonBadge: w.l ? `Lesson ${w.l}` : null,
+              cue: 'Choose the matching Japanese word (ဂျပန်စကားလုံး ရွေးပါ):',
+              prompt: meaningText,
+              sub: '',
+              speakText: '',
+              note: `${w.jp}${readingPart}${romPart}`,
+              options: shuffle([
+                { text: w.jp, rd: w.rd || '', isCorrect: true },
+                ...wrongList.map(item => ({ text: item.jp, rd: item.rd, isCorrect: false }))
+              ])
+            });
+          } else {
+            const wrongList = shuffle(meaningDistractorPool.filter(a => a !== meaningText)).slice(0, 3);
+            quizList.push({
+              type: 'kotoba',
+              direction: 'jp-mm',
+              lessonBadge: w.l ? `Lesson ${w.l}` : null,
+              prompt: w.jp,
+              promptRd: w.rd || '',
+              sub: `${w.rd || ''} ${w.rom ? '(' + w.rom + ')' : ''}`.trim(),
+              speakText: w.rd || w.jp,
+              options: shuffle([
+                { text: meaningText, isCorrect: true },
+                ...wrongList.map(text => ({ text, isCorrect: false }))
+              ])
+            });
+          }
         }
       } else if (quizType === 'grammar' || quizType === 'conjunction') {
         const isGrammar = quizType === 'grammar';
@@ -258,9 +296,7 @@ export default function QuizPage({ level: propLevel }) {
     setSelectedOpt(null);
     setQuizState('playing');
 
-    const isFillBlank = (type) => type === 'conjunction' || type === 'grammar';
-
-    if (quizList[0] && quizList[0].speakText && !isFillBlank(quizList[0].type)) {
+    if (shouldAutoSpeak(quizList[0])) {
       speakJapanese(quizList[0].speakText);
     }
   }
@@ -272,7 +308,7 @@ export default function QuizPage({ level: propLevel }) {
     if (opt.isCorrect) {
       setScore(s => s + 1);
     }
-    if ((currentQ?.type === 'conjunction' || currentQ?.type === 'grammar') && currentQ.speakText) {
+    if (currentQ?.speakText && (currentQ.type === 'conjunction' || currentQ.type === 'grammar')) {
       speakJapanese(currentQ.speakText);
     }
   }
@@ -283,9 +319,8 @@ export default function QuizPage({ level: propLevel }) {
       setCurIndex(nextIdx);
       setAnswered(false);
       setSelectedOpt(null);
-      const nextQ = questions[nextIdx];
-      if (nextQ.speakText && nextQ.type !== 'conjunction' && nextQ.type !== 'grammar') {
-        speakJapanese(nextQ.speakText);
+      if (shouldAutoSpeak(questions[nextIdx])) {
+        speakJapanese(questions[nextIdx].speakText);
       }
     } else {
       setQuizState('result');
@@ -307,7 +342,7 @@ export default function QuizPage({ level: propLevel }) {
         </span>
       );
     }
-    return <RubyText text={q.prompt} className="ruby-text" />;
+    return <RubyText text={q.prompt} reading={q.promptRd} className="ruby-text" />;
   }
 
   const currentQ = questions[curIndex];
@@ -436,10 +471,41 @@ export default function QuizPage({ level: propLevel }) {
             </div>
           )}
 
+          {quizType === 'kotoba' && (
+            <div className="quiz-select-group">
+              <label className="form-label">
+                2. Question Direction (မေးခွန်းပုံစံ)
+              </label>
+              <div className="pill-select-row">
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${kotobaDirection === 'jp-mm' ? 'active' : ''}`}
+                  onClick={() => setKotobaDirection('jp-mm')}
+                >
+                  Japan → Meaning (EN · MM)
+                </button>
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${kotobaDirection === 'mm-jp' ? 'active' : ''}`}
+                  onClick={() => setKotobaDirection('mm-jp')}
+                >
+                  Meaning (EN · MM) → Japan
+                </button>
+                <button
+                  type="button"
+                  className={`pill-opt-btn ${kotobaDirection === 'mixed' ? 'active' : ''}`}
+                  onClick={() => setKotobaDirection('mixed')}
+                >
+                  Mixed (နှစ်မျိုးစလုံး)
+                </button>
+              </div>
+            </div>
+          )}
+
           {supportsLessonScope && (
             <div className="quiz-select-group">
               <label className="form-label">
-                2. Lesson Scope (課の選択)
+                {quizType === 'kotoba' ? '3. Lesson Scope (課の選択)' : '2. Lesson Scope (課の選択)'}
               </label>
 
               {/* 3-Mode Scope Selector Pills */}
@@ -517,10 +583,10 @@ export default function QuizPage({ level: propLevel }) {
             </div>
           )}
 
-          {/* 3. QUESTION COUNT - PILL SELECTOR */}
+          {/* QUESTION COUNT - PILL SELECTOR */}
           <div className="quiz-select-group">
             <label className="form-label">
-              {quizType === 'basics' ? '2. Question Count (問題数)' : '3. Question Count (問題数)'}
+              {`${quizType === 'kotoba' ? 4 : quizType === 'basics' ? 2 : 3}. Question Count (問題数)`}
             </label>
             <div className="pill-select-row">
               {[10, 20, 30, 50].map(cnt => (
@@ -588,7 +654,7 @@ export default function QuizPage({ level: propLevel }) {
             )}
 
             <div
-              className={`jp quiz-prompt ${['conjunction', 'grammar'].includes(currentQ.type) ? 'quiz-prompt-sentence' : ''}`}
+              className={`quiz-prompt ${currentQ.isMeaningPrompt ? 'quiz-prompt-meaning' : ['conjunction', 'grammar'].includes(currentQ.type) ? 'jp quiz-prompt-sentence' : 'jp'}`}
             >
               {renderQuizPrompt(currentQ)}
             </div>
@@ -624,6 +690,7 @@ export default function QuizPage({ level: propLevel }) {
                 if (opt.isCorrect) btnClass += ' correct';
                 else if (selectedOpt === idx) btnClass += ' wrong';
               }
+              const isJpOption = currentQ.type === 'conjunction' || currentQ.type === 'grammar' || currentQ.direction === 'mm-jp';
               return (
                 <button
                   key={idx}
@@ -633,10 +700,10 @@ export default function QuizPage({ level: propLevel }) {
                   onClick={() => handleSelect(opt, idx)}
                   style={{ textAlign: 'left', padding: '12px 14px' }}
                 >
-                  <span className="jp" style={{ fontWeight: 800, fontSize: (currentQ.type === 'conjunction' || currentQ.type === 'grammar') ? '16px' : '14px' }}>
+                  <span className="jp" style={{ fontWeight: 800, fontSize: isJpOption ? '16.5px' : '14px' }}>
                     {answered && opt.isCorrect ? '✓ ' : ''}
                     {answered && selectedOpt === idx && !opt.isCorrect ? '✗ ' : ''}
-                    <RubyText text={opt.text} />
+                    <RubyText text={opt.text} reading={opt.rd} />
                   </span>
                 </button>
               );

@@ -15,6 +15,7 @@ import {
   BASIC_COUNT
 } from '../data/topicsData';
 import { speakJapanese, shuffle } from '../utils/speech';
+import RubyText from '../utils/RubyText';
 
 export default function BasicsPage() {
   // Numbers pagination
@@ -436,7 +437,7 @@ export default function BasicsPage() {
 
             <div className="quiz-q-box" style={{ textAlign: 'center', margin: '20px 0' }}>
               <div className="quiz-prompt jp" style={{ fontSize: '32px', fontWeight: 900 }}>
-                {currentQ.jp}
+                <RubyText text={currentQ.jp} />
               </div>
               <div className="quiz-prompt-sub" style={{ fontSize: '14px', color: 'var(--muted)', marginTop: '4px' }}>
                 {currentQ.rom}
